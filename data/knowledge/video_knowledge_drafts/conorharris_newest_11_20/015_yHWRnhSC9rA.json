@@ -1,0 +1,297 @@
+{
+  "source_url": "https://www.youtube.com/shorts/yHWRnhSC9rA",
+  "source_title_hint": "La asombrosa verdad sobre cómo corregir la inclinación pélvica lateral",
+  "primary_summary": "This video explains that perceived body twisting or lateral pelvic tilt is often due to natural human body asymmetry, leading to a relative rotation between the upper and lower body. It introduces two self-assessment tests for lower and upper body rotation and then provides a detailed corrective exercise (wall-supported side-lying rotation) to address these rotational imbalances, with specific instructions for right or left-sided biases.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides a clear explanation of a common biomechanical concept (body asymmetry and relative rotation), offers two practical self-assessment tests, and details a specific corrective exercise with visual cues and instructions for different rotational biases. This content is valuable for diagnostic support, explanation support, and corrective exercise selection.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "pelvis",
+      "thoracic spine",
+      "rib cage",
+      "hips",
+      "lower back"
+    ],
+    "problem_layers": [
+      "muscular",
+      "skeletal",
+      "neurological_control"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "body asymmetry",
+    "pelvic tilt",
+    "lateral pelvic tilt",
+    "postural imbalances",
+    "thoracic rotation",
+    "hip rotation",
+    "corrective exercise",
+    "movement assessment",
+    "rib cage position",
+    "breathing mechanics"
+  ],
+  "searchable_tags": [
+    "PRI",
+    "Postural Restoration Institute",
+    "asymmetry",
+    "rotation",
+    "pelvis",
+    "thoracic",
+    "hips",
+    "spine",
+    "mobility",
+    "stability",
+    "exercise",
+    "assessment",
+    "rehab",
+    "prehab"
+  ],
+  "problem_statements": [
+    "Feeling like your body and posture are twisted up",
+    "Walking around with a noticeable body twist",
+    "Rotational imbalances between the lower and upper body"
+  ],
+  "habits_or_contexts": [],
+  "key_visual_points": [
+    "Skeleton model demonstrating relative rotation of pelvis and rib cage.",
+    "Red dashed lines indicating uneven shoulder and hip lines on a standing person.",
+    "Visual overlays on the skeleton model highlighting rotated segments (pelvis, rib cage).",
+    "Animated lines showing the path of movement for the rotation tests.",
+    "Green highlights on contact points and movement directions for the corrective exercise.",
+    "Foot diagram showing three points of contact for the foot."
+  ],
+  "tests_mentioned": [
+    "Lower Body Rotation Test",
+    "Upper Body Rotation Test (Shoulder Rotation)"
+  ],
+  "exercises_mentioned": [
+    "Wall Supported Side-Lying Rotation"
+  ],
+  "advice_mentioned": [
+    "Understand what's going on within your body to resolve imbalances.",
+    "The natural human body is asymmetrical and has a predisposition towards being turned towards the right side."
+  ],
+  "warnings_or_limitations": [
+    "Stop movement in tests if the opposite shoulder/sternum lifts off the ground or if hip/heel contact is lost during the exercise."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Body Asymmetry and Relative Rotation Concept",
+      "summary": "The human body is naturally asymmetrical, leading to a predisposition for overall rotation, often to the right. This manifests as a relative turning of the lower body in one direction and the upper body in the other, rather than a literal, extreme twist.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Natural human body asymmetry (e.g., organ placement)",
+        "Predisposition to right-sided rotation (as cited by research)"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Understand that perceived body twisting is often a relative rotation between body segments rather than a literal misalignment."
+      ],
+      "timestamps": [
+        "0:09",
+        "0:45"
+      ]
+    },
+    {
+      "unit_type": "functional_test",
+      "title": "Lower Body Rotation Test",
+      "summary": "A self-assessment test to evaluate the rotational mobility of the lower body (pelvis/hips) while maintaining upper body stability.",
+      "observable_signs": [
+        "Differences in the range of motion when rotating knees to the left versus the right.",
+        "One side will typically have better rotation than the other."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Lie on your back with hands out by your sides.",
+        "Keep your knees together.",
+        "Pull your heels towards your glutes as close as they can get without much tension in your legs.",
+        "Allow your knees to fall off into one direction.",
+        "Stop at the point where if you were to go any further, the opposite side shoulder would pop off of the ground.",
+        "Compare the range of motion to the other side."
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "To identify rotational imbalances in the lower body.",
+        "To determine the preferred side of lower body rotation."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:48",
+        "1:07"
+      ]
+    },
+    {
+      "unit_type": "functional_test",
+      "title": "Upper Body Rotation Test (Shoulder Rotation)",
+      "summary": "A self-assessment test to evaluate the rotational mobility of the upper body (thoracic spine/rib cage) while maintaining lower body stability.",
+      "observable_signs": [
+        "Differences in the range of motion when rotating the upper body to the left versus the right.",
+        "One side will typically have better rotation than the other."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Lay on your side in a 90/90 position (hips and knees bent at 90 degrees).",
+        "Ensure your shoulders are perfectly stacked on top of each other.",
+        "Point your fingertips of the top arm towards the ceiling.",
+        "Allow one arm to slowly come back in a perfectly straight line.",
+        "Stop at the point where if you were to go any further, your breastbone or sternum would turn with you.",
+        "Compare the range of motion to the other side."
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "To identify rotational imbalances in the upper body.",
+        "To determine the preferred side of upper body rotation."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "1:09",
+        "1:26"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Wall Supported Side-Lying Rotation (Right-Sided Bias Correction)",
+      "summary": "A corrective exercise performed lying on the left side against a wall, designed to improve relative rotation between the upper and lower body, specifically for individuals with a right-sided rotational bias (i.e., better rotation to the right in the tests).",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Lay on your left side against a wall.",
+        "Place a double-folded pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+        "Bend your hips and knees to a 90-degree angle each.",
+        "Fully exhale through your mouth and feel your rib cage come down.",
+        "Keeping your knees stacked, bring your top (right) foot up so it's a couple of inches higher than the other one, maintaining contact with the wall.",
+        "Ensure you feel three points of contact on both feet, especially the top foot (inner heel, base of big toe, base of little toe).",
+        "While keeping your rib cage down, gently push into the wall with the inner heel and the base of the big toe contact on the top foot.",
+        "Slide that top (right) knee forward. Stop at the point where if you were to go any further, you would lose your bottom side hip contact or that top side heel would want to come off the wall.",
+        "Once you get there, push the top (right) knee up so it gets around in line with the top foot.",
+        "Take your top (right) hand and reach it for the ceiling, keeping your eyes on your fingertips.",
+        "Exhale through your mouth and just move this top hand back one inch.",
+        "Upon the next inhale, you should feel all this expand and open up."
+      ],
+      "cues": [
+        "Pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+        "Fully exhale and feel your rib cage come down.",
+        "Think about doing a slight posterior pelvic tilt without squeezing your glutes (for some).",
+        "Feel these three points of contact on both feet, but especially this top foot.",
+        "Making sure your rib cage stays down.",
+        "Push into the wall very gently with the inner heel and that base of the big toe contact on the top foot.",
+        "Slide that top knee forward.",
+        "Push the top knee up so it gets around in line with the top foot.",
+        "Reach your top hand for the ceiling, keep your eyes on your fingertips.",
+        "Exhale through your mouth and just move this top hand back one inch.",
+        "Think about turning your trunk through your bottom side abs.",
+        "Torquing through your bottom side abs without engaging your low back.",
+        "Keep your rib cage down.",
+        "Upon the next inhale, you should feel all this expand and open up."
+      ],
+      "breathing_cues": [
+        "Fully exhale through your mouth and feel your rib cage come down.",
+        "Exhale through your mouth and just move this top hand back one inch.",
+        "Upon the next inhale, you should feel all this expand and open up."
+      ],
+      "errors_to_avoid": [
+        "Losing bottom side hip contact.",
+        "Top side heel coming off the wall.",
+        "Engaging the low back instead of bottom side abs.",
+        "Rib cage not staying down."
+      ],
+      "when_useful": [
+        "If both the lower and upper body rotation tests were better to the right.",
+        "If only the lower body rotation test was better to the right."
+      ],
+      "when_not_useful": [],
+      "retest": [
+        "Re-perform the Lower Body Rotation Test and Upper Body Rotation Test to assess improvement."
+      ],
+      "advice": [],
+      "timestamps": [
+        "1:30",
+        "2:49"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Wall Supported Side-Lying Rotation (Left-Sided Bias Correction)",
+      "summary": "The same corrective exercise as above, but performed on the opposite side (lying on the right side against a wall) for individuals with a left-sided rotational bias (i.e., better rotation to the left in the tests).",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Lay on your right side against a wall.",
+        "Place a double-folded pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+        "Bend your hips and knees to a 90-degree angle each.",
+        "Fully exhale through your mouth and feel your rib cage come down.",
+        "Keeping your knees stacked, bring your top (left) foot up so it's a couple of inches higher than the other one, maintaining contact with the wall.",
+        "Ensure you feel three points of contact on both feet, especially the top foot (inner heel, base of big toe, base of little toe).",
+        "While keeping your rib cage down, gently push into the wall with the inner heel and the base of the big toe contact on the top foot.",
+        "Slide that top (left) knee forward. Stop at the point where if you were to go any further, you would lose your bottom side hip contact or that top side heel would want to come off the wall.",
+        "Once you get there, push the top (left) knee up so it gets around in line with the top foot.",
+        "Take your top (left) hand and reach it for the ceiling, keeping your eyes on your fingertips.",
+        "Exhale through your mouth and just move this top hand back one inch.",
+        "Upon the next inhale, you should feel all this expand and open up."
+      ],
+      "cues": [
+        "Pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+        "Fully exhale and feel your rib cage come down.",
+        "Think about doing a slight posterior pelvic tilt without squeezing your glutes (for some).",
+        "Feel these three points of contact on both feet, but especially this top foot.",
+        "Making sure your rib cage stays down.",
+        "Push into the wall very gently with the inner heel and that base of the big toe contact on the top foot.",
+        "Slide that top knee forward.",
+        "Push the top knee up so it gets around in line with the top foot.",
+        "Reach your top hand for the ceiling, keep your eyes on your fingertips.",
+        "Exhale through your mouth and just move this top hand back one inch.",
+        "Think about turning your trunk through your bottom side abs.",
+        "Torquing through your bottom side abs without engaging your low back.",
+        "Keep your rib cage down.",
+        "Upon the next inhale, you should feel all this expand and open up."
+      ],
+      "breathing_cues": [
+        "Fully exhale through your mouth and feel your rib cage come down.",
+        "Exhale through your mouth and just move this top hand back one inch.",
+        "Upon the next inhale, you should feel all this expand and open up."
+      ],
+      "errors_to_avoid": [
+        "Losing bottom side hip contact.",
+        "Top side heel coming off the wall.",
+        "Engaging the low back instead of bottom side abs.",
+        "Rib cage not staying down."
+      ],
+      "when_useful": [
+        "If both the lower and upper body rotation tests were better to the left.",
+        "If only the lower body rotation test was better to the left."
+      ],
+      "when_not_useful": [],
+      "retest": [
+        "Re-perform the Lower Body Rotation Test and Upper Body Rotation Test to assess improvement."
+      ],
+      "advice": [],
+      "timestamps": [
+        "2:49",
+        "2:57"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively breaks down a complex biomechanical concept into understandable parts, provides actionable self-assessments, and offers a targeted corrective exercise. The use of visual aids on the skeleton and the demonstrator, along with clear verbal cues, enhances its educational value. The reference to scientific literature adds credibility to the explanation of natural body asymmetry."
+}

@@ -1,0 +1,206 @@
+{
+  "source_url": "https://www.youtube.com/shorts/Hu8_UCv4tLA",
+  "source_title_hint": "¿Por qué el 95% de las personas se equivocan al volar en avión?",
+  "primary_summary": "This video explains the biomechanics of the 'Hip Air Plane' exercise, highlighting common errors such as spinal compensation and loss of foot contact. It then demonstrates an optimized execution of the exercise, focusing on genuine hip rotation and maintaining proper foot contact for improved hip internal and external rotation mobility.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides detailed biomechanical explanations for a common hip mobility drill, identifies frequent errors, and offers a corrected execution method, making it valuable for technique optimization and movement reeducation.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "Hip",
+      "Pelvis",
+      "Spine",
+      "Foot"
+    ],
+    "problem_layers": [
+      "Mobility",
+      "Stability",
+      "Motor Control"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "Hip Air Plane",
+    "Hip Mobility",
+    "Hip Rotation",
+    "Pelvic Rotation",
+    "Spinal Compensation",
+    "Foot Contact",
+    "Movement Reeducation",
+    "Exercise Optimization",
+    "Internal Rotation",
+    "External Rotation"
+  ],
+  "searchable_tags": [
+    "hipmobility",
+    "hiprotation",
+    "pelviccontrol",
+    "footstability",
+    "movementcorrection",
+    "biomechanics",
+    "exercisehacks",
+    "fitnesseducation"
+  ],
+  "problem_statements": [
+    "Many people perform the Hip Air Plane incorrectly, leading to suboptimal results.",
+    "Individuals often compensate by moving through the spine instead of genuinely rotating the hip.",
+    "Loss of proper foot contact (inside or outside of the foot) during the exercise reduces its effectiveness.",
+    "Chasing sensation or a bigger stretch/movement can lead to improper form and compensation."
+  ],
+  "habits_or_contexts": [
+    "Performing hip mobility drills without understanding proper biomechanics.",
+    "Prioritizing range of motion over controlled movement and stability."
+  ],
+  "key_visual_points": [
+    "A person performing the Hip Air Plane exercise with hands on a wall/rack, one leg extended back.",
+    "Visual overlays illustrating pelvic rotation relative to a fixed femur.",
+    "Visual overlays showing spinal rotation as a compensation.",
+    "Visual overlays highlighting loss of foot contact (lifting inside or outside of the foot).",
+    "An anatomical model of the pelvis and femur demonstrating hip joint movement.",
+    "A graphic illustrating the three points of contact on the foot (big toe, pinky toe, heel)."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Hip Air Plane"
+  ],
+  "advice_mentioned": [
+    "Focus on genuine hip rotation rather than spinal movement.",
+    "Maintain three points of contact on the foot throughout the exercise.",
+    "Stop movement when the pelvis rotation slows or when spinal compensation begins.",
+    "Use external support (doorframe/rack) and a bench for the back leg to improve stability and focus on hip movement."
+  ],
+  "warnings_or_limitations": [
+    "Over-rotating the hip can lead to compensatory movement in the low back/spine.",
+    "Losing foot contact during the exercise reduces its effectiveness for hip mobility and stability.",
+    "The instability created by a free-hanging back leg can increase the likelihood of spinal compensation."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Biomechanics of Hip Air Plane",
+      "summary": "The Hip Air Plane exercise primarily trains the pelvis to move (rotate) on and off a fixed femur, which is stabilized by the foot on the ground. This movement involves both external and internal rotation of the hip joint.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Pelvis rotates relative to a stationary femur.",
+        "Foot is fixed to the ground, providing a stable base for the leg.",
+        "Movement occurs in both external and internal rotation directions at the hip."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Understanding the target movement for hip rotation.",
+        "Explaining the 'why' behind the exercise."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:10",
+        "0:25"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Common Compensations in Hip Air Plane",
+      "summary": "Individuals often compensate during the Hip Air Plane by rotating through the lumbar or thoracic spine instead of the hip, or by losing the three points of contact on the standing foot. These compensations occur when attempting to achieve a larger range of motion beyond the hip's genuine capacity, leading to reduced effectiveness and potential for injury.",
+      "observable_signs": [
+        "Rotation of the lower back or upper back instead of the pelvis/hip.",
+        "Loss of contact with the inside of the foot (e.g., big toe mound, heel) when turning too far into internal rotation.",
+        "Loss of contact with the outside of the foot (e.g., pinky toe mound, heel) when turning too far into external rotation.",
+        "Excessive movement or instability in the free-hanging leg."
+      ],
+      "mechanisms": [
+        "Limited genuine hip rotation range of motion.",
+        "Chasing sensation or a larger perceived stretch/movement.",
+        "Lack of stability from the standing foot.",
+        "Instability from the non-weight-bearing leg."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Diagnosing improper movement patterns during hip rotation exercises.",
+        "Educating individuals on how to avoid common mistakes."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:30",
+        "0:54",
+        "1:04",
+        "1:33",
+        "1:38",
+        "1:52"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Optimized Hip Air Plane Execution",
+      "summary": "To perform the Hip Air Plane effectively, stand tall against a stable support (doorframe/rack) with hands pushing into it. Place the non-standing leg on a bench behind you for stability. Maintain a slight bend in the standing leg's knee and ensure three points of contact on the foot (big toe, pinky toe, heel) without forcing them. Slowly rotate the pelvis away from the spine, stopping when genuine hip rotation diminishes or spinal compensation begins. Then, slowly rotate back, stopping when a slight stretch is felt in the hip.",
+      "observable_signs": [
+        "Stable torso and spine.",
+        "Consistent three points of foot contact on the standing foot.",
+        "Controlled, smooth rotation originating from the hip/pelvis.",
+        "Back leg resting on a bench for support."
+      ],
+      "mechanisms": [
+        "Improved stability allows for better motor control of hip rotation.",
+        "Focus on foot contact enhances proprioception and ground reaction forces.",
+        "Limiting range of motion to genuine hip movement prevents spinal compensation."
+      ],
+      "execution_steps": [
+        "Stand tall against a doorframe or rack, placing hands on it for support.",
+        "Place the back leg on a bench behind you, allowing it to rest naturally (doesn't need to be perfectly straight).",
+        "Maintain a slight bend in the front (standing) leg's knee.",
+        "Ensure you feel three points of contact on the standing foot: the base of the big toe, the base of the pinky toe, and the heel. Do not force these points, just bring awareness to them, keeping toes relaxed.",
+        "Slowly begin turning everything (pelvis) away from the spine in the same direction.",
+        "Stop the rotation once you sense that your pelvis is starting to rotate less or slower than your lower back or upper spine.",
+        "Slowly close that space off, rotating everything in the same direction.",
+        "Stop the internal rotation at the point where you start to feel a slight stretch in the side or back of your hip on the front leg side, or just before you'd push the hip out.",
+        "Return back to the starting position, maintaining relaxed toes and foot contact."
+      ],
+      "cues": [
+        "\"Feel these three points of contact on your foot.\"",
+        "\"Bring awareness to those points, keeping your toes relaxed.\"",
+        "\"Slowly start turning everything away from that spine.\"",
+        "\"Stop once you sense that your pelvis is going to start rotating less or slower than the rest of your lower back and upper spine.\"",
+        "\"Close that space off very slowly, rotating everything in the same direction.\"",
+        "\"Stop at the point where you start to feel a little stretch in the side or back of your hip.\""
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Do not force foot contacts into the ground.",
+        "Avoid rotating through the low back or upper back to achieve a larger turn.",
+        "Do not lose the inside or outside contact points of the standing foot."
+      ],
+      "when_useful": [
+        "Improving hip internal and external rotation mobility.",
+        "Enhancing hip stability and motor control.",
+        "Reducing spinal compensation during hip movements."
+      ],
+      "when_not_useful": [
+        "For individuals with acute hip or spinal pain.",
+        "If unable to maintain basic balance or foot contact."
+      ],
+      "retest": [
+        "Observe improvements in controlled hip rotation range of motion.",
+        "Assess ability to maintain foot contact and spinal neutrality during movement."
+      ],
+      "advice": [],
+      "timestamps": [
+        "1:53",
+        "2:59"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively breaks down a common exercise, explains its biomechanical purpose, identifies common errors with visual aids, and provides a detailed, corrected execution. The use of an anatomical model and visual overlays greatly enhances the educational value. The content is highly relevant for a biomechanical knowledge base."
+}

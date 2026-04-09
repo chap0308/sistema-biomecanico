@@ -1,0 +1,2281 @@
+{
+  "source": {
+    "source_id": "src_ef2da7e8963d6aab",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/N2mMGWltYrI",
+    "canonical_uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+    "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [],
+    "duration_sec": 179.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-05T17:55:19.453043Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_fd024f74fc83cf42",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_0a64121e977db5dd",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_0ed69f43031ec18e",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_8c1f3f58fc38acc8",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_001_0001116ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 1.1166666666666667,
+      "end_sec": 1.1166666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7fc643377932b8b0",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_002_0003933ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 3.9333333333333336,
+      "end_sec": 3.9333333333333336,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_d8efcbcf84430656",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_003_0006583ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 6.583333333333334,
+      "end_sec": 6.583333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_72fcd24a31b34061",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_004_0008866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 8.866666666666667,
+      "end_sec": 8.866666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7b6308393ad61fbc",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_005_0010983ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 10.983333333333334,
+      "end_sec": 10.983333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7db8581e6c8f0659",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_006_0013233ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 13.233333333333334,
+      "end_sec": 13.233333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_cb54f55fa04140d2",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_007_0015700ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 15.7,
+      "end_sec": 15.7,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_ce3329cb81417f53",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_008_0018383ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 18.383333333333333,
+      "end_sec": 18.383333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_176bfc9b002047e0",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_009_0022050ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 22.05,
+      "end_sec": 22.05,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_ef32c2f598ce2dbd",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_010_0028166ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 28.166666666666664,
+      "end_sec": 28.166666666666664,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e002b19cff775b7b",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_011_0033550ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 33.55,
+      "end_sec": 33.55,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_f27c9cb57f138389",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_012_0036933ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 36.93333333333334,
+      "end_sec": 36.93333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_34ece104bde7544f",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_013_0040350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 40.35,
+      "end_sec": 40.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_21a5dbe98a84c148",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_014_0043866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 43.86666666666667,
+      "end_sec": 43.86666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b92ba39e34a5fdba",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_015_0046833ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 46.833333333333336,
+      "end_sec": 46.833333333333336,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_fc628f5c9cc7f229",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_016_0049216ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 49.21666666666667,
+      "end_sec": 49.21666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_4b9a1e6406d417eb",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_017_0053383ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 53.38333333333333,
+      "end_sec": 53.38333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_9e631a6126741ca3",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_018_0059833ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 59.83333333333333,
+      "end_sec": 59.83333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7f3623b69ec6bd1f",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_019_0065016ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 65.01666666666667,
+      "end_sec": 65.01666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3976aaf4a29cfa3a",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_020_0072400ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 72.4,
+      "end_sec": 72.4,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_74e1ef0849bacf41",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_021_0081483ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 81.48333333333333,
+      "end_sec": 81.48333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_540ff1a7a3c77ab6",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_022_0087833ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 87.83333333333334,
+      "end_sec": 87.83333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a0e8a89ae5d1d56a",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_023_0093650ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 93.65,
+      "end_sec": 93.65,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6c85c469145f2ec2",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_024_0098550ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 98.55,
+      "end_sec": 98.55,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_229ce8b7ef398621",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_025_0104416ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 104.41666666666666,
+      "end_sec": 104.41666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a129d30fb8a6bbb8",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_026_0109199ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 109.19999999999999,
+      "end_sec": 109.19999999999999,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_2b9590dd0694ba58",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_027_0112850ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 112.85,
+      "end_sec": 112.85,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_eb4a8ca6d32e5a4c",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_028_0116883ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 116.88333333333333,
+      "end_sec": 116.88333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_637e151979ec1dbb",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_029_0120100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 120.1,
+      "end_sec": 120.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_f572b3fa4cb937bb",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_030_0123116ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 123.11666666666667,
+      "end_sec": 123.11666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bdabf9c1f8acabaa",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_031_0126316ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 126.31666666666666,
+      "end_sec": 126.31666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_68abdbaea4a515b9",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_032_0134133ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 134.13333333333333,
+      "end_sec": 134.13333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_cd1890ff03c57938",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_033_0142483ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 142.48333333333335,
+      "end_sec": 142.48333333333335,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3e7ae8177e35784a",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_034_0160033ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 160.03333333333333,
+      "end_sec": 160.03333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_f3b5ec1a43b8c0c6",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_035_0177300ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 177.3,
+      "end_sec": 177.3,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5e2e67386ee48024",
+      "source_id": "src_ef2da7e8963d6aab",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_90446d71822dddb0",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 2.2333333333333334,
+      "duration_sec": 2.2333333333333334,
+      "transcript": "Most people doing these rotator cuff exercises for better shoulder health don't realize that they",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 1.1s.",
+      "segment_summary": "Segment 0.0-2.2s: Most people doing these rotator cuff exercises for better shoulder health don't realize that they",
+      "topics": [
+        "most",
+        "people",
+        "doing",
+        "rotator"
+      ],
+      "keywords": [
+        "most",
+        "people",
+        "doing",
+        "rotator",
+        "cuff",
+        "exercises"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 1.1166666666666667,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_001_0001116ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people doing these rotator cuff exercises for better shoulder health don't realize that they | Representative frame sampled at 1.1s. | Segment 0.0-2.2s: Most people doing these rotator cuff exercises for better shoulder health don't realize that they | most people doing rotator | most people doing rotator cuff exercises",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_a43297e493f36942",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 2,
+      "start_sec": 2.2333333333333334,
+      "end_sec": 5.633333333333334,
+      "duration_sec": 3.4000000000000004,
+      "transcript": "Most people doing these rotator cuff exercises for better shoulder health don't realize that they could get significantly better results if they consider just this one simple thing. You see the rotator",
+      "ocr_text": "GET SIGNIFICANTLY\n\nb",
+      "visual_description": "Representative frame contains OCR text: GET SIGNIFICANTLY\n\nb",
+      "segment_summary": "Segment 2.2-5.6s: Most people doing these rotator cuff exercises for better shoulder health don't realize that they could get significantly better results if they consider just this one simple thing",
+      "topics": [
+        "rotator",
+        "better",
+        "they",
+        "significantly"
+      ],
+      "keywords": [
+        "rotator",
+        "better",
+        "they",
+        "significantly",
+        "most",
+        "people"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 3.9333333333333336,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_002_0003933ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people doing these rotator cuff exercises for better shoulder health don't realize that they could get significantly better results if they consider just this one simple thing. You see the rotator | GET SIGNIFICANTLY\n\nb | Representative frame contains OCR text: GET SIGNIFICANTLY\n\nb | Segment 2.2-5.6s: Most people doing these rotator cuff exercises for better shoulder health don't realize that they could get significantly better results if they consider just this one simple thing | rotator better they significantly | rotator better they significantly most people",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c3247ea862088deb",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 3,
+      "start_sec": 5.633333333333334,
+      "end_sec": 7.533333333333333,
+      "duration_sec": 1.8999999999999995,
+      "transcript": "could get significantly better results if they consider just this one simple thing. You see the rotator",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 6.6s.",
+      "segment_summary": "Segment 5.6-7.5s: could get significantly better results if they consider just this one simple thing. You see the rotator",
+      "topics": [
+        "could",
+        "significantly",
+        "better",
+        "results"
+      ],
+      "keywords": [
+        "could",
+        "significantly",
+        "better",
+        "results",
+        "they",
+        "consider"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 6.583333333333334,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_003_0006583ms.jpg"
+        }
+      ],
+      "retrieval_text": "could get significantly better results if they consider just this one simple thing. You see the rotator | Representative frame sampled at 6.6s. | Segment 5.6-7.5s: could get significantly better results if they consider just this one simple thing. You see the rotator | could significantly better results | could significantly better results they consider",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_74fd6618ac46a08c",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 4,
+      "start_sec": 7.533333333333333,
+      "end_sec": 10.2,
+      "duration_sec": 2.666666666666666,
+      "transcript": "could get significantly better results if they consider just this one simple thing. You see the rotator cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 8.9s.",
+      "segment_summary": "Segment 7.5-10.2s: could get significantly better results if they consider just this one simple thing. You see the rotator cuff muscles control the fine movements of the shoulder moving into, let's s",
+      "topics": [
+        "could",
+        "significantly",
+        "better",
+        "results"
+      ],
+      "keywords": [
+        "could",
+        "significantly",
+        "better",
+        "results",
+        "they",
+        "consider"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 8.866666666666667,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_004_0008866ms.jpg"
+        }
+      ],
+      "retrieval_text": "could get significantly better results if they consider just this one simple thing. You see the rotator cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation | Representative frame sampled at 8.9s. | Segment 7.5-10.2s: could get significantly better results if they consider just this one simple thing. You see the rotator cuff muscles control the fine movements of the shoulder moving into, let's s | could significantly better results | could significantly better results they consider",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_02f8b70ab86fa5d3",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 5,
+      "start_sec": 10.2,
+      "end_sec": 11.766666666666667,
+      "duration_sec": 1.5666666666666682,
+      "transcript": "cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 11.0s.",
+      "segment_summary": "Segment 10.2-11.8s: cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation",
+      "topics": [
+        "cuff",
+        "muscles",
+        "control",
+        "fine"
+      ],
+      "keywords": [
+        "cuff",
+        "muscles",
+        "control",
+        "fine",
+        "movements",
+        "shoulder"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 10.983333333333334,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_005_0010983ms.jpg"
+        }
+      ],
+      "retrieval_text": "cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation | Representative frame sampled at 11.0s. | Segment 10.2-11.8s: cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation | cuff muscles control fine | cuff muscles control fine movements shoulder",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_21375b8d7f5e3009",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 6,
+      "start_sec": 11.766666666666667,
+      "end_sec": 14.7,
+      "duration_sec": 2.933333333333332,
+      "transcript": "cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 13.2s.",
+      "segment_summary": "Segment 11.8-14.7s: cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation for the purpose of this reel. But here's the thing, muscles, and those in the rota",
+      "topics": [
+        "cuff",
+        "muscles",
+        "control",
+        "fine"
+      ],
+      "keywords": [
+        "cuff",
+        "muscles",
+        "control",
+        "fine",
+        "movements",
+        "shoulder"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 13.233333333333334,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_006_0013233ms.jpg"
+        }
+      ],
+      "retrieval_text": "cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff, | Representative frame sampled at 13.2s. | Segment 11.8-14.7s: cuff muscles control the fine movements of the shoulder moving into, let's say, external rotation for the purpose of this reel. But here's the thing, muscles, and those in the rota | cuff muscles control fine | cuff muscles control fine movements shoulder",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_58644c78979bc719",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 7,
+      "start_sec": 14.7,
+      "end_sec": 16.7,
+      "duration_sec": 2.0,
+      "transcript": "for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 15.7s.",
+      "segment_summary": "Segment 14.7-16.7s: for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff,",
+      "topics": [
+        "purpose",
+        "reel",
+        "here's",
+        "thing"
+      ],
+      "keywords": [
+        "purpose",
+        "reel",
+        "here's",
+        "thing",
+        "muscles",
+        "rotator"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 15.7,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_007_0015700ms.jpg"
+        }
+      ],
+      "retrieval_text": "for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff, | Representative frame sampled at 15.7s. | Segment 14.7-16.7s: for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff, | purpose reel here's thing | purpose reel here's thing muscles rotator",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_461cce5060580dfb",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 8,
+      "start_sec": 16.7,
+      "end_sec": 20.066666666666666,
+      "duration_sec": 3.366666666666667,
+      "transcript": "for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff, especially, can only control the range of motion that is available to be expressed in the first place.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 18.4s.",
+      "segment_summary": "Segment 16.7-20.1s: for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff, especially, can only control the range of motion that is available to be expressed in th",
+      "topics": [
+        "purpose",
+        "reel",
+        "here's",
+        "thing"
+      ],
+      "keywords": [
+        "purpose",
+        "reel",
+        "here's",
+        "thing",
+        "muscles",
+        "rotator"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 18.383333333333333,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_008_0018383ms.jpg"
+        }
+      ],
+      "retrieval_text": "for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff, especially, can only control the range of motion that is available to be expressed in the first place. | Representative frame sampled at 18.4s. | Segment 16.7-20.1s: for the purpose of this reel. But here's the thing, muscles, and those in the rotator cuff, especially, can only control the range of motion that is available to be expressed in th | purpose reel here's thing | purpose reel here's thing muscles rotator",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_99e74fba3e5aec31",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 9,
+      "start_sec": 20.066666666666666,
+      "end_sec": 24.033333333333335,
+      "duration_sec": 3.9666666666666686,
+      "transcript": "especially, can only control the range of motion that is available to be expressed in the first place. So basically, your rotator cuff muscles can only help you strengthen external rotation through your",
+      "ocr_text": "’\n\\\\ VA\n\nTHATIS AV iB",
+      "visual_description": "Representative frame contains OCR text: ’\n\\\\ VA\n\nTHATIS AV iB",
+      "segment_summary": "Segment 20.1-24.0s: especially, can only control the range of motion that is available to be expressed in the first place. So basically, your rotator cuff muscles can only help you strengthen external",
+      "topics": [
+        "only",
+        "especially",
+        "control",
+        "range"
+      ],
+      "keywords": [
+        "only",
+        "especially",
+        "control",
+        "range",
+        "motion",
+        "available"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946274771355093,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 22.05,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_009_0022050ms.jpg"
+        }
+      ],
+      "retrieval_text": "especially, can only control the range of motion that is available to be expressed in the first place. So basically, your rotator cuff muscles can only help you strengthen external rotation through your | ’\n\\\\ VA\n\nTHATIS AV iB | Representative frame contains OCR text: ’\n\\\\ VA\n\nTHATIS AV iB | Segment 20.1-24.0s: especially, can only control the range of motion that is available to be expressed in the first place. So basically, your rotator cuff muscles can only help you strengthen external | only especially control range | only especially control range motion available",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_04c56f56fe7e42b2",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 10,
+      "start_sec": 24.033333333333335,
+      "end_sec": 32.3,
+      "duration_sec": 8.266666666666662,
+      "transcript": "So basically, your rotator cuff muscles can only help you strengthen external rotation through your genuinely available external rotation space. But the problem I see is so many people do these",
+      "ocr_text": "“THROUGH YOUR",
+      "visual_description": "Representative frame contains OCR text: “THROUGH YOUR",
+      "segment_summary": "Segment 24.0-32.3s: So basically, your rotator cuff muscles can only help you strengthen external rotation through your genuinely available external rotation space. But the problem I see is so many pe",
+      "topics": [
+        "external",
+        "rotation",
+        "basically",
+        "rotator"
+      ],
+      "keywords": [
+        "external",
+        "rotation",
+        "basically",
+        "rotator",
+        "cuff",
+        "muscles"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9881707539316267,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 28.166666666666664,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_010_0028166ms.jpg"
+        }
+      ],
+      "retrieval_text": "So basically, your rotator cuff muscles can only help you strengthen external rotation through your genuinely available external rotation space. But the problem I see is so many people do these | “THROUGH YOUR | Representative frame contains OCR text: “THROUGH YOUR | Segment 24.0-32.3s: So basically, your rotator cuff muscles can only help you strengthen external rotation through your genuinely available external rotation space. But the problem I see is so many pe | external rotation basically rotator | external rotation basically rotator cuff muscles",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_8464f6249987dddc",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 11,
+      "start_sec": 32.3,
+      "end_sec": 34.8,
+      "duration_sec": 2.5,
+      "transcript": "genuinely available external rotation space. But the problem I see is so many people do these external rotation drills in so much shoulder mobility and they just assume they have that space.",
+      "ocr_text": "SUR ROTATION\n\nN",
+      "visual_description": "Representative frame contains OCR text: SUR ROTATION\n\nN",
+      "segment_summary": "Segment 32.3-34.8s: genuinely available external rotation space. But the problem I see is so many people do these external rotation drills in so much shoulder mobility and they just assume they have t",
+      "topics": [
+        "rotation",
+        "external",
+        "space",
+        "they"
+      ],
+      "keywords": [
+        "rotation",
+        "external",
+        "space",
+        "they",
+        "genuinely",
+        "available"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9817140307277441,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 33.55,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_011_0033550ms.jpg"
+        }
+      ],
+      "retrieval_text": "genuinely available external rotation space. But the problem I see is so many people do these external rotation drills in so much shoulder mobility and they just assume they have that space. | SUR ROTATION\n\nN | Representative frame contains OCR text: SUR ROTATION\n\nN | Segment 32.3-34.8s: genuinely available external rotation space. But the problem I see is so many people do these external rotation drills in so much shoulder mobility and they just assume they have t | rotation external space they | rotation external space they genuinely available",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f076ebf14533b8a4",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 12,
+      "start_sec": 34.8,
+      "end_sec": 39.06666666666667,
+      "duration_sec": 4.266666666666673,
+      "transcript": "external rotation drills in so much shoulder mobility and they just assume they have that space. And a lot of people would be surprised if they actually measured their external rotation mobility at",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 36.9s.",
+      "segment_summary": "Segment 34.8-39.1s: external rotation drills in so much shoulder mobility and they just assume they have that space. And a lot of people would be surprised if they actually measured their external rot",
+      "topics": [
+        "they",
+        "external",
+        "rotation",
+        "mobility"
+      ],
+      "keywords": [
+        "they",
+        "external",
+        "rotation",
+        "mobility",
+        "drills",
+        "much"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9817140307277441,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 36.93333333333334,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_012_0036933ms.jpg"
+        }
+      ],
+      "retrieval_text": "external rotation drills in so much shoulder mobility and they just assume they have that space. And a lot of people would be surprised if they actually measured their external rotation mobility at | Representative frame sampled at 36.9s. | Segment 34.8-39.1s: external rotation drills in so much shoulder mobility and they just assume they have that space. And a lot of people would be surprised if they actually measured their external rot | they external rotation mobility | they external rotation mobility drills much",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0c69aeb5c6987110",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 13,
+      "start_sec": 39.06666666666667,
+      "end_sec": 41.63333333333333,
+      "duration_sec": 2.566666666666663,
+      "transcript": "And a lot of people would be surprised if they actually measured their external rotation mobility at",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 40.4s.",
+      "segment_summary": "Segment 39.1-41.6s: And a lot of people would be surprised if they actually measured their external rotation mobility at",
+      "topics": [
+        "people",
+        "would",
+        "surprised",
+        "they"
+      ],
+      "keywords": [
+        "people",
+        "would",
+        "surprised",
+        "they",
+        "actually",
+        "measured"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9817140307277441,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 40.35,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_013_0040350ms.jpg"
+        }
+      ],
+      "retrieval_text": "And a lot of people would be surprised if they actually measured their external rotation mobility at | Representative frame sampled at 40.4s. | Segment 39.1-41.6s: And a lot of people would be surprised if they actually measured their external rotation mobility at | people would surprised they | people would surprised they actually measured",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_16a926e0b88ae471",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 14,
+      "start_sec": 41.63333333333333,
+      "end_sec": 46.1,
+      "duration_sec": 4.466666666666669,
+      "transcript": "And a lot of people would be surprised if they actually measured their external rotation mobility at the shoulder, how little of it they genuinely have before they start compensating. If you run out of",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 43.9s.",
+      "segment_summary": "Segment 41.6-46.1s: And a lot of people would be surprised if they actually measured their external rotation mobility at the shoulder, how little of it they genuinely have before they start compensati",
+      "topics": [
+        "they",
+        "people",
+        "would",
+        "surprised"
+      ],
+      "keywords": [
+        "they",
+        "people",
+        "would",
+        "surprised",
+        "actually",
+        "measured"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9817140307277441,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 43.86666666666667,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_014_0043866ms.jpg"
+        }
+      ],
+      "retrieval_text": "And a lot of people would be surprised if they actually measured their external rotation mobility at the shoulder, how little of it they genuinely have before they start compensating. If you run out of | Representative frame sampled at 43.9s. | Segment 41.6-46.1s: And a lot of people would be surprised if they actually measured their external rotation mobility at the shoulder, how little of it they genuinely have before they start compensati | they people would surprised | they people would surprised actually measured",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_24d485c6176ba2f2",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 15,
+      "start_sec": 46.1,
+      "end_sec": 47.56666666666667,
+      "duration_sec": 1.4666666666666686,
+      "transcript": "the shoulder, how little of it they genuinely have before they start compensating. If you run out of",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 46.8s.",
+      "segment_summary": "Segment 46.1-47.6s: the shoulder, how little of it they genuinely have before they start compensating. If you run out of",
+      "topics": [
+        "they",
+        "shoulder",
+        "little",
+        "genuinely"
+      ],
+      "keywords": [
+        "they",
+        "shoulder",
+        "little",
+        "genuinely",
+        "before",
+        "start"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9817140307277441,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 46.833333333333336,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_015_0046833ms.jpg"
+        }
+      ],
+      "retrieval_text": "the shoulder, how little of it they genuinely have before they start compensating. If you run out of | Representative frame sampled at 46.8s. | Segment 46.1-47.6s: the shoulder, how little of it they genuinely have before they start compensating. If you run out of | they shoulder little genuinely | they shoulder little genuinely before start",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c2251b027660f618",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 16,
+      "start_sec": 47.56666666666667,
+      "end_sec": 50.86666666666667,
+      "duration_sec": 3.299999999999997,
+      "transcript": "the shoulder, how little of it they genuinely have before they start compensating. If you run out of external rotation mobility, all you're going to end up doing is just turning your spine to accommodate",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 49.2s.",
+      "segment_summary": "Segment 47.6-50.9s: the shoulder, how little of it they genuinely have before they start compensating. If you run out of external rotation mobility, all you're going to end up doing is just turning yo",
+      "topics": [
+        "they",
+        "shoulder",
+        "little",
+        "genuinely"
+      ],
+      "keywords": [
+        "they",
+        "shoulder",
+        "little",
+        "genuinely",
+        "before",
+        "start"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9817140307277441,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 49.21666666666667,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_016_0049216ms.jpg"
+        }
+      ],
+      "retrieval_text": "the shoulder, how little of it they genuinely have before they start compensating. If you run out of external rotation mobility, all you're going to end up doing is just turning your spine to accommodate | Representative frame sampled at 49.2s. | Segment 47.6-50.9s: the shoulder, how little of it they genuinely have before they start compensating. If you run out of external rotation mobility, all you're going to end up doing is just turning yo | they shoulder little genuinely | they shoulder little genuinely before start",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_4e607007ef8d4537",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 17,
+      "start_sec": 50.86666666666667,
+      "end_sec": 55.9,
+      "duration_sec": 5.033333333333331,
+      "transcript": "external rotation mobility, all you're going to end up doing is just turning your spine to accommodate that lack of mobility. I see this all the time. So instead of better solution would be to open up",
+      "ocr_text": "\\\n) — THATLACK",
+      "visual_description": "Representative frame contains OCR text: \\\n) — THATLACK",
+      "segment_summary": "Segment 50.9-55.9s: external rotation mobility, all you're going to end up doing is just turning your spine to accommodate that lack of mobility. I see this all the time. So instead of better solution",
+      "topics": [
+        "mobility",
+        "external",
+        "rotation",
+        "you're"
+      ],
+      "keywords": [
+        "mobility",
+        "external",
+        "rotation",
+        "you're",
+        "going",
+        "doing"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9817140307277441,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 53.38333333333333,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_017_0053383ms.jpg"
+        }
+      ],
+      "retrieval_text": "external rotation mobility, all you're going to end up doing is just turning your spine to accommodate that lack of mobility. I see this all the time. So instead of better solution would be to open up | \\\n) — THATLACK | Representative frame contains OCR text: \\\n) — THATLACK | Segment 50.9-55.9s: external rotation mobility, all you're going to end up doing is just turning your spine to accommodate that lack of mobility. I see this all the time. So instead of better solution | mobility external rotation you're | mobility external rotation you're going doing",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_2aea37f2337fc93d",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 18,
+      "start_sec": 55.9,
+      "end_sec": 63.766666666666666,
+      "duration_sec": 7.866666666666667,
+      "transcript": "that lack of mobility. I see this all the time. So instead of better solution would be to open up more mobility for external rotation space. And that way you can train those rotator cuff muscles through a more full range of motion and get better results. As opposed to just assuming you have",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 59.8s.",
+      "segment_summary": "Segment 55.9-63.8s: that lack of mobility. I see this all the time. So instead of better solution would be to open up more mobility for external rotation space. And that way you can train those rotato",
+      "topics": [
+        "mobility",
+        "better",
+        "more",
+        "lack"
+      ],
+      "keywords": [
+        "mobility",
+        "better",
+        "more",
+        "lack",
+        "time",
+        "instead"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9937522759622274,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 59.83333333333333,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_018_0059833ms.jpg"
+        }
+      ],
+      "retrieval_text": "that lack of mobility. I see this all the time. So instead of better solution would be to open up more mobility for external rotation space. And that way you can train those rotator cuff muscles through a more full range of motion and get better results. As opposed to just assuming you have | Representative frame sampled at 59.8s. | Segment 55.9-63.8s: that lack of mobility. I see this all the time. So instead of better solution would be to open up more mobility for external rotation space. And that way you can train those rotato | mobility better more lack | mobility better more lack time instead",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3fb5ae154c3f74c9",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 19,
+      "start_sec": 63.766666666666666,
+      "end_sec": 66.26666666666667,
+      "duration_sec": 2.5,
+      "transcript": "through a more full range of motion and get better results. As opposed to just assuming you have",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 65.0s.",
+      "segment_summary": "Segment 63.8-66.3s: through a more full range of motion and get better results. As opposed to just assuming you have",
+      "topics": [
+        "through",
+        "more",
+        "full",
+        "range"
+      ],
+      "keywords": [
+        "through",
+        "more",
+        "full",
+        "range",
+        "motion",
+        "better"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.999771398579469,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 65.01666666666667,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_019_0065016ms.jpg"
+        }
+      ],
+      "retrieval_text": "through a more full range of motion and get better results. As opposed to just assuming you have | Representative frame sampled at 65.0s. | Segment 63.8-66.3s: through a more full range of motion and get better results. As opposed to just assuming you have | through more full range | through more full range motion better",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7f64017c9ae56785",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 20,
+      "start_sec": 66.26666666666667,
+      "end_sec": 78.53333333333333,
+      "duration_sec": 12.266666666666666,
+      "transcript": "through a more full range of motion and get better results. As opposed to just assuming you have that mobility and then just ending up moving through a little bit of space and then turning your spine for the rest of it, even if you're not consciously aware of that compensation. So let's measure our external rotation space. All you need to do is lay on the ground and get your elbow close to your",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 72.4s.",
+      "segment_summary": "Segment 66.3-78.5s: through a more full range of motion and get better results. As opposed to just assuming you have that mobility and then just ending up moving through a little bit of space and then",
+      "topics": [
+        "through",
+        "just",
+        "then",
+        "space"
+      ],
+      "keywords": [
+        "through",
+        "just",
+        "then",
+        "space",
+        "more",
+        "full"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.999771398579469,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 72.4,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_020_0072400ms.jpg"
+        }
+      ],
+      "retrieval_text": "through a more full range of motion and get better results. As opposed to just assuming you have that mobility and then just ending up moving through a little bit of space and then turning your spine for the rest of it, even if you're not consciously aware of that compensation. So let's measure our external rotation space. All you need to do is lay on the ground and get your elbow close to your | Representative frame sampled at 72.4s. | Segment 66.3-78.5s: through a more full range of motion and get better results. As opposed to just assuming you have that mobility and then just ending up moving through a little bit of space and then | through just then space | through just then space more full",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_975a43ccfb0a265c",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 21,
+      "start_sec": 78.53333333333333,
+      "end_sec": 84.43333333333334,
+      "duration_sec": 5.900000000000006,
+      "transcript": "our external rotation space. All you need to do is lay on the ground and get your elbow close to your side without having to force it there whatsoever. Start with your fist up at the ceiling and then very",
+      "ocr_text": "..\nTO YOUR SIDE\n\nMe",
+      "visual_description": "Representative frame contains OCR text: ..\nTO YOUR SIDE\n\nMe",
+      "segment_summary": "Segment 78.5-84.4s: our external rotation space. All you need to do is lay on the ground and get your elbow close to your side without having to force it there whatsoever. Start with your fist up at t",
+      "topics": [
+        "side",
+        "external",
+        "rotation",
+        "space"
+      ],
+      "keywords": [
+        "side",
+        "external",
+        "rotation",
+        "space",
+        "need",
+        "ground"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.999771398579469,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 81.48333333333333,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_021_0081483ms.jpg"
+        }
+      ],
+      "retrieval_text": "our external rotation space. All you need to do is lay on the ground and get your elbow close to your side without having to force it there whatsoever. Start with your fist up at the ceiling and then very | ..\nTO YOUR SIDE\n\nMe | Representative frame contains OCR text: ..\nTO YOUR SIDE\n\nMe | Segment 78.5-84.4s: our external rotation space. All you need to do is lay on the ground and get your elbow close to your side without having to force it there whatsoever. Start with your fist up at t | side external rotation space | side external rotation space need ground",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_398f314d0fb52e6d",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 22,
+      "start_sec": 84.43333333333334,
+      "end_sec": 91.23333333333333,
+      "duration_sec": 6.799999999999997,
+      "transcript": "side without having to force it there whatsoever. Start with your fist up at the ceiling and then very slowly allow for your forearm to go closer to the ground. You don't want to ever have to push more",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 87.8s.",
+      "segment_summary": "Segment 84.4-91.2s: side without having to force it there whatsoever. Start with your fist up at the ceiling and then very slowly allow for your forearm to go closer to the ground. You don't want to e",
+      "topics": [
+        "side",
+        "without",
+        "having",
+        "force"
+      ],
+      "keywords": [
+        "side",
+        "without",
+        "having",
+        "force",
+        "there",
+        "whatsoever"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9988393282255856,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 87.83333333333334,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_022_0087833ms.jpg"
+        }
+      ],
+      "retrieval_text": "side without having to force it there whatsoever. Start with your fist up at the ceiling and then very slowly allow for your forearm to go closer to the ground. You don't want to ever have to push more | Representative frame sampled at 87.8s. | Segment 84.4-91.2s: side without having to force it there whatsoever. Start with your fist up at the ceiling and then very slowly allow for your forearm to go closer to the ground. You don't want to e | side without having force | side without having force there whatsoever",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_d60e50380d7005f4",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 23,
+      "start_sec": 91.23333333333333,
+      "end_sec": 96.06666666666666,
+      "duration_sec": 4.833333333333329,
+      "transcript": "slowly allow for your forearm to go closer to the ground. You don't want to ever have to push more than about a 2 out of 10. And you should never feel your elbow deviate away from your side further.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 93.7s.",
+      "segment_summary": "Segment 91.2-96.1s: slowly allow for your forearm to go closer to the ground. You don't want to ever have to push more than about a 2 out of 10. And you should never feel your elbow deviate away from",
+      "topics": [
+        "slowly",
+        "allow",
+        "forearm",
+        "closer"
+      ],
+      "keywords": [
+        "slowly",
+        "allow",
+        "forearm",
+        "closer",
+        "ground",
+        "don't"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9979072578717023,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 93.65,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_023_0093650ms.jpg"
+        }
+      ],
+      "retrieval_text": "slowly allow for your forearm to go closer to the ground. You don't want to ever have to push more than about a 2 out of 10. And you should never feel your elbow deviate away from your side further. | Representative frame sampled at 93.7s. | Segment 91.2-96.1s: slowly allow for your forearm to go closer to the ground. You don't want to ever have to push more than about a 2 out of 10. And you should never feel your elbow deviate away from | slowly allow forearm closer | slowly allow forearm closer ground don't",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_6bfeabd6a1910e60",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 24,
+      "start_sec": 96.06666666666666,
+      "end_sec": 101.03333333333333,
+      "duration_sec": 4.966666666666669,
+      "transcript": "than about a 2 out of 10. And you should never feel your elbow deviate away from your side further. This is going to occur way earlier than a lot of people think. Once you have to push more than about a",
+      "ocr_text": "THISIS GOING",
+      "visual_description": "Representative frame contains OCR text: THISIS GOING",
+      "segment_summary": "Segment 96.1-101.0s: than about a 2 out of 10. And you should never feel your elbow deviate away from your side further. This is going to occur way earlier than a lot of people think. Once you have to",
+      "topics": [
+        "than",
+        "going",
+        "should",
+        "never"
+      ],
+      "keywords": [
+        "than",
+        "going",
+        "should",
+        "never",
+        "feel",
+        "elbow"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9979072578717023,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 98.55,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_024_0098550ms.jpg"
+        }
+      ],
+      "retrieval_text": "than about a 2 out of 10. And you should never feel your elbow deviate away from your side further. This is going to occur way earlier than a lot of people think. Once you have to push more than about a | THISIS GOING | Representative frame contains OCR text: THISIS GOING | Segment 96.1-101.0s: than about a 2 out of 10. And you should never feel your elbow deviate away from your side further. This is going to occur way earlier than a lot of people think. Once you have to | than going should never | than going should never feel elbow",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f1a6af49b70eeb08",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 25,
+      "start_sec": 101.03333333333333,
+      "end_sec": 107.8,
+      "duration_sec": 6.766666666666666,
+      "transcript": "This is going to occur way earlier than a lot of people think. Once you have to push more than about a 2 out of 10 or your elbow starts to deviate away from your body, that is the end of your genuine range of motion. But reason why external rotation space gets limited is because there's a lot of compression",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 104.4s.",
+      "segment_summary": "Segment 101.0-107.8s: This is going to occur way earlier than a lot of people think. Once you have to push more than about a 2 out of 10 or your elbow starts to deviate away from your body, that is the",
+      "topics": [
+        "than",
+        "going",
+        "occur",
+        "earlier"
+      ],
+      "keywords": [
+        "than",
+        "going",
+        "occur",
+        "earlier",
+        "people",
+        "think"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9979072578717023,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 104.41666666666666,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_025_0104416ms.jpg"
+        }
+      ],
+      "retrieval_text": "This is going to occur way earlier than a lot of people think. Once you have to push more than about a 2 out of 10 or your elbow starts to deviate away from your body, that is the end of your genuine range of motion. But reason why external rotation space gets limited is because there's a lot of compression | Representative frame sampled at 104.4s. | Segment 101.0-107.8s: This is going to occur way earlier than a lot of people think. Once you have to push more than about a 2 out of 10 or your elbow starts to deviate away from your body, that is the | than going occur earlier | than going occur earlier people think",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_62edc7bc88a324da",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 26,
+      "start_sec": 107.8,
+      "end_sec": 110.6,
+      "duration_sec": 2.799999999999997,
+      "transcript": "motion. But reason why external rotation space gets limited is because there's a lot of compression",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 109.2s.",
+      "segment_summary": "Segment 107.8-110.6s: motion. But reason why external rotation space gets limited is because there's a lot of compression",
+      "topics": [
+        "motion",
+        "reason",
+        "external",
+        "rotation"
+      ],
+      "keywords": [
+        "motion",
+        "reason",
+        "external",
+        "rotation",
+        "space",
+        "gets"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9979072578717023,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 109.19999999999999,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_026_0109199ms.jpg"
+        }
+      ],
+      "retrieval_text": "motion. But reason why external rotation space gets limited is because there's a lot of compression | Representative frame sampled at 109.2s. | Segment 107.8-110.6s: motion. But reason why external rotation space gets limited is because there's a lot of compression | motion reason external rotation | motion reason external rotation space gets",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_07afe6b36234e96a",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 27,
+      "start_sec": 110.6,
+      "end_sec": 115.1,
+      "duration_sec": 4.5,
+      "transcript": "motion. But reason why external rotation space gets limited is because there's a lot of compression and tightness of tissues and muscles in between the scapule and the spine. Try squeezing your",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 112.8s.",
+      "segment_summary": "Segment 110.6-115.1s: motion. But reason why external rotation space gets limited is because there's a lot of compression and tightness of tissues and muscles in between the scapule and the spine. Try s",
+      "topics": [
+        "motion",
+        "reason",
+        "external",
+        "rotation"
+      ],
+      "keywords": [
+        "motion",
+        "reason",
+        "external",
+        "rotation",
+        "space",
+        "gets"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9979072578717023,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 112.85,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_027_0112850ms.jpg"
+        }
+      ],
+      "retrieval_text": "motion. But reason why external rotation space gets limited is because there's a lot of compression and tightness of tissues and muscles in between the scapule and the spine. Try squeezing your | Representative frame sampled at 112.8s. | Segment 110.6-115.1s: motion. But reason why external rotation space gets limited is because there's a lot of compression and tightness of tissues and muscles in between the scapule and the spine. Try s | motion reason external rotation | motion reason external rotation space gets",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c51ade36bee21654",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 28,
+      "start_sec": 115.1,
+      "end_sec": 118.66666666666667,
+      "duration_sec": 3.566666666666677,
+      "transcript": "and tightness of tissues and muscles in between the scapule and the spine. Try squeezing your shoulder blades together and then trying to express external rotation. You can't really do it",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 116.9s.",
+      "segment_summary": "Segment 115.1-118.7s: and tightness of tissues and muscles in between the scapule and the spine. Try squeezing your shoulder blades together and then trying to express external rotation. You can't reall",
+      "topics": [
+        "tightness",
+        "tissues",
+        "muscles",
+        "between"
+      ],
+      "keywords": [
+        "tightness",
+        "tissues",
+        "muscles",
+        "between",
+        "scapule",
+        "spine"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977276826975867,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 116.88333333333333,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_028_0116883ms.jpg"
+        }
+      ],
+      "retrieval_text": "and tightness of tissues and muscles in between the scapule and the spine. Try squeezing your shoulder blades together and then trying to express external rotation. You can't really do it | Representative frame sampled at 116.9s. | Segment 115.1-118.7s: and tightness of tissues and muscles in between the scapule and the spine. Try squeezing your shoulder blades together and then trying to express external rotation. You can't reall | tightness tissues muscles between | tightness tissues muscles between scapule spine",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3240a466e72bf58b",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 29,
+      "start_sec": 118.66666666666667,
+      "end_sec": 121.53333333333333,
+      "duration_sec": 2.86666666666666,
+      "transcript": "shoulder blades together and then trying to express external rotation. You can't really do it because there's no way for the shoulder to go. So by opening up this space, we can restore external",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 120.1s.",
+      "segment_summary": "Segment 118.7-121.5s: shoulder blades together and then trying to express external rotation. You can't really do it because there's no way for the shoulder to go. So by opening up this space, we can res",
+      "topics": [
+        "shoulder",
+        "external",
+        "blades",
+        "together"
+      ],
+      "keywords": [
+        "shoulder",
+        "external",
+        "blades",
+        "together",
+        "then",
+        "trying"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9975481075234711,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 120.1,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_029_0120100ms.jpg"
+        }
+      ],
+      "retrieval_text": "shoulder blades together and then trying to express external rotation. You can't really do it because there's no way for the shoulder to go. So by opening up this space, we can restore external | Representative frame sampled at 120.1s. | Segment 118.7-121.5s: shoulder blades together and then trying to express external rotation. You can't really do it because there's no way for the shoulder to go. So by opening up this space, we can res | shoulder external blades together | shoulder external blades together then trying",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_dd1e47ab710de199",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 30,
+      "start_sec": 121.53333333333333,
+      "end_sec": 124.7,
+      "duration_sec": 3.1666666666666714,
+      "transcript": "because there's no way for the shoulder to go. So by opening up this space, we can restore external rotation mobility and then get more out of those exercises. Here's how you can do that. The most",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 123.1s.",
+      "segment_summary": "Segment 121.5-124.7s: because there's no way for the shoulder to go. So by opening up this space, we can restore external rotation mobility and then get more out of those exercises. Here's how you can d",
+      "topics": [
+        "because",
+        "there's",
+        "shoulder",
+        "opening"
+      ],
+      "keywords": [
+        "because",
+        "there's",
+        "shoulder",
+        "opening",
+        "space",
+        "restore"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9975481075234711,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 123.11666666666667,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_030_0123116ms.jpg"
+        }
+      ],
+      "retrieval_text": "because there's no way for the shoulder to go. So by opening up this space, we can restore external rotation mobility and then get more out of those exercises. Here's how you can do that. The most | Representative frame sampled at 123.1s. | Segment 121.5-124.7s: because there's no way for the shoulder to go. So by opening up this space, we can restore external rotation mobility and then get more out of those exercises. Here's how you can d | because there's shoulder opening | because there's shoulder opening space restore",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_54d40341f7a0e870",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 31,
+      "start_sec": 124.7,
+      "end_sec": 127.93333333333334,
+      "duration_sec": 3.2333333333333343,
+      "transcript": "rotation mobility and then get more out of those exercises. Here's how you can do that. The most",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 126.3s.",
+      "segment_summary": "Segment 124.7-127.9s: rotation mobility and then get more out of those exercises. Here's how you can do that. The most",
+      "topics": [
+        "rotation",
+        "mobility",
+        "then",
+        "more"
+      ],
+      "keywords": [
+        "rotation",
+        "mobility",
+        "then",
+        "more",
+        "exercises",
+        "here's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9975481075234711,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 126.31666666666666,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_031_0126316ms.jpg"
+        }
+      ],
+      "retrieval_text": "rotation mobility and then get more out of those exercises. Here's how you can do that. The most | Representative frame sampled at 126.3s. | Segment 124.7-127.9s: rotation mobility and then get more out of those exercises. Here's how you can do that. The most | rotation mobility then more | rotation mobility then more exercises here's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_a329bf9d3d19154a",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 32,
+      "start_sec": 127.93333333333334,
+      "end_sec": 140.33333333333334,
+      "duration_sec": 12.400000000000006,
+      "transcript": "rotation mobility and then get more out of those exercises. Here's how you can do that. The most simple possible way to do this would be to get in a position where your quadruped hands with your shoulders knees underneath your hips. Make sure you have a 50-50 waist split between both of them. Keeping your head nice and neutral and your elbows just 5 to 10% unlocked, gently separate your shoulders away",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 134.1s.",
+      "segment_summary": "Segment 127.9-140.3s: rotation mobility and then get more out of those exercises. Here's how you can do that. The most simple possible way to do this would be to get in a position where your quadruped h",
+      "topics": [
+        "shoulders",
+        "rotation",
+        "mobility",
+        "then"
+      ],
+      "keywords": [
+        "shoulders",
+        "rotation",
+        "mobility",
+        "then",
+        "more",
+        "exercises"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9975481075234711,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 134.13333333333333,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_032_0134133ms.jpg"
+        }
+      ],
+      "retrieval_text": "rotation mobility and then get more out of those exercises. Here's how you can do that. The most simple possible way to do this would be to get in a position where your quadruped hands with your shoulders knees underneath your hips. Make sure you have a 50-50 waist split between both of them. Keeping your head nice and neutral and your elbows just 5 to 10% unlocked, gently separate your shoulders away | Representative frame sampled at 134.1s. | Segment 127.9-140.3s: rotation mobility and then get more out of those exercises. Here's how you can do that. The most simple possible way to do this would be to get in a position where your quadruped h | shoulders rotation mobility then | shoulders rotation mobility then more exercises",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_105b54fb27ea07e3",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 33,
+      "start_sec": 140.33333333333334,
+      "end_sec": 144.63333333333333,
+      "duration_sec": 4.299999999999983,
+      "transcript": "your head nice and neutral and your elbows just 5 to 10% unlocked, gently separate your shoulders away from your spine as you very slightly get that protraction feeling. This should be very gentle",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 142.5s.",
+      "segment_summary": "Segment 140.3-144.6s: your head nice and neutral and your elbows just 5 to 10% unlocked, gently separate your shoulders away from your spine as you very slightly get that protraction feeling. This shoul",
+      "topics": [
+        "very",
+        "head",
+        "nice",
+        "neutral"
+      ],
+      "keywords": [
+        "very",
+        "head",
+        "nice",
+        "neutral",
+        "elbows",
+        "just"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9975685892859474,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 142.48333333333335,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_033_0142483ms.jpg"
+        }
+      ],
+      "retrieval_text": "your head nice and neutral and your elbows just 5 to 10% unlocked, gently separate your shoulders away from your spine as you very slightly get that protraction feeling. This should be very gentle | Representative frame sampled at 142.5s. | Segment 140.3-144.6s: your head nice and neutral and your elbows just 5 to 10% unlocked, gently separate your shoulders away from your spine as you very slightly get that protraction feeling. This shoul | very head nice neutral | very head nice neutral elbows just",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_6b9880e5f7babe4c",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 34,
+      "start_sec": 144.63333333333333,
+      "end_sec": 159.63333333333333,
+      "duration_sec": 15.0,
+      "transcript": "from your spine as you very slightly get that protraction feeling. This should be very gentle and it should not occur with you shrugging your shoulders at all. Very gently exhale through your mouth for about 5-2 seconds, letting the air fall out of you like this. At the end of that exhale, you're going to feel your side abs engage. Hopefully not as much your six back but your side abs. Hold",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 144.6-159.6s: from your spine as you very slightly get that protraction feeling. This should be very gentle and it should not occur with you shrugging your shoulders at all. Very gently exhale t",
+      "topics": [
+        "very",
+        "should",
+        "exhale",
+        "side"
+      ],
+      "keywords": [
+        "very",
+        "should",
+        "exhale",
+        "side",
+        "spine",
+        "slightly"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9975890710484236,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "from your spine as you very slightly get that protraction feeling. This should be very gentle and it should not occur with you shrugging your shoulders at all. Very gently exhale through your mouth for about 5-2 seconds, letting the air fall out of you like this. At the end of that exhale, you're going to feel your side abs engage. Hopefully not as much your six back but your side abs. Hold | Segment 144.6-159.6s: from your spine as you very slightly get that protraction feeling. This should be very gentle and it should not occur with you shrugging your shoulders at all. Very gently exhale t | very should exhale side | very should exhale side spine slightly",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_00d6748c4f025119",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 35,
+      "start_sec": 159.63333333333333,
+      "end_sec": 174.63333333333333,
+      "duration_sec": 15.0,
+      "transcript": "you're going to feel your side abs engage. Hopefully not as much your six back but your side abs. Hold on that contraction then as you close your mouth and pause. After about a pause for a second or two, inhale very gently through your nose, letting the air fall into you. Because you're holding onto your",
+      "ocr_text": "ABS ENGAGE,",
+      "visual_description": "Representative frame contains OCR text: ABS ENGAGE,",
+      "segment_summary": "Segment 159.6-174.6s: you're going to feel your side abs engage. Hopefully not as much your six back but your side abs. Hold on that contraction then as you close your mouth and pause. After about a pau",
+      "topics": [
+        "you're",
+        "side",
+        "engage",
+        "pause"
+      ],
+      "keywords": [
+        "you're",
+        "side",
+        "engage",
+        "pause",
+        "going",
+        "feel"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.998294903508698,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 160.03333333333333,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_034_0160033ms.jpg"
+        }
+      ],
+      "retrieval_text": "you're going to feel your side abs engage. Hopefully not as much your six back but your side abs. Hold on that contraction then as you close your mouth and pause. After about a pause for a second or two, inhale very gently through your nose, letting the air fall into you. Because you're holding onto your | ABS ENGAGE, | Representative frame contains OCR text: ABS ENGAGE, | Segment 159.6-174.6s: you're going to feel your side abs engage. Hopefully not as much your six back but your side abs. Hold on that contraction then as you close your mouth and pause. After about a pau | you're side engage pause | you're side engage pause going feel",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c8fb826c48baae1c",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 36,
+      "start_sec": 174.63333333333333,
+      "end_sec": 175.43333333333334,
+      "duration_sec": 0.8000000000000114,
+      "transcript": "inhale very gently through your nose, letting the air fall into you. Because you're holding onto your side out a little bit, the air will have no choice but to expand the spacing between your shoulder blades and",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 174.6-175.4s: inhale very gently through your nose, letting the air fall into you. Because you're holding onto your side out a little bit, the air will have no choice but to expand the spacing b",
+      "topics": [
+        "inhale",
+        "very",
+        "gently",
+        "through"
+      ],
+      "keywords": [
+        "inhale",
+        "very",
+        "gently",
+        "through",
+        "nose",
+        "letting"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9997065684292465,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "inhale very gently through your nose, letting the air fall into you. Because you're holding onto your side out a little bit, the air will have no choice but to expand the spacing between your shoulder blades and | Segment 174.6-175.4s: inhale very gently through your nose, letting the air fall into you. Because you're holding onto your side out a little bit, the air will have no choice but to expand the spacing b | inhale very gently through | inhale very gently through nose letting",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_6876c93d180792ae",
+      "source_id": "src_ef2da7e8963d6aab",
+      "segment_index": 37,
+      "start_sec": 175.43333333333334,
+      "end_sec": 179.16666666666666,
+      "duration_sec": 3.73333333333332,
+      "transcript": "side out a little bit, the air will have no choice but to expand the spacing between your shoulder blades and spine.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 177.3s.",
+      "segment_summary": "Segment 175.4-179.2s: side out a little bit, the air will have no choice but to expand the spacing between your shoulder blades and spine.",
+      "topics": [
+        "side",
+        "little",
+        "will",
+        "choice"
+      ],
+      "keywords": [
+        "side",
+        "little",
+        "will",
+        "choice",
+        "expand",
+        "spacing"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9997065684292465,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 177.3,
+          "path": "data\\processed\\rag\\src_ef2da7e8963d6aab\\frames\\scene_035_0177300ms.jpg"
+        }
+      ],
+      "retrieval_text": "side out a little bit, the air will have no choice but to expand the spacing between your shoulder blades and spine. | Representative frame sampled at 177.3s. | Segment 175.4-179.2s: side out a little bit, the air will have no choice but to expand the spacing between your shoulder blades and spine. | side little will choice | side little will choice expand spacing",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Rotator Cuff Exercises Don’t Work (until you do this)",
+        "uri": "https://www.youtube.com/watch?v=N2mMGWltYrI",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 37,
+    "transcript_segment_count": 38,
+    "ocr_observation_count": 8,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "sync_result": {
+    "source_id": "src_ef2da7e8963d6aab",
+    "assets_upserted": 39,
+    "segments_inserted": 37,
+    "segments_skipped": 0,
+    "qdrant_points_upserted": 37
+  }
+}

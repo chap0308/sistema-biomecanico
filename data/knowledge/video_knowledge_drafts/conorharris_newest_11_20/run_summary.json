@@ -1,0 +1,163 @@
+{
+  "count": 10,
+  "usefulness": {
+    "useful": 10
+  },
+  "content_kinds": {
+    "mixed": 9,
+    "exercise_optimization": 1
+  },
+  "videos": [
+    {
+      "rank": 11,
+      "video_id": "mI2n6asSFos",
+      "title": "Esta técnica secreta de liberación libera tus pies y tobillos.",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "foot",
+        "ankle"
+      ],
+      "summary": "This video explains that common foot problems like plantar fasciitis are often due to the foot's inability to properly move through pronation and supination, and to maintain three points of contact (heel, big toe, little toe) with even pressure. It then demonstrates three specific lacrosse ball rolling techniques designed to improve foot contact and mobility, targeting different areas of the foot: the inner foot (big toe/inner heel), the transverse arch (windshield wiper motion), and the outer foot (pinky toe/outer heel). The speaker emphasizes controlled, directional rolling over mindless random rolling.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 12,
+      "video_id": "d7fXiLxQFyc",
+      "title": "El ejercicio postural definitivo",
+      "usefulness": "useful",
+      "content_kind": "exercise_optimization",
+      "body_regions": [
+        "shoulders",
+        "upper back",
+        "thoracic spine"
+      ],
+      "summary": "This video explains common mistakes and provides a corrected technique for the face pull exercise, emphasizing proper scapular movement and thoracic spine positioning for improved posture. It highlights that over-retracting shoulders and performing the exercise standing can be counterproductive, and instead recommends a seated, supported variation with specific cues for optimal muscle activation and scapular mechanics.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 13,
+      "video_id": "OM86DBg0_ek",
+      "title": "El mejor ejercicio para corregir la escápula alada",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "Shoulder",
+        "Scapula",
+        "Thoracic Spine",
+        "Ribcage",
+        "Arm"
+      ],
+      "summary": "This video explains that traditional upper back strengthening exercises are often insufficient for correcting winged scapula. It highlights the crucial role of the triceps long head and lower trapezius in pulling the scapula into downward rotation, and emphasizes the importance of ribcage mobility and proper breathing for lasting results. The video then demonstrates a band-assisted seated triceps extension exercise designed to address both scapular repositioning and ribcage expansion.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 14,
+      "video_id": "wE9bCu3Wadc",
+      "title": "Esto finalmente corrigió mi postura de cabeza adelantada.",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "neck",
+        "cervical spine",
+        "ribs",
+        "diaphragm",
+        "thoracic spine"
+      ],
+      "summary": "This video explains that forward head posture and neck pain are often linked to overactive and tight scalene muscles, which compensate for inefficient diaphragmatic breathing. It provides a gentle scalene stretch and a diaphragmatic breathing re-patterning exercise to address these issues.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 15,
+      "video_id": "yHWRnhSC9rA",
+      "title": "La asombrosa verdad sobre cómo corregir la inclinación pélvica lateral",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "pelvis",
+        "thoracic spine",
+        "rib cage",
+        "hips",
+        "lower back"
+      ],
+      "summary": "This video explains that perceived body twisting or lateral pelvic tilt is often due to natural human body asymmetry, leading to a relative rotation between the upper and lower body. It introduces two self-assessment tests for lower and upper body rotation and then provides a detailed corrective exercise (wall-supported side-lying rotation) to address these rotational imbalances, with specific instructions for right or left-sided biases.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 16,
+      "video_id": "k_QgZEkj2Es",
+      "title": "El ejercicio definitivo para activar los glúteos",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "Hips",
+        "Glutes",
+        "Lower Back",
+        "Knees",
+        "Feet"
+      ],
+      "summary": "This video introduces a wall-assisted single-leg hip hinge exercise using a foam roller to improve glute activation and teach proper hip extension mechanics. It explains the biomechanical role of the glutes in hip extension and highlights common compensatory patterns like knee extension or excessive low back arching. The exercise aims to prevent these compensations by providing external cues and focusing on specific foot contact points. It also suggests progression to a weighted single-leg hip hinge.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 17,
+      "video_id": "843HhzViWMs",
+      "title": "Este estiramiento corrige la postura de cabeza adelantada.",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "neck",
+        "head",
+        "upper back"
+      ],
+      "summary": "The video explains that the sternocleidomastoid (SCM) muscle is often overactive in individuals with forward head posture and neck pain, contributing to both posture and compensatory breathing mechanics. It then demonstrates two variations of a gentle SCM stretch with a breathing component to help lengthen the muscle and re-educate proper breathing.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 18,
+      "video_id": "X2cCVAY-vys",
+      "title": "La sorprendente verdad sobre cómo mejorar la movilidad de la cadera 🤯",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "hip",
+        "pelvis",
+        "knee",
+        "foot"
+      ],
+      "summary": "This video explains that limited hip internal rotation is often not due to tight muscles, but rather being stuck in a position of relative internal rotation, which limits further movement. The solution is to restore external rotation space. It demonstrates a diagnostic test for hip abduction and internal rotation, and provides two corrective exercises (half-kneeling and supine hip external rotation pushes) to improve this space.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 19,
+      "video_id": "LRP7vZaarGo",
+      "title": "Este ejercicio de movilidad de cadera funciona mejor que los estiramientos.",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "hip",
+        "pelvis",
+        "lower limb"
+      ],
+      "summary": "This video introduces the kettlebell drop catch as an effective exercise for improving and maintaining hip internal rotation mobility, particularly useful in dynamic warm-ups. It explains the biomechanical principle that hip flexion involves internal rotation of the femur and demonstrates how the exercise trains the body to quickly access and utilize this internal rotation space, contrasting it with passive stretching methods.",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 20,
+      "video_id": "UuZj7oum5fM",
+      "title": "Esto corrige la postura frente a la pantalla más que el estiramiento",
+      "usefulness": "useful",
+      "content_kind": "mixed",
+      "body_regions": [
+        "shoulders",
+        "rib cage",
+        "thoracic spine",
+        "diaphragm",
+        "upper back",
+        "neck"
+      ],
+      "summary": "This video explains that rounded shoulders and tight pectorals are often a symptom of a depressed and compressed rib cage, rather than the primary issue. It attributes this to a diaphragm that loses its ability to function due to sedentary lifestyles and lack of movement variability. The solution proposed is to open up the chest and improve diaphragm function through specific breathing and movement, not just stretching or strengthening the upper back. It then demonstrates an 'all fours hand walk with exhale' exercise designed to achieve this by promoting rib cage expansion and proper breathing mechanics.",
+      "exclusion_reason": null
+    }
+  ]
+}

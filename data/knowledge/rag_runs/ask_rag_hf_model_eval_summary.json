@@ -1,0 +1,105 @@
+{
+  "query": "Me duele el pecho al querer tocar mi omoplato contrario con mi brazo derecho\n\nDeficiencias detectadas por análisis de imágenes:\n\nAsimetría postural de hombros (mild): La postura en reposo sugiere una diferencia relevante en la línea de hombros.\nPatrón postural torácico (mild): La postura en reposo sugiere un sesgo torácico relevante que debe interpretarse con contexto clínico.\nAsimetría postural de hombros (mild): La postura en reposo sugiere una diferencia relevante en la línea de hombros.",
+  "deficiencies": [
+    {
+      "id": "postural_shoulder_asymmetry",
+      "label": "Asimetría postural de hombros",
+      "summary": "La postura en reposo sugiere una diferencia relevante en la línea de hombros.",
+      "severity": "mild",
+      "confidence": "high",
+      "supporting_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "related_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "weight": null,
+      "view": "front",
+      "source_group": "rest_phase1",
+      "body_region": "shoulder",
+      "related_metrics": []
+    },
+    {
+      "id": "thoracic_posture_pattern",
+      "label": "Patrón postural torácico",
+      "summary": "La postura en reposo sugiere un sesgo torácico relevante que debe interpretarse con contexto clínico.",
+      "severity": "mild",
+      "confidence": "medium",
+      "supporting_findings": [
+        "thoracic_kyphosis_bias"
+      ],
+      "related_findings": [
+        "thoracic_kyphosis_bias"
+      ],
+      "weight": null,
+      "view": "side",
+      "source_group": "rest_phase1",
+      "body_region": "thoracic_spine",
+      "related_metrics": []
+    },
+    {
+      "id": "postural_shoulder_asymmetry",
+      "label": "Asimetría postural de hombros",
+      "summary": "La postura en reposo sugiere una diferencia relevante en la línea de hombros.",
+      "severity": "mild",
+      "confidence": "high",
+      "supporting_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "related_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "weight": null,
+      "view": "back",
+      "source_group": "rest_phase1",
+      "body_region": "shoulder",
+      "related_metrics": []
+    }
+  ],
+  "results": [
+    {
+      "model": "openai/gpt-oss-120b",
+      "answer_backend": "grounded_fallback",
+      "model_used": "openai/gpt-oss-120b (fallback)",
+      "fallback_reason": "403 Client Error: Forbidden for url: https://router.huggingface.co/v1/chat/completions",
+      "fallback_error_code": "unknown_error",
+      "recommended_exercises": [
+        "Side Plank with Overhead Arm for Rib Cage Expansion"
+      ],
+      "output_json": "D:\\sistema-biomecanico\\data\\knowledge\\rag_runs\\ask_rag_hf_model_eval_openai__gpt-oss-120b.json"
+    },
+    {
+      "model": "Qwen/Qwen3-32B",
+      "answer_backend": "grounded_fallback",
+      "model_used": "Qwen/Qwen3-32B (fallback)",
+      "fallback_reason": "403 Client Error: Forbidden for url: https://router.huggingface.co/v1/chat/completions",
+      "fallback_error_code": "unknown_error",
+      "recommended_exercises": [
+        "Side Plank with Overhead Arm for Rib Cage Expansion"
+      ],
+      "output_json": "D:\\sistema-biomecanico\\data\\knowledge\\rag_runs\\ask_rag_hf_model_eval_Qwen__Qwen3-32B.json"
+    },
+    {
+      "model": "moonshotai/Kimi-K2-Instruct-0905",
+      "answer_backend": "grounded_fallback",
+      "model_used": "moonshotai/Kimi-K2-Instruct-0905 (fallback)",
+      "fallback_reason": "403 Client Error: Forbidden for url: https://router.huggingface.co/v1/chat/completions",
+      "fallback_error_code": "unknown_error",
+      "recommended_exercises": [
+        "Side Plank with Overhead Arm for Rib Cage Expansion"
+      ],
+      "output_json": "D:\\sistema-biomecanico\\data\\knowledge\\rag_runs\\ask_rag_hf_model_eval_moonshotai__Kimi-K2-Instruct-0905.json"
+    },
+    {
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "answer_backend": "grounded_fallback",
+      "model_used": "Qwen/Qwen3-4B-Instruct-2507 (fallback)",
+      "fallback_reason": "403 Client Error: Forbidden for url: https://router.huggingface.co/v1/chat/completions",
+      "fallback_error_code": "unknown_error",
+      "recommended_exercises": [
+        "Side Plank with Overhead Arm for Rib Cage Expansion"
+      ],
+      "output_json": "D:\\sistema-biomecanico\\data\\knowledge\\rag_runs\\ask_rag_hf_model_eval_Qwen__Qwen3-4B-Instruct-2507.json"
+    }
+  ]
+}

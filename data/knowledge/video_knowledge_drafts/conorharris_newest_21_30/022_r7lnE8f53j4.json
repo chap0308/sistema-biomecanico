@@ -1,0 +1,194 @@
+{
+  "source_url": "https://www.youtube.com/shorts/r7lnE8f53j4",
+  "source_title_hint": "¡Deja de meter la barriga! ¿Por qué está arruinando tu postura?",
+  "primary_summary": "The video explains that habitually \"sucking in your belly\" to appear thinner creates biomechanical dysfunction, specifically a mismatch between diaphragm and pelvic floor mechanics. This leads to a hyper-inflated state of the rib cage and a descended pelvic floor, often associated with anterior pelvic tilt. The video then demonstrates a seated breathing exercise using a pillow to help restore proper diaphragm and pelvic floor synchronicity by promoting full exhalation and posterior rib cage expansion.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Explains a common postural habit, its biomechanical consequences on the diaphragm and pelvic floor, and provides a specific corrective breathing exercise.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "abdomen",
+      "diaphragm",
+      "pelvic floor",
+      "rib cage",
+      "lumbar spine",
+      "thoracic spine"
+    ],
+    "problem_layers": [
+      "musculoskeletal",
+      "respiratory",
+      "postural"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "Belly sucking posture",
+    "Diaphragmatic breathing dysfunction",
+    "Pelvic floor dysfunction",
+    "Postural correction",
+    "Breathing mechanics",
+    "Anterior pelvic tilt",
+    "Rib flare",
+    "Core stability",
+    "Intra-abdominal pressure"
+  ],
+  "searchable_tags": [
+    "posture",
+    "breathing",
+    "diaphragm",
+    "pelvic floor",
+    "core",
+    "abs",
+    "rib cage",
+    "exhalation",
+    "anterior pelvic tilt",
+    "hyper-inflated",
+    "dysfunction",
+    "reeducation",
+    "corrective exercise",
+    "seated exercise"
+  ],
+  "problem_statements": [
+    "Sucking in the belly to look thinner.",
+    "Dysfunctional diaphragm and pelvic floor mechanics.",
+    "Hyper-inflated rib cage.",
+    "Descended pelvic floor.",
+    "Compensatory postural and breathing mechanics.",
+    "Anterior pelvic tilt.",
+    "Belly \"pooching out\" due to anterior pelvic tilt."
+  ],
+  "habits_or_contexts": [
+    "Habitually sucking in the belly for aesthetic reasons."
+  ],
+  "key_visual_points": [
+    "A woman demonstrating \"sucking in her belly\" posture.",
+    "A man demonstrating a \"pooched out\" belly due to anterior pelvic tilt.",
+    "A skeleton model used to illustrate diaphragm and pelvic floor mechanics.",
+    "Animated diagrams showing diaphragm and pelvic floor movement during normal breathing.",
+    "Animated diagrams showing the effect of belly sucking on the diaphragm and pelvic floor.",
+    "A skeleton model illustrating hyper-lordotic posture and anterior pelvic tilt.",
+    "Demonstration of the seated exhalation drill with a pillow."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Seated Exhalation Drill with Pillow"
+  ],
+  "advice_mentioned": [
+    "Stop sucking in your belly to look thinner.",
+    "Focus on getting a better ability to exhale and get the diaphragm into an ascended position."
+  ],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "habit_pattern",
+      "title": "Chronic Belly Sucking for Aesthetics",
+      "summary": "The habit of habitually sucking in the belly to appear thinner, often adopted for aesthetic reasons, leads to significant biomechanical dysfunction.",
+      "observable_signs": [
+        "Visually \"thin\" midsection, but often accompanied by a \"pooched out\" lower belly due to underlying postural issues."
+      ],
+      "mechanisms": [
+        "Leads to a mismatch in diaphragm and pelvic floor mechanics."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:00-0:04",
+        "0:57-1:02"
+      ]
+    },
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Dysfunctional Diaphragm and Pelvic Floor Synchronicity",
+      "summary": "Habitual belly sucking creates a mismatch and dysfunction in the mechanics of the diaphragm and pelvic floor, which are normally synchronous during breathing. This leads to a hyper-inflated/hyper-inhaled state of the rib cage and a descended pelvic floor, often seen with anterior pelvic tilt.",
+      "observable_signs": [
+        "Flared rib cage",
+        "\"Pooched out\" lower belly",
+        "Anterior pelvic tilt",
+        "Hyper-lordotic posture"
+      ],
+      "mechanisms": [
+        "Normal breathing: Diaphragm descends on inhalation, pelvic floor descends synchronously. Diaphragm ascends on exhalation, pelvic floor ascends synchronously.",
+        "Belly sucking: Prevents the diaphragm from fully moving into an exhaled (ascended) state. Pushes things inwards and downwards, likely pushing the pelvic floor into a descended position and keeping it there.",
+        "Consequences: Dysfunctional diaphragm and pelvic floor mechanics lead to compensatory postural and breathing mechanics. The rib cage becomes stuck in a hyper-inflated/hyper-inhaled state."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For understanding the root cause of certain postural and breathing dysfunctions, especially those related to core stability and pelvic floor issues."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:05-0:13",
+        "0:18-0:20",
+        "0:25-0:35",
+        "0:36-0:56",
+        "1:04-1:14"
+      ]
+    },
+    {
+      "unit_type": "breathing_drill",
+      "title": "Seated Exhalation Drill with Pillow for Diaphragm/Pelvic Floor Synchronicity",
+      "summary": "A seated breathing exercise designed to restore proper diaphragm and pelvic floor synchronicity by facilitating a full exhalation and promoting posterior rib cage expansion, counteracting the hyper-inflated state caused by chronic belly sucking.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Sit on a chair with knees slightly higher than hips (use a step or elevated surface for feet if needed).",
+        "Take a small to medium-sized pillow, double-fold it in half.",
+        "Wedge the folded pillow as deep as possible into your hip crease.",
+        "Rest elbows on mid-thighs, with palms facing each other and breastbone pointing straight ahead.",
+        "Gently separate the space between shoulder blades and spine without shrugging shoulders (slight slouch is okay).",
+        "Fully exhale for 5-10 seconds, letting the air fall out without tension.",
+        "At the end of the exhalation, feel side abs engage subtly (not front abs).",
+        "Hold the subtle side abs engagement.",
+        "Inhale gently through the nose, allowing air to fall in (not an audible inhale, but a subtle, silent inhale)."
+      ],
+      "cues": [
+        "\"Wedge [pillow] as deep as you can in your hip crease.\"",
+        "\"Rest your elbows on your mid-thighs.\"",
+        "\"Breastbone pointing straight ahead.\"",
+        "\"Separate the space in between your shoulder blades and spine... without shrugging your shoulders.\"",
+        "\"Fully exhale. Let the air fall out of you without any tension for about 5 to 10 seconds.\"",
+        "\"Feel your side abs engage a little bit... not as much your six-pack abs, your front abs, but your side abs.\"",
+        "\"Hold onto those side abs very subtly as you inhale through your nose, gently allowing the air to fall into you.\"",
+        "\"It should not be an audible inhale. It should be a nice, gentle, subtle, silent inhale.\"",
+        "\"You're going to feel space in between your shoulder blades and spine expand.\""
+      ],
+      "breathing_cues": [
+        "Fully exhale for 5-10 seconds, letting the air fall out without tension.",
+        "Inhale gently through the nose, allowing air to fall in (not an audible inhale, but a subtle, silent inhale)."
+      ],
+      "errors_to_avoid": [
+        "Shrugging shoulders during shoulder blade separation.",
+        "Audible or forced inhalation.",
+        "Engaging front abs instead of side abs."
+      ],
+      "when_useful": [
+        "For individuals with dysfunctional breathing patterns, hyper-inflated rib cages, descended pelvic floors, or anterior pelvic tilt due to chronic belly sucking."
+      ],
+      "when_not_useful": [],
+      "retest": [
+        "Observe changes in posture, ease of breathing, and engagement of side abdominal muscles."
+      ],
+      "advice": [],
+      "timestamps": [
+        "1:35-3:00"
+      ]
+    }
+  ],
+  "model_notes": "The video provides a clear explanation of a common postural habit and its biomechanical implications, followed by a practical and well-demonstrated corrective breathing exercise. The use of a skeleton model and animated diagrams enhances the educational value. The exercise focuses on re-educating breathing mechanics to improve core and pelvic floor function."
+}

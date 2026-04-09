@@ -1,0 +1,34 @@
+{
+  "answer": "A functional flat foot with medial collapse on the right side often reflects excessive pronation and a weak or flattened medial longitudinal arch. The \"Three‑Role Lacrosse‑Ball Foot Roll\" is a simple, low‑tech exercise that can help restore arch height, improve heel‑toe‑little‑toe contacts, and increase tissue mobility in the plantar region. It is especially useful for people with plantar‑fasciitis‑type symptoms, limited pronation control, or uneven foot pressure.\n\n**How the exercise works**\n1. **Role 1 – Heel‑big‑toe contact** – Stand relaxed and place a lacrosse ball under the first metatarsal head (near the big toe). Roll the ball straight back toward the heel until it is about 1 in (2.5 cm) ahead of the heel. You should feel simultaneous pressure under the inside heel and the big toe.\n2. **Role 2 – Transverse‑arch release** – Keeping light pressure, shift your weight forward and roll the ball from the first metatarsal toward the fifth toe. This encourages the foot to open the transverse arch while maintaining the inside contacts.\n3. **Role 3 – Outside‑foot contact** – Perform a windshield‑wiper motion from the first metatarsal to under the fifth toe and back to the start. This helps you locate the outside foot contacts without losing the inside contacts.\n\nPerform the three roles in sequence for about 15 controlled rolls each, 2–3 times per week. Start with a pressure level of 5‑6/10 and increase gradually as comfort allows.\n\n**Why it may help your condition**\n- Restores balanced pressure across the medial and lateral foot structures.\n- Mobilises the plantar fascia and intrinsic foot muscles that support the medial arch.\n- Provides sensory feedback to improve neuromuscular control of pronation.\n\n**When to be cautious**\n- Stop if you feel sharp pain in the heel, arch, or toes.\n- Avoid the exercise if you have an acute foot injury (e.g., recent fracture, severe plantar fasciitis flare‑up) until cleared by a health professional.\n- Keep the pressure light; excessive force can irritate the plantar tissues.\n\nIf the medial collapse persists or is accompanied by pain, swelling, or gait difficulties, consider a professional assessment (e.g., podiatrist or physical therapist) for a comprehensive plan that may include orthotics, strengthening of the tibialis posterior, and gait retraining.\n\n**Bottom line**: The Three‑Role Lacrosse‑Ball Foot Roll is a practical, evidence‑based tool to address medial arch collapse in a functional flat foot, provided you use it gently and monitor symptoms.\n",
+  "recommended_exercises": [
+    "Three‑Role Lacrosse‑Ball Foot Roll – Role 1 (heel‑big‑toe contact) – ~15 rolls per session",
+    "Three‑Role Lacrosse‑Ball Foot Roll – Role 2 (transverse‑arch release) – ~15 rolls per session",
+    "Three‑Role Lacrosse‑Ball Foot Roll – Role 3 (outside‑foot contact windshield‑wiper) – ~15 rolls per session"
+  ],
+  "key_points": [
+    "Medial collapse often indicates over‑pronation and a weakened medial arch",
+    "The foot‑roll targets heel, big‑toe, and little‑toe contacts to rebalance foot pressure",
+    "Light, controlled pressure (5‑6/10) is essential to avoid tissue irritation",
+    "Perform the three roles 2‑3 times per week and reassess arch feel after 2‑3 sessions"
+  ],
+  "cautions": [
+    "Stop if sharp pain develops in the heel, arch, or toes",
+    "Do not use the exercise on an acute foot injury without professional clearance",
+    "Avoid excessive force; keep pressure moderate"
+  ],
+  "citations": [
+    {
+      "source_type": "video",
+      "title": "Three‑Role Lacrosse‑Ball Foot Roll",
+      "source_uri": "https://www.youtube.com/shorts/mI2n6asSFos",
+      "segment_id": null,
+      "knowledge_unit_title": "Three‑Role Lacrosse‑Ball Foot Roll",
+      "timestamp_hint": "0:00‑0:27, 0:27‑0:52, 0:53‑1:21, 1:21‑2:00"
+    }
+  ],
+  "retrieval_quality": "high",
+  "used_collections": [
+    "video_knowledge_units_v1"
+  ],
+  "model_used": "openai/gpt-oss-120b"
+}

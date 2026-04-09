@@ -1,0 +1,280 @@
+{
+  "source_url": "https://www.youtube.com/shorts/X2cCVAY-vys",
+  "source_title_hint": "La sorprendente verdad sobre cómo mejorar la movilidad de la cadera 🤯",
+  "primary_summary": "This video explains that limited hip internal rotation is often not due to tight muscles, but rather being stuck in a position of relative internal rotation, which limits further movement. The solution is to restore external rotation space. It demonstrates a diagnostic test for hip abduction and internal rotation, and provides two corrective exercises (half-kneeling and supine hip external rotation pushes) to improve this space.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides a clear biomechanical concept explanation for limited hip mobility, offers diagnostic tests, and demonstrates corrective exercises with variations and cues. It addresses a common misconception and offers a practical solution.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "hip",
+      "pelvis",
+      "knee",
+      "foot"
+    ],
+    "problem_layers": [
+      "musculoskeletal",
+      "biomechanical"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "hip mobility",
+    "hip internal rotation",
+    "hip external rotation",
+    "hip abduction",
+    "pelvic position",
+    "biomechanics",
+    "corrective exercise",
+    "mobility drills"
+  ],
+  "searchable_tags": [
+    "hip pain",
+    "squat mobility",
+    "hip impingement",
+    "glute activation",
+    "foam roller exercise",
+    "movement reeducation"
+  ],
+  "problem_statements": [
+    "Limited hip internal rotation",
+    "Limited hip abduction",
+    "Hips stuck in relative internal rotation",
+    "Misconception about causes of limited hip mobility"
+  ],
+  "habits_or_contexts": [],
+  "key_visual_points": [
+    "Animated skeleton demonstrating hip rotation and abduction.",
+    "Man performing a side-lying hip abduction test.",
+    "Man performing a supine hip internal rotation test.",
+    "Man demonstrating half-kneeling hip external rotation push with a foam roller against a wall.",
+    "Man demonstrating supine hip external rotation push with a foam roller against a wall."
+  ],
+  "tests_mentioned": [
+    "Side-lying hip abduction test",
+    "Supine hip internal rotation test"
+  ],
+  "exercises_mentioned": [
+    "Half-kneeling hip external rotation push",
+    "Half-kneeling split squat hold (variation)",
+    "Supine hip external rotation push"
+  ],
+  "advice_mentioned": [
+    "To improve hip internal rotation, focus on restoring external rotation space.",
+    "Perform exercises to open up external rotation space."
+  ],
+  "warnings_or_limitations": [
+    "During the side-lying hip abduction test, stop before rolling hips towards the side or arching the back.",
+    "During the supine hip external rotation push, avoid rolling off the same side low back and keep both butt cheeks on the ground."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Misconception of Limited Hip Mobility",
+      "summary": "Many people believe limited hip mobility is due to tight or overactive muscles. However, it can often be attributed to the hip joint already being positioned at an extreme end of its range (e.g., relative internal rotation), leaving no more space for further movement in that direction.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Hip external rotators being 'too tight' can limit hip internal rotation.",
+        "Hips starting in a position of relative internal rotation means much of the internal rotation space is already 'taken up'."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:00",
+        "0:11",
+        "0:23",
+        "0:33",
+        "0:43"
+      ]
+    },
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Restoring External Rotation Space for Improved Internal Rotation",
+      "summary": "The solution to limited hip internal rotation, when the hip is already stuck in a relatively internally rotated position, is to restore more external rotation space. This creates more available space for the hip to then move into internal rotation.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Restoring external rotation space allows for greater internal rotation range of motion.",
+        "Hip abduction involves the femur sliding into external rotation."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:48",
+        "0:52",
+        "1:12",
+        "1:16"
+      ]
+    },
+    {
+      "unit_type": "functional_test",
+      "title": "Side-Lying Hip Abduction Test",
+      "summary": "A test to assess hip abduction range of motion, which can indicate if the hip is stuck in relative internal rotation. Limited abduction suggests a need to restore external rotation space.",
+      "observable_signs": [
+        "Limited hip abduction (less than approximately 30-45 degrees from neutral, as visually demonstrated)."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Double fold a pillow and lay on your side with it underneath your low rib cage.",
+        "Start with knees bent at 90 degrees.",
+        "Slightly drop knees down to about 45 degrees.",
+        "Take the top leg, straighten it out, and slowly drag it back.",
+        "Stop at the point where going back any further would cause hips to roll towards that side or the back to arch.",
+        "From this position, lift the leg up.",
+        "Stop at the point where lifting higher would cause crunching or rolling of the hips."
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Rolling hips towards the side (during leg drag back).",
+        "Arching the back (during leg drag back).",
+        "Crunching or rolling hips (during leg lift)."
+      ],
+      "when_useful": [
+        "To identify if limited hip abduction is present.",
+        "To assess if limited hip internal rotation is linked to being stuck in relative internal rotation."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:58",
+        "1:08",
+        "1:24"
+      ]
+    },
+    {
+      "unit_type": "functional_test",
+      "title": "Supine Hip Internal Rotation Test",
+      "summary": "A test to assess hip internal rotation range of motion while lying on the back.",
+      "observable_signs": [
+        "Limited hip internal rotation."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Lie on your back with knees bent and feet flat on the ground.",
+        "Allow your knees to fall inward."
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "To identify if limited hip internal rotation is present."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:58",
+        "2:54"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Half-Kneeling Hip External Rotation Push",
+      "summary": "An exercise designed to open up external rotation space in the hip, which can indirectly improve hip internal rotation.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Get into a half-kneeling position.",
+        "Place a foam roller against a wall, with the outside of your front knee flush against the roller.",
+        "Ensure the back knee is directly underneath the back hip.",
+        "Feel three points of contact in your front foot (big toe, pinky toe, heel).",
+        "Very gently push your front knee into the foam roller."
+      ],
+      "cues": [
+        "Feel a little bit of your outside glutes engage.",
+        "Keep your pelvis level."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "To improve hip external rotation space.",
+        "To indirectly improve hip internal rotation."
+      ],
+      "when_not_useful": [],
+      "retest": [
+        "Retest hip abduction and internal rotation after performing this exercise."
+      ],
+      "advice": [],
+      "timestamps": [
+        "1:51",
+        "1:58"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Half-Kneeling Split Squat Hold (Variation)",
+      "summary": "A more challenging variation of the half-kneeling hip external rotation push, involving a slight split squat.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Start in the half-kneeling hip external rotation push position.",
+        "Go up into a slight split squat and hold that position."
+      ],
+      "cues": [
+        "Keep your pelvis level."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For those who want a more challenging variation of the half-kneeling hip external rotation push."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "2:17"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Supine Hip External Rotation Push (Regression)",
+      "summary": "A regressed version of the hip external rotation push, performed lying on the back, suitable if the half-kneeling position is too challenging.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Lie on your back.",
+        "Bend one knee and place a foam roller against a wall, with the outside of the bent knee flush against the roller.",
+        "Very gently push your outside knee into the roller.",
+        "Ensure you are still feeling the three points of contact of the foot that is flat and pushing."
+      ],
+      "cues": [
+        "Keep both butt cheeks on the ground.",
+        "Maintain minimal tension anywhere in your body besides the slight push into the roller."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Rolling off the same side low back."
+      ],
+      "when_useful": [
+        "If the half-kneeling position is too challenging."
+      ],
+      "when_not_useful": [],
+      "retest": [
+        "Retest hip abduction and internal rotation after performing this exercise."
+      ],
+      "advice": [],
+      "timestamps": [
+        "2:28"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively uses anatomical models and live demonstrations to explain a complex biomechanical concept in an accessible way. The progression/regression options for the exercise enhance its utility."
+}

@@ -1,0 +1,635 @@
+{
+  "source_url": "https://www.youtube.com/shorts/ZMFMWlMO1rI",
+  "source_title_hint": "Why You Struggle To Cross Your Legs (do this to fix it)",
+  "analysis_origin": "local_level1_plus_hf_error_fallback:openai/gpt-oss-120b",
+  "analysis_provider": "local_fallback",
+  "analysis_quality": "fallback",
+  "is_active": true,
+  "supersedes_draft_id": null,
+  "primary_summary": "Why You Struggle To Cross Your Legs (do this to fix it) explains a movement problem and demonstrates corrective actions such as This simple little rolling exercise is going to be great for restoring external really easily.. If you struggle to do this or cross your leg over on one side compared to the other, this is telling you something key about your hit mobility limitations.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Segments contain structured transcript, OCR, and retrieval-ready evidence.",
+    "exclusion_reason": null,
+    "content_kind": "exercise_optimization",
+    "body_regions": [
+      "foot",
+      "ankle",
+      "hip",
+      "neck"
+    ],
+    "problem_layers": [
+      "mobility_restriction",
+      "motor_control",
+      "breathing"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "foot",
+    "ankle",
+    "hip",
+    "neck",
+    "struggle",
+    "cross",
+    "over",
+    "side",
+    "telling",
+    "something",
+    "mobility",
+    "limitations"
+  ],
+  "searchable_tags": [
+    "cross",
+    "here",
+    "position",
+    "back",
+    "little",
+    "over",
+    "side",
+    "order",
+    "like",
+    "need",
+    "external",
+    "it's"
+  ],
+  "problem_statements": [],
+  "habits_or_contexts": [],
+  "key_visual_points": [
+    "Representative frame at 1.9s",
+    "OCR near 3.8s: ABOUT YOUR",
+    "Representative frame at 9.0s",
+    "Representative frame at 12.5s",
+    "Representative frame at 17.1s",
+    "Representative frame at 21.7s",
+    "Representative frame at 26.3s",
+    "Representative frame at 30.4s",
+    "Representative frame at 33.0s",
+    "Representative frame at 38.8s"
+  ],
+  "tests_mentioned": [
+    "For some you might feel a little weird, but just trust me and test and retest your external rotation before and after."
+  ],
+  "exercises_mentioned": [
+    "This simple little rolling exercise is going to be great for restoring external really easily.",
+    "This simple little rolling exercise is going to be great for restoring external rotation space.",
+    "All you're going to do is with as little tension as you humanly can, roll and kind of flop onto your back as you gently",
+    "And then with as roll and kind of flop onto your back as you gently inhale through your nose.",
+    "This rolling action with little tension is just allowing your femurs to glide out into a proper position of external",
+    "It's gently opening up space with each and every roll.",
+    "Inhale, very gently roll back."
+  ],
+  "advice_mentioned": [
+    "For some you might feel a little weird, but just trust me and test and retest your external rotation before and after.",
+    "If this was a 90 degree bend that your knees drop them down a little bit so that way you can comfortably find the outside of your knee on the bottom side resting gently on the floor.",
+    "All you're going to do is with as little tension as you humanly can, roll and kind of flop onto your back as you gently inhale through your nose.",
+    "And then with as roll and kind of flop onto your back as you gently inhale through your nose.",
+    "And then with as little tension as you can, exhale, return to the starting position.",
+    "Make sure you get that outside knee contact again, re-establish control.",
+    "It's gently opening up space with each and every roll.",
+    "It's gently opening up space with each and every roll."
+  ],
+  "warnings_or_limitations": [
+    "Notice how my legs are in a nice comfortable, externally rotated position.",
+    "This rolling action with little tension is just allowing your femurs to glide out into a proper position of external rotation without you forcing it there.",
+    "Inhale, without you forcing it there.",
+    "This back leg can be closer or further away from the foot whatever's comfortable without feeling any restriction in your hips."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 0.0-3.8s: If you struggle to do this or cross your leg over on one side compared to the ot",
+      "summary": "Segment 0.0-3.8s: If you struggle to do this or cross your leg over on one side compared to the other, this is telling you something key about your hit mobility limitations.",
+      "observable_signs": [],
+      "mechanisms": [
+        "If you struggle to do this or cross your leg over on one side compared to the other, this is telling you something key about your hit mobility limitations."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00",
+        "00:03"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 3.8-6.8s: this is telling you something key about your hit mobility limitations. You see i",
+      "summary": "Segment 3.8-6.8s: this is telling you something key about your hit mobility limitations. You see in order to cross your leg over like this, you need to access a good bit of external rotation",
+      "observable_signs": [
+        "ABOUT YOUR"
+      ],
+      "mechanisms": [
+        "this is telling you something key about your hit mobility limitations. You see in order to cross your leg over like this, you need to access a good bit of external rotation"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:03",
+        "00:06"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 6.8-11.1s: You see in order to cross your leg over like this, you need to access a good bi",
+      "summary": "Segment 6.8-11.1s: You see in order to cross your leg over like this, you need to access a good bit of external rotation",
+      "observable_signs": [],
+      "mechanisms": [
+        "You see in order to cross your leg over like this, you need to access a good bit of external rotation"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:06",
+        "00:11"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 11.1-13.8s: You see in order to cross your leg over like this, you need to access a good b",
+      "summary": "Segment 11.1-13.8s: You see in order to cross your leg over like this, you need to access a good bit of external rotation mobility within your hips. As you can see, that's being demonstrated right her",
+      "observable_signs": [],
+      "mechanisms": [
+        "You see in order to cross your leg over like this, you need to access a good bit of external rotation mobility within your hips. As you can see, that's being demonstrated right here within the"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:11",
+        "00:13"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 13.8-20.3s: mobility within your hips. As you can see, that's being demonstrated right her",
+      "summary": "Segment 13.8-20.3s: mobility within your hips. As you can see, that's being demonstrated right here within the femur. As external rotation is this action right here, that's required as you cross your",
+      "observable_signs": [],
+      "mechanisms": [
+        "mobility within your hips. As you can see, that's being demonstrated right here within the femur. As external rotation is this action right here, that's required as you cross your leg over."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:13",
+        "00:20"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 20.3-23.1s: femur. As external rotation is this action right here, that's required as you ",
+      "summary": "Segment 20.3-23.1s: femur. As external rotation is this action right here, that's required as you cross your leg over. If you struggle to do this on one or both sides, chances are high that your femur",
+      "observable_signs": [],
+      "mechanisms": [
+        "femur. As external rotation is this action right here, that's required as you cross your leg over. If you struggle to do this on one or both sides, chances are high that your femur is stuck in a"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:20",
+        "00:23"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 23.1-29.5s: If you struggle to do this on one or both sides, chances are high that your fe",
+      "summary": "Segment 23.1-29.5s: If you struggle to do this on one or both sides, chances are high that your femur is stuck in a position where it's slid relatively further back within the hip socket, and it's una",
+      "observable_signs": [],
+      "mechanisms": [
+        "If you struggle to do this on one or both sides, chances are high that your femur is stuck in a position where it's slid relatively further back within the hip socket, and it's unable to"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:23",
+        "00:29"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 29.5-31.4s: position where it's slid relatively further back within the hip socket, and it",
+      "summary": "Segment 29.5-31.4s: position where it's slid relatively further back within the hip socket, and it's unable to",
+      "observable_signs": [],
+      "mechanisms": [
+        "position where it's slid relatively further back within the hip socket, and it's unable to"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:29",
+        "00:31"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 31.4-34.7s: position where it's slid relatively further back within the hip socket, and it",
+      "summary": "Segment 31.4-34.7s: position where it's slid relatively further back within the hip socket, and it's unable to effectively slide into that externally rotated position. So first we need to open up more",
+      "observable_signs": [],
+      "mechanisms": [
+        "position where it's slid relatively further back within the hip socket, and it's unable to effectively slide into that externally rotated position. So first we need to open up more space"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:31",
+        "00:34"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 34.7-43.0s: effectively slide into that externally rotated position. So first we need to o",
+      "summary": "Segment 34.7-43.0s: effectively slide into that externally rotated position. So first we need to open up more space for external rotation, then we need to train more dynamic control of it. Here's how",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "effectively slide into that externally rotated position. So first we need to open up more space for external rotation",
+        "we need to train more dynamic control of it. Here's how you can do that really easily. This simple little rolling exercise is going to be great for restoring external"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:34",
+        "00:42"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 43.0-58.0s: really easily. This simple little rolling exercise is going to be great for re",
+      "summary": "Segment 43.0-58.0s: really easily. This simple little rolling exercise is going to be great for restoring external rotation space. For some you might feel a little weird, but just trust me and test an",
+      "observable_signs": [
+        "STAY NEUTRAL."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "really easily. This simple little rolling exercise is going to be great for restoring external rotation space. For some you might feel a little weird, but just trust me and test and retest your external rotation before and after. Lay on your side with a penalty through head or two so that way you're neck and stay neutral. If this was a 90 degree bend that your knees drop them down a little bit"
+      ],
+      "cues": [
+        "For some you might feel a little weird, but just trust me and test and retest your external rotation before and after."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "For some you might feel a little weird, but just trust me and test and retest your external rotation before and after."
+      ],
+      "advice": [
+        "For some you might feel a little weird, but just trust me and test and retest your external rotation before and after."
+      ],
+      "timestamps": [
+        "00:42",
+        "00:57"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 58.0-68.6s: neck and stay neutral. If this was a 90 degree bend that your knees drop them ",
+      "summary": "Segment 58.0-68.6s: neck and stay neutral. If this was a 90 degree bend that your knees drop them down a little bit so that way you can comfortably find the outside of your knee on the bottom side res",
+      "observable_signs": [],
+      "mechanisms": [
+        "neck and stay neutral. If this was a 90 degree bend that your knees drop them down a little bit so that way you can comfortably find the outside of your knee on the bottom side resting gently on the floor. Take your top side ankle and hook it underneath the bottom of the shin like this. Then take your hand"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "If this was a 90 degree bend that your knees drop them down a little bit so that way you can comfortably find the outside of your knee on the bottom side resting gently on the floor."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "If this was a 90 degree bend that your knees drop them down a little bit so that way you can comfortably find the outside of your knee on the bottom side resting gently on the floor."
+      ],
+      "timestamps": [
+        "00:57",
+        "01:08"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 68.6-83.6s: Take your top side ankle and hook it underneath the bottom of the shin like th",
+      "summary": "Segment 68.6-83.6s: Take your top side ankle and hook it underneath the bottom of the shin like this. Then take your hand and rest it on the side of your head like this. So you have generally the same",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Take your top side ankle and hook it underneath the bottom of the shin like this",
+        "take your hand and rest it on the side of your head like this. So you have generally the same angle of this arm to this thigh",
+        "the rest is very simple. All you're going to do is with as little tension as you humanly can, roll and kind of flop onto your back as you",
+        "inhale through your nose"
+      ],
+      "cues": [
+        "All you're going to do is with as little tension as you humanly can, roll and kind of flop onto your back as you gently inhale through your nose."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "All you're going to do is with as little tension as you humanly can, roll and kind of flop onto your back as you gently inhale through your nose."
+      ],
+      "timestamps": [
+        "01:08",
+        "01:23"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 83.6-98.6s: roll and kind of flop onto your back as you gently inhale through your nose. A",
+      "summary": "Segment 83.6-98.6s: roll and kind of flop onto your back as you gently inhale through your nose. And then with as little tension as you can, exhale, return to the starting position. Make sure you get",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "roll and kind of flop onto your back as you",
+        "inhale through your nose",
+        "with as little tension as you can, exhale, return to the starting position. Make sure you get that outside knee contact again, re-establish control",
+        "with as little tension as you can, flop onto your back"
+      ],
+      "cues": [
+        "roll and kind of flop onto your back as you gently inhale through your nose.",
+        "And then with as little tension as you can, exhale, return to the starting position.",
+        "Make sure you get that outside knee contact again, re-establish control."
+      ],
+      "breathing_cues": [
+        "And then with as little tension as you can, exhale, return to the starting position."
+      ],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "roll and kind of flop onto your back as you gently inhale through your nose.",
+        "And then with as little tension as you can, exhale, return to the starting position.",
+        "Make sure you get that outside knee contact again, re-establish control."
+      ],
+      "timestamps": [
+        "01:23",
+        "01:38"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 98.6-113.6s: contact again, re-establish control. And then with as little tension as you c",
+      "summary": "Segment 98.6-113.6s: contact again, re-establish control. And then with as little tension as you can, flop onto your back. Notice how my legs are in a nice comfortable, externally rotated position. Thi",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "contact again, re-establish control",
+        "with as little tension as you can, flop onto your back. Notice how my legs are in a nice comfortable, externally rotated position. This rolling action with little tension is just allowing your femurs to glide out into a proper position of external rotation without you forcing it there. It's",
+        "opening up space with each and every roll. Inhale"
+      ],
+      "cues": [
+        "It's gently opening up space with each and every roll."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Notice how my legs are in a nice comfortable, externally rotated position.",
+        "This rolling action with little tension is just allowing your femurs to glide out into a proper position of external rotation without you forcing it there."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "It's gently opening up space with each and every roll."
+      ],
+      "timestamps": [
+        "01:38",
+        "01:53"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 113.6-128.6s: without you forcing it there. It's gently opening up space with each and eve",
+      "summary": "Segment 113.6-128.6s: without you forcing it there. It's gently opening up space with each and every roll. Inhale, very gently roll back. You're literally just going to fall and flop onto your back. Exh",
+      "observable_signs": [
+        "POSITION."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "without you forcing it there. It's",
+        "opening up space with each and every roll. Inhale, very",
+        "roll back. You're literally just going to fall and flop onto your back. Exhale, return to the starting position",
+        "that on that space dynamically, get in this position with the leg you want to work on out in front of you. You want to feel the outside knee contact and also the outside"
+      ],
+      "cues": [
+        "It's gently opening up space with each and every roll.",
+        "Inhale, very gently roll back.",
+        "Exhale, return to the starting position.",
+        "You want to feel the outside knee contact and also the outside"
+      ],
+      "breathing_cues": [
+        "Exhale, return to the starting position."
+      ],
+      "errors_to_avoid": [
+        "without you forcing it there."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "You want to feel the outside knee contact and also the outside"
+      ],
+      "advice": [
+        "It's gently opening up space with each and every roll.",
+        "Inhale, very gently roll back.",
+        "Exhale, return to the starting position."
+      ],
+      "timestamps": [
+        "01:53",
+        "02:08"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 128.6-143.6s: you want to work on out in front of you. You want to feel the outside knee c",
+      "summary": "Segment 128.6-143.6s: you want to work on out in front of you. You want to feel the outside knee contact and also the outside hip or greater choke cancer on this side. This back leg can be closer or fur",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "You want to feel the outside knee contact and also the outside hip or greater choke cancer on this side.",
+        "This back leg can be closer or further away from the foot whatever's comfortable without feeling any restriction in your hips.",
+        "Make sure you have the outside knee outside hip.",
+        "Now all you're going to do is very gently press mostly through the outside knee here and a little bit of the inside knee here and go up into a position"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "This back leg can be closer or further away from the foot whatever's comfortable without feeling any restriction in your hips."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "You want to feel the outside knee contact and also the outside hip or greater choke cancer on this side.",
+        "This back leg can be closer or further away from the foot whatever's comfortable without feeling any restriction in your hips."
+      ],
+      "advice": [
+        "You want to feel the outside knee contact and also the outside hip or greater choke cancer on this side.",
+        "This back leg can be closer or further away from the foot whatever's comfortable without feeling any restriction in your hips.",
+        "Make sure you have the outside knee outside hip."
+      ],
+      "timestamps": [
+        "02:08",
+        "02:23"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 143.6-158.6s: press mostly through the outside knee here and a little bit of the inside kn",
+      "summary": "Segment 143.6-158.6s: press mostly through the outside knee here and a little bit of the inside knee here and go up into a position where you're just an inch or two off of the ground. You're going to fe",
+      "observable_signs": [],
+      "mechanisms": [
+        "press mostly through the outside knee here and a little bit of the inside knee here and go up into a position where you're just an inch or two off of the ground. You're going to feel a little bit of outside hip and glute work here. Lower yourself back down onto the ground and to the outside hip contact gently. Repeat this for about two sets of 10 wraps keeping your spine nice and neutral. I like to hold the top for about"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "You're going to feel a little bit of outside hip and glute work here.",
+        "Lower yourself back down onto the ground and to the outside hip contact gently.",
+        "Repeat this for about two sets of 10 wraps keeping your spine nice and neutral."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "You're going to feel a little bit of outside hip and glute work here."
+      ],
+      "advice": [
+        "You're going to feel a little bit of outside hip and glute work here.",
+        "Lower yourself back down onto the ground and to the outside hip contact gently.",
+        "Repeat this for about two sets of 10 wraps keeping your spine nice and neutral."
+      ],
+      "timestamps": [
+        "02:23",
+        "02:38"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 158.6-173.6s: for about two sets of 10 wraps keeping your spine nice and neutral. I like t",
+      "summary": "Segment 158.6-173.6s: for about two sets of 10 wraps keeping your spine nice and neutral. I like to hold the top for about two to three seconds feeling that contraction and then coming back down into th",
+      "observable_signs": [],
+      "mechanisms": [
+        "for about two sets of 10 wraps keeping your spine nice and neutral. I like to hold the top for about two to three seconds feeling that contraction and then coming back down into that position and establishing control again of that outside hip contact."
+      ],
+      "execution_steps": [],
+      "cues": [
+        "for about two sets of 10 wraps keeping your spine nice and neutral.",
+        "I like to hold the top for about two to three seconds feeling that contraction and then coming back down into that position and establishing control again of that outside hip contact."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "I like to hold the top for about two to three seconds feeling that contraction and then coming back down into that position and establishing control again of that outside hip contact."
+      ],
+      "advice": [
+        "for about two sets of 10 wraps keeping your spine nice and neutral.",
+        "I like to hold the top for about two to three seconds feeling that contraction and then coming back down into that position and establishing control again of that outside hip contact."
+      ],
+      "timestamps": [
+        "02:38",
+        "02:53"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 173.6-174.5s: control again of that outside hip contact.",
+      "summary": "Segment 173.6-174.5s: control again of that outside hip contact.",
+      "observable_signs": [],
+      "mechanisms": [
+        "control again of that outside hip contact."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:53",
+        "02:54"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 20,
+    "transcript_segment_count": 35,
+    "ocr_observation_count": 3,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 20,
+    "asset_count": 16
+  }
+}

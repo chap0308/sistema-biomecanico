@@ -1,0 +1,202 @@
+{
+  "source_url": "https://www.youtube.com/shorts/wE9bCu3Wadc",
+  "source_title_hint": "Esto finalmente corrigió mi postura de cabeza adelantada.",
+  "primary_summary": "This video explains that forward head posture and neck pain are often linked to overactive and tight scalene muscles, which compensate for inefficient diaphragmatic breathing. It provides a gentle scalene stretch and a diaphragmatic breathing re-patterning exercise to address these issues.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides a clear explanation of a biomechanical mechanism (scalenes and breathing in forward head posture) and offers two actionable corrective exercises with visual demonstrations and specific cues.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "neck",
+      "cervical spine",
+      "ribs",
+      "diaphragm",
+      "thoracic spine"
+    ],
+    "problem_layers": [
+      "muscular tightness",
+      "postural dysfunction",
+      "breathing pattern dysfunction",
+      "compensatory movement"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "forward head posture",
+    "neck pain",
+    "scalenes",
+    "diaphragmatic breathing",
+    "posture correction",
+    "breathing mechanics",
+    "cervical mobility",
+    "respiratory muscles"
+  ],
+  "searchable_tags": [
+    "scalene stretch",
+    "breathing exercise",
+    "neck mobility",
+    "postural exercise",
+    "compensatory breathing",
+    "re-education"
+  ],
+  "problem_statements": [
+    "Forward head posture",
+    "Chronic neck pain",
+    "Overactive scalene muscles",
+    "Tight scalene muscles",
+    "Ineffective diaphragmatic breathing",
+    "Compensatory breathing using neck muscles"
+  ],
+  "habits_or_contexts": [
+    "Prolonged forward head posture",
+    "Habitual shallow breathing"
+  ],
+  "key_visual_points": [
+    "3D anatomical model highlighting the scalene muscles on the side of the neck, attaching to the cervical vertebrae and first two ribs.",
+    "3D anatomical model showing the diaphragm's position and movement during breathing.",
+    "Demonstration of a seated scalene stretch.",
+    "Demonstration of a supine diaphragmatic breathing exercise with feet elevated on a chair and a towel supporting the neck."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Scalene stretch",
+    "Diaphragmatic breathing re-patterning"
+  ],
+  "advice_mentioned": [
+    "Release tight scalenes to improve pain and posture.",
+    "Re-educate breathing patterns after stretching to prevent old patterns from returning.",
+    "Perform scalene stretch gently, aiming for a 2-3 out of 10 stretch intensity.",
+    "Inhale through the nose and exhale through the mouth during breathing re-patterning.",
+    "Engage side abs during exhalation in breathing re-patterning.",
+    "Feel chest and belly rise simultaneously during inhalation in breathing re-patterning, with no neck tension."
+  ],
+  "warnings_or_limitations": [
+    "Perform neck stretches very gently due to delicate structures in the neck area."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Scalenes and Compensatory Breathing in Forward Head Posture",
+      "summary": "Forward head posture and neck pain are often associated with overactive and tight scalene muscles. These muscles, located on the front/side of the neck and attaching to the first two ribs, become compensatory breathing muscles when the primary breathing muscles (like the diaphragm) are not working effectively. This overactivity contributes to pulling the head forward and maintaining poor posture.",
+      "observable_signs": [
+        "Forward head posture",
+        "Neck pain"
+      ],
+      "mechanisms": [
+        "Diaphragm and other primary breathing muscles become less effective over time.",
+        "Neck muscles, particularly the scalenes, overcompensate to elevate the ribcage and draw air into the lungs.",
+        "Constant activation and tightness of scalenes pull the head forward, contributing to forward head posture and neck pain."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Explaining the link between breathing mechanics, neck muscle tension, and forward head posture."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00",
+        "00:20",
+        "00:38",
+        "00:49"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "Seated Scalene Stretch",
+      "summary": "A gentle seated stretch designed to release tension in the scalene muscles, which can contribute to forward head posture and neck pain.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Anchoring the lower attachments of the scalenes (on the collarbone/first rib) allows for a more effective stretch of the muscle belly as the head moves away."
+      ],
+      "execution_steps": [
+        "Sit in a comfortable position.",
+        "To stretch the right scalenes, place the left hand on the innermost section of the right collarbone, about one-third of the way up from the sternum.",
+        "Gently pull down behind the collarbone to anchor the scalene attachments.",
+        "Very gently side bend the head to the opposite side (left) and rotate the head away (right)."
+      ],
+      "cues": [
+        "Use a very gentle, subtle movement.",
+        "Aim for a 2-3 out of 10 stretch intensity, do not chase more.",
+        "Inhale gently through the nose while turning the head.",
+        "Exhale through the nose and return to the starting position.",
+        "Repeat for 10-20 repetitions, gradually increasing mobility over time."
+      ],
+      "breathing_cues": [
+        "Inhale gently through the nose while turning the head.",
+        "Exhale through the nose and return to the starting position."
+      ],
+      "errors_to_avoid": [
+        "Aggressive or forceful stretching due to delicate structures in the neck."
+      ],
+      "when_useful": [
+        "Individuals with tight scalenes.",
+        "Individuals with forward head posture.",
+        "Individuals experiencing neck pain related to muscle tension."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:51"
+      ]
+    },
+    {
+      "unit_type": "breathing_drill",
+      "title": "Diaphragmatic Breathing Re-patterning (Supine)",
+      "summary": "A supine breathing exercise to re-educate diaphragmatic breathing, reduce reliance on neck muscles, and improve overall breathing mechanics after releasing scalene tension.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Elevating the feet to 90 degrees at hips and knees helps to flatten the lumbar spine and optimize diaphragm position.",
+        "Supporting the neck with a towel maintains a neutral cervical spine, preventing neck muscle engagement.",
+        "Exhaling fully engages the side abdominal muscles, which helps to depress the ribcage and prepare the diaphragm for an optimal inhale.",
+        "Inhaling through the nose encourages diaphragmatic activation and reduces accessory muscle use."
+      ],
+      "execution_steps": [
+        "Lie on your back with your feet up on a chair, ensuring knees and hips are at approximately 90 degrees.",
+        "Place a rolled hand towel underneath the curvature of your neck, allowing the base of your skull to rest on the ground and your chin to passively point towards the ceiling.",
+        "Get your elbows as wide as possible while still being able to keep your hands gently on your lowest ribcage, without any tension.",
+        "Gently exhale through your mouth for 5-10 seconds, allowing all air to fall out, until you feel your side abs engage.",
+        "Gently hold the engagement of your side abs (without engaging your neck) and inhale gently through your nose.",
+        "During inhalation, feel your chest and belly rise simultaneously, with no tension in the neck."
+      ],
+      "cues": [
+        "Exhale fully for 5-10 seconds.",
+        "Feel your side abs engage at the end of the exhale.",
+        "Maintain gentle side ab engagement during the inhale.",
+        "Inhale gently through your nose.",
+        "Feel your chest and belly rise simultaneously.",
+        "Ensure no tension is felt in the neck during breathing."
+      ],
+      "breathing_cues": [
+        "Exhale gently through your mouth for 5-10 seconds.",
+        "Inhale gently through your nose."
+      ],
+      "errors_to_avoid": [
+        "Engaging neck muscles during inhalation.",
+        "Shallow or chest-dominant breathing."
+      ],
+      "when_useful": [
+        "After performing scalene stretches.",
+        "To improve diaphragmatic breathing efficiency.",
+        "To reduce reliance on accessory breathing muscles (like scalenes).",
+        "For individuals with forward head posture or neck pain related to breathing patterns."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:07"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively combines anatomical explanation with practical corrective exercises. The distinction between stretching and re-patterning is well-made, emphasizing that stretching alone is insufficient for long-term change. The visual aids (3D models, on-screen highlights) are very helpful for understanding muscle location and exercise execution."
+}

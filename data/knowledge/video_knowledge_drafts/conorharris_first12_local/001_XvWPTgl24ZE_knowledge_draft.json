@@ -1,0 +1,181 @@
+{
+  "source_url": "https://www.youtube.com/shorts/XvWPTgl24ZE",
+  "source_title_hint": "Finally Fix Your Tight Upper Traps (no stretching required)",
+  "analysis_origin": "hf_structured_analysis:openai/gpt-oss-120b",
+  "primary_summary": "Elevated shoulders are often caused by over‑active upper trapezius and tight rhomboids; pulling the shoulders back can worsen the issue. The root cause is limited rib‑cage expansion during inhalation, leading to compensatory activation of the upper traps. The video teaches a seated scapular‑separation drill using breath to open the space between the scapulae and spine, performed with low intensity and optional light band.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Provides both an explanation of the biomechanical problem and a concrete corrective drill without requiring equipment",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "shoulders",
+      "upper back",
+      "scapula"
+    ],
+    "problem_layers": [
+      "postural elevation",
+      "muscle tightness",
+      "breathing restriction"
+    ],
+    "suitable_for_protocol_database": false,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": false,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "upper trapezius",
+    "rhomboids",
+    "shoulder elevation",
+    "rib cage breathing",
+    "scapular depression"
+  ],
+  "searchable_tags": [
+    "posture",
+    "breathing",
+    "corrective exercise"
+  ],
+  "problem_statements": [
+    "Elevated shoulders due to tight upper trapezius and rhomboids",
+    "Pull‑back shoulder exercises may increase upper trap activation",
+    "Limited rib‑cage expansion during inhalation reinforces tightness"
+  ],
+  "habits_or_contexts": [
+    "Habitual forward shoulder posture",
+    "Breathing limited to chest expansion"
+  ],
+  "key_visual_points": [
+    "Gentle separation of shoulder blades away from the spine",
+    "Arms positioned at ~45° relative to trunk",
+    "Very low intensity (1‑2/10)"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Seated scapular‑separation drill (optional light wrist band)"
+  ],
+  "advice_mentioned": [
+    "Focus on breath‑driven rib‑cage expansion",
+    "Avoid aggressive shoulder‑pulling exercises"
+  ],
+  "warnings_or_limitations": [
+    "High‑intensity pulling exercises can worsen upper trap tightness"
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Upper trap over‑activity causes shoulder elevation",
+      "summary": "When shoulders are elevated, the upper trapezius is often tight and over‑active, pulling the shoulders upward. The rhomboids also become tight because their fibers pull the scapulae upward‑diagonally.",
+      "observable_signs": [
+        "Elevated shoulders at rest",
+        "Tension in the upper back and neck"
+      ],
+      "mechanisms": [
+        "Over‑active upper trap elevates the scapulae",
+        "Rhomboids' diagonal fiber orientation adds upward pull"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Assessing postural shoulder height",
+        "Explaining why pulling‑back exercises may feel uncomfortable"
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0.0-5.4"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Limited rib‑cage expansion reinforces trap tightness",
+      "summary": "Each inhalation should expand the rib cage circumferentially, especially the space between the scapulae and spine. Failure to do so leads to compensatory activation of the upper traps and neck muscles to elevate the rib cage.",
+      "observable_signs": [
+        "Shallow breathing",
+        "Use of upper traps during inhalation"
+      ],
+      "mechanisms": [
+        "Insufficient thoracic expansion triggers compensatory muscle activation"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Designing breathing retraining protocols"
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "58.0-94.6"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Seated scapular‑separation drill",
+      "summary": "Sit on a chair with sit bones evenly weighted, table height such that the forearms are at ~45° to the trunk. Optionally wrap a light band around the wrist. Gently pull the shoulder blades apart from the spine with very low intensity (1‑2/10).",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Sit tall with sit bones evenly loaded",
+        "Place forearms at ~45° relative to trunk (using a table or desk for support)",
+        "Optional: wrap a very light band around the wrist",
+        "Palms face you, arms relaxed",
+        "Very gently slide the shoulder blades away from the spine (scapular depression)",
+        "Keep intensity at 1‑2/10, focusing on breath‑driven expansion"
+      ],
+      "cues": [
+        "Maintain tall posture",
+        "Breathe deeply to expand the rib cage",
+        "Feel the space opening between scapulae and spine"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Pulling too hard or using high intensity",
+        "Over‑arching the neck"
+      ],
+      "when_useful": [
+        "Reducing upper trap over‑activity",
+        "Improving scapular positioning for people with elevated shoulders"
+      ],
+      "when_not_useful": [
+        "During acute upper back injury where scapular movement is contraindicated"
+      ],
+      "retest": [
+        "Observe shoulder elevation at rest after 2‑3 weeks of practice"
+      ],
+      "advice": [
+        "Combine with diaphragmatic breathing drills",
+        "Perform daily for 2‑3 minutes"
+      ],
+      "timestamps": [
+        "113.67-136.43"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 31,
+    "transcript_segment_count": 42,
+    "ocr_observation_count": 5,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 31,
+    "asset_count": 31
+  },
+  "analysis_provider": "hf_structured",
+  "analysis_quality": "standard",
+  "is_active": true,
+  "supersedes_draft_id": null
+}

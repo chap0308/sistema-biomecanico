@@ -1,0 +1,8 @@
+﻿log_level: INFO
+storage:
+  storage_path: D:/sistema-biomecanico/data/qdrant_server/storage
+  snapshots_path: D:/sistema-biomecanico/data/qdrant_server/snapshots
+service:
+  host: 127.0.0.1
+  http_port: 6333
+  grpc_port: 6334

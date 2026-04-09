@@ -1,0 +1,66 @@
+{
+  "answer": "Con la evidencia disponible, el recurso mas cercano es 'Impact of Tight Lats and Pectorals on Posture and Spine': When the pectorals and latissimus dorsi are too short and overactive, they pull the shoulders forward, round the upper spine, and can push the lower spine into extension (hyper-lordosis). This creates a shortened and compressed spinal position and restricts rib cage expansion. Ejercicios relacionados encontrados: Quadruped Scapular Protraction Breathing Drill, Optimized Seated Face Pull Technique.",
+  "recommended_exercises": [
+    "Quadruped Scapular Protraction Breathing Drill",
+    "Optimized Seated Face Pull Technique"
+  ],
+  "key_points": [
+    "When the pectorals and latissimus dorsi are too short and overactive, they pull the shoulders forward, round the upper spine, and can push the lower spine into extension (hyper-lordosis). This creates a shortened and compressed spinal position and restricts rib cage expansion.",
+    "Attempting to correct posture by squeezing the shoulders back and standing excessively tall compromises several biomechanical aspects, including proper breathing mechanics, natural spinal curvature, and healthy shoulder movement.",
+    "A breathing and movement drill performed in a quadruped position to create space between the scapula and spine, thereby improving shoulder external rotation mobility.",
+    "To effectively target the upper back and improve posture, perform face pulls seated with external stability (e.g., a bench). This allows for a focus on proper scapular protraction and retraction, leading with the elbows, without compensatory spinal movements."
+  ],
+  "cautions": [
+    "Actively squeezing shoulders back to 'stand tall'",
+    "Forcing a flat upper back",
+    "Avoid shrugging your shoulders during the drill.",
+    "Do not force the movement or breathing."
+  ],
+  "citations": [
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/FoNjEz5rUW4",
+      "segment_id": "kseg_316b315cb3d574b6",
+      "knowledge_unit_title": "Impact of Tight Lats and Pectorals on Posture and Spine",
+      "timestamp_hint": "0:11, 0:20, 0:30, 0:36, 1:45"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/0cQxyJiVzzg",
+      "segment_id": "kseg_68b6d0ac7dcd97dc",
+      "knowledge_unit_title": "Detrimental Effects of Forcing Shoulders Back for Posture Correction",
+      "timestamp_hint": "0:00, 0:06"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/N2mMGWltYrI",
+      "segment_id": "kseg_d02e30518f95f9cf",
+      "knowledge_unit_title": "Quadruped Scapular Protraction Breathing Drill",
+      "timestamp_hint": "2:08, 2:59"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/d7fXiLxQFyc",
+      "segment_id": "kseg_3ff3bf370187b821",
+      "knowledge_unit_title": "Optimized Seated Face Pull Technique",
+      "timestamp_hint": "1:51"
+    }
+  ],
+  "retrieval_quality": "high",
+  "used_collections": [
+    "video_knowledge_units_v1",
+    "video_segments_v1"
+  ],
+  "model_used": "grounded_fallback (fallback)",
+  "answer_backend": "grounded_fallback",
+  "fallback_reason": "",
+  "fallback_error_code": "",
+  "attempted_backends": [
+    "grounded"
+  ],
+  "query": "Me duele el pecho al querer tocar mi om?plato contrario con mi brazo derecho"
+}

@@ -1,0 +1,704 @@
+{
+  "source_url": "https://www.youtube.com/shorts/3N6Nst5UqeI",
+  "source_title_hint": "How To (actually) Fix Bunions",
+  "analysis_origin": "local_level1_plus_hf_error_fallback:openai/gpt-oss-120b",
+  "analysis_provider": "local_fallback",
+  "analysis_quality": "fallback",
+  "is_active": true,
+  "supersedes_draft_id": null,
+  "primary_summary": "How To (actually) Fix Bunions explains a movement problem and demonstrates corrective actions such as And then just go through about two to three sets of 15 reps of this exercise.. Most people that have squished together toes like this as a result of wearing narrow toe box shoes",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Segments contain structured transcript, OCR, and retrieval-ready evidence.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "foot",
+      "hip",
+      "neck"
+    ],
+    "problem_layers": [
+      "postural",
+      "motor_control"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "foot",
+    "hip",
+    "neck",
+    "most",
+    "people",
+    "squished",
+    "together",
+    "simply",
+    "think",
+    "they",
+    "need",
+    "problem"
+  ],
+  "searchable_tags": [
+    "foot",
+    "knee",
+    "together",
+    "over",
+    "toes",
+    "more",
+    "you're",
+    "just",
+    "arch",
+    "rigid",
+    "will",
+    "most"
+  ],
+  "problem_statements": [
+    "Most people that have squished together toes like this as a result of wearing narrow toe box shoes Most people that have squished together toes like this as a result of wearing narrow toe box shoes think they need to fix the problem by just simply switching to a wider toe box shoe.",
+    "think they need to fix the problem by just simply switching to a wider toe box shoe.",
+    "think they need to fix the problem by just simply switching to a wider toe box shoe.",
+    "And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+    "And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+    "And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+    "Now you're back to the original problem of a rigid foot."
+  ],
+  "habits_or_contexts": [
+    "Most people that have squished together toes like this as a result of wearing narrow toe box shoes Most people that have squished together toes like this as a result of wearing narrow toe box shoes think they need to fix the problem by just simply switching to a wider toe box shoe.",
+    "That way when you go back into your wider toe box shoe, your foot has the capacity to more genuinely pronate and then have that work with the rest of the body."
+  ],
+  "key_visual_points": [
+    "Representative frame at 1.4s",
+    "Representative frame at 3.8s",
+    "OCR near 4.9s: SIMPLY",
+    "Representative frame at 6.6s",
+    "OCR near 7.3s: CERTAINLY\n\n~*",
+    "Representative frame at 10.4s",
+    "OCR near 11.8s: OVER TIME,\n\nCe |",
+    "Representative frame at 17.5s",
+    "OCR near 18.4s: ACTUALLY\n\na",
+    "OCR near 24.1s: WHAT HAPPENS"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "And then just go through about two to three sets of 15 reps of this exercise."
+  ],
+  "advice_mentioned": [
+    "Here's an easy way you can start to teach your body how to do that.",
+    "You may want to hold start to teach your body how to do that.",
+    "You do want to make sure this back foot is slightly off to the side though.",
+    "Start with your leg locked out and unlock your knee and what you're going to do is very gently turn your pelvis away from that side just a bit as you push your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+    "your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+    "your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+    "your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+    "And then you're going to turn your hips again square them up as you lock out your knee and you're going to unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt down as long as you're finding those three points of contact you're good."
+  ],
+  "warnings_or_limitations": [
+    "And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+    "And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+    "And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+    "And just because you switch to a wider toe box shoe does not mean that your foot automatically knows how to move through more genuine pronation in its new environment.",
+    "For this, you don't need any equipment.",
+    "For this, you don't need any equipment.",
+    "You want to relatively level pelvis turn don't lean into it too much.",
+    "Don't do this."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 0.0-2.8s: Most people that have squished together toes like this as a result of wearing na",
+      "summary": "Segment 0.0-2.8s: Most people that have squished together toes like this as a result of wearing narrow toe box shoes",
+      "observable_signs": [],
+      "mechanisms": [
+        "Most people that have squished together toes like this as a result of wearing narrow toe box shoes"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00",
+        "00:02"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 2.8-4.9s: Most people that have squished together toes like this as a result of wearing na",
+      "summary": "Segment 2.8-4.9s: Most people that have squished together toes like this as a result of wearing narrow toe box shoes think they need to fix the problem by just simply switching to a wider toe box sh",
+      "observable_signs": [],
+      "mechanisms": [
+        "Most people that have squished together toes like this as a result of wearing narrow toe box shoes think they need to fix the problem by just simply switching to a wider toe box shoe."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:02",
+        "00:04"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 4.9-5.9s: think they need to fix the problem by just simply switching to a wider toe box s",
+      "summary": "Segment 4.9-5.9s: think they need to fix the problem by just simply switching to a wider toe box shoe.",
+      "observable_signs": [
+        "SIMPLY"
+      ],
+      "mechanisms": [
+        "think they need to fix the problem by just simply switching to a wider toe box shoe."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:04",
+        "00:05"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 5.9-7.3s: think they need to fix the problem by just simply switching to a wider toe box s",
+      "summary": "Segment 5.9-7.3s: think they need to fix the problem by just simply switching to a wider toe box shoe. And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "And while that's certainly helpful, in many cases it's not enough to fully fix the issue."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:05",
+        "00:07"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 7.3-9.0s: And while that's certainly helpful, in many cases it's not enough to fully fix t",
+      "summary": "Segment 7.3-9.0s: And while that's certainly helpful, in many cases it's not enough to fully fix the issue.",
+      "observable_signs": [
+        "CERTAINLY\n\n~*"
+      ],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "And while that's certainly helpful, in many cases it's not enough to fully fix the issue."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:07",
+        "00:09"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 9.0-11.8s: And while that's certainly helpful, in many cases it's not enough to fully fix ",
+      "summary": "Segment 9.0-11.8s: And while that's certainly helpful, in many cases it's not enough to fully fix the issue. Here's why in which you can do about it. Over time, as we wear these narrow toe box shoes",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "And while that's certainly helpful, in many cases it's not enough to fully fix the issue."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:09",
+        "00:11"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 11.8-16.6s: Here's why in which you can do about it. Over time, as we wear these narrow to",
+      "summary": "Segment 11.8-16.6s: Here's why in which you can do about it. Over time, as we wear these narrow toe box shoes and our toes get more compressed and closer together, what that does is it creates actuall",
+      "observable_signs": [
+        "OVER TIME,\n\nCe |"
+      ],
+      "mechanisms": [
+        "Here's why in which you can do about it. Over time, as we wear these narrow toe box shoes and our toes get more compressed and closer together, what that does is it creates actually a very"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:11",
+        "00:16"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 16.6-18.4s: and our toes get more compressed and closer together, what that does is it cre",
+      "summary": "Segment 16.6-18.4s: and our toes get more compressed and closer together, what that does is it creates actually a very",
+      "observable_signs": [],
+      "mechanisms": [
+        "and our toes get more compressed and closer together, what that does is it creates actually a very"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:16",
+        "00:18"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 18.4-24.1s: and our toes get more compressed and closer together, what that does is it cre",
+      "summary": "Segment 18.4-24.1s: and our toes get more compressed and closer together, what that does is it creates actually a very rigid foot arch. If I squeeze together the toes, look at what happens to the foot",
+      "observable_signs": [
+        "ACTUALLY\n\na"
+      ],
+      "mechanisms": [
+        "and our toes get more compressed and closer together, what that does is it creates actually a very rigid foot arch. If I squeeze together the toes, look at what happens to the foot arch. It goes up"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:18",
+        "00:24"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 24.1-27.3s: rigid foot arch. If I squeeze together the toes, look at what happens to the f",
+      "summary": "Segment 24.1-27.3s: rigid foot arch. If I squeeze together the toes, look at what happens to the foot arch. It goes up into a higher, more rigid position. This will limit the natural mechanics of our",
+      "observable_signs": [
+        "WHAT HAPPENS"
+      ],
+      "mechanisms": [
+        "rigid foot arch. If I squeeze together the toes, look at what happens to the foot arch. It goes up into a higher, more rigid position. This will limit the natural mechanics of our foot arch moving"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:24",
+        "00:27"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 27.3-29.6s: into a higher, more rigid position. This will limit the natural mechanics of o",
+      "summary": "Segment 27.3-29.6s: into a higher, more rigid position. This will limit the natural mechanics of our foot arch moving",
+      "observable_signs": [
+        "HIGHER MORE\n\n%"
+      ],
+      "mechanisms": [
+        "into a higher, more rigid position. This will limit the natural mechanics of our foot arch moving"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:27",
+        "00:29"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 29.6-34.3s: into a higher, more rigid position. This will limit the natural mechanics of o",
+      "summary": "Segment 29.6-34.3s: into a higher, more rigid position. This will limit the natural mechanics of our foot arch moving into pronation and lowering close into the ground. Even if you have a relatively f",
+      "observable_signs": [],
+      "mechanisms": [
+        "into a higher, more rigid position. This will limit the natural mechanics of our foot arch moving into pronation and lowering close into the ground. Even if you have a relatively flat foot,"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:29",
+        "00:34"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 34.3-49.3s: into pronation and lowering close into the ground. Even if you have a relative",
+      "summary": "Segment 34.3-49.3s: into pronation and lowering close into the ground. Even if you have a relatively flat foot, squeezing your toes together will limit this natural pronation. And just because you swi",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "And just because you switch to a wider toe box shoe does not mean that your foot automatically knows how to move through more genuine pronation in its new environment."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:34",
+        "00:49"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 49.3-64.3s: genuine pronation in its new environment. So a truly comprehensive approach wo",
+      "summary": "Segment 49.3-64.3s: genuine pronation in its new environment. So a truly comprehensive approach would teach the foot to pronate effectively in an unrestricted environment with the proper mechanics. Th",
+      "observable_signs": [
+        "I's\n\nAPPROACH\n\n~~."
+      ],
+      "mechanisms": [
+        "genuine pronation in its new environment. So a truly comprehensive approach would teach the foot to pronate effectively in an unrestricted environment with the proper mechanics. That way when you go back into your wider toe box shoe, your foot has the capacity to more genuinely pronate and then have that work with the rest of the body. Here's an easy way you can"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:49",
+        "01:04"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 64.3-67.9s: genuinely pronate and then have that work with the rest of the body. Here's an",
+      "summary": "Segment 64.3-67.9s: genuinely pronate and then have that work with the rest of the body. Here's an easy way you can start to teach your body how to do that. For this, you don't need any equipment. You",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "Here's an easy way you can start to teach your body how to do that."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "For this, you don't need any equipment."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Here's an easy way you can start to teach your body how to do that."
+      ],
+      "timestamps": [
+        "01:04",
+        "01:07"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 67.9-82.9s: start to teach your body how to do that. For this, you don't need any equipmen",
+      "summary": "Segment 67.9-82.9s: start to teach your body how to do that. For this, you don't need any equipment. You may want to hold onto a door frame or a rack for support and stability, but that's optional. Pl",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "start to teach your body how to do that.",
+        "You do want to make sure this back foot is slightly off to the side though."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "For this, you don't need any equipment."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "start to teach your body how to do that.",
+        "You do want to make sure this back foot is slightly off to the side though."
+      ],
+      "timestamps": [
+        "01:07",
+        "01:22"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 82.9-97.9s: off to the side though. Now the overwhelming majority of your body weighs on t",
+      "summary": "Segment 82.9-97.9s: off to the side though. Now the overwhelming majority of your body weighs on this foot spread evenly amongst these three points of contact. Start with your leg locked out and unloc",
+      "observable_signs": [],
+      "mechanisms": [
+        "off to the side though. Now the overwhelming majority of your body weighs on this foot spread evenly amongst these three points of contact. Start with your leg locked out and unlock your knee and what you're going to do is very gently turn your pelvis away from that side just a bit as you push your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "execution_steps": [],
+      "cues": [
+        "Start with your leg locked out and unlock your knee and what you're going to do is very gently turn your pelvis away from that side just a bit as you push your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Start with your leg locked out and unlock your knee and what you're going to do is very gently turn your pelvis away from that side just a bit as you push your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "advice": [
+        "Start with your leg locked out and unlock your knee and what you're going to do is very gently turn your pelvis away from that side just a bit as you push your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "timestamps": [
+        "01:22",
+        "01:37"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 97.9-98.8s: your knee over your toe and you should feel your foot flattening out against t",
+      "summary": "Segment 97.9-98.8s: your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+      "observable_signs": [],
+      "mechanisms": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "execution_steps": [],
+      "cues": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "advice": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "timestamps": [
+        "01:37",
+        "01:38"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 98.8-102.6s: your knee over your toe and you should feel your foot flattening out against ",
+      "summary": "Segment 98.8-102.6s: your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+      "observable_signs": [
+        "FLATTENING"
+      ],
+      "mechanisms": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "execution_steps": [],
+      "cues": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "advice": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "timestamps": [
+        "01:38",
+        "01:42"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 102.6-113.0s: your knee over your toe and you should feel your foot flattening out against",
+      "summary": "Segment 102.6-113.0s: your knee over your toe and you should feel your foot flattening out against the ground a little bit. And then you're going to turn your hips again square them up as you lock out y",
+      "observable_signs": [],
+      "mechanisms": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit. And then you're going to turn your hips again square them up as you lock out your knee and you're going to unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+        "And then you're going to turn your hips again square them up as you lock out your knee and you're going to unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit."
+      ],
+      "advice": [
+        "your knee over your toe and you should feel your foot flattening out against the ground a little bit.",
+        "And then you're going to turn your hips again square them up as you lock out your knee and you're going to unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt"
+      ],
+      "timestamps": [
+        "01:42",
+        "01:53"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 113.0-117.6s: unlock your knee, turn your pelvis very gently away from that side and let y",
+      "summary": "Segment 113.0-117.6s: unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt down as long as you're finding those three points of contact you're good.",
+      "observable_signs": [
+        "THOSE"
+      ],
+      "mechanisms": [
+        "unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt down as long as you're finding those three points of contact you're good. You want to relatively"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt down as long as you're finding those three points of contact you're good."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "unlock your knee, turn your pelvis very gently away from that side and let your foot are just kind of melt down as long as you're finding those three points of contact you're good."
+      ],
+      "timestamps": [
+        "01:53",
+        "01:57"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 117.6-132.6s: down as long as you're finding those three points of contact you're good. Yo",
+      "summary": "Segment 117.6-132.6s: down as long as you're finding those three points of contact you're good. You want to relatively level pelvis turn don't lean into it too much. Don't do this. It should be nice and",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "My biggest piece of advice here is stay relaxed through your foot.",
+        "Allow your foot arch to melt down as long as you're feeling those three points"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "You want to relatively level pelvis turn don't lean into it too much.",
+        "Don't do this."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Allow your foot arch to melt down as long as you're feeling those three points"
+      ],
+      "advice": [
+        "My biggest piece of advice here is stay relaxed through your foot.",
+        "Allow your foot arch to melt down as long as you're feeling those three points"
+      ],
+      "timestamps": [
+        "01:57",
+        "02:12"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 132.6-147.6s: through your foot. Allow your foot arch to melt down as long as you're feeli",
+      "summary": "Segment 132.6-147.6s: through your foot. Allow your foot arch to melt down as long as you're feeling those three points of contact all is well. You don't want to have tension in your toes because that's",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "Allow your foot arch to melt down as long as you're feeling those three points of contact all is well."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "You don't want to have tension in your toes because that's going to raise up your foot arch."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Allow your foot arch to melt down as long as you're feeling those three points of contact all is well."
+      ],
+      "advice": [
+        "Allow your foot arch to melt down as long as you're feeling those three points of contact all is well."
+      ],
+      "timestamps": [
+        "02:12",
+        "02:27"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 147.6-155.5s: do what it will as the knee goes over the big toe and your pelvis stays leve",
+      "summary": "Segment 147.6-155.5s: do what it will as the knee goes over the big toe and your pelvis stays level. And then just go through about two to three sets of 15 reps of this exercise.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "do what it will as the knee goes over the big toe and your pelvis stays level",
+        "just go through about two to three sets of 15 reps of this exercise"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:27",
+        "02:35"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 24,
+    "transcript_segment_count": 32,
+    "ocr_observation_count": 9,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 24,
+    "asset_count": 22
+  }
+}

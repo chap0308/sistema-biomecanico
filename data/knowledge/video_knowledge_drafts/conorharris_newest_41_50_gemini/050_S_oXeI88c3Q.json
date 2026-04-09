@@ -1,0 +1,236 @@
+{
+  "source_url": "https://www.youtube.com/shorts/S_oXeI88c3Q",
+  "source_title_hint": "¿Por qué la parte superior del cuerpo hace que tus caderas sean desiguales?",
+  "primary_summary": "This video explains that lateral pelvic tilt is often influenced by upper body and shoulder position, not just hip issues. It demonstrates two functional tests to assess lower and upper body rotation, and then provides a corrective exercise (side-lying trunk rotation with leg extension) tailored to a specific rotational imbalance pattern.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides a biomechanical concept explaining the interplay between upper body rotation and pelvic tilt, offers diagnostic tests to identify specific rotational patterns, and demonstrates a corrective exercise based on these findings. This is valuable for diagnostic support, explanation support, and corrective exercise selection.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "hips",
+      "pelvis",
+      "upper body",
+      "shoulders",
+      "trunk",
+      "spine"
+    ],
+    "problem_layers": [
+      "postural dysfunction",
+      "rotational imbalances",
+      "mobility limitations"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "lateral pelvic tilt",
+    "postural correction",
+    "biomechanics",
+    "trunk rotation",
+    "hip rotation",
+    "shoulder rotation",
+    "functional assessment",
+    "corrective exercise"
+  ],
+  "searchable_tags": [
+    "pelvic tilt",
+    "posture",
+    "rotation",
+    "hips",
+    "shoulders",
+    "trunk",
+    "mobility",
+    "assessment",
+    "exercise"
+  ],
+  "problem_statements": [
+    "Lateral pelvic tilt that is not resolved by hip-focused exercises alone",
+    "Compensatory postural positions due to unaddressed upper body rotation",
+    "Imbalanced lower body and upper body rotation leading to pelvic asymmetry"
+  ],
+  "habits_or_contexts": [],
+  "key_visual_points": [
+    "A person standing with a visually depicted lateral pelvic tilt (right hip higher).",
+    "A skeleton model used to illustrate the connection between upper body and hip rotation.",
+    "Arrows indicating rotational movements of the pelvis and upper body.",
+    "Demonstration of the lower body rotation test (supine, knees bent, falling to side).",
+    "Demonstration of the upper body rotation test (side-lying, arm pointing up, rotating back).",
+    "Demonstration of the side-lying trunk rotation with leg extension exercise."
+  ],
+  "tests_mentioned": [
+    "Lower Body Rotation Test",
+    "Upper Body Rotation Test"
+  ],
+  "exercises_mentioned": [
+    "Side Lying Trunk Rotation with Leg Extension"
+  ],
+  "advice_mentioned": [
+    "Do not solely focus on hip exercises for lateral pelvic tilt if upper body rotation is a contributing factor.",
+    "Address the upper body rotation to avoid compensatory positions."
+  ],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Upper Body Influence on Lateral Pelvic Tilt",
+      "summary": "Lateral pelvic tilt is often influenced by the position and rotation of the upper body and shoulders, not solely by hip mechanics. Failing to address upper body imbalances can lead to persistent compensatory postures.",
+      "observable_signs": [
+        "Lateral pelvic tilt (one hip higher than the other)",
+        "Compensatory upper body rotation relative to the pelvis"
+      ],
+      "mechanisms": [
+        "The trunk and pelvis are interconnected; rotational imbalances in one segment can affect the other.",
+        "If the upper body is more rotated to one side than the hips, it can create a compensatory lateral pelvic tilt."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Only focusing on hip-specific exercises for lateral pelvic tilt."
+      ],
+      "when_useful": [
+        "When diagnosing lateral pelvic tilt.",
+        "When hip-focused interventions are not yielding desired results."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Consider the entire kinetic chain, especially the upper body and trunk, when assessing and correcting lateral pelvic tilt."
+      ],
+      "timestamps": [
+        "0:05",
+        "0:22",
+        "0:34",
+        "1:35",
+        "1:55"
+      ]
+    },
+    {
+      "unit_type": "functional_test",
+      "title": "Lower Body Rotation Test",
+      "summary": "A test to assess the rotational mobility of the lower body (hips and pelvis) by allowing the knees to fall to each side while keeping the upper body stable.",
+      "observable_signs": [
+        "Asymmetrical range of motion when knees fall to one side versus the other.",
+        "Early lifting of the opposite shoulder from the ground."
+      ],
+      "mechanisms": [
+        "Evaluates the ability of the lumbar spine and hips to rotate independently of the thoracic spine."
+      ],
+      "execution_steps": [
+        "Lie supine on the ground with arms out to your sides.",
+        "Bend your knees with feet flat on the ground.",
+        "Allow your knees to fall to one direction.",
+        "Stop at the point where if you were to go any further, the opposite side shoulder would lift off the ground.",
+        "Compare the range of motion for both sides."
+      ],
+      "cues": [
+        "Keep arms out to sides.",
+        "Allow knees to fall naturally.",
+        "Stop before opposite shoulder lifts."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Forcing the rotation beyond the point where the opposite shoulder lifts."
+      ],
+      "when_useful": [
+        "To identify rotational imbalances in the lower body/pelvis."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:53"
+      ]
+    },
+    {
+      "unit_type": "functional_test",
+      "title": "Upper Body Rotation Test",
+      "summary": "A test to assess the rotational mobility of the upper body (thoracic spine and shoulders) by rotating an arm backward while maintaining stacked shoulders.",
+      "observable_signs": [
+        "Asymmetrical range of motion when rotating the arm back on one side versus the other.",
+        "Early turning of the breastbone or pectorals."
+      ],
+      "mechanisms": [
+        "Evaluates the ability of the thoracic spine and shoulder girdle to rotate independently of the lumbar spine and pelvis."
+      ],
+      "execution_steps": [
+        "Lay on your side with both knees and hips bent at approximately a 90-degree angle.",
+        "Point one arm directly at the ceiling, ensuring your shoulders are perfectly stacked.",
+        "Keeping your shoulders perfectly stacked, allow that arm to come back.",
+        "Stop at the point where if you were to go back any further in a straight line (without the arm dropping down), you would have to turn any part of your breastbone or pecs.",
+        "Compare the range of motion for both sides."
+      ],
+      "cues": [
+        "Keep shoulders perfectly stacked.",
+        "Arm points directly at the ceiling.",
+        "Rotate arm straight back, do not let it drop.",
+        "Stop before breastbone/pecs turn."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Allowing the arm to drop down instead of rotating straight back.",
+        "Turning the trunk or losing shoulder stack prematurely."
+      ],
+      "when_useful": [
+        "To identify rotational imbalances in the upper body/thoracic spine."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "1:04"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Side Lying Trunk Rotation with Leg Extension",
+      "summary": "A corrective exercise designed to improve trunk rotation relative to the pelvis, specifically for individuals with better lower body rotation to one side and better upper body rotation to the opposite side.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Promotes dissociation between pelvic and thoracic rotation.",
+        "Facilitates trunk rotation towards the side of limited upper body rotation while maintaining pelvic stability."
+      ],
+      "execution_steps": [
+        "Lay on your left side with both knees and hips bent at approximately a 90-degree angle.",
+        "Place your left arm underneath your shoulder with the forearm flat on the ground.",
+        "Maintain contact with the outside of your left knee and the outside of your left hip bone on the ground (50/50 weight distribution between both).",
+        "Slowly bring your right leg back, dragging it on the ground. Stop before your lower back starts to arch.",
+        "While maintaining the left side contacts, take your right arm and slide it on the ground, turning your trunk to the left.",
+        "Stop at the point where you would lose any of the contacts on your left side or lose contact with your right inside knee."
+      ],
+      "cues": [
+        "Maintain left knee and hip contact.",
+        "50/50 weight distribution.",
+        "Slowly extend right leg back, avoid arching back.",
+        "Slide right arm on ground, turning trunk to the left.",
+        "Stop before losing any left side contacts or right inside knee contact."
+      ],
+      "breathing_cues": [
+        "Hold the position and breathe in through your nose, out through your mouth for about 5-10 slow breaths."
+      ],
+      "errors_to_avoid": [
+        "Arching the lower back when extending the leg.",
+        "Losing contact points on the left side (knee, hip).",
+        "Losing contact with the right inside knee."
+      ],
+      "when_useful": [
+        "When the lower body rotation test is better to the right, and the upper body rotation test is better to the left (indicating hips are more turned right than the upper body, and the upper body is relatively turned left)."
+      ],
+      "when_not_useful": [
+        "If the rotational imbalances are the opposite of the described pattern."
+      ],
+      "retest": [
+        "Re-evaluate the lower and upper body rotation tests after performing the exercise."
+      ],
+      "advice": [],
+      "timestamps": [
+        "2:03"
+      ]
+    }
+  ],
+  "model_notes": "The video clearly explains a complex biomechanical concept and provides practical, actionable steps for assessment and correction. The distinction between lower and upper body rotation and their combined effect on pelvic tilt is a valuable educational point. The tests and exercise are well-demonstrated with specific cues and errors to avoid. The content is highly suitable for a biomechanical knowledge base."
+}

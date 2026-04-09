@@ -1,0 +1,807 @@
+{
+  "source_url": "https://www.youtube.com/shorts/Li3k6UdnDvE",
+  "source_title_hint": "Fix Your TMJ Pain with This One Simple Exercise",
+  "analysis_origin": "local_level1_plus_hf_error_fallback:openai/gpt-oss-120b",
+  "analysis_provider": "local_fallback",
+  "analysis_quality": "fallback",
+  "is_active": true,
+  "supersedes_draft_id": null,
+  "primary_summary": "Fix Your TMJ Pain with This One Simple Exercise explains a movement problem and demonstrates corrective actions such as Fix Your TMJ Pain with This One Simple Exercise. Do you ever notice how your jaw feels more deviated off to one side than the other?",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Segments contain structured transcript, OCR, and retrieval-ready evidence.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "neck"
+    ],
+    "problem_layers": [
+      "motor_control"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "neck",
+    "ever",
+    "notice",
+    "feels",
+    "more",
+    "issues",
+    "maybe",
+    "bite",
+    "doesn't",
+    "side",
+    "also",
+    "head"
+  ],
+  "searchable_tags": [
+    "side",
+    "deviated",
+    "also",
+    "very",
+    "gently",
+    "bite",
+    "left",
+    "lateral",
+    "first",
+    "allow",
+    "teeth",
+    "naturally"
+  ],
+  "problem_statements": [
+    "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?",
+    "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?",
+    "And because the head tends to be rotated away from the side of the deviated jaw, I find that net rotation is also limited in terms of its range away from the side of the deviated jaw, I find that net rotation is also limited in terms of its range emotion to that side of the jaw deviation itself."
+  ],
+  "habits_or_contexts": [
+    "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?",
+    "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?",
+    "I'm just trying to help you appreciate the bigger picture.",
+    "So when you bite down and you have a jaw that's deviated to let's say the left side, and this creates a misalignment within our bite as well.",
+    "So when you bite down and you have a jaw that's deviated to the left, typically you can find your back right teeth more easily than your left.",
+    "You also might be surprised how much this frees up your net rotation and also improves the symmetry of your back surprised how much this frees up your net rotation and also improves the symmetry of your back molar contact when you bite down."
+  ],
+  "key_visual_points": [
+    "Representative frame at 1.9s",
+    "OCR near 3.7s: HAVE TMJ ISSUES",
+    "Representative frame at 7.8s",
+    "Representative frame at 14.8s",
+    "OCR near 20.2s: 4} WHICH BRINGS",
+    "OCR near 27.7s: OF THE SKULL",
+    "Representative frame at 45.4s",
+    "Representative frame at 56.5s",
+    "Representative frame at 58.5s",
+    "OCR near 60.0s: ‘"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Fix Your TMJ Pain with This One Simple Exercise",
+    "So here's a really simple and easy exercise that will train the lateral tear-goid muscle to reposition the jaw and",
+    "Take a hand-tile roll up thick enough, so that way when you place it molar contact when you bite down.",
+    "Take a hand-tile roll up thick enough, so that way when you place it underneath the most curved part of your neck, your"
+  ],
+  "advice_mentioned": [
+    "Do you ever notice how your jaw feels more deviated off to one side than the other?",
+    "Do you ever notice how your jaw feels more deviated off to one side than the other?",
+    "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?",
+    "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?",
+    "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw ahead of your top jaw, just a tiny bit.",
+    "So what you should feel is muscles on the side of your left upper jaw start to work.",
+    "of your left upper jaw start to work.",
+    "of your left upper jaw start to work."
+  ],
+  "warnings_or_limitations": [
+    "Do you ever notice how your jaw feels more deviated off to one side than the other?",
+    "Do you ever notice how your jaw feels more deviated off to one side than the other?",
+    "Your jaw is not actually going to move because your fingers are in that position, so it's going to end up being is not actually going to move because your fingers are in that position, so it's going to end up being an isometric contraction."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 0.0-3.7s: Do you ever notice how your jaw feels more deviated off to one side than the oth",
+      "summary": "Segment 0.0-3.7s: Do you ever notice how your jaw feels more deviated off to one side than the other?",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?"
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?"
+      ],
+      "advice": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?"
+      ],
+      "timestamps": [
+        "00:00",
+        "00:03"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 3.7-6.3s: Do you ever notice how your jaw feels more deviated off to one side than the oth",
+      "summary": "Segment 3.7-6.3s: Do you ever notice how your jaw feels more deviated off to one side than the other? Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when",
+      "observable_signs": [
+        "HAVE TMJ ISSUES"
+      ],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?",
+        "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?"
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?",
+        "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?"
+      ],
+      "advice": [
+        "Do you ever notice how your jaw feels more deviated off to one side than the other?",
+        "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?"
+      ],
+      "timestamps": [
+        "00:03",
+        "00:06"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 6.3-9.3s: Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in it",
+      "summary": "Segment 6.3-9.3s: Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk? What I want to help you appreciate is that, yes, this has a lot to",
+      "observable_signs": [],
+      "mechanisms": [
+        "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk? What I want to help you appreciate is that, yes, this has a lot to do with the jaw itself,"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?"
+      ],
+      "advice": [
+        "Or maybe you have TMJ issues and your jaw or bite doesn't feel symmetrical in its movement when you chew or talk?"
+      ],
+      "timestamps": [
+        "00:06",
+        "00:09"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 9.3-20.2s: What I want to help you appreciate is that, yes, this has a lot to do with the ",
+      "summary": "Segment 9.3-20.2s: What I want to help you appreciate is that, yes, this has a lot to do with the jaw itself, but also the bigger structures around the jaw like the head, the skull, and also the neck",
+      "observable_signs": [],
+      "mechanisms": [
+        "What I want to help you appreciate is that, yes, this has a lot to do with the jaw itself, but also the bigger structures around the jaw like the head, the skull, and also the neck can influence the position of the jaw. Typically what I see is that the head is side bent to the same side, which brings the jaw lower down on that side."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:09",
+        "00:20"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 20.2-27.7s: Typically what I see is that the head is side bent to the same side, which bri",
+      "summary": "Segment 20.2-27.7s: Typically what I see is that the head is side bent to the same side, which brings the jaw lower down on that side. So, effectively the jaw kind of just gets left behind in space as",
+      "observable_signs": [
+        "4} WHICH BRINGS"
+      ],
+      "mechanisms": [
+        "Typically what I see is that the head is side bent to the same side, which brings the jaw lower down on that side. So, effectively the jaw kind of just gets left behind in space as the rest of the skull relatively is biased towards"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:20",
+        "00:27"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 27.7-34.8s: So, effectively the jaw kind of just gets left behind in space as the rest of ",
+      "summary": "Segment 27.7-34.8s: So, effectively the jaw kind of just gets left behind in space as the rest of the skull relatively is biased towards orienting in the other direction. And to be clear, there are de",
+      "observable_signs": [
+        "OF THE SKULL"
+      ],
+      "mechanisms": [
+        "So, effectively the jaw kind of just gets left behind in space as the rest of the skull relatively is biased towards orienting in the other direction. And to be clear, there are definitely a lot of other influences here."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:27",
+        "00:34"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 34.8-49.8s: orienting in the other direction. And to be clear, there are definitely a lot ",
+      "summary": "Segment 34.8-49.8s: orienting in the other direction. And to be clear, there are definitely a lot of other influences here. I'm just trying to help you appreciate the bigger picture. The net result of",
+      "observable_signs": [],
+      "mechanisms": [
+        "orienting in the other direction. And to be clear, there are definitely a lot of other influences here. I'm just trying to help you appreciate the bigger picture. The net result of this over time is that it positions the jaw differently in the socket than it was before in a relatively neutral position. Over time, what happens is that this creates a"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:34",
+        "00:49"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 49.8-55.9s: differently in the socket than it was before in a relatively neutral position.",
+      "summary": "Segment 49.8-55.9s: differently in the socket than it was before in a relatively neutral position. Over time, what happens is that this creates a misalignment with how the mandible rests within the ja",
+      "observable_signs": [],
+      "mechanisms": [
+        "differently in the socket than it was before in a relatively neutral position. Over time, what happens is that this creates a misalignment with how the mandible rests within the jaw socket itself. So I commonly see that people have a jaw"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:49",
+        "00:55"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 55.9-57.1s: misalignment with how the mandible rests within the jaw socket itself. So I co",
+      "summary": "Segment 55.9-57.1s: misalignment with how the mandible rests within the jaw socket itself. So I commonly see that people have a jaw",
+      "observable_signs": [],
+      "mechanisms": [
+        "misalignment with how the mandible rests within the jaw socket itself. So I commonly see that people have a jaw"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:55",
+        "00:57"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 57.1-60.0s: misalignment with how the mandible rests within the jaw socket itself. So I co",
+      "summary": "Segment 57.1-60.0s: misalignment with how the mandible rests within the jaw socket itself. So I commonly see that people have a jaw deviated to let's say the left side, and this creates a misalignment",
+      "observable_signs": [],
+      "mechanisms": [
+        "misalignment with how the mandible rests within the jaw socket itself. So I commonly see that people have a jaw deviated to let's say the left side, and this creates a misalignment within our bite as well. So when you bite down and you have a jaw that's"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:57",
+        "00:59"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 60.0-75.0s: deviated to let's say the left side, and this creates a misalignment within ou",
+      "summary": "Segment 60.0-75.0s: deviated to let's say the left side, and this creates a misalignment within our bite as well. So when you bite down and you have a jaw that's deviated to the left, typically you ca",
+      "observable_signs": [
+        "‘"
+      ],
+      "mechanisms": [
+        "deviated to let's say the left side, and this creates a misalignment within our bite as well. So when you bite down and you have a jaw that's deviated to the left, typically you can find your back right teeth more easily than your left. Over time, this also weakens key muscles that help control a manage the position of the jaw itself. Now again, there's a lot of play here,"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:59",
+        "01:14"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 75.0-87.8s: key muscles that help control a manage the position of the jaw itself. Now aga",
+      "summary": "Segment 75.0-87.8s: key muscles that help control a manage the position of the jaw itself. Now again, there's a lot of play here, but one key muscle group that gets weak and underutilized in many impo",
+      "observable_signs": [],
+      "mechanisms": [
+        "key muscles that help control a manage the position of the jaw itself. Now again, there's a lot of play here, but one key muscle group that gets weak and underutilized in many important contexts for jaw control on the side where your jaw is deviated to is your lateral tear-goid muscle. This is a key muscle for creating"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:14",
+        "01:27"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 87.8-89.3s: on the side where your jaw is deviated to is your lateral tear-goid muscle. Th",
+      "summary": "Segment 87.8-89.3s: on the side where your jaw is deviated to is your lateral tear-goid muscle. This is a key muscle for creating",
+      "observable_signs": [],
+      "mechanisms": [
+        "on the side where your jaw is deviated to is your lateral tear-goid muscle. This is a key muscle for creating"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:27",
+        "01:29"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 89.3-94.2s: on the side where your jaw is deviated to is your lateral tear-goid muscle. Th",
+      "summary": "Segment 89.3-94.2s: on the side where your jaw is deviated to is your lateral tear-goid muscle. This is a key muscle for creating side-to-side jaw movement and also pro-trusion or forward movement. An",
+      "observable_signs": [],
+      "mechanisms": [
+        "on the side where your jaw is deviated to is your lateral tear-goid muscle. This is a key muscle for creating side-to-side jaw movement and also pro-trusion or forward movement. And because the head tends to be rotated"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:29",
+        "01:34"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 94.2-94.9s: side-to-side jaw movement and also pro-trusion or forward movement. And becaus",
+      "summary": "Segment 94.2-94.9s: side-to-side jaw movement and also pro-trusion or forward movement. And because the head tends to be rotated",
+      "observable_signs": [],
+      "mechanisms": [
+        "side-to-side jaw movement and also pro-trusion or forward movement. And because the head tends to be rotated"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:34",
+        "01:34"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 94.9-98.5s: side-to-side jaw movement and also pro-trusion or forward movement. And becaus",
+      "summary": "Segment 94.9-98.5s: side-to-side jaw movement and also pro-trusion or forward movement. And because the head tends to be rotated away from the side of the deviated jaw, I find that net rotation is als",
+      "observable_signs": [],
+      "mechanisms": [
+        "side-to-side jaw movement and also pro-trusion or forward movement. And because the head tends to be rotated away from the side of the deviated jaw, I find that net rotation is also limited in terms of its range"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:34",
+        "01:38"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 98.5-113.5s: away from the side of the deviated jaw, I find that net rotation is also limi",
+      "summary": "Segment 98.5-113.5s: away from the side of the deviated jaw, I find that net rotation is also limited in terms of its range emotion to that side of the jaw deviation itself. So here's a really simple a",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "away from the side of the deviated jaw, I find that net rotation is also limited in terms of its range emotion to that side of the jaw deviation itself. So here's a really simple and easy exercise that will train the lateral tear-goid muscle to reposition the jaw and create better alignment. You also might be surprised how much this frees up your net rotation and also improves the symmetry of your back"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "So here's a really simple and easy exercise that will train the lateral tear-goid muscle to reposition the jaw and create better alignment."
+      ],
+      "advice": [],
+      "timestamps": [
+        "01:38",
+        "01:53"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 113.5-120.1s: surprised how much this frees up your net rotation and also improves the sym",
+      "summary": "Segment 113.5-120.1s: surprised how much this frees up your net rotation and also improves the symmetry of your back molar contact when you bite down. Take a hand-tile roll up thick enough, so that way",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "surprised how much this frees up your net rotation and also improves the symmetry of your back molar contact when you bite down. Take a hand-tile roll up thick enough, so that way when you place it"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:53",
+        "02:00"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 120.1-129.6s: molar contact when you bite down. Take a hand-tile roll up thick enough, so ",
+      "summary": "Segment 120.1-129.6s: molar contact when you bite down. Take a hand-tile roll up thick enough, so that way when you place it underneath the most curved part of your neck, your chin can passively point d",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "molar contact when you bite down. Take a hand-tile roll up thick enough, so that way when you place it underneath the most curved part of your neck, your chin can passively point directly at the ceiling. First, allow your teeth to very"
+      ],
+      "cues": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "timestamps": [
+        "02:00",
+        "02:09"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 129.6-130.1s: First, allow your teeth to very gently naturally separate and then very gent",
+      "summary": "Segment 129.6-130.1s: First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw",
+      "observable_signs": [
+        "FIRST ALLOW"
+      ],
+      "mechanisms": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "timestamps": [
+        "02:09",
+        "02:10"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 130.1-132.1s: First, allow your teeth to very gently naturally separate and then very gent",
+      "summary": "Segment 130.1-132.1s: First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw",
+      "observable_signs": [
+        "NATURALLY \\"
+      ],
+      "mechanisms": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "timestamps": [
+        "02:10",
+        "02:12"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 132.1-133.4s: First, allow your teeth to very gently naturally separate and then very gent",
+      "summary": "Segment 132.1-133.4s: First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw",
+      "observable_signs": [
+        "VERY GENTLY"
+      ],
+      "mechanisms": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw"
+      ],
+      "timestamps": [
+        "02:12",
+        "02:13"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 133.4-137.2s: First, allow your teeth to very gently naturally separate and then very gent",
+      "summary": "Segment 133.4-137.2s: First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw ahead of your top jaw, just a tiny bit. This is called pro-trusion of the jaw. N",
+      "observable_signs": [
+        "OF YOUR TOP JAW."
+      ],
+      "mechanisms": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw ahead of your top jaw, just a tiny bit. This is called pro-trusion of the jaw. Now you're going to take"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw ahead of your top jaw, just a tiny bit."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "First, allow your teeth to very gently naturally separate and then very gently push your bottom jaw ahead of your top jaw, just a tiny bit."
+      ],
+      "timestamps": [
+        "02:13",
+        "02:17"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 137.2-139.6s: ahead of your top jaw, just a tiny bit. This is called pro-trusion of the ja",
+      "summary": "Segment 137.2-139.6s: ahead of your top jaw, just a tiny bit. This is called pro-trusion of the jaw. Now you're going to take",
+      "observable_signs": [
+        "PROTRUSION"
+      ],
+      "mechanisms": [
+        "ahead of your top jaw, just a tiny bit. This is called pro-trusion of the jaw. Now you're going to take"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:17",
+        "02:19"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 139.6-149.0s: ahead of your top jaw, just a tiny bit. This is called pro-trusion of the ja",
+      "summary": "Segment 139.6-149.0s: ahead of your top jaw, just a tiny bit. This is called pro-trusion of the jaw. Now you're going to take two fingers and place them on the side opposite of the side where your jaw i",
+      "observable_signs": [],
+      "mechanisms": [
+        "ahead of your top jaw, just a tiny bit. This is called pro-trusion of the jaw. Now you're going to take two fingers and place them on the side opposite of the side where your jaw is deviated towards. So if my jaw deities to the left, I would place them on the front of my right chin. Now you can do this one of two ways."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:19",
+        "02:29"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 149.0-164.0s: jaw deities to the left, I would place them on the front of my right chin. N",
+      "summary": "Segment 149.0-164.0s: jaw deities to the left, I would place them on the front of my right chin. Now you can do this one of two ways. You can think about pushing your jaw into your fingers and resisting",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Your jaw is not actually going to move because your fingers are in that position, so it's going to end up being"
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:29",
+        "02:44"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 164.0-176.1s: is not actually going to move because your fingers are in that position, so ",
+      "summary": "Segment 164.0-176.1s: is not actually going to move because your fingers are in that position, so it's going to end up being an isometric contraction. It's very gentle. So it would look like jaw slightl",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "So what you should feel is muscles on the side of your left upper jaw start to work."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "is not actually going to move because your fingers are in that position, so it's going to end up being an isometric contraction."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "So what you should feel is muscles on the side of your left upper jaw start to work."
+      ],
+      "advice": [
+        "So what you should feel is muscles on the side of your left upper jaw start to work."
+      ],
+      "timestamps": [
+        "02:44",
+        "02:56"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 176.1-177.8s: of your left upper jaw start to work. Those are your lateral tear-goids.",
+      "summary": "Segment 176.1-177.8s: of your left upper jaw start to work. Those are your lateral tear-goids.",
+      "observable_signs": [],
+      "mechanisms": [
+        "of your left upper jaw start to work. Those are your lateral tear-goids."
+      ],
+      "execution_steps": [],
+      "cues": [
+        "of your left upper jaw start to work."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "of your left upper jaw start to work."
+      ],
+      "timestamps": [
+        "02:56",
+        "02:57"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 177.8-180.0s: of your left upper jaw start to work. Those are your lateral tear-goids.",
+      "summary": "Segment 177.8-180.0s: of your left upper jaw start to work. Those are your lateral tear-goids.",
+      "observable_signs": [
+        "YOUR LATERAL"
+      ],
+      "mechanisms": [
+        "of your left upper jaw start to work. Those are your lateral tear-goids."
+      ],
+      "execution_steps": [],
+      "cues": [
+        "of your left upper jaw start to work."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "of your left upper jaw start to work."
+      ],
+      "timestamps": [
+        "02:57",
+        "03:00"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 29,
+    "transcript_segment_count": 32,
+    "ocr_observation_count": 10,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 29,
+    "asset_count": 29
+  }
+}

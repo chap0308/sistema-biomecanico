@@ -1,0 +1,24 @@
+{
+  "channel_url": "https://www.youtube.com/@conorharris/shorts",
+  "order": "newest",
+  "start_rank": 21,
+  "end_rank": 30,
+  "selected_count": 10,
+  "pending_count": 10,
+  "skipped_count": 0,
+  "analyzed_video_ids": [
+    "Hu8_UCv4tLA",
+    "r7lnE8f53j4",
+    "3MPx8kfEHEs",
+    "GdG8ZqwoXMo",
+    "0cQxyJiVzzg",
+    "p5DK9LzquW8",
+    "u92YxyW0rt4",
+    "FoNjEz5rUW4",
+    "h9Bkooj_eHY",
+    "IBm0juAugwY"
+  ],
+  "skipped_video_ids": [],
+  "registry_file": "data\\knowledge\\video_knowledge_registry.json",
+  "aggregate_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\aggregate_newest_21_30.json"
+}

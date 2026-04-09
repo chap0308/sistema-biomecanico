@@ -1,0 +1,779 @@
+{
+  "source_url": "https://www.youtube.com/shorts/Dd35gNrQtl0",
+  "source_title_hint": "The New, Better Way To Foam Roll",
+  "analysis_origin": "local_level1_plus_hf_error_fallback:openai/gpt-oss-120b",
+  "analysis_provider": "local_fallback",
+  "analysis_quality": "fallback",
+  "is_active": true,
+  "supersedes_draft_id": null,
+  "primary_summary": "The New, Better Way To Foam Roll explains a movement problem and demonstrates corrective actions such as The New, Better Way To Foam Roll. Most people use a foam roller to release tight and overactive muscles and tissues, like their IT band, or their glutes. But what they don't realize is that they",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Segments contain structured transcript, OCR, and retrieval-ready evidence.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "foot",
+      "hip",
+      "neck"
+    ],
+    "problem_layers": [
+      "mobility_restriction"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "foot",
+    "hip",
+    "neck",
+    "foam",
+    "roller",
+    "muscles",
+    "their",
+    "they",
+    "don't",
+    "realize",
+    "positions",
+    "will"
+  ],
+  "searchable_tags": [
+    "foam",
+    "roller",
+    "side",
+    "down",
+    "bone",
+    "they",
+    "roll",
+    "just",
+    "don't",
+    "realize",
+    "femur",
+    "right"
+  ],
+  "problem_statements": [
+    "Most people use a foam roller to release tight and overactive muscles and tissues, like their IT band, or their glutes.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in."
+  ],
+  "habits_or_contexts": [
+    "Most people use a foam roller to release tight and overactive muscles and tissues, like their IT band, or their glutes."
+  ],
+  "key_visual_points": [
+    "OCR near 0.0s: _ MUSCLES",
+    "Representative frame at 7.8s",
+    "Representative frame at 10.7s",
+    "OCR near 12.1s: POSITIONS",
+    "Representative frame at 16.4s",
+    "Representative frame at 18.6s",
+    "OCR near 19.4s: a",
+    "OCR near 25.7s: THE'FEMUR|",
+    "OCR near 27.7s: ATTHETOP",
+    "OCR near 44.5s: AN INTERNALLY"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "The New, Better Way To Foam Roll",
+    "Most people use a foam roller to release tight and overactive muscles and tissues, like their IT band, or their glutes.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or",
+    "If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, If you",
+    "starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into",
+    "So yes, while you would be rolling through some muscles, obviously, you would also be biasing the femur towards an",
+    "Start letting on the foam roller with the straight leg being the side you want to improve internal rotation on.",
+    "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it"
+  ],
+  "advice_mentioned": [
+    "If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into internal rotation.",
+    "starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into internal rotation.",
+    "Start letting on the foam roller with the straight leg being the side you want to improve internal rotation on.",
+    "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it and then roll back so you just gently behind it.",
+    "Take your bottom side toes, point them gently up at the ceiling.",
+    "Take your bottom side toes, point them gently up at the ceiling.",
+    "Now very slowly roll down your leg until you get about two thirds of the way down your leg, not all the way down just two thirds of the way down your thigh.",
+    "You're just going down reset, find just behind that greater trochanter, toes up at the ceiling gently and then roll two thirds of the way down."
+  ],
+  "warnings_or_limitations": [
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in.",
+    "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in.",
+    "Your leg should be straight but not actively locked out.",
+    "Your leg should be straight but not actively locked out.",
+    "Now very slowly roll down your leg until you get about two thirds of the way down your leg, not all the way down just two thirds of the way down your thigh.",
+    "not all the way down just two thirds of the way down your thigh."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 0.0-6.3s: Most people use a foam roller to release tight and overactive muscles and tissue",
+      "summary": "Segment 0.0-6.3s: Most people use a foam roller to release tight and overactive muscles and tissues, like their IT band, or their glutes. But what they don't realize is that they can use a foam roll",
+      "observable_signs": [
+        "_ MUSCLES"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Most people use a foam roller to release tight and overactive muscles and tissues, like their IT band, or their glutes. But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00",
+        "00:06"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 6.3-9.3s: But what they don't realize is that they can use a foam roller to strategically ",
+      "summary": "Segment 6.3-9.3s: But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previou",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:06",
+        "00:09"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 9.3-12.1s: But what they don't realize is that they can use a foam roller to strategically",
+      "summary": "Segment 9.3-12.1s: But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previou",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:09",
+        "00:12"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 12.1-15.1s: But what they don't realize is that they can use a foam roller to strategicall",
+      "summary": "Segment 12.1-15.1s: But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previou",
+      "observable_signs": [
+        "POSITIONS"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in. This will directly impact and improve your hit mobility"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "But what they don't realize is that they can use a foam roller to strategically manipulate the position of the femur or thigh bone itself to help it access positions it was previously limited in."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:12",
+        "00:15"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 15.1-17.8s: This will directly impact and improve your hit mobility. Here's what you need ",
+      "summary": "Segment 15.1-17.8s: This will directly impact and improve your hit mobility. Here's what you need to know and how you can do it.",
+      "observable_signs": [],
+      "mechanisms": [
+        "This will directly impact and improve your hit mobility. Here's what you need to know and how you can do it."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:15",
+        "00:17"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 17.8-19.4s: Here's what you need to know and how you can do it. This skeleton represents t",
+      "summary": "Segment 17.8-19.4s: Here's what you need to know and how you can do it. This skeleton represents the half of your pelvis and your femur right here.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Here's what you need to know and how you can do it. This skeleton represents the half of your pelvis and your femur right here."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:17",
+        "00:19"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 19.4-25.7s: This skeleton represents the half of your pelvis and your femur right here. If",
+      "summary": "Segment 19.4-25.7s: This skeleton represents the half of your pelvis and your femur right here. If you were to land the side with the pressure of the foam roller going up behind the femur bone a littl",
+      "observable_signs": [
+        "a"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "This skeleton represents the half of your pelvis and your femur right here. If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:19",
+        "00:25"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 25.7-27.7s: If you were to land the side with the pressure of the foam roller going up beh",
+      "summary": "Segment 25.7-27.7s: If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit,",
+      "observable_signs": [
+        "THE'FEMUR|"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:25",
+        "00:27"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 27.7-29.5s: If you were to land the side with the pressure of the foam roller going up beh",
+      "summary": "Segment 27.7-29.5s: If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, starting at the top of your leg and slowly rolling down your leg, tha",
+      "observable_signs": [
+        "ATTHETOP"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, starting at the top of your leg and",
+        "rolling down your leg, that would push your femur and the head of it into internal rotation"
+      ],
+      "cues": [
+        "If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into internal rotation."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "If you were to land the side with the pressure of the foam roller going up behind the femur bone a little bit, starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into internal rotation."
+      ],
+      "timestamps": [
+        "00:27",
+        "00:29"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 29.5-44.5s: starting at the top of your leg and slowly rolling down your leg, that would p",
+      "summary": "Segment 29.5-44.5s: starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into internal rotation. So yes, while you would be rolling through s",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "starting at the top of your leg and",
+        "rolling down your leg, that would push your femur and the head of it into internal rotation. So yes, while you would be rolling through some muscles, obviously, you would also be biasing the femur towards an internally rotated position"
+      ],
+      "cues": [
+        "starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into internal rotation."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "starting at the top of your leg and slowly rolling down your leg, that would push your femur and the head of it into internal rotation."
+      ],
+      "timestamps": [
+        "00:29",
+        "00:44"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 44.5-59.5s: So yes, while you would be rolling through some muscles, obviously, you would ",
+      "summary": "Segment 44.5-59.5s: So yes, while you would be rolling through some muscles, obviously, you would also be biasing the femur towards an internally rotated position, thereby improving that element of mo",
+      "observable_signs": [
+        "AN INTERNALLY"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "So yes, while you would be rolling through some muscles, obviously, you would also be biasing the femur towards an internally rotated position, thereby improving that element of mobility. Here's how it's set that up",
+        "letting on the foam roller with the straight leg being the side you want to improve internal rotation on. And cross this top passive leg over like this. Find that bone on the side of your hip called your greater trochanter",
+        "roll forward until you hit it"
+      ],
+      "cues": [
+        "Start letting on the foam roller with the straight leg being the side you want to improve internal rotation on.",
+        "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Start letting on the foam roller with the straight leg being the side you want to improve internal rotation on.",
+        "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it"
+      ],
+      "timestamps": [
+        "00:44",
+        "00:59"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 59.5-59.8s: Find that bone on the side of your hip called your greater trochanter and then",
+      "summary": "Segment 59.5-59.8s: Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Find that bone on the side of your hip called your greater trochanter",
+        "roll forward until you hit it"
+      ],
+      "cues": [
+        "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it"
+      ],
+      "timestamps": [
+        "00:59",
+        "00:59"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 59.8-65.4s: Find that bone on the side of your hip called your greater trochanter and then",
+      "summary": "Segment 59.8-65.4s: Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it and then roll back so you just gently behind it. Take your botto",
+      "observable_signs": [
+        "AND THEN"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Find that bone on the side of your hip called your greater trochanter",
+        "roll forward until you hit it",
+        "roll back so you just",
+        "behind it. Take your bottom side toes, point them"
+      ],
+      "cues": [
+        "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it and then roll back so you just gently behind it.",
+        "Take your bottom side toes, point them gently up at the ceiling."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Find that bone on the side of your hip called your greater trochanter and then slowly roll forward until you hit it and then roll back so you just gently behind it.",
+        "Take your bottom side toes, point them gently up at the ceiling."
+      ],
+      "timestamps": [
+        "00:59",
+        "01:05"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 65.4-68.5s: Take your bottom side toes, point them gently up at the ceiling. Your leg shou",
+      "summary": "Segment 65.4-68.5s: Take your bottom side toes, point them gently up at the ceiling. Your leg should be straight but not actively locked out.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "Take your bottom side toes, point them gently up at the ceiling."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Your leg should be straight but not actively locked out."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Take your bottom side toes, point them gently up at the ceiling."
+      ],
+      "timestamps": [
+        "01:05",
+        "01:08"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 68.5-80.3s: Your leg should be straight but not actively locked out. Now very slowly roll ",
+      "summary": "Segment 68.5-80.3s: Your leg should be straight but not actively locked out. Now very slowly roll down your leg until you get about two thirds of the way down your leg, not all the way down just two t",
+      "observable_signs": [
+        "YOUR LEG"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Your leg should be straight but not actively locked out",
+        "roll down your leg until you get about two thirds of the way down your leg, not all the way down just two thirds of the way down your thigh"
+      ],
+      "cues": [
+        "Now very slowly roll down your leg until you get about two thirds of the way down your leg, not all the way down just two thirds of the way down your thigh."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Your leg should be straight but not actively locked out.",
+        "Now very slowly roll down your leg until you get about two thirds of the way down your leg, not all the way down just two thirds of the way down your thigh."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Now very slowly roll down your leg until you get about two thirds of the way down your leg, not all the way down just two thirds of the way down your thigh."
+      ],
+      "timestamps": [
+        "01:08",
+        "01:20"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 80.3-82.1s: not all the way down just two thirds of the way down your thigh. And then quic",
+      "summary": "Segment 80.3-82.1s: not all the way down just two thirds of the way down your thigh. And then quickly roll back to the top.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "not all the way down just two thirds of the way down your thigh",
+        "quickly roll back to the top"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "not all the way down just two thirds of the way down your thigh."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:20",
+        "01:22"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 82.1-97.1s: And then quickly roll back to the top. You're not worried about rolling up you",
+      "summary": "Segment 82.1-97.1s: And then quickly roll back to the top. You're not worried about rolling up your leg. You're just going down reset, find just behind that greater trochanter, toes up at the ceiling",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "quickly roll back to the top. You're not worried about rolling up your leg. You're just going down reset, find just behind that greater trochanter, toes up at the ceiling",
+        "roll two thirds of the way down. Might be a little tender but again the goal here is to reposition the bone, not worrying about muscle as much"
+      ],
+      "cues": [
+        "You're just going down reset, find just behind that greater trochanter, toes up at the ceiling gently and then roll two thirds of the way down."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "You're not worried about rolling up your leg.",
+        "Might be a little tender but again the goal here is to reposition the bone, not worrying about muscle as much."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "You're just going down reset, find just behind that greater trochanter, toes up at the ceiling gently and then roll two thirds of the way down."
+      ],
+      "timestamps": [
+        "01:22",
+        "01:37"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 97.1-109.2s: Might be a little tender but again the goal here is to reposition the bone, n",
+      "summary": "Segment 97.1-109.2s: Might be a little tender but again the goal here is to reposition the bone, not worrying about muscle as much. And another way you could improve internal rotation is to sit on the",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Might be a little tender but again the goal here is to reposition the bone, not worrying about muscle as much. And another way you could improve internal rotation is to sit on the foam roller. And by doing that with contact of your sit bone right here"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Might be a little tender but again the goal here is to reposition the bone, not worrying about muscle as much.",
+        "And another way you could improve internal rotation is to sit on the foam roller."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:37",
+        "01:49"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 109.2-111.0s: And by doing that with contact of your sit bone right here,",
+      "summary": "Segment 109.2-111.0s: And by doing that with contact of your sit bone right here,",
+      "observable_signs": [
+        "&,\n¥\nLs\n\n+ — SITBONE"
+      ],
+      "mechanisms": [
+        "And by doing that with contact of your sit bone right here,"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:49",
+        "01:51"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 111.0-121.6s: And by doing that with contact of your sit bone right here, that will natura",
+      "summary": "Segment 111.0-121.6s: And by doing that with contact of your sit bone right here, that will naturally push the femur into a position as you can see of internal rotation. And that will help improve that",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "And by doing that with contact of your sit bone right here, that will naturally push the femur into a position as you can see of internal rotation. And that will help improve that motion. Here's how you could do that. What you're going to do is just sit on the foam roller, cross one leg over and again the straight leg"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:51",
+        "02:01"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 121.6-136.5s: What you're going to do is just sit on the foam roller, cross one leg over a",
+      "summary": "Segment 121.6-136.5s: What you're going to do is just sit on the foam roller, cross one leg over and again the straight leg is the side you want to improve internal rotation on. Now gently roll down you",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "What you're going to do is just sit on the foam roller, cross one leg over and again the straight leg is the side you want to improve internal rotation on",
+        "roll down your butt cheek until you feel like you are just pressing up behind the sit bone and underneath it",
+        "roll just an inch or two down until you feel like"
+      ],
+      "cues": [
+        "Now gently roll down your butt cheek until you feel like you are just pressing up behind the sit bone and underneath it.",
+        "Now gently roll just an inch or two down until you feel like"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Now gently roll down your butt cheek until you feel like you are just pressing up behind the sit bone and underneath it.",
+        "Now gently roll just an inch or two down until you feel like"
+      ],
+      "advice": [
+        "Now gently roll down your butt cheek until you feel like you are just pressing up behind the sit bone and underneath it.",
+        "Now gently roll just an inch or two down until you feel like"
+      ],
+      "timestamps": [
+        "02:01",
+        "02:16"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 136.5-144.5s: Now gently roll just an inch or two down until you feel like that foam rolle",
+      "summary": "Segment 136.5-144.5s: Now gently roll just an inch or two down until you feel like that foam roller is pressing up and against your sit bone. Now you're going to position where you can push that femur b",
+      "observable_signs": [
+        "UNTILLVOU FEEL"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "roll just an inch or two down until you feel like that foam roller is pressing up and against your sit bone",
+        "you're going to position where you can push that femur back with in the hip socket"
+      ],
+      "cues": [
+        "Now gently roll just an inch or two down until you feel like that foam roller is pressing up and against your sit bone."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Now gently roll just an inch or two down until you feel like that foam roller is pressing up and against your sit bone."
+      ],
+      "advice": [
+        "Now gently roll just an inch or two down until you feel like that foam roller is pressing up and against your sit bone."
+      ],
+      "timestamps": [
+        "02:16",
+        "02:24"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 144.5-159.5s: Now you're going to position where you can push that femur back with in the ",
+      "summary": "Segment 144.5-159.5s: Now you're going to position where you can push that femur back with in the hip socket. So keeping your whole body relaxed, all you're going to do is slightly lean forward with you",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "you're going to position where you can push that femur back with in the hip socket. So keeping your whole body relaxed, all you're going to do is slightly lean forward with your trunk. You're going to feel a little stretch in your leg and hip",
+        "lean back. You're keeping the foam roller in the same position the entire time and you're going to feel some"
+      ],
+      "cues": [
+        "So keeping your whole body relaxed, all you're going to do is slightly lean forward with your trunk.",
+        "You're going to feel a little stretch in your leg and hip and then lean back.",
+        "You're keeping the foam roller in the same position the entire time and you're going to feel some"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "You're going to feel a little stretch in your leg and hip and then lean back.",
+        "You're keeping the foam roller in the same position the entire time and you're going to feel some"
+      ],
+      "advice": [
+        "So keeping your whole body relaxed, all you're going to do is slightly lean forward with your trunk.",
+        "You're going to feel a little stretch in your leg and hip and then lean back.",
+        "You're keeping the foam roller in the same position the entire time and you're going to feel some"
+      ],
+      "timestamps": [
+        "02:24",
+        "02:39"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 159.5-174.5s: You're keeping the foam roller in the same position the entire time and you'",
+      "summary": "Segment 159.5-174.5s: You're keeping the foam roller in the same position the entire time and you're going to feel some movement of bones within your hips and that is the action and feeling that we're l",
+      "observable_signs": [
+        "THE ENTIRE"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "You're keeping the foam roller in the same position the entire time and you're going to feel some movement of bones within your hips and that is the action and feeling that we're looking for. Just flex your spine forward",
+        "come back like so. This is literally all it is"
+      ],
+      "cues": [
+        "You're keeping the foam roller in the same position the entire time and you're going to feel some movement of bones within your hips and that is the action and feeling that we're looking for."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "You're keeping the foam roller in the same position the entire time and you're going to feel some movement of bones within your hips and that is the action and feeling that we're looking for."
+      ],
+      "advice": [
+        "You're keeping the foam roller in the same position the entire time and you're going to feel some movement of bones within your hips and that is the action and feeling that we're looking for."
+      ],
+      "timestamps": [
+        "02:39",
+        "02:54"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 174.5-174.9s: This is literally all it is.",
+      "summary": "Segment 174.5-174.9s: This is literally all it is.",
+      "observable_signs": [],
+      "mechanisms": [
+        "This is literally all it is."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:54",
+        "02:54"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 25,
+    "transcript_segment_count": 41,
+    "ocr_observation_count": 11,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 25,
+    "asset_count": 24
+  }
+}

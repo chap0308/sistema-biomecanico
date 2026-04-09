@@ -1,0 +1,33 @@
+{
+  "answer": "El dolor en la planta del pie y la sensación de que no apoyas bien al caminar son síntomas frecuentes en personas con fascitis plantar, pronación o supinación limitada, o con distribución desigual de la presión del pie. Un ejercicio que suele ayudar a mejorar la movilidad y la sensación de contacto del pie es el \"Three‑Role Lacrosse‑Ball Foot Roll\". Consiste en rodar una pelota de lacrosse bajo el pie siguiendo tres roles específicos para activar el talón, el dedo gordo y el dedo pequeño, lo que favorece la liberación de la fascia plantar y la mejora del arco transversal. Si lo haces de forma controlada y sin dolor, puede reducir la molestia y mejorar la forma en que apoyas el pie al caminar.\n\n**Puntos clave**\n- El ejercicio se realiza de pie, con la pelota bajo la cabeza del primer metatarsiano (cerca del dedo gordo). \n- Se realizan tres movimientos (roles) que buscan sentir contacto en el talón, el dedo gordo y el dedo pequeño. \n- Se recomienda presión ligera‑moderada (5‑6/10) y movimientos lentos. \n- Es útil para fascitis plantar, limitaciones de pronación/supinación y presión desigual del pie. \n- No se debe aplicar si hay una lesión aguda del pie que empeore con la presión.\n\n**Ejercicio recomendado**\n1. Coloca la pelota bajo la cabeza del primer metatarsiano y apoya ligeramente el peso. \n2. Rueda la pelota hacia atrás hasta que quede aproximadamente 2,5 cm delante del talón (Rol 1) y siente el contacto del talón y del dedo gordo. \n3. Sin cambiar la presión, desplaza la pelota hacia el quinto dedo (Rol 2) para liberar el arco transversal. \n4. Realiza un movimiento de “parabrisas” desde el primer metatarsiano hasta bajo el quinto dedo y vuelve al inicio (Rol 3). \n5. Repite aproximadamente 15 repeticiones por rol, 2‑3 veces por semana.\n\n**Precauciones**\n- Evita ejercer presión excesiva o rodar rápidamente. \n- Si el dolor aumenta, detén el ejercicio y consulta a un profesional. \n- No lo realices si tienes una lesión aguda del pie que se agrave con la presión.\n\nSi el dolor persiste o empeora, es importante que consultes a un fisioterapeuta o médico especializado para una evaluación más detallada.",
+  "recommended_exercises": [
+    "Three‑Role Lacrosse‑Ball Foot Roll (≈15 repeticiones por rol, 2‑3 veces por semana)"
+  ],
+  "key_points": [
+    "Ejercicio dirigido a fascitis plantar y desequilibrios de presión del pie",
+    "Tres roles que buscan sentir contacto en talón, dedo gordo y dedo pequeño",
+    "Presión ligera‑moderada y movimiento controlado",
+    "Puede mejorar la sensación de apoyo al caminar"
+  ],
+  "cautions": [
+    "No aplicar presión excesiva ni mover la pelota rápidamente",
+    "Suspender el ejercicio si el dolor aumenta",
+    "Evitar en caso de lesión aguda del pie"
+  ],
+  "citations": [
+    {
+      "source_type": "youtube",
+      "title": "Three‑Role Lacrosse‑Ball Foot Roll",
+      "source_uri": "https://www.youtube.com/shorts/mI2n6asSFos",
+      "segment_id": "seg_4eb9817533c99c2c",
+      "knowledge_unit_title": "Three‑Role Lacrosse‑Ball Foot Roll",
+      "timestamp_hint": "0:00‑0:27, 0:27‑0:52, 0:53‑1:21, 1:21‑2:00"
+    }
+  ],
+  "retrieval_quality": "medium",
+  "used_collections": [
+    "video_knowledge_units_v1",
+    "video_segments_v1"
+  ],
+  "model_used": "openai/gpt-oss-120b"
+}

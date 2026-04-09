@@ -1,0 +1,250 @@
+{
+  "channel_url": "https://www.youtube.com/@conorharris/shorts",
+  "order": "newest",
+  "limit": 13,
+  "browser_channel": "msedge",
+  "total_found": 13,
+  "new_found": 0,
+  "pending_in_supabase": 0,
+  "already_analyzed_in_supabase": 13,
+  "videos": [
+    {
+      "video_id": "XvWPTgl24ZE",
+      "url": "https://www.youtube.com/shorts/XvWPTgl24ZE",
+      "title": "Finalmente, corrige la tensión en tus trapecios superiores (sin necesidad de estirar).",
+      "views_label": "3.2 K vistas",
+      "order_index": 0
+    },
+    {
+      "video_id": "kU7CaY7YuDo",
+      "url": "https://www.youtube.com/shorts/kU7CaY7YuDo",
+      "title": "Cómo desbloquear instantáneamente la articulación sacroilíaca en un solo ejercicio.",
+      "views_label": "41 k vistas",
+      "order_index": 1
+    },
+    {
+      "video_id": "81-lg8eCmjA",
+      "url": "https://www.youtube.com/shorts/81-lg8eCmjA",
+      "title": "¿Por qué tienes un pie más débil que el otro?",
+      "views_label": "35 k vistas",
+      "order_index": 2
+    },
+    {
+      "video_id": "LWmIhvEx2A8",
+      "url": "https://www.youtube.com/shorts/LWmIhvEx2A8",
+      "title": "El ejercicio definitivo para los trapecios inferiores",
+      "views_label": "69 k vistas",
+      "order_index": 3
+    },
+    {
+      "video_id": "Dd35gNrQtl0",
+      "url": "https://www.youtube.com/shorts/Dd35gNrQtl0",
+      "title": "La nueva y mejor manera de usar el rodillo de espuma",
+      "views_label": "28 k vistas",
+      "order_index": 4
+    },
+    {
+      "video_id": "ZMFMWlMO1rI",
+      "url": "https://www.youtube.com/shorts/ZMFMWlMO1rI",
+      "title": "¿Por qué te cuesta cruzar las piernas? (Haz esto para solucionarlo)",
+      "views_label": "87 k vistas",
+      "order_index": 5
+    },
+    {
+      "video_id": "pQkwgsOYzRM",
+      "url": "https://www.youtube.com/shorts/pQkwgsOYzRM",
+      "title": "Cómo eliminar ese nudo muscular en la parte superior de la espalda (funciona mejor que los estira...",
+      "views_label": "43 k vistas",
+      "order_index": 6
+    },
+    {
+      "video_id": "d4d5Ta8UXRg",
+      "url": "https://www.youtube.com/shorts/d4d5Ta8UXRg",
+      "title": "Cómo corregir (realmente) tus pies planos",
+      "views_label": "31 k vistas",
+      "order_index": 7
+    },
+    {
+      "video_id": "ViWJ5y25BDU",
+      "url": "https://www.youtube.com/shorts/ViWJ5y25BDU",
+      "title": "No estires el psoas tenso. Haz esto en su lugar.",
+      "views_label": "115 k vistas",
+      "order_index": 8
+    },
+    {
+      "video_id": "Li3k6UdnDvE",
+      "url": "https://www.youtube.com/shorts/Li3k6UdnDvE",
+      "title": "Alivia tu dolor de ATM con este sencillo ejercicio.",
+      "views_label": "53 k vistas",
+      "order_index": 9
+    },
+    {
+      "video_id": "zrylJdSAQ0Y",
+      "url": "https://www.youtube.com/shorts/zrylJdSAQ0Y",
+      "title": "Cómo deshacer la flacidez de tus trapecios superiores",
+      "views_label": "73 k vistas",
+      "order_index": 10
+    },
+    {
+      "video_id": "xFNPwIoJbTI",
+      "url": "https://www.youtube.com/shorts/xFNPwIoJbTI",
+      "title": "Cómo corregir la postura de hombros redondeados",
+      "views_label": "70 k vistas",
+      "order_index": 11
+    },
+    {
+      "video_id": "N2mMGWltYrI",
+      "url": "https://www.youtube.com/shorts/N2mMGWltYrI",
+      "title": "Por qué los ejercicios para el manguito rotador no funcionan (hasta que hagas esto)",
+      "views_label": "134 k vistas",
+      "order_index": 12
+    }
+  ],
+  "new_videos": [],
+  "pending_videos": [],
+  "already_analyzed_videos": [
+    {
+      "video_id": "XvWPTgl24ZE",
+      "url": "https://www.youtube.com/shorts/XvWPTgl24ZE",
+      "title": "Finalmente, corrige la tensión en tus trapecios superiores (sin necesidad de estirar).",
+      "views_label": "3.2 K vistas",
+      "order_index": 0
+    },
+    {
+      "video_id": "kU7CaY7YuDo",
+      "url": "https://www.youtube.com/shorts/kU7CaY7YuDo",
+      "title": "Cómo desbloquear instantáneamente la articulación sacroilíaca en un solo ejercicio.",
+      "views_label": "41 k vistas",
+      "order_index": 1
+    },
+    {
+      "video_id": "81-lg8eCmjA",
+      "url": "https://www.youtube.com/shorts/81-lg8eCmjA",
+      "title": "¿Por qué tienes un pie más débil que el otro?",
+      "views_label": "35 k vistas",
+      "order_index": 2
+    },
+    {
+      "video_id": "LWmIhvEx2A8",
+      "url": "https://www.youtube.com/shorts/LWmIhvEx2A8",
+      "title": "El ejercicio definitivo para los trapecios inferiores",
+      "views_label": "69 k vistas",
+      "order_index": 3
+    },
+    {
+      "video_id": "Dd35gNrQtl0",
+      "url": "https://www.youtube.com/shorts/Dd35gNrQtl0",
+      "title": "La nueva y mejor manera de usar el rodillo de espuma",
+      "views_label": "28 k vistas",
+      "order_index": 4
+    },
+    {
+      "video_id": "ZMFMWlMO1rI",
+      "url": "https://www.youtube.com/shorts/ZMFMWlMO1rI",
+      "title": "¿Por qué te cuesta cruzar las piernas? (Haz esto para solucionarlo)",
+      "views_label": "87 k vistas",
+      "order_index": 5
+    },
+    {
+      "video_id": "pQkwgsOYzRM",
+      "url": "https://www.youtube.com/shorts/pQkwgsOYzRM",
+      "title": "Cómo eliminar ese nudo muscular en la parte superior de la espalda (funciona mejor que los estira...",
+      "views_label": "43 k vistas",
+      "order_index": 6
+    },
+    {
+      "video_id": "d4d5Ta8UXRg",
+      "url": "https://www.youtube.com/shorts/d4d5Ta8UXRg",
+      "title": "Cómo corregir (realmente) tus pies planos",
+      "views_label": "31 k vistas",
+      "order_index": 7
+    },
+    {
+      "video_id": "ViWJ5y25BDU",
+      "url": "https://www.youtube.com/shorts/ViWJ5y25BDU",
+      "title": "No estires el psoas tenso. Haz esto en su lugar.",
+      "views_label": "115 k vistas",
+      "order_index": 8
+    },
+    {
+      "video_id": "Li3k6UdnDvE",
+      "url": "https://www.youtube.com/shorts/Li3k6UdnDvE",
+      "title": "Alivia tu dolor de ATM con este sencillo ejercicio.",
+      "views_label": "53 k vistas",
+      "order_index": 9
+    },
+    {
+      "video_id": "zrylJdSAQ0Y",
+      "url": "https://www.youtube.com/shorts/zrylJdSAQ0Y",
+      "title": "Cómo deshacer la flacidez de tus trapecios superiores",
+      "views_label": "73 k vistas",
+      "order_index": 10
+    },
+    {
+      "video_id": "xFNPwIoJbTI",
+      "url": "https://www.youtube.com/shorts/xFNPwIoJbTI",
+      "title": "Cómo corregir la postura de hombros redondeados",
+      "views_label": "70 k vistas",
+      "order_index": 11
+    },
+    {
+      "video_id": "N2mMGWltYrI",
+      "url": "https://www.youtube.com/shorts/N2mMGWltYrI",
+      "title": "Por qué los ejercicios para el manguito rotador no funcionan (hasta que hagas esto)",
+      "views_label": "134 k vistas",
+      "order_index": 12
+    }
+  ],
+  "state_file": "data\\knowledge\\youtube_channels\\conorharris_state.json",
+  "analysis_backend": "local",
+  "analysis_output_dir": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local",
+  "analysis_results": [
+    {
+      "video_id": "zrylJdSAQ0Y",
+      "url": "https://www.youtube.com/shorts/zrylJdSAQ0Y",
+      "title": "Cómo deshacer la flacidez de tus trapecios superiores",
+      "rank": 11,
+      "level1_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\011_zrylJdSAQ0Y_level1.json",
+      "draft_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\011_zrylJdSAQ0Y_knowledge_draft.json",
+      "sync_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\011_zrylJdSAQ0Y_sync.json"
+    },
+    {
+      "video_id": "xFNPwIoJbTI",
+      "url": "https://www.youtube.com/shorts/xFNPwIoJbTI",
+      "title": "Cómo corregir la postura de hombros redondeados",
+      "rank": 12,
+      "level1_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\012_xFNPwIoJbTI_level1.json",
+      "draft_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\012_xFNPwIoJbTI_knowledge_draft.json",
+      "sync_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\012_xFNPwIoJbTI_sync.json"
+    },
+    {
+      "video_id": "N2mMGWltYrI",
+      "url": "https://www.youtube.com/shorts/N2mMGWltYrI",
+      "title": "Por qué los ejercicios para el manguito rotador no funcionan (hasta que hagas esto)",
+      "rank": 13,
+      "level1_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\013_N2mMGWltYrI_level1.json",
+      "draft_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\013_N2mMGWltYrI_knowledge_draft.json",
+      "sync_file": "D:\\sistema-biomecanico\\data\\knowledge\\video_knowledge_drafts\\conorharris_first12_local\\013_N2mMGWltYrI_sync.json"
+    }
+  ],
+  "supabase_registry": {
+    "channel_id": "ychan_69ccb41d213ed214",
+    "run_id": "yscrape_3290e7a463dac7e5",
+    "analyzed_video_ids": [
+      "81-lg8eCmjA",
+      "Dd35gNrQtl0",
+      "LWmIhvEx2A8",
+      "Li3k6UdnDvE",
+      "N2mMGWltYrI",
+      "ViWJ5y25BDU",
+      "XvWPTgl24ZE",
+      "ZMFMWlMO1rI",
+      "d4d5Ta8UXRg",
+      "kU7CaY7YuDo",
+      "pQkwgsOYzRM",
+      "xFNPwIoJbTI",
+      "zrylJdSAQ0Y"
+    ],
+    "pending_videos": []
+  }
+}

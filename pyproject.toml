@@ -1,0 +1,11 @@
+[project]
+name = "sistema-biomecanico-backend"
+version = "0.1.0"
+description = "Backend scaffold for biomechanical video analysis"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
+

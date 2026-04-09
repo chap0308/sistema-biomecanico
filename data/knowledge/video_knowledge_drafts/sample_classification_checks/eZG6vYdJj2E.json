@@ -1,0 +1,143 @@
+{
+  "source_url": "https://www.youtube.com/shorts/eZG6vYdJj2E",
+  "source_title_hint": "POV: YOU DO THESE CALF RAISES THAT STRENGTHEN YOUR POSTERIOR TIBIALIS & YOUR PLANTAR FASCIITIS STARTS TO GO AWAY",
+  "primary_summary": "The video demonstrates two variations of calf raises, claiming they strengthen the posterior tibialis and alleviate plantar fasciitis. The first variation involves lifting the forefoot with the heel supported by a ball, and the second is a standard calf raise with the forefoot elevated on blocks.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video presents specific exercise variations claimed to address plantar fasciitis by strengthening the posterior tibialis, which is relevant for corrective exercise selection and biomechanical concept retrieval.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "foot",
+      "ankle",
+      "lower leg"
+    ],
+    "problem_layers": [
+      "musculoskeletal",
+      "muscle weakness",
+      "tendinopathy"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "Plantar fasciitis",
+    "Posterior tibialis strengthening",
+    "Calf raises",
+    "Foot pain",
+    "Arch support",
+    "Ankle stability"
+  ],
+  "searchable_tags": [
+    "posterior tibialis",
+    "plantar fasciitis relief",
+    "calf exercise",
+    "foot exercise",
+    "arch strengthening",
+    "ankle exercise"
+  ],
+  "problem_statements": [
+    "Plantar fasciitis"
+  ],
+  "habits_or_contexts": [],
+  "key_visual_points": [
+    "A person performing calf raises with bare feet.",
+    "First exercise: a small white ball is placed under the heel, and the forefoot is lifted off the ground.",
+    "Second exercise: the forefoot is placed on two red blocks, with heels on the ground, and the heels are lifted."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Calf raises",
+    "Forefoot lift"
+  ],
+  "advice_mentioned": [
+    "Perform these calf raises to strengthen your posterior tibialis and alleviate plantar fasciitis."
+  ],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Forefoot Lift with Heel Support (claimed for Posterior Tibialis & Plantar Fasciitis)",
+      "summary": "An exercise variation where the heel is supported by a small ball, and the forefoot is lifted, claimed to strengthen the posterior tibialis and alleviate plantar fasciitis.",
+      "observable_signs": [
+        "Person stands with a small white ball placed under the heel of one foot."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Place a small, firm ball (e.g., lacrosse ball) under the heel of one foot.",
+        "Keep the heel on the ball and lift the forefoot and toes off the ground.",
+        "Slowly lower the forefoot back down."
+      ],
+      "cues": [
+        "Focus on lifting the forefoot and engaging the muscles on the front of the shin."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Claimed for plantar fasciitis relief.",
+        "Claimed for posterior tibialis strengthening (though primarily targets tibialis anterior and foot intrinsics)."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:00-0:05"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Elevated Calf Raise (claimed for Posterior Tibialis & Plantar Fasciitis)",
+      "summary": "A calf raise variation performed with the forefoot elevated on blocks, claimed to strengthen the posterior tibialis and alleviate plantar fasciitis.",
+      "observable_signs": [
+        "Person stands with the forefoot of both feet on two red blocks, heels on the ground."
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Place the forefoot of both feet on an elevated surface (e.g., blocks, step) with heels hanging off.",
+        "Push through the balls of the feet to lift the heels as high as possible.",
+        "Slowly lower the heels below the level of the elevated surface to achieve a stretch in the calves."
+      ],
+      "cues": [
+        "Focus on lifting the heels high.",
+        "Control the lowering phase."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Claimed for plantar fasciitis relief.",
+        "Claimed for posterior tibialis strengthening (engages posterior tibialis for stability and arch support, alongside gastrocnemius and soleus)."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:05-0:09"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Role of Posterior Tibialis Strengthening in Plantar Fasciitis",
+      "summary": "The video suggests that strengthening the posterior tibialis muscle through specific calf raise variations can contribute to the alleviation of plantar fasciitis symptoms.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Implied mechanism: A stronger posterior tibialis muscle provides better support for the medial longitudinal arch of the foot, thereby reducing strain on the plantar fascia."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For understanding potential biomechanical links between muscle strength and foot conditions.",
+        "For individuals exploring exercise-based interventions for plantar fasciitis."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": []
+    }
+  ],
+  "model_notes": "The video presents two distinct calf raise variations. The first variation (ball under heel, lifting forefoot) primarily targets the tibialis anterior and intrinsic foot muscles for arch lift, rather than the posterior tibialis as a prime mover. The second variation (forefoot elevated, lifting heels) is a standard calf raise, which engages the posterior tibialis for ankle stability and arch support, but its primary movers are the gastrocnemius and soleus. The claim that 'these calf raises' strengthen the posterior tibialis is partially accurate for the second exercise, but less so for the first. The overall message links posterior tibialis strength to plantar fasciitis relief, which is a recognized biomechanical concept."
+}

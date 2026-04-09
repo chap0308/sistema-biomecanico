@@ -1,0 +1,1784 @@
+{
+  "source": {
+    "source_id": "src_6422b7b3b1c81639",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/mI2n6asSFos",
+    "canonical_uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+    "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [
+      "foot",
+      "ankle"
+    ],
+    "duration_sec": 178.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-04T15:30:12.192433Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_4a8a3157d94d738b",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 178.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_9a6f772ae3c9d4b2",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 178.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_70de677263e1da9f",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 178.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_23774400b0e49812",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_001_0001366ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 1.3666666666666667,
+      "end_sec": 1.3666666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_365f58319b047f04",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_002_0004150ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 4.15,
+      "end_sec": 4.15,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_92e19ec4e86299dd",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_003_0006716ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 6.716666666666667,
+      "end_sec": 6.716666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_4f0bc48623b7b8dc",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_004_0009633ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 9.633333333333333,
+      "end_sec": 9.633333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b86ac38f9b0937cf",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_005_0019416ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 19.416666666666668,
+      "end_sec": 19.416666666666668,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b67f84c4639f2b1d",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_006_0029866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 29.866666666666667,
+      "end_sec": 29.866666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_11459187a15794c0",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_007_0040533ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 40.53333333333333,
+      "end_sec": 40.53333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_04d564d2212d59f4",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_008_0052883ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 52.88333333333333,
+      "end_sec": 52.88333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_0e110f9a92167f10",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_009_0060333ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 60.33333333333333,
+      "end_sec": 60.33333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_33aaf948d7caf86b",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_010_0066616ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 66.61666666666666,
+      "end_sec": 66.61666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a95e4252ff424ce1",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_011_0070350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 70.35,
+      "end_sec": 70.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7efdc092943024b3",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_012_0072600ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 72.6,
+      "end_sec": 72.6,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_73e8e6bc9fc49fd3",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_013_0074883ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 74.88333333333333,
+      "end_sec": 74.88333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_4ead4cfd904b11ff",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_014_0076766ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 76.76666666666667,
+      "end_sec": 76.76666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_86cd7c0d0f1101d0",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_015_0078750ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 78.75,
+      "end_sec": 78.75,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b7a857288531dda6",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_016_0080566ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 80.56666666666666,
+      "end_sec": 80.56666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_67d24f5c3556346e",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_017_0083683ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 83.68333333333334,
+      "end_sec": 83.68333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6edd310d4afc82c1",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_018_0089100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 89.1,
+      "end_sec": 89.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_9ee64750603141be",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_019_0105183ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 105.18333333333334,
+      "end_sec": 105.18333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1e62bb06097245b1",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_020_0121350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 121.35,
+      "end_sec": 121.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c32147a781422d2e",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_021_0135916ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 135.91666666666666,
+      "end_sec": 135.91666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a8bb037d07476a86",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_022_0160100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 160.1,
+      "end_sec": 160.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_40d770e81d1d7af4",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_023_0175683ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 175.68333333333334,
+      "end_sec": 175.68333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_80eb15670c2e42cf",
+      "source_id": "src_6422b7b3b1c81639",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 178.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_76d05fea203878d9",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 2.7333333333333334,
+      "duration_sec": 2.7333333333333334,
+      "transcript": "Most people plant our fasciitis or problems with their feet try to fix the issue by taking",
+      "ocr_text": "PLANTAR FASCIITIS",
+      "visual_description": "Representative frame contains OCR text: PLANTAR FASCIITIS",
+      "segment_summary": "Segment 0.0-2.7s: Most people plant our fasciitis or problems with their feet try to fix the issue by taking",
+      "topics": [
+        "foot",
+        "ankle",
+        "fasciitis",
+        "most",
+        "people",
+        "plant"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "fasciitis",
+        "most",
+        "people",
+        "plant",
+        "problems",
+        "their"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9966968533117324,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 1.3666666666666667,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_001_0001366ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people plant our fasciitis or problems with their feet try to fix the issue by taking | PLANTAR FASCIITIS | Representative frame contains OCR text: PLANTAR FASCIITIS | Segment 0.0-2.7s: Most people plant our fasciitis or problems with their feet try to fix the issue by taking | foot ankle fasciitis most people plant | foot ankle fasciitis most people plant problems their",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_ecbfcd948f78f1e3",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 2,
+      "start_sec": 2.7333333333333334,
+      "end_sec": 5.566666666666666,
+      "duration_sec": 2.833333333333333,
+      "transcript": "Most people plant our fasciitis or problems with their feet try to fix the issue by taking a ball to the bottom of their foot and rolling out their plant our fascia.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 4.2s.",
+      "segment_summary": "Segment 2.7-5.6s: Most people plant our fasciitis or problems with their feet try to fix the issue by taking a ball to the bottom of their foot and rolling out their plant our fascia.",
+      "topics": [
+        "foot",
+        "ankle",
+        "their",
+        "plant",
+        "most",
+        "people"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "their",
+        "plant",
+        "most",
+        "people",
+        "fasciitis",
+        "problems"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9966968533117324,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 4.15,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_002_0004150ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people plant our fasciitis or problems with their feet try to fix the issue by taking a ball to the bottom of their foot and rolling out their plant our fascia. | Representative frame sampled at 4.2s. | Segment 2.7-5.6s: Most people plant our fasciitis or problems with their feet try to fix the issue by taking a ball to the bottom of their foot and rolling out their plant our fascia. | foot ankle their plant most people | foot ankle their plant most people fasciitis problems",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_2111666962263ff9",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 3,
+      "start_sec": 5.566666666666666,
+      "end_sec": 7.866666666666666,
+      "duration_sec": 2.3,
+      "transcript": "a ball to the bottom of their foot and rolling out their plant our fascia. They usually just mindlessly rolling in random ways and random directions trying to find a",
+      "ocr_text": "THEIR PLANTAR\n\nD4",
+      "visual_description": "Representative frame contains OCR text: THEIR PLANTAR\n\nD4",
+      "segment_summary": "Segment 5.6-7.9s: a ball to the bottom of their foot and rolling out their plant our fascia. They usually just mindlessly rolling in random ways and random directions trying to find a",
+      "topics": [
+        "foot",
+        "ankle",
+        "their",
+        "rolling",
+        "random",
+        "ball"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "their",
+        "rolling",
+        "random",
+        "ball",
+        "bottom"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9966968533117324,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 6.716666666666667,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_003_0006716ms.jpg"
+        }
+      ],
+      "retrieval_text": "a ball to the bottom of their foot and rolling out their plant our fascia. They usually just mindlessly rolling in random ways and random directions trying to find a | THEIR PLANTAR\n\nD4 | Representative frame contains OCR text: THEIR PLANTAR\n\nD4 | Segment 5.6-7.9s: a ball to the bottom of their foot and rolling out their plant our fascia. They usually just mindlessly rolling in random ways and random directions trying to find a | foot ankle their rolling random ball | foot ankle their rolling random ball bottom",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9c14b5d8bdbf4a76",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 4,
+      "start_sec": 7.866666666666666,
+      "end_sec": 11.4,
+      "duration_sec": 3.533333333333334,
+      "transcript": "They usually just mindlessly rolling in random ways and random directions trying to find a",
+      "ocr_text": "——-RANDOMWAYSAND.",
+      "visual_description": "Representative frame contains OCR text: ——-RANDOMWAYSAND.",
+      "segment_summary": "Segment 7.9-11.4s: They usually just mindlessly rolling in random ways and random directions trying to find a",
+      "topics": [
+        "foot",
+        "ankle",
+        "random",
+        "they",
+        "usually",
+        "just"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "random",
+        "they",
+        "usually",
+        "just",
+        "mindlessly",
+        "rolling"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9966968533117324,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 9.633333333333333,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_004_0009633ms.jpg"
+        }
+      ],
+      "retrieval_text": "They usually just mindlessly rolling in random ways and random directions trying to find a | ——-RANDOMWAYSAND. | Representative frame contains OCR text: ——-RANDOMWAYSAND. | Segment 7.9-11.4s: They usually just mindlessly rolling in random ways and random directions trying to find a | foot ankle random they usually just | foot ankle random they usually just mindlessly rolling",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9186a4835dfca699",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 5,
+      "start_sec": 11.4,
+      "end_sec": 26.4,
+      "duration_sec": 14.999999999999998,
+      "transcript": "They usually just mindlessly rolling in random ways and random directions trying to find a tender point and then releasing it. And while that can be helpful, there's oftentimes a better more strategic approach we can take to this rolling process to get better results. Now, typically people have foot problems like plant our fasciitis, what's going on is that their foot lacks the ability to properly move through one of two shapes.",
+      "ocr_text": "GET BETTER RESULTS.\n\nC4",
+      "visual_description": "Representative frame contains OCR text: GET BETTER RESULTS.\n\nC4",
+      "segment_summary": "Segment 11.4-26.4s: They usually just mindlessly rolling in random ways and random directions trying to find a tender point and then releasing it. And while that can be helpful, there's oftentimes a b",
+      "topics": [
+        "foot",
+        "ankle",
+        "better",
+        "rolling",
+        "random",
+        "results"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "better",
+        "rolling",
+        "random",
+        "results",
+        "they"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9966968533117324,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 19.416666666666668,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_005_0019416ms.jpg"
+        }
+      ],
+      "retrieval_text": "They usually just mindlessly rolling in random ways and random directions trying to find a tender point and then releasing it. And while that can be helpful, there's oftentimes a better more strategic approach we can take to this rolling process to get better results. Now, typically people have foot problems like plant our fasciitis, what's going on is that their foot lacks the ability to properly move through one of two shapes. | GET BETTER RESULTS.\n\nC4 | Representative frame contains OCR text: GET BETTER RESULTS.\n\nC4 | Segment 11.4-26.4s: They usually just mindlessly rolling in random ways and random directions trying to find a tender point and then releasing it. And while that can be helpful, there's oftentimes a b | foot ankle better rolling random results | foot ankle better rolling random results they",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_fa413f6ddf9e9950",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 6,
+      "start_sec": 26.4,
+      "end_sec": 27.433333333333334,
+      "duration_sec": 1.033333333333335,
+      "transcript": "what's going on is that their foot lacks the ability to properly move through one of two shapes. That is either pronation or flattening out of the foot arch or supination or raising of the foot arch.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 26.4-27.4s: what's going on is that their foot lacks the ability to properly move through one of two shapes. That is either pronation or flattening out of the foot arch or supination or raisin",
+      "topics": [
+        "foot",
+        "ankle",
+        "arch",
+        "what's",
+        "going"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "arch",
+        "what's",
+        "going",
+        "their",
+        "lacks"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9978371374309063,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "what's going on is that their foot lacks the ability to properly move through one of two shapes. That is either pronation or flattening out of the foot arch or supination or raising of the foot arch. | Segment 26.4-27.4s: what's going on is that their foot lacks the ability to properly move through one of two shapes. That is either pronation or flattening out of the foot arch or supination or raisin | foot ankle arch what's going | foot ankle arch what's going their lacks",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e8ec78000e232500",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 7,
+      "start_sec": 27.433333333333334,
+      "end_sec": 32.3,
+      "duration_sec": 4.866666666666664,
+      "transcript": "That is either pronation or flattening out of the foot arch or supination or raising of the foot arch. Now, regardless of whether you struggle with pronation or supination, you mean to maintain",
+      "ocr_text": "THE FOOT ARCH,",
+      "visual_description": "Representative frame contains OCR text: THE FOOT ARCH,",
+      "segment_summary": "Segment 27.4-32.3s: That is either pronation or flattening out of the foot arch or supination or raising of the foot arch. Now, regardless of whether you struggle with pronation or supination, you mea",
+      "topics": [
+        "foot",
+        "ankle",
+        "arch",
+        "pronation",
+        "supination"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "arch",
+        "pronation",
+        "supination",
+        "either",
+        "flattening"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9989774215500802,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 29.866666666666667,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_006_0029866ms.jpg"
+        }
+      ],
+      "retrieval_text": "That is either pronation or flattening out of the foot arch or supination or raising of the foot arch. Now, regardless of whether you struggle with pronation or supination, you mean to maintain | THE FOOT ARCH, | Representative frame contains OCR text: THE FOOT ARCH, | Segment 27.4-32.3s: That is either pronation or flattening out of the foot arch or supination or raising of the foot arch. Now, regardless of whether you struggle with pronation or supination, you mea | foot ankle arch pronation supination | foot ankle arch pronation supination either flattening",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_eb758c2da62b2ec3",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 8,
+      "start_sec": 32.3,
+      "end_sec": 47.3,
+      "duration_sec": 15.0,
+      "transcript": "Now, regardless of whether you struggle with pronation or supination, you mean to maintain three points of contact. That is your heel, the base of the big toe and the base of the little toe. And one of the main problems I see with people that have foot issues is they have a hard time maintaining these contacts with even pressure. Just standing without forcing it, you should be able to",
+      "ocr_text": "AND THE BASE\n\nTL",
+      "visual_description": "Representative frame contains OCR text: AND THE BASE\n\nTL",
+      "segment_summary": "Segment 32.3-47.3s: Now, regardless of whether you struggle with pronation or supination, you mean to maintain three points of contact. That is your heel, the base of the big toe and the base of the l",
+      "topics": [
+        "foot",
+        "ankle",
+        "base",
+        "regardless",
+        "whether",
+        "struggle"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "base",
+        "regardless",
+        "whether",
+        "struggle",
+        "pronation",
+        "supination"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9989774215500802,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 40.53333333333333,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_007_0040533ms.jpg"
+        }
+      ],
+      "retrieval_text": "Now, regardless of whether you struggle with pronation or supination, you mean to maintain three points of contact. That is your heel, the base of the big toe and the base of the little toe. And one of the main problems I see with people that have foot issues is they have a hard time maintaining these contacts with even pressure. Just standing without forcing it, you should be able to | AND THE BASE\n\nTL | Representative frame contains OCR text: AND THE BASE\n\nTL | Segment 32.3-47.3s: Now, regardless of whether you struggle with pronation or supination, you mean to maintain three points of contact. That is your heel, the base of the big toe and the base of the l | foot ankle base regardless whether struggle | foot ankle base regardless whether struggle pronation supination",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_42b174a3261e14b4",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 9,
+      "start_sec": 47.3,
+      "end_sec": 48.766666666666666,
+      "duration_sec": 1.4666666666666686,
+      "transcript": "maintaining these contacts with even pressure. Just standing without forcing it, you should be able to",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 47.3-48.8s: maintaining these contacts with even pressure. Just standing without forcing it, you should be able to",
+      "topics": [
+        "foot",
+        "ankle",
+        "maintaining",
+        "contacts",
+        "even",
+        "pressure"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "maintaining",
+        "contacts",
+        "even",
+        "pressure",
+        "just",
+        "standing"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9989774215500802,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "maintaining these contacts with even pressure. Just standing without forcing it, you should be able to | Segment 47.3-48.8s: maintaining these contacts with even pressure. Just standing without forcing it, you should be able to | foot ankle maintaining contacts even pressure | foot ankle maintaining contacts even pressure just standing",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_59efab23744d479b",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 10,
+      "start_sec": 48.766666666666666,
+      "end_sec": 57.0,
+      "duration_sec": 8.233333333333334,
+      "transcript": "maintaining these contacts with even pressure. Just standing without forcing it, you should be able to feel the inside and outside of your heel bone flat on the ground and also the base of the big toe and little toe with even pressure. If you can't, chances are relatively higher that you have an issue",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 52.9s.",
+      "segment_summary": "Segment 48.8-57.0s: maintaining these contacts with even pressure. Just standing without forcing it, you should be able to feel the inside and outside of your heel bone flat on the ground and also the",
+      "topics": [
+        "foot",
+        "ankle",
+        "even",
+        "pressure",
+        "maintaining",
+        "contacts"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "even",
+        "pressure",
+        "maintaining",
+        "contacts",
+        "just",
+        "standing"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.999037004483398,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 52.88333333333333,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_008_0052883ms.jpg"
+        }
+      ],
+      "retrieval_text": "maintaining these contacts with even pressure. Just standing without forcing it, you should be able to feel the inside and outside of your heel bone flat on the ground and also the base of the big toe and little toe with even pressure. If you can't, chances are relatively higher that you have an issue | Representative frame sampled at 52.9s. | Segment 48.8-57.0s: maintaining these contacts with even pressure. Just standing without forcing it, you should be able to feel the inside and outside of your heel bone flat on the ground and also the | foot ankle even pressure maintaining contacts | foot ankle even pressure maintaining contacts just standing",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e91b6ec75f8eacf4",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 11,
+      "start_sec": 57.0,
+      "end_sec": 63.666666666666664,
+      "duration_sec": 6.666666666666664,
+      "transcript": "toe with even pressure. If you can't, chances are relatively higher that you have an issue expressing genuine pronation or supination. This series of roles has given my clients a lot of success",
+      "ocr_text": "iy\n\nTHAT YOU HAVE\n\nVa",
+      "visual_description": "Representative frame contains OCR text: iy\n\nTHAT YOU HAVE\n\nVa",
+      "segment_summary": "Segment 57.0-63.7s: toe with even pressure. If you can't, chances are relatively higher that you have an issue expressing genuine pronation or supination. This series of roles has given my clients a l",
+      "topics": [
+        "foot",
+        "ankle",
+        "even",
+        "pressure",
+        "can't",
+        "chances"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "even",
+        "pressure",
+        "can't",
+        "chances",
+        "relatively",
+        "higher"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 60.33333333333333,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_009_0060333ms.jpg"
+        }
+      ],
+      "retrieval_text": "toe with even pressure. If you can't, chances are relatively higher that you have an issue expressing genuine pronation or supination. This series of roles has given my clients a lot of success | iy\n\nTHAT YOU HAVE\n\nVa | Representative frame contains OCR text: iy\n\nTHAT YOU HAVE\n\nVa | Segment 57.0-63.7s: toe with even pressure. If you can't, chances are relatively higher that you have an issue expressing genuine pronation or supination. This series of roles has given my clients a l | foot ankle even pressure can't chances | foot ankle even pressure can't chances relatively higher",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_19450bf248d86b22",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 12,
+      "start_sec": 63.666666666666664,
+      "end_sec": 69.56666666666666,
+      "duration_sec": 5.899999999999999,
+      "transcript": "expressing genuine pronation or supination. This series of roles has given my clients a lot of success in terms of being able to find these contacts more effectively pretty much instantaneously.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 66.6s.",
+      "segment_summary": "Segment 63.7-69.6s: expressing genuine pronation or supination. This series of roles has given my clients a lot of success in terms of being able to find these contacts more effectively pretty much in",
+      "topics": [
+        "foot",
+        "ankle",
+        "expressing",
+        "genuine",
+        "pronation",
+        "supination"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "expressing",
+        "genuine",
+        "pronation",
+        "supination",
+        "series",
+        "roles"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 66.61666666666666,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_010_0066616ms.jpg"
+        }
+      ],
+      "retrieval_text": "expressing genuine pronation or supination. This series of roles has given my clients a lot of success in terms of being able to find these contacts more effectively pretty much instantaneously. | Representative frame sampled at 66.6s. | Segment 63.7-69.6s: expressing genuine pronation or supination. This series of roles has given my clients a lot of success in terms of being able to find these contacts more effectively pretty much in | foot ankle expressing genuine pronation supination | foot ankle expressing genuine pronation supination series roles",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_24be7442915eca03",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 13,
+      "start_sec": 69.56666666666666,
+      "end_sec": 71.13333333333334,
+      "duration_sec": 1.566666666666677,
+      "transcript": "in terms of being able to find these contacts more effectively pretty much instantaneously. The first role is going to be good for finding the inside of the heel and also the big toe.",
+      "ocr_text": "INSTANTANEOUSLY.\n\n\"T4",
+      "visual_description": "Representative frame contains OCR text: INSTANTANEOUSLY.\n\n\"T4",
+      "segment_summary": "Segment 69.6-71.1s: in terms of being able to find these contacts more effectively pretty much instantaneously. The first role is going to be good for finding the inside of the heel and also the big t",
+      "topics": [
+        "foot",
+        "ankle",
+        "instantaneously",
+        "terms",
+        "being",
+        "able"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "instantaneously",
+        "terms",
+        "being",
+        "able",
+        "find",
+        "contacts"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 70.35,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_011_0070350ms.jpg"
+        }
+      ],
+      "retrieval_text": "in terms of being able to find these contacts more effectively pretty much instantaneously. The first role is going to be good for finding the inside of the heel and also the big toe. | INSTANTANEOUSLY.\n\n\"T4 | Representative frame contains OCR text: INSTANTANEOUSLY.\n\n\"T4 | Segment 69.6-71.1s: in terms of being able to find these contacts more effectively pretty much instantaneously. The first role is going to be good for finding the inside of the heel and also the big t | foot ankle instantaneously terms being able | foot ankle instantaneously terms being able find contacts",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7ee274a58f88ded2",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 14,
+      "start_sec": 71.13333333333334,
+      "end_sec": 74.06666666666666,
+      "duration_sec": 2.933333333333323,
+      "transcript": "The first role is going to be good for finding the inside of the heel and also the big toe.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 72.6s.",
+      "segment_summary": "Segment 71.1-74.1s: The first role is going to be good for finding the inside of the heel and also the big toe.",
+      "topics": [
+        "foot",
+        "ankle",
+        "first",
+        "role",
+        "going",
+        "good"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "first",
+        "role",
+        "going",
+        "good",
+        "finding",
+        "inside"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 72.6,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_012_0072600ms.jpg"
+        }
+      ],
+      "retrieval_text": "The first role is going to be good for finding the inside of the heel and also the big toe. | Representative frame sampled at 72.6s. | Segment 71.1-74.1s: The first role is going to be good for finding the inside of the heel and also the big toe. | foot ankle first role going good | foot ankle first role going good finding inside",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_aa32e84ea7062b7e",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 15,
+      "start_sec": 74.06666666666666,
+      "end_sec": 75.7,
+      "duration_sec": 1.63333333333334,
+      "transcript": "The first role is going to be good for finding the inside of the heel and also the big toe. The second role releases the transverse arch, which is good for finding these contacts.",
+      "ocr_text": "THE BIG TOE.\n\nTh",
+      "visual_description": "Representative frame contains OCR text: THE BIG TOE.\n\nTh",
+      "segment_summary": "Segment 74.1-75.7s: The first role is going to be good for finding the inside of the heel and also the big toe. The second role releases the transverse arch, which is good for finding these contacts.",
+      "topics": [
+        "foot",
+        "ankle",
+        "role",
+        "good",
+        "finding",
+        "first"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "role",
+        "good",
+        "finding",
+        "first",
+        "going",
+        "inside"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 74.88333333333333,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_013_0074883ms.jpg"
+        }
+      ],
+      "retrieval_text": "The first role is going to be good for finding the inside of the heel and also the big toe. The second role releases the transverse arch, which is good for finding these contacts. | THE BIG TOE.\n\nTh | Representative frame contains OCR text: THE BIG TOE.\n\nTh | Segment 74.1-75.7s: The first role is going to be good for finding the inside of the heel and also the big toe. The second role releases the transverse arch, which is good for finding these contacts. | foot ankle role good finding first | foot ankle role good finding first going inside",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_2683c8759fd0574f",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 16,
+      "start_sec": 75.7,
+      "end_sec": 77.83333333333333,
+      "duration_sec": 2.1333333333333258,
+      "transcript": "The second role releases the transverse arch, which is good for finding these contacts.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 76.8s.",
+      "segment_summary": "Segment 75.7-77.8s: The second role releases the transverse arch, which is good for finding these contacts.",
+      "topics": [
+        "foot",
+        "ankle",
+        "second",
+        "role",
+        "releases",
+        "transverse"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "second",
+        "role",
+        "releases",
+        "transverse",
+        "arch",
+        "which"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 76.76666666666667,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_014_0076766ms.jpg"
+        }
+      ],
+      "retrieval_text": "The second role releases the transverse arch, which is good for finding these contacts. | Representative frame sampled at 76.8s. | Segment 75.7-77.8s: The second role releases the transverse arch, which is good for finding these contacts. | foot ankle second role releases transverse | foot ankle second role releases transverse arch which",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3e91f7d3fc19d596",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 17,
+      "start_sec": 77.83333333333333,
+      "end_sec": 79.66666666666667,
+      "duration_sec": 1.8333333333333428,
+      "transcript": "The second role releases the transverse arch, which is good for finding these contacts. And the last role is really good for finding the outside foot contacts without losing the inside foot",
+      "ocr_text": "THESE CONTACTS.\n\nTL",
+      "visual_description": "Representative frame contains OCR text: THESE CONTACTS.\n\nTL",
+      "segment_summary": "Segment 77.8-79.7s: The second role releases the transverse arch, which is good for finding these contacts. And the last role is really good for finding the outside foot contacts without losing the in",
+      "topics": [
+        "foot",
+        "ankle",
+        "contacts",
+        "role",
+        "good",
+        "finding"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "contacts",
+        "role",
+        "good",
+        "finding",
+        "second"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 78.75,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_015_0078750ms.jpg"
+        }
+      ],
+      "retrieval_text": "The second role releases the transverse arch, which is good for finding these contacts. And the last role is really good for finding the outside foot contacts without losing the inside foot | THESE CONTACTS.\n\nTL | Representative frame contains OCR text: THESE CONTACTS.\n\nTL | Segment 77.8-79.7s: The second role releases the transverse arch, which is good for finding these contacts. And the last role is really good for finding the outside foot contacts without losing the in | foot ankle contacts role good finding | foot ankle contacts role good finding second",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_957e5056e2c8c424",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 18,
+      "start_sec": 79.66666666666667,
+      "end_sec": 81.46666666666667,
+      "duration_sec": 1.7999999999999972,
+      "transcript": "And the last role is really good for finding the outside foot contacts without losing the inside foot",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 80.6s.",
+      "segment_summary": "Segment 79.7-81.5s: And the last role is really good for finding the outside foot contacts without losing the inside foot",
+      "topics": [
+        "foot",
+        "ankle",
+        "last",
+        "role",
+        "really"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "last",
+        "role",
+        "really",
+        "good",
+        "finding"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 80.56666666666666,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_016_0080566ms.jpg"
+        }
+      ],
+      "retrieval_text": "And the last role is really good for finding the outside foot contacts without losing the inside foot | Representative frame sampled at 80.6s. | Segment 79.7-81.5s: And the last role is really good for finding the outside foot contacts without losing the inside foot | foot ankle last role really | foot ankle last role really good finding",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_682b5c465da2ffc7",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 19,
+      "start_sec": 81.46666666666667,
+      "end_sec": 85.9,
+      "duration_sec": 4.433333333333337,
+      "transcript": "And the last role is really good for finding the outside foot contacts without losing the inside foot",
+      "ocr_text": "WITHOUT LOSING\n\nTa",
+      "visual_description": "Representative frame contains OCR text: WITHOUT LOSING\n\nTa",
+      "segment_summary": "Segment 81.5-85.9s: And the last role is really good for finding the outside foot contacts without losing the inside foot",
+      "topics": [
+        "foot",
+        "ankle",
+        "without",
+        "losing",
+        "last"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "without",
+        "losing",
+        "last",
+        "role",
+        "really"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9991561703500338,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 83.68333333333334,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_017_0083683ms.jpg"
+        }
+      ],
+      "retrieval_text": "And the last role is really good for finding the outside foot contacts without losing the inside foot | WITHOUT LOSING\n\nTa | Representative frame contains OCR text: WITHOUT LOSING\n\nTa | Segment 81.5-85.9s: And the last role is really good for finding the outside foot contacts without losing the inside foot | foot ankle without losing last | foot ankle without losing last role really",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_1a9d4f93ed6025d6",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 20,
+      "start_sec": 85.9,
+      "end_sec": 92.3,
+      "duration_sec": 6.3999999999999915,
+      "transcript": "for this first one, we're going to start with the lacrosse ball underneath our first pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacrosse ball.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 89.1s.",
+      "segment_summary": "Segment 85.9-92.3s: for this first one, we're going to start with the lacrosse ball underneath our first pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacross",
+      "topics": [
+        "foot",
+        "ankle",
+        "ball",
+        "first",
+        "start",
+        "lacrosse"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "ball",
+        "first",
+        "start",
+        "lacrosse",
+        "we're",
+        "going"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977640425786376,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 89.1,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_018_0089100ms.jpg"
+        }
+      ],
+      "retrieval_text": "for this first one, we're going to start with the lacrosse ball underneath our first pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacrosse ball. | Representative frame sampled at 89.1s. | Segment 85.9-92.3s: for this first one, we're going to start with the lacrosse ball underneath our first pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacross | foot ankle ball first start lacrosse | foot ankle ball first start lacrosse we're going",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e6dd097e0c84dfe5",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 21,
+      "start_sec": 92.3,
+      "end_sec": 107.3,
+      "duration_sec": 15.0,
+      "transcript": "pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacrosse ball. Not out in front of us like that. Keeping your foot as relaxed as you can, you want to just gently go down in a straight line until you get to about an inch or a centimeter right ahead of your heel.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 105.2s.",
+      "segment_summary": "Segment 92.3-107.3s: pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacrosse ball. Not out in front of us like that. Keeping your foot as relaxed as you can, yo",
+      "topics": [
+        "foot",
+        "ankle",
+        "ball",
+        "want",
+        "pentatarsal",
+        "head"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "ball",
+        "want",
+        "pentatarsal",
+        "head",
+        "start",
+        "body"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977640425786376,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 105.18333333333334,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_019_0105183ms.jpg"
+        }
+      ],
+      "retrieval_text": "pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacrosse ball. Not out in front of us like that. Keeping your foot as relaxed as you can, you want to just gently go down in a straight line until you get to about an inch or a centimeter right ahead of your heel. | Representative frame sampled at 105.2s. | Segment 92.3-107.3s: pentatarsal head or a ball of the big toe. We want to start with our body on top of the lacrosse ball. Not out in front of us like that. Keeping your foot as relaxed as you can, yo | foot ankle ball want pentatarsal head | foot ankle ball want pentatarsal head start body",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_1235573a9b9570d8",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 22,
+      "start_sec": 107.3,
+      "end_sec": 118.06666666666666,
+      "duration_sec": 10.766666666666666,
+      "transcript": "down in a straight line until you get to about an inch or a centimeter right ahead of your heel. I think quickly roll back to the top. Don't think about rolling up only down your foot and you're going to repeat this for about 15 rolls. The cadence is slow and controlled",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 107.3-118.1s: down in a straight line until you get to about an inch or a centimeter right ahead of your heel. I think quickly roll back to the top. Don't think about rolling up only down your f",
+      "topics": [
+        "foot",
+        "ankle",
+        "down",
+        "think",
+        "straight",
+        "line"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "down",
+        "think",
+        "straight",
+        "line",
+        "until",
+        "inch"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9983914954646025,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "down in a straight line until you get to about an inch or a centimeter right ahead of your heel. I think quickly roll back to the top. Don't think about rolling up only down your foot and you're going to repeat this for about 15 rolls. The cadence is slow and controlled | Segment 107.3-118.1s: down in a straight line until you get to about an inch or a centimeter right ahead of your heel. I think quickly roll back to the top. Don't think about rolling up only down your f | foot ankle down think straight line | foot ankle down think straight line until inch",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_323035ecf0751ab3",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 23,
+      "start_sec": 118.06666666666666,
+      "end_sec": 124.63333333333334,
+      "duration_sec": 6.566666666666677,
+      "transcript": "and you're going to repeat this for about 15 rolls. The cadence is slow and controlled and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your heel",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 121.3s.",
+      "segment_summary": "Segment 118.1-124.6s: and you're going to repeat this for about 15 rolls. The cadence is slow and controlled and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your hee",
+      "topics": [
+        "foot",
+        "ankle",
+        "you're",
+        "going",
+        "repeat",
+        "rolls"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "you're",
+        "going",
+        "repeat",
+        "rolls",
+        "cadence",
+        "slow"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9996464012365323,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 121.35,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_020_0121350ms.jpg"
+        }
+      ],
+      "retrieval_text": "and you're going to repeat this for about 15 rolls. The cadence is slow and controlled and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your heel | Representative frame sampled at 121.3s. | Segment 118.1-124.6s: and you're going to repeat this for about 15 rolls. The cadence is slow and controlled and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your hee | foot ankle you're going repeat rolls | foot ankle you're going repeat rolls cadence slow",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_ba37ada0d5fd7820",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 24,
+      "start_sec": 124.63333333333334,
+      "end_sec": 139.63333333333333,
+      "duration_sec": 14.999999999999986,
+      "transcript": "and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your heel and now start in the same exact places the first one. Now you're going to do a windshield wiper motion trying to go from your first metatarsal head to underneath your fifth toe. You're not on the bones themselves. You are just underneath the ball of your foot. Then quickly roll back to the beginning.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 135.9s.",
+      "segment_summary": "Segment 124.6-139.6s: and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your heel and now start in the same exact places the first one. Now you're going to do a windsh",
+      "topics": [
+        "foot",
+        "ankle",
+        "you're",
+        "just",
+        "first",
+        "underneath"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "you're",
+        "just",
+        "first",
+        "underneath",
+        "applying",
+        "pressure"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9996464012365323,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 135.91666666666666,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_021_0135916ms.jpg"
+        }
+      ],
+      "retrieval_text": "and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your heel and now start in the same exact places the first one. Now you're going to do a windshield wiper motion trying to go from your first metatarsal head to underneath your fifth toe. You're not on the bones themselves. You are just underneath the ball of your foot. Then quickly roll back to the beginning. | Representative frame sampled at 135.9s. | Segment 124.6-139.6s: and you're just applying about a 5 to 6 out of 10 pressure. For the next one, ground your heel and now start in the same exact places the first one. Now you're going to do a windsh | foot ankle you're just first underneath | foot ankle you're just first underneath applying pressure",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_524a845744491e10",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 25,
+      "start_sec": 139.63333333333333,
+      "end_sec": 147.2,
+      "duration_sec": 7.566666666666663,
+      "transcript": "themselves. You are just underneath the ball of your foot. Then quickly roll back to the beginning. You're only rolling inside to out, not outside to end. Now with the last one is",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 139.6-147.2s: themselves. You are just underneath the ball of your foot. Then quickly roll back to the beginning. You're only rolling inside to out, not outside to end. Now with the last one is",
+      "topics": [
+        "foot",
+        "ankle",
+        "themselves",
+        "just",
+        "underneath",
+        "ball"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "themselves",
+        "just",
+        "underneath",
+        "ball",
+        "then"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9992583375278627,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "themselves. You are just underneath the ball of your foot. Then quickly roll back to the beginning. You're only rolling inside to out, not outside to end. Now with the last one is | Segment 139.6-147.2s: themselves. You are just underneath the ball of your foot. Then quickly roll back to the beginning. You're only rolling inside to out, not outside to end. Now with the last one is | foot ankle themselves just underneath ball | foot ankle themselves just underneath ball then",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_8762f3531142c1f3",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 26,
+      "start_sec": 147.2,
+      "end_sec": 162.2,
+      "duration_sec": 15.0,
+      "transcript": "You're only rolling inside to out, not outside to end. Now with the last one is pretty much the opposite of the first ones. You're going to start just an inch or centimeter above the outside of your heel and roll slowly, controlled straight line perfectly up until you get to just underneath the ball of the foot underneath the fifth toe or the pinky toe. And then quickly roll back",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 160.1s.",
+      "segment_summary": "Segment 147.2-162.2s: You're only rolling inside to out, not outside to end. Now with the last one is pretty much the opposite of the first ones. You're going to start just an inch or centimeter above t",
+      "topics": [
+        "foot",
+        "ankle",
+        "you're",
+        "outside",
+        "just",
+        "roll"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "you're",
+        "outside",
+        "just",
+        "roll",
+        "underneath",
+        "only"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9988702738191932,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 160.1,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_022_0160100ms.jpg"
+        }
+      ],
+      "retrieval_text": "You're only rolling inside to out, not outside to end. Now with the last one is pretty much the opposite of the first ones. You're going to start just an inch or centimeter above the outside of your heel and roll slowly, controlled straight line perfectly up until you get to just underneath the ball of the foot underneath the fifth toe or the pinky toe. And then quickly roll back | Representative frame sampled at 160.1s. | Segment 147.2-162.2s: You're only rolling inside to out, not outside to end. Now with the last one is pretty much the opposite of the first ones. You're going to start just an inch or centimeter above t | foot ankle you're outside just roll | foot ankle you're outside just roll underneath only",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_39882eba7a920683",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 27,
+      "start_sec": 162.2,
+      "end_sec": 173.0,
+      "duration_sec": 10.800000000000011,
+      "transcript": "underneath the ball of the foot underneath the fifth toe or the pinky toe. And then quickly roll back down. Don't think about rolling down your foot. This one you're only rolling up in a controlled motion. After doing all three of those, you should feel like your foot has better contact with the ground",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 162.2-173.0s: underneath the ball of the foot underneath the fifth toe or the pinky toe. And then quickly roll back down. Don't think about rolling down your foot. This one you're only rolling u",
+      "topics": [
+        "foot",
+        "ankle",
+        "underneath",
+        "down",
+        "rolling"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "underneath",
+        "down",
+        "rolling",
+        "ball",
+        "fifth"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9885609111127754,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "underneath the ball of the foot underneath the fifth toe or the pinky toe. And then quickly roll back down. Don't think about rolling down your foot. This one you're only rolling up in a controlled motion. After doing all three of those, you should feel like your foot has better contact with the ground | Segment 162.2-173.0s: underneath the ball of the foot underneath the fifth toe or the pinky toe. And then quickly roll back down. Don't think about rolling down your foot. This one you're only rolling u | foot ankle underneath down rolling | foot ankle underneath down rolling ball fifth",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_feda667d32c1368b",
+      "source_id": "src_6422b7b3b1c81639",
+      "segment_index": 28,
+      "start_sec": 173.0,
+      "end_sec": 178.36666666666667,
+      "duration_sec": 5.366666666666674,
+      "transcript": "After doing all three of those, you should feel like your foot has better contact with the ground and pressure is more even.",
+      "ocr_text": "=. -\n\nHAS BETTER",
+      "visual_description": "Representative frame contains OCR text: =. -\n\nHAS BETTER",
+      "segment_summary": "Segment 173.0-178.4s: After doing all three of those, you should feel like your foot has better contact with the ground and pressure is more even.",
+      "topics": [
+        "foot",
+        "ankle",
+        "better",
+        "after",
+        "doing",
+        "three"
+      ],
+      "keywords": [
+        "foot",
+        "ankle",
+        "better",
+        "after",
+        "doing",
+        "three",
+        "should",
+        "feel"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9679421856999397,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 175.68333333333334,
+          "path": "data\\processed\\rag\\src_6422b7b3b1c81639\\frames\\scene_023_0175683ms.jpg"
+        }
+      ],
+      "retrieval_text": "After doing all three of those, you should feel like your foot has better contact with the ground and pressure is more even. | =. -\n\nHAS BETTER | Representative frame contains OCR text: =. -\n\nHAS BETTER | Segment 173.0-178.4s: After doing all three of those, you should feel like your foot has better contact with the ground and pressure is more even. | foot ankle better after doing three | foot ankle better after doing three should feel",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "This Secret Release Technique Unlocks Your Feet & Ankles",
+        "uri": "https://www.youtube.com/watch?v=mI2n6asSFos",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 28,
+    "transcript_segment_count": 36,
+    "ocr_observation_count": 12,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  }
+}

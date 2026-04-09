@@ -1,0 +1,164 @@
+{
+  "source_url": "https://www.youtube.com/shorts/ViWJ5y25BDU",
+  "source_title_hint": "Don’t Stretch Your Tight Psoas. Do This Instead",
+  "analysis_origin": "hf_structured_analysis:openai/gpt-oss-120b",
+  "primary_summary": "The video explains that a tight psoas often causes anterior pelvic tilt and hyperlordosis because the body's center of gravity is shifted forward. It recommends shifting the center of gravity back and improving pelvic rotation using a simple foam‑roller‑and‑wall drill, rather than stretching the psoas directly.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Provides a clear biomechanical explanation and a concrete corrective protocol that can be applied without equipment beyond a foam roller and a wall.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "hip flexors",
+      "pelvis",
+      "lumbar spine"
+    ],
+    "problem_layers": [
+      "tight psoas",
+      "anterior pelvic tilt",
+      "hyperlordosis"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": false,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "tight psoas",
+    "anterior pelvic tilt",
+    "hyperlordosis",
+    "foam roller drill",
+    "center of gravity shift",
+    "pelvic rotation"
+  ],
+  "searchable_tags": [
+    "psoas",
+    "hip flexor",
+    "posture correction",
+    "body mechanics"
+  ],
+  "problem_statements": [
+    "A tight psoas pulls the pelvis forward, creating anterior pelvic tilt and excess lumbar lordosis.",
+    "Stretching the psoas alone does not address the underlying forward shift of the center of gravity."
+  ],
+  "habits_or_contexts": [
+    "Standing posture with forward‑shifted center of gravity"
+  ],
+  "key_visual_points": [
+    "Feet hip‑width apart, shins parallel to floor",
+    "Foam roller placed between mid‑thighs",
+    "Three points of foot contact on wall (inner heel, big toe base, little toe base)",
+    "Light pressure into wall (1‑2/10 effort)",
+    "Chin passively pointed upward"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [],
+  "advice_mentioned": [],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Tight psoas creates anterior pelvic tilt",
+      "summary": "A tight psoas (hip flexor) pulls the pelvis forward, shifting the body's center of gravity anteriorly and leading to anterior pelvic tilt and hyperlordosis.",
+      "observable_signs": [
+        "Visible anterior pelvic tilt",
+        "Excessive lumbar arch (hyperlordosis)"
+      ],
+      "mechanisms": [
+        "Hip flexor tension draws pelvis forward",
+        "Forward center of gravity reinforces tilt"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0.0-8.3"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Foam‑roller thigh drill with wall foot positioning",
+      "summary": "Shift the center of gravity back and improve pelvic rotation by using a foam roller between the thighs while maintaining three points of foot contact against a wall.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Place feet hip‑width apart, shins parallel to the floor (≈48 s)",
+        "Insert a foam roller between the mid‑thighs (≈49 s)",
+        "Keep chin passively pointing toward the ceiling (≈53 s)",
+        "On the wall, feel contact at inner heel, base of big toe, and base of little toe (≈60 s)",
+        "Apply light pressure (1‑2/10 effort) into the wall with those points (≈66 s)",
+        "Maintain the position while breathing normally"
+      ],
+      "cues": [
+        "Chin relaxed, lightly up‑ward",
+        "Focus on inner heel and big‑toe contact",
+        "Use minimal effort into wall"
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Pressing hard into wall (over‑exertion)",
+        "Tensing neck or head"
+      ],
+      "when_useful": [
+        "When psoas tightness causes anterior pelvic tilt",
+        "When posture shows forward‑shifted center of gravity"
+      ],
+      "when_not_useful": [
+        "If psoas tightness is due to acute injury requiring medical assessment"
+      ],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "23.8-67.7"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Why the drill releases the psoas",
+      "summary": "The drill moves the pelvis backward and reduces hip‑flexor tension, allowing the psoas to relax because it no longer acts as a forward‑pulling force.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Pelvis positioned under the body reduces hip‑flexor stretch",
+        "Shifting CG backward decreases forward pull of psoas"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "30.8-38.5"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 50,
+    "transcript_segment_count": 47,
+    "ocr_observation_count": 14,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 50,
+    "asset_count": 53
+  },
+  "analysis_provider": "hf_structured",
+  "analysis_quality": "standard",
+  "is_active": true,
+  "supersedes_draft_id": null
+}

@@ -1,0 +1,211 @@
+{
+  "source_url": "https://www.youtube.com/shorts/u92YxyW0rt4",
+  "source_title_hint": "Su trabajo de movilidad está incompleto sin esto",
+  "primary_summary": "The video explains that common hip mobility exercises often focus solely on hip external rotation, which involves the femoral head gliding forward in the hip socket. It argues that many people have restrictions in hip internal rotation, which requires the femoral head to glide backward. The video then demonstrates two exercises (one passive, one dynamic) to improve posterior femoral glide and internal rotation, which can enhance overall hip mobility.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides a biomechanical explanation of hip joint movement (femoral glide during rotation) and addresses a common misconception about hip mobility. It offers specific, visually demonstrated exercises to target a commonly overlooked aspect of hip mobility (internal rotation/posterior glide).",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "Hip",
+      "Pelvis",
+      "Femur"
+    ],
+    "problem_layers": [
+      "Joint mechanics",
+      "Mobility",
+      "Muscle activation"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "High"
+  },
+  "searchable_topics": [
+    "Hip mobility",
+    "Hip internal rotation",
+    "Hip external rotation",
+    "Femoral glide",
+    "Hip joint mechanics",
+    "Corrective exercise",
+    "Posterior hip capsule stretch"
+  ],
+  "searchable_tags": [
+    "Hip",
+    "Mobility",
+    "Internal rotation",
+    "External rotation",
+    "Femur",
+    "Acetabulum",
+    "Joint glide",
+    "Exercise",
+    "Passive stretch",
+    "Dynamic stretch",
+    "All fours"
+  ],
+  "problem_statements": [
+    "Common hip opener stretches often only address hip external rotation.",
+    "Many individuals have restrictions in hip internal rotation and posterior femoral glide.",
+    "Anteriorly biased femoral head position can limit perceived external rotation."
+  ],
+  "habits_or_contexts": [
+    "Performing hip stretches that primarily focus on external rotation.",
+    "Seeking to improve overall hip mobility and range of motion."
+  ],
+  "key_visual_points": [
+    "Demonstration of common hip stretches (pigeon pose variation, kneeling lunge variation) incorrectly marked with a red 'X' to highlight their limitation.",
+    "3D animation of the hip joint showing the femoral head sliding forward with external rotation.",
+    "3D animation of the hip joint showing the femoral head sliding backward with internal rotation.",
+    "Demonstration of the 'All Fours Passive Hip Internal Rotation Stretch' from multiple angles.",
+    "Demonstration of the 'All Fours Dynamic Hip Internal Rotation Drill' using books for elevation."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "All Fours Passive Hip Internal Rotation Stretch",
+    "All Fours Dynamic Hip Internal Rotation Drill"
+  ],
+  "advice_mentioned": [
+    "Improve the ability of the femur to slide better back within the hip socket.",
+    "Improving posterior glide can provide more space for both internal and external rotation.",
+    "Never feel the stretch in the front of your hip during these exercises; if so, adjust position or reduce intensity."
+  ],
+  "warnings_or_limitations": [
+    "Avoid feeling the stretch in the front of the hip, as this indicates improper execution or excessive range.",
+    "During the dynamic drill, avoid rocking the hips significantly to one side."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Hip Joint Femoral Glide and Rotation Mechanics",
+      "summary": "Hip external rotation is associated with the femoral head sliding relatively forward within the hip socket (anterior glide). Conversely, hip internal rotation is associated with the femoral head moving backward (posterior glide) within the hip socket. Many common hip stretches primarily target external rotation, potentially neglecting restrictions in posterior femoral glide, which can limit overall hip mobility, including perceived external rotation.",
+      "observable_signs": [
+        "Limited hip internal rotation",
+        "Perceived limitation in hip external rotation despite stretching into external rotation"
+      ],
+      "mechanisms": [
+        "External rotation causes anterior femoral head glide.",
+        "Internal rotation causes posterior femoral head glide.",
+        "Restrictions in posterior glide can limit internal rotation and indirectly affect external rotation by reducing available joint space."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For understanding the arthrokinematics of the hip joint.",
+        "When assessing hip mobility limitations beyond simple range of motion.",
+        "To explain why traditional hip stretches might not be fully effective."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:11",
+        "00:19",
+        "00:32",
+        "00:45"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "All Fours Passive Hip Internal Rotation Stretch",
+      "summary": "A passive stretch performed in an all-fours position to improve posterior femoral glide and hip internal rotation by gently pushing the femoral head backward in the hip socket.",
+      "observable_signs": [
+        "Stretch felt in the back of the hip."
+      ],
+      "mechanisms": [
+        "Promotes posterior femoral head glide.",
+        "Increases hip internal rotation range of motion."
+      ],
+      "execution_steps": [
+        "Start in an all-fours position with hands under shoulders and knees under hips.",
+        "Take the passive leg (the side to be stretched) and hook its knee around the mid-shin range of the other leg.",
+        "Gently drop the knee of the passive leg to the ground.",
+        "Hold this position to feel a stretch in the back of the hip.",
+        "To increase the stretch, drop down to the elbow on the same side as the stretched hip.",
+        "Further increase the stretch by reaching the opposite arm overhead, slowly extending with each exhale."
+      ],
+      "cues": [
+        "Hands underneath your shoulders, knees underneath your hips.",
+        "Hook that knee around the mid-ish shin range.",
+        "Drop that knee to the ground.",
+        "Drop down to your elbow on that same side.",
+        "Reach it overhead slowly, every exhale try to reach it a little bit further overhead."
+      ],
+      "breathing_cues": [
+        "Exhale to reach a little bit further overhead."
+      ],
+      "errors_to_avoid": [
+        "Never feel this in the front of your hip. If you do, go back up to the hands-only position and work your way down over time."
+      ],
+      "when_useful": [
+        "To passively improve hip internal rotation.",
+        "To address restrictions in posterior femoral glide."
+      ],
+      "when_not_useful": [
+        "If experiencing pain in the front of the hip."
+      ],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:17",
+        "02:02"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "All Fours Dynamic Hip Internal Rotation Drill",
+      "summary": "A dynamic exercise performed in an all-fours position with one knee elevated, designed to actively improve hip internal rotation and posterior femoral glide.",
+      "observable_signs": [
+        "Feeling a little bit of inner thigh activation on the elevated knee side as the knee goes down.",
+        "Possibly a little stretch in the back of the hip."
+      ],
+      "mechanisms": [
+        "Actively promotes posterior femoral head glide.",
+        "Improves active control and range of hip internal rotation."
+      ],
+      "execution_steps": [
+        "Start in an all-fours position with hands under shoulders and knees under hips.",
+        "Place about 3-4 inches of elevation (e.g., books) under the knee of the side you want to work on.",
+        "Keep the low back neutral and flat.",
+        "Subtly shift your body weight over to the elevated side.",
+        "Exhale gently through your mouth as you drop the elevated knee down towards the ground.",
+        "Stop at the point where if you went any further, you would have to rock your hips significantly to one side.",
+        "Very slowly raise that knee back up to the elevated position.",
+        "Dynamically move in and out of this position for 2-3 sets of 15 repetitions."
+      ],
+      "cues": [
+        "Get about four, maybe three-ish inches of elevation.",
+        "Hands underneath your shoulders, knees underneath your hips.",
+        "Keeping your low back neutral and flat.",
+        "Subtly shifting your body weight over to the elevated side.",
+        "Exhale through your mouth gently as you drop that knee.",
+        "Stopping at the point where if you went any further, you would have to rock your hips to one side significantly.",
+        "Very slowly raise that knee up.",
+        "Dynamically move in and out of this position."
+      ],
+      "breathing_cues": [
+        "Exhale gently as you drop that knee."
+      ],
+      "errors_to_avoid": [
+        "Do not rock your hips to one side significantly when dropping the knee."
+      ],
+      "when_useful": [
+        "To actively improve hip internal rotation.",
+        "To build control and strength in the newly gained range of motion."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "Perform for about 2-3 sets of 15 reps."
+      ],
+      "timestamps": [
+        "02:02",
+        "02:57"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively explains a nuanced biomechanical concept and provides practical, actionable exercises. The use of 3D animations and clear demonstrations enhances its educational value. The distinction between passive and dynamic drills is also well-presented."
+}

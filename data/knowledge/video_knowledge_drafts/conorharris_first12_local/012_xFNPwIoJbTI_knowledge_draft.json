@@ -1,0 +1,786 @@
+{
+  "source_url": "https://www.youtube.com/shorts/xFNPwIoJbTI",
+  "source_title_hint": "How To Fix Your Rounded Shoulders Posture",
+  "analysis_origin": "local_level1_plus_hf_error_fallback:openai/gpt-oss-120b",
+  "analysis_provider": "local_fallback",
+  "analysis_quality": "fallback",
+  "is_active": true,
+  "supersedes_draft_id": null,
+  "primary_summary": "How To Fix Your Rounded Shoulders Posture explains a movement problem and demonstrates corrective actions such as The reason why is that this turn is occurring in part because the right side of the ribcage is compressed and depress,. If you have one shoulder blade that's more winged out than the other one, here's what that's telling you and what you can do about it.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Segments contain structured transcript, OCR, and retrieval-ready evidence.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "foot",
+      "scapula",
+      "shoulder",
+      "rib_cage",
+      "hip",
+      "neck"
+    ],
+    "problem_layers": [
+      "mobility_restriction",
+      "postural",
+      "motor_control",
+      "breathing"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "foot",
+    "scapula",
+    "shoulder",
+    "rib_cage",
+    "hip",
+    "neck",
+    "that's",
+    "blade",
+    "more",
+    "telling",
+    "when",
+    "moved"
+  ],
+  "searchable_tags": [
+    "side",
+    "shoulder",
+    "blade",
+    "ribcage",
+    "more",
+    "wall",
+    "when",
+    "right",
+    "also",
+    "would",
+    "compressed",
+    "winging"
+  ],
+  "problem_statements": [
+    "And typically when the ribcage is compressed on one side, the shoulder blade can't effectively And typically when the ribcage is compressed on one side, the shoulder blade can't effectively sit on it very well and glide and rotate on it effectively.",
+    "This is that winging that we're talking about.",
+    "This is that winging that we're talking about.",
+    "So this winging on one side is usually happening because we have a turn towards that side, but also typically a lot of front side ribcage compression, which is pulling the shoulder down and also typically a lot of front side ribcage compression, which is pulling the shoulder down and forward with it as we turn to that side.",
+    "So the solution would entail getting better expansion and opening of the ribcage on this side of the body of the more winging shoulder blade.",
+    "So the solution to improve the position and mobility of the shoulder would be to get better expansion and opening of the ribcage on this side where we are turned towards with the expansion and opening of the ribcage on this side where we are turned towards with the more winging shoulder blade.",
+    "more winging shoulder blade."
+  ],
+  "habits_or_contexts": [
+    "So this winging on one side is usually happening because we have a turn towards that side, but also typically a lot of front side ribcage compression, which is pulling the shoulder down and also typically a lot of front side ribcage compression, which is pulling the shoulder down and forward with it as we turn to that side."
+  ],
+  "key_visual_points": [
+    "Representative frame at 2.4s",
+    "Representative frame at 6.7s",
+    "Representative frame at 10.6s",
+    "Representative frame at 16.1s",
+    "Representative frame at 22.6s",
+    "Representative frame at 27.4s",
+    "Representative frame at 32.5s",
+    "Representative frame at 37.7s",
+    "Representative frame at 43.4s",
+    "Representative frame at 49.7s"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "The reason why is that this turn is occurring in part because the right side of the ribcage is compressed and depress,",
+    "is compressed and depress, which is pulling the sternum and the ribcage over to that side.",
+    "So this winging on one side is usually happening because we have a turn towards that side, but also typically a lot of",
+    "Here's the way you can do both of those things in one exercise."
+  ],
+  "advice_mentioned": [
+    "For the easier variation, just to get air into this chest wall, you can take your arm and just For the easier variation, just to get air into this chest wall, you can take your arm and just let it hang slightly overhead like this with not much tension, bicep to ear, not back like let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mouth and you should feel some expansion occurring on this chest wall.",
+    "The breathing should be nice and relaxed in through the nose out through the mouth letting The breathing should be nice and relaxed in through the nose out through the mouth letting the air fall in and out of you."
+  ],
+  "warnings_or_limitations": [
+    "When one shoulder blade is moved further away and winged out like this than the other one, When one shoulder blade is moved further away and winged out like this than the other one, it's representing some asymmetrical compensations that are happening within the body.",
+    "it's representing some asymmetrical compensations that are happening within the body.",
+    "For the easier variation, just to get air into this chest wall, you can take your arm and just For the easier variation, just to get air into this chest wall, you can take your arm and just let it hang slightly overhead like this with not much tension, bicep to ear, not back like let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mouth and you should feel some expansion occurring on this chest wall.",
+    "This is going to get that shoulder blade to move back on the ribcage, but you need to be close enough to the wall to where you can really allow that to happen without the arm being too far behind you, which is just going to flare your ribcage and arch your back."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 0.0-4.7s: If you have one shoulder blade that's more winged out than the other one, here's",
+      "summary": "Segment 0.0-4.7s: If you have one shoulder blade that's more winged out than the other one, here's what that's telling you and what you can do about it.",
+      "observable_signs": [],
+      "mechanisms": [
+        "If you have one shoulder blade that's more winged out than the other one, here's what that's telling you and what you can do about it."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00",
+        "00:04"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 4.7-8.7s: that's telling you and what you can do about it. When one shoulder blade is move",
+      "summary": "Segment 4.7-8.7s: that's telling you and what you can do about it. When one shoulder blade is moved further away and winged out like this than the other one,",
+      "observable_signs": [],
+      "mechanisms": [
+        "that's telling you and what you can do about it. When one shoulder blade is moved further away and winged out like this than the other one,"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:04",
+        "00:08"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 8.7-12.6s: When one shoulder blade is moved further away and winged out like this than the",
+      "summary": "Segment 8.7-12.6s: When one shoulder blade is moved further away and winged out like this than the other one, it's representing some asymmetrical compensations that are happening within the body.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "When one shoulder blade is moved further away and winged out like this than the other one, it's representing some asymmetrical compensations that are happening within the body."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:08",
+        "00:12"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 12.6-19.5s: it's representing some asymmetrical compensations that are happening within th",
+      "summary": "Segment 12.6-19.5s: it's representing some asymmetrical compensations that are happening within the body. Typically, what's going on is that the torso and the ribcage are overall turned to one side of",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "it's representing some asymmetrical compensations that are happening within the body."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:12",
+        "00:19"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 19.5-25.6s: Let's say the right side for this example. Turning to the right side might mak",
+      "summary": "Segment 19.5-25.6s: Let's say the right side for this example. Turning to the right side might make you think that the left shoulder blade is going to come forward, but actually it's counterintuitive.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Let's say the right side for this example. Turning to the right side might make you think that the left shoulder blade is going to come forward, but actually it's counterintuitive. It would be the right shoulder blade that more likely is going to round forward."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:19",
+        "00:25"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 25.6-29.1s: It would be the right shoulder blade that more likely is going to round forwar",
+      "summary": "Segment 25.6-29.1s: It would be the right shoulder blade that more likely is going to round forward.",
+      "observable_signs": [],
+      "mechanisms": [
+        "It would be the right shoulder blade that more likely is going to round forward."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:25",
+        "00:29"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 29.1-35.8s: It would be the right shoulder blade that more likely is going to round forwar",
+      "summary": "Segment 29.1-35.8s: It would be the right shoulder blade that more likely is going to round forward. The reason why is that this turn is occurring in part because the right side of the ribcage is comp",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "It would be the right shoulder blade that more likely is going to round forward. The reason why is that this turn is occurring in part because the right side of the ribcage is compressed and depress, which is pulling the sternum and the ribcage over to that side"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:29",
+        "00:35"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 35.8-39.5s: is compressed and depress, which is pulling the sternum and the ribcage over t",
+      "summary": "Segment 35.8-39.5s: is compressed and depress, which is pulling the sternum and the ribcage over to that side.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "is compressed and depress, which is pulling the sternum and the ribcage over to that side"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:35",
+        "00:39"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 39.5-47.4s: is compressed and depress, which is pulling the sternum and the ribcage over t",
+      "summary": "Segment 39.5-47.4s: is compressed and depress, which is pulling the sternum and the ribcage over to that side. When this happens, obviously the left ribcage comes forward and the right ribcage goes ba",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "is compressed and depress, which is pulling the sternum and the ribcage over to that side. When this happens, obviously the left ribcage comes forward and the right ribcage goes back. And typically when the ribcage is compressed on one side, the shoulder blade can't effectively"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:39",
+        "00:47"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 47.4-52.0s: And typically when the ribcage is compressed on one side, the shoulder blade c",
+      "summary": "Segment 47.4-52.0s: And typically when the ribcage is compressed on one side, the shoulder blade can't effectively sit on it very well and glide and rotate on it effectively.",
+      "observable_signs": [],
+      "mechanisms": [
+        "And typically when the ribcage is compressed on one side, the shoulder blade can't effectively sit on it very well and glide and rotate on it effectively."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:47",
+        "00:51"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 52.0-56.8s: sit on it very well and glide and rotate on it effectively. So essentially the",
+      "summary": "Segment 52.0-56.8s: sit on it very well and glide and rotate on it effectively. So essentially the shoulder blade just stays in place, but look at what happens to it if I turn to the right side.",
+      "observable_signs": [],
+      "mechanisms": [
+        "sit on it very well and glide and rotate on it effectively. So essentially the shoulder blade just stays in place, but look at what happens to it if I turn to the right side."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:51",
+        "00:56"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 56.8-59.3s: I turn to the right side. This is that winging that we're talking about.",
+      "summary": "Segment 56.8-59.3s: I turn to the right side. This is that winging that we're talking about.",
+      "observable_signs": [],
+      "mechanisms": [
+        "I turn to the right side. This is that winging that we're talking about."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:56",
+        "00:59"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 59.3-67.8s: This is that winging that we're talking about. So this winging on one side is ",
+      "summary": "Segment 59.3-67.8s: This is that winging that we're talking about. So this winging on one side is usually happening because we have a turn towards that side, but also typically a lot of front side rib",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "This is that winging that we're talking about. So this winging on one side is usually happening because we have a turn towards that side, but also typically a lot of front side ribcage compression, which is pulling the shoulder down and"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:59",
+        "01:07"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 67.8-72.8s: also typically a lot of front side ribcage compression, which is pulling the s",
+      "summary": "Segment 67.8-72.8s: also typically a lot of front side ribcage compression, which is pulling the shoulder down and forward with it as we turn to that side.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "also typically a lot of front side ribcage compression, which is pulling the shoulder down and forward with it as we turn to that side"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:07",
+        "01:12"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 72.8-87.8s: forward with it as we turn to that side. So the solution would entail getting ",
+      "summary": "Segment 72.8-87.8s: forward with it as we turn to that side. So the solution would entail getting better expansion and opening of the ribcage on this side of the body of the more winging shoulder blad",
+      "observable_signs": [],
+      "mechanisms": [
+        "forward with it as we turn to that side. So the solution would entail getting better expansion and opening of the ribcage on this side of the body of the more winging shoulder blade. So the solution to improve the position and mobility of the shoulder would be to get better expansion and opening of the ribcage on this side where we are turned towards with the"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "So the solution would entail getting better expansion and opening of the ribcage on this side of the body of the more winging shoulder blade.",
+        "So the solution to improve the position and mobility of the shoulder would be to get better expansion and opening of the ribcage on this side where we are turned towards with the"
+      ],
+      "advice": [],
+      "timestamps": [
+        "01:12",
+        "01:27"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 87.8-92.4s: expansion and opening of the ribcage on this side where we are turned towards ",
+      "summary": "Segment 87.8-92.4s: expansion and opening of the ribcage on this side where we are turned towards with the more winging shoulder blade.",
+      "observable_signs": [],
+      "mechanisms": [
+        "expansion and opening of the ribcage on this side where we are turned towards with the more winging shoulder blade."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:27",
+        "01:32"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 92.4-97.6s: more winging shoulder blade. Because every time we inhale, we should be gettin",
+      "summary": "Segment 92.4-97.6s: more winging shoulder blade. Because every time we inhale, we should be getting some expansion of ribcage in all directions on both sides.",
+      "observable_signs": [],
+      "mechanisms": [
+        "more winging shoulder blade. Because every time we inhale, we should be getting some expansion of ribcage in all directions on both sides."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:32",
+        "01:37"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 97.6-98.8s: on both sides. And we also want to help use muscles to reposition the shoulder",
+      "summary": "Segment 97.6-98.8s: on both sides. And we also want to help use muscles to reposition the shoulder blade better on the back ribcage.",
+      "observable_signs": [],
+      "mechanisms": [
+        "on both sides. And we also want to help use muscles to reposition the shoulder blade better on the back ribcage."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "And we also want to help use muscles to reposition the shoulder blade better on the back ribcage."
+      ],
+      "advice": [],
+      "timestamps": [
+        "01:37",
+        "01:38"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 98.8-102.9s: And we also want to help use muscles to reposition the shoulder blade better ",
+      "summary": "Segment 98.8-102.9s: And we also want to help use muscles to reposition the shoulder blade better on the back ribcage.",
+      "observable_signs": [],
+      "mechanisms": [
+        "And we also want to help use muscles to reposition the shoulder blade better on the back ribcage."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "And we also want to help use muscles to reposition the shoulder blade better on the back ribcage."
+      ],
+      "advice": [],
+      "timestamps": [
+        "01:38",
+        "01:42"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 102.9-105.3s: And we also want to help use muscles to reposition the shoulder blade better",
+      "summary": "Segment 102.9-105.3s: And we also want to help use muscles to reposition the shoulder blade better on the back ribcage. So that way it can stay more congruent with it and then it can rotate and glide mo",
+      "observable_signs": [],
+      "mechanisms": [
+        "And we also want to help use muscles to reposition the shoulder blade better on the back ribcage. So that way it can stay more congruent with it and then it can rotate and glide more effectively"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "And we also want to help use muscles to reposition the shoulder blade better on the back ribcage."
+      ],
+      "advice": [],
+      "timestamps": [
+        "01:42",
+        "01:45"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 105.3-109.2s: So that way it can stay more congruent with it and then it can rotate and gl",
+      "summary": "Segment 105.3-109.2s: So that way it can stay more congruent with it and then it can rotate and glide more effectively through shoulder movement.",
+      "observable_signs": [],
+      "mechanisms": [
+        "So that way it can stay more congruent with it and then it can rotate and glide more effectively through shoulder movement."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:45",
+        "01:49"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 109.2-111.5s: through shoulder movement. Here's the way you can do both of those things in",
+      "summary": "Segment 109.2-111.5s: through shoulder movement. Here's the way you can do both of those things in one exercise.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "through shoulder movement. Here's the way you can do both of those things in one exercise"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:49",
+        "01:51"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 111.5-115.6s: Here's the way you can do both of those things in one exercise. To do this, ",
+      "summary": "Segment 111.5-115.6s: Here's the way you can do both of those things in one exercise. To do this, get in a position like this with your hips and knees bent at around a 90 degree angle and you're back ab",
+      "observable_signs": [
+        "HIPS AND/KNEES"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Here's the way you can do both of those things in one exercise. To do this, get in a position like this with your hips and knees bent at around a 90 degree angle and you're back about one inch away from the wall"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:51",
+        "01:55"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 115.6-118.0s: and you're back about one inch away from the wall.",
+      "summary": "Segment 115.6-118.0s: and you're back about one inch away from the wall.",
+      "observable_signs": [],
+      "mechanisms": [
+        "and you're back about one inch away from the wall."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:55",
+        "01:58"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 118.0-132.4s: and you're back about one inch away from the wall. Take your top leg and str",
+      "summary": "Segment 118.0-132.4s: and you're back about one inch away from the wall. Take your top leg and straighten it out like so, slightly in front of your hip. Now go up into a side plank like so and you shoul",
+      "observable_signs": [
+        "PLANK LIKE'SO,"
+      ],
+      "mechanisms": [
+        "and you're back about one inch away from the wall. Take your top leg and straighten it out like so, slightly in front of your hip. Now go up into a side plank like so and you should have your elbow directly underneath your shoulder. For the easier variation, just to get air into this chest wall, you can take your arm and just"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:58",
+        "02:12"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 132.4-138.1s: For the easier variation, just to get air into this chest wall, you can take",
+      "summary": "Segment 132.4-138.1s: For the easier variation, just to get air into this chest wall, you can take your arm and just let it hang slightly overhead like this with not much tension, bicep to ear, not back",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "For the easier variation, just to get air into this chest wall, you can take your arm and just let it hang slightly overhead like this with not much tension, bicep to ear, not back like"
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:12",
+        "02:18"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 138.1-153.1s: let it hang slightly overhead like this with not much tension, bicep to ear,",
+      "summary": "Segment 138.1-153.1s: let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mou",
+      "observable_signs": [
+        "ON THIS SIDE,"
+      ],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [
+        "let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mouth and you should feel some expansion occurring on this chest wall.",
+        "The breathing should be nice and relaxed in through the nose out through the mouth letting"
+      ],
+      "breathing_cues": [
+        "let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mouth and you should feel some expansion occurring on this chest wall."
+      ],
+      "errors_to_avoid": [
+        "let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mouth and you should feel some expansion occurring on this chest wall."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mouth and you should feel some expansion occurring on this chest wall."
+      ],
+      "advice": [
+        "let it hang slightly overhead like this with not much tension, bicep to ear, not back like that just here and now breathe in this position in through your nose out through your mouth and you should feel some expansion occurring on this chest wall.",
+        "The breathing should be nice and relaxed in through the nose out through the mouth letting"
+      ],
+      "timestamps": [
+        "02:18",
+        "02:33"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 153.1-163.7s: The breathing should be nice and relaxed in through the nose out through the",
+      "summary": "Segment 153.1-163.7s: The breathing should be nice and relaxed in through the nose out through the mouth letting the air fall in and out of you. Once you've mastered this, you could take your top hand a",
+      "observable_signs": [],
+      "mechanisms": [
+        "The breathing should be nice and relaxed in through the nose out through the mouth letting the air fall in and out of you. Once you've mastered this, you could take your top hand and then you can slightly push it into"
+      ],
+      "execution_steps": [],
+      "cues": [
+        "The breathing should be nice and relaxed in through the nose out through the mouth letting the air fall in and out of you."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [
+        "The breathing should be nice and relaxed in through the nose out through the mouth letting the air fall in and out of you."
+      ],
+      "timestamps": [
+        "02:33",
+        "02:43"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 163.7-167.2s: Once you've mastered this, you could take your top hand and then you can sli",
+      "summary": "Segment 163.7-167.2s: Once you've mastered this, you could take your top hand and then you can slightly push it into the wall behind you.",
+      "observable_signs": [
+        "INTO THE WALL"
+      ],
+      "mechanisms": [
+        "Once you've mastered this, you could take your top hand and then you can slightly push it into the wall behind you."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:43",
+        "02:47"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Compensation Pattern: 167.2-179.2s: the wall behind you. This is going to get that shoulder blade to move back o",
+      "summary": "Segment 167.2-179.2s: the wall behind you. This is going to get that shoulder blade to move back on the ribcage, but you need to be close enough to the wall to where you can really allow that to happen",
+      "observable_signs": [
+        "YOU CAN REALLY,"
+      ],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "This is going to get that shoulder blade to move back on the ribcage, but you need to be close enough to the wall to where you can really allow that to happen without the arm being too far behind you, which is just going to flare your ribcage and arch your back."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:47",
+        "02:59"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 30,
+    "transcript_segment_count": 49,
+    "ocr_observation_count": 5,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 30,
+    "asset_count": 32
+  }
+}

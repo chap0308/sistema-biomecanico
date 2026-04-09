@@ -1,0 +1,19 @@
+{
+  "selection_mode": "urls",
+  "requested_limit": null,
+  "requested_urls": [
+    "https://www.youtube.com/shorts/kU7CaY7YuDo"
+  ],
+  "selected_count": 1,
+  "model": "gemini-2.5-flash",
+  "results": [
+    {
+      "source_id": "src_7132ba92332213aa",
+      "source_url": "https://www.youtube.com/shorts/kU7CaY7YuDo",
+      "previous_draft_id": "kdraft_a1424f92dbb1ffc4",
+      "status": "error",
+      "error_code": "unknown_error",
+      "error": "[WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "answer": "Con la evidencia disponible, el recurso mas cercano es 'Distinction Between Relative Motion Pronation and Orientation Pronation': Pronation (arch lowering) is a natural and key element of the gait cycle. There are two ways the foot can pronate: 'relative motion' involves subtle, segmental movement between the bones and joints of the foot, allowing the arch to lower properly. 'Orientation' pronation, often compensatory, involves the entire foot collapsing into the ground with less segmental movement, which can be a problem if it's the only strategy. Ejercicios relacionados encontrados: Corrective Exercise: 4.8-8.9s: Your big toe's ability to properly connect with the ground is probably the most.",
+  "recommended_exercises": [
+    "Corrective Exercise: 4.8-8.9s: Your big toe's ability to properly connect with the ground is probably the most"
+  ],
+  "key_points": [
+    "Pronation (arch lowering) is a natural and key element of the gait cycle. There are two ways the foot can pronate: 'relative motion' involves subtle, segmental movement between the bones and joints of the foot, allowing the arch to lower properly. 'Orientation' pronation, often compensatory, involves the entire foot collapsing into the ground with less segmental movement, which can be a problem if it's the only strategy.",
+    "Rounded forward shoulders and excessive thoracic kyphosis lead to the shoulder blades being pulled away from the spine. This posture over-lengthens the muscles between the shoulder blades (e.g., rhomboids, middle trapezius), creating chronic tension and contributing to the sensation of 'muscle knots.'",
+    "Segment 9.3-20.2s: What I want to help you appreciate is that, yes, this has a lot to do with the jaw itself, but also the bigger structures around the jaw like the head, the skull, and also the neck",
+    "Segment 4.8-8.9s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw"
+  ],
+  "cautions": [],
+  "citations": [
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/d4d5Ta8UXRg",
+      "segment_id": "kseg_0d8691b8b9390471",
+      "knowledge_unit_title": "Distinction Between Relative Motion Pronation and Orientation Pronation",
+      "timestamp_hint": "0:11, 0:50"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/pQkwgsOYzRM",
+      "segment_id": "kseg_d4cbe9de3f33cb13",
+      "knowledge_unit_title": "Postural Impact on Scapular Position and Upper Back Muscle Tension",
+      "timestamp_hint": "0:09-0:54"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/Li3k6UdnDvE",
+      "segment_id": "kseg_b1f46085080991b7",
+      "knowledge_unit_title": "Educational Point: 9.3-20.2s: What I want to help you appreciate is that, yes, this has a lot to do with the ",
+      "timestamp_hint": "00:09, 00:20"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/_YTvkv5ftIw",
+      "segment_id": "kseg_2e1d7d714a3ab519",
+      "knowledge_unit_title": "Corrective Exercise: 4.8-8.9s: Your big toe's ability to properly connect with the ground is probably the most ",
+      "timestamp_hint": "00:04, 00:08"
+    }
+  ],
+  "retrieval_quality": "high",
+  "used_collections": [
+    "video_knowledge_units_v1",
+    "video_segments_v1"
+  ],
+  "model_used": "grounded_fallback (fallback)",
+  "answer_backend": "grounded_fallback",
+  "fallback_reason": "",
+  "query": "No puedo tocar mi omoplato contrario con mi brazo derecho y siento rigidez en el hombro"
+}

@@ -1,0 +1,32 @@
+{
+  "answer": "El sway‑back con pelvis en inclinación anterior se corrige re‑educando la alineación en cadena: cabeza‑torso‑pelvis apilados y una respiración que abra la caja torácica posterior. Un ejercicio sencillo contra la pared ayuda a sentir la posición neutra del sacro y a distribuir el peso de forma equilibrada, lo que reduce la exageración de la curva lumbar y la pelvis adelantada.",
+  "recommended_exercises": [
+    "Wall Posture Correction Drill: de pie con la espalda contra la pared, pies a la anchura de caderas, ajusta la distancia hasta que ambas espinas ilíacas posteriores (PSIS) toquen ligeramente la pared; mantén rodillas rectas (no bloqueadas), hombros ligeramente protraídos, y practica respiraciones lentas enfocando la expansión de la parte posterior de la caja torácica mientras mantienes la posición apilada."
+  ],
+  "key_points": [
+    "Mantener la pelvis neutra permite que la columna lumbar recupere su curva natural sin sobrecargar la zona lumbar.",
+    "El contacto de las PSIS con la pared sirve como retroalimentación táctil de alineación pélvica.",
+    "Una respiración diafragmática con expansión torácica posterior ayuda a relajar los flexores de cadera que suelen estar tensos en la postura de sway‑back.",
+    "Distribuir el peso 60 % en los talones y 40 % en la base de los dedos del pie favorece la estabilidad y la activación del core."
+  ],
+  "cautions": [
+    "Evita bloquear las rodillas; mantén una ligera flexión para no sobrecargar la articulación.",
+    "No fuerces la espalda contra la pared; la posición debe ser cómoda y solo tocar ligeramente los PSIS."
+  ],
+  "citations": [
+    {
+      "source_type": "youtube",
+      "title": "Wall Posture Correction Drill for Stacked Alignment and Breathing",
+      "source_uri": "https://www.youtube.com/shorts/0cQxyJiVzzg",
+      "segment_id": null,
+      "knowledge_unit_title": "Wall Posture Correction Drill for Stacked Alignment and Breathing",
+      "timestamp_hint": "1:37"
+    }
+  ],
+  "retrieval_quality": "high",
+  "used_collections": [
+    "video_knowledge_units_v1",
+    "video_segments_v1"
+  ],
+  "model_used": "openai/gpt-oss-120b"
+}

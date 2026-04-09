@@ -1,0 +1,2067 @@
+[
+  {
+    "rank": 21,
+    "video_id": "Hu8_UCv4tLA",
+    "url": "https://www.youtube.com/shorts/Hu8_UCv4tLA",
+    "title": "¿Por qué el 95% de las personas se equivocan al volar en avión?",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\021_Hu8_UCv4tLA.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/Hu8_UCv4tLA",
+      "source_title_hint": "¿Por qué el 95% de las personas se equivocan al volar en avión?",
+      "primary_summary": "This video explains the biomechanics of the 'Hip Air Plane' exercise, highlighting common errors such as spinal compensation and loss of foot contact. It then demonstrates an optimized execution of the exercise, focusing on genuine hip rotation and maintaining proper foot contact for improved hip internal and external rotation mobility.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides detailed biomechanical explanations for a common hip mobility drill, identifies frequent errors, and offers a corrected execution method, making it valuable for technique optimization and movement reeducation.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "Hip",
+          "Pelvis",
+          "Spine",
+          "Foot"
+        ],
+        "problem_layers": [
+          "Mobility",
+          "Stability",
+          "Motor Control"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "Hip Air Plane",
+        "Hip Mobility",
+        "Hip Rotation",
+        "Pelvic Rotation",
+        "Spinal Compensation",
+        "Foot Contact",
+        "Movement Reeducation",
+        "Exercise Optimization",
+        "Internal Rotation",
+        "External Rotation"
+      ],
+      "searchable_tags": [
+        "hipmobility",
+        "hiprotation",
+        "pelviccontrol",
+        "footstability",
+        "movementcorrection",
+        "biomechanics",
+        "exercisehacks",
+        "fitnesseducation"
+      ],
+      "problem_statements": [
+        "Many people perform the Hip Air Plane incorrectly, leading to suboptimal results.",
+        "Individuals often compensate by moving through the spine instead of genuinely rotating the hip.",
+        "Loss of proper foot contact (inside or outside of the foot) during the exercise reduces its effectiveness.",
+        "Chasing sensation or a bigger stretch/movement can lead to improper form and compensation."
+      ],
+      "habits_or_contexts": [
+        "Performing hip mobility drills without understanding proper biomechanics.",
+        "Prioritizing range of motion over controlled movement and stability."
+      ],
+      "key_visual_points": [
+        "A person performing the Hip Air Plane exercise with hands on a wall/rack, one leg extended back.",
+        "Visual overlays illustrating pelvic rotation relative to a fixed femur.",
+        "Visual overlays showing spinal rotation as a compensation.",
+        "Visual overlays highlighting loss of foot contact (lifting inside or outside of the foot).",
+        "An anatomical model of the pelvis and femur demonstrating hip joint movement.",
+        "A graphic illustrating the three points of contact on the foot (big toe, pinky toe, heel)."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Hip Air Plane"
+      ],
+      "advice_mentioned": [
+        "Focus on genuine hip rotation rather than spinal movement.",
+        "Maintain three points of contact on the foot throughout the exercise.",
+        "Stop movement when the pelvis rotation slows or when spinal compensation begins.",
+        "Use external support (doorframe/rack) and a bench for the back leg to improve stability and focus on hip movement."
+      ],
+      "warnings_or_limitations": [
+        "Over-rotating the hip can lead to compensatory movement in the low back/spine.",
+        "Losing foot contact during the exercise reduces its effectiveness for hip mobility and stability.",
+        "The instability created by a free-hanging back leg can increase the likelihood of spinal compensation."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Biomechanics of Hip Air Plane",
+          "summary": "The Hip Air Plane exercise primarily trains the pelvis to move (rotate) on and off a fixed femur, which is stabilized by the foot on the ground. This movement involves both external and internal rotation of the hip joint.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Pelvis rotates relative to a stationary femur.",
+            "Foot is fixed to the ground, providing a stable base for the leg.",
+            "Movement occurs in both external and internal rotation directions at the hip."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Understanding the target movement for hip rotation.",
+            "Explaining the 'why' behind the exercise."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:10",
+            "0:25"
+          ]
+        },
+        {
+          "unit_type": "compensation_pattern",
+          "title": "Common Compensations in Hip Air Plane",
+          "summary": "Individuals often compensate during the Hip Air Plane by rotating through the lumbar or thoracic spine instead of the hip, or by losing the three points of contact on the standing foot. These compensations occur when attempting to achieve a larger range of motion beyond the hip's genuine capacity, leading to reduced effectiveness and potential for injury.",
+          "observable_signs": [
+            "Rotation of the lower back or upper back instead of the pelvis/hip.",
+            "Loss of contact with the inside of the foot (e.g., big toe mound, heel) when turning too far into internal rotation.",
+            "Loss of contact with the outside of the foot (e.g., pinky toe mound, heel) when turning too far into external rotation.",
+            "Excessive movement or instability in the free-hanging leg."
+          ],
+          "mechanisms": [
+            "Limited genuine hip rotation range of motion.",
+            "Chasing sensation or a larger perceived stretch/movement.",
+            "Lack of stability from the standing foot.",
+            "Instability from the non-weight-bearing leg."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Diagnosing improper movement patterns during hip rotation exercises.",
+            "Educating individuals on how to avoid common mistakes."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:30",
+            "0:54",
+            "1:04",
+            "1:33",
+            "1:38",
+            "1:52"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Optimized Hip Air Plane Execution",
+          "summary": "To perform the Hip Air Plane effectively, stand tall against a stable support (doorframe/rack) with hands pushing into it. Place the non-standing leg on a bench behind you for stability. Maintain a slight bend in the standing leg's knee and ensure three points of contact on the foot (big toe, pinky toe, heel) without forcing them. Slowly rotate the pelvis away from the spine, stopping when genuine hip rotation diminishes or spinal compensation begins. Then, slowly rotate back, stopping when a slight stretch is felt in the hip.",
+          "observable_signs": [
+            "Stable torso and spine.",
+            "Consistent three points of foot contact on the standing foot.",
+            "Controlled, smooth rotation originating from the hip/pelvis.",
+            "Back leg resting on a bench for support."
+          ],
+          "mechanisms": [
+            "Improved stability allows for better motor control of hip rotation.",
+            "Focus on foot contact enhances proprioception and ground reaction forces.",
+            "Limiting range of motion to genuine hip movement prevents spinal compensation."
+          ],
+          "execution_steps": [
+            "Stand tall against a doorframe or rack, placing hands on it for support.",
+            "Place the back leg on a bench behind you, allowing it to rest naturally (doesn't need to be perfectly straight).",
+            "Maintain a slight bend in the front (standing) leg's knee.",
+            "Ensure you feel three points of contact on the standing foot: the base of the big toe, the base of the pinky toe, and the heel. Do not force these points, just bring awareness to them, keeping toes relaxed.",
+            "Slowly begin turning everything (pelvis) away from the spine in the same direction.",
+            "Stop the rotation once you sense that your pelvis is starting to rotate less or slower than your lower back or upper spine.",
+            "Slowly close that space off, rotating everything in the same direction.",
+            "Stop the internal rotation at the point where you start to feel a slight stretch in the side or back of your hip on the front leg side, or just before you'd push the hip out.",
+            "Return back to the starting position, maintaining relaxed toes and foot contact."
+          ],
+          "cues": [
+            "\"Feel these three points of contact on your foot.\"",
+            "\"Bring awareness to those points, keeping your toes relaxed.\"",
+            "\"Slowly start turning everything away from that spine.\"",
+            "\"Stop once you sense that your pelvis is going to start rotating less or slower than the rest of your lower back and upper spine.\"",
+            "\"Close that space off very slowly, rotating everything in the same direction.\"",
+            "\"Stop at the point where you start to feel a little stretch in the side or back of your hip.\""
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Do not force foot contacts into the ground.",
+            "Avoid rotating through the low back or upper back to achieve a larger turn.",
+            "Do not lose the inside or outside contact points of the standing foot."
+          ],
+          "when_useful": [
+            "Improving hip internal and external rotation mobility.",
+            "Enhancing hip stability and motor control.",
+            "Reducing spinal compensation during hip movements."
+          ],
+          "when_not_useful": [
+            "For individuals with acute hip or spinal pain.",
+            "If unable to maintain basic balance or foot contact."
+          ],
+          "retest": [
+            "Observe improvements in controlled hip rotation range of motion.",
+            "Assess ability to maintain foot contact and spinal neutrality during movement."
+          ],
+          "advice": [],
+          "timestamps": [
+            "1:53",
+            "2:59"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively breaks down a common exercise, explains its biomechanical purpose, identifies common errors with visual aids, and provides a detailed, corrected execution. The use of an anatomical model and visual overlays greatly enhances the educational value. The content is highly relevant for a biomechanical knowledge base."
+    }
+  },
+  {
+    "rank": 22,
+    "video_id": "r7lnE8f53j4",
+    "url": "https://www.youtube.com/shorts/r7lnE8f53j4",
+    "title": "¡Deja de meter la barriga! ¿Por qué está arruinando tu postura?",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\022_r7lnE8f53j4.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/r7lnE8f53j4",
+      "source_title_hint": "¡Deja de meter la barriga! ¿Por qué está arruinando tu postura?",
+      "primary_summary": "The video explains that habitually \"sucking in your belly\" to appear thinner creates biomechanical dysfunction, specifically a mismatch between diaphragm and pelvic floor mechanics. This leads to a hyper-inflated state of the rib cage and a descended pelvic floor, often associated with anterior pelvic tilt. The video then demonstrates a seated breathing exercise using a pillow to help restore proper diaphragm and pelvic floor synchronicity by promoting full exhalation and posterior rib cage expansion.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "Explains a common postural habit, its biomechanical consequences on the diaphragm and pelvic floor, and provides a specific corrective breathing exercise.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "abdomen",
+          "diaphragm",
+          "pelvic floor",
+          "rib cage",
+          "lumbar spine",
+          "thoracic spine"
+        ],
+        "problem_layers": [
+          "musculoskeletal",
+          "respiratory",
+          "postural"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "Belly sucking posture",
+        "Diaphragmatic breathing dysfunction",
+        "Pelvic floor dysfunction",
+        "Postural correction",
+        "Breathing mechanics",
+        "Anterior pelvic tilt",
+        "Rib flare",
+        "Core stability",
+        "Intra-abdominal pressure"
+      ],
+      "searchable_tags": [
+        "posture",
+        "breathing",
+        "diaphragm",
+        "pelvic floor",
+        "core",
+        "abs",
+        "rib cage",
+        "exhalation",
+        "anterior pelvic tilt",
+        "hyper-inflated",
+        "dysfunction",
+        "reeducation",
+        "corrective exercise",
+        "seated exercise"
+      ],
+      "problem_statements": [
+        "Sucking in the belly to look thinner.",
+        "Dysfunctional diaphragm and pelvic floor mechanics.",
+        "Hyper-inflated rib cage.",
+        "Descended pelvic floor.",
+        "Compensatory postural and breathing mechanics.",
+        "Anterior pelvic tilt.",
+        "Belly \"pooching out\" due to anterior pelvic tilt."
+      ],
+      "habits_or_contexts": [
+        "Habitually sucking in the belly for aesthetic reasons."
+      ],
+      "key_visual_points": [
+        "A woman demonstrating \"sucking in her belly\" posture.",
+        "A man demonstrating a \"pooched out\" belly due to anterior pelvic tilt.",
+        "A skeleton model used to illustrate diaphragm and pelvic floor mechanics.",
+        "Animated diagrams showing diaphragm and pelvic floor movement during normal breathing.",
+        "Animated diagrams showing the effect of belly sucking on the diaphragm and pelvic floor.",
+        "A skeleton model illustrating hyper-lordotic posture and anterior pelvic tilt.",
+        "Demonstration of the seated exhalation drill with a pillow."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Seated Exhalation Drill with Pillow"
+      ],
+      "advice_mentioned": [
+        "Stop sucking in your belly to look thinner.",
+        "Focus on getting a better ability to exhale and get the diaphragm into an ascended position."
+      ],
+      "warnings_or_limitations": [],
+      "knowledge_units": [
+        {
+          "unit_type": "habit_pattern",
+          "title": "Chronic Belly Sucking for Aesthetics",
+          "summary": "The habit of habitually sucking in the belly to appear thinner, often adopted for aesthetic reasons, leads to significant biomechanical dysfunction.",
+          "observable_signs": [
+            "Visually \"thin\" midsection, but often accompanied by a \"pooched out\" lower belly due to underlying postural issues."
+          ],
+          "mechanisms": [
+            "Leads to a mismatch in diaphragm and pelvic floor mechanics."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00-0:04",
+            "0:57-1:02"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Dysfunctional Diaphragm and Pelvic Floor Synchronicity",
+          "summary": "Habitual belly sucking creates a mismatch and dysfunction in the mechanics of the diaphragm and pelvic floor, which are normally synchronous during breathing. This leads to a hyper-inflated/hyper-inhaled state of the rib cage and a descended pelvic floor, often seen with anterior pelvic tilt.",
+          "observable_signs": [
+            "Flared rib cage",
+            "\"Pooched out\" lower belly",
+            "Anterior pelvic tilt",
+            "Hyper-lordotic posture"
+          ],
+          "mechanisms": [
+            "Normal breathing: Diaphragm descends on inhalation, pelvic floor descends synchronously. Diaphragm ascends on exhalation, pelvic floor ascends synchronously.",
+            "Belly sucking: Prevents the diaphragm from fully moving into an exhaled (ascended) state. Pushes things inwards and downwards, likely pushing the pelvic floor into a descended position and keeping it there.",
+            "Consequences: Dysfunctional diaphragm and pelvic floor mechanics lead to compensatory postural and breathing mechanics. The rib cage becomes stuck in a hyper-inflated/hyper-inhaled state."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For understanding the root cause of certain postural and breathing dysfunctions, especially those related to core stability and pelvic floor issues."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:05-0:13",
+            "0:18-0:20",
+            "0:25-0:35",
+            "0:36-0:56",
+            "1:04-1:14"
+          ]
+        },
+        {
+          "unit_type": "breathing_drill",
+          "title": "Seated Exhalation Drill with Pillow for Diaphragm/Pelvic Floor Synchronicity",
+          "summary": "A seated breathing exercise designed to restore proper diaphragm and pelvic floor synchronicity by facilitating a full exhalation and promoting posterior rib cage expansion, counteracting the hyper-inflated state caused by chronic belly sucking.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Sit on a chair with knees slightly higher than hips (use a step or elevated surface for feet if needed).",
+            "Take a small to medium-sized pillow, double-fold it in half.",
+            "Wedge the folded pillow as deep as possible into your hip crease.",
+            "Rest elbows on mid-thighs, with palms facing each other and breastbone pointing straight ahead.",
+            "Gently separate the space between shoulder blades and spine without shrugging shoulders (slight slouch is okay).",
+            "Fully exhale for 5-10 seconds, letting the air fall out without tension.",
+            "At the end of the exhalation, feel side abs engage subtly (not front abs).",
+            "Hold the subtle side abs engagement.",
+            "Inhale gently through the nose, allowing air to fall in (not an audible inhale, but a subtle, silent inhale)."
+          ],
+          "cues": [
+            "\"Wedge [pillow] as deep as you can in your hip crease.\"",
+            "\"Rest your elbows on your mid-thighs.\"",
+            "\"Breastbone pointing straight ahead.\"",
+            "\"Separate the space in between your shoulder blades and spine... without shrugging your shoulders.\"",
+            "\"Fully exhale. Let the air fall out of you without any tension for about 5 to 10 seconds.\"",
+            "\"Feel your side abs engage a little bit... not as much your six-pack abs, your front abs, but your side abs.\"",
+            "\"Hold onto those side abs very subtly as you inhale through your nose, gently allowing the air to fall into you.\"",
+            "\"It should not be an audible inhale. It should be a nice, gentle, subtle, silent inhale.\"",
+            "\"You're going to feel space in between your shoulder blades and spine expand.\""
+          ],
+          "breathing_cues": [
+            "Fully exhale for 5-10 seconds, letting the air fall out without tension.",
+            "Inhale gently through the nose, allowing air to fall in (not an audible inhale, but a subtle, silent inhale)."
+          ],
+          "errors_to_avoid": [
+            "Shrugging shoulders during shoulder blade separation.",
+            "Audible or forced inhalation.",
+            "Engaging front abs instead of side abs."
+          ],
+          "when_useful": [
+            "For individuals with dysfunctional breathing patterns, hyper-inflated rib cages, descended pelvic floors, or anterior pelvic tilt due to chronic belly sucking."
+          ],
+          "when_not_useful": [],
+          "retest": [
+            "Observe changes in posture, ease of breathing, and engagement of side abdominal muscles."
+          ],
+          "advice": [],
+          "timestamps": [
+            "1:35-3:00"
+          ]
+        }
+      ],
+      "model_notes": "The video provides a clear explanation of a common postural habit and its biomechanical implications, followed by a practical and well-demonstrated corrective breathing exercise. The use of a skeleton model and animated diagrams enhances the educational value. The exercise focuses on re-educating breathing mechanics to improve core and pelvic floor function."
+    }
+  },
+  {
+    "rank": 23,
+    "video_id": "3MPx8kfEHEs",
+    "url": "https://www.youtube.com/shorts/3MPx8kfEHEs",
+    "title": "El mejor ejercicio para corregir el desequilibrio de caderas y la postura.",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\023_3MPx8kfEHEs.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/3MPx8kfEHEs",
+      "source_title_hint": "El mejor ejercicio para corregir el desequilibrio de caderas y la postura.",
+      "primary_summary": "This video explains that lateral pelvic tilt is a total body compensation pattern, not just a hip issue, often involving a higher hip and lower shoulder on the same side due to a shifted center of gravity. It then demonstrates a side-lying wall reach exercise designed to create length and opening on the 'pulled over' side of the body, targeting both hip and ribcage mobility to address this imbalance.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear explanation of lateral pelvic tilt as a full-body compensation pattern and offers a specific corrective exercise with detailed visual and verbal instructions.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "pelvis",
+          "hips",
+          "spine",
+          "ribcage",
+          "shoulders"
+        ],
+        "problem_layers": [
+          "biomechanical",
+          "musculoskeletal",
+          "postural"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "lateral pelvic tilt",
+        "hip imbalance",
+        "posture correction",
+        "compensation patterns",
+        "center of gravity",
+        "ribcage mobility",
+        "shoulder position",
+        "side-lying exercise"
+      ],
+      "searchable_tags": [
+        "pelvic tilt",
+        "hip alignment",
+        "postural correction",
+        "body mechanics",
+        "corrective exercise",
+        "mobility drill",
+        "PRI principles"
+      ],
+      "problem_statements": [
+        "Lateral pelvic tilt is often misunderstood as solely a hip issue.",
+        "Many people try to fix lateral pelvic tilt by only focusing on hip exercises.",
+        "Lateral pelvic tilt represents a total body compensation pattern.",
+        "A higher hip on one side often correlates with a lower shoulder on the same side.",
+        "The body's center of gravity is pulled off to one side, leading to compensations."
+      ],
+      "habits_or_contexts": [],
+      "key_visual_points": [
+        "Animated skeleton overlay showing a level pelvis, then a tilted pelvis with a red dashed line.",
+        "Man demonstrating lateral pelvic tilt with a higher right hip and lower right shoulder.",
+        "Animated skeleton showing the center of gravity being pulled off to one side.",
+        "Man using a skeleton model to explain the interrelated hip and shoulder positions.",
+        "Demonstration of the side-lying wall reach exercise, highlighting leg and arm placement, and foot contact points.",
+        "Animated ribcage expansion during the breathing exercise."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Side-lying wall reach"
+      ],
+      "advice_mentioned": [
+        "To resolve lateral pelvic tilt, create length and opening on the side of the body that is being pulled over.",
+        "Improve the ability to push out of and turn out of the side being pulled over at the hips.",
+        "Create more opening of the ribcage and shoulder on the side where the shoulder is pulled down."
+      ],
+      "warnings_or_limitations": [
+        "Stop raising the elbow before any sensation of a stretch, not at the point of stretch."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Lateral Pelvic Tilt as a Total Body Compensation",
+          "summary": "Lateral pelvic tilt is often a total body compensation pattern, not just an isolated hip issue. When one hip is higher, the shoulder on the same side is often lower, indicating a shift in the body's center of gravity. The body compensates to maintain an even center of gravity, affecting the entire kinetic chain.",
+          "observable_signs": [
+            "Higher hip on one side",
+            "Lower shoulder on the same side",
+            "Center of gravity pulled off to one side"
+          ],
+          "mechanisms": [
+            "Body attempts to maintain an even center of gravity.",
+            "Interrelated positioning of the hip and shoulder on the same side."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Focusing solely on hip exercises to correct lateral pelvic tilt."
+          ],
+          "when_useful": [
+            "Understanding the systemic nature of postural imbalances.",
+            "Diagnosing the root cause of lateral pelvic tilt beyond local hip issues."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00-0:12",
+            "0:13-0:21",
+            "0:22-1:23"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Side-Lying Wall Reach for Lateral Pelvic Tilt",
+          "summary": "This exercise aims to create length and opening on the 'pulled over' side of the body, addressing lateral pelvic tilt by improving hip and ribcage mobility and promoting better alignment. It involves specific leg and arm positioning against a wall with gentle foot pressure and controlled breathing.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Creates length and opening on the compressed side of the body.",
+            "Improves ability to push out of and turn out of the 'pulled over' hip.",
+            "Promotes ribcage expansion and shoulder mobility on the affected side."
+          ],
+          "execution_steps": [
+            "Lie on your side with the top side being the side with the higher hip in your posture.",
+            "Support your head on a block or pillow.",
+            "Position the bottom leg straight with the foot against the wall.",
+            "Position the top leg by starting it around 90 degrees of hip/knee flexion, then dropping it down until the outside hip bone and outside knee are comfortably flat on the ground.",
+            "Place the bottom arm out in front of you, ensuring shoulders and hips are stacked in a straight line.",
+            "Wrap the fingers of your top hand around the back of your skull, starting with the elbow in a completely relaxed and dropped position.",
+            "Gently reach through the wall with your top-side foot (e.g., right foot if right hip is higher), feeling the base of the big toe and heel push into the wall with a very gentle, 2 out of 10 effort.",
+            "As you take a breath of air in, melt into this position, maintaining the slight reach through the wall with your foot.",
+            "On the exhale, slowly raise the top elbow towards the ceiling, stopping before any sensation of a stretch is felt."
+          ],
+          "cues": [
+            "\"Drop it down until you can comfortably feel your outside hip bone and your outside knee flat on the ground.\"",
+            "\"Keep your leg mostly straight, stopping the point where if you were to go back any further, you would feel like your back wants to arch at all. Stop short of that.\"",
+            "\"Making sure your shoulders and hips are in a straight line and stacked on top of each other.\"",
+            "\"Gently reach through the wall with your top side foot.\"",
+            "\"Feel the base of the big toe and heel push into the wall very gently, just a two out of ten.\"",
+            "\"Melt into this position, keeping that slight reach through that wall.\"",
+            "\"Slowly raise that elbow to the ceiling, stopping before any sensation of a stretch at all. You want to stop before that, not at that.\"",
+            "\"Keep that top side reach through the wall very gently, so two out of ten.\""
+          ],
+          "breathing_cues": [
+            "\"Breathe in through your nose, out through your mouth in a nice, relaxed manner.\"",
+            "\"Expand your ribcage on the top side and open it up.\""
+          ],
+          "errors_to_avoid": [
+            "Arching the back when positioning the top leg.",
+            "Pushing too hard with the top-side foot (keep it at 2/10 effort).",
+            "Raising the top elbow to the point of stretch."
+          ],
+          "when_useful": [
+            "Individuals with lateral pelvic tilt.",
+            "People experiencing hip imbalance.",
+            "Those with postural compensations related to hip and shoulder asymmetry."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "1:24-2:59"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines anatomical explanation with a practical corrective exercise. The visual aids (skeleton, animated lines/highlights) are very helpful for understanding the concepts and execution. The instructions for the exercise are clear and emphasize gentle, controlled movement and breathing, which is crucial for re-education."
+    }
+  },
+  {
+    "rank": 24,
+    "video_id": "GdG8ZqwoXMo",
+    "url": "https://www.youtube.com/shorts/GdG8ZqwoXMo",
+    "title": "Esto corrige la ciática más que el estiramiento",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\024_GdG8ZqwoXMo.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/GdG8ZqwoXMo",
+      "source_title_hint": "Esto corrige la ciática más que el estiramiento",
+      "primary_summary": "This video explains that while piriformis syndrome is often blamed for sciatica, an overly arched low back (hyperlordosis/anterior pelvic tilt) can also compress the sciatic nerve at the lumbar spine. It further explains how this posture can lead to compensatory piriformis overactivity, causing dual compression. The video then demonstrates a wall-supported hamstring activation exercise designed to achieve a posterior pelvic tilt, decompress the lumbar spine, and engage hamstrings, offering a corrective approach for sciatica.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a biomechanical explanation for a common cause of sciatica beyond piriformis syndrome, detailing how low back posture influences nerve compression. It then offers a specific, visually demonstrated corrective exercise with clear instructions and modifications, making it valuable for diagnostic support, explanation support, and corrective exercise selection.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "Low Back",
+          "Pelvis",
+          "Hip",
+          "Leg"
+        ],
+        "problem_layers": [
+          "Neurological",
+          "Musculoskeletal",
+          "Postural"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "High"
+      },
+      "searchable_topics": [
+        "Sciatica",
+        "Piriformis Syndrome",
+        "Low Back Pain",
+        "Nerve Compression",
+        "Pelvic Tilt",
+        "Posture Correction",
+        "Hamstring Activation",
+        "Lumbar Spine Decompression"
+      ],
+      "searchable_tags": [
+        "Sciatica relief",
+        "Piriformis",
+        "Lumbar spine",
+        "Nerve impingement",
+        "Anterior pelvic tilt",
+        "Posterior pelvic tilt",
+        "Hamstring engagement",
+        "Core stability",
+        "Hip internal rotation",
+        "Posture reeducation"
+      ],
+      "problem_statements": [
+        "Sciatica symptoms",
+        "Piriformis syndrome",
+        "Low back nerve compression",
+        "Hyperlordosis",
+        "Anterior pelvic tilt",
+        "Overactive piriformis muscle"
+      ],
+      "habits_or_contexts": [
+        "Constantly arched low back posture",
+        "Forward shifted center of gravity"
+      ],
+      "key_visual_points": [
+        "Animated overlay showing sciatic nerve path through piriformis muscle.",
+        "Animated overlay showing sciatic nerve roots exiting lumbar spine.",
+        "Diagram illustrating nerve compression at the lumbar spine due to disc herniation.",
+        "Skeleton model demonstrating hyperlordotic (overly arched and extended) low back position and anterior pelvic tilt.",
+        "Man demonstrating the wall-supported hamstring activation exercise, lying on his back with feet against a wall and a foam roller between his thighs.",
+        "Animated overlays highlighting hamstring engagement, heel pressure, tailbone lift, and inner thigh engagement during the exercise.",
+        "Demonstration of placing a pillow under the tailbone as a modification for difficulty."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Wall-supported hamstring activation / posterior pelvic tilt"
+      ],
+      "advice_mentioned": [
+        "Focus on bringing the pelvis back to a neutral position.",
+        "Engage hamstrings to achieve posterior pelvic tilt.",
+        "Maintain relaxed breathing during the exercise.",
+        "Use a foam roller between thighs for hip internal rotation benefit.",
+        "Use a pillow under the tailbone if struggling to flatten the low back."
+      ],
+      "warnings_or_limitations": [],
+      "knowledge_units": [
+        {
+          "unit_type": "educational_point",
+          "title": "Sciatica: Beyond Piriformis Syndrome",
+          "summary": "Many people with sciatica are incorrectly told that their piriformis muscle is the sole cause, being too tight or overactive and compressing the sciatic nerve. While piriformis can contribute, it's crucial to consider other potential sources of nerve compression.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For individuals experiencing sciatica symptoms attributed solely to piriformis syndrome."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:00-00:08"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Low Back Posture and Sciatic Nerve Compression",
+          "summary": "An important part of the sciatic nerve originates from the low back vertebrae. The position of the low back, particularly an overly arched (hyper-lordotic) and extended posture, can significantly compress the sciatic nerve at the lumbar spine.",
+          "observable_signs": [
+            "Hyper-lordotic posture (excessive arch in the lower back)",
+            "Anterior pelvic tilt"
+          ],
+          "mechanisms": [
+            "Hyper-lordotic posture (anterior pelvic tilt) compresses the sciatic nerve roots as they exit the lumbar vertebrae.",
+            "This compression can contribute to sciatica symptoms down the leg and into the back."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "When assessing the root cause of sciatica symptoms.",
+            "When piriformis syndrome treatments are ineffective."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:18-00:28",
+            "00:31-00:42"
+          ]
+        },
+        {
+          "unit_type": "compensation_pattern",
+          "title": "Anterior Pelvic Tilt Leading to Piriformis Overactivity",
+          "summary": "A constantly arched low back pushes the body's center of gravity forward. To counteract this and maintain upright posture against gravity, the body compensates by over-activating muscles on the backside of the pelvis, such as the piriformis. This compensatory gripping can lead to both low back and piriformis compression of the sciatic nerve simultaneously.",
+          "observable_signs": [
+            "Hyper-lordotic posture",
+            "Anterior pelvic tilt",
+            "Overactive or tight piriformis muscle"
+          ],
+          "mechanisms": [
+            "Anterior pelvic tilt shifts center of gravity forward.",
+            "Body engages posterior pelvic muscles (e.g., piriformis) to pull pelvis back and maintain balance.",
+            "Chronic engagement of piriformis can lead to tightness and compression of the sciatic nerve, in addition to lumbar compression."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "When diagnosing complex sciatica cases with multiple potential compression points.",
+            "When addressing postural imbalances contributing to nerve pain."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:44-01:17"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Wall-Supported Hamstring Activation for Posterior Pelvic Tilt",
+          "summary": "This exercise aims to decompress the lumbar spine and reduce sciatic nerve compression by promoting a posterior pelvic tilt and engaging the hamstrings. It helps to reposition the pelvis and flatten the lower back.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Engages hamstrings to create a posterior pelvic tilt.",
+            "Flattens the low back against the ground, decompressing the lumbar spine.",
+            "Can help reduce compression on the sciatic nerve from both the lumbar spine and piriformis."
+          ],
+          "execution_steps": [
+            "Lie on your back with knees and hips bent at 90 degrees, feet flat against a wall.",
+            "Optionally, place a small object (e.g., yoga block) under your heels for leverage.",
+            "Place a foam roller deep between your thighs, ensuring knees, feet, and hips remain in line.",
+            "Allow your chin to passively point towards the ceiling.",
+            "Keeping your whole foot flat and relaxed on the wall, focus on dragging your heels down into the wall/object.",
+            "This action should lift your tailbone slightly off the ground and flatten your low back against the ground, achieving a posterior pelvic tilt.",
+            "Engage your hamstrings on both sides."
+          ],
+          "cues": [
+            "Drag heels down into the wall.",
+            "Feel your tailbone lift off the ground.",
+            "Feel your low back flatten against the ground.",
+            "Engage your hamstrings."
+          ],
+          "breathing_cues": [
+            "Breathe in a relaxed fashion."
+          ],
+          "errors_to_avoid": [
+            "Do not tense your feet or other muscles unnecessarily.",
+            "Ensure only hamstrings are primarily working, not glutes or other back muscles."
+          ],
+          "when_useful": [
+            "For individuals with sciatica related to hyperlordosis or anterior pelvic tilt.",
+            "To teach proper hamstring activation and pelvic positioning."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "01:21-02:08",
+            "02:40-02:42"
+          ]
+        },
+        {
+          "unit_type": "technique_correction",
+          "title": "Enhancing Hamstring Engagement and Hip Internal Rotation",
+          "summary": "To further enhance the benefits of the wall-supported hamstring activation exercise, a slight squeeze on the foam roller between the thighs can be added. This engages the inner thighs and promotes hip internal rotation, which can help open up the backside of the hips more effectively.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Squeezing the foam roller activates adductor muscles (inner thighs).",
+            "Adductor activation can assist in hip internal rotation.",
+            "Hip internal rotation can further decompress the posterior hip region, potentially relieving piriformis-related compression."
+          ],
+          "execution_steps": [
+            "Perform the wall-supported hamstring activation as described.",
+            "Add a slight squeeze (2 out of 10 intensity) on the foam roller between your thighs."
+          ],
+          "cues": [
+            "Slightly squeeze the foam roller.",
+            "Feel your inner thighs engage."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Do not lose the whole foot flat on the wall with emphasis on the heels.",
+            "Avoid over-squeezing the foam roller, keep it a low intensity."
+          ],
+          "when_useful": [
+            "When additional hip internal rotation is desired.",
+            "To further target piriformis-related compression."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "02:18-02:39"
+          ]
+        },
+        {
+          "unit_type": "practical_advice",
+          "title": "Modification for Difficulty in Wall-Supported Hamstring Activation",
+          "summary": "If an individual struggles to flatten their low back or keep their tailbone off the ground during the wall-supported hamstring activation exercise, placing a pillow underneath the tailbone can provide assistance. This modification slightly tips the pelvis back, making it easier to engage the hamstrings and achieve the desired posterior pelvic tilt.",
+          "observable_signs": [
+            "Inability to flatten low back against the ground.",
+            "Difficulty lifting tailbone off the ground."
+          ],
+          "mechanisms": [
+            "A pillow under the tailbone provides external support, initiating a slight posterior pelvic tilt.",
+            "This makes it easier for individuals with significant anterior pelvic tilt or weak hamstrings to find the correct muscle activation."
+          ],
+          "execution_steps": [
+            "If struggling, slide a pillow underneath your tailbone.",
+            "Focus on dragging down with your heels to feel your hamstrings engage."
+          ],
+          "cues": [
+            "Use a pillow for support.",
+            "Focus on heel drag to engage hamstrings."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For beginners or individuals with significant postural limitations.",
+            "When initial attempts at the exercise do not yield proper low back flattening or hamstring engagement."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "02:43-02:56"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively uses anatomical models and visual overlays to explain complex biomechanical concepts, making it highly educational. The exercise demonstration is clear and includes practical modifications."
+    }
+  },
+  {
+    "rank": 25,
+    "video_id": "0cQxyJiVzzg",
+    "url": "https://www.youtube.com/shorts/0cQxyJiVzzg",
+    "title": "Deja de intentar \"ponerte derecho\" para corregir tu postura; haz esto en su lugar.",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\025_0cQxyJiVzzg.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/0cQxyJiVzzg",
+      "source_title_hint": "Deja de intentar \"ponerte derecho\" para corregir tu postura; haz esto en su lugar.",
+      "primary_summary": "This video explains why the common approach of trying to stand tall by squeezing shoulders back is counterproductive for posture, breathing, and shoulder mobility. It then introduces a wall-based drill to teach proper stacked alignment of the head, ribcage, and pelvis, focusing on posterior ribcage expansion and correct foot weight distribution for improved posture and breathing mechanics.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear explanation of common posture correction mistakes, detailing the biomechanical reasons why they are ineffective or harmful. It then offers a practical, actionable drill with specific cues for proper execution, making it valuable for both conceptual understanding and practical application in a biomechanical knowledge base.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "thoracic spine",
+          "lumbar spine",
+          "cervical spine",
+          "ribcage",
+          "shoulders",
+          "scapula",
+          "pelvis",
+          "feet",
+          "neck"
+        ],
+        "problem_layers": [
+          "musculoskeletal",
+          "respiratory",
+          "neuromuscular"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "posture correction",
+        "breathing mechanics",
+        "ribcage expansion",
+        "thoracic spine mobility",
+        "scapular movement",
+        "pelvic alignment",
+        "foot pressure distribution",
+        "neck breathing",
+        "accessory breathing muscles"
+      ],
+      "searchable_tags": [
+        "posture",
+        "breathing",
+        "ribcage",
+        "spine",
+        "shoulders",
+        "scapula",
+        "pelvis",
+        "feet",
+        "wall drill",
+        "kyphosis",
+        "lordosis",
+        "diaphragm",
+        "PSIS"
+      ],
+      "problem_statements": [
+        "Attempting to correct posture by simply standing tall and squeezing shoulders back.",
+        "Flared lower ribcage due to incorrect posture.",
+        "Inability for diaphragm and other muscles to properly create ribcage expansion in all directions, especially the back.",
+        "Reliance on neck breathing strategy due to inadequate ribcage expansion.",
+        "Flattening of the natural human spinal curves (thoracic kyphosis, lumbar/cervical lordosis).",
+        "Compromised scapular-thoracic relationship leading to limited healthy shoulder movement."
+      ],
+      "habits_or_contexts": [
+        "Trying to 'stand up straight' by forcing shoulders back",
+        "Poor posture habits leading to a rounded upper back and forward head"
+      ],
+      "key_visual_points": [
+        "A woman demonstrating a rounded upper back and forward head posture.",
+        "A woman demonstrating an incorrect posture correction by squeezing shoulders back, which causes a flared ribcage.",
+        "Animated skeleton showing the trapezius muscles and how squeezing shoulders back compromises movement, posture, and breathing.",
+        "Animated skeleton illustrating a flared lower ribcage and its impact on diaphragm function.",
+        "Animated skeleton showing the ribcage expanding in all directions, emphasizing posterior expansion.",
+        "Animated skeleton highlighting neck muscles (scalenes) as accessory breathing muscles.",
+        "Animated skeleton demonstrating the natural curves of the spine (lumbar lordosis, thoracic kyphosis, cervical lordosis).",
+        "Animated skeleton showing how flattening the thoracic spine affects scapular position.",
+        "Animated skeleton illustrating the natural rounded shape of the scapula and its fit on the thoracic spine.",
+        "A woman performing the wall posture correction drill, with visual overlays indicating knee angle, PSIS contact, and foot pressure points.",
+        "Visual overlay of stacked head, ribcage, and pelvis during the wall drill."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Wall Posture Correction Drill"
+      ],
+      "advice_mentioned": [
+        "Do not try to correct posture by just standing up and squeezing your shoulders back, as this will make it worse.",
+        "Instead, teach your body what it feels like to get into a good stacked position of head over ribcage over pelvis.",
+        "Focus on better weight distribution through key areas of the foot."
+      ],
+      "warnings_or_limitations": [],
+      "knowledge_units": [
+        {
+          "unit_type": "educational_point",
+          "title": "Detrimental Effects of Forcing Shoulders Back for Posture Correction",
+          "summary": "Attempting to correct posture by squeezing the shoulders back and standing excessively tall compromises several biomechanical aspects, including proper breathing mechanics, natural spinal curvature, and healthy shoulder movement.",
+          "observable_signs": [
+            "Flared lower ribcage",
+            "Flattened natural spinal curves (especially thoracic kyphosis)",
+            "Limited shoulder movement"
+          ],
+          "mechanisms": [
+            "Squeezing shoulders back causes the lower ribcage to flare, which inhibits the diaphragm's ability to create proper 3D ribcage expansion (especially posterior expansion).",
+            "Lack of proper ribcage expansion can lead to reliance on accessory neck muscles for breathing (neck breathing strategy).",
+            "Flattening the natural kyphotic curve of the thoracic spine disrupts the natural resting position and gliding movement of the scapula on the ribcage, limiting healthy shoulder mobility."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Actively squeezing shoulders back to 'stand tall'",
+            "Forcing a flat upper back"
+          ],
+          "when_useful": [
+            "For individuals who habitually try to force an upright posture by retracting their shoulders",
+            "For understanding the interconnectedness of posture, breathing, and shoulder mechanics"
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00",
+            "0:06"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Importance of Natural Spinal Curves and Ribcage Expansion for Function",
+          "summary": "The human spine has natural curves (lordosis in lumbar/cervical, kyphosis in thoracic) that are essential for optimal function. The ribcage should expand in all directions, particularly posteriorly, during inhalation for efficient diaphragm function and to prevent reliance on accessory neck breathing muscles. The scapula naturally sits on the rounded thoracic spine, allowing for smooth movement.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Natural spinal curves (lumbar lordosis, thoracic kyphosis, cervical lordosis) are crucial for spinal health and movement.",
+            "The thoracic spine's natural kyphosis provides a stable and mobile base for the scapula to glide on, facilitating healthy shoulder movement.",
+            "Proper diaphragm function requires 3D expansion of the ribcage during inhalation, especially posterior expansion, which is often overlooked.",
+            "When ribcage expansion is compromised (e.g., due to a flared ribcage), the body compensates by engaging accessory neck muscles for breathing, leading to potential neck tension and inefficient respiration."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For educating patients on proper spinal mechanics and breathing",
+            "For diagnosing issues related to restricted ribcage movement or compensatory breathing patterns"
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:07",
+            "0:18",
+            "0:26",
+            "0:33",
+            "0:48",
+            "1:07"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Wall Posture Correction Drill for Stacked Alignment and Breathing",
+          "summary": "A wall-supported drill designed to re-educate the body on achieving a stacked alignment of the head, ribcage, and pelvis, while promoting proper posterior ribcage expansion during breathing and balanced foot pressure distribution.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Stand with your back against a wall, feet hip-width apart, taking a step forward from the wall.",
+            "Ensure knees are straight but not actively locked out, creating an open angle at the knee.",
+            "Adjust distance from the wall until you gently feel both PSIS (posterior superior iliac spine) points on the back of your pelvis making contact with the wall.",
+            "Place hands on the wall at shoulder height, with elbows bent to a 60-degree angle or less relative to your trunk.",
+            "Gently separate your shoulder blades away from your spine (protraction) while maintaining hand contact with the wall.",
+            "Keeping eyes straight ahead, exhale very gently through your mouth for approximately 5 seconds, letting the air fall out naturally.",
+            "Pause briefly, then close your mouth and gently inhale through your nose, focusing on expanding the back of your ribcage without engaging your neck muscles.",
+            "Maintain awareness of the stacked position (head over ribcage over pelvis) and balanced weight distribution through the heels (60%) and the base of the big toe and little toe (40%)."
+          ],
+          "cues": [
+            "Open angle at the knee",
+            "Knees straight, not locked out",
+            "Feel PSIS contact on both sides",
+            "Elbows bent, hands on wall",
+            "Gently separate shoulder blades from spine",
+            "Exhale gently through mouth for 5 seconds",
+            "Pause, close mouth, inhale gently through nose",
+            "Focus on back/ribcage expansion",
+            "Avoid engaging neck muscles during inhalation",
+            "Maintain stacked head over ribcage over pelvis",
+            "Feel 60% weight on heels, 40% on big toe and little toe mounds"
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Actively locking out the knees",
+            "Forcing the back flat against the wall",
+            "Engaging neck muscles during inhalation",
+            "Squeezing shoulders back"
+          ],
+          "when_useful": [
+            "For individuals with poor postural awareness",
+            "To improve breathing mechanics and diaphragm function",
+            "To re-establish natural spinal curves and scapular rhythm",
+            "As a foundational exercise for overall body alignment"
+          ],
+          "when_not_useful": [],
+          "retest": [
+            "Subjective feeling of better stacked alignment",
+            "Improved awareness of posterior ribcage expansion during breathing",
+            "Reduced neck tension during breathing"
+          ],
+          "advice": [],
+          "timestamps": [
+            "1:37"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively uses visual aids (human model, animated skeleton) to explain complex biomechanical concepts in an accessible way. The progression from problem identification to detailed explanation and then a practical solution is well-structured. The cues for the exercise are clear and emphasize sensory feedback, which is crucial for movement re-education."
+    }
+  },
+  {
+    "rank": 26,
+    "video_id": "p5DK9LzquW8",
+    "url": "https://www.youtube.com/shorts/p5DK9LzquW8",
+    "title": "Este músculo mantiene bloqueada la articulación sacroilíaca",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\026_p5DK9LzquW8.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/p5DK9LzquW8",
+      "source_title_hint": "Este músculo mantiene bloqueada la articulación sacroilíaca",
+      "primary_summary": "This video explains how a tight Quadratus Lumborum (QL) muscle can contribute to unilateral low back pain and restrict rib cage expansion. It demonstrates two corrective stretches: a hip-dip stretch using an elevated surface and a modified side-lying QL stretch, emphasizing proper breathing and form to achieve length and separation in the spine and rib cage.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear explanation of the Quadratus Lumborum's role in low back pain and its impact on rib cage mechanics and breathing. It offers two distinct, visually demonstrated corrective exercises with specific cues and error avoidance, making it valuable for diagnostic support, explanation support, and corrective exercise selection.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "Lumbar Spine",
+          "Pelvis",
+          "Rib Cage",
+          "Hip"
+        ],
+        "problem_layers": [
+          "Muscular",
+          "Skeletal",
+          "Respiratory",
+          "Postural"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "Quadratus Lumborum",
+        "QL tightness",
+        "Low back pain",
+        "Lateral flexion",
+        "Rib cage expansion",
+        "Breathing mechanics",
+        "Postural imbalance",
+        "Hip-dip stretch",
+        "Side-lying stretch"
+      ],
+      "searchable_tags": [
+        "QL stretch",
+        "Back pain relief",
+        "Core stability",
+        "Spinal mobility",
+        "Breathing exercises",
+        "Posture correction",
+        "Side bend"
+      ],
+      "problem_statements": [
+        "Unilateral Quadratus Lumborum (QL) tightness",
+        "Unilateral low back pain",
+        "Restricted rib cage expansion",
+        "Body's center of gravity pulled to one side",
+        "Compromised breathing mechanics due to rib cage restriction"
+      ],
+      "habits_or_contexts": [],
+      "key_visual_points": [
+        "3D skeleton model highlighting the Quadratus Lumborum (QL) muscle.",
+        "Man shown with a red overlay indicating unilateral low back pain.",
+        "3D skeleton model demonstrating lateral flexion (side bending) of the trunk.",
+        "Man with superimposed lines showing a shifted center of gravity and pelvic tilt.",
+        "3D skeleton model illustrating the rib cage being pulled down on one side.",
+        "3D skeleton model with lungs showing restricted rib cage expansion.",
+        "Animated skeleton and muscle model demonstrating the hip-dip stretch, highlighting separation between the rib cage and pelvis and lengthening of the QL.",
+        "Demonstration of the hip-dip stretch using a wooden box as an elevated surface.",
+        "Demonstration of the side-lying QL stretch with a pillow for support."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Hip-dip stretch",
+        "Side-lying QL stretch"
+      ],
+      "advice_mentioned": [
+        "Focus on creating length and separation in the spine and rib cage, not just chasing sensation.",
+        "Ensure the rib cage stays relatively down throughout the stretch, avoiding arching.",
+        "Inhale during the descent phase of the hip-dip stretch to promote rib cage expansion.",
+        "Exhale to engage bottom-side abs and inhale to reach during the side-lying stretch."
+      ],
+      "warnings_or_limitations": [
+        "Avoid arching the back during the stretch, as this will engage the QL more and the abs less, counteracting the stretch's purpose."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Quadratus Lumborum (QL) Role in Low Back Pain and Postural Imbalance",
+          "summary": "The Quadratus Lumborum (QL) muscle is a significant contributor to low back pain, especially when tight unilaterally. Its primary action is lateral flexion (side bending) of the trunk. Unilateral tightness can pull the body's center of gravity to one side, pull the rib cage down, and restrict proper rib cage expansion during breathing.",
+          "observable_signs": [
+            "Unilateral low back pain",
+            "Visible lateral flexion or side bending of the trunk",
+            "Restricted rib cage expansion on the affected side"
+          ],
+          "mechanisms": [
+            "Unilateral QL tightness causes lateral flexion of the lumbar spine.",
+            "Lateral flexion shifts the body's center of gravity.",
+            "QL tightness pulls the rib cage down on the affected side, limiting its ability to open and expand with breath."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Diagnosing or explaining unilateral low back pain",
+            "Understanding postural imbalances related to the QL",
+            "Addressing breathing restrictions linked to QL tightness"
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:00",
+            "00:25"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Hip-Dip Stretch for QL Lengthening and Rib Cage Expansion",
+          "summary": "A stretch designed to lengthen the Quadratus Lumborum (QL) muscle and promote rib cage expansion on the compressed side, performed with one elbow on an elevated surface.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Creates length and separation between the rib cage and pelvis on the stretching side.",
+            "Allows for rib cage expansion on the compressed side during inhalation."
+          ],
+          "execution_steps": [
+            "Find an elevated surface (bench, box) that is just taller than your knees; a taller object makes the stretch easier.",
+            "Get into a supported position with one foot flat on the ground, knee bent.",
+            "Place the elbow of the same side arm on the elevated surface, ensuring the shoulder is comfortable and not stressed.",
+            "The other leg is extended out to the side.",
+            "Inhale and slowly drop down into the stretch, allowing the hip on the stretching side to descend.",
+            "Stop at the point where going lower would cause the opposite shoulder to hike up into the neck.",
+            "Exhale and push through the foot to return to the neutral starting position (emphasizes hip-driven return).",
+            "Alternatively, press through the elbow to return to the neutral starting position (emphasizes core-driven return, using more abs)."
+          ],
+          "cues": [
+            "Inhale as you descend to facilitate rib cage expansion.",
+            "Sense the space opening up through the side of your torso with the inhale."
+          ],
+          "breathing_cues": [
+            "Inhale during descent.",
+            "Exhale during ascent."
+          ],
+          "errors_to_avoid": [
+            "Do not arch the back/rib cage up, as this will engage the QL more and the abs less.",
+            "Avoid going too low and chasing sensation, which can lead to compensatory movements like shoulder hiking."
+          ],
+          "when_useful": [
+            "Addressing unilateral QL tightness.",
+            "Improving lateral spinal mobility.",
+            "Restoring rib cage expansion on a compressed side.",
+            "Correcting postural imbalances related to QL."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:26",
+            "01:00",
+            "01:49"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Side-Lying QL Stretch (Modified for Reduced Strength)",
+          "summary": "A modified side-lying stretch for individuals who may lack the strength or stability for the hip-dip stretch, focusing on lengthening the QL and opening the rib cage using a pillow for support.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Uses gravity and limb reaching to create length and separation on the top side of the torso.",
+            "Promotes rib cage expansion through controlled breathing."
+          ],
+          "execution_steps": [
+            "Lie on your side with a double-folded pillow underneath the side you want to stretch (the top side).",
+            "Support your head as if taking a nap.",
+            "Keep your top-side arm slightly out in front of your body.",
+            "Keep your top-side leg slightly out in front of your body, but long.",
+            "Exhale and feel the bottom-side abs engage.",
+            "Inhale and reach your top-side arm and top-side leg slightly away from you.",
+            "Feel the space open up on the top side of your torso."
+          ],
+          "cues": [
+            "Exhale to engage bottom-side abs.",
+            "Inhale and reach to create length and expansion."
+          ],
+          "breathing_cues": [
+            "Exhale to stabilize.",
+            "Inhale to stretch and expand."
+          ],
+          "errors_to_avoid": [
+            "Ensure the rib cage does not flare during the stretch."
+          ],
+          "when_useful": [
+            "As an alternative for individuals lacking strength or stability for the hip-dip stretch.",
+            "For a gentler approach to lengthening the QL and improving rib cage mobility."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "02:23"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines anatomical explanation with practical exercise demonstrations. The use of 3D models and visual cues enhances understanding of the biomechanical concepts. The inclusion of a modified exercise for different strength levels adds to its utility."
+    }
+  },
+  {
+    "rank": 27,
+    "video_id": "u92YxyW0rt4",
+    "url": "https://www.youtube.com/shorts/u92YxyW0rt4",
+    "title": "Su trabajo de movilidad está incompleto sin esto",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\027_u92YxyW0rt4.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/u92YxyW0rt4",
+      "source_title_hint": "Su trabajo de movilidad está incompleto sin esto",
+      "primary_summary": "The video explains that common hip mobility exercises often focus solely on hip external rotation, which involves the femoral head gliding forward in the hip socket. It argues that many people have restrictions in hip internal rotation, which requires the femoral head to glide backward. The video then demonstrates two exercises (one passive, one dynamic) to improve posterior femoral glide and internal rotation, which can enhance overall hip mobility.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a biomechanical explanation of hip joint movement (femoral glide during rotation) and addresses a common misconception about hip mobility. It offers specific, visually demonstrated exercises to target a commonly overlooked aspect of hip mobility (internal rotation/posterior glide).",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "Hip",
+          "Pelvis",
+          "Femur"
+        ],
+        "problem_layers": [
+          "Joint mechanics",
+          "Mobility",
+          "Muscle activation"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "High"
+      },
+      "searchable_topics": [
+        "Hip mobility",
+        "Hip internal rotation",
+        "Hip external rotation",
+        "Femoral glide",
+        "Hip joint mechanics",
+        "Corrective exercise",
+        "Posterior hip capsule stretch"
+      ],
+      "searchable_tags": [
+        "Hip",
+        "Mobility",
+        "Internal rotation",
+        "External rotation",
+        "Femur",
+        "Acetabulum",
+        "Joint glide",
+        "Exercise",
+        "Passive stretch",
+        "Dynamic stretch",
+        "All fours"
+      ],
+      "problem_statements": [
+        "Common hip opener stretches often only address hip external rotation.",
+        "Many individuals have restrictions in hip internal rotation and posterior femoral glide.",
+        "Anteriorly biased femoral head position can limit perceived external rotation."
+      ],
+      "habits_or_contexts": [
+        "Performing hip stretches that primarily focus on external rotation.",
+        "Seeking to improve overall hip mobility and range of motion."
+      ],
+      "key_visual_points": [
+        "Demonstration of common hip stretches (pigeon pose variation, kneeling lunge variation) incorrectly marked with a red 'X' to highlight their limitation.",
+        "3D animation of the hip joint showing the femoral head sliding forward with external rotation.",
+        "3D animation of the hip joint showing the femoral head sliding backward with internal rotation.",
+        "Demonstration of the 'All Fours Passive Hip Internal Rotation Stretch' from multiple angles.",
+        "Demonstration of the 'All Fours Dynamic Hip Internal Rotation Drill' using books for elevation."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "All Fours Passive Hip Internal Rotation Stretch",
+        "All Fours Dynamic Hip Internal Rotation Drill"
+      ],
+      "advice_mentioned": [
+        "Improve the ability of the femur to slide better back within the hip socket.",
+        "Improving posterior glide can provide more space for both internal and external rotation.",
+        "Never feel the stretch in the front of your hip during these exercises; if so, adjust position or reduce intensity."
+      ],
+      "warnings_or_limitations": [
+        "Avoid feeling the stretch in the front of the hip, as this indicates improper execution or excessive range.",
+        "During the dynamic drill, avoid rocking the hips significantly to one side."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Hip Joint Femoral Glide and Rotation Mechanics",
+          "summary": "Hip external rotation is associated with the femoral head sliding relatively forward within the hip socket (anterior glide). Conversely, hip internal rotation is associated with the femoral head moving backward (posterior glide) within the hip socket. Many common hip stretches primarily target external rotation, potentially neglecting restrictions in posterior femoral glide, which can limit overall hip mobility, including perceived external rotation.",
+          "observable_signs": [
+            "Limited hip internal rotation",
+            "Perceived limitation in hip external rotation despite stretching into external rotation"
+          ],
+          "mechanisms": [
+            "External rotation causes anterior femoral head glide.",
+            "Internal rotation causes posterior femoral head glide.",
+            "Restrictions in posterior glide can limit internal rotation and indirectly affect external rotation by reducing available joint space."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For understanding the arthrokinematics of the hip joint.",
+            "When assessing hip mobility limitations beyond simple range of motion.",
+            "To explain why traditional hip stretches might not be fully effective."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:11",
+            "00:19",
+            "00:32",
+            "00:45"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "All Fours Passive Hip Internal Rotation Stretch",
+          "summary": "A passive stretch performed in an all-fours position to improve posterior femoral glide and hip internal rotation by gently pushing the femoral head backward in the hip socket.",
+          "observable_signs": [
+            "Stretch felt in the back of the hip."
+          ],
+          "mechanisms": [
+            "Promotes posterior femoral head glide.",
+            "Increases hip internal rotation range of motion."
+          ],
+          "execution_steps": [
+            "Start in an all-fours position with hands under shoulders and knees under hips.",
+            "Take the passive leg (the side to be stretched) and hook its knee around the mid-shin range of the other leg.",
+            "Gently drop the knee of the passive leg to the ground.",
+            "Hold this position to feel a stretch in the back of the hip.",
+            "To increase the stretch, drop down to the elbow on the same side as the stretched hip.",
+            "Further increase the stretch by reaching the opposite arm overhead, slowly extending with each exhale."
+          ],
+          "cues": [
+            "Hands underneath your shoulders, knees underneath your hips.",
+            "Hook that knee around the mid-ish shin range.",
+            "Drop that knee to the ground.",
+            "Drop down to your elbow on that same side.",
+            "Reach it overhead slowly, every exhale try to reach it a little bit further overhead."
+          ],
+          "breathing_cues": [
+            "Exhale to reach a little bit further overhead."
+          ],
+          "errors_to_avoid": [
+            "Never feel this in the front of your hip. If you do, go back up to the hands-only position and work your way down over time."
+          ],
+          "when_useful": [
+            "To passively improve hip internal rotation.",
+            "To address restrictions in posterior femoral glide."
+          ],
+          "when_not_useful": [
+            "If experiencing pain in the front of the hip."
+          ],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "01:17",
+            "02:02"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "All Fours Dynamic Hip Internal Rotation Drill",
+          "summary": "A dynamic exercise performed in an all-fours position with one knee elevated, designed to actively improve hip internal rotation and posterior femoral glide.",
+          "observable_signs": [
+            "Feeling a little bit of inner thigh activation on the elevated knee side as the knee goes down.",
+            "Possibly a little stretch in the back of the hip."
+          ],
+          "mechanisms": [
+            "Actively promotes posterior femoral head glide.",
+            "Improves active control and range of hip internal rotation."
+          ],
+          "execution_steps": [
+            "Start in an all-fours position with hands under shoulders and knees under hips.",
+            "Place about 3-4 inches of elevation (e.g., books) under the knee of the side you want to work on.",
+            "Keep the low back neutral and flat.",
+            "Subtly shift your body weight over to the elevated side.",
+            "Exhale gently through your mouth as you drop the elevated knee down towards the ground.",
+            "Stop at the point where if you went any further, you would have to rock your hips significantly to one side.",
+            "Very slowly raise that knee back up to the elevated position.",
+            "Dynamically move in and out of this position for 2-3 sets of 15 repetitions."
+          ],
+          "cues": [
+            "Get about four, maybe three-ish inches of elevation.",
+            "Hands underneath your shoulders, knees underneath your hips.",
+            "Keeping your low back neutral and flat.",
+            "Subtly shifting your body weight over to the elevated side.",
+            "Exhale through your mouth gently as you drop that knee.",
+            "Stopping at the point where if you went any further, you would have to rock your hips to one side significantly.",
+            "Very slowly raise that knee up.",
+            "Dynamically move in and out of this position."
+          ],
+          "breathing_cues": [
+            "Exhale gently as you drop that knee."
+          ],
+          "errors_to_avoid": [
+            "Do not rock your hips to one side significantly when dropping the knee."
+          ],
+          "when_useful": [
+            "To actively improve hip internal rotation.",
+            "To build control and strength in the newly gained range of motion."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [
+            "Perform for about 2-3 sets of 15 reps."
+          ],
+          "timestamps": [
+            "02:02",
+            "02:57"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively explains a nuanced biomechanical concept and provides practical, actionable exercises. The use of 3D animations and clear demonstrations enhances its educational value. The distinction between passive and dynamic drills is also well-presented."
+    }
+  },
+  {
+    "rank": 28,
+    "video_id": "FoNjEz5rUW4",
+    "url": "https://www.youtube.com/shorts/FoNjEz5rUW4",
+    "title": "El método definitivo para abrir el pecho y los hombros",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\028_FoNjEz5rUW4.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/FoNjEz5rUW4",
+      "source_title_hint": "El método definitivo para abrir el pecho y los hombros",
+      "primary_summary": "The video explains how to optimize hanging from a bar to decompress the spine and open the shoulders and chest. It details how tight lats and pectorals can lead to rounded shoulders, a rounded upper spine, and a hyper-lordotic lower spine, compressing the rib cage and limiting breathing. The video then demonstrates a modified hanging technique with elevated feet and specific breathing cues to achieve maximal length through the entire lat and spine, promoting better rib cage expansion.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear biomechanical explanation of common postural issues related to tight lats and pectorals, and offers a specific, optimized corrective exercise (hanging) with detailed execution steps and breathing cues to address these issues. It is valuable for diagnostic support, explanation support, corrective exercise selection, and biomechanical concept retrieval.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "Spine",
+          "Thoracic Spine",
+          "Lumbar Spine",
+          "Shoulders",
+          "Chest",
+          "Rib Cage",
+          "Lats",
+          "Pectorals"
+        ],
+        "problem_layers": [
+          "Musculoskeletal",
+          "Postural",
+          "Breathing Mechanics"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "Hanging exercise",
+        "Spinal decompression",
+        "Shoulder mobility",
+        "Chest opening",
+        "Latissimus dorsi stretch",
+        "Pectoral stretch",
+        "Posture correction",
+        "Thoracic spine mobility",
+        "Lumbar spine extension",
+        "Rib cage expansion",
+        "Breathing mechanics",
+        "Hyper-lordosis",
+        "Rounded shoulders"
+      ],
+      "searchable_tags": [
+        "hanging",
+        "spinehealth",
+        "posture",
+        "mobility",
+        "stretch",
+        "lats",
+        "pecs",
+        "breathing",
+        "decompression",
+        "shouldermobility",
+        "cheststretch",
+        "thoracicmobility",
+        "lumbarspine"
+      ],
+      "problem_statements": [
+        "Compressed spine due to tight muscles.",
+        "Rounded shoulders and upper spine.",
+        "Hyper-lordotic lower spine.",
+        "Shortened and overactive pectorals and latissimus dorsi.",
+        "Compressed rib cage and restricted breathing.",
+        "Inability to achieve full length through the entire lat muscle."
+      ],
+      "habits_or_contexts": [
+        "Activities that lead to shortened pectorals and lats.",
+        "Poor posture leading to spinal compression and rounding."
+      ],
+      "key_visual_points": [
+        "Animated anatomical models highlighting the latissimus dorsi and teres major muscles.",
+        "Animated skeletal model demonstrating rounded upper spine and hyper-lordotic lower spine.",
+        "Animated skeletal model demonstrating rib cage compression.",
+        "Demonstration of incorrect hanging posture (arched lower back).",
+        "Demonstration of optimized hanging posture with feet elevated on a bench.",
+        "Visual cues for spinal flexion and rib cage expansion during the optimized hang."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Optimized Hanging"
+      ],
+      "advice_mentioned": [
+        "Elevate feet on a bench or object to achieve relative spinal flexion/rounding in the lower back.",
+        "Ensure the pelvis is level or parallel with the ground during the hang.",
+        "Allow yourself to hang and relax the neck and traps.",
+        "Softly and fully exhale for 5-10 seconds with a relaxed jaw, feeling obliques engage.",
+        "Gently inhale through the nose for about 5 seconds, letting air fall in and feeling chest and lats open up."
+      ],
+      "warnings_or_limitations": [
+        "Avoid elevating feet so high that the low back tucks underneath, as this can compromise upper spine length.",
+        "Incorrect hanging with an arched back will only stretch upper lat fibers and not maximally stretch the entire lat."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "educational_point",
+          "title": "Benefits of Hanging for Spinal Decompression and Mobility",
+          "summary": "Hanging from a bar can decompress the spine and open up the shoulders and chest. It provides length through all areas of the spine and where the latissimus dorsi attaches.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Gravitational pull elongates the spine.",
+            "Stretches muscles connecting the arms, shoulders, and spine."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For individuals seeking spinal decompression.",
+            "To improve shoulder and chest mobility."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00",
+            "0:04",
+            "0:49",
+            "0:55"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Impact of Tight Lats and Pectorals on Posture and Spine",
+          "summary": "When the pectorals and latissimus dorsi are too short and overactive, they pull the shoulders forward, round the upper spine, and can push the lower spine into extension (hyper-lordosis). This creates a shortened and compressed spinal position and restricts rib cage expansion.",
+          "observable_signs": [
+            "Rounded shoulders (protraction).",
+            "Rounded upper spine (thoracic kyphosis).",
+            "Overly arched lower spine (lumbar hyper-lordosis).",
+            "Compressed rib cage."
+          ],
+          "mechanisms": [
+            "Tight lats pull the humerus into internal rotation and extension, affecting shoulder girdle position.",
+            "Tight pectorals pull the shoulders forward and inward.",
+            "Lats attach to the humerus, scapula, ribs, thoracic and lumbar spine, and pelvis, influencing multiple spinal segments.",
+            "Tight lats can pull the lumbar spine into extension, creating a hyper-lordotic curve.",
+            "Upper spine rounds to compensate for lower spine extension and forward shoulder posture.",
+            "Compressed rib cage limits diaphragmatic breathing and full lung expansion."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:11",
+            "0:20",
+            "0:30",
+            "0:36",
+            "1:45"
+          ]
+        },
+        {
+          "unit_type": "technique_correction",
+          "title": "Optimized Hanging for Full Lat and Spinal Length",
+          "summary": "To achieve maximal length through all areas of the latissimus dorsi and the entire spine, especially the lower spine, perform hanging with feet elevated on a bench. This allows for relative spinal flexion (rounding) in the lower back, counteracting hyper-lordosis and promoting full spinal decompression.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Set up a pull-up bar or rings with a bench or object underneath.",
+            "Elevate your feet on the bench so your pelvis is level or parallel with the ground.",
+            "Hang from the bar, allowing your body to relax and decompress.",
+            "Ensure your neck and traps are relaxed, not shrugging.",
+            "Softly and fully exhale for 5-10 seconds with a relaxed jaw, feeling your side abs or obliques engage.",
+            "Hold the oblique engagement slightly as you gently inhale through your nose for about 5 seconds, letting the air fall into your chest and feeling your chest and lats open up even more."
+          ],
+          "cues": [
+            "Pelvis level with the ground.",
+            "Relax neck and traps.",
+            "Soft, full exhale.",
+            "Relaxed jaw.",
+            "Feel obliques engage on exhale.",
+            "Gentle, nasal inhale.",
+            "Feel chest and lats open on inhale."
+          ],
+          "breathing_cues": [
+            "Softly and fully exhale for 5-10 seconds with a relaxed jaw.",
+            "Gently inhale through your nose for about 5 seconds, letting the air fall into your chest."
+          ],
+          "errors_to_avoid": [
+            "Hanging with an arched lower back, which only stretches upper lat fibers and not the entire lat.",
+            "Elevating feet too high, causing the low back to tuck excessively."
+          ],
+          "when_useful": [
+            "For individuals with tight lats and pectorals.",
+            "To correct rounded shoulders and upper back.",
+            "To address lumbar hyper-lordosis.",
+            "To improve overall spinal length and decompression.",
+            "To re-educate proper rib cage expansion and breathing mechanics."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:56",
+            "1:19",
+            "2:20"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines anatomical explanation with practical exercise demonstration. The use of a skeleton model and animated muscle overlays enhances the educational value. The detailed instructions for the optimized hang and breathing technique make it highly actionable for a biomechanical knowledge base."
+    }
+  },
+  {
+    "rank": 29,
+    "video_id": "h9Bkooj_eHY",
+    "url": "https://www.youtube.com/shorts/h9Bkooj_eHY",
+    "title": "Esto soluciona el dolor de la articulación sacroilíaca más que el estiramiento",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\029_h9Bkooj_eHY.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/h9Bkooj_eHY",
+      "source_title_hint": "Esto soluciona el dolor de la articulación sacroilíaca más que el estiramiento",
+      "primary_summary": "This video explains that sacroiliac (SI) joint pain is often caused by the pelvis being stuck in an externally rotated position due to tight posterior pelvic muscles, which limits internal rotation of the hips and pelvis. It then demonstrates a side-lying drill using a towel and foam roller to encourage internal rotation of the pelvis and femurs, aiming to decompress the SI joint and improve mobility.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear biomechanical explanation for a common cause of SI joint pain and offers a specific, visually demonstrated corrective exercise to address this issue. It includes setup details, execution cues, and warnings.",
+        "exclusion_reason": null,
+        "content_kind": "corrective_protocol",
+        "body_regions": [
+          "pelvis",
+          "sacroiliac joint",
+          "hip",
+          "lower back"
+        ],
+        "problem_layers": [
+          "biomechanical_dysfunction",
+          "muscular_imbalance",
+          "joint_mobility"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "sacroiliac joint pain",
+        "SI joint dysfunction",
+        "pelvic rotation",
+        "hip internal rotation",
+        "hip external rotation",
+        "piriformis syndrome",
+        "pelvic alignment",
+        "corrective exercise"
+      ],
+      "searchable_tags": [
+        "SI joint",
+        "sacroiliac joint",
+        "hip mobility",
+        "pelvic mobility",
+        "internal rotation",
+        "external rotation",
+        "corrective exercise",
+        "foam roller",
+        "towel",
+        "decompression",
+        "posterior pelvic muscles"
+      ],
+      "problem_statements": [
+        "Stiff or locked-up SI joint",
+        "SI joint pain",
+        "Pelvis stuck in external rotation",
+        "Tight and compressed muscles on the backside of the pelvis",
+        "Limited ability of the pelvis to move into internal rotation",
+        "Femurs pulled into external rotation"
+      ],
+      "habits_or_contexts": [],
+      "key_visual_points": [
+        "Animated skeleton highlighting a stiff SI joint.",
+        "Animated skeleton demonstrating a pelvis stuck in external rotation (squeezed) and the desired internal rotation (opened).",
+        "Animated muscles (deep hip external rotators) shown as tight/compressed.",
+        "Demonstration of the side-lying exercise with a towel placed under the iliac crest and a foam roller between the thighs."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Side-lying pelvic/femoral internal rotation drill"
+      ],
+      "advice_mentioned": [
+        "Focus on subtle movements, much less than you think is needed.",
+        "Perform the exercise with the least amount of tension in the entire body."
+      ],
+      "warnings_or_limitations": [
+        "Do not roll the top knee so far forward that you feel pinching in the front of the hip.",
+        "Do not push to the point where the lower back starts to move noticeably."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Pelvic External Rotation as a Cause of SI Joint Pain",
+          "summary": "Sacroiliac (SI) joint pain is often associated with a pelvis that is stuck in an externally rotated position. This occurs when the muscles on the backside of the pelvis (e.g., deep hip external rotators) become tight and compressed, squeezing the pelvis into this shape. This external rotation pulls the femurs out, limiting the pelvis's and femurs' ability to achieve internal rotation, which is crucial for normal movement patterns like walking.",
+          "observable_signs": [
+            "Stiff or locked-up SI joint",
+            "Pelvis appears to be in an externally rotated position (visual assessment by a professional)"
+          ],
+          "mechanisms": [
+            "Tightness/compression of posterior pelvic muscles (e.g., piriformis, gemelli, obturators)",
+            "Pelvic bones (ilia) are held in an externally rotated position relative to the sacrum",
+            "Limited internal rotation of the hip joint (femur within acetabulum)",
+            "Limited internal rotation of the pelvis itself"
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For understanding the underlying biomechanical cause of certain types of SI joint pain",
+            "As a diagnostic consideration for SI joint dysfunction"
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00-0:53"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Side-Lying Pelvic/Femoral Internal Rotation Drill",
+          "summary": "This drill aims to restore internal rotation of the pelvis and femurs, thereby decompressing the SI joint and improving overall hip and pelvic mobility. It involves subtle, controlled movements while lying on your side with specific props.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Encourages internal rotation of the femur in the hip socket",
+            "Promotes internal rotation of the ilium relative to the sacrum",
+            "Decompresses tight posterior pelvic muscles",
+            "Improves mobility of the SI joint"
+          ],
+          "execution_steps": [
+            "Gather a rolled-up hand towel (thickness may vary for comfort) and a foam roller. Optionally, use a yoga block or pillow for head support.",
+            "Lie on your side with the rolled towel placed under the top of your pelvic crest (iliac crest) on the downside, ensuring bone-to-towel contact, not muscle or tissue.",
+            "Place the foam roller between your mid-thighs, keeping your feet stacked on top of each other. Adjust the amount of hip bend for comfort.",
+            "Exhale: Gently push the top knee forward, about 1-2 inches ahead of the bottom knee, keeping your feet stacked. This action pushes the downside femur into internal rotation and the pelvis into internal rotation.",
+            "Inhale: Very gently reverse the movement, bringing the top knee about 1-2 inches behind the bottom knee. This shifts the pressure on the pelvic crest from the front to the back side.",
+            "Continue performing very slow repetitions, aiming for about 1 inch per second, gently rolling from the back to the front side of the pelvic crest bone."
+          ],
+          "cues": [
+            "\"Melt that bone onto the towel roll.\"",
+            "\"Push that top knee ahead of the bottom knee.\"",
+            "\"Very gently go back.\"",
+            "\"What is the least amount of tension that I can do this with in my entire body?\""
+          ],
+          "breathing_cues": [
+            "Exhale as you push the top knee forward.",
+            "Inhale as you bring the top knee back."
+          ],
+          "errors_to_avoid": [
+            "Avoid rolling the top knee so far forward that you feel any pinching in the front of your hip.",
+            "Avoid pushing to the point where your lower back starts to move noticeably."
+          ],
+          "when_useful": [
+            "For individuals experiencing SI joint pain or stiffness.",
+            "To improve hip and pelvic internal rotation mobility.",
+            "To decompress tight posterior hip and pelvic muscles."
+          ],
+          "when_not_useful": [
+            "If it causes pinching in the front of the hip.",
+            "If it causes noticeable lower back movement or pain."
+          ],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "1:02-3:00"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines anatomical explanation with a practical corrective exercise. The visual aids (skeleton model, animated muscle highlights) are very helpful for understanding the biomechanical concepts. The exercise demonstration is clear, with specific instructions on setup, execution, breathing, and common errors to avoid. The emphasis on subtle movement and minimal tension is a good safety cue."
+    }
+  },
+  {
+    "rank": 30,
+    "video_id": "IBm0juAugwY",
+    "url": "https://www.youtube.com/shorts/IBm0juAugwY",
+    "title": "El 99% de las personas hacen este estiramiento incorrectamente",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_21_30\\030_IBm0juAugwY.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/IBm0juAugwY",
+      "source_title_hint": "El 99% de las personas hacen este estiramiento incorrectamente",
+      "primary_summary": "This video explains how to correctly perform the frog pose, a popular hip mobility stretch. It highlights common errors, such as compensating with spinal movement and losing proper knee/ankle contact, and provides a detailed biomechanical explanation along with a corrected technique to ensure genuine hip joint mobility.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear biomechanical explanation of a common hip mobility exercise, identifies frequent errors and compensation patterns, and offers a detailed, corrected technique with specific cues for proper execution. This is valuable for diagnostic support, explanation support, corrective exercise selection, and biomechanical concept retrieval.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "hips",
+          "knees",
+          "ankles",
+          "spine",
+          "low back"
+        ],
+        "problem_layers": [
+          "mobility",
+          "technique",
+          "compensation patterns"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "frog pose",
+        "hip mobility",
+        "hip external rotation",
+        "hip abduction",
+        "adductor stretch",
+        "groin stretch",
+        "movement compensation",
+        "spinal movement",
+        "knee contact",
+        "ankle contact",
+        "stretching technique",
+        "biomechanics of stretching"
+      ],
+      "searchable_tags": [
+        "mobility drill",
+        "stretch",
+        "hip stretch",
+        "adductors",
+        "groin",
+        "technique correction",
+        "biomechanics",
+        "movement quality",
+        "corrective exercise"
+      ],
+      "problem_statements": [
+        "Incorrect frog pose technique leading to compensation",
+        "Chasing stretch sensation over genuine hip joint movement",
+        "Compensating with low back/spine during hip abduction stretches",
+        "Losing proper inner knee and inner ankle contact during frog pose",
+        "Creating more tension when stretching too hard"
+      ],
+      "habits_or_contexts": [
+        "Performing frog pose for hip mobility",
+        "Stretching inner thighs and groin"
+      ],
+      "key_visual_points": [
+        "Animated skeleton showing hip external rotation and abduction in frog pose.",
+        "Demonstration of common incorrect frog pose where knees splay out and inner knee/ankle contact is lost.",
+        "Demonstration of correct frog pose maintaining inner knee and inner ankle contact.",
+        "Use of a hip and femur skeleton model to illustrate proper hip joint movement versus spinal compensation."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "frog pose"
+      ],
+      "advice_mentioned": [
+        "Focus on genuine hip movement rather than just a maximal stretch sensation.",
+        "Maintain contact with the inside of the knee and the very front side of the inner ankle bone (medial malleolus).",
+        "Keep the spine neutral during the stretch.",
+        "Gently separate shoulder blades away from the spine.",
+        "Stop moving hips back when contacts are lost, jamming is felt in the hips, or spinal movement occurs."
+      ],
+      "warnings_or_limitations": [
+        "Forcing a stretch can create more tension, which is counterproductive for relaxation.",
+        "Losing proper knee and ankle contacts can lead to compensatory spinal movement or jamming in the hip joint."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "compensation_pattern",
+          "title": "Common Errors and Compensations in Frog Pose",
+          "summary": "Many individuals perform the frog pose incorrectly by prioritizing a maximal stretch sensation, which often leads to compensatory movement from the spine and low back instead of genuine hip joint mobility. This incorrect technique typically involves rolling onto the middle of the knee and losing crucial contact with the inner knee and inner ankle.",
+          "observable_signs": [
+            "Rolling onto the middle of the knee",
+            "Loss of contact with the inside of the knee",
+            "Loss of contact with the inner ankle bone (medial malleolus)",
+            "Excessive arching or movement in the low back/spine",
+            "Feeling a 'bigger stretch' in the groin that may not be indicative of genuine hip mobility"
+          ],
+          "mechanisms": [
+            "Insufficient genuine hip abduction and external rotation range of motion.",
+            "Attempting to achieve a deeper stretch by compensating with movement from the lumbar spine.",
+            "Altered joint mechanics at the knee and ankle due to improper weight distribution and contact points."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Forcing a deep stretch beyond genuine hip range of motion.",
+            "Losing contact with the inner knee or inner ankle.",
+            "Allowing the spine to arch or move excessively to compensate for hip immobility."
+          ],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:06",
+            "00:35",
+            "01:11"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "Optimized Frog Pose for Genuine Hip Mobility",
+          "summary": "To effectively stretch the hip adductors and improve hip external rotation and abduction, focus on maintaining specific contact points and controlled movement. This ensures genuine movement within the hip joint, preventing spinal compensation and maximizing mobility gains.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Maintaining specific ground contacts (inner knee, inner ankle) ensures the femur moves genuinely within the hip socket (acetabulum).",
+            "Neutral spine position isolates hip movement and prevents compensatory lumbar extension.",
+            "Gentle, controlled movement promotes active range of motion and reduces passive overstretching."
+          ],
+          "execution_steps": [
+            "Start in a quadruped position (on hands and knees).",
+            "Widen the knees to a comfortable frog-like stance.",
+            "Ensure the inside of the knee maintains contact with the ground.",
+            "Ensure the very front side of the inner ankle bone (medial malleolus) maintains contact with the ground.",
+            "Adjust your stance (knee width, foot position) until these two contact points are gently established.",
+            "Keep your spine in a neutral position, avoiding excessive arching or rounding.",
+            "Gently separate your shoulder blades away from your spine.",
+            "Slowly and gently set your hips back towards your heels.",
+            "Stop the movement at the point just before you feel like you lose any of the established knee or ankle contacts, or if you feel jamming in the front of your hips, or if your spine has to move to any significant extent."
+          ],
+          "cues": [
+            "\"Find that inside knee and just the very front side of the inner ankle bone.\"",
+            "\"Keeping your spine neutral.\"",
+            "\"Very gently separating your shoulder blades away from your spine.\"",
+            "\"Set your hips back very gently.\""
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Losing contact with the inner knee or inner ankle.",
+            "Forcing movement beyond the genuine hip range.",
+            "Allowing the low back to arch or move excessively.",
+            "Feeling jamming or pinching in the front of the hips."
+          ],
+          "when_useful": [
+            "To improve hip abduction and external rotation mobility.",
+            "To effectively stretch the inner thighs and groin muscles.",
+            "To re-educate movement patterns and prevent spinal compensation during hip stretches."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [
+            "Play around with your stance to find the optimal position for maintaining contacts.",
+            "Focus on a mild, genuine stretch rather than a maximal, forced sensation."
+          ],
+          "timestamps": [
+            "01:49"
+          ]
+        }
+      ],
+      "model_notes": "The analysis successfully identified the core problem (incorrect frog pose technique and compensation), explained the biomechanical rationale, and provided a detailed, actionable corrective protocol. The use of visual points and specific cues from the video enhances the knowledge units."
+    }
+  }
+]

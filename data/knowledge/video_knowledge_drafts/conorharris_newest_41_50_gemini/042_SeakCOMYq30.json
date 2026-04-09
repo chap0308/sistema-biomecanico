@@ -1,0 +1,292 @@
+{
+  "source_url": "https://www.youtube.com/shorts/SeakCOMYq30",
+  "source_title_hint": "El mito número uno del dolor lumbar",
+  "primary_summary": "This video debunks the myth that spinal flexion is inherently bad for low back pain. Instead, it posits that the issue often lies in an individual's inability to tolerate spinal flexion due to being stuck in either excessive lumbar extension (hyper-lordotic posture with anterior pelvic tilt) or excessive lumbar flexion (sway back posture). It provides a specific corrective exercise for each postural presentation to gradually increase tolerance to the necessary movement.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides valuable biomechanical concepts regarding spinal flexion tolerance and identifies two distinct postural patterns (hyper-lordotic and sway back) linked to low back pain. It then offers targeted corrective exercises with visual execution details for each pattern, making it suitable for diagnostic, explanation, and corrective exercise support.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "lumbar spine",
+      "pelvis",
+      "hips",
+      "thoracic spine"
+    ],
+    "problem_layers": [
+      "musculoskeletal",
+      "neuromuscular",
+      "postural"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "Low back pain",
+    "Spinal flexion",
+    "Spinal extension",
+    "Posture correction",
+    "Movement tolerance",
+    "Hyper-lordosis",
+    "Anterior pelvic tilt",
+    "Sway back posture",
+    "Posterior pelvic tilt",
+    "Core stability",
+    "Diaphragmatic breathing"
+  ],
+  "searchable_tags": [
+    "Lumbar spine",
+    "Back pain relief",
+    "Postural mechanics",
+    "Mobility drills",
+    "Corrective exercises",
+    "Biomechanics",
+    "Movement re-education",
+    "Pelvic alignment"
+  ],
+  "problem_statements": [
+    "Fear of spinal flexion leading to avoidance",
+    "Inability to tolerate spinal flexion",
+    "Low back pain associated with hyper-lordotic posture",
+    "Low back pain associated with sway back posture",
+    "Being stuck in excessive lumbar extension",
+    "Being stuck in excessive lumbar flexion"
+  ],
+  "habits_or_contexts": [
+    "Living in a state of excessive lumbar extension (hyper-lordotic)",
+    "Living in a state of excessive lumbar flexion (sway back)"
+  ],
+  "key_visual_points": [
+    "3D anatomical models illustrating spinal flexion and extension.",
+    "3D anatomical models illustrating hyper-lordotic posture with anterior pelvic tilt.",
+    "3D anatomical models illustrating sway back posture with posterior pelvic tilt.",
+    "Demonstration of a wall squat exercise for increasing lumbar flexion tolerance.",
+    "Demonstration of a supine wall push exercise with lumbar towel support for increasing lumbar extension tolerance.",
+    "Visual cues for foot contact points (three points on the foot) and pelvic contact points (PSIS)."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Wall Squat for Lumbar Flexion Tolerance",
+    "Supine Wall Push with Lumbar Support for Extension Tolerance"
+  ],
+  "advice_mentioned": [
+    "Slowly increase tolerance to moving into spinal flexion/extension.",
+    "Breathe slowly and diaphragmatically during exercises.",
+    "Ensure comfort and absence of pain or tension in the back during exercises."
+  ],
+  "warnings_or_limitations": [
+    "Instilling fear of moving into spinal flexion can be as dangerous as actually moving into it for those who cannot tolerate it.",
+    "Moving into unfamiliar positions too quickly can be scary for the body and may not be ready for it."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Spinal Flexion is Not Inherently Bad for Low Back Pain",
+      "summary": "The common belief that spinal flexion (rounding the low back) should be avoided for low back pain is a myth. The real issue is often an inability to tolerate spinal flexion. Instilling fear of spinal flexion can be as detrimental as actually moving into it for people who cannot tolerate it.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Fear avoidance behavior",
+        "Reduced movement variability",
+        "Lack of tissue tolerance to specific spinal movements"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For patients with low back pain who have been advised to avoid spinal flexion",
+        "To educate on the importance of movement tolerance over movement avoidance"
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:00",
+        "0:22"
+      ]
+    },
+    {
+      "unit_type": "deficiency_pattern",
+      "title": "Hyper-lordotic Posture with Anterior Pelvic Tilt",
+      "summary": "This postural pattern is characterized by individuals being stuck in excessive lumbar extension and anterior pelvic tilt. This position can make moving into spinal flexion uncomfortable or painful.",
+      "observable_signs": [
+        "Excessive lumbar lordosis (extension)",
+        "Anterior pelvic tilt"
+      ],
+      "mechanisms": [
+        "Chronic muscle imbalances (e.g., tight hip flexors, weak abdominals)",
+        "Habitual posture",
+        "Reduced mobility in the lumbar spine for flexion"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "When assessing individuals with low back pain who present with an exaggerated lumbar curve and forward-tilted pelvis."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:25",
+        "0:44",
+        "0:54",
+        "1:04"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Wall Squat for Lumbar Flexion Tolerance (Hyper-lordotic Posture)",
+      "summary": "A gentle wall squat exercise designed to slowly increase tolerance to lumbar flexion for individuals who are habitually stuck in excessive lumbar extension and anterior pelvic tilt.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Gradual exposure to lumbar flexion",
+        "Improved proprioception of pelvic and spinal position",
+        "Enhanced neuromuscular control of lumbar spine and pelvis"
+      ],
+      "execution_steps": [
+        "Stand one foot length away from a wall, with feet hip-width apart.",
+        "Use a chair in front for support.",
+        "Ensure even pressure on three points of contact on both feet, especially the heels.",
+        "Start with knees locked out.",
+        "Slowly unlock the knees and slide down the wall, gently pushing the chair away.",
+        "Actively separate the shoulder blades away from the spine.",
+        "Stop at the point where the PSIS (posterior superior iliac spine) on the back of the pelvis gently contacts the wall, indicating a healthy amount of lumbar flexion.",
+        "Hold this position and breathe slowly and diaphragmatically (in through the nose, out through the mouth)."
+      ],
+      "cues": [
+        "\"Feel these three points of contact evenly on both sides, especially your heels.\"",
+        "\"Slowly unlock your knees as you slide down the wall, pushing the chair gently away from you.\"",
+        "\"Separating your shoulder blades away from your spine.\"",
+        "\"Stop at the point where you feel these two points of contact on the back of your pelvis called your PSIS come gently into rest with the wall.\"",
+        "\"Breathe in through your nose, out through your mouth.\"",
+        "\"Slow diaphragmatic breaths.\"",
+        "\"Make sure your body feels safe and comfortable in this position.\""
+      ],
+      "breathing_cues": [
+        "In through your nose, out through your mouth.",
+        "Slow diaphragmatic breaths."
+      ],
+      "errors_to_avoid": [
+        "Moving too quickly into the position.",
+        "Pushing too hard into the wall with the pelvis.",
+        "Experiencing pain or tension in the back."
+      ],
+      "when_useful": [
+        "For individuals with hyper-lordotic posture and anterior pelvic tilt who need to increase tolerance to lumbar flexion."
+      ],
+      "when_not_useful": [
+        "For individuals with sway back posture (excessive lumbar flexion)."
+      ],
+      "retest": [
+        "Assess comfort and range of motion in spinal flexion after consistent practice."
+      ],
+      "advice": [
+        "Adjust the depth of the squat to find a comfortable position where the PSIS gently contacts the wall.",
+        "Focus on relaxation and diaphragmatic breathing throughout the hold."
+      ],
+      "timestamps": [
+        "1:05",
+        "1:45"
+      ]
+    },
+    {
+      "unit_type": "deficiency_pattern",
+      "title": "Sway Back Posture",
+      "summary": "This postural pattern is characterized by individuals being stuck with excessive rounding of the low back, where the low back is tucked underneath (posterior pelvic tilt). For these individuals, moving into further flexion does not feel good.",
+      "observable_signs": [
+        "Excessive lumbar kyphosis (rounding)",
+        "Posterior pelvic tilt",
+        "Low back appears 'tucked underneath'"
+      ],
+      "mechanisms": [
+        "Chronic muscle imbalances (e.g., tight hamstrings, weak back extensors)",
+        "Habitual posture",
+        "Reduced mobility in the lumbar spine for extension"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "When assessing individuals with low back pain who present with a flattened or rounded lumbar spine and a tucked pelvis."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:45",
+        "0:53",
+        "1:46",
+        "1:51"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Supine Wall Push with Lumbar Support for Extension Tolerance (Sway Back Posture)",
+      "summary": "A supine exercise designed to improve the ability to move into a healthy amount of lumbar extension for individuals with a sway back posture, allowing for more space to move into flexion later.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Gradual exposure to lumbar extension with support",
+        "Improved proprioception of lumbar curve",
+        "Enhanced neuromuscular control of lumbar spine and pelvis"
+      ],
+      "execution_steps": [
+        "Lie on your back with feet up against a wall, shins parallel to the ground.",
+        "Roll up a towel to a comfortable thickness and slide it underneath the apex curvature of your low back, where you have the most curve.",
+        "Ensure you can be in this position completely relaxed with no pain or tension, feeling only the towel supporting your curve.",
+        "Feel the three points of contact in your feet (inner heel and base of big toe, without losing the outside toe).",
+        "Gently push your feet into the wall.",
+        "Reach your hands for the ceiling and very gently go back, stopping before your lower back arch increases further.",
+        "Hold this position and breathe deeply and slowly (in through the nose, out through the mouth)."
+      ],
+      "cues": [
+        "\"Get your feet up against a wall like so with your shins parallel to the ground.\"",
+        "\"Roll up a towel about this thick, but your mileage may vary. Find what's comfortable for you.\"",
+        "\"Slide it underneath the apex curvature of your low back, where you have the most amount of curve.\"",
+        "\"You should be able to be in this position completely relaxed and no pain or tension in your back at all.\"",
+        "\"You should only just feel it supporting your curve.\"",
+        "\"Adjust the thickness of the towel accordingly.\"",
+        "\"Feel these three points of contact in your feet, but especially your inner heel and base of the big toe, without losing the outside toe.\"",
+        "\"Push it into the wall very gently.\"",
+        "\"You shouldn't feel a lot of muscular action occur, but you should feel that pressure into the wall.\"",
+        "\"Take your hands, reach them for the ceiling and very gently go back.\"",
+        "\"Don't rest to the point where your lower back arch is more, just stop short of that.\"",
+        "\"Hold this position as you breathe in through your nose, out through your mouth.\"",
+        "\"Deep, slow diaphragmatic breaths.\""
+      ],
+      "breathing_cues": [
+        "In through your nose, out through your mouth.",
+        "Deep, slow diaphragmatic breaths."
+      ],
+      "errors_to_avoid": [
+        "Using a towel that is too thick or too thin, causing discomfort or lack of support.",
+        "Losing the specified foot contact points.",
+        "Pushing too hard into the wall, causing muscular tension.",
+        "Over-arching the lower back when reaching arms back, beyond the supported curve."
+      ],
+      "when_useful": [
+        "For individuals with sway back posture who need to improve tolerance to lumbar extension and create more space for subsequent flexion."
+      ],
+      "when_not_useful": [
+        "For individuals with hyper-lordotic posture (excessive lumbar extension)."
+      ],
+      "retest": [
+        "Assess comfort and range of motion in spinal extension and subsequent flexion after consistent practice."
+      ],
+      "advice": [
+        "Adjust towel thickness to achieve a comfortable, supported lumbar curve without pain.",
+        "Focus on gentle pressure and diaphragmatic breathing."
+      ],
+      "timestamps": [
+        "2:07",
+        "2:59"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively uses 3D anatomical models to illustrate postural concepts and then demonstrates practical exercises. The distinction between hyper-lordotic and sway back postures, and the tailored exercises, are particularly useful for a biomechanical knowledge base. The emphasis on 'tolerance' and 'comfort' aligns with modern pain science principles."
+}

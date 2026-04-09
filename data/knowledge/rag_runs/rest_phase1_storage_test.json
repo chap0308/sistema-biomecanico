@@ -1,0 +1,121 @@
+{
+  "user_id": "11111111-1111-1111-1111-111111111111",
+  "conversation_id": "7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d",
+  "message_id": "b56c4386-50b3-4197-8ad1-36976059fe3e",
+  "uploads": [
+    {
+      "bucket": "Postura",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_front.jpeg",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_front.jpeg",
+      "artifact_kind": "image",
+      "artifact_role": "original"
+    },
+    {
+      "bucket": "Postura",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_side.jpeg",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_side.jpeg",
+      "artifact_kind": "image",
+      "artifact_role": "original"
+    },
+    {
+      "bucket": "Postura",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_back.jpeg",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_back.jpeg",
+      "artifact_kind": "image",
+      "artifact_role": "original"
+    },
+    {
+      "bucket": "Postura-analisis",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_front_overlay.png",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura-analisis/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_front_overlay.png",
+      "artifact_kind": "debug_image",
+      "artifact_role": "debug_overlay"
+    },
+    {
+      "bucket": "Postura-analisis",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_side_overlay.png",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura-analisis/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_side_overlay.png",
+      "artifact_kind": "debug_image",
+      "artifact_role": "debug_overlay"
+    },
+    {
+      "bucket": "Postura-analisis",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_back_overlay.png",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura-analisis/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_back_overlay.png",
+      "artifact_kind": "debug_image",
+      "artifact_role": "debug_overlay"
+    },
+    {
+      "bucket": "Postura-analisis",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_metrics.csv",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura-analisis/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/rest_phase1_metrics.csv",
+      "artifact_kind": "document",
+      "artifact_role": "metrics_csv"
+    },
+    {
+      "bucket": "Postura-analisis",
+      "path": "11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/response.json",
+      "public_url": "https://lpclraomqgffudcguyfb.supabase.co/storage/v1/object/public/Postura-analisis/11111111-1111-1111-1111-111111111111/chat/7c0d9fac-3c1c-4b38-9802-dc1fcf9ae19d/b56c4386-50b3-4197-8ad1-36976059fe3e/response.json",
+      "artifact_kind": "document",
+      "artifact_role": "response_json"
+    }
+  ],
+  "findings_count": 7,
+  "deficiencies_count": 3,
+  "deficiencies": [
+    {
+      "id": "postural_shoulder_asymmetry",
+      "label": "Asimetría postural de hombros",
+      "summary": "La postura en reposo sugiere una diferencia relevante en la línea de hombros.",
+      "severity": "mild",
+      "confidence": "high",
+      "supporting_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "related_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "weight": null,
+      "view": "front",
+      "source_group": "rest_phase1",
+      "body_region": "shoulder",
+      "related_metrics": []
+    },
+    {
+      "id": "thoracic_posture_pattern",
+      "label": "Patrón postural torácico",
+      "summary": "La postura en reposo sugiere un sesgo torácico relevante que debe interpretarse con contexto clínico.",
+      "severity": "mild",
+      "confidence": "medium",
+      "supporting_findings": [
+        "thoracic_kyphosis_bias"
+      ],
+      "related_findings": [
+        "thoracic_kyphosis_bias"
+      ],
+      "weight": null,
+      "view": "side",
+      "source_group": "rest_phase1",
+      "body_region": "thoracic_spine",
+      "related_metrics": []
+    },
+    {
+      "id": "postural_shoulder_asymmetry",
+      "label": "Asimetría postural de hombros",
+      "summary": "La postura en reposo sugiere una diferencia relevante en la línea de hombros.",
+      "severity": "mild",
+      "confidence": "high",
+      "supporting_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "related_findings": [
+        "shoulder_height_asymmetry"
+      ],
+      "weight": null,
+      "view": "back",
+      "source_group": "rest_phase1",
+      "body_region": "shoulder",
+      "related_metrics": []
+    }
+  ]
+}

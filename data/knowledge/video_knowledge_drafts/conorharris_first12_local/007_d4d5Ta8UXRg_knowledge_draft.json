@@ -1,0 +1,169 @@
+{
+  "source_url": "https://www.youtube.com/shorts/d4d5Ta8UXRg",
+  "source_title_hint": "How To (actually) Fix Your Flat Feet",
+  "analysis_origin": "hf_structured_analysis:openai/gpt-oss-120b",
+  "primary_summary": "Flat feet are often misunderstood as a collapsed arch that must be \"raised\"; instead the foot uses pronation (arch lowering) as a normal motion. The foot can achieve this via two strategies – relative motion of the foot's bones/joints versus a whole‑foot orientation (dumping). A forward‑shifted centre of gravity forces more load onto the mid‑ and forefoot, flattening the arch over time. Restoring genuine pronation rather than relying on a single dumping strategy is the recommended corrective approach.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Provides biomechanical concepts about flat feet and pronation useful for education and protocol design",
+    "exclusion_reason": null,
+    "content_kind": "informational_concept",
+    "body_regions": [
+      "foot"
+    ],
+    "problem_layers": [
+      "flat feet",
+      "pronation"
+    ],
+    "suitable_for_protocol_database": false,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": false,
+    "contains_visual_execution_detail": false,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "flat feet",
+    "pronation",
+    "relative motion",
+    "orientation",
+    "centre of gravity",
+    "foot mechanics"
+  ],
+  "searchable_tags": [
+    "foot",
+    "arch",
+    "loading",
+    "gait"
+  ],
+  "problem_statements": [
+    "Flat feet are often perceived as a collapse that must be corrected by raising the arch",
+    "A forward centre of gravity increases forefoot loading and can further flatten the foot"
+  ],
+  "habits_or_contexts": [
+    "leaning forward during stance",
+    "relying solely on foot dumping during running"
+  ],
+  "key_visual_points": [
+    "Relative motion of foot joints vs whole‑foot orientation",
+    "Shift of centre of gravity backward to reduce forefoot load"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [],
+  "advice_mentioned": [
+    "Restore genuine pronation instead of compensatory pronation"
+  ],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Flat‑foot misconception",
+      "summary": "Most people assume flat feet need a higher arch, but pronation (arch lowering) is a functional aspect of foot mechanics.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Foot pronation allows the arch to lower naturally during stance"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Understanding foot biomechanics"
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0.0-7.4"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Two foot motion strategies",
+      "summary": "The foot can achieve pronation via (1) relative motion of its bones/joints or (2) whole‑foot orientation where the foot dumps onto the ground.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Relative motion maintains segmental movement; orientation collapses the foot as a single unit"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Designing gait‑training or rehabilitation strategies"
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "18.8-41.1"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Effect of forward centre of gravity",
+      "summary": "Leaning forward shifts body weight onto the mid‑ and forefoot, which over time can flatten the arch and promote compensatory pronation.",
+      "observable_signs": [
+        "Increased forefoot pressure"
+      ],
+      "mechanisms": [
+        "Forward shift of COM increases load under forefoot"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Identifying gait patterns that exacerbate flat‑foot issues"
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "81.7-90.8"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Restoring genuine pronation",
+      "summary": "Corrective work should focus on restoring true pronation rather than relying solely on foot dumping, by addressing why the foot is flat and shifting the centre of gravity backward.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Improving relative motion capacity of foot joints"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Designing flat‑foot rehabilitation protocols"
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "59.6-74.6"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 37,
+    "transcript_segment_count": 34,
+    "ocr_observation_count": 12,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 37,
+    "asset_count": 38
+  },
+  "analysis_provider": "hf_structured",
+  "analysis_quality": "standard",
+  "is_active": true,
+  "supersedes_draft_id": null
+}

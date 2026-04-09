@@ -1,0 +1,2299 @@
+[
+  {
+    "rank": 11,
+    "video_id": "mI2n6asSFos",
+    "url": "https://www.youtube.com/shorts/mI2n6asSFos",
+    "title": "Esta técnica secreta de liberación libera tus pies y tobillos.",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\011_mI2n6asSFos.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/mI2n6asSFos",
+      "source_title_hint": "Esta técnica secreta de liberación libera tus pies y tobillos.",
+      "primary_summary": "This video explains that common foot problems like plantar fasciitis are often due to the foot's inability to properly move through pronation and supination, and to maintain three points of contact (heel, big toe, little toe) with even pressure. It then demonstrates three specific lacrosse ball rolling techniques designed to improve foot contact and mobility, targeting different areas of the foot: the inner foot (big toe/inner heel), the transverse arch (windshield wiper motion), and the outer foot (pinky toe/outer heel). The speaker emphasizes controlled, directional rolling over mindless random rolling.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides clear explanations of foot biomechanics related to common issues like plantar fasciitis and offers specific, visually demonstrated corrective exercises with detailed execution instructions and cues.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "foot",
+          "ankle"
+        ],
+        "problem_layers": [
+          "biomechanical_dysfunction",
+          "pain",
+          "mobility_restriction"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "Plantar Fasciitis",
+        "Foot Pain",
+        "Foot Mobility",
+        "Ankle Mobility",
+        "Foot Arch",
+        "Pronation",
+        "Supination",
+        "Self-Myofascial Release",
+        "Foot Mechanics",
+        "Proprioception"
+      ],
+      "searchable_tags": [
+        "lacrosse ball",
+        "foot rolling",
+        "foot release",
+        "arch support",
+        "foot mechanics",
+        "foot stability",
+        "pain relief",
+        "self-care"
+      ],
+      "problem_statements": [
+        "Plantar fasciitis",
+        "General foot problems",
+        "Inability of the foot to properly move through pronation or supination",
+        "Difficulty maintaining three points of contact (heel, base of big toe, base of little toe) with even pressure"
+      ],
+      "habits_or_contexts": [
+        "Mindlessly rolling plantar fascia in random directions without specific intent"
+      ],
+      "key_visual_points": [
+        "3D anatomical model of the foot and ankle highlighting muscles and bones.",
+        "Visual overlays on the foot model indicating pronation (flattening of arch) and supination (raising of arch).",
+        "Visual overlays on the foot model showing the three points of contact (heel, base of big toe, base of little toe).",
+        "Demonstration of foot rolling exercises using a lacrosse ball on artificial turf.",
+        "Visual overlays (lines, circles) on the foot during demonstrations to indicate ball placement and rolling direction."
+      ],
+      "tests_mentioned": [
+        "Self-assessment of foot contact and even pressure while standing"
+      ],
+      "exercises_mentioned": [
+        "Lacrosse ball roll for inner foot (big toe and inner heel)",
+        "Lacrosse ball roll for transverse arch (windshield wiper motion)",
+        "Lacrosse ball roll for outer foot (pinky toe and outer heel)"
+      ],
+      "advice_mentioned": [
+        "Adopt a strategic approach to foot rolling for better results.",
+        "Maintain three points of contact (heel, base of big toe, base of little toe) with even pressure.",
+        "Keep the foot as relaxed as possible during rolling.",
+        "Apply a 5-6 out of 10 pressure during rolling.",
+        "Perform 15 rolls for each exercise."
+      ],
+      "warnings_or_limitations": [
+        "Mindless rolling in random directions is less effective than strategic, controlled rolling."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "educational_point",
+          "title": "Foot Arch Function and Three Points of Contact",
+          "summary": "Foot problems like plantar fasciitis often stem from the foot's inability to properly move through pronation (flattening of the arch) or supination (raising of the arch). Regardless of the specific issue, maintaining three points of contact (heel, base of the big toe, and base of the little toe) with even pressure is crucial for proper foot mechanics and stability. Difficulty in achieving this indicates a potential issue with foot mobility and arch expression.",
+          "observable_signs": [
+            "Inability to feel the inside and outside of the heel bone flat on the ground with even pressure.",
+            "Inability to feel the base of the big toe and little toe with even pressure while standing without forcing it."
+          ],
+          "mechanisms": [
+            "Lack of proper foot movement through pronation and supination.",
+            "Uneven pressure distribution across the three main contact points of the foot."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For individuals experiencing plantar fasciitis or general foot pain.",
+            "For assessing basic foot stability and arch function."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:20",
+            "00:57"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "Lacrosse Ball Roll - Inner Foot (Big Toe & Inner Heel)",
+          "summary": "A targeted lacrosse ball rolling technique to improve the ability to find and maintain contact with the inner heel and the base of the big toe, addressing issues with foot pronation and supination.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Place a lacrosse ball underneath the first metatarsal head (ball of the big toe).",
+            "Position your body directly on top of the lacrosse ball, not out in front.",
+            "Keep your foot as relaxed as possible.",
+            "Gently roll the ball down in a straight line towards the heel.",
+            "Stop rolling when the ball is about an inch or a centimeter right ahead of your heel.",
+            "Quickly roll back to the starting position (under the ball of the big toe).",
+            "Repeat this motion for approximately 15 rolls."
+          ],
+          "cues": [
+            "Maintain a slow and controlled cadence.",
+            "Apply about a 5 to 6 out of 10 pressure.",
+            "Only think about rolling down your foot, not rolling up."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "To improve contact with the inside of the heel and the base of the big toe.",
+            "To address issues with foot pronation and supination."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "01:11",
+            "01:26"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "Lacrosse Ball Roll - Transverse Arch (Windshield Wiper Motion)",
+          "summary": "A targeted lacrosse ball rolling technique using a windshield wiper motion to release the transverse arch and improve the ability to find and maintain mid-foot contacts.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Ground your heel firmly.",
+            "Start with the lacrosse ball underneath the first metatarsal head (ball of the big toe).",
+            "Perform a 'windshield wiper' motion, rolling the ball from the first metatarsal head to underneath the fifth toe (pinky toe).",
+            "Ensure the ball stays underneath the ball of your foot, not on the bones of the toes themselves.",
+            "Quickly roll back to the beginning position (under the ball of the big toe).",
+            "Repeat this motion for approximately 15 rolls."
+          ],
+          "cues": [
+            "Only roll from the inside to the outside of the foot, not outside to inside.",
+            "Maintain a slow and controlled cadence.",
+            "Apply about a 5 to 6 out of 10 pressure."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Rolling on the bones of the toes themselves."
+          ],
+          "when_useful": [
+            "To release tension in the transverse arch.",
+            "To improve mid-foot contacts and overall foot mobility."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "01:16",
+            "02:05"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "Lacrosse Ball Roll - Outer Foot (Pinky Toe & Outer Heel)",
+          "summary": "A targeted lacrosse ball rolling technique to improve the ability to find and maintain contact with the outside of the heel and the base of the pinky toe, without losing inside foot contacts.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Start with the lacrosse ball positioned just an inch or a centimeter above the outside of your heel.",
+            "Roll the ball slowly and in a controlled straight line upwards.",
+            "Stop rolling when the ball is just underneath the ball of your foot, specifically under the fifth toe (pinky toe).",
+            "Quickly roll back down to the starting position (just above the outside of the heel).",
+            "Repeat this motion for approximately 15 rolls."
+          ],
+          "cues": [
+            "Only think about rolling up your foot, not rolling down.",
+            "Maintain a slow and controlled cadence.",
+            "Apply about a 5 to 6 out of 10 pressure."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Losing the inside foot contacts while rolling."
+          ],
+          "when_useful": [
+            "To improve contact with the outside of the heel and the base of the pinky toe.",
+            "To enhance overall foot stability and balance."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "01:20",
+            "02:27"
+          ]
+        },
+        {
+          "unit_type": "practical_advice",
+          "title": "Post-Rolling Foot Contact Assessment",
+          "summary": "After performing all three recommended lacrosse ball rolling techniques, individuals should notice an immediate improvement in their foot's contact with the ground and a more even distribution of pressure across the foot.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [
+            "Stand and observe if your foot feels like it has better contact with the ground.",
+            "Assess if the pressure distribution across your foot feels more even."
+          ],
+          "advice": [],
+          "timestamps": [
+            "02:53"
+          ]
+        }
+      ],
+      "model_notes": "The video provides a clear, structured approach to foot self-release, moving beyond generic rolling to specific techniques targeting different areas and functions of the foot. The use of an anatomical model and visual overlays enhances the educational value and clarity of the instructions. The explanation of pronation/supination and the three points of contact provides a good biomechanical foundation for the exercises."
+    }
+  },
+  {
+    "rank": 12,
+    "video_id": "d7fXiLxQFyc",
+    "url": "https://www.youtube.com/shorts/d7fXiLxQFyc",
+    "title": "El ejercicio postural definitivo",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\012_d7fXiLxQFyc.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/d7fXiLxQFyc",
+      "source_title_hint": "El ejercicio postural definitivo",
+      "primary_summary": "This video explains common mistakes and provides a corrected technique for the face pull exercise, emphasizing proper scapular movement and thoracic spine positioning for improved posture. It highlights that over-retracting shoulders and performing the exercise standing can be counterproductive, and instead recommends a seated, supported variation with specific cues for optimal muscle activation and scapular mechanics.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides detailed biomechanical explanations for common errors in a popular exercise (face pull) and offers a corrected, optimized technique with clear visual demonstrations and cues. It addresses posture correction and muscle activation effectively.",
+        "exclusion_reason": null,
+        "content_kind": "exercise_optimization",
+        "body_regions": [
+          "shoulders",
+          "upper back",
+          "thoracic spine"
+        ],
+        "problem_layers": [
+          "biomechanical",
+          "muscular",
+          "postural"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "face pull",
+        "posture correction",
+        "rounded shoulders",
+        "scapular mechanics",
+        "thoracic spine mobility",
+        "upper back strength",
+        "rear deltoid",
+        "mid trapezius",
+        "exercise technique"
+      ],
+      "searchable_tags": [
+        "facepull",
+        "posture",
+        "shoulders",
+        "upperback",
+        "scapula",
+        "thoracicextension",
+        "reardelts",
+        "midtraps",
+        "exercise",
+        "technique"
+      ],
+      "problem_statements": [
+        "Incorrect face pull technique leading to suboptimal results for posture.",
+        "Overemphasis on squeezing shoulders 'back and down' during face pulls.",
+        "Rounded forward shoulders and poor thoracic spine posture.",
+        "Standing face pulls causing compensatory arching of the back."
+      ],
+      "habits_or_contexts": [
+        "Gym training for upper back and shoulder development.",
+        "Individuals seeking to improve posture, especially rounded shoulders.",
+        "Strength training routines involving cable exercises."
+      ],
+      "key_visual_points": [
+        "Animated muscle overlay showing rear delts, teres major, and mid traps.",
+        "Skeleton model demonstrating scapular movement on the ribcage.",
+        "Comparison of incorrect (standing, over-retracted) and correct (seated, supported, controlled protraction/retraction) face pull techniques.",
+        "Visual cues for elbow leading and arm path during the exercise."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "face pull"
+      ],
+      "advice_mentioned": [
+        "Use a seated position with external stability (e.g., bench support) for face pulls.",
+        "Allow for gentle shoulder protraction before pulling.",
+        "Lead the pull with the elbows.",
+        "Focus on the elbow path rather than squeezing shoulders back and down.",
+        "Keep forearms parallel to the floor for optimal rear delt and mid trap activation."
+      ],
+      "warnings_or_limitations": [
+        "Over-emphasizing squeezing shoulders back and down keeps muscles in a shortened position, limiting full range of motion and proper scapular movement.",
+        "Performing face pulls standing with significant load can lead to compensatory over-arching of the back, negating postural benefits."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "deficiency_pattern",
+          "title": "Common Incorrect Face Pull Technique and Misconception",
+          "summary": "Many people perform face pulls incorrectly by overemphasizing squeezing the shoulders 'back and down' to fix rounded forward shoulders. This approach is based on a misunderstanding of proper scapular mechanics and thoracic spine posture.",
+          "observable_signs": [
+            "Standing position during face pull.",
+            "Excessive retraction and depression of the shoulder blades.",
+            "Overly extended thoracic spine or compensatory arching of the lower back."
+          ],
+          "mechanisms": [
+            "The belief that fixing rounded shoulders requires maximal retraction and depression.",
+            "Standing position with heavy load forces the body to counteract forward pull by arching the back, leading to compensatory spinal extension."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Squeezing shoulders excessively back and down.",
+            "Performing face pulls standing with heavy weight without external support."
+          ],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:05",
+            "0:16",
+            "1:31"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Scapular Movement and Thoracic Spine Relationship",
+          "summary": "The scapula (shoulder blade) is a naturally concave and rounded structure that needs to sit on a slightly rounded thoracic spine (upper back) to allow for proper gliding and smooth movement. Forcing excessive extension or retraction can hinder this natural movement.",
+          "observable_signs": [],
+          "mechanisms": [
+            "The scapula is designed to glide on the ribcage, which has a natural slight kyphotic (rounded) curve in the thoracic region.",
+            "Proper scapular movement (protraction and retraction) requires the ability to move through a full range of motion, not just a shortened, retracted position.",
+            "Muscles of the upper back and shoulders (rear delts, teres major, mid traps) contribute to scapular movement and positioning."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Understanding optimal shoulder and upper back function.",
+            "Correcting postural imbalances.",
+            "Optimizing exercise technique for scapular health."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:28",
+            "0:44",
+            "0:56",
+            "1:11"
+          ]
+        },
+        {
+          "unit_type": "technique_correction",
+          "title": "Optimized Seated Face Pull Technique",
+          "summary": "To effectively target the upper back and improve posture, perform face pulls seated with external stability (e.g., a bench). This allows for a focus on proper scapular protraction and retraction, leading with the elbows, without compensatory spinal movements.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Set up a bench with back support in front of a cable machine.",
+            "Sit on the bench, leaning against the back support for chest stability.",
+            "Adjust the cable machine height to be at shoulder level.",
+            "Allow shoulders to gently protract (separate away from the spine) at the start of the movement, without depressing the sternum.",
+            "Pull the rope towards your face, leading the movement with your elbows.",
+            "Focus on the elbows moving back, allowing natural scapular retraction as a byproduct.",
+            "Control the eccentric phase, allowing shoulders to gently protract again."
+          ],
+          "cues": [
+            "\"Lean against the bench for support.\"",
+            "\"Allow gentle protraction.\"",
+            "\"Lead with your elbows.\"",
+            "\"Don't think about squeezing shoulders down and back.\""
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Fighting the weight by arching the back.",
+            "Overly squeezing shoulders back and down.",
+            "Ignoring the protraction phase."
+          ],
+          "when_useful": [
+            "Improving upper back strength and posture.",
+            "Correcting rounded shoulders.",
+            "Maximizing activation of rear delts and mid traps."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "1:51"
+          ]
+        },
+        {
+          "unit_type": "technique_correction",
+          "title": "Optimizing Arm Path for Rear Delt and Mid Trap Activation",
+          "summary": "For increased activation of the rear deltoids and mid trapezius during face pulls, ensure the forearm is parallel to the floor throughout the movement, avoiding excessive external rotation of the shoulder.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "During the face pull, maintain a forearm position that is parallel to the floor.",
+            "Avoid externally rotating the shoulder so that the forearm points upwards."
+          ],
+          "cues": [
+            "\"Drop that forearm down to be more parallel with the floor.\""
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Targeting specific muscles (rear delts, mid traps) more effectively.",
+            "Enhancing shoulder health and stability."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "2:32"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively uses a skeleton model and animated muscle overlays to explain biomechanical concepts, which significantly enhances its educational value. The comparison of incorrect vs. correct technique is clear and actionable."
+    }
+  },
+  {
+    "rank": 13,
+    "video_id": "OM86DBg0_ek",
+    "url": "https://www.youtube.com/shorts/OM86DBg0_ek",
+    "title": "El mejor ejercicio para corregir la escápula alada",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\013_OM86DBg0_ek.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/OM86DBg0_ek",
+      "source_title_hint": "El mejor ejercicio para corregir la escápula alada",
+      "primary_summary": "This video explains that traditional upper back strengthening exercises are often insufficient for correcting winged scapula. It highlights the crucial role of the triceps long head and lower trapezius in pulling the scapula into downward rotation, and emphasizes the importance of ribcage mobility and proper breathing for lasting results. The video then demonstrates a band-assisted seated triceps extension exercise designed to address both scapular repositioning and ribcage expansion.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "Provides a biomechanical explanation for winged scapula, identifies specific muscles (triceps long head, lower traps), and integrates ribcage mechanics and breathing, offering a corrective exercise with detailed execution.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "Shoulder",
+          "Scapula",
+          "Thoracic Spine",
+          "Ribcage",
+          "Arm"
+        ],
+        "problem_layers": [
+          "Muscular",
+          "Skeletal",
+          "Respiratory"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "Winged scapula",
+        "Scapular winging",
+        "Triceps long head",
+        "Lower trapezius",
+        "Ribcage mobility",
+        "Breathing mechanics",
+        "Shoulder stability",
+        "Shoulder posture",
+        "Scapular dyskinesis",
+        "Corrective exercise",
+        "Biomechanics"
+      ],
+      "searchable_tags": [
+        "#wingedscapula",
+        "#scapularwinging",
+        "#triceps",
+        "#lowertraps",
+        "#ribcage",
+        "#breathing",
+        "#shoulderstability",
+        "#posture",
+        "#correctiveexercise",
+        "#biomechanics"
+      ],
+      "problem_statements": [
+        "Winged scapula",
+        "Upwardly rotated scapula",
+        "Scapula off the ribcage",
+        "Rounded forward shoulder",
+        "Compression/tightness in front of ribcage",
+        "Ineffective traditional upper back strengthening"
+      ],
+      "habits_or_contexts": [
+        "People often told to do upper back strengthening exercises that are incomplete for winged scapula."
+      ],
+      "key_visual_points": [
+        "Animated scapula showing winging and upward rotation.",
+        "Animated triceps long head attachment to scapula.",
+        "Animated trapezius muscles (upper, middle, lower).",
+        "Animated ribcage showing expansion during breath.",
+        "Demonstration of incorrect exercises (band pull-apart, incline dumbbell raise) with a red 'X'.",
+        "Demonstration of the corrective band triceps extension exercise by a man seated on a bench with a resistance band."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Band pull-aparts (shown as incomplete/incorrect)",
+        "Incline dumbbell raises (shown as incomplete/incorrect)",
+        "Band-assisted seated triceps extension"
+      ],
+      "advice_mentioned": [
+        "Don't just strengthen the upper back; consider the triceps long head.",
+        "Address ribcage mobility and breathing for lasting results.",
+        "Combine ribcage opening with scapular repositioning."
+      ],
+      "warnings_or_limitations": [
+        "Traditional upper back strengthening alone may not provide lasting correction for winged scapula if ribcage mechanics and specific muscle imbalances are not addressed."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "educational_point",
+          "title": "Limitations of Traditional Upper Back Strengthening for Winged Scapula",
+          "summary": "Traditional approaches to correcting winged scapula often focus solely on general upper back strengthening exercises like band pull-aparts or incline dumbbell raises. However, these methods are often incomplete and may not fully address the underlying biomechanical issues, leading to temporary or insufficient correction.",
+          "observable_signs": [
+            "Scapular winging",
+            "Upwardly rotated scapula"
+          ],
+          "mechanisms": [],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Solely focusing on general upper back strengthening without considering specific muscle imbalances and ribcage mechanics."
+          ],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00-0:07"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Role of Triceps Long Head and Lower Trapezius in Scapular Repositioning",
+          "summary": "The long head of the triceps, due to its attachment on the outside border of the shoulder blade, provides leverage to pull the scapula down and closer to the spine (downward rotation). This action is crucial for correcting scapular winging, which often involves an upwardly rotated scapula. The triceps long head works effectively in tandem with the lower trapezius to achieve this optimal scapular position.",
+          "observable_signs": [
+            "Scapular winging",
+            "Upwardly rotated scapula"
+          ],
+          "mechanisms": [
+            "Triceps long head attachment to the scapula's outside border provides leverage for downward rotation.",
+            "Synergy between triceps long head and lower trapezius for scapular repositioning."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Individuals with scapular winging",
+            "Individuals with upwardly rotated scapula"
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:08-0:52"
+          ]
+        },
+        {
+          "unit_type": "educational_point",
+          "title": "Importance of Ribcage Mobility and Breathing for Sustained Scapular Position",
+          "summary": "Scapular winging is often associated with a rounded forward shoulder and compression/tightness in the front of the ribcage. Addressing the ability of the ribcage to open and expand, particularly during breathing, is vital. Without proper ribcage mobility and breathing mechanics, strengthening muscles to reposition the scapula may not lead to lasting changes, as the body won't know how to maintain the open space.",
+          "observable_signs": [
+            "Rounded shoulders",
+            "Tightness or compression in the anterior ribcage"
+          ],
+          "mechanisms": [
+            "Rounded shoulder posture can lead to anterior ribcage compression.",
+            "Restricted ribcage expansion limits the space for optimal scapular movement and position.",
+            "Lack of proper breathing mechanics can hinder sustained postural correction."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Neglecting ribcage mobility and breathing when addressing scapular dyskinesis."
+          ],
+          "when_useful": [
+            "Individuals with scapular winging and associated ribcage tightness or poor breathing patterns."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:53-1:40"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Band-Assisted Seated Triceps Extension for Scapular Repositioning and Ribcage Expansion",
+          "summary": "This exercise uses a resistance band to strengthen the triceps long head and lower traps while simultaneously promoting ribcage expansion and proper breathing, offering a comprehensive approach to correcting winged scapula.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Strengthens triceps long head and lower trapezius to pull scapula into downward rotation.",
+            "Promotes anterior ribcage expansion through specific postural and breathing cues."
+          ],
+          "execution_steps": [
+            "Attach a resistance band to a high anchor point (e.g., door frame, power rack).",
+            "Sit on a bench or chair, facing away from the anchor, holding the band with one hand.",
+            "Ensure both sit bones are felt evenly on the bench.",
+            "Slightly dip the shoulder down on the *opposite* side of the working arm. This should create a slight tension in the side abs/obliques and help open the chest wall.",
+            "Keep the working shoulder relaxed and not elevated.",
+            "Pull the elbow into extension, extending the arm straight back, focusing on feeling the triceps and lower trap working.",
+            "Maintain eyes perfectly straight ahead, preventing the head from tilting with the dropped shoulder."
+          ],
+          "cues": [
+            "\"Sit feeling both sit bones evenly.\"",
+            "\"Very slightly dip the shoulder down on the opposite side.\"",
+            "\"You're going to feel a little bit of tension through your side abs or obliques right here.\"",
+            "\"Not elevating your shoulder, keeping it relaxed.\"",
+            "\"Just pull your elbow into extension like this.\"",
+            "\"Feel your triceps start to work with a little bit of your lower trap as well.\"",
+            "\"Without again, shrugging up the shoulder. Just this shoulder is relatively down.\"",
+            "\"You want to make sure your eyes stay perfectly straight ahead.\"",
+            "\"Don't let your head come off with you like that. Keep your eyes relatively level.\""
+          ],
+          "breathing_cues": [
+            "\"Breathe in through your nose, out through your mouth, nice and relaxed in this position for an isometric contraction.\""
+          ],
+          "errors_to_avoid": [
+            "Elevating the working shoulder.",
+            "Shrugging the working shoulder.",
+            "Allowing the head to tilt or come off level with the dropped shoulder."
+          ],
+          "when_useful": [
+            "Individuals with winged scapula",
+            "Individuals with upwardly rotated scapula",
+            "Individuals with rounded shoulders and limited anterior ribcage expansion",
+            "As a corrective exercise for shoulder posture and stability."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [
+            "This exercise can be performed as an isometric contraction with breathing cues.",
+            "It can also be performed as a dynamic triceps extension."
+          ],
+          "timestamps": [
+            "1:41-2:53"
+          ]
+        }
+      ],
+      "model_notes": "The video provides a clear, concise explanation of the biomechanics of winged scapula, moving beyond common misconceptions. It effectively integrates muscle function with ribcage mechanics and breathing, offering a holistic approach to correction. The exercise demonstration is detailed with specific cues for optimal execution."
+    }
+  },
+  {
+    "rank": 14,
+    "video_id": "wE9bCu3Wadc",
+    "url": "https://www.youtube.com/shorts/wE9bCu3Wadc",
+    "title": "Esto finalmente corrigió mi postura de cabeza adelantada.",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\014_wE9bCu3Wadc.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/wE9bCu3Wadc",
+      "source_title_hint": "Esto finalmente corrigió mi postura de cabeza adelantada.",
+      "primary_summary": "This video explains that forward head posture and neck pain are often linked to overactive and tight scalene muscles, which compensate for inefficient diaphragmatic breathing. It provides a gentle scalene stretch and a diaphragmatic breathing re-patterning exercise to address these issues.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear explanation of a biomechanical mechanism (scalenes and breathing in forward head posture) and offers two actionable corrective exercises with visual demonstrations and specific cues.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "neck",
+          "cervical spine",
+          "ribs",
+          "diaphragm",
+          "thoracic spine"
+        ],
+        "problem_layers": [
+          "muscular tightness",
+          "postural dysfunction",
+          "breathing pattern dysfunction",
+          "compensatory movement"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "forward head posture",
+        "neck pain",
+        "scalenes",
+        "diaphragmatic breathing",
+        "posture correction",
+        "breathing mechanics",
+        "cervical mobility",
+        "respiratory muscles"
+      ],
+      "searchable_tags": [
+        "scalene stretch",
+        "breathing exercise",
+        "neck mobility",
+        "postural exercise",
+        "compensatory breathing",
+        "re-education"
+      ],
+      "problem_statements": [
+        "Forward head posture",
+        "Chronic neck pain",
+        "Overactive scalene muscles",
+        "Tight scalene muscles",
+        "Ineffective diaphragmatic breathing",
+        "Compensatory breathing using neck muscles"
+      ],
+      "habits_or_contexts": [
+        "Prolonged forward head posture",
+        "Habitual shallow breathing"
+      ],
+      "key_visual_points": [
+        "3D anatomical model highlighting the scalene muscles on the side of the neck, attaching to the cervical vertebrae and first two ribs.",
+        "3D anatomical model showing the diaphragm's position and movement during breathing.",
+        "Demonstration of a seated scalene stretch.",
+        "Demonstration of a supine diaphragmatic breathing exercise with feet elevated on a chair and a towel supporting the neck."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Scalene stretch",
+        "Diaphragmatic breathing re-patterning"
+      ],
+      "advice_mentioned": [
+        "Release tight scalenes to improve pain and posture.",
+        "Re-educate breathing patterns after stretching to prevent old patterns from returning.",
+        "Perform scalene stretch gently, aiming for a 2-3 out of 10 stretch intensity.",
+        "Inhale through the nose and exhale through the mouth during breathing re-patterning.",
+        "Engage side abs during exhalation in breathing re-patterning.",
+        "Feel chest and belly rise simultaneously during inhalation in breathing re-patterning, with no neck tension."
+      ],
+      "warnings_or_limitations": [
+        "Perform neck stretches very gently due to delicate structures in the neck area."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Scalenes and Compensatory Breathing in Forward Head Posture",
+          "summary": "Forward head posture and neck pain are often associated with overactive and tight scalene muscles. These muscles, located on the front/side of the neck and attaching to the first two ribs, become compensatory breathing muscles when the primary breathing muscles (like the diaphragm) are not working effectively. This overactivity contributes to pulling the head forward and maintaining poor posture.",
+          "observable_signs": [
+            "Forward head posture",
+            "Neck pain"
+          ],
+          "mechanisms": [
+            "Diaphragm and other primary breathing muscles become less effective over time.",
+            "Neck muscles, particularly the scalenes, overcompensate to elevate the ribcage and draw air into the lungs.",
+            "Constant activation and tightness of scalenes pull the head forward, contributing to forward head posture and neck pain."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Explaining the link between breathing mechanics, neck muscle tension, and forward head posture."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:00",
+            "00:20",
+            "00:38",
+            "00:49"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "Seated Scalene Stretch",
+          "summary": "A gentle seated stretch designed to release tension in the scalene muscles, which can contribute to forward head posture and neck pain.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Anchoring the lower attachments of the scalenes (on the collarbone/first rib) allows for a more effective stretch of the muscle belly as the head moves away."
+          ],
+          "execution_steps": [
+            "Sit in a comfortable position.",
+            "To stretch the right scalenes, place the left hand on the innermost section of the right collarbone, about one-third of the way up from the sternum.",
+            "Gently pull down behind the collarbone to anchor the scalene attachments.",
+            "Very gently side bend the head to the opposite side (left) and rotate the head away (right)."
+          ],
+          "cues": [
+            "Use a very gentle, subtle movement.",
+            "Aim for a 2-3 out of 10 stretch intensity, do not chase more.",
+            "Inhale gently through the nose while turning the head.",
+            "Exhale through the nose and return to the starting position.",
+            "Repeat for 10-20 repetitions, gradually increasing mobility over time."
+          ],
+          "breathing_cues": [
+            "Inhale gently through the nose while turning the head.",
+            "Exhale through the nose and return to the starting position."
+          ],
+          "errors_to_avoid": [
+            "Aggressive or forceful stretching due to delicate structures in the neck."
+          ],
+          "when_useful": [
+            "Individuals with tight scalenes.",
+            "Individuals with forward head posture.",
+            "Individuals experiencing neck pain related to muscle tension."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:51"
+          ]
+        },
+        {
+          "unit_type": "breathing_drill",
+          "title": "Diaphragmatic Breathing Re-patterning (Supine)",
+          "summary": "A supine breathing exercise to re-educate diaphragmatic breathing, reduce reliance on neck muscles, and improve overall breathing mechanics after releasing scalene tension.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Elevating the feet to 90 degrees at hips and knees helps to flatten the lumbar spine and optimize diaphragm position.",
+            "Supporting the neck with a towel maintains a neutral cervical spine, preventing neck muscle engagement.",
+            "Exhaling fully engages the side abdominal muscles, which helps to depress the ribcage and prepare the diaphragm for an optimal inhale.",
+            "Inhaling through the nose encourages diaphragmatic activation and reduces accessory muscle use."
+          ],
+          "execution_steps": [
+            "Lie on your back with your feet up on a chair, ensuring knees and hips are at approximately 90 degrees.",
+            "Place a rolled hand towel underneath the curvature of your neck, allowing the base of your skull to rest on the ground and your chin to passively point towards the ceiling.",
+            "Get your elbows as wide as possible while still being able to keep your hands gently on your lowest ribcage, without any tension.",
+            "Gently exhale through your mouth for 5-10 seconds, allowing all air to fall out, until you feel your side abs engage.",
+            "Gently hold the engagement of your side abs (without engaging your neck) and inhale gently through your nose.",
+            "During inhalation, feel your chest and belly rise simultaneously, with no tension in the neck."
+          ],
+          "cues": [
+            "Exhale fully for 5-10 seconds.",
+            "Feel your side abs engage at the end of the exhale.",
+            "Maintain gentle side ab engagement during the inhale.",
+            "Inhale gently through your nose.",
+            "Feel your chest and belly rise simultaneously.",
+            "Ensure no tension is felt in the neck during breathing."
+          ],
+          "breathing_cues": [
+            "Exhale gently through your mouth for 5-10 seconds.",
+            "Inhale gently through your nose."
+          ],
+          "errors_to_avoid": [
+            "Engaging neck muscles during inhalation.",
+            "Shallow or chest-dominant breathing."
+          ],
+          "when_useful": [
+            "After performing scalene stretches.",
+            "To improve diaphragmatic breathing efficiency.",
+            "To reduce reliance on accessory breathing muscles (like scalenes).",
+            "For individuals with forward head posture or neck pain related to breathing patterns."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "02:07"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines anatomical explanation with practical corrective exercises. The distinction between stretching and re-patterning is well-made, emphasizing that stretching alone is insufficient for long-term change. The visual aids (3D models, on-screen highlights) are very helpful for understanding muscle location and exercise execution."
+    }
+  },
+  {
+    "rank": 15,
+    "video_id": "yHWRnhSC9rA",
+    "url": "https://www.youtube.com/shorts/yHWRnhSC9rA",
+    "title": "La asombrosa verdad sobre cómo corregir la inclinación pélvica lateral",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\015_yHWRnhSC9rA.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/yHWRnhSC9rA",
+      "source_title_hint": "La asombrosa verdad sobre cómo corregir la inclinación pélvica lateral",
+      "primary_summary": "This video explains that perceived body twisting or lateral pelvic tilt is often due to natural human body asymmetry, leading to a relative rotation between the upper and lower body. It introduces two self-assessment tests for lower and upper body rotation and then provides a detailed corrective exercise (wall-supported side-lying rotation) to address these rotational imbalances, with specific instructions for right or left-sided biases.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear explanation of a common biomechanical concept (body asymmetry and relative rotation), offers two practical self-assessment tests, and details a specific corrective exercise with visual cues and instructions for different rotational biases. This content is valuable for diagnostic support, explanation support, and corrective exercise selection.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "pelvis",
+          "thoracic spine",
+          "rib cage",
+          "hips",
+          "lower back"
+        ],
+        "problem_layers": [
+          "muscular",
+          "skeletal",
+          "neurological_control"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "body asymmetry",
+        "pelvic tilt",
+        "lateral pelvic tilt",
+        "postural imbalances",
+        "thoracic rotation",
+        "hip rotation",
+        "corrective exercise",
+        "movement assessment",
+        "rib cage position",
+        "breathing mechanics"
+      ],
+      "searchable_tags": [
+        "PRI",
+        "Postural Restoration Institute",
+        "asymmetry",
+        "rotation",
+        "pelvis",
+        "thoracic",
+        "hips",
+        "spine",
+        "mobility",
+        "stability",
+        "exercise",
+        "assessment",
+        "rehab",
+        "prehab"
+      ],
+      "problem_statements": [
+        "Feeling like your body and posture are twisted up",
+        "Walking around with a noticeable body twist",
+        "Rotational imbalances between the lower and upper body"
+      ],
+      "habits_or_contexts": [],
+      "key_visual_points": [
+        "Skeleton model demonstrating relative rotation of pelvis and rib cage.",
+        "Red dashed lines indicating uneven shoulder and hip lines on a standing person.",
+        "Visual overlays on the skeleton model highlighting rotated segments (pelvis, rib cage).",
+        "Animated lines showing the path of movement for the rotation tests.",
+        "Green highlights on contact points and movement directions for the corrective exercise.",
+        "Foot diagram showing three points of contact for the foot."
+      ],
+      "tests_mentioned": [
+        "Lower Body Rotation Test",
+        "Upper Body Rotation Test (Shoulder Rotation)"
+      ],
+      "exercises_mentioned": [
+        "Wall Supported Side-Lying Rotation"
+      ],
+      "advice_mentioned": [
+        "Understand what's going on within your body to resolve imbalances.",
+        "The natural human body is asymmetrical and has a predisposition towards being turned towards the right side."
+      ],
+      "warnings_or_limitations": [
+        "Stop movement in tests if the opposite shoulder/sternum lifts off the ground or if hip/heel contact is lost during the exercise."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "educational_point",
+          "title": "Body Asymmetry and Relative Rotation Concept",
+          "summary": "The human body is naturally asymmetrical, leading to a predisposition for overall rotation, often to the right. This manifests as a relative turning of the lower body in one direction and the upper body in the other, rather than a literal, extreme twist.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Natural human body asymmetry (e.g., organ placement)",
+            "Predisposition to right-sided rotation (as cited by research)"
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [
+            "Understand that perceived body twisting is often a relative rotation between body segments rather than a literal misalignment."
+          ],
+          "timestamps": [
+            "0:09",
+            "0:45"
+          ]
+        },
+        {
+          "unit_type": "functional_test",
+          "title": "Lower Body Rotation Test",
+          "summary": "A self-assessment test to evaluate the rotational mobility of the lower body (pelvis/hips) while maintaining upper body stability.",
+          "observable_signs": [
+            "Differences in the range of motion when rotating knees to the left versus the right.",
+            "One side will typically have better rotation than the other."
+          ],
+          "mechanisms": [],
+          "execution_steps": [
+            "Lie on your back with hands out by your sides.",
+            "Keep your knees together.",
+            "Pull your heels towards your glutes as close as they can get without much tension in your legs.",
+            "Allow your knees to fall off into one direction.",
+            "Stop at the point where if you were to go any further, the opposite side shoulder would pop off of the ground.",
+            "Compare the range of motion to the other side."
+          ],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "To identify rotational imbalances in the lower body.",
+            "To determine the preferred side of lower body rotation."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:48",
+            "1:07"
+          ]
+        },
+        {
+          "unit_type": "functional_test",
+          "title": "Upper Body Rotation Test (Shoulder Rotation)",
+          "summary": "A self-assessment test to evaluate the rotational mobility of the upper body (thoracic spine/rib cage) while maintaining lower body stability.",
+          "observable_signs": [
+            "Differences in the range of motion when rotating the upper body to the left versus the right.",
+            "One side will typically have better rotation than the other."
+          ],
+          "mechanisms": [],
+          "execution_steps": [
+            "Lay on your side in a 90/90 position (hips and knees bent at 90 degrees).",
+            "Ensure your shoulders are perfectly stacked on top of each other.",
+            "Point your fingertips of the top arm towards the ceiling.",
+            "Allow one arm to slowly come back in a perfectly straight line.",
+            "Stop at the point where if you were to go any further, your breastbone or sternum would turn with you.",
+            "Compare the range of motion to the other side."
+          ],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "To identify rotational imbalances in the upper body.",
+            "To determine the preferred side of upper body rotation."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "1:09",
+            "1:26"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Wall Supported Side-Lying Rotation (Right-Sided Bias Correction)",
+          "summary": "A corrective exercise performed lying on the left side against a wall, designed to improve relative rotation between the upper and lower body, specifically for individuals with a right-sided rotational bias (i.e., better rotation to the right in the tests).",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Lay on your left side against a wall.",
+            "Place a double-folded pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+            "Bend your hips and knees to a 90-degree angle each.",
+            "Fully exhale through your mouth and feel your rib cage come down.",
+            "Keeping your knees stacked, bring your top (right) foot up so it's a couple of inches higher than the other one, maintaining contact with the wall.",
+            "Ensure you feel three points of contact on both feet, especially the top foot (inner heel, base of big toe, base of little toe).",
+            "While keeping your rib cage down, gently push into the wall with the inner heel and the base of the big toe contact on the top foot.",
+            "Slide that top (right) knee forward. Stop at the point where if you were to go any further, you would lose your bottom side hip contact or that top side heel would want to come off the wall.",
+            "Once you get there, push the top (right) knee up so it gets around in line with the top foot.",
+            "Take your top (right) hand and reach it for the ceiling, keeping your eyes on your fingertips.",
+            "Exhale through your mouth and just move this top hand back one inch.",
+            "Upon the next inhale, you should feel all this expand and open up."
+          ],
+          "cues": [
+            "Pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+            "Fully exhale and feel your rib cage come down.",
+            "Think about doing a slight posterior pelvic tilt without squeezing your glutes (for some).",
+            "Feel these three points of contact on both feet, but especially this top foot.",
+            "Making sure your rib cage stays down.",
+            "Push into the wall very gently with the inner heel and that base of the big toe contact on the top foot.",
+            "Slide that top knee forward.",
+            "Push the top knee up so it gets around in line with the top foot.",
+            "Reach your top hand for the ceiling, keep your eyes on your fingertips.",
+            "Exhale through your mouth and just move this top hand back one inch.",
+            "Think about turning your trunk through your bottom side abs.",
+            "Torquing through your bottom side abs without engaging your low back.",
+            "Keep your rib cage down.",
+            "Upon the next inhale, you should feel all this expand and open up."
+          ],
+          "breathing_cues": [
+            "Fully exhale through your mouth and feel your rib cage come down.",
+            "Exhale through your mouth and just move this top hand back one inch.",
+            "Upon the next inhale, you should feel all this expand and open up."
+          ],
+          "errors_to_avoid": [
+            "Losing bottom side hip contact.",
+            "Top side heel coming off the wall.",
+            "Engaging the low back instead of bottom side abs.",
+            "Rib cage not staying down."
+          ],
+          "when_useful": [
+            "If both the lower and upper body rotation tests were better to the right.",
+            "If only the lower body rotation test was better to the right."
+          ],
+          "when_not_useful": [],
+          "retest": [
+            "Re-perform the Lower Body Rotation Test and Upper Body Rotation Test to assess improvement."
+          ],
+          "advice": [],
+          "timestamps": [
+            "1:30",
+            "2:49"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Wall Supported Side-Lying Rotation (Left-Sided Bias Correction)",
+          "summary": "The same corrective exercise as above, but performed on the opposite side (lying on the right side against a wall) for individuals with a left-sided rotational bias (i.e., better rotation to the left in the tests).",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Lay on your right side against a wall.",
+            "Place a double-folded pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+            "Bend your hips and knees to a 90-degree angle each.",
+            "Fully exhale through your mouth and feel your rib cage come down.",
+            "Keeping your knees stacked, bring your top (left) foot up so it's a couple of inches higher than the other one, maintaining contact with the wall.",
+            "Ensure you feel three points of contact on both feet, especially the top foot (inner heel, base of big toe, base of little toe).",
+            "While keeping your rib cage down, gently push into the wall with the inner heel and the base of the big toe contact on the top foot.",
+            "Slide that top (left) knee forward. Stop at the point where if you were to go any further, you would lose your bottom side hip contact or that top side heel would want to come off the wall.",
+            "Once you get there, push the top (left) knee up so it gets around in line with the top foot.",
+            "Take your top (left) hand and reach it for the ceiling, keeping your eyes on your fingertips.",
+            "Exhale through your mouth and just move this top hand back one inch.",
+            "Upon the next inhale, you should feel all this expand and open up."
+          ],
+          "cues": [
+            "Pillow underneath your lowest rib cage so your hip can still stay flat on the ground.",
+            "Fully exhale and feel your rib cage come down.",
+            "Think about doing a slight posterior pelvic tilt without squeezing your glutes (for some).",
+            "Feel these three points of contact on both feet, but especially this top foot.",
+            "Making sure your rib cage stays down.",
+            "Push into the wall very gently with the inner heel and that base of the big toe contact on the top foot.",
+            "Slide that top knee forward.",
+            "Push the top knee up so it gets around in line with the top foot.",
+            "Reach your top hand for the ceiling, keep your eyes on your fingertips.",
+            "Exhale through your mouth and just move this top hand back one inch.",
+            "Think about turning your trunk through your bottom side abs.",
+            "Torquing through your bottom side abs without engaging your low back.",
+            "Keep your rib cage down.",
+            "Upon the next inhale, you should feel all this expand and open up."
+          ],
+          "breathing_cues": [
+            "Fully exhale through your mouth and feel your rib cage come down.",
+            "Exhale through your mouth and just move this top hand back one inch.",
+            "Upon the next inhale, you should feel all this expand and open up."
+          ],
+          "errors_to_avoid": [
+            "Losing bottom side hip contact.",
+            "Top side heel coming off the wall.",
+            "Engaging the low back instead of bottom side abs.",
+            "Rib cage not staying down."
+          ],
+          "when_useful": [
+            "If both the lower and upper body rotation tests were better to the left.",
+            "If only the lower body rotation test was better to the left."
+          ],
+          "when_not_useful": [],
+          "retest": [
+            "Re-perform the Lower Body Rotation Test and Upper Body Rotation Test to assess improvement."
+          ],
+          "advice": [],
+          "timestamps": [
+            "2:49",
+            "2:57"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively breaks down a complex biomechanical concept into understandable parts, provides actionable self-assessments, and offers a targeted corrective exercise. The use of visual aids on the skeleton and the demonstrator, along with clear verbal cues, enhances its educational value. The reference to scientific literature adds credibility to the explanation of natural body asymmetry."
+    }
+  },
+  {
+    "rank": 16,
+    "video_id": "k_QgZEkj2Es",
+    "url": "https://www.youtube.com/shorts/k_QgZEkj2Es",
+    "title": "El ejercicio definitivo para activar los glúteos",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\016_k_QgZEkj2Es.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/k_QgZEkj2Es",
+      "source_title_hint": "El ejercicio definitivo para activar los glúteos",
+      "primary_summary": "This video introduces a wall-assisted single-leg hip hinge exercise using a foam roller to improve glute activation and teach proper hip extension mechanics. It explains the biomechanical role of the glutes in hip extension and highlights common compensatory patterns like knee extension or excessive low back arching. The exercise aims to prevent these compensations by providing external cues and focusing on specific foot contact points. It also suggests progression to a weighted single-leg hip hinge.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a specific corrective exercise with detailed execution steps and cues, explains the underlying biomechanical concepts of glute function and common compensation patterns, and offers a clear progression path. This makes it valuable for diagnostic support, explanation support, corrective exercise selection, and biomechanical concept retrieval.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "Hips",
+          "Glutes",
+          "Lower Back",
+          "Knees",
+          "Feet"
+        ],
+        "problem_layers": [
+          "Movement pattern dysfunction",
+          "Muscle activation deficiency",
+          "Compensatory movement"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "Glute activation",
+        "Hip extension",
+        "Hip hinge",
+        "Single-leg RDL",
+        "Movement mechanics",
+        "Compensation patterns",
+        "Lower back pain prevention",
+        "Foot contact"
+      ],
+      "searchable_tags": [
+        "Glutes",
+        "Hips",
+        "Hip extension",
+        "Hip hinge",
+        "Single leg RDL",
+        "Foam roller",
+        "Corrective exercise",
+        "Movement reeducation",
+        "Biomechanics",
+        "Lower back",
+        "Knee extension",
+        "Foot contact",
+        "Proprioception"
+      ],
+      "problem_statements": [
+        "Difficulty feeling glutes work during exercises",
+        "Substituting knee extension for hip extension",
+        "Excessive low back arching during hip extension movements",
+        "Lack of genuine hip extension capacity"
+      ],
+      "habits_or_contexts": [
+        "Lifting weights (e.g., RDLs)",
+        "Walking"
+      ],
+      "key_visual_points": [
+        "Glute muscles highlighted on a person (0:00)",
+        "Foam roller placed against the front of the knee and a wall (0:05)",
+        "Subtle bend in both knees (10-15%) (0:09)",
+        "Back knee positioned relatively underneath the back hip with minimal weight on the back foot (0:12)",
+        "Front foot bearing 80-90% of body weight with three main points of contact: heel, base of big toe, base of little toe (0:18, 0:22)",
+        "Demonstration of hip hinging forward while maintaining knee pressure on the roller (0:36)",
+        "Pushing through the earth with the front foot to stand up (0:46)",
+        "Pelvis model demonstrating hip extension (1:17, 1:21, 1:26)",
+        "Animation of glute muscles creating hip extension (1:18, 1:21)",
+        "Demonstration of knee extension substituting for hip extension (1:52, 2:05)",
+        "Demonstration of low back arching substituting for hip extension (2:07)"
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Wall-assisted single-leg hip hinge",
+        "Single-leg RDL (implied progression)"
+      ],
+      "advice_mentioned": [
+        "Focus on pushing through the earth with the front foot to stand up",
+        "Hinge only to the point where an initial stretch is felt in the back of the hips and glutes",
+        "Maintain consistent knee pressure on the foam roller throughout the movement",
+        "Keep hips square and facing forward"
+      ],
+      "warnings_or_limitations": [
+        "Do not go lower than the initial stretch point in the glutes/hips when first learning the movement",
+        "Avoid substituting knee extension for hip extension",
+        "Avoid substituting excessive low back arching for hip extension"
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Wall-Assisted Single-Leg Hip Hinge for Glute Activation",
+          "summary": "A foundational exercise using a foam roller against a wall to teach proper hip hinging and glute activation, preventing compensation from the knees or lower back. It emphasizes genuine hip extension by restricting knee movement and promoting awareness of foot contact.",
+          "observable_signs": [
+            "Glute activation felt in the working leg",
+            "Proper hip hinge with minimal knee extension",
+            "No excessive low back arching"
+          ],
+          "mechanisms": [
+            "The foam roller against the knee restricts knee extension, forcing the hips to hinge more genuinely.",
+            "Focusing on three points of contact on the front foot (heel, base of big toe, base of little toe) enhances proprioception and stability, aiding glute engagement.",
+            "This setup cues the body to use hip extension rather than compensatory movements."
+          ],
+          "execution_steps": [
+            "Place a long foam roller horizontally against a wall.",
+            "Stand facing the wall, placing the front of one knee against the foam roller, flush with the wall.",
+            "Bend both knees subtly (approximately 10-15%).",
+            "Ensure the back knee is positioned relatively underneath the back hip, with minimal weight on the back foot (toes flat on the ground).",
+            "Place 80-90% of your body weight on the front foot, feeling three main points of contact: the heel, the base of the big toe, and the base of the little toe (toes and foot should be relaxed).",
+            "Maintain consistent knee pressure into the foam roller throughout the exercise.",
+            "Keep your hips square and facing forward.",
+            "Initiate a forward fold (hip hinge) by pushing your hips back, until you feel an initial stretch in the back of your hips and glutes.",
+            "To return to the starting position, think about pushing through the earth with your front foot to stand up, maintaining the same amount of pressure on the foam roller."
+          ],
+          "cues": [
+            "\"Melt onto those three points of contact\" (for the front foot)",
+            "\"Pushing through the earth\" (to stand up)",
+            "\"Maintain that same amount of pressure on that roller\""
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Hinging down lower than the point where the initial stretch is felt in the glutes/hips, especially when first learning.",
+            "Locking out the knee too early during the standing phase.",
+            "Substituting knee extension for hip extension.",
+            "Substituting excessive low back arching/extension for hip extension."
+          ],
+          "when_useful": [
+            "To improve glute activation and mind-muscle connection.",
+            "To teach and reinforce proper hip extension mechanics.",
+            "To address and correct compensatory movement patterns (e.g., knee extension, low back arching).",
+            "As a prerequisite or warm-up for exercises like RDLs, squats, or lunges.",
+            "For individuals experiencing difficulty feeling their glutes work during lower body exercises."
+          ],
+          "when_not_useful": [],
+          "retest": [
+            "Improved glute sensation during the exercise and in other lower body movements.",
+            "Better control and form during unassisted hip hinge movements.",
+            "Reduced reliance on compensatory movements."
+          ],
+          "advice": [],
+          "timestamps": [
+            "0:04-1:06",
+            "2:15-2:22"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Glute Function: Hip Extension and Compensation Patterns",
+          "summary": "The primary action of the glutes is hip extension, which involves bringing the leg behind the body from a position of hip flexion. When there is a lack of genuine hip extension capacity, individuals often compensate by substituting knee extension or excessive low back arching, leading to inefficient movement and potential injury.",
+          "observable_signs": [
+            "Knee locking out too early during hip extension movements (e.g., RDLs, walking).",
+            "Visible arching or hyperextension of the lower back during hip extension movements."
+          ],
+          "mechanisms": [
+            "Glutes attach on the pelvis and wrap around onto the femur, creating hip extension.",
+            "Hip extension is the movement of standing up from a bent-over position or bringing the leg behind the body.",
+            "During walking, as the foot flattens out against the ground and moves into pronation, it cues the glutes to initiate hip extension.",
+            "When full hip extension capacity is lacking, the body seeks alternative ways to achieve the movement, often substituting knee extension (locking the knee) or excessive lumbar spine extension (arching the lower back).",
+            "These compensatory movements reduce the effective engagement of the glutes and can place undue stress on other joints or tissues."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For understanding the fundamental role of glutes in movement.",
+            "For identifying and diagnosing common movement dysfunctions related to hip extension.",
+            "For explaining the rationale behind corrective exercises aimed at improving glute activation and hip mechanics.",
+            "For coaches and practitioners to recognize compensatory patterns in clients."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "1:07-1:29",
+            "1:30-1:39",
+            "1:46-1:58",
+            "2:05-2:14"
+          ]
+        },
+        {
+          "unit_type": "strength_drill",
+          "title": "Progression to Weighted Single-Leg Hip Hinge",
+          "summary": "Once the wall-assisted single-leg hip hinge is mastered, the exercise can be progressed by adding external weight (e.g., a dumbbell) while maintaining the foam roller support, or by removing the wall support entirely and performing a weighted single-leg hip hinge (similar to a single-leg RDL) with the same focus on genuine hip extension and foot contact.",
+          "observable_signs": [
+            "Ability to maintain proper hip hinge mechanics with added weight.",
+            "Continued glute activation without compensatory movements."
+          ],
+          "mechanisms": [
+            "Adding external load increases the demand on the glutes and hamstrings, promoting strength development.",
+            "Removing the wall support increases the balance and stability demands, further challenging the glutes and core stabilizers."
+          ],
+          "execution_steps": [
+            "Option 1: Perform the wall-assisted single-leg hip hinge with a dumbbell or kettlebell held in the hand opposite to the working leg.",
+            "Option 2: Remove the foam roller and wall support. Perform a single-leg hip hinge (similar to a single-leg RDL) with a dumbbell or kettlebell, focusing on the same principles of hip hinging, foot contact, and avoiding knee or low back compensation."
+          ],
+          "cues": [
+            "Maintain the same intention and focus on hip extension as with the wall-assisted version.",
+            "Keep the three points of contact on the foot engaged."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Losing balance due to excessive weight.",
+            "Reverting to compensatory patterns (knee extension, low back arching) when adding weight or removing support."
+          ],
+          "when_useful": [
+            "For individuals who have mastered the foundational wall-assisted exercise.",
+            "To build strength and power in the glutes and hamstrings.",
+            "To improve single-leg balance and stability.",
+            "To prepare for more advanced unilateral lower body exercises."
+          ],
+          "when_not_useful": [
+            "If the foundational wall-assisted exercise cannot be performed with proper form and glute activation."
+          ],
+          "retest": [
+            "Ability to perform the weighted exercise with good form and glute engagement.",
+            "Improved performance in other compound lower body lifts."
+          ],
+          "advice": [],
+          "timestamps": [
+            "2:23-2:30"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines practical exercise instruction with clear biomechanical explanations, making it highly suitable for a knowledge base. The use of visual aids (muscle highlights, skeleton model, foot contact points) enhances understanding. The progression advice is also valuable."
+    }
+  },
+  {
+    "rank": 17,
+    "video_id": "843HhzViWMs",
+    "url": "https://www.youtube.com/shorts/843HhzViWMs",
+    "title": "Este estiramiento corrige la postura de cabeza adelantada.",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\017_843HhzViWMs.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/843HhzViWMs",
+      "source_title_hint": "Este estiramiento corrige la postura de cabeza adelantada.",
+      "primary_summary": "The video explains that the sternocleidomastoid (SCM) muscle is often overactive in individuals with forward head posture and neck pain, contributing to both posture and compensatory breathing mechanics. It then demonstrates two variations of a gentle SCM stretch with a breathing component to help lengthen the muscle and re-educate proper breathing.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear explanation of the sternocleidomastoid (SCM) muscle's role in forward head posture and its connection to breathing mechanics, supported by research. It then offers a practical, actionable corrective exercise with a progression, including visual execution details and important cues.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "neck",
+          "head",
+          "upper back"
+        ],
+        "problem_layers": [
+          "muscular",
+          "postural",
+          "respiratory"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "forward head posture",
+        "sternocleidomastoid",
+        "SCM muscle",
+        "neck pain",
+        "posture correction",
+        "breathing mechanics",
+        "muscle release",
+        "stretching"
+      ],
+      "searchable_tags": [
+        "SCM stretch",
+        "neck stretch",
+        "postural correction",
+        "breathing exercise",
+        "self-release",
+        "cervical spine",
+        "head posture",
+        "muscle imbalance"
+      ],
+      "problem_statements": [
+        "Forward head posture",
+        "Chronic neck pain",
+        "Overactive sternocleidomastoid (SCM) muscle",
+        "Compensatory breathing patterns due to forward head posture"
+      ],
+      "habits_or_contexts": [
+        "Individuals with forward head posture",
+        "Individuals experiencing neck pain",
+        "Individuals with compensatory breathing mechanics"
+      ],
+      "key_visual_points": [
+        "Animated skeleton highlighting the sternocleidomastoid (SCM) muscle and its attachments.",
+        "Man demonstrating exaggerated forward head posture.",
+        "Man using a skeleton model to show SCM attachment points on the mastoid process and collarbone.",
+        "Man demonstrating the seated SCM stretch by gently separating the muscle's attachment points with his fingers.",
+        "Man demonstrating the supine SCM stretch with his head unsupported off a table, applying the same hand technique."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "Seated SCM elongation with breath",
+        "Supine SCM elongation with breath"
+      ],
+      "advice_mentioned": [
+        "Take a strategic approach to releasing the SCM, rather than just traditional stretching or massage.",
+        "Create length between the SCM attachment sites.",
+        "Add a subtle breath component to the stretch.",
+        "Breathe in and out through the nose during the stretch.",
+        "Focus on a mild stretch; more stretch is not better.",
+        "Relax the muscle and attachment sites as much as possible with each subsequent breath."
+      ],
+      "warnings_or_limitations": [
+        "The supine variation might be too much too soon for some individuals.",
+        "Do not force the stretch; it should be mild.",
+        "Avoid turning the head or neck during the stretch."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Sternocleidomastoid (SCM) Role in Forward Head Posture and Breathing",
+          "summary": "The sternocleidomastoid (SCM) muscle is frequently overactive in individuals with forward head posture and neck pain. Due to its attachment points on the mastoid process, clavicle, and sternum, it has significant leverage to pull the head and neck forward. When the head is forward, the SCM also acts as a compensatory muscle for inhalation, impacting proper breathing mechanics.",
+          "observable_signs": [
+            "Forward head posture",
+            "Neck pain"
+          ],
+          "mechanisms": [
+            "Overactive SCM pulls the head and neck forward.",
+            "SCM acts as a compensatory muscle of inhalation when the head and neck are forward."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Understanding the muscular contributions to forward head posture.",
+            "Understanding the link between posture and breathing compensation."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:00",
+            "00:06",
+            "00:10",
+            "00:19",
+            "00:24",
+            "00:48"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "Seated Sternocleidomastoid (SCM) Elongation with Breath",
+          "summary": "A gentle seated stretch designed to create length in the SCM muscle and re-educate breathing patterns by encouraging relaxation of the SCM during respiration.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Gentle separation of SCM attachment points to create length.",
+            "Incorporation of nasal breathing to reduce reliance on SCM as a compensatory inhalation muscle."
+          ],
+          "execution_steps": [
+            "Sit upright in a chair.",
+            "Place two fingers of the left hand on the inside of the right collarbone, slightly above it, and press down gently.",
+            "Place two fingers of the right hand on the mastoid process (bone just behind the ear) and push up gently.",
+            "Gently separate the attachment points by pushing down with the left hand and pushing up with the right hand.",
+            "Maintain a mild stretch without turning the head or neck.",
+            "Breathe in and out through the nose in this position."
+          ],
+          "cues": [
+            "\"Press down a little bit\" (on collarbone)",
+            "\"Separate these attachment points away from each other\"",
+            "\"Very gently pushing down with your left and pushing up with your right\"",
+            "\"This should not turn your head or neck in any way\"",
+            "\"You just want to create length and breathe through this\""
+          ],
+          "breathing_cues": [
+            "\"Breathe in through your nose, out through your nose in this position.\"",
+            "\"Teaching you how to breathe without relying on this muscle as a compensation.\""
+          ],
+          "errors_to_avoid": [
+            "Turning the head or neck.",
+            "Applying excessive pressure or stretch (more stretch is not better)."
+          ],
+          "when_useful": [
+            "To address forward head posture.",
+            "To alleviate neck pain associated with SCM tightness.",
+            "To improve breathing mechanics by reducing SCM compensation."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "01:00",
+            "01:07",
+            "01:31",
+            "01:52"
+          ]
+        },
+        {
+          "unit_type": "mobility_drill",
+          "title": "Supine Sternocleidomastoid (SCM) Elongation with Breath (Progression)",
+          "summary": "A progressive variation of the SCM stretch performed lying supine with the head unsupported, utilizing gravity to enhance the stretch while maintaining focus on controlled breathing.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Gravity assists in lengthening the SCM due to the unsupported head position.",
+            "Continued focus on breathing into the stretch to relax the muscle."
+          ],
+          "execution_steps": [
+            "Lie supine on a bed or table with the head unsupported and hanging off the edge.",
+            "Place two fingers of one hand on the inside of the opposite collarbone, slightly above it, and press down gently.",
+            "Place two fingers of the other hand on the mastoid process (bone just behind the ear) and push up gently.",
+            "Gently separate the attachment sites, thinking about pulling them subtly away from each other.",
+            "Breathe into the stretch, trying to relax the muscle and attachment sites as much as possible with each subsequent breath."
+          ],
+          "cues": [
+            "\"Separate and think about pulling these attachment sites subtly away from each other.\"",
+            "\"Breathing into it and you're trying to relax the muscle and the attachment sites as much as you can with each subsequent breath.\""
+          ],
+          "breathing_cues": [
+            "\"Breathing into it and you're trying to relax the muscle and the attachment sites as much as you can with each subsequent breath.\""
+          ],
+          "errors_to_avoid": [
+            "Progressing to this variation too soon if the seated version is not mastered.",
+            "Forcing the stretch or experiencing discomfort."
+          ],
+          "when_useful": [
+            "As a progression for individuals who have mastered the seated SCM stretch.",
+            "To achieve a deeper stretch and further improve SCM length and breathing patterns."
+          ],
+          "when_not_useful": [
+            "If it causes too much discomfort or is too intense initially."
+          ],
+          "retest": [],
+          "advice": [
+            "Progress to this variation only after mastering the first progression."
+          ],
+          "timestamps": [
+            "02:16",
+            "02:38"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines anatomical explanation with practical, progressive exercises. The emphasis on subtle stretching and breathing is a key educational point. The visual aids (skeleton, animated muscle highlights) enhance understanding."
+    }
+  },
+  {
+    "rank": 18,
+    "video_id": "X2cCVAY-vys",
+    "url": "https://www.youtube.com/shorts/X2cCVAY-vys",
+    "title": "La sorprendente verdad sobre cómo mejorar la movilidad de la cadera 🤯",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\018_X2cCVAY-vys.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/X2cCVAY-vys",
+      "source_title_hint": "La sorprendente verdad sobre cómo mejorar la movilidad de la cadera 🤯",
+      "primary_summary": "This video explains that limited hip internal rotation is often not due to tight muscles, but rather being stuck in a position of relative internal rotation, which limits further movement. The solution is to restore external rotation space. It demonstrates a diagnostic test for hip abduction and internal rotation, and provides two corrective exercises (half-kneeling and supine hip external rotation pushes) to improve this space.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear biomechanical concept explanation for limited hip mobility, offers diagnostic tests, and demonstrates corrective exercises with variations and cues. It addresses a common misconception and offers a practical solution.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "hip",
+          "pelvis",
+          "knee",
+          "foot"
+        ],
+        "problem_layers": [
+          "musculoskeletal",
+          "biomechanical"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "hip mobility",
+        "hip internal rotation",
+        "hip external rotation",
+        "hip abduction",
+        "pelvic position",
+        "biomechanics",
+        "corrective exercise",
+        "mobility drills"
+      ],
+      "searchable_tags": [
+        "hip pain",
+        "squat mobility",
+        "hip impingement",
+        "glute activation",
+        "foam roller exercise",
+        "movement reeducation"
+      ],
+      "problem_statements": [
+        "Limited hip internal rotation",
+        "Limited hip abduction",
+        "Hips stuck in relative internal rotation",
+        "Misconception about causes of limited hip mobility"
+      ],
+      "habits_or_contexts": [],
+      "key_visual_points": [
+        "Animated skeleton demonstrating hip rotation and abduction.",
+        "Man performing a side-lying hip abduction test.",
+        "Man performing a supine hip internal rotation test.",
+        "Man demonstrating half-kneeling hip external rotation push with a foam roller against a wall.",
+        "Man demonstrating supine hip external rotation push with a foam roller against a wall."
+      ],
+      "tests_mentioned": [
+        "Side-lying hip abduction test",
+        "Supine hip internal rotation test"
+      ],
+      "exercises_mentioned": [
+        "Half-kneeling hip external rotation push",
+        "Half-kneeling split squat hold (variation)",
+        "Supine hip external rotation push"
+      ],
+      "advice_mentioned": [
+        "To improve hip internal rotation, focus on restoring external rotation space.",
+        "Perform exercises to open up external rotation space."
+      ],
+      "warnings_or_limitations": [
+        "During the side-lying hip abduction test, stop before rolling hips towards the side or arching the back.",
+        "During the supine hip external rotation push, avoid rolling off the same side low back and keep both butt cheeks on the ground."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "educational_point",
+          "title": "Misconception of Limited Hip Mobility",
+          "summary": "Many people believe limited hip mobility is due to tight or overactive muscles. However, it can often be attributed to the hip joint already being positioned at an extreme end of its range (e.g., relative internal rotation), leaving no more space for further movement in that direction.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Hip external rotators being 'too tight' can limit hip internal rotation.",
+            "Hips starting in a position of relative internal rotation means much of the internal rotation space is already 'taken up'."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00",
+            "0:11",
+            "0:23",
+            "0:33",
+            "0:43"
+          ]
+        },
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Restoring External Rotation Space for Improved Internal Rotation",
+          "summary": "The solution to limited hip internal rotation, when the hip is already stuck in a relatively internally rotated position, is to restore more external rotation space. This creates more available space for the hip to then move into internal rotation.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Restoring external rotation space allows for greater internal rotation range of motion.",
+            "Hip abduction involves the femur sliding into external rotation."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:48",
+            "0:52",
+            "1:12",
+            "1:16"
+          ]
+        },
+        {
+          "unit_type": "functional_test",
+          "title": "Side-Lying Hip Abduction Test",
+          "summary": "A test to assess hip abduction range of motion, which can indicate if the hip is stuck in relative internal rotation. Limited abduction suggests a need to restore external rotation space.",
+          "observable_signs": [
+            "Limited hip abduction (less than approximately 30-45 degrees from neutral, as visually demonstrated)."
+          ],
+          "mechanisms": [],
+          "execution_steps": [
+            "Double fold a pillow and lay on your side with it underneath your low rib cage.",
+            "Start with knees bent at 90 degrees.",
+            "Slightly drop knees down to about 45 degrees.",
+            "Take the top leg, straighten it out, and slowly drag it back.",
+            "Stop at the point where going back any further would cause hips to roll towards that side or the back to arch.",
+            "From this position, lift the leg up.",
+            "Stop at the point where lifting higher would cause crunching or rolling of the hips."
+          ],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Rolling hips towards the side (during leg drag back).",
+            "Arching the back (during leg drag back).",
+            "Crunching or rolling hips (during leg lift)."
+          ],
+          "when_useful": [
+            "To identify if limited hip abduction is present.",
+            "To assess if limited hip internal rotation is linked to being stuck in relative internal rotation."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:58",
+            "1:08",
+            "1:24"
+          ]
+        },
+        {
+          "unit_type": "functional_test",
+          "title": "Supine Hip Internal Rotation Test",
+          "summary": "A test to assess hip internal rotation range of motion while lying on the back.",
+          "observable_signs": [
+            "Limited hip internal rotation."
+          ],
+          "mechanisms": [],
+          "execution_steps": [
+            "Lie on your back with knees bent and feet flat on the ground.",
+            "Allow your knees to fall inward."
+          ],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "To identify if limited hip internal rotation is present."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:58",
+            "2:54"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Half-Kneeling Hip External Rotation Push",
+          "summary": "An exercise designed to open up external rotation space in the hip, which can indirectly improve hip internal rotation.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Get into a half-kneeling position.",
+            "Place a foam roller against a wall, with the outside of your front knee flush against the roller.",
+            "Ensure the back knee is directly underneath the back hip.",
+            "Feel three points of contact in your front foot (big toe, pinky toe, heel).",
+            "Very gently push your front knee into the foam roller."
+          ],
+          "cues": [
+            "Feel a little bit of your outside glutes engage.",
+            "Keep your pelvis level."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "To improve hip external rotation space.",
+            "To indirectly improve hip internal rotation."
+          ],
+          "when_not_useful": [],
+          "retest": [
+            "Retest hip abduction and internal rotation after performing this exercise."
+          ],
+          "advice": [],
+          "timestamps": [
+            "1:51",
+            "1:58"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Half-Kneeling Split Squat Hold (Variation)",
+          "summary": "A more challenging variation of the half-kneeling hip external rotation push, involving a slight split squat.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Start in the half-kneeling hip external rotation push position.",
+            "Go up into a slight split squat and hold that position."
+          ],
+          "cues": [
+            "Keep your pelvis level."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For those who want a more challenging variation of the half-kneeling hip external rotation push."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "2:17"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Supine Hip External Rotation Push (Regression)",
+          "summary": "A regressed version of the hip external rotation push, performed lying on the back, suitable if the half-kneeling position is too challenging.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [
+            "Lie on your back.",
+            "Bend one knee and place a foam roller against a wall, with the outside of the bent knee flush against the roller.",
+            "Very gently push your outside knee into the roller.",
+            "Ensure you are still feeling the three points of contact of the foot that is flat and pushing."
+          ],
+          "cues": [
+            "Keep both butt cheeks on the ground.",
+            "Maintain minimal tension anywhere in your body besides the slight push into the roller."
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Rolling off the same side low back."
+          ],
+          "when_useful": [
+            "If the half-kneeling position is too challenging."
+          ],
+          "when_not_useful": [],
+          "retest": [
+            "Retest hip abduction and internal rotation after performing this exercise."
+          ],
+          "advice": [],
+          "timestamps": [
+            "2:28"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively uses anatomical models and live demonstrations to explain a complex biomechanical concept in an accessible way. The progression/regression options for the exercise enhance its utility."
+    }
+  },
+  {
+    "rank": 19,
+    "video_id": "LRP7vZaarGo",
+    "url": "https://www.youtube.com/shorts/LRP7vZaarGo",
+    "title": "Este ejercicio de movilidad de cadera funciona mejor que los estiramientos.",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\019_LRP7vZaarGo.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/LRP7vZaarGo",
+      "source_title_hint": "Este ejercicio de movilidad de cadera funciona mejor que los estiramientos.",
+      "primary_summary": "This video introduces the kettlebell drop catch as an effective exercise for improving and maintaining hip internal rotation mobility, particularly useful in dynamic warm-ups. It explains the biomechanical principle that hip flexion involves internal rotation of the femur and demonstrates how the exercise trains the body to quickly access and utilize this internal rotation space, contrasting it with passive stretching methods.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a clear explanation of a biomechanical concept (hip internal rotation during flexion) and demonstrates a specific exercise (kettlebell drop catch) designed to improve this mobility in a dynamic context. It also highlights the difference between simply gaining range of motion and actively utilizing it.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "hip",
+          "pelvis",
+          "lower limb"
+        ],
+        "problem_layers": [
+          "mobility",
+          "motor control",
+          "strength"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "hip mobility",
+        "hip internal rotation",
+        "kettlebell exercises",
+        "dynamic warm-up",
+        "split squat",
+        "functional movement",
+        "athletic performance",
+        "femoral rotation"
+      ],
+      "searchable_tags": [
+        "kettlebell",
+        "mobility drill",
+        "hip flexion",
+        "internal rotation",
+        "dynamic exercise",
+        "warmup",
+        "movement reeducation"
+      ],
+      "problem_statements": [
+        "Limited hip internal rotation mobility",
+        "Inability to actively utilize hip mobility during dynamic movements"
+      ],
+      "habits_or_contexts": [
+        "Dynamic warm-up routines",
+        "Athletic movements requiring quick changes in direction or deep hip flexion"
+      ],
+      "key_visual_points": [
+        "Man demonstrating the kettlebell drop catch in a split stance position.",
+        "Anatomical model of the pelvis and femur illustrating internal rotation during hip flexion.",
+        "Visual cues for foot contact points (heel, base of big toe, base of little toe) on the front foot.",
+        "Animated arrows showing descent and ascent during the exercise."
+      ],
+      "tests_mentioned": [
+        "Seated hip internal rotation assessment (implied, looking for 20-25 degrees)"
+      ],
+      "exercises_mentioned": [
+        "Kettlebell drop catch"
+      ],
+      "advice_mentioned": [
+        "Use the kettlebell drop catch as a dynamic warm-up exercise.",
+        "Focus on actively utilizing internal rotation space rather than just passively opening it up.",
+        "Maintain proper alignment during the exercise, avoiding dropping off to one side or twisting."
+      ],
+      "warnings_or_limitations": [
+        "Avoid dropping off to one side or turning/twisting too much during the exercise.",
+        "Do not allow yourself to lower closer to the ground after catching the kettlebell; stop the descent using internal rotation space."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Femoral Internal Rotation during Hip Flexion",
+          "summary": "During hip flexion, such as descending into a split squat, the femur naturally moves into internal rotation. This movement is crucial for accessing deeper hip flexion and places demand on the muscles and connective tissues of the pelvis and lower limb to organize and control this internal rotation.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Femur internally rotates as the hip flexes."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "Understanding hip joint mechanics during dynamic movements."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:12",
+            "0:31"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "Kettlebell Drop Catch for Dynamic Hip Internal Rotation Mobility",
+          "summary": "The kettlebell drop catch is a dynamic exercise performed in a split stance to improve and maintain active hip internal rotation mobility. It trains the body to quickly access and utilize internal rotation space by rapidly descending into deeper hip flexion while catching a kettlebell, then pushing back up.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Forces rapid organization and utilization of hip internal rotation space under load.",
+            "Trains eccentric control and concentric power out of a deep hip flexion with internal rotation."
+          ],
+          "execution_steps": [
+            "Start in a split stance with feet hip-width apart.",
+            "Ensure the front shin is in a vertical position.",
+            "Position the back knee around underneath the back hip.",
+            "On the front foot, feel all three contact points: heel, base of the big toe, and base of the little toe, with a particular focus on the inside heel and base of the big toe.",
+            "Hold a kettlebell in the hand opposite the front leg.",
+            "Release the kettlebell and quickly descend into a deeper hip flexion, catching the kettlebell before it hits the ground.",
+            "Immediately stop the descent upon catching the kettlebell, not allowing further lowering.",
+            "Push back up to the starting vertical shin position."
+          ],
+          "cues": [
+            "\"Drop, catch, don't let yourself go any lower, then come back out of it.\"",
+            "\"Make sure everything stays nice and in line.\""
+          ],
+          "breathing_cues": [],
+          "errors_to_avoid": [
+            "Dropping off to one side.",
+            "Turning or twisting too much.",
+            "Continuing to lower after catching the kettlebell."
+          ],
+          "when_useful": [
+            "Improving hip internal rotation for quick, dynamic, and athletic movements.",
+            "As part of a dynamic warm-up routine.",
+            "To teach active control of hip mobility."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "0:00",
+            "0:25",
+            "1:15",
+            "1:51"
+          ]
+        },
+        {
+          "unit_type": "educational_point",
+          "title": "Reinforcing Active Use of Mobility Space",
+          "summary": "Many mobility strategies focus solely on 'opening up space' (e.g., through passive stretching) without reinforcing the proper, active use of that space. The kettlebell drop catch exercise is a superior strategy because it demands the body to actively organize and utilize hip internal rotation space in a dynamic, functional context, making the gained mobility applicable to athletic movements.",
+          "observable_signs": [],
+          "mechanisms": [],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For individuals and practitioners seeking to improve functional and athletic mobility.",
+            "When static stretching alone is not translating to improved dynamic movement."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [
+            "Prioritize exercises that teach the body to actively control and utilize its full range of motion, especially for dynamic activities."
+          ],
+          "timestamps": [
+            "0:54",
+            "1:00"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively combines biomechanical explanation with practical exercise demonstration. The use of an anatomical model and visual cues enhances understanding. The distinction between passive mobility gains and active utilization is a valuable educational point."
+    }
+  },
+  {
+    "rank": 20,
+    "video_id": "UuZj7oum5fM",
+    "url": "https://www.youtube.com/shorts/UuZj7oum5fM",
+    "title": "Esto corrige la postura frente a la pantalla más que el estiramiento",
+    "analysis_file": "data\\knowledge\\video_knowledge_drafts\\conorharris_newest_11_20\\020_UuZj7oum5fM.json",
+    "analysis": {
+      "source_url": "https://www.youtube.com/shorts/UuZj7oum5fM",
+      "source_title_hint": "Esto corrige la postura frente a la pantalla más que el estiramiento",
+      "primary_summary": "This video explains that rounded shoulders and tight pectorals are often a symptom of a depressed and compressed rib cage, rather than the primary issue. It attributes this to a diaphragm that loses its ability to function due to sedentary lifestyles and lack of movement variability. The solution proposed is to open up the chest and improve diaphragm function through specific breathing and movement, not just stretching or strengthening the upper back. It then demonstrates an 'all fours hand walk with exhale' exercise designed to achieve this by promoting rib cage expansion and proper breathing mechanics.",
+      "classification": {
+        "usefulness": "useful",
+        "usefulness_reason": "The video provides a biomechanical explanation for rounded shoulders that goes beyond common superficial fixes, linking it to diaphragm function and rib cage mobility. It then offers a specific, actionable corrective exercise with detailed execution instructions and cues.",
+        "exclusion_reason": null,
+        "content_kind": "mixed",
+        "body_regions": [
+          "shoulders",
+          "rib cage",
+          "thoracic spine",
+          "diaphragm",
+          "upper back",
+          "neck"
+        ],
+        "problem_layers": [
+          "postural",
+          "muscular",
+          "respiratory",
+          "skeletal"
+        ],
+        "suitable_for_protocol_database": true,
+        "suitable_for_concept_knowledge_base": true,
+        "suitable_for_recommendation_mapping": true,
+        "contains_visual_execution_detail": true,
+        "confidence": "high"
+      },
+      "searchable_topics": [
+        "rounded shoulders",
+        "forward head posture",
+        "posture correction",
+        "rib cage mobility",
+        "diaphragm function",
+        "breathing mechanics",
+        "thoracic extension",
+        "pectoral tightness",
+        "upper back strengthening"
+      ],
+      "searchable_tags": [
+        "posture",
+        "shoulders",
+        "ribcage",
+        "diaphragm",
+        "breathing",
+        "correctiveexercise",
+        "mobility",
+        "thoracic",
+        "sedentary",
+        "deskjob"
+      ],
+      "problem_statements": [
+        "Rounded forward shoulders",
+        "Depressed and compressed front rib cage",
+        "Diaphragm losing ability to function effectively",
+        "Tight pectorals",
+        "Lack of rib cage movement variability",
+        "Poor posture from sedentary lifestyle"
+      ],
+      "habits_or_contexts": [
+        "Sedentary lifestyle",
+        "Prolonged sitting",
+        "Lack of movement variability"
+      ],
+      "key_visual_points": [
+        "Skeleton model demonstrating rounded shoulders and a depressed rib cage.",
+        "Animated overlay showing the diaphragm's movement during breathing.",
+        "Demonstration of incorrect pec stretching and upper back strengthening exercises.",
+        "Demonstration of the 'all fours hand walk with exhale' exercise, highlighting hand placement, shoulder movement, and rib cage closing/opening."
+      ],
+      "tests_mentioned": [],
+      "exercises_mentioned": [
+        "All fours hand walk with exhale"
+      ],
+      "advice_mentioned": [
+        "Address the true underlying issue of a depressed/compressed rib cage for rounded shoulders, rather than just stretching pectorals or strengthening the upper back.",
+        "Focus on opening up the chest and improving diaphragm function.",
+        "Create a stacked position of head over rib cage over pelvis."
+      ],
+      "warnings_or_limitations": [
+        "When walking hands forward in the exercise, stop before the back starts to arch."
+      ],
+      "knowledge_units": [
+        {
+          "unit_type": "biomechanical_mechanism",
+          "title": "Underlying Cause of Rounded Shoulders: Depressed and Compressed Rib Cage",
+          "summary": "Rounded shoulders and tight pectorals are often secondary issues stemming from a primary problem: a depressed and compressed rib cage. This occurs when the diaphragm loses its ability to function optimally, leading to a lack of rib cage movement variability. The restricted rib cage position then signals the pectorals to remain tight and pulls the shoulders forward.",
+          "observable_signs": [
+            "Rounded forward shoulders",
+            "Depressed and compressed front of the rib cage"
+          ],
+          "mechanisms": [
+            "Diaphragm dysfunction (losing ability to do its job over time) leads to a rib cage stuck in a depressed and compressed position.",
+            "Lack of rib cage movement variability (inability to open in all directions during inhale) prevents proper chest expansion.",
+            "A compressed/depressed rib cage sends a message to the pectoral muscles to stay tight, pulling the shoulders forward."
+          ],
+          "execution_steps": [],
+          "cues": [],
+          "breathing_cues": [],
+          "errors_to_avoid": [],
+          "when_useful": [
+            "For individuals with chronic rounded shoulders or pectoral tightness that doesn't respond to traditional stretching/strengthening."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [],
+          "timestamps": [
+            "00:00",
+            "00:10",
+            "00:24",
+            "00:45",
+            "00:58"
+          ]
+        },
+        {
+          "unit_type": "corrective_exercise",
+          "title": "All Fours Hand Walk with Exhale for Rib Cage Expansion and Posture",
+          "summary": "This exercise aims to improve rib cage mobility, enhance diaphragm function, and correct rounded shoulders by promoting full rib cage expansion and a stacked postural alignment. It involves a specific hand position, a gentle push through the ground, and a controlled exhale to engage core muscles, followed by a relaxed nasal inhale to expand the upper chest and back.",
+          "observable_signs": [],
+          "mechanisms": [
+            "Promotes rib cage closing and side ab engagement during exhale, creating a stable base.",
+            "Facilitates upper chest and upper back expansion during inhale, improving rib cage mobility.",
+            "Helps re-establish a stacked head-over-rib-cage-over-pelvis alignment."
+          ],
+          "execution_steps": [
+            "Start in an all-fours position with hands directly under shoulders and knees directly under hips.",
+            "Ensure the entire hand is relaxed and flat on the ground, with emphasis on the base of the outside palm and the fleshy part of the thumb.",
+            "Slowly walk hands forward a small distance, stopping just before the lower back begins to arch.",
+            "Maintain a neutral neck by looking about a foot in front of your hands.",
+            "Gently push through the ground with the specified hand contact points (base of outside palm and thumb meat) without shrugging the shoulders. This should cause the shoulders to gently move back in space.",
+            "Exhale very gently through an open mouth with a relaxed jaw for 5-10 seconds.",
+            "At the end of the exhale, feel the bottom of the rib cage close down and the side abs engage.",
+            "Pause briefly with your mouth closed, maintaining a slight tension in the side abs.",
+            "Gently inhale through your nose, allowing air to 'fall into you' without forcing it.",
+            "During the inhale, feel expansion in the upper chest and upper back."
+          ],
+          "cues": [
+            "Relaxed and flat hand, especially base of outside palm and thumb meat.",
+            "Walk hands forward just a little bit, stop before back arches.",
+            "Neck neutral, look a foot in front of hands.",
+            "Gently push through the ground with hand contact points.",
+            "Shoulders gently come back in space (not shrugging).",
+            "Exhale gently with open mouth and relaxed jaw (5-10 seconds).",
+            "Feel rib cage close down and side abs engage at end of exhale.",
+            "Pause, close mouth, hold slight ab tension.",
+            "Gently inhale through nose, let air fall into you.",
+            "Feel expansion in upper chest and upper back during inhale.",
+            "Keep neck and upper traps relaxed."
+          ],
+          "breathing_cues": [
+            "5-10 second soft, relaxed exhale through an open mouth and relaxed jaw.",
+            "Pause at the end of exhale with mouth closed, holding slight ab tension.",
+            "Gently inhale through the nose, letting air fall in."
+          ],
+          "errors_to_avoid": [
+            "Arching the lower back when walking hands forward.",
+            "Shrugging shoulders during the push through the ground.",
+            "Forcing the inhale."
+          ],
+          "when_useful": [
+            "To improve rib cage mobility and expansion.",
+            "To enhance diaphragm function and proper breathing patterns.",
+            "To correct rounded shoulder posture.",
+            "To create a more stacked and aligned posture."
+          ],
+          "when_not_useful": [],
+          "retest": [],
+          "advice": [
+            "Always ensure your neck and upper traps are as relaxed as possible, avoiding shrugging.",
+            "Maintain consistent pressure through the two specified contact points in your hand throughout the exercise."
+          ],
+          "timestamps": [
+            "01:20"
+          ]
+        }
+      ],
+      "model_notes": "The video effectively uses a skeleton model and animated overlays to explain the biomechanical concept before demonstrating the exercise. The instructions for the exercise are clear and include important cues and errors to avoid. The connection between diaphragm function, rib cage position, and shoulder posture is a valuable concept for a biomechanical knowledge base."
+    }
+  }
+]

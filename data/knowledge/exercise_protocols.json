@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "description": "Initial corrective exercise knowledge base curated from local educational videos in data/to-learn.",
+  "protocols": [
+    {
+      "protocol_id": "scapular_winging_triceps_low_trap_band",
+      "name": "Band-assisted triceps long head and lower trap repositioning",
+      "summary": "Targets scapular winging presentations associated with a relatively upwardly rotated, off-rib-cage scapular position.",
+      "rationale": "The source video proposes that the long head of the triceps can help pull the scapula toward relative downward rotation and work with the lower trapezius to improve posterior rib-cage positioning. It also emphasizes that lasting change requires anterior chest-wall expansion with breathing.",
+      "target_deficiency_ids": [
+        "possible_scapular_winging_pattern",
+        "possible_dynamic_winging_pattern",
+        "scapulothoracic_postural_asymmetry",
+        "scapular_resting_asymmetry"
+      ],
+      "priority": "primary",
+      "exercise": {
+        "type": "band_or_cable",
+        "setup": [
+          "Anchor a band high enough that the arm and band form a straight line when seated.",
+          "Sit evenly through both sit bones.",
+          "Use the affected side arm across the body without shrugging."
+        ],
+        "execution": [
+          "Slightly drop the opposite shoulder to engage the lateral abdominal wall and open the front chest wall.",
+          "Keep the working shoulder relatively down and relaxed.",
+          "Extend the elbow against the band to bias the long head of the triceps.",
+          "Allow mild lower-trap contribution without elevating the shoulder.",
+          "Breathe in through the nose and out through the mouth while maintaining the position."
+        ],
+        "coaching_cues": [
+          "Do not shrug the shoulder.",
+          "Keep the eyes level and straight ahead.",
+          "Use the breath to expand the anterior chest wall instead of forcing the shoulder back."
+        ],
+        "progression": [
+          "Start as an isometric hold.",
+          "Progress to dynamic triceps extensions.",
+          "Progress further to a cable-machine version once the pattern is understood."
+        ]
+      },
+      "dosage": {
+        "starting_dose": "Use short sets of controlled breaths in the setup position, then progress to slow repetitions.",
+        "progression_rule": "Only increase load after the user can keep the shoulder relaxed and avoid cervical compensation."
+      },
+      "source_videos": [
+        {
+          "file": "data/to-learn/Fix Scapular Winging - For Good.mp4",
+          "timestamps": [
+            "00:00-01:40",
+            "01:40-02:57"
+          ]
+        }
+      ],
+      "evidence_type": "expert_video_protocol"
+    },
+    {
+      "protocol_id": "pec_decompression_and_side_lying_ir_breath",
+      "name": "Pec decompression plus side-lying internal rotation breathing drill",
+      "summary": "Targets limited behind-the-back reach patterns driven by rounded shoulder compensation, anterior rib-cage restriction and poor access to genuine shoulder internal rotation.",
+      "rationale": "The source video frames hand-behind-back failure as a problem of missing true shoulder internal rotation and chest-wall opening. It proposes first reducing anterior pec compression with a lacrosse ball, then using breath and side-lying positioning to access chest-wall expansion and more authentic internal rotation.",
+      "target_deficiency_ids": [
+        "forward_posture_pattern",
+        "possible_scapular_winging_pattern"
+      ],
+      "priority": "secondary",
+      "exercise": {
+        "type": "soft_tissue_plus_breathing_mobility",
+        "setup": [
+          "Test the hand-behind-back pattern before the drill.",
+          "Use a lacrosse ball against the wall near the sternum just under the collarbone.",
+          "Work from upper pec fibers toward lower fibers."
+        ],
+        "execution": [
+          "Roll the ball outward from the sternum toward the armpit across multiple pec fiber levels.",
+          "Repeat the outward passes two to three more times.",
+          "Move to a side-lying position.",
+          "Use the bottom hand to gently lift the pec off the rib cage down and forward.",
+          "Place the top hand on the head and slowly rotate the elbow toward the ceiling until the first meaningful tension.",
+          "Breathe in through the nose and out through the mouth with a relaxed jaw, allowing the rib cage to come down on the exhale and the chest wall to expand gently on inhale."
+        ],
+        "coaching_cues": [
+          "Do not force end range.",
+          "Stop at the first meaningful tension.",
+          "The inhale should create expansion in the pec-side chest wall without neck gripping."
+        ],
+        "progression": [
+          "Retest the hand-behind-back pattern after the release and breathing sequence.",
+          "Use the drill as a preparatory intervention before more loaded shoulder work."
+        ]
+      },
+      "dosage": {
+        "starting_dose": "Perform the wall-ball passes across the pec fibers, then hold the side-lying breathing position for several slow breath cycles.",
+        "progression_rule": "Progress only if the retest shows less winging or less forward dumping at the shoulder."
+      },
+      "source_videos": [
+        {
+          "file": "data/to-learn/Why You Cant Scratch Your Own Back.mp4",
+          "timestamps": [
+            "00:00-01:40",
+            "01:40-02:59"
+          ]
+        }
+      ],
+      "evidence_type": "expert_video_protocol"
+    },
+    {
+      "protocol_id": "hip_posterior_glide_mobility_sequence",
+      "name": "Posterior hip glide mobility sequence",
+      "summary": "Targets hip mobility limitations framed as poor femoral posterior glide rather than a simple need for more generic hip-opener stretching.",
+      "rationale": "The source short argues that many mobility routines overemphasize external-rotation-based hip opening. It proposes that some people primarily need better posterior glide of the femur in the socket, which can improve internal rotation directly and external rotation indirectly by creating more space to move.",
+      "target_deficiency_ids": [
+        "limited_hip_internal_rotation",
+        "limited_hip_external_rotation_secondary_to_posterior_glide_restriction",
+        "posterior_hip_glide_restriction"
+      ],
+      "priority": "primary",
+      "exercise": {
+        "type": "mobility_sequence",
+        "setup": [
+          "Use this when the person presents with restricted hip motion and common hip-opener stretches have not solved it.",
+          "Start with a passive all-fours based posterior-hip stretch.",
+          "Then progress to a dynamic quadruped knee-drop drill with a small elevation under the active-side knee."
+        ],
+        "execution": [
+          "Passive drill: from quadruped, the grounded side is the side being stretched at the back of the hip.",
+          "Hook the opposite knee around mid-shin range and let the knee drop toward the floor.",
+          "Stay where the stretch is felt in the back of the hip, not the front.",
+          "Optionally lower to the same-side elbow or reach the opposite arm overhead to increase the back-of-hip stretch.",
+          "Dynamic drill: elevate the working-side knee about three to four inches.",
+          "Keep hands under shoulders, knees under hips and the low back neutral.",
+          "Shift weight subtly toward the elevated side and exhale as the knee drops, stopping before the pelvis rocks significantly.",
+          "Raise the knee slowly above the passive side and repeat for controlled repetitions."
+        ],
+        "coaching_cues": [
+          "Do not chase front-of-hip pinching.",
+          "Use a gentle mouth exhale during the drop phase.",
+          "The target sensation is inner thigh activation and or back-of-hip stretch, not low-back movement.",
+          "Keep the lumbar spine neutral and avoid rocking the pelvis."
+        ],
+        "progression": [
+          "Start with the passive position if symptoms are irritable or motion is very restricted.",
+          "Progress to the dynamic knee-drop drill for two to three sets of 15 reps.",
+          "Retest both hip internal and external rotation after the sequence."
+        ]
+      },
+      "dosage": {
+        "starting_dose": "Use the passive stretch for short holds, then perform the dynamic drill for 2 to 3 sets of 15 reps.",
+        "progression_rule": "Progress only if the person can keep the motion in the hip without front-of-hip pinching or pelvic compensation."
+      },
+      "source_videos": [
+        {
+          "file": "https://www.youtube.com/shorts/u92YxyW0rt4",
+          "title": "Your Mobility Work Is Incomplete Without This",
+          "creator": "Conor Harris",
+          "upload_date": "2026-03-04",
+          "timestamps": [
+            "00:00-01:17",
+            "01:17-02:57"
+          ]
+        }
+      ],
+      "evidence_type": "expert_video_protocol"
+    }
+  ]
+}

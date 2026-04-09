@@ -1,0 +1,17 @@
+[
+  {
+    "model": "openai/gpt-oss-120b",
+    "status_code": 200,
+    "output_json": "data/knowledge/rag_runs/hf_raw_answer_shape_openai__gpt-oss-120b.json"
+  },
+  {
+    "model": "Qwen/Qwen3-32B",
+    "status_code": 200,
+    "output_json": "data/knowledge/rag_runs/hf_raw_answer_shape_Qwen__Qwen3-32B.json"
+  },
+  {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "status_code": 200,
+    "output_json": "data/knowledge/rag_runs/hf_raw_answer_shape_Qwen__Qwen3-4B-Instruct-2507.json"
+  }
+]

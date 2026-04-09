@@ -1,0 +1,3076 @@
+{
+  "source": {
+    "source_id": "src_92cbf14929b4bfa8",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/ViWJ5y25BDU",
+    "canonical_uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+    "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [],
+    "duration_sec": 177.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-05T17:50:24.536839Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_4c70fcda6fe2a7a2",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 177.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_7ba732eb50d0b72a",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 177.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_79ca02566a6d6312",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 177.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_9e848de9c9f751f2",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_001_0001233ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 1.2333333333333334,
+      "end_sec": 1.2333333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7d5c60b4c7d06791",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_002_0005366ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 5.366666666666667,
+      "end_sec": 5.366666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_cbfc503f27e23b3d",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_003_0009583ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 9.583333333333334,
+      "end_sec": 9.583333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c61d2f2ec6c844c1",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_004_0011783ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 11.783333333333333,
+      "end_sec": 11.783333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e12d1540e7a702a7",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_005_0015066ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 15.066666666666666,
+      "end_sec": 15.066666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3633d4ec7b77ba69",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_006_0018216ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 18.216666666666665,
+      "end_sec": 18.216666666666665,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_eef042345b5da911",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_007_0021366ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 21.366666666666667,
+      "end_sec": 21.366666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bfb15be620af111a",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_008_0025116ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 25.116666666666667,
+      "end_sec": 25.116666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3effd11685075a67",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_009_0027700ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 27.7,
+      "end_sec": 27.7,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a5871ab41d487296",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_010_0029883ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 29.883333333333333,
+      "end_sec": 29.883333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5216eadbccbfb300",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_011_0032700ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 32.7,
+      "end_sec": 32.7,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_589c5bc91fba8644",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_012_0035100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 35.1,
+      "end_sec": 35.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_577248812685f44c",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_013_0036550ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 36.55,
+      "end_sec": 36.55,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_06e71455004978c6",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_014_0038550ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 38.55,
+      "end_sec": 38.55,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c9a14c2ec0fc4e5b",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_015_0041683ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 41.68333333333334,
+      "end_sec": 41.68333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_855922ce48358c49",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_016_0044516ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 44.516666666666666,
+      "end_sec": 44.516666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_8bed131ff832dc58",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_017_0045950ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 45.95,
+      "end_sec": 45.95,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_77e5c8e7156191e2",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_018_0048183ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 48.18333333333334,
+      "end_sec": 48.18333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_f248a54641577514",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_019_0051050ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 51.05,
+      "end_sec": 51.05,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c655248a0bd8d227",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_020_0053083ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 53.083333333333336,
+      "end_sec": 53.083333333333336,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1727062ba4f56183",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_021_0055800ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 55.8,
+      "end_sec": 55.8,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1e1b3b99def3ac13",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_022_0058849ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 58.849999999999994,
+      "end_sec": 58.849999999999994,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1dcf80e7580fa0ec",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_023_0062666ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 62.66666666666667,
+      "end_sec": 62.66666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_710c28493e84ccf0",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_024_0066533ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 66.53333333333333,
+      "end_sec": 66.53333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e4d7d3d29b812e0c",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_025_0069366ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 69.36666666666667,
+      "end_sec": 69.36666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_fa287bb660eabf57",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_026_0072233ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 72.23333333333333,
+      "end_sec": 72.23333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3c3deeff2c880427",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_027_0076583ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 76.58333333333334,
+      "end_sec": 76.58333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6ca2627c2a435868",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_028_0080716ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 80.71666666666667,
+      "end_sec": 80.71666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_67ee38b967404aee",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_029_0092033ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 92.03333333333333,
+      "end_sec": 92.03333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_99011d58442122e6",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_030_0104166ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 104.16666666666667,
+      "end_sec": 104.16666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_0d7d9d0eb55d2b80",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_031_0106833ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 106.83333333333334,
+      "end_sec": 106.83333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_07b949daa917c2c5",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_032_0109000ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 109.0,
+      "end_sec": 109.0,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6f331174b25468c2",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_033_0111583ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 111.58333333333334,
+      "end_sec": 111.58333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b2aeef2dc7133c3b",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_034_0115433ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 115.43333333333334,
+      "end_sec": 115.43333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_d4dff2bd0d0c2ebf",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_035_0123283ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 123.28333333333333,
+      "end_sec": 123.28333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a920c4730356a3f0",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_036_0129699ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 129.7,
+      "end_sec": 129.7,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_8da6bdf9af3e91a7",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_037_0133033ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 133.03333333333336,
+      "end_sec": 133.03333333333336,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3bd81dc6c9e01a77",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_038_0138250ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 138.25,
+      "end_sec": 138.25,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7dd2d0356832f911",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_039_0142200ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 142.2,
+      "end_sec": 142.2,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_8eb813fa3408dd24",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_040_0145200ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 145.2,
+      "end_sec": 145.2,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_56d5f8803202b295",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_041_0148733ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 148.73333333333332,
+      "end_sec": 148.73333333333332,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b1a1105f686f1217",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_042_0151200ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 151.2,
+      "end_sec": 151.2,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_9f9e815cb343d2cd",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_043_0153633ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 153.63333333333333,
+      "end_sec": 153.63333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5f2656a259657ebd",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_044_0156100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 156.1,
+      "end_sec": 156.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_0f3c43d69a2985a7",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_045_0158683ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 158.68333333333334,
+      "end_sec": 158.68333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a1d3daea78e0f67e",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_046_0161500ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 161.5,
+      "end_sec": 161.5,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_28b3202ad81dad90",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_047_0167350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 167.35,
+      "end_sec": 167.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b692edba3fecccb5",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_048_0172433ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 172.43333333333334,
+      "end_sec": 172.43333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_465c8569541a5594",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_049_0174866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 174.86666666666667,
+      "end_sec": 174.86666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_04e9a2d7f5f79a13",
+      "source_id": "src_92cbf14929b4bfa8",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 177.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_afe682697d9bb5c0",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 2.466666666666667,
+      "duration_sec": 2.466666666666667,
+      "transcript": "If you have a tight no-vractive so-as muscle, chances are high, your stuck in anterior pelvic tilt, or hyperlord doses.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 1.2s.",
+      "segment_summary": "Segment 0.0-2.5s: If you have a tight no-vractive so-as muscle, chances are high, your stuck in anterior pelvic tilt, or hyperlord doses.",
+      "topics": [
+        "tight",
+        "no-vractive",
+        "so-as",
+        "muscle"
+      ],
+      "keywords": [
+        "tight",
+        "no-vractive",
+        "so-as",
+        "muscle",
+        "chances",
+        "high"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 1.2333333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_001_0001233ms.jpg"
+        }
+      ],
+      "retrieval_text": "If you have a tight no-vractive so-as muscle, chances are high, your stuck in anterior pelvic tilt, or hyperlord doses. | Representative frame sampled at 1.2s. | Segment 0.0-2.5s: If you have a tight no-vractive so-as muscle, chances are high, your stuck in anterior pelvic tilt, or hyperlord doses. | tight no-vractive so-as muscle | tight no-vractive so-as muscle chances high",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c153ab290edf46c6",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 2,
+      "start_sec": 2.466666666666667,
+      "end_sec": 8.266666666666667,
+      "duration_sec": 5.800000000000001,
+      "transcript": "your stuck in anterior pelvic tilt, or hyperlord doses. But don't just try to stretch your so-as, you're not going to fix the underlying problem. Instead, consider the fact that your so-as is tight because of the position of your body in the first place.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 5.4s.",
+      "segment_summary": "Segment 2.5-8.3s: your stuck in anterior pelvic tilt, or hyperlord doses. But don't just try to stretch your so-as, you're not going to fix the underlying problem. Instead, consider the fact that yo",
+      "topics": [
+        "so-as",
+        "stuck",
+        "anterior",
+        "pelvic"
+      ],
+      "keywords": [
+        "so-as",
+        "stuck",
+        "anterior",
+        "pelvic",
+        "tilt",
+        "hyperlord"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 5.366666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_002_0005366ms.jpg"
+        }
+      ],
+      "retrieval_text": "your stuck in anterior pelvic tilt, or hyperlord doses. But don't just try to stretch your so-as, you're not going to fix the underlying problem. Instead, consider the fact that your so-as is tight because of the position of your body in the first place. | Representative frame sampled at 5.4s. | Segment 2.5-8.3s: your stuck in anterior pelvic tilt, or hyperlord doses. But don't just try to stretch your so-as, you're not going to fix the underlying problem. Instead, consider the fact that yo | so-as stuck anterior pelvic | so-as stuck anterior pelvic tilt hyperlord",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c9fe50eee2471d8f",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 3,
+      "start_sec": 8.266666666666667,
+      "end_sec": 10.9,
+      "duration_sec": 2.633333333333333,
+      "transcript": "Instead, consider the fact that your so-as is tight because of the position of your body in the first place.",
+      "ocr_text": "YOUR PSOAS",
+      "visual_description": "Representative frame contains OCR text: YOUR PSOAS",
+      "segment_summary": "Segment 8.3-10.9s: Instead, consider the fact that your so-as is tight because of the position of your body in the first place.",
+      "topics": [
+        "instead",
+        "consider",
+        "fact",
+        "so-as"
+      ],
+      "keywords": [
+        "instead",
+        "consider",
+        "fact",
+        "so-as",
+        "tight",
+        "because"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 9.583333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_003_0009583ms.jpg"
+        }
+      ],
+      "retrieval_text": "Instead, consider the fact that your so-as is tight because of the position of your body in the first place. | YOUR PSOAS | Representative frame contains OCR text: YOUR PSOAS | Segment 8.3-10.9s: Instead, consider the fact that your so-as is tight because of the position of your body in the first place. | instead consider fact so-as | instead consider fact so-as tight because",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f8de64b5b11b0060",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 4,
+      "start_sec": 10.9,
+      "end_sec": 12.666666666666666,
+      "duration_sec": 1.7666666666666657,
+      "transcript": "Instead, consider the fact that your so-as is tight because of the position of your body in the first place. Typically what's happening is the body center of gravity is pushed forward in space.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 11.8s.",
+      "segment_summary": "Segment 10.9-12.7s: Instead, consider the fact that your so-as is tight because of the position of your body in the first place. Typically what's happening is the body center of gravity is pushed forw",
+      "topics": [
+        "body",
+        "instead",
+        "consider",
+        "fact"
+      ],
+      "keywords": [
+        "body",
+        "instead",
+        "consider",
+        "fact",
+        "so-as",
+        "tight"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 11.783333333333333,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_004_0011783ms.jpg"
+        }
+      ],
+      "retrieval_text": "Instead, consider the fact that your so-as is tight because of the position of your body in the first place. Typically what's happening is the body center of gravity is pushed forward in space. | Representative frame sampled at 11.8s. | Segment 10.9-12.7s: Instead, consider the fact that your so-as is tight because of the position of your body in the first place. Typically what's happening is the body center of gravity is pushed forw | body instead consider fact | body instead consider fact so-as tight",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_37d7779efbbe5ba1",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 5,
+      "start_sec": 12.666666666666666,
+      "end_sec": 17.466666666666665,
+      "duration_sec": 4.799999999999999,
+      "transcript": "Typically what's happening is the body center of gravity is pushed forward in space. And this is creating a situation where your stuck in anterior pelvic tilt,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 15.1s.",
+      "segment_summary": "Segment 12.7-17.5s: Typically what's happening is the body center of gravity is pushed forward in space. And this is creating a situation where your stuck in anterior pelvic tilt,",
+      "topics": [
+        "typically",
+        "what's",
+        "happening",
+        "body"
+      ],
+      "keywords": [
+        "typically",
+        "what's",
+        "happening",
+        "body",
+        "center",
+        "gravity"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 15.066666666666666,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_005_0015066ms.jpg"
+        }
+      ],
+      "retrieval_text": "Typically what's happening is the body center of gravity is pushed forward in space. And this is creating a situation where your stuck in anterior pelvic tilt, | Representative frame sampled at 15.1s. | Segment 12.7-17.5s: Typically what's happening is the body center of gravity is pushed forward in space. And this is creating a situation where your stuck in anterior pelvic tilt, | typically what's happening body | typically what's happening body center gravity",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7ccb294ba2d8c887",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 6,
+      "start_sec": 17.466666666666665,
+      "end_sec": 18.966666666666665,
+      "duration_sec": 1.5,
+      "transcript": "And this is creating a situation where your stuck in anterior pelvic tilt, but that anterior pelvic tilt is present because of the force in our gravity strategy.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 18.2s.",
+      "segment_summary": "Segment 17.5-19.0s: And this is creating a situation where your stuck in anterior pelvic tilt, but that anterior pelvic tilt is present because of the force in our gravity strategy.",
+      "topics": [
+        "anterior",
+        "pelvic",
+        "tilt",
+        "creating"
+      ],
+      "keywords": [
+        "anterior",
+        "pelvic",
+        "tilt",
+        "creating",
+        "situation",
+        "stuck"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 18.216666666666665,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_006_0018216ms.jpg"
+        }
+      ],
+      "retrieval_text": "And this is creating a situation where your stuck in anterior pelvic tilt, but that anterior pelvic tilt is present because of the force in our gravity strategy. | Representative frame sampled at 18.2s. | Segment 17.5-19.0s: And this is creating a situation where your stuck in anterior pelvic tilt, but that anterior pelvic tilt is present because of the force in our gravity strategy. | anterior pelvic tilt creating | anterior pelvic tilt creating situation stuck",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3c6b0748ba90b2ad",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 7,
+      "start_sec": 18.966666666666665,
+      "end_sec": 23.766666666666666,
+      "duration_sec": 4.800000000000001,
+      "transcript": "but that anterior pelvic tilt is present because of the force in our gravity strategy. So what we need to do is help shift that back and create a better ability to get our pelvis underneath us,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 21.4s.",
+      "segment_summary": "Segment 19.0-23.8s: but that anterior pelvic tilt is present because of the force in our gravity strategy. So what we need to do is help shift that back and create a better ability to get our pelvis u",
+      "topics": [
+        "anterior",
+        "pelvic",
+        "tilt",
+        "present"
+      ],
+      "keywords": [
+        "anterior",
+        "pelvic",
+        "tilt",
+        "present",
+        "because",
+        "force"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 21.366666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_007_0021366ms.jpg"
+        }
+      ],
+      "retrieval_text": "but that anterior pelvic tilt is present because of the force in our gravity strategy. So what we need to do is help shift that back and create a better ability to get our pelvis underneath us, | Representative frame sampled at 21.4s. | Segment 19.0-23.8s: but that anterior pelvic tilt is present because of the force in our gravity strategy. So what we need to do is help shift that back and create a better ability to get our pelvis u | anterior pelvic tilt present | anterior pelvic tilt present because force",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0116b6118a3e69c0",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 8,
+      "start_sec": 23.766666666666666,
+      "end_sec": 26.466666666666665,
+      "duration_sec": 2.6999999999999993,
+      "transcript": "So what we need to do is help shift that back and create a better ability to get our pelvis underneath us,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 25.1s.",
+      "segment_summary": "Segment 23.8-26.5s: So what we need to do is help shift that back and create a better ability to get our pelvis underneath us,",
+      "topics": [
+        "need",
+        "help",
+        "shift",
+        "back"
+      ],
+      "keywords": [
+        "need",
+        "help",
+        "shift",
+        "back",
+        "create",
+        "better"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962849419098347,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 25.116666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_008_0025116ms.jpg"
+        }
+      ],
+      "retrieval_text": "So what we need to do is help shift that back and create a better ability to get our pelvis underneath us, | Representative frame sampled at 25.1s. | Segment 23.8-26.5s: So what we need to do is help shift that back and create a better ability to get our pelvis underneath us, | need help shift back | need help shift back create better",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_63aa530080822c52",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 9,
+      "start_sec": 26.466666666666665,
+      "end_sec": 28.933333333333334,
+      "duration_sec": 2.4666666666666686,
+      "transcript": "So what we need to do is help shift that back and create a better ability to get our pelvis underneath us, which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 27.7s.",
+      "segment_summary": "Segment 26.5-28.9s: So what we need to do is help shift that back and create a better ability to get our pelvis underneath us, which naturally will help the so-as let go of because the so-as is a musc",
+      "topics": [
+        "help",
+        "which",
+        "so-as",
+        "need"
+      ],
+      "keywords": [
+        "help",
+        "which",
+        "so-as",
+        "need",
+        "shift",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9955580075038597,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 27.7,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_009_0027700ms.jpg"
+        }
+      ],
+      "retrieval_text": "So what we need to do is help shift that back and create a better ability to get our pelvis underneath us, which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward. | Representative frame sampled at 27.7s. | Segment 26.5-28.9s: So what we need to do is help shift that back and create a better ability to get our pelvis underneath us, which naturally will help the so-as let go of because the so-as is a musc | help which so-as need | help which so-as need shift back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7312acf8da5d0cdc",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 10,
+      "start_sec": 28.933333333333334,
+      "end_sec": 30.833333333333332,
+      "duration_sec": 1.8999999999999986,
+      "transcript": "which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 29.9s.",
+      "segment_summary": "Segment 28.9-30.8s: which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward.",
+      "topics": [
+        "which",
+        "so-as",
+        "naturally",
+        "will"
+      ],
+      "keywords": [
+        "which",
+        "so-as",
+        "naturally",
+        "will",
+        "help",
+        "because"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 29.883333333333333,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_010_0029883ms.jpg"
+        }
+      ],
+      "retrieval_text": "which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward. | Representative frame sampled at 29.9s. | Segment 28.9-30.8s: which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward. | which so-as naturally will | which so-as naturally will help because",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_97706a3f9fdceba6",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 11,
+      "start_sec": 30.833333333333332,
+      "end_sec": 34.56666666666667,
+      "duration_sec": 3.733333333333338,
+      "transcript": "which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward. So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 32.7s.",
+      "segment_summary": "Segment 30.8-34.6s: which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward. So the goal is two things. Shift the center of gravity back and",
+      "topics": [
+        "which",
+        "so-as",
+        "back",
+        "naturally"
+      ],
+      "keywords": [
+        "which",
+        "so-as",
+        "back",
+        "naturally",
+        "will",
+        "help"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 32.7,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_011_0032700ms.jpg"
+        }
+      ],
+      "retrieval_text": "which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward. So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. | Representative frame sampled at 32.7s. | Segment 30.8-34.6s: which naturally will help the so-as let go of because the so-as is a muscle of hip flexion which pulls you forward. So the goal is two things. Shift the center of gravity back and | which so-as back naturally | which so-as back naturally will help",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e73f3d757573730d",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 12,
+      "start_sec": 34.56666666666667,
+      "end_sec": 35.63333333333333,
+      "duration_sec": 1.0666666666666629,
+      "transcript": "So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 35.1s.",
+      "segment_summary": "Segment 34.6-35.6s: So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back.",
+      "topics": [
+        "back",
+        "goal",
+        "things",
+        "shift"
+      ],
+      "keywords": [
+        "back",
+        "goal",
+        "things",
+        "shift",
+        "center",
+        "gravity"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 35.1,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_012_0035100ms.jpg"
+        }
+      ],
+      "retrieval_text": "So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. | Representative frame sampled at 35.1s. | Segment 34.6-35.6s: So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. | back goal things shift | back goal things shift center gravity",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_01bfde3da7dd63f9",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 13,
+      "start_sec": 35.63333333333333,
+      "end_sec": 37.46666666666667,
+      "duration_sec": 1.8333333333333357,
+      "transcript": "So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 36.5s.",
+      "segment_summary": "Segment 35.6-37.5s: So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back.",
+      "topics": [
+        "back",
+        "goal",
+        "things",
+        "shift"
+      ],
+      "keywords": [
+        "back",
+        "goal",
+        "things",
+        "shift",
+        "center",
+        "gravity"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 36.55,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_013_0036550ms.jpg"
+        }
+      ],
+      "retrieval_text": "So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. | Representative frame sampled at 36.5s. | Segment 35.6-37.5s: So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. | back goal things shift | back goal things shift center gravity",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_44aba5cb6611e454",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 14,
+      "start_sec": 37.46666666666667,
+      "end_sec": 39.63333333333333,
+      "duration_sec": 2.1666666666666643,
+      "transcript": "So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. Doing that will naturally get the so-as to let go because it won't be stuck holding you in that position.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 38.5s.",
+      "segment_summary": "Segment 37.5-39.6s: So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. Doing that will naturally get the so-as to let go because it won't be stu",
+      "topics": [
+        "back",
+        "goal",
+        "things",
+        "shift"
+      ],
+      "keywords": [
+        "back",
+        "goal",
+        "things",
+        "shift",
+        "center",
+        "gravity"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 38.55,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_014_0038550ms.jpg"
+        }
+      ],
+      "retrieval_text": "So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. Doing that will naturally get the so-as to let go because it won't be stuck holding you in that position. | Representative frame sampled at 38.5s. | Segment 37.5-39.6s: So the goal is two things. Shift the center of gravity back and also get the pelvis to better rotate back. Doing that will naturally get the so-as to let go because it won't be stu | back goal things shift | back goal things shift center gravity",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e0d6bb5621ebb2d8",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 15,
+      "start_sec": 39.63333333333333,
+      "end_sec": 43.733333333333334,
+      "duration_sec": 4.100000000000001,
+      "transcript": "Doing that will naturally get the so-as to let go because it won't be stuck holding you in that position. Here's a really easy way you can start to do that.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 41.7s.",
+      "segment_summary": "Segment 39.6-43.7s: Doing that will naturally get the so-as to let go because it won't be stuck holding you in that position. Here's a really easy way you can start to do that.",
+      "topics": [
+        "doing",
+        "will",
+        "naturally",
+        "so-as"
+      ],
+      "keywords": [
+        "doing",
+        "will",
+        "naturally",
+        "so-as",
+        "because",
+        "won't"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 41.68333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_015_0041683ms.jpg"
+        }
+      ],
+      "retrieval_text": "Doing that will naturally get the so-as to let go because it won't be stuck holding you in that position. Here's a really easy way you can start to do that. | Representative frame sampled at 41.7s. | Segment 39.6-43.7s: Doing that will naturally get the so-as to let go because it won't be stuck holding you in that position. Here's a really easy way you can start to do that. | doing will naturally so-as | doing will naturally so-as because won't",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f0f2b1084f7c6f1c",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 16,
+      "start_sec": 43.733333333333334,
+      "end_sec": 45.3,
+      "duration_sec": 1.5666666666666629,
+      "transcript": "Here's a really easy way you can start to do that.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 44.5s.",
+      "segment_summary": "Segment 43.7-45.3s: Here's a really easy way you can start to do that.",
+      "topics": [
+        "here's",
+        "really",
+        "easy",
+        "start"
+      ],
+      "keywords": [
+        "here's",
+        "really",
+        "easy",
+        "start"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 44.516666666666666,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_016_0044516ms.jpg"
+        }
+      ],
+      "retrieval_text": "Here's a really easy way you can start to do that. | Representative frame sampled at 44.5s. | Segment 43.7-45.3s: Here's a really easy way you can start to do that. | here's really easy start | here's really easy start",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_d9f6d521797e93d8",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 17,
+      "start_sec": 45.3,
+      "end_sec": 46.6,
+      "duration_sec": 1.3000000000000043,
+      "transcript": "Here's a really easy way you can start to do that. For this, all you need is a foam roller and a wall.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 46.0s.",
+      "segment_summary": "Segment 45.3-46.6s: Here's a really easy way you can start to do that. For this, all you need is a foam roller and a wall.",
+      "topics": [
+        "here's",
+        "really",
+        "easy",
+        "start"
+      ],
+      "keywords": [
+        "here's",
+        "really",
+        "easy",
+        "start",
+        "need",
+        "foam"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 45.95,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_017_0045950ms.jpg"
+        }
+      ],
+      "retrieval_text": "Here's a really easy way you can start to do that. For this, all you need is a foam roller and a wall. | Representative frame sampled at 46.0s. | Segment 45.3-46.6s: Here's a really easy way you can start to do that. For this, all you need is a foam roller and a wall. | here's really easy start | here's really easy start need foam",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_517ccc6ebd241edd",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 18,
+      "start_sec": 46.6,
+      "end_sec": 49.766666666666666,
+      "duration_sec": 3.1666666666666643,
+      "transcript": "For this, all you need is a foam roller and a wall. Place your feet hip width apart with your shin's parallel with the ground.",
+      "ocr_text": "WITH YOUR",
+      "visual_description": "Representative frame contains OCR text: WITH YOUR",
+      "segment_summary": "Segment 46.6-49.8s: For this, all you need is a foam roller and a wall. Place your feet hip width apart with your shin's parallel with the ground.",
+      "topics": [
+        "need",
+        "foam",
+        "roller",
+        "wall"
+      ],
+      "keywords": [
+        "need",
+        "foam",
+        "roller",
+        "wall",
+        "place",
+        "feet"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 48.18333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_018_0048183ms.jpg"
+        }
+      ],
+      "retrieval_text": "For this, all you need is a foam roller and a wall. Place your feet hip width apart with your shin's parallel with the ground. | WITH YOUR | Representative frame contains OCR text: WITH YOUR | Segment 46.6-49.8s: For this, all you need is a foam roller and a wall. Place your feet hip width apart with your shin's parallel with the ground. | need foam roller wall | need foam roller wall place feet",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_bd763171d0d1b581",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 19,
+      "start_sec": 49.766666666666666,
+      "end_sec": 52.333333333333336,
+      "duration_sec": 2.56666666666667,
+      "transcript": "Place your feet hip width apart with your shin's parallel with the ground. Take that foam roller and slide it in between your mid thighs and everything else should still stay in line.",
+      "ocr_text": "AND SLIDEIT,",
+      "visual_description": "Representative frame contains OCR text: AND SLIDEIT,",
+      "segment_summary": "Segment 49.8-52.3s: Place your feet hip width apart with your shin's parallel with the ground. Take that foam roller and slide it in between your mid thighs and everything else should still stay in li",
+      "topics": [
+        "place",
+        "feet",
+        "width",
+        "apart"
+      ],
+      "keywords": [
+        "place",
+        "feet",
+        "width",
+        "apart",
+        "shin's",
+        "parallel"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 51.05,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_019_0051050ms.jpg"
+        }
+      ],
+      "retrieval_text": "Place your feet hip width apart with your shin's parallel with the ground. Take that foam roller and slide it in between your mid thighs and everything else should still stay in line. | AND SLIDEIT, | Representative frame contains OCR text: AND SLIDEIT, | Segment 49.8-52.3s: Place your feet hip width apart with your shin's parallel with the ground. Take that foam roller and slide it in between your mid thighs and everything else should still stay in li | place feet width apart | place feet width apart shin's parallel",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_29eb93f97ca1b8db",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 20,
+      "start_sec": 52.333333333333336,
+      "end_sec": 53.833333333333336,
+      "duration_sec": 1.5,
+      "transcript": "Take that foam roller and slide it in between your mid thighs and everything else should still stay in line. Allow your chin to passively point at the ceiling with no tension in your head or neck.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 53.1s.",
+      "segment_summary": "Segment 52.3-53.8s: Take that foam roller and slide it in between your mid thighs and everything else should still stay in line. Allow your chin to passively point at the ceiling with no tension in yo",
+      "topics": [
+        "take",
+        "foam",
+        "roller",
+        "slide"
+      ],
+      "keywords": [
+        "take",
+        "foam",
+        "roller",
+        "slide",
+        "between",
+        "thighs"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 53.083333333333336,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_020_0053083ms.jpg"
+        }
+      ],
+      "retrieval_text": "Take that foam roller and slide it in between your mid thighs and everything else should still stay in line. Allow your chin to passively point at the ceiling with no tension in your head or neck. | Representative frame sampled at 53.1s. | Segment 52.3-53.8s: Take that foam roller and slide it in between your mid thighs and everything else should still stay in line. Allow your chin to passively point at the ceiling with no tension in yo | take foam roller slide | take foam roller slide between thighs",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9ccb764a40bea20e",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 21,
+      "start_sec": 53.833333333333336,
+      "end_sec": 57.766666666666666,
+      "duration_sec": 3.93333333333333,
+      "transcript": "Allow your chin to passively point at the ceiling with no tension in your head or neck.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 55.8s.",
+      "segment_summary": "Segment 53.8-57.8s: Allow your chin to passively point at the ceiling with no tension in your head or neck.",
+      "topics": [
+        "allow",
+        "chin",
+        "passively",
+        "point"
+      ],
+      "keywords": [
+        "allow",
+        "chin",
+        "passively",
+        "point",
+        "ceiling",
+        "tension"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948310730978847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 55.8,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_021_0055800ms.jpg"
+        }
+      ],
+      "retrieval_text": "Allow your chin to passively point at the ceiling with no tension in your head or neck. | Representative frame sampled at 55.8s. | Segment 53.8-57.8s: Allow your chin to passively point at the ceiling with no tension in your head or neck. | allow chin passively point | allow chin passively point ceiling tension",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_daa80e5bc932b24a",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 22,
+      "start_sec": 57.766666666666666,
+      "end_sec": 59.93333333333333,
+      "duration_sec": 2.1666666666666643,
+      "transcript": "Allow your chin to passively point at the ceiling with no tension in your head or neck. On the wall, you want to feel three main points of contact.",
+      "ocr_text": "FEEL 3",
+      "visual_description": "Representative frame contains OCR text: FEEL 3",
+      "segment_summary": "Segment 57.8-59.9s: Allow your chin to passively point at the ceiling with no tension in your head or neck. On the wall, you want to feel three main points of contact.",
+      "topics": [
+        "feel",
+        "allow",
+        "chin",
+        "passively"
+      ],
+      "keywords": [
+        "feel",
+        "allow",
+        "chin",
+        "passively",
+        "point",
+        "ceiling"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.996533649333287,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 58.849999999999994,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_022_0058849ms.jpg"
+        }
+      ],
+      "retrieval_text": "Allow your chin to passively point at the ceiling with no tension in your head or neck. On the wall, you want to feel three main points of contact. | FEEL 3 | Representative frame contains OCR text: FEEL 3 | Segment 57.8-59.9s: Allow your chin to passively point at the ceiling with no tension in your head or neck. On the wall, you want to feel three main points of contact. | feel allow chin passively | feel allow chin passively point ceiling",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_52405d221853592d",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 23,
+      "start_sec": 59.93333333333333,
+      "end_sec": 65.4,
+      "duration_sec": 5.466666666666676,
+      "transcript": "On the wall, you want to feel three main points of contact. Your heel, base of the big toe, base of the little toe. But focus especially on your inner heel and the base of the big toe.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 62.7s.",
+      "segment_summary": "Segment 59.9-65.4s: On the wall, you want to feel three main points of contact. Your heel, base of the big toe, base of the little toe. But focus especially on your inner heel and the base of the big",
+      "topics": [
+        "base",
+        "heel",
+        "wall",
+        "want"
+      ],
+      "keywords": [
+        "base",
+        "heel",
+        "wall",
+        "want",
+        "feel",
+        "three"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9982362255686894,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 62.66666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_023_0062666ms.jpg"
+        }
+      ],
+      "retrieval_text": "On the wall, you want to feel three main points of contact. Your heel, base of the big toe, base of the little toe. But focus especially on your inner heel and the base of the big toe. | Representative frame sampled at 62.7s. | Segment 59.9-65.4s: On the wall, you want to feel three main points of contact. Your heel, base of the big toe, base of the little toe. But focus especially on your inner heel and the base of the big | base heel wall want | base heel wall want feel three",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_cd12ac67d0907b26",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 24,
+      "start_sec": 65.4,
+      "end_sec": 67.66666666666667,
+      "duration_sec": 2.2666666666666657,
+      "transcript": "With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 66.5s.",
+      "segment_summary": "Segment 65.4-67.7s: With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet.",
+      "topics": [
+        "literally",
+        "only",
+        "effort",
+        "push"
+      ],
+      "keywords": [
+        "literally",
+        "only",
+        "effort",
+        "push",
+        "wall",
+        "points"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9982362255686894,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 66.53333333333333,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_024_0066533ms.jpg"
+        }
+      ],
+      "retrieval_text": "With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. | Representative frame sampled at 66.5s. | Segment 65.4-67.7s: With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. | literally only effort push | literally only effort push wall points",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_06d0a6fd74cd95af",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 25,
+      "start_sec": 67.66666666666667,
+      "end_sec": 71.06666666666666,
+      "duration_sec": 3.3999999999999915,
+      "transcript": "With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 69.4s.",
+      "segment_summary": "Segment 67.7-71.1s: With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet.",
+      "topics": [
+        "literally",
+        "only",
+        "effort",
+        "push"
+      ],
+      "keywords": [
+        "literally",
+        "only",
+        "effort",
+        "push",
+        "wall",
+        "points"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9982362255686894,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 69.36666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_025_0069366ms.jpg"
+        }
+      ],
+      "retrieval_text": "With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. | Representative frame sampled at 69.4s. | Segment 67.7-71.1s: With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. | literally only effort push | literally only effort push wall points",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_98ba713e2e87b352",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 26,
+      "start_sec": 71.06666666666666,
+      "end_sec": 73.4,
+      "duration_sec": 2.333333333333343,
+      "transcript": "With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. You're going to feel yourself gently move onto these two points of contact from the back side of your pelvis called your PSIS.",
+      "ocr_text": "“GENTIVMOVE",
+      "visual_description": "Representative frame contains OCR text: “GENTIVMOVE",
+      "segment_summary": "Segment 71.1-73.4s: With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. You're going to feel yourself gently move onto these two points of",
+      "topics": [
+        "points",
+        "contact",
+        "literally",
+        "only"
+      ],
+      "keywords": [
+        "points",
+        "contact",
+        "literally",
+        "only",
+        "effort",
+        "push"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9982362255686894,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 72.23333333333333,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_026_0072233ms.jpg"
+        }
+      ],
+      "retrieval_text": "With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. You're going to feel yourself gently move onto these two points of contact from the back side of your pelvis called your PSIS. | “GENTIVMOVE | Representative frame contains OCR text: “GENTIVMOVE | Segment 71.1-73.4s: With literally only a one or two out of ten effort, push into the wall with those points of contact in your feet. You're going to feel yourself gently move onto these two points of | points contact literally only | points contact literally only effort push",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_4191d7229732b3f4",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 27,
+      "start_sec": 73.4,
+      "end_sec": 79.76666666666667,
+      "duration_sec": 6.36666666666666,
+      "transcript": "You're going to feel yourself gently move onto these two points of contact from the back side of your pelvis called your PSIS. These contacts are key. You want to feel them on the ground without crunching or pushing them too much into the ground.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 76.6s.",
+      "segment_summary": "Segment 73.4-79.8s: You're going to feel yourself gently move onto these two points of contact from the back side of your pelvis called your PSIS. These contacts are key. You want to feel them on the",
+      "topics": [
+        "feel",
+        "them",
+        "ground",
+        "you're"
+      ],
+      "keywords": [
+        "feel",
+        "them",
+        "ground",
+        "you're",
+        "going",
+        "yourself"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9982362255686894,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 76.58333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_027_0076583ms.jpg"
+        }
+      ],
+      "retrieval_text": "You're going to feel yourself gently move onto these two points of contact from the back side of your pelvis called your PSIS. These contacts are key. You want to feel them on the ground without crunching or pushing them too much into the ground. | Representative frame sampled at 76.6s. | Segment 73.4-79.8s: You're going to feel yourself gently move onto these two points of contact from the back side of your pelvis called your PSIS. These contacts are key. You want to feel them on the | feel them ground you're | feel them ground you're going yourself",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_24dd17c24d5db7fe",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 28,
+      "start_sec": 79.76666666666667,
+      "end_sec": 81.66666666666667,
+      "duration_sec": 1.9000000000000057,
+      "transcript": "You want to feel them on the ground without crunching or pushing them too much into the ground.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 80.7s.",
+      "segment_summary": "Segment 79.8-81.7s: You want to feel them on the ground without crunching or pushing them too much into the ground.",
+      "topics": [
+        "them",
+        "ground",
+        "want",
+        "feel"
+      ],
+      "keywords": [
+        "them",
+        "ground",
+        "want",
+        "feel",
+        "without",
+        "crunching"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9982362255686894,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 80.71666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_028_0080716ms.jpg"
+        }
+      ],
+      "retrieval_text": "You want to feel them on the ground without crunching or pushing them too much into the ground. | Representative frame sampled at 80.7s. | Segment 79.8-81.7s: You want to feel them on the ground without crunching or pushing them too much into the ground. | them ground want feel | them ground want feel without crunching",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_ddbc786c5970cbb1",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 29,
+      "start_sec": 81.66666666666667,
+      "end_sec": 96.66666666666667,
+      "duration_sec": 15.0,
+      "transcript": "You want to feel them on the ground without crunching or pushing them too much into the ground. Because this is leveling out your pelvis and getting it to rotate back. These two points of contact are your number one key for knowing that your pelvis is in a good position. It's rotated back. Your so-as is in a relatively lengthened position and you are effectively stacking.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 92.0s.",
+      "segment_summary": "Segment 81.7-96.7s: You want to feel them on the ground without crunching or pushing them too much into the ground. Because this is leveling out your pelvis and getting it to rotate back. These two po",
+      "topics": [
+        "them",
+        "ground",
+        "pelvis",
+        "back"
+      ],
+      "keywords": [
+        "them",
+        "ground",
+        "pelvis",
+        "back",
+        "position",
+        "want"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9970324513502419,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 92.03333333333333,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_029_0092033ms.jpg"
+        }
+      ],
+      "retrieval_text": "You want to feel them on the ground without crunching or pushing them too much into the ground. Because this is leveling out your pelvis and getting it to rotate back. These two points of contact are your number one key for knowing that your pelvis is in a good position. It's rotated back. Your so-as is in a relatively lengthened position and you are effectively stacking. | Representative frame sampled at 92.0s. | Segment 81.7-96.7s: You want to feel them on the ground without crunching or pushing them too much into the ground. Because this is leveling out your pelvis and getting it to rotate back. These two po | them ground pelvis back | them ground pelvis back position want",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5f99c436bd7ee29b",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 30,
+      "start_sec": 96.66666666666667,
+      "end_sec": 102.4,
+      "duration_sec": 5.733333333333334,
+      "transcript": "Your so-as is in a relatively lengthened position and you are effectively stacking. As you can tell by the floor, the head over the rib cage, over the pelvis. What you do not want to do is press too hard and crunch like this.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 96.7-102.4s: Your so-as is in a relatively lengthened position and you are effectively stacking. As you can tell by the floor, the head over the rib cage, over the pelvis. What you do not want",
+      "topics": [
+        "over",
+        "so-as",
+        "relatively",
+        "lengthened"
+      ],
+      "keywords": [
+        "over",
+        "so-as",
+        "relatively",
+        "lengthened",
+        "position",
+        "effectively"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962299352046102,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "Your so-as is in a relatively lengthened position and you are effectively stacking. As you can tell by the floor, the head over the rib cage, over the pelvis. What you do not want to do is press too hard and crunch like this. | Segment 96.7-102.4s: Your so-as is in a relatively lengthened position and you are effectively stacking. As you can tell by the floor, the head over the rib cage, over the pelvis. What you do not want | over so-as relatively lengthened | over so-as relatively lengthened position effectively",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3600a53c6f20c783",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 31,
+      "start_sec": 102.4,
+      "end_sec": 105.93333333333334,
+      "duration_sec": 3.5333333333333314,
+      "transcript": "What you do not want to do is press too hard and crunch like this. That is not going to help you at all.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 104.2s.",
+      "segment_summary": "Segment 102.4-105.9s: What you do not want to do is press too hard and crunch like this. That is not going to help you at all.",
+      "topics": [
+        "want",
+        "press",
+        "hard",
+        "crunch"
+      ],
+      "keywords": [
+        "want",
+        "press",
+        "hard",
+        "crunch",
+        "like",
+        "going"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962299352046102,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 104.16666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_030_0104166ms.jpg"
+        }
+      ],
+      "retrieval_text": "What you do not want to do is press too hard and crunch like this. That is not going to help you at all. | Representative frame sampled at 104.2s. | Segment 102.4-105.9s: What you do not want to do is press too hard and crunch like this. That is not going to help you at all. | want press hard crunch | want press hard crunch like going",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c5ada0ed44b882de",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 32,
+      "start_sec": 105.93333333333334,
+      "end_sec": 107.73333333333333,
+      "duration_sec": 1.7999999999999972,
+      "transcript": "That is not going to help you at all. For added benefit, you could take your elbows, bend them and then just reach them low like this.",
+      "ocr_text": "Pe\n\nYOU COULD TAKEYOUR",
+      "visual_description": "Representative frame contains OCR text: Pe\n\nYOU COULD TAKEYOUR",
+      "segment_summary": "Segment 105.9-107.7s: That is not going to help you at all. For added benefit, you could take your elbows, bend them and then just reach them low like this.",
+      "topics": [
+        "could",
+        "them",
+        "going",
+        "help"
+      ],
+      "keywords": [
+        "could",
+        "them",
+        "going",
+        "help",
+        "added",
+        "benefit"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962299352046102,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 106.83333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_031_0106833ms.jpg"
+        }
+      ],
+      "retrieval_text": "That is not going to help you at all. For added benefit, you could take your elbows, bend them and then just reach them low like this. | Pe\n\nYOU COULD TAKEYOUR | Representative frame contains OCR text: Pe\n\nYOU COULD TAKEYOUR | Segment 105.9-107.7s: That is not going to help you at all. For added benefit, you could take your elbows, bend them and then just reach them low like this. | could them going help | could them going help added benefit",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_27819fb19d297ab7",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 33,
+      "start_sec": 107.73333333333333,
+      "end_sec": 110.26666666666667,
+      "duration_sec": 2.5333333333333314,
+      "transcript": "For added benefit, you could take your elbows, bend them and then just reach them low like this. Feel like some gentle separation in between your shoulder blades and spine.",
+      "ocr_text": "a REACH\n\nJU",
+      "visual_description": "Representative frame contains OCR text: a REACH\n\nJU",
+      "segment_summary": "Segment 107.7-110.3s: For added benefit, you could take your elbows, bend them and then just reach them low like this. Feel like some gentle separation in between your shoulder blades and spine.",
+      "topics": [
+        "them",
+        "reach",
+        "like",
+        "added"
+      ],
+      "keywords": [
+        "them",
+        "reach",
+        "like",
+        "added",
+        "benefit",
+        "could"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962299352046102,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 109.0,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_032_0109000ms.jpg"
+        }
+      ],
+      "retrieval_text": "For added benefit, you could take your elbows, bend them and then just reach them low like this. Feel like some gentle separation in between your shoulder blades and spine. | a REACH\n\nJU | Representative frame contains OCR text: a REACH\n\nJU | Segment 107.7-110.3s: For added benefit, you could take your elbows, bend them and then just reach them low like this. Feel like some gentle separation in between your shoulder blades and spine. | them reach like added | them reach like added benefit could",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_fc4c146a0647fefb",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 34,
+      "start_sec": 110.26666666666667,
+      "end_sec": 112.9,
+      "duration_sec": 2.63333333333334,
+      "transcript": "Feel like some gentle separation in between your shoulder blades and spine.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 111.6s.",
+      "segment_summary": "Segment 110.3-112.9s: Feel like some gentle separation in between your shoulder blades and spine.",
+      "topics": [
+        "feel",
+        "like",
+        "some",
+        "gentle"
+      ],
+      "keywords": [
+        "feel",
+        "like",
+        "some",
+        "gentle",
+        "separation",
+        "between"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9962299352046102,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 111.58333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_033_0111583ms.jpg"
+        }
+      ],
+      "retrieval_text": "Feel like some gentle separation in between your shoulder blades and spine. | Representative frame sampled at 111.6s. | Segment 110.3-112.9s: Feel like some gentle separation in between your shoulder blades and spine. | feel like some gentle | feel like some gentle separation between",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_af8059e12f294a62",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 35,
+      "start_sec": 112.9,
+      "end_sec": 117.96666666666667,
+      "duration_sec": 5.066666666666663,
+      "transcript": "Feel like some gentle separation in between your shoulder blades and spine. Now just sit here and breathe. In through your nose, out through your nose, bring awareness to how your head is stacked over your rib cage.",
+      "ocr_text": "YOURNOSE,",
+      "visual_description": "Representative frame contains OCR text: YOURNOSE,",
+      "segment_summary": "Segment 112.9-118.0s: Feel like some gentle separation in between your shoulder blades and spine. Now just sit here and breathe. In through your nose, out through your nose, bring awareness to how your",
+      "topics": [
+        "through",
+        "nose",
+        "feel",
+        "like"
+      ],
+      "keywords": [
+        "through",
+        "nose",
+        "feel",
+        "like",
+        "some",
+        "gentle"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9763587054330856,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 115.43333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_034_0115433ms.jpg"
+        }
+      ],
+      "retrieval_text": "Feel like some gentle separation in between your shoulder blades and spine. Now just sit here and breathe. In through your nose, out through your nose, bring awareness to how your head is stacked over your rib cage. | YOURNOSE, | Representative frame contains OCR text: YOURNOSE, | Segment 112.9-118.0s: Feel like some gentle separation in between your shoulder blades and spine. Now just sit here and breathe. In through your nose, out through your nose, bring awareness to how your | through nose feel like | through nose feel like some gentle",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c8dd05b9d68c3b58",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 36,
+      "start_sec": 117.96666666666667,
+      "end_sec": 128.6,
+      "duration_sec": 10.633333333333326,
+      "transcript": "In through your nose, out through your nose, bring awareness to how your head is stacked over your rib cage. You're pelvis with those points of contact in your feet. This is a very nice introduction to getting everything nice and stacked and aligned with the right contact in your feet.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 123.3s.",
+      "segment_summary": "Segment 118.0-128.6s: In through your nose, out through your nose, bring awareness to how your head is stacked over your rib cage. You're pelvis with those points of contact in your feet. This is a very",
+      "topics": [
+        "through",
+        "nose",
+        "stacked",
+        "contact"
+      ],
+      "keywords": [
+        "through",
+        "nose",
+        "stacked",
+        "contact",
+        "feet",
+        "nice"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9664230905473232,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 123.28333333333333,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_035_0123283ms.jpg"
+        }
+      ],
+      "retrieval_text": "In through your nose, out through your nose, bring awareness to how your head is stacked over your rib cage. You're pelvis with those points of contact in your feet. This is a very nice introduction to getting everything nice and stacked and aligned with the right contact in your feet. | Representative frame sampled at 123.3s. | Segment 118.0-128.6s: In through your nose, out through your nose, bring awareness to how your head is stacked over your rib cage. You're pelvis with those points of contact in your feet. This is a very | through nose stacked contact | through nose stacked contact feet nice",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_b33c094bc7e84fea",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 37,
+      "start_sec": 128.6,
+      "end_sec": 130.8,
+      "duration_sec": 2.200000000000017,
+      "transcript": "This is a very nice introduction to getting everything nice and stacked and aligned with the right contact in your feet.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 129.7s.",
+      "segment_summary": "Segment 128.6-130.8s: This is a very nice introduction to getting everything nice and stacked and aligned with the right contact in your feet.",
+      "topics": [
+        "nice",
+        "very",
+        "introduction",
+        "getting"
+      ],
+      "keywords": [
+        "nice",
+        "very",
+        "introduction",
+        "getting",
+        "everything",
+        "stacked"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9664230905473232,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 129.7,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_036_0129699ms.jpg"
+        }
+      ],
+      "retrieval_text": "This is a very nice introduction to getting everything nice and stacked and aligned with the right contact in your feet. | Representative frame sampled at 129.7s. | Segment 128.6-130.8s: This is a very nice introduction to getting everything nice and stacked and aligned with the right contact in your feet. | nice very introduction getting | nice very introduction getting everything stacked",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_63bae87dae3d2815",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 38,
+      "start_sec": 130.8,
+      "end_sec": 135.26666666666668,
+      "duration_sec": 4.466666666666669,
+      "transcript": "So inhale through your nose, let the air fall into your back rib cage. Exhale through your nose or mouth just gently letting their fall out of you.",
+      "ocr_text": "FALL INTO",
+      "visual_description": "Representative frame contains OCR text: FALL INTO",
+      "segment_summary": "Segment 130.8-135.3s: So inhale through your nose, let the air fall into your back rib cage. Exhale through your nose or mouth just gently letting their fall out of you.",
+      "topics": [
+        "fall",
+        "through",
+        "nose",
+        "inhale"
+      ],
+      "keywords": [
+        "fall",
+        "through",
+        "nose",
+        "inhale",
+        "back",
+        "cage"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9664230905473232,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 133.03333333333336,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_037_0133033ms.jpg"
+        }
+      ],
+      "retrieval_text": "So inhale through your nose, let the air fall into your back rib cage. Exhale through your nose or mouth just gently letting their fall out of you. | FALL INTO | Representative frame contains OCR text: FALL INTO | Segment 130.8-135.3s: So inhale through your nose, let the air fall into your back rib cage. Exhale through your nose or mouth just gently letting their fall out of you. | fall through nose inhale | fall through nose inhale back cage",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c08786f4ea0dbebb",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 39,
+      "start_sec": 135.26666666666668,
+      "end_sec": 141.23333333333332,
+      "duration_sec": 5.96666666666664,
+      "transcript": "Exhale through your nose or mouth just gently letting their fall out of you. And repeat this for about two sets of 10 breaths.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 138.2s.",
+      "segment_summary": "Segment 135.3-141.2s: Exhale through your nose or mouth just gently letting their fall out of you. And repeat this for about two sets of 10 breaths.",
+      "topics": [
+        "exhale",
+        "through",
+        "nose",
+        "mouth"
+      ],
+      "keywords": [
+        "exhale",
+        "through",
+        "nose",
+        "mouth",
+        "just",
+        "gently"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9664230905473232,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 138.25,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_038_0138250ms.jpg"
+        }
+      ],
+      "retrieval_text": "Exhale through your nose or mouth just gently letting their fall out of you. And repeat this for about two sets of 10 breaths. | Representative frame sampled at 138.2s. | Segment 135.3-141.2s: Exhale through your nose or mouth just gently letting their fall out of you. And repeat this for about two sets of 10 breaths. | exhale through nose mouth | exhale through nose mouth just gently",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_b2aae414b046f7f8",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 40,
+      "start_sec": 141.23333333333332,
+      "end_sec": 143.16666666666666,
+      "duration_sec": 1.9333333333333371,
+      "transcript": "And repeat this for about two sets of 10 breaths. To progress that and get that strategy to transfer more over to your upright posture, you can do this.",
+      "ocr_text": "—\n=\nnu\nSs\nn\nto\nna\n~“",
+      "visual_description": "Representative frame contains OCR text: —\n=\nnu\nSs\nn\nto\nna\n~“",
+      "segment_summary": "Segment 141.2-143.2s: And repeat this for about two sets of 10 breaths. To progress that and get that strategy to transfer more over to your upright posture, you can do this.",
+      "topics": [
+        "repeat",
+        "sets",
+        "breaths",
+        "progress"
+      ],
+      "keywords": [
+        "repeat",
+        "sets",
+        "breaths",
+        "progress",
+        "strategy",
+        "transfer"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9808604584541172,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 142.2,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_039_0142200ms.jpg"
+        }
+      ],
+      "retrieval_text": "And repeat this for about two sets of 10 breaths. To progress that and get that strategy to transfer more over to your upright posture, you can do this. | —\n=\nnu\nSs\nn\nto\nna\n~“ | Representative frame contains OCR text: —\n=\nnu\nSs\nn\nto\nna\n~“ | Segment 141.2-143.2s: And repeat this for about two sets of 10 breaths. To progress that and get that strategy to transfer more over to your upright posture, you can do this. | repeat sets breaths progress | repeat sets breaths progress strategy transfer",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_73d3a39753cda57c",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 41,
+      "start_sec": 143.16666666666666,
+      "end_sec": 147.23333333333332,
+      "duration_sec": 4.066666666666663,
+      "transcript": "To progress that and get that strategy to transfer more over to your upright posture, you can do this. Get far enough away from the wall to where your knees are straight, but not locked out.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 145.2s.",
+      "segment_summary": "Segment 143.2-147.2s: To progress that and get that strategy to transfer more over to your upright posture, you can do this. Get far enough away from the wall to where your knees are straight, but not l",
+      "topics": [
+        "progress",
+        "strategy",
+        "transfer",
+        "more"
+      ],
+      "keywords": [
+        "progress",
+        "strategy",
+        "transfer",
+        "more",
+        "over",
+        "upright"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 145.2,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_040_0145200ms.jpg"
+        }
+      ],
+      "retrieval_text": "To progress that and get that strategy to transfer more over to your upright posture, you can do this. Get far enough away from the wall to where your knees are straight, but not locked out. | Representative frame sampled at 145.2s. | Segment 143.2-147.2s: To progress that and get that strategy to transfer more over to your upright posture, you can do this. Get far enough away from the wall to where your knees are straight, but not l | progress strategy transfer more | progress strategy transfer more over upright",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3cf5bf4bd9c33bf5",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 42,
+      "start_sec": 147.23333333333332,
+      "end_sec": 150.23333333333332,
+      "duration_sec": 3.0,
+      "transcript": "Get far enough away from the wall to where your knees are straight, but not locked out. Feel those same three points of contact, allow your eyes to stay straight ahead.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 148.7s.",
+      "segment_summary": "Segment 147.2-150.2s: Get far enough away from the wall to where your knees are straight, but not locked out. Feel those same three points of contact, allow your eyes to stay straight ahead.",
+      "topics": [
+        "straight",
+        "enough",
+        "away",
+        "wall"
+      ],
+      "keywords": [
+        "straight",
+        "enough",
+        "away",
+        "wall",
+        "knees",
+        "locked"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 148.73333333333332,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_041_0148733ms.jpg"
+        }
+      ],
+      "retrieval_text": "Get far enough away from the wall to where your knees are straight, but not locked out. Feel those same three points of contact, allow your eyes to stay straight ahead. | Representative frame sampled at 148.7s. | Segment 147.2-150.2s: Get far enough away from the wall to where your knees are straight, but not locked out. Feel those same three points of contact, allow your eyes to stay straight ahead. | straight enough away wall | straight enough away wall knees locked",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_8ed93c3bfb931405",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 43,
+      "start_sec": 150.23333333333332,
+      "end_sec": 152.16666666666666,
+      "duration_sec": 1.9333333333333371,
+      "transcript": "Feel those same three points of contact, allow your eyes to stay straight ahead.",
+      "ocr_text": "POINTS OF",
+      "visual_description": "Representative frame contains OCR text: POINTS OF",
+      "segment_summary": "Segment 150.2-152.2s: Feel those same three points of contact, allow your eyes to stay straight ahead.",
+      "topics": [
+        "points",
+        "feel",
+        "same",
+        "three"
+      ],
+      "keywords": [
+        "points",
+        "feel",
+        "same",
+        "three",
+        "contact",
+        "allow"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 151.2,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_042_0151200ms.jpg"
+        }
+      ],
+      "retrieval_text": "Feel those same three points of contact, allow your eyes to stay straight ahead. | POINTS OF | Representative frame contains OCR text: POINTS OF | Segment 150.2-152.2s: Feel those same three points of contact, allow your eyes to stay straight ahead. | points feel same three | points feel same three contact allow",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0ba3d92bdbe91bd5",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 44,
+      "start_sec": 152.16666666666666,
+      "end_sec": 155.1,
+      "duration_sec": 2.933333333333337,
+      "transcript": "Feel those same three points of contact, allow your eyes to stay straight ahead. Your head doesn't have to be on the wall, but you want to feel those PSI S contacts.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 153.6s.",
+      "segment_summary": "Segment 152.2-155.1s: Feel those same three points of contact, allow your eyes to stay straight ahead. Your head doesn't have to be on the wall, but you want to feel those PSI S contacts.",
+      "topics": [
+        "feel",
+        "same",
+        "three",
+        "points"
+      ],
+      "keywords": [
+        "feel",
+        "same",
+        "three",
+        "points",
+        "contact",
+        "allow"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 153.63333333333333,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_043_0153633ms.jpg"
+        }
+      ],
+      "retrieval_text": "Feel those same three points of contact, allow your eyes to stay straight ahead. Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. | Representative frame sampled at 153.6s. | Segment 152.2-155.1s: Feel those same three points of contact, allow your eyes to stay straight ahead. Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. | feel same three points | feel same three points contact allow",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_daa23830995e0e91",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 45,
+      "start_sec": 155.1,
+      "end_sec": 157.1,
+      "duration_sec": 2.0,
+      "transcript": "Your head doesn't have to be on the wall, but you want to feel those PSI S contacts.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 156.1s.",
+      "segment_summary": "Segment 155.1-157.1s: Your head doesn't have to be on the wall, but you want to feel those PSI S contacts.",
+      "topics": [
+        "head",
+        "doesn't",
+        "wall",
+        "want"
+      ],
+      "keywords": [
+        "head",
+        "doesn't",
+        "wall",
+        "want",
+        "feel",
+        "contacts"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 156.1,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_044_0156100ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. | Representative frame sampled at 156.1s. | Segment 155.1-157.1s: Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. | head doesn't wall want | head doesn't wall want feel contacts",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_b99b6a9daabdc05d",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 46,
+      "start_sec": 157.1,
+      "end_sec": 160.26666666666668,
+      "duration_sec": 3.1666666666666856,
+      "transcript": "Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. So bend your knees a little bit if you have to to gently find them. Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine.",
+      "ocr_text": "HAVE T0,",
+      "visual_description": "Representative frame contains OCR text: HAVE T0,",
+      "segment_summary": "Segment 157.1-160.3s: Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. So bend your knees a little bit if you have to to gently find them. Then reach your elbows gent",
+      "topics": [
+        "gently",
+        "head",
+        "doesn't",
+        "wall"
+      ],
+      "keywords": [
+        "gently",
+        "head",
+        "doesn't",
+        "wall",
+        "want",
+        "feel"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 158.68333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_045_0158683ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. So bend your knees a little bit if you have to to gently find them. Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine. | HAVE T0, | Representative frame contains OCR text: HAVE T0, | Segment 157.1-160.3s: Your head doesn't have to be on the wall, but you want to feel those PSI S contacts. So bend your knees a little bit if you have to to gently find them. Then reach your elbows gent | gently head doesn't wall | gently head doesn't wall want feel",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_04a9d6402712ee18",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 47,
+      "start_sec": 160.26666666666668,
+      "end_sec": 162.73333333333332,
+      "duration_sec": 2.46666666666664,
+      "transcript": "Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 161.5s.",
+      "segment_summary": "Segment 160.3-162.7s: Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine.",
+      "topics": [
+        "then",
+        "reach",
+        "elbows",
+        "gently"
+      ],
+      "keywords": [
+        "then",
+        "reach",
+        "elbows",
+        "gently",
+        "away",
+        "like"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 161.5,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_046_0161500ms.jpg"
+        }
+      ],
+      "retrieval_text": "Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine. | Representative frame sampled at 161.5s. | Segment 160.3-162.7s: Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine. | then reach elbows gently | then reach elbows gently away like",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_983747d782298c18",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 48,
+      "start_sec": 162.73333333333332,
+      "end_sec": 171.96666666666667,
+      "duration_sec": 9.233333333333348,
+      "transcript": "Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine. And do that same exact breathing, bringing awareness to your head stacked over your rib cage and pelvis with your weight further back relatively speaking on your heels.",
+      "ocr_text": "AWARENESS",
+      "visual_description": "Representative frame contains OCR text: AWARENESS",
+      "segment_summary": "Segment 162.7-172.0s: Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine. And do that same exact breathing, bringing awareness to y",
+      "topics": [
+        "awareness",
+        "then",
+        "reach",
+        "elbows"
+      ],
+      "keywords": [
+        "awareness",
+        "then",
+        "reach",
+        "elbows",
+        "gently",
+        "away"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9952978263609111,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 167.35,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_047_0167350ms.jpg"
+        }
+      ],
+      "retrieval_text": "Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine. And do that same exact breathing, bringing awareness to your head stacked over your rib cage and pelvis with your weight further back relatively speaking on your heels. | AWARENESS | Representative frame contains OCR text: AWARENESS | Segment 162.7-172.0s: Then reach your elbows gently away from you like this, creating that separation in between your shoulder blades and spine. And do that same exact breathing, bringing awareness to y | awareness then reach elbows | awareness then reach elbows gently away",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_15c6f57a2211f2c4",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 49,
+      "start_sec": 171.96666666666667,
+      "end_sec": 172.9,
+      "duration_sec": 0.9333333333333371,
+      "transcript": "And do that same exact breathing, bringing awareness to your head stacked over your rib cage and pelvis with your weight further back relatively speaking on your heels. This is bringing awareness to your shifting your center of gravity back with that good stack.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 172.4s.",
+      "segment_summary": "Segment 172.0-172.9s: And do that same exact breathing, bringing awareness to your head stacked over your rib cage and pelvis with your weight further back relatively speaking on your heels. This is bri",
+      "topics": [
+        "bringing",
+        "awareness",
+        "back",
+        "same"
+      ],
+      "keywords": [
+        "bringing",
+        "awareness",
+        "back",
+        "same",
+        "exact",
+        "breathing"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9938883676659316,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 172.43333333333334,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_048_0172433ms.jpg"
+        }
+      ],
+      "retrieval_text": "And do that same exact breathing, bringing awareness to your head stacked over your rib cage and pelvis with your weight further back relatively speaking on your heels. This is bringing awareness to your shifting your center of gravity back with that good stack. | Representative frame sampled at 172.4s. | Segment 172.0-172.9s: And do that same exact breathing, bringing awareness to your head stacked over your rib cage and pelvis with your weight further back relatively speaking on your heels. This is bri | bringing awareness back same | bringing awareness back same exact breathing",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_db1230b1c1b2248d",
+      "source_id": "src_92cbf14929b4bfa8",
+      "segment_index": 50,
+      "start_sec": 172.9,
+      "end_sec": 176.83333333333334,
+      "duration_sec": 3.933333333333337,
+      "transcript": "This is bringing awareness to your shifting your center of gravity back with that good stack.",
+      "ocr_text": "OF GRAVITY",
+      "visual_description": "Representative frame contains OCR text: OF GRAVITY",
+      "segment_summary": "Segment 172.9-176.8s: This is bringing awareness to your shifting your center of gravity back with that good stack.",
+      "topics": [
+        "gravity",
+        "bringing",
+        "awareness",
+        "shifting"
+      ],
+      "keywords": [
+        "gravity",
+        "bringing",
+        "awareness",
+        "shifting",
+        "center",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.992478908970952,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 174.86666666666667,
+          "path": "data\\processed\\rag\\src_92cbf14929b4bfa8\\frames\\scene_049_0174866ms.jpg"
+        }
+      ],
+      "retrieval_text": "This is bringing awareness to your shifting your center of gravity back with that good stack. | OF GRAVITY | Representative frame contains OCR text: OF GRAVITY | Segment 172.9-176.8s: This is bringing awareness to your shifting your center of gravity back with that good stack. | gravity bringing awareness shifting | gravity bringing awareness shifting center back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Don’t Stretch Your Tight Psoas. Do This Instead",
+        "uri": "https://www.youtube.com/watch?v=ViWJ5y25BDU",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 50,
+    "transcript_segment_count": 47,
+    "ocr_observation_count": 14,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "sync_result": {
+    "source_id": "src_92cbf14929b4bfa8",
+    "assets_upserted": 53,
+    "segments_inserted": 50,
+    "segments_skipped": 0,
+    "qdrant_points_upserted": 50
+  }
+}

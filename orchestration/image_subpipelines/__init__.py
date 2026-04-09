@@ -1,0 +1,1 @@
+"""Grouped static image subpipelines."""

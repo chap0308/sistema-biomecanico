@@ -1,0 +1,273 @@
+{
+  "source_url": "https://www.youtube.com/shorts/GdG8ZqwoXMo",
+  "source_title_hint": "Esto corrige la ciática más que el estiramiento",
+  "primary_summary": "This video explains that while piriformis syndrome is often blamed for sciatica, an overly arched low back (hyperlordosis/anterior pelvic tilt) can also compress the sciatic nerve at the lumbar spine. It further explains how this posture can lead to compensatory piriformis overactivity, causing dual compression. The video then demonstrates a wall-supported hamstring activation exercise designed to achieve a posterior pelvic tilt, decompress the lumbar spine, and engage hamstrings, offering a corrective approach for sciatica.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides a biomechanical explanation for a common cause of sciatica beyond piriformis syndrome, detailing how low back posture influences nerve compression. It then offers a specific, visually demonstrated corrective exercise with clear instructions and modifications, making it valuable for diagnostic support, explanation support, and corrective exercise selection.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "Low Back",
+      "Pelvis",
+      "Hip",
+      "Leg"
+    ],
+    "problem_layers": [
+      "Neurological",
+      "Musculoskeletal",
+      "Postural"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "High"
+  },
+  "searchable_topics": [
+    "Sciatica",
+    "Piriformis Syndrome",
+    "Low Back Pain",
+    "Nerve Compression",
+    "Pelvic Tilt",
+    "Posture Correction",
+    "Hamstring Activation",
+    "Lumbar Spine Decompression"
+  ],
+  "searchable_tags": [
+    "Sciatica relief",
+    "Piriformis",
+    "Lumbar spine",
+    "Nerve impingement",
+    "Anterior pelvic tilt",
+    "Posterior pelvic tilt",
+    "Hamstring engagement",
+    "Core stability",
+    "Hip internal rotation",
+    "Posture reeducation"
+  ],
+  "problem_statements": [
+    "Sciatica symptoms",
+    "Piriformis syndrome",
+    "Low back nerve compression",
+    "Hyperlordosis",
+    "Anterior pelvic tilt",
+    "Overactive piriformis muscle"
+  ],
+  "habits_or_contexts": [
+    "Constantly arched low back posture",
+    "Forward shifted center of gravity"
+  ],
+  "key_visual_points": [
+    "Animated overlay showing sciatic nerve path through piriformis muscle.",
+    "Animated overlay showing sciatic nerve roots exiting lumbar spine.",
+    "Diagram illustrating nerve compression at the lumbar spine due to disc herniation.",
+    "Skeleton model demonstrating hyperlordotic (overly arched and extended) low back position and anterior pelvic tilt.",
+    "Man demonstrating the wall-supported hamstring activation exercise, lying on his back with feet against a wall and a foam roller between his thighs.",
+    "Animated overlays highlighting hamstring engagement, heel pressure, tailbone lift, and inner thigh engagement during the exercise.",
+    "Demonstration of placing a pillow under the tailbone as a modification for difficulty."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Wall-supported hamstring activation / posterior pelvic tilt"
+  ],
+  "advice_mentioned": [
+    "Focus on bringing the pelvis back to a neutral position.",
+    "Engage hamstrings to achieve posterior pelvic tilt.",
+    "Maintain relaxed breathing during the exercise.",
+    "Use a foam roller between thighs for hip internal rotation benefit.",
+    "Use a pillow under the tailbone if struggling to flatten the low back."
+  ],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Sciatica: Beyond Piriformis Syndrome",
+      "summary": "Many people with sciatica are incorrectly told that their piriformis muscle is the sole cause, being too tight or overactive and compressing the sciatic nerve. While piriformis can contribute, it's crucial to consider other potential sources of nerve compression.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For individuals experiencing sciatica symptoms attributed solely to piriformis syndrome."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00-00:08"
+      ]
+    },
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Low Back Posture and Sciatic Nerve Compression",
+      "summary": "An important part of the sciatic nerve originates from the low back vertebrae. The position of the low back, particularly an overly arched (hyper-lordotic) and extended posture, can significantly compress the sciatic nerve at the lumbar spine.",
+      "observable_signs": [
+        "Hyper-lordotic posture (excessive arch in the lower back)",
+        "Anterior pelvic tilt"
+      ],
+      "mechanisms": [
+        "Hyper-lordotic posture (anterior pelvic tilt) compresses the sciatic nerve roots as they exit the lumbar vertebrae.",
+        "This compression can contribute to sciatica symptoms down the leg and into the back."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "When assessing the root cause of sciatica symptoms.",
+        "When piriformis syndrome treatments are ineffective."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:18-00:28",
+        "00:31-00:42"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Anterior Pelvic Tilt Leading to Piriformis Overactivity",
+      "summary": "A constantly arched low back pushes the body's center of gravity forward. To counteract this and maintain upright posture against gravity, the body compensates by over-activating muscles on the backside of the pelvis, such as the piriformis. This compensatory gripping can lead to both low back and piriformis compression of the sciatic nerve simultaneously.",
+      "observable_signs": [
+        "Hyper-lordotic posture",
+        "Anterior pelvic tilt",
+        "Overactive or tight piriformis muscle"
+      ],
+      "mechanisms": [
+        "Anterior pelvic tilt shifts center of gravity forward.",
+        "Body engages posterior pelvic muscles (e.g., piriformis) to pull pelvis back and maintain balance.",
+        "Chronic engagement of piriformis can lead to tightness and compression of the sciatic nerve, in addition to lumbar compression."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "When diagnosing complex sciatica cases with multiple potential compression points.",
+        "When addressing postural imbalances contributing to nerve pain."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:44-01:17"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Wall-Supported Hamstring Activation for Posterior Pelvic Tilt",
+      "summary": "This exercise aims to decompress the lumbar spine and reduce sciatic nerve compression by promoting a posterior pelvic tilt and engaging the hamstrings. It helps to reposition the pelvis and flatten the lower back.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Engages hamstrings to create a posterior pelvic tilt.",
+        "Flattens the low back against the ground, decompressing the lumbar spine.",
+        "Can help reduce compression on the sciatic nerve from both the lumbar spine and piriformis."
+      ],
+      "execution_steps": [
+        "Lie on your back with knees and hips bent at 90 degrees, feet flat against a wall.",
+        "Optionally, place a small object (e.g., yoga block) under your heels for leverage.",
+        "Place a foam roller deep between your thighs, ensuring knees, feet, and hips remain in line.",
+        "Allow your chin to passively point towards the ceiling.",
+        "Keeping your whole foot flat and relaxed on the wall, focus on dragging your heels down into the wall/object.",
+        "This action should lift your tailbone slightly off the ground and flatten your low back against the ground, achieving a posterior pelvic tilt.",
+        "Engage your hamstrings on both sides."
+      ],
+      "cues": [
+        "Drag heels down into the wall.",
+        "Feel your tailbone lift off the ground.",
+        "Feel your low back flatten against the ground.",
+        "Engage your hamstrings."
+      ],
+      "breathing_cues": [
+        "Breathe in a relaxed fashion."
+      ],
+      "errors_to_avoid": [
+        "Do not tense your feet or other muscles unnecessarily.",
+        "Ensure only hamstrings are primarily working, not glutes or other back muscles."
+      ],
+      "when_useful": [
+        "For individuals with sciatica related to hyperlordosis or anterior pelvic tilt.",
+        "To teach proper hamstring activation and pelvic positioning."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:21-02:08",
+        "02:40-02:42"
+      ]
+    },
+    {
+      "unit_type": "technique_correction",
+      "title": "Enhancing Hamstring Engagement and Hip Internal Rotation",
+      "summary": "To further enhance the benefits of the wall-supported hamstring activation exercise, a slight squeeze on the foam roller between the thighs can be added. This engages the inner thighs and promotes hip internal rotation, which can help open up the backside of the hips more effectively.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Squeezing the foam roller activates adductor muscles (inner thighs).",
+        "Adductor activation can assist in hip internal rotation.",
+        "Hip internal rotation can further decompress the posterior hip region, potentially relieving piriformis-related compression."
+      ],
+      "execution_steps": [
+        "Perform the wall-supported hamstring activation as described.",
+        "Add a slight squeeze (2 out of 10 intensity) on the foam roller between your thighs."
+      ],
+      "cues": [
+        "Slightly squeeze the foam roller.",
+        "Feel your inner thighs engage."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Do not lose the whole foot flat on the wall with emphasis on the heels.",
+        "Avoid over-squeezing the foam roller, keep it a low intensity."
+      ],
+      "when_useful": [
+        "When additional hip internal rotation is desired.",
+        "To further target piriformis-related compression."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:18-02:39"
+      ]
+    },
+    {
+      "unit_type": "practical_advice",
+      "title": "Modification for Difficulty in Wall-Supported Hamstring Activation",
+      "summary": "If an individual struggles to flatten their low back or keep their tailbone off the ground during the wall-supported hamstring activation exercise, placing a pillow underneath the tailbone can provide assistance. This modification slightly tips the pelvis back, making it easier to engage the hamstrings and achieve the desired posterior pelvic tilt.",
+      "observable_signs": [
+        "Inability to flatten low back against the ground.",
+        "Difficulty lifting tailbone off the ground."
+      ],
+      "mechanisms": [
+        "A pillow under the tailbone provides external support, initiating a slight posterior pelvic tilt.",
+        "This makes it easier for individuals with significant anterior pelvic tilt or weak hamstrings to find the correct muscle activation."
+      ],
+      "execution_steps": [
+        "If struggling, slide a pillow underneath your tailbone.",
+        "Focus on dragging down with your heels to feel your hamstrings engage."
+      ],
+      "cues": [
+        "Use a pillow for support.",
+        "Focus on heel drag to engage hamstrings."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For beginners or individuals with significant postural limitations.",
+        "When initial attempts at the exercise do not yield proper low back flattening or hamstring engagement."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "02:43-02:56"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively uses anatomical models and visual overlays to explain complex biomechanical concepts, making it highly educational. The exercise demonstration is clear and includes practical modifications."
+}

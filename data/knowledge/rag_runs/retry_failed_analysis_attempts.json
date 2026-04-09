@@ -1,0 +1,11 @@
+{
+  "requested_backend": "gemini_upgrade",
+  "retry_count": 2,
+  "urls": [
+    "https://www.youtube.com/shorts/d4d5Ta8UXRg",
+    "https://www.youtube.com/shorts/kU7CaY7YuDo"
+  ],
+  "returncode": 0,
+  "stdout_tail": "{\n  \"selection_mode\": \"urls\",\n  \"requested_limit\": null,\n  \"requested_urls\": [\n    \"https://www.youtube.com/shorts/d4d5Ta8UXRg\",\n    \"https://www.youtube.com/shorts/kU7CaY7YuDo\"\n  ],\n  \"selected_count\": 0,\n  \"model\": \"gemini-2.5-flash\",\n  \"results\": []\n}\nSummary saved to: D:\\sistema-biomecanico\\data\\knowledge\\rag_runs\\retry_failed_upgrade_inner.json\n",
+  "stderr_tail": ""
+}

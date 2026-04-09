@@ -1,0 +1,1810 @@
+{
+  "source": {
+    "source_id": "src_e7a2759fda05b986",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/pQkwgsOYzRM",
+    "canonical_uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+    "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [],
+    "duration_sec": 175.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-05T17:48:21.720920Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_97cb20a81b98eb6a",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 175.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_7c09e57eb154b93a",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 175.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_30fd1e40c554df3a",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 175.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_44ebe712f144237b",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_001_0001133ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 1.1333333333333333,
+      "end_sec": 1.1333333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_44a80a6f3ebaec18",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_002_0002849ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 2.8499999999999996,
+      "end_sec": 2.8499999999999996,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_df03158cea971485",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_003_0004566ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 4.566666666666666,
+      "end_sec": 4.566666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c18649541797fa76",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_004_0007150ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 7.15,
+      "end_sec": 7.15,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6c18b199fbb4c057",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_005_0011183ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 11.183333333333334,
+      "end_sec": 11.183333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e316950000bac384",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_006_0015450ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 15.45,
+      "end_sec": 15.45,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e18733cc511e91b5",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_007_0019733ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 19.733333333333334,
+      "end_sec": 19.733333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_57bc9007c481928f",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_008_0023483ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 23.483333333333334,
+      "end_sec": 23.483333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1f7b9994e28f2e0c",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_009_0026933ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 26.933333333333334,
+      "end_sec": 26.933333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b247982d90cbc7aa",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_010_0032583ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 32.58333333333333,
+      "end_sec": 32.58333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_dfc36a788e2d2809",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_011_0039700ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 39.7,
+      "end_sec": 39.7,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c03977b137d0839d",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_012_0046133ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 46.13333333333333,
+      "end_sec": 46.13333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_35bdc2ffd8c7aba0",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_013_0049966ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 49.96666666666667,
+      "end_sec": 49.96666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_451c1275784de457",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_014_0052150ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 52.15,
+      "end_sec": 52.15,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_10e8d98c4ec43826",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_015_0055000ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 55.0,
+      "end_sec": 55.0,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b02ef5a3da04a3ea",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_016_0058200ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 58.2,
+      "end_sec": 58.2,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e416523275d0e7ac",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_017_0060566ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 60.56666666666667,
+      "end_sec": 60.56666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_26b5956c4982e415",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_018_0063666ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 63.66666666666667,
+      "end_sec": 63.66666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bee2dc208bc913aa",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_019_0066950ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 66.95,
+      "end_sec": 66.95,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5f7b323026360e1f",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_020_0069900ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 69.9,
+      "end_sec": 69.9,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_843b05f58c4c540d",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_021_0072366ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 72.36666666666667,
+      "end_sec": 72.36666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_2f06ca79338e9dfe",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_022_0084133ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 84.13333333333333,
+      "end_sec": 84.13333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b31f6210c030b6ba",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_023_0116816ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 116.81666666666666,
+      "end_sec": 116.81666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5e4941bb2e5874e5",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_024_0140466ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 140.46666666666667,
+      "end_sec": 140.46666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_63d25d2bbd9ef3ac",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_025_0158916ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 158.91666666666669,
+      "end_sec": 158.91666666666669,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_930e9ff4046c6ef8",
+      "source_id": "src_e7a2759fda05b986",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_e7a2759fda05b986\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 175.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_7af6851823d86921",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 2.2666666666666666,
+      "duration_sec": 2.2666666666666666,
+      "transcript": "Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 1.1s.",
+      "segment_summary": "Segment 0.0-2.3s: Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out.",
+      "topics": [
+        "most",
+        "people",
+        "annoying",
+        "muscle"
+      ],
+      "keywords": [
+        "most",
+        "people",
+        "annoying",
+        "muscle",
+        "knot",
+        "their"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963653625454754,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 1.1333333333333333,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_001_0001133ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. | Representative frame sampled at 1.1s. | Segment 0.0-2.3s: Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. | most people annoying muscle | most people annoying muscle knot their",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_79db842f03fa3712",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 2,
+      "start_sec": 2.2666666666666666,
+      "end_sec": 3.433333333333333,
+      "duration_sec": 1.1666666666666665,
+      "transcript": "Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 2.8s.",
+      "segment_summary": "Segment 2.3-3.4s: Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out.",
+      "topics": [
+        "most",
+        "people",
+        "annoying",
+        "muscle"
+      ],
+      "keywords": [
+        "most",
+        "people",
+        "annoying",
+        "muscle",
+        "knot",
+        "their"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963653625454754,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 2.8499999999999996,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_002_0002849ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. | Representative frame sampled at 2.8s. | Segment 2.3-3.4s: Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. | most people annoying muscle | most people annoying muscle knot their",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5ed265d201891f26",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 3,
+      "start_sec": 3.433333333333333,
+      "end_sec": 5.7,
+      "duration_sec": 2.266666666666667,
+      "transcript": "Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. But this commonly doesn't give them the relief they're looking for, especially in the long-term.",
+      "ocr_text": "ROLLING IT OUT,",
+      "visual_description": "Representative frame contains OCR text: ROLLING IT OUT,",
+      "segment_summary": "Segment 3.4-5.7s: Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. But this commonly doesn't give them the relief they're l",
+      "topics": [
+        "commonly",
+        "rolling",
+        "most",
+        "people"
+      ],
+      "keywords": [
+        "commonly",
+        "rolling",
+        "most",
+        "people",
+        "annoying",
+        "muscle"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963653625454754,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 4.566666666666666,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_003_0004566ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. But this commonly doesn't give them the relief they're looking for, especially in the long-term. | ROLLING IT OUT, | Representative frame contains OCR text: ROLLING IT OUT, | Segment 3.4-5.7s: Most people, if annoying muscle knot in their upper back, commonly try to fix the issue by stretching it or rolling it out. But this commonly doesn't give them the relief they're l | commonly rolling most people | commonly rolling most people annoying muscle",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e850fd21e3981546",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 4,
+      "start_sec": 5.7,
+      "end_sec": 8.6,
+      "duration_sec": 2.8999999999999995,
+      "transcript": "But this commonly doesn't give them the relief they're looking for, especially in the long-term. A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 7.2s.",
+      "segment_summary": "Segment 5.7-8.6s: But this commonly doesn't give them the relief they're looking for, especially in the long-term. A common problem I see is that people think that there's these muscle knots because",
+      "topics": [
+        "muscle",
+        "knots",
+        "commonly",
+        "doesn't"
+      ],
+      "keywords": [
+        "muscle",
+        "knots",
+        "commonly",
+        "doesn't",
+        "give",
+        "them"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963653625454754,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 7.15,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_004_0007150ms.jpg"
+        }
+      ],
+      "retrieval_text": "But this commonly doesn't give them the relief they're looking for, especially in the long-term. A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots. | Representative frame sampled at 7.2s. | Segment 5.7-8.6s: But this commonly doesn't give them the relief they're looking for, especially in the long-term. A common problem I see is that people think that there's these muscle knots because | muscle knots commonly doesn't | muscle knots commonly doesn't give them",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_b3788e9312e3398d",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 5,
+      "start_sec": 8.6,
+      "end_sec": 13.766666666666667,
+      "duration_sec": 5.166666666666668,
+      "transcript": "A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 11.2s.",
+      "segment_summary": "Segment 8.6-13.8s: A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots.",
+      "topics": [
+        "muscle",
+        "knots",
+        "common",
+        "problem"
+      ],
+      "keywords": [
+        "muscle",
+        "knots",
+        "common",
+        "problem",
+        "people",
+        "think"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963653625454754,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 11.183333333333334,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_005_0011183ms.jpg"
+        }
+      ],
+      "retrieval_text": "A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots. | Representative frame sampled at 11.2s. | Segment 8.6-13.8s: A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots. | muscle knots common problem | muscle knots common problem people think",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9ec642ef324aed7a",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 6,
+      "start_sec": 13.766666666666667,
+      "end_sec": 17.133333333333333,
+      "duration_sec": 3.3666666666666654,
+      "transcript": "A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots. And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 15.4s.",
+      "segment_summary": "Segment 13.8-17.1s: A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots. A",
+      "topics": [
+        "muscle",
+        "knots",
+        "there's",
+        "because"
+      ],
+      "keywords": [
+        "muscle",
+        "knots",
+        "there's",
+        "because",
+        "common",
+        "problem"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963653625454754,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 15.45,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_006_0015450ms.jpg"
+        }
+      ],
+      "retrieval_text": "A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots. And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out. | Representative frame sampled at 15.4s. | Segment 13.8-17.1s: A common problem I see is that people think that there's these muscle knots because the stuff in between the shoulder blade and scapula is too tight, creating those muscle knots. A | muscle knots there's because | muscle knots there's because common problem",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_2d1f02282c668ecb",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 7,
+      "start_sec": 17.133333333333333,
+      "end_sec": 22.333333333333332,
+      "duration_sec": 5.199999999999999,
+      "transcript": "And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 19.7s.",
+      "segment_summary": "Segment 17.1-22.3s: And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out.",
+      "topics": [
+        "sometimes",
+        "case",
+        "there's",
+        "also"
+      ],
+      "keywords": [
+        "sometimes",
+        "case",
+        "there's",
+        "also",
+        "situations",
+        "muscle"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963653625454754,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 19.733333333333334,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_007_0019733ms.jpg"
+        }
+      ],
+      "retrieval_text": "And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out. | Representative frame sampled at 19.7s. | Segment 17.1-22.3s: And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out. | sometimes case there's also | sometimes case there's also situations muscle",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_de44f68194efb251",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 8,
+      "start_sec": 22.333333333333332,
+      "end_sec": 24.633333333333333,
+      "duration_sec": 2.3000000000000007,
+      "transcript": "And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out. What a lot of people don't realize is that muscle tension can exist in one of two ways.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 23.5s.",
+      "segment_summary": "Segment 22.3-24.6s: And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out. What a lot of people don't realize is tha",
+      "topics": [
+        "muscle",
+        "exist",
+        "sometimes",
+        "case"
+      ],
+      "keywords": [
+        "muscle",
+        "exist",
+        "sometimes",
+        "case",
+        "there's",
+        "also"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9835186040727422,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 23.483333333333334,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_008_0023483ms.jpg"
+        }
+      ],
+      "retrieval_text": "And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out. What a lot of people don't realize is that muscle tension can exist in one of two ways. | Representative frame sampled at 23.5s. | Segment 22.3-24.6s: And this sometimes is the case, but there's also a lot of situations where these muscle knots exist because things are too lengthened out. What a lot of people don't realize is tha | muscle exist sometimes case | muscle exist sometimes case there's also",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f2d3869fd0a3ca93",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 9,
+      "start_sec": 24.633333333333333,
+      "end_sec": 29.233333333333334,
+      "duration_sec": 4.600000000000001,
+      "transcript": "What a lot of people don't realize is that muscle tension can exist in one of two ways. First, because things are too short and compressed and pulled together,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 26.9s.",
+      "segment_summary": "Segment 24.6-29.2s: What a lot of people don't realize is that muscle tension can exist in one of two ways. First, because things are too short and compressed and pulled together,",
+      "topics": [
+        "people",
+        "don't",
+        "realize",
+        "muscle"
+      ],
+      "keywords": [
+        "people",
+        "don't",
+        "realize",
+        "muscle",
+        "tension",
+        "exist"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.970671845600009,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 26.933333333333334,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_009_0026933ms.jpg"
+        }
+      ],
+      "retrieval_text": "What a lot of people don't realize is that muscle tension can exist in one of two ways. First, because things are too short and compressed and pulled together, | Representative frame sampled at 26.9s. | Segment 24.6-29.2s: What a lot of people don't realize is that muscle tension can exist in one of two ways. First, because things are too short and compressed and pulled together, | people don't realize muscle | people don't realize muscle tension exist",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c2f5fb5fa5380639",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 10,
+      "start_sec": 29.233333333333334,
+      "end_sec": 35.93333333333333,
+      "duration_sec": 6.699999999999996,
+      "transcript": "First, because things are too short and compressed and pulled together, or when things stretch out too much that also creates tension because the attachment sides of the muscles are being pulled away from each other.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 32.6s.",
+      "segment_summary": "Segment 29.2-35.9s: First, because things are too short and compressed and pulled together, or when things stretch out too much that also creates tension because the attachment sides of the muscles ar",
+      "topics": [
+        "because",
+        "things",
+        "pulled",
+        "first"
+      ],
+      "keywords": [
+        "because",
+        "things",
+        "pulled",
+        "first",
+        "short",
+        "compressed"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.970671845600009,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 32.58333333333333,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_010_0032583ms.jpg"
+        }
+      ],
+      "retrieval_text": "First, because things are too short and compressed and pulled together, or when things stretch out too much that also creates tension because the attachment sides of the muscles are being pulled away from each other. | Representative frame sampled at 32.6s. | Segment 29.2-35.9s: First, because things are too short and compressed and pulled together, or when things stretch out too much that also creates tension because the attachment sides of the muscles ar | because things pulled first | because things pulled first short compressed",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_68d3738b5fa0c521",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 11,
+      "start_sec": 35.93333333333333,
+      "end_sec": 43.46666666666667,
+      "duration_sec": 7.5333333333333385,
+      "transcript": "or when things stretch out too much that also creates tension because the attachment sides of the muscles are being pulled away from each other. Imagine a rubber band being pulled on this creates tension. And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 39.7s.",
+      "segment_summary": "Segment 35.9-43.5s: or when things stretch out too much that also creates tension because the attachment sides of the muscles are being pulled away from each other. Imagine a rubber band being pulled",
+      "topics": [
+        "being",
+        "pulled",
+        "creates",
+        "tension"
+      ],
+      "keywords": [
+        "being",
+        "pulled",
+        "creates",
+        "tension",
+        "away",
+        "when"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.970671845600009,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 39.7,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_011_0039700ms.jpg"
+        }
+      ],
+      "retrieval_text": "or when things stretch out too much that also creates tension because the attachment sides of the muscles are being pulled away from each other. Imagine a rubber band being pulled on this creates tension. And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. | Representative frame sampled at 39.7s. | Segment 35.9-43.5s: or when things stretch out too much that also creates tension because the attachment sides of the muscles are being pulled away from each other. Imagine a rubber band being pulled | being pulled creates tension | being pulled creates tension away when",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3bacb4fc08972934",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 12,
+      "start_sec": 43.46666666666667,
+      "end_sec": 48.8,
+      "duration_sec": 5.333333333333329,
+      "transcript": "And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 46.1s.",
+      "segment_summary": "Segment 43.5-48.8s: And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine.",
+      "topics": [
+        "people",
+        "i've",
+        "rounded",
+        "forward"
+      ],
+      "keywords": [
+        "people",
+        "i've",
+        "rounded",
+        "forward",
+        "shoulders",
+        "thoracic"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.970671845600009,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 46.13333333333333,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_012_0046133ms.jpg"
+        }
+      ],
+      "retrieval_text": "And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. | Representative frame sampled at 46.1s. | Segment 43.5-48.8s: And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. | people i've rounded forward | people i've rounded forward shoulders thoracic",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_a441fecddf95e71c",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 13,
+      "start_sec": 48.8,
+      "end_sec": 51.13333333333333,
+      "duration_sec": 2.3333333333333357,
+      "transcript": "And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 50.0s.",
+      "segment_summary": "Segment 48.8-51.1s: And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine.",
+      "topics": [
+        "people",
+        "i've",
+        "rounded",
+        "forward"
+      ],
+      "keywords": [
+        "people",
+        "i've",
+        "rounded",
+        "forward",
+        "shoulders",
+        "thoracic"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.970671845600009,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 49.96666666666667,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_013_0049966ms.jpg"
+        }
+      ],
+      "retrieval_text": "And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. | Representative frame sampled at 50.0s. | Segment 48.8-51.1s: And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. | people i've rounded forward | people i've rounded forward shoulders thoracic",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_6e74cc5a8b81389a",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 14,
+      "start_sec": 51.13333333333333,
+      "end_sec": 53.166666666666664,
+      "duration_sec": 2.0333333333333314,
+      "transcript": "And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. This is increasing tension.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 52.1s.",
+      "segment_summary": "Segment 51.1-53.2s: And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine.",
+      "topics": [
+        "people",
+        "i've",
+        "rounded",
+        "forward"
+      ],
+      "keywords": [
+        "people",
+        "i've",
+        "rounded",
+        "forward",
+        "shoulders",
+        "thoracic"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9842318333685398,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 52.15,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_014_0052150ms.jpg"
+        }
+      ],
+      "retrieval_text": "And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. This is increasing tension. | Representative frame sampled at 52.1s. | Segment 51.1-53.2s: And a ton of people I've rounded forward shoulders with a lot of thoracic kyphosis, which is creating the situation where the shoulder blades are being pulled away from the spine. | people i've rounded forward | people i've rounded forward shoulders thoracic",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3937ef07a0bf364e",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 15,
+      "start_sec": 53.166666666666664,
+      "end_sec": 56.833333333333336,
+      "duration_sec": 3.6666666666666714,
+      "transcript": "This is increasing tension. So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length.",
+      "ocr_text": "SOTRYING TO",
+      "visual_description": "Representative frame contains OCR text: SOTRYING TO",
+      "segment_summary": "Segment 53.2-56.8s: This is increasing tension. So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on t",
+      "topics": [
+        "problem",
+        "better",
+        "increasing",
+        "tension"
+      ],
+      "keywords": [
+        "problem",
+        "better",
+        "increasing",
+        "tension",
+        "trying",
+        "stretch"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977918211370707,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 55.0,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_015_0055000ms.jpg"
+        }
+      ],
+      "retrieval_text": "This is increasing tension. So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length. | SOTRYING TO | Representative frame contains OCR text: SOTRYING TO | Segment 53.2-56.8s: This is increasing tension. So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on t | problem better increasing tension | problem better increasing tension trying stretch",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_810fe93e3bc70375",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 16,
+      "start_sec": 56.833333333333336,
+      "end_sec": 59.56666666666667,
+      "duration_sec": 2.7333333333333343,
+      "transcript": "So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 58.2s.",
+      "segment_summary": "Segment 56.8-59.6s: So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore bette",
+      "topics": [
+        "problem",
+        "better",
+        "trying",
+        "stretch"
+      ],
+      "keywords": [
+        "problem",
+        "better",
+        "trying",
+        "stretch",
+        "area",
+        "roll"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977918211370707,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 58.2,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_016_0058200ms.jpg"
+        }
+      ],
+      "retrieval_text": "So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length. | Representative frame sampled at 58.2s. | Segment 56.8-59.6s: So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore bette | problem better trying stretch | problem better trying stretch area roll",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_88a7731288f89f74",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 17,
+      "start_sec": 59.56666666666667,
+      "end_sec": 61.56666666666667,
+      "duration_sec": 2.0,
+      "transcript": "So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 60.6s.",
+      "segment_summary": "Segment 59.6-61.6s: So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore bette",
+      "topics": [
+        "problem",
+        "better",
+        "trying",
+        "stretch"
+      ],
+      "keywords": [
+        "problem",
+        "better",
+        "trying",
+        "stretch",
+        "area",
+        "roll"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977918211370707,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 60.56666666666667,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_017_0060566ms.jpg"
+        }
+      ],
+      "retrieval_text": "So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length. | Representative frame sampled at 60.6s. | Segment 59.6-61.6s: So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore bette | problem better trying stretch | problem better trying stretch area roll",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_14c8d6fb39e6a9c9",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 18,
+      "start_sec": 61.56666666666667,
+      "end_sec": 65.76666666666667,
+      "duration_sec": 4.199999999999996,
+      "transcript": "So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length. And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 63.7s.",
+      "segment_summary": "Segment 61.6-65.8s: So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore bette",
+      "topics": [
+        "problem",
+        "better",
+        "cage",
+        "trying"
+      ],
+      "keywords": [
+        "problem",
+        "better",
+        "cage",
+        "trying",
+        "stretch",
+        "area"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977918211370707,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 63.66666666666667,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_018_0063666ms.jpg"
+        }
+      ],
+      "retrieval_text": "So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore better muscle length. And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions. | Representative frame sampled at 63.7s. | Segment 61.6-65.8s: So trying to stretch this area out or roll it out isn't going to fix the problem because the problem is that the shoulder blades need to sit better on the rib cage to restore bette | problem better cage trying | problem better cage trying stretch area",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_690b413ef7ec4c0e",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 19,
+      "start_sec": 65.76666666666667,
+      "end_sec": 68.13333333333334,
+      "duration_sec": 2.3666666666666742,
+      "transcript": "And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 67.0s.",
+      "segment_summary": "Segment 65.8-68.1s: And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions.",
+      "topics": [
+        "final",
+        "piece",
+        "every",
+        "single"
+      ],
+      "keywords": [
+        "final",
+        "piece",
+        "every",
+        "single",
+        "breath",
+        "take"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977918211370707,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 66.95,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_019_0066950ms.jpg"
+        }
+      ],
+      "retrieval_text": "And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions. | Representative frame sampled at 67.0s. | Segment 65.8-68.1s: And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions. | final piece every single | final piece every single breath take",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5518e9efc7e2a743",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 20,
+      "start_sec": 68.13333333333334,
+      "end_sec": 71.66666666666667,
+      "duration_sec": 3.5333333333333314,
+      "transcript": "And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions. But in this context, particularly in the back.",
+      "ocr_text": "Bw)\n=\n3\n=\njoe\nfc\nS\n4",
+      "visual_description": "Representative frame contains OCR text: Bw)\n=\n3\n=\njoe\nfc\nS\n4",
+      "segment_summary": "Segment 68.1-71.7s: And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions. But in this context, particularly in th",
+      "topics": [
+        "final",
+        "piece",
+        "every",
+        "single"
+      ],
+      "keywords": [
+        "final",
+        "piece",
+        "every",
+        "single",
+        "breath",
+        "take"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977918211370707,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 69.9,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_020_0069900ms.jpg"
+        }
+      ],
+      "retrieval_text": "And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions. But in this context, particularly in the back. | Bw)\n=\n3\n=\njoe\nfc\nS\n4 | Representative frame contains OCR text: Bw)\n=\n3\n=\njoe\nfc\nS\n4 | Segment 68.1-71.7s: And the final piece of this is that with every single breath that we take, we should be getting expansion in our rib cage in all directions. But in this context, particularly in th | final piece every single | final piece every single breath take",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_22d3ac9fc77be57d",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 21,
+      "start_sec": 71.66666666666667,
+      "end_sec": 73.06666666666666,
+      "duration_sec": 1.3999999999999915,
+      "transcript": "But in this context, particularly in the back. But if we constantly have tension back here because the attachment sides are being pulled away from each other,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 72.4s.",
+      "segment_summary": "Segment 71.7-73.1s: But in this context, particularly in the back. But if we constantly have tension back here because the attachment sides are being pulled away from each other,",
+      "topics": [
+        "back",
+        "context",
+        "particularly",
+        "constantly"
+      ],
+      "keywords": [
+        "back",
+        "context",
+        "particularly",
+        "constantly",
+        "tension",
+        "here"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9977918211370707,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 72.36666666666667,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_021_0072366ms.jpg"
+        }
+      ],
+      "retrieval_text": "But in this context, particularly in the back. But if we constantly have tension back here because the attachment sides are being pulled away from each other, | Representative frame sampled at 72.4s. | Segment 71.7-73.1s: But in this context, particularly in the back. But if we constantly have tension back here because the attachment sides are being pulled away from each other, | back context particularly constantly | back context particularly constantly tension here",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_836411d10bf7dfb4",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 22,
+      "start_sec": 73.06666666666666,
+      "end_sec": 88.06666666666666,
+      "duration_sec": 15.0,
+      "transcript": "But if we constantly have tension back here because the attachment sides are being pulled away from each other, we're not going to be getting that expansion and a little bit of that decompression. So the solution is two things. First to bring the shoulder blades back into a better resting position on the rib cage. Second, we want to improve the capacity of the back rib cage to expand in the presence of this better scapular position.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 84.1s.",
+      "segment_summary": "Segment 73.1-88.1s: But if we constantly have tension back here because the attachment sides are being pulled away from each other, we're not going to be getting that expansion and a little bit of tha",
+      "topics": [
+        "back",
+        "better",
+        "position",
+        "cage"
+      ],
+      "keywords": [
+        "back",
+        "better",
+        "position",
+        "cage",
+        "constantly",
+        "tension"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9983392449794337,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 84.13333333333333,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_022_0084133ms.jpg"
+        }
+      ],
+      "retrieval_text": "But if we constantly have tension back here because the attachment sides are being pulled away from each other, we're not going to be getting that expansion and a little bit of that decompression. So the solution is two things. First to bring the shoulder blades back into a better resting position on the rib cage. Second, we want to improve the capacity of the back rib cage to expand in the presence of this better scapular position. | Representative frame sampled at 84.1s. | Segment 73.1-88.1s: But if we constantly have tension back here because the attachment sides are being pulled away from each other, we're not going to be getting that expansion and a little bit of tha | back better position cage | back better position cage constantly tension",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_8c54adbb3826ff03",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 23,
+      "start_sec": 88.06666666666666,
+      "end_sec": 95.2,
+      "duration_sec": 7.13333333333334,
+      "transcript": "Second, we want to improve the capacity of the back rib cage to expand in the presence of this better scapular position. Here's a really easy way you can do both of those things in one exercise. All you're going to need for this is a table style when you rest your elbows on it.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 88.1-95.2s: Second, we want to improve the capacity of the back rib cage to expand in the presence of this better scapular position. Here's a really easy way you can do both of those things in",
+      "topics": [
+        "second",
+        "want",
+        "improve",
+        "capacity"
+      ],
+      "keywords": [
+        "second",
+        "want",
+        "improve",
+        "capacity",
+        "back",
+        "cage"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9988866688217968,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "Second, we want to improve the capacity of the back rib cage to expand in the presence of this better scapular position. Here's a really easy way you can do both of those things in one exercise. All you're going to need for this is a table style when you rest your elbows on it. | Segment 88.1-95.2s: Second, we want to improve the capacity of the back rib cage to expand in the presence of this better scapular position. Here's a really easy way you can do both of those things in | second want improve capacity | second want improve capacity back cage",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_efeef5e3ec3fc6cb",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 24,
+      "start_sec": 95.2,
+      "end_sec": 110.2,
+      "duration_sec": 15.0,
+      "transcript": "All you're going to need for this is a table style when you rest your elbows on it. You have around a 45 degree angle of your arm relative to your trunk. Also, it's helpful to have a very light band, but nothing significant at all. Take that band and wrap it around your wrist. First, sit tall and find your sit bones evenly on both sides and rest your elbows on the table,",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 95.2-110.2s: All you're going to need for this is a table style when you rest your elbows on it. You have around a 45 degree angle of your arm relative to your trunk. Also, it's helpful to have",
+      "topics": [
+        "table",
+        "rest",
+        "elbows",
+        "around"
+      ],
+      "keywords": [
+        "table",
+        "rest",
+        "elbows",
+        "around",
+        "band",
+        "you're"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9990291330090258,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "All you're going to need for this is a table style when you rest your elbows on it. You have around a 45 degree angle of your arm relative to your trunk. Also, it's helpful to have a very light band, but nothing significant at all. Take that band and wrap it around your wrist. First, sit tall and find your sit bones evenly on both sides and rest your elbows on the table, | Segment 95.2-110.2s: All you're going to need for this is a table style when you rest your elbows on it. You have around a 45 degree angle of your arm relative to your trunk. Also, it's helpful to have | table rest elbows around | table rest elbows around band you're",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_d71d032b670708ab",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 25,
+      "start_sec": 110.2,
+      "end_sec": 125.2,
+      "duration_sec": 15.0,
+      "transcript": "First, sit tall and find your sit bones evenly on both sides and rest your elbows on the table, so that way they're about to shoulder with the part. With that band wrapped around your wrist like so and your palms facing you, very gently separate your shoulder blades away from your spine without shrugging or depressing your chest. It's just a very gentle 1 out of 10 push.",
+      "ocr_text": "=\n~ AND YOUR PALM",
+      "visual_description": "Representative frame contains OCR text: =\n~ AND YOUR PALM",
+      "segment_summary": "Segment 110.2-125.2s: First, sit tall and find your sit bones evenly on both sides and rest your elbows on the table, so that way they're about to shoulder with the part. With that band wrapped around y",
+      "topics": [
+        "shoulder",
+        "very",
+        "first",
+        "tall"
+      ],
+      "keywords": [
+        "shoulder",
+        "very",
+        "first",
+        "tall",
+        "find",
+        "bones"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.999598989757942,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 116.81666666666666,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_023_0116816ms.jpg"
+        }
+      ],
+      "retrieval_text": "First, sit tall and find your sit bones evenly on both sides and rest your elbows on the table, so that way they're about to shoulder with the part. With that band wrapped around your wrist like so and your palms facing you, very gently separate your shoulder blades away from your spine without shrugging or depressing your chest. It's just a very gentle 1 out of 10 push. | =\n~ AND YOUR PALM | Representative frame contains OCR text: =\n~ AND YOUR PALM | Segment 110.2-125.2s: First, sit tall and find your sit bones evenly on both sides and rest your elbows on the table, so that way they're about to shoulder with the part. With that band wrapped around y | shoulder very first tall | shoulder very first tall find bones",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5389c28d64e46537",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 26,
+      "start_sec": 125.2,
+      "end_sec": 138.43333333333334,
+      "duration_sec": 13.233333333333334,
+      "transcript": "away from your spine without shrugging or depressing your chest. It's just a very gentle 1 out of 10 push. After you've established that, make sure there's no tension in your body or traps or neck. After that, very gently separate your hands away from each other. Literally again, just a 1 or 2 out of 10. If you go too much,",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 125.2-138.4s: away from your spine without shrugging or depressing your chest. It's just a very gentle 1 out of 10 push. After you've established that, make sure there's no tension in your body",
+      "topics": [
+        "away",
+        "just",
+        "very",
+        "after"
+      ],
+      "keywords": [
+        "away",
+        "just",
+        "very",
+        "after",
+        "spine",
+        "without"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9985844918046496,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "away from your spine without shrugging or depressing your chest. It's just a very gentle 1 out of 10 push. After you've established that, make sure there's no tension in your body or traps or neck. After that, very gently separate your hands away from each other. Literally again, just a 1 or 2 out of 10. If you go too much, | Segment 125.2-138.4s: away from your spine without shrugging or depressing your chest. It's just a very gentle 1 out of 10 push. After you've established that, make sure there's no tension in your body | away just very after | away just very after spine without",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f16d73413f804118",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 27,
+      "start_sec": 138.43333333333334,
+      "end_sec": 142.5,
+      "duration_sec": 4.066666666666663,
+      "transcript": "Literally again, just a 1 or 2 out of 10. If you go too much, you're going to feel tension build in your shoulders and that's not what you want. Creating this very gentle separation should engage very lightly some muscles on the back side of your shoulders.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 140.5s.",
+      "segment_summary": "Segment 138.4-142.5s: Literally again, just a 1 or 2 out of 10. If you go too much, you're going to feel tension build in your shoulders and that's not what you want. Creating this very gentle separatio",
+      "topics": [
+        "shoulders",
+        "very",
+        "literally",
+        "again"
+      ],
+      "keywords": [
+        "shoulders",
+        "very",
+        "literally",
+        "again",
+        "just",
+        "much"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9955409979447722,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 140.46666666666667,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_024_0140466ms.jpg"
+        }
+      ],
+      "retrieval_text": "Literally again, just a 1 or 2 out of 10. If you go too much, you're going to feel tension build in your shoulders and that's not what you want. Creating this very gentle separation should engage very lightly some muscles on the back side of your shoulders. | Representative frame sampled at 140.5s. | Segment 138.4-142.5s: Literally again, just a 1 or 2 out of 10. If you go too much, you're going to feel tension build in your shoulders and that's not what you want. Creating this very gentle separatio | shoulders very literally again | shoulders very literally again just much",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7191bd3e55b0731c",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 28,
+      "start_sec": 142.5,
+      "end_sec": 157.5,
+      "duration_sec": 15.0,
+      "transcript": "Creating this very gentle separation should engage very lightly some muscles on the back side of your shoulders. Now what you're going to do is maintain this position as you exhale through your mouth. Letting the air kind of fall out of you like this. Exhale for about five seconds and then pause, close your mouth and then inhale through your nose",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 142.5-157.5s: Creating this very gentle separation should engage very lightly some muscles on the back side of your shoulders. Now what you're going to do is maintain this position as you exhale",
+      "topics": [
+        "very",
+        "exhale",
+        "through",
+        "mouth"
+      ],
+      "keywords": [
+        "very",
+        "exhale",
+        "through",
+        "mouth",
+        "then",
+        "creating"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9955409979447722,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "Creating this very gentle separation should engage very lightly some muscles on the back side of your shoulders. Now what you're going to do is maintain this position as you exhale through your mouth. Letting the air kind of fall out of you like this. Exhale for about five seconds and then pause, close your mouth and then inhale through your nose | Segment 142.5-157.5s: Creating this very gentle separation should engage very lightly some muscles on the back side of your shoulders. Now what you're going to do is maintain this position as you exhale | very exhale through mouth | very exhale through mouth then creating",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3547ad726f8927af",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 29,
+      "start_sec": 157.5,
+      "end_sec": 172.5,
+      "duration_sec": 15.0,
+      "transcript": "Exhale for about five seconds and then pause, close your mouth and then inhale through your nose silently, but letting air fall into you. If you do this right, you should feel some expansion in between your shoulder blades and spine. This is getting you that back rib cage expansion and the presence of shoulder blades that are better resting on that back rib cage.",
+      "ocr_text": "y\n~ AND THEN INHALE:",
+      "visual_description": "Representative frame contains OCR text: y\n~ AND THEN INHALE:",
+      "segment_summary": "Segment 157.5-172.5s: Exhale for about five seconds and then pause, close your mouth and then inhale through your nose silently, but letting air fall into you. If you do this right, you should feel some",
+      "topics": [
+        "then",
+        "inhale",
+        "expansion",
+        "shoulder"
+      ],
+      "keywords": [
+        "then",
+        "inhale",
+        "expansion",
+        "shoulder",
+        "blades",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9966198567999527,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 158.91666666666669,
+          "path": "data\\processed\\rag\\src_e7a2759fda05b986\\frames\\scene_025_0158916ms.jpg"
+        }
+      ],
+      "retrieval_text": "Exhale for about five seconds and then pause, close your mouth and then inhale through your nose silently, but letting air fall into you. If you do this right, you should feel some expansion in between your shoulder blades and spine. This is getting you that back rib cage expansion and the presence of shoulder blades that are better resting on that back rib cage. | y\n~ AND THEN INHALE: | Representative frame contains OCR text: y\n~ AND THEN INHALE: | Segment 157.5-172.5s: Exhale for about five seconds and then pause, close your mouth and then inhale through your nose silently, but letting air fall into you. If you do this right, you should feel some | then inhale expansion shoulder | then inhale expansion shoulder blades back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9769c395b186f51b",
+      "source_id": "src_e7a2759fda05b986",
+      "segment_index": 30,
+      "start_sec": 172.5,
+      "end_sec": 175.33333333333334,
+      "duration_sec": 2.833333333333343,
+      "transcript": "and the presence of shoulder blades that are better resting on that back rib cage.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 172.5-175.3s: and the presence of shoulder blades that are better resting on that back rib cage.",
+      "topics": [
+        "presence",
+        "shoulder",
+        "blades",
+        "better"
+      ],
+      "keywords": [
+        "presence",
+        "shoulder",
+        "blades",
+        "better",
+        "resting",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9969794764183462,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "and the presence of shoulder blades that are better resting on that back rib cage. | Segment 172.5-175.3s: and the presence of shoulder blades that are better resting on that back rib cage. | presence shoulder blades better | presence shoulder blades better resting back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+        "uri": "https://www.youtube.com/watch?v=pQkwgsOYzRM",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 30,
+    "transcript_segment_count": 37,
+    "ocr_observation_count": 5,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "sync_result": {
+    "source_id": "src_e7a2759fda05b986",
+    "assets_upserted": 29,
+    "segments_inserted": 30,
+    "segments_skipped": 0,
+    "qdrant_points_upserted": 30
+  }
+}

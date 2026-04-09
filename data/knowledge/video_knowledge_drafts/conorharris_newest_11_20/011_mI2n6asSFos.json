@@ -1,0 +1,236 @@
+{
+  "source_url": "https://www.youtube.com/shorts/mI2n6asSFos",
+  "source_title_hint": "Esta técnica secreta de liberación libera tus pies y tobillos.",
+  "primary_summary": "This video explains that common foot problems like plantar fasciitis are often due to the foot's inability to properly move through pronation and supination, and to maintain three points of contact (heel, big toe, little toe) with even pressure. It then demonstrates three specific lacrosse ball rolling techniques designed to improve foot contact and mobility, targeting different areas of the foot: the inner foot (big toe/inner heel), the transverse arch (windshield wiper motion), and the outer foot (pinky toe/outer heel). The speaker emphasizes controlled, directional rolling over mindless random rolling.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides clear explanations of foot biomechanics related to common issues like plantar fasciitis and offers specific, visually demonstrated corrective exercises with detailed execution instructions and cues.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "foot",
+      "ankle"
+    ],
+    "problem_layers": [
+      "biomechanical_dysfunction",
+      "pain",
+      "mobility_restriction"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "Plantar Fasciitis",
+    "Foot Pain",
+    "Foot Mobility",
+    "Ankle Mobility",
+    "Foot Arch",
+    "Pronation",
+    "Supination",
+    "Self-Myofascial Release",
+    "Foot Mechanics",
+    "Proprioception"
+  ],
+  "searchable_tags": [
+    "lacrosse ball",
+    "foot rolling",
+    "foot release",
+    "arch support",
+    "foot mechanics",
+    "foot stability",
+    "pain relief",
+    "self-care"
+  ],
+  "problem_statements": [
+    "Plantar fasciitis",
+    "General foot problems",
+    "Inability of the foot to properly move through pronation or supination",
+    "Difficulty maintaining three points of contact (heel, base of big toe, base of little toe) with even pressure"
+  ],
+  "habits_or_contexts": [
+    "Mindlessly rolling plantar fascia in random directions without specific intent"
+  ],
+  "key_visual_points": [
+    "3D anatomical model of the foot and ankle highlighting muscles and bones.",
+    "Visual overlays on the foot model indicating pronation (flattening of arch) and supination (raising of arch).",
+    "Visual overlays on the foot model showing the three points of contact (heel, base of big toe, base of little toe).",
+    "Demonstration of foot rolling exercises using a lacrosse ball on artificial turf.",
+    "Visual overlays (lines, circles) on the foot during demonstrations to indicate ball placement and rolling direction."
+  ],
+  "tests_mentioned": [
+    "Self-assessment of foot contact and even pressure while standing"
+  ],
+  "exercises_mentioned": [
+    "Lacrosse ball roll for inner foot (big toe and inner heel)",
+    "Lacrosse ball roll for transverse arch (windshield wiper motion)",
+    "Lacrosse ball roll for outer foot (pinky toe and outer heel)"
+  ],
+  "advice_mentioned": [
+    "Adopt a strategic approach to foot rolling for better results.",
+    "Maintain three points of contact (heel, base of big toe, base of little toe) with even pressure.",
+    "Keep the foot as relaxed as possible during rolling.",
+    "Apply a 5-6 out of 10 pressure during rolling.",
+    "Perform 15 rolls for each exercise."
+  ],
+  "warnings_or_limitations": [
+    "Mindless rolling in random directions is less effective than strategic, controlled rolling."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Foot Arch Function and Three Points of Contact",
+      "summary": "Foot problems like plantar fasciitis often stem from the foot's inability to properly move through pronation (flattening of the arch) or supination (raising of the arch). Regardless of the specific issue, maintaining three points of contact (heel, base of the big toe, and base of the little toe) with even pressure is crucial for proper foot mechanics and stability. Difficulty in achieving this indicates a potential issue with foot mobility and arch expression.",
+      "observable_signs": [
+        "Inability to feel the inside and outside of the heel bone flat on the ground with even pressure.",
+        "Inability to feel the base of the big toe and little toe with even pressure while standing without forcing it."
+      ],
+      "mechanisms": [
+        "Lack of proper foot movement through pronation and supination.",
+        "Uneven pressure distribution across the three main contact points of the foot."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "For individuals experiencing plantar fasciitis or general foot pain.",
+        "For assessing basic foot stability and arch function."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:20",
+        "00:57"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "Lacrosse Ball Roll - Inner Foot (Big Toe & Inner Heel)",
+      "summary": "A targeted lacrosse ball rolling technique to improve the ability to find and maintain contact with the inner heel and the base of the big toe, addressing issues with foot pronation and supination.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Place a lacrosse ball underneath the first metatarsal head (ball of the big toe).",
+        "Position your body directly on top of the lacrosse ball, not out in front.",
+        "Keep your foot as relaxed as possible.",
+        "Gently roll the ball down in a straight line towards the heel.",
+        "Stop rolling when the ball is about an inch or a centimeter right ahead of your heel.",
+        "Quickly roll back to the starting position (under the ball of the big toe).",
+        "Repeat this motion for approximately 15 rolls."
+      ],
+      "cues": [
+        "Maintain a slow and controlled cadence.",
+        "Apply about a 5 to 6 out of 10 pressure.",
+        "Only think about rolling down your foot, not rolling up."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "To improve contact with the inside of the heel and the base of the big toe.",
+        "To address issues with foot pronation and supination."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:11",
+        "01:26"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "Lacrosse Ball Roll - Transverse Arch (Windshield Wiper Motion)",
+      "summary": "A targeted lacrosse ball rolling technique using a windshield wiper motion to release the transverse arch and improve the ability to find and maintain mid-foot contacts.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Ground your heel firmly.",
+        "Start with the lacrosse ball underneath the first metatarsal head (ball of the big toe).",
+        "Perform a 'windshield wiper' motion, rolling the ball from the first metatarsal head to underneath the fifth toe (pinky toe).",
+        "Ensure the ball stays underneath the ball of your foot, not on the bones of the toes themselves.",
+        "Quickly roll back to the beginning position (under the ball of the big toe).",
+        "Repeat this motion for approximately 15 rolls."
+      ],
+      "cues": [
+        "Only roll from the inside to the outside of the foot, not outside to inside.",
+        "Maintain a slow and controlled cadence.",
+        "Apply about a 5 to 6 out of 10 pressure."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Rolling on the bones of the toes themselves."
+      ],
+      "when_useful": [
+        "To release tension in the transverse arch.",
+        "To improve mid-foot contacts and overall foot mobility."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:16",
+        "02:05"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "Lacrosse Ball Roll - Outer Foot (Pinky Toe & Outer Heel)",
+      "summary": "A targeted lacrosse ball rolling technique to improve the ability to find and maintain contact with the outside of the heel and the base of the pinky toe, without losing inside foot contacts.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Start with the lacrosse ball positioned just an inch or a centimeter above the outside of your heel.",
+        "Roll the ball slowly and in a controlled straight line upwards.",
+        "Stop rolling when the ball is just underneath the ball of your foot, specifically under the fifth toe (pinky toe).",
+        "Quickly roll back down to the starting position (just above the outside of the heel).",
+        "Repeat this motion for approximately 15 rolls."
+      ],
+      "cues": [
+        "Only think about rolling up your foot, not rolling down.",
+        "Maintain a slow and controlled cadence.",
+        "Apply about a 5 to 6 out of 10 pressure."
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Losing the inside foot contacts while rolling."
+      ],
+      "when_useful": [
+        "To improve contact with the outside of the heel and the base of the pinky toe.",
+        "To enhance overall foot stability and balance."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:20",
+        "02:27"
+      ]
+    },
+    {
+      "unit_type": "practical_advice",
+      "title": "Post-Rolling Foot Contact Assessment",
+      "summary": "After performing all three recommended lacrosse ball rolling techniques, individuals should notice an immediate improvement in their foot's contact with the ground and a more even distribution of pressure across the foot.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [
+        "Stand and observe if your foot feels like it has better contact with the ground.",
+        "Assess if the pressure distribution across your foot feels more even."
+      ],
+      "advice": [],
+      "timestamps": [
+        "02:53"
+      ]
+    }
+  ],
+  "model_notes": "The video provides a clear, structured approach to foot self-release, moving beyond generic rolling to specific techniques targeting different areas and functions of the foot. The use of an anatomical model and visual overlays enhances the educational value and clarity of the instructions. The explanation of pronation/supination and the three points of contact provides a good biomechanical foundation for the exercises."
+}

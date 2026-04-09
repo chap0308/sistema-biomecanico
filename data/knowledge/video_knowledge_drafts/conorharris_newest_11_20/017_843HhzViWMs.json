@@ -1,0 +1,207 @@
+{
+  "source_url": "https://www.youtube.com/shorts/843HhzViWMs",
+  "source_title_hint": "Este estiramiento corrige la postura de cabeza adelantada.",
+  "primary_summary": "The video explains that the sternocleidomastoid (SCM) muscle is often overactive in individuals with forward head posture and neck pain, contributing to both posture and compensatory breathing mechanics. It then demonstrates two variations of a gentle SCM stretch with a breathing component to help lengthen the muscle and re-educate proper breathing.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides a clear explanation of the sternocleidomastoid (SCM) muscle's role in forward head posture and its connection to breathing mechanics, supported by research. It then offers a practical, actionable corrective exercise with a progression, including visual execution details and important cues.",
+    "exclusion_reason": null,
+    "content_kind": "mixed",
+    "body_regions": [
+      "neck",
+      "head",
+      "upper back"
+    ],
+    "problem_layers": [
+      "muscular",
+      "postural",
+      "respiratory"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "forward head posture",
+    "sternocleidomastoid",
+    "SCM muscle",
+    "neck pain",
+    "posture correction",
+    "breathing mechanics",
+    "muscle release",
+    "stretching"
+  ],
+  "searchable_tags": [
+    "SCM stretch",
+    "neck stretch",
+    "postural correction",
+    "breathing exercise",
+    "self-release",
+    "cervical spine",
+    "head posture",
+    "muscle imbalance"
+  ],
+  "problem_statements": [
+    "Forward head posture",
+    "Chronic neck pain",
+    "Overactive sternocleidomastoid (SCM) muscle",
+    "Compensatory breathing patterns due to forward head posture"
+  ],
+  "habits_or_contexts": [
+    "Individuals with forward head posture",
+    "Individuals experiencing neck pain",
+    "Individuals with compensatory breathing mechanics"
+  ],
+  "key_visual_points": [
+    "Animated skeleton highlighting the sternocleidomastoid (SCM) muscle and its attachments.",
+    "Man demonstrating exaggerated forward head posture.",
+    "Man using a skeleton model to show SCM attachment points on the mastoid process and collarbone.",
+    "Man demonstrating the seated SCM stretch by gently separating the muscle's attachment points with his fingers.",
+    "Man demonstrating the supine SCM stretch with his head unsupported off a table, applying the same hand technique."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Seated SCM elongation with breath",
+    "Supine SCM elongation with breath"
+  ],
+  "advice_mentioned": [
+    "Take a strategic approach to releasing the SCM, rather than just traditional stretching or massage.",
+    "Create length between the SCM attachment sites.",
+    "Add a subtle breath component to the stretch.",
+    "Breathe in and out through the nose during the stretch.",
+    "Focus on a mild stretch; more stretch is not better.",
+    "Relax the muscle and attachment sites as much as possible with each subsequent breath."
+  ],
+  "warnings_or_limitations": [
+    "The supine variation might be too much too soon for some individuals.",
+    "Do not force the stretch; it should be mild.",
+    "Avoid turning the head or neck during the stretch."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Sternocleidomastoid (SCM) Role in Forward Head Posture and Breathing",
+      "summary": "The sternocleidomastoid (SCM) muscle is frequently overactive in individuals with forward head posture and neck pain. Due to its attachment points on the mastoid process, clavicle, and sternum, it has significant leverage to pull the head and neck forward. When the head is forward, the SCM also acts as a compensatory muscle for inhalation, impacting proper breathing mechanics.",
+      "observable_signs": [
+        "Forward head posture",
+        "Neck pain"
+      ],
+      "mechanisms": [
+        "Overactive SCM pulls the head and neck forward.",
+        "SCM acts as a compensatory muscle of inhalation when the head and neck are forward."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Understanding the muscular contributions to forward head posture.",
+        "Understanding the link between posture and breathing compensation."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00",
+        "00:06",
+        "00:10",
+        "00:19",
+        "00:24",
+        "00:48"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "Seated Sternocleidomastoid (SCM) Elongation with Breath",
+      "summary": "A gentle seated stretch designed to create length in the SCM muscle and re-educate breathing patterns by encouraging relaxation of the SCM during respiration.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Gentle separation of SCM attachment points to create length.",
+        "Incorporation of nasal breathing to reduce reliance on SCM as a compensatory inhalation muscle."
+      ],
+      "execution_steps": [
+        "Sit upright in a chair.",
+        "Place two fingers of the left hand on the inside of the right collarbone, slightly above it, and press down gently.",
+        "Place two fingers of the right hand on the mastoid process (bone just behind the ear) and push up gently.",
+        "Gently separate the attachment points by pushing down with the left hand and pushing up with the right hand.",
+        "Maintain a mild stretch without turning the head or neck.",
+        "Breathe in and out through the nose in this position."
+      ],
+      "cues": [
+        "\"Press down a little bit\" (on collarbone)",
+        "\"Separate these attachment points away from each other\"",
+        "\"Very gently pushing down with your left and pushing up with your right\"",
+        "\"This should not turn your head or neck in any way\"",
+        "\"You just want to create length and breathe through this\""
+      ],
+      "breathing_cues": [
+        "\"Breathe in through your nose, out through your nose in this position.\"",
+        "\"Teaching you how to breathe without relying on this muscle as a compensation.\""
+      ],
+      "errors_to_avoid": [
+        "Turning the head or neck.",
+        "Applying excessive pressure or stretch (more stretch is not better)."
+      ],
+      "when_useful": [
+        "To address forward head posture.",
+        "To alleviate neck pain associated with SCM tightness.",
+        "To improve breathing mechanics by reducing SCM compensation."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:00",
+        "01:07",
+        "01:31",
+        "01:52"
+      ]
+    },
+    {
+      "unit_type": "mobility_drill",
+      "title": "Supine Sternocleidomastoid (SCM) Elongation with Breath (Progression)",
+      "summary": "A progressive variation of the SCM stretch performed lying supine with the head unsupported, utilizing gravity to enhance the stretch while maintaining focus on controlled breathing.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Gravity assists in lengthening the SCM due to the unsupported head position.",
+        "Continued focus on breathing into the stretch to relax the muscle."
+      ],
+      "execution_steps": [
+        "Lie supine on a bed or table with the head unsupported and hanging off the edge.",
+        "Place two fingers of one hand on the inside of the opposite collarbone, slightly above it, and press down gently.",
+        "Place two fingers of the other hand on the mastoid process (bone just behind the ear) and push up gently.",
+        "Gently separate the attachment sites, thinking about pulling them subtly away from each other.",
+        "Breathe into the stretch, trying to relax the muscle and attachment sites as much as possible with each subsequent breath."
+      ],
+      "cues": [
+        "\"Separate and think about pulling these attachment sites subtly away from each other.\"",
+        "\"Breathing into it and you're trying to relax the muscle and the attachment sites as much as you can with each subsequent breath.\""
+      ],
+      "breathing_cues": [
+        "\"Breathing into it and you're trying to relax the muscle and the attachment sites as much as you can with each subsequent breath.\""
+      ],
+      "errors_to_avoid": [
+        "Progressing to this variation too soon if the seated version is not mastered.",
+        "Forcing the stretch or experiencing discomfort."
+      ],
+      "when_useful": [
+        "As a progression for individuals who have mastered the seated SCM stretch.",
+        "To achieve a deeper stretch and further improve SCM length and breathing patterns."
+      ],
+      "when_not_useful": [
+        "If it causes too much discomfort or is too intense initially."
+      ],
+      "retest": [],
+      "advice": [
+        "Progress to this variation only after mastering the first progression."
+      ],
+      "timestamps": [
+        "02:16",
+        "02:38"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively combines anatomical explanation with practical, progressive exercises. The emphasis on subtle stretching and breathing is a key educational point. The visual aids (skeleton, animated muscle highlights) enhance understanding."
+}

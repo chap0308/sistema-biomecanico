@@ -1,0 +1,208 @@
+{
+  "source_url": "https://www.youtube.com/shorts/d7fXiLxQFyc",
+  "source_title_hint": "El ejercicio postural definitivo",
+  "primary_summary": "This video explains common mistakes and provides a corrected technique for the face pull exercise, emphasizing proper scapular movement and thoracic spine positioning for improved posture. It highlights that over-retracting shoulders and performing the exercise standing can be counterproductive, and instead recommends a seated, supported variation with specific cues for optimal muscle activation and scapular mechanics.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video provides detailed biomechanical explanations for common errors in a popular exercise (face pull) and offers a corrected, optimized technique with clear visual demonstrations and cues. It addresses posture correction and muscle activation effectively.",
+    "exclusion_reason": null,
+    "content_kind": "exercise_optimization",
+    "body_regions": [
+      "shoulders",
+      "upper back",
+      "thoracic spine"
+    ],
+    "problem_layers": [
+      "biomechanical",
+      "muscular",
+      "postural"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "face pull",
+    "posture correction",
+    "rounded shoulders",
+    "scapular mechanics",
+    "thoracic spine mobility",
+    "upper back strength",
+    "rear deltoid",
+    "mid trapezius",
+    "exercise technique"
+  ],
+  "searchable_tags": [
+    "facepull",
+    "posture",
+    "shoulders",
+    "upperback",
+    "scapula",
+    "thoracicextension",
+    "reardelts",
+    "midtraps",
+    "exercise",
+    "technique"
+  ],
+  "problem_statements": [
+    "Incorrect face pull technique leading to suboptimal results for posture.",
+    "Overemphasis on squeezing shoulders 'back and down' during face pulls.",
+    "Rounded forward shoulders and poor thoracic spine posture.",
+    "Standing face pulls causing compensatory arching of the back."
+  ],
+  "habits_or_contexts": [
+    "Gym training for upper back and shoulder development.",
+    "Individuals seeking to improve posture, especially rounded shoulders.",
+    "Strength training routines involving cable exercises."
+  ],
+  "key_visual_points": [
+    "Animated muscle overlay showing rear delts, teres major, and mid traps.",
+    "Skeleton model demonstrating scapular movement on the ribcage.",
+    "Comparison of incorrect (standing, over-retracted) and correct (seated, supported, controlled protraction/retraction) face pull techniques.",
+    "Visual cues for elbow leading and arm path during the exercise."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "face pull"
+  ],
+  "advice_mentioned": [
+    "Use a seated position with external stability (e.g., bench support) for face pulls.",
+    "Allow for gentle shoulder protraction before pulling.",
+    "Lead the pull with the elbows.",
+    "Focus on the elbow path rather than squeezing shoulders back and down.",
+    "Keep forearms parallel to the floor for optimal rear delt and mid trap activation."
+  ],
+  "warnings_or_limitations": [
+    "Over-emphasizing squeezing shoulders back and down keeps muscles in a shortened position, limiting full range of motion and proper scapular movement.",
+    "Performing face pulls standing with significant load can lead to compensatory over-arching of the back, negating postural benefits."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "deficiency_pattern",
+      "title": "Common Incorrect Face Pull Technique and Misconception",
+      "summary": "Many people perform face pulls incorrectly by overemphasizing squeezing the shoulders 'back and down' to fix rounded forward shoulders. This approach is based on a misunderstanding of proper scapular mechanics and thoracic spine posture.",
+      "observable_signs": [
+        "Standing position during face pull.",
+        "Excessive retraction and depression of the shoulder blades.",
+        "Overly extended thoracic spine or compensatory arching of the lower back."
+      ],
+      "mechanisms": [
+        "The belief that fixing rounded shoulders requires maximal retraction and depression.",
+        "Standing position with heavy load forces the body to counteract forward pull by arching the back, leading to compensatory spinal extension."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Squeezing shoulders excessively back and down.",
+        "Performing face pulls standing with heavy weight without external support."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:05",
+        "0:16",
+        "1:31"
+      ]
+    },
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Scapular Movement and Thoracic Spine Relationship",
+      "summary": "The scapula (shoulder blade) is a naturally concave and rounded structure that needs to sit on a slightly rounded thoracic spine (upper back) to allow for proper gliding and smooth movement. Forcing excessive extension or retraction can hinder this natural movement.",
+      "observable_signs": [],
+      "mechanisms": [
+        "The scapula is designed to glide on the ribcage, which has a natural slight kyphotic (rounded) curve in the thoracic region.",
+        "Proper scapular movement (protraction and retraction) requires the ability to move through a full range of motion, not just a shortened, retracted position.",
+        "Muscles of the upper back and shoulders (rear delts, teres major, mid traps) contribute to scapular movement and positioning."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Understanding optimal shoulder and upper back function.",
+        "Correcting postural imbalances.",
+        "Optimizing exercise technique for scapular health."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:28",
+        "0:44",
+        "0:56",
+        "1:11"
+      ]
+    },
+    {
+      "unit_type": "technique_correction",
+      "title": "Optimized Seated Face Pull Technique",
+      "summary": "To effectively target the upper back and improve posture, perform face pulls seated with external stability (e.g., a bench). This allows for a focus on proper scapular protraction and retraction, leading with the elbows, without compensatory spinal movements.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Set up a bench with back support in front of a cable machine.",
+        "Sit on the bench, leaning against the back support for chest stability.",
+        "Adjust the cable machine height to be at shoulder level.",
+        "Allow shoulders to gently protract (separate away from the spine) at the start of the movement, without depressing the sternum.",
+        "Pull the rope towards your face, leading the movement with your elbows.",
+        "Focus on the elbows moving back, allowing natural scapular retraction as a byproduct.",
+        "Control the eccentric phase, allowing shoulders to gently protract again."
+      ],
+      "cues": [
+        "\"Lean against the bench for support.\"",
+        "\"Allow gentle protraction.\"",
+        "\"Lead with your elbows.\"",
+        "\"Don't think about squeezing shoulders down and back.\""
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Fighting the weight by arching the back.",
+        "Overly squeezing shoulders back and down.",
+        "Ignoring the protraction phase."
+      ],
+      "when_useful": [
+        "Improving upper back strength and posture.",
+        "Correcting rounded shoulders.",
+        "Maximizing activation of rear delts and mid traps."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "1:51"
+      ]
+    },
+    {
+      "unit_type": "technique_correction",
+      "title": "Optimizing Arm Path for Rear Delt and Mid Trap Activation",
+      "summary": "For increased activation of the rear deltoids and mid trapezius during face pulls, ensure the forearm is parallel to the floor throughout the movement, avoiding excessive external rotation of the shoulder.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "During the face pull, maintain a forearm position that is parallel to the floor.",
+        "Avoid externally rotating the shoulder so that the forearm points upwards."
+      ],
+      "cues": [
+        "\"Drop that forearm down to be more parallel with the floor.\""
+      ],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Targeting specific muscles (rear delts, mid traps) more effectively.",
+        "Enhancing shoulder health and stability."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "2:32"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively uses a skeleton model and animated muscle overlays to explain biomechanical concepts, which significantly enhances its educational value. The comparison of incorrect vs. correct technique is clear and actionable."
+}

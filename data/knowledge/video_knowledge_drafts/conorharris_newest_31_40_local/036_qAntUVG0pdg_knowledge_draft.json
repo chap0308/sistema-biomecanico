@@ -1,0 +1,347 @@
+{
+  "source_url": "https://www.youtube.com/shorts/qAntUVG0pdg",
+  "source_title_hint": "95% Are Missing This In Their Hip Mobility Work",
+  "analysis_origin": "local_level1_plus_hf_error_fallback:openai/gpt-oss-120b",
+  "analysis_provider": "local_fallback",
+  "analysis_quality": "fallback",
+  "is_active": true,
+  "supersedes_draft_id": null,
+  "primary_summary": "95% Are Missing This In Their Hip Mobility Work explains a movement problem and demonstrates corrective actions such as Most people think they need to do exercises like this to improve their hip mobility, or this, or like this.. Most people think they need to do exercises like this to improve their hip mobility, or this, or like this.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Segments contain structured transcript, OCR, and retrieval-ready evidence.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "foot",
+      "hip"
+    ],
+    "problem_layers": [
+      "mobility_restriction"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "foot",
+    "hip",
+    "like",
+    "most",
+    "people",
+    "think",
+    "mobility",
+    "socket",
+    "action",
+    "femur",
+    "rotating",
+    "pelvis"
+  ],
+  "searchable_tags": [
+    "pelvis",
+    "turning",
+    "when",
+    "like",
+    "most",
+    "people",
+    "think",
+    "side",
+    "train",
+    "away",
+    "they",
+    "need"
+  ],
+  "problem_statements": [
+    "Now, the problem with only doing hip mobility drills like that is it's training primarily the action of the femur or the thigh bone rotating within the hip socket or on the hip socket.",
+    "Now, the problem with only doing hip mobility drills like that is it's training primarily the action of the femur or the thigh bone rotating within the hip socket or on the hip socket."
+  ],
+  "habits_or_contexts": [
+    "Most people think they need to do exercises like this to improve their hip mobility, or this, or like this.",
+    "Most people think they need to do exercises like this to improve their hip mobility, or this, or like this.",
+    "Most people think they need to do exercises like this to improve their hip mobility, or this, or like this."
+  ],
+  "key_visual_points": [
+    "Representative frame at 1.9s",
+    "Representative frame at 4.3s",
+    "Representative frame at 5.5s",
+    "OCR near 21.1s: BECAUSE",
+    "Representative frame at 44.6s",
+    "Representative frame at 49.5s",
+    "OCR near 51.4s: . ROTATION",
+    "Representative frame at 58.8s",
+    "OCR near 61.6s: | TURNING THE\n\nh"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Most people think they need to do exercises like this to improve their hip mobility, or this, or like this.",
+    "Now, the problem with only doing hip mobility drills like that is it's training primarily the action of the femur or",
+    "But in real life with every single step that we've taken when we walk and even run, this action is occurring where the",
+    "Or a kickstand hinge which will get you really deep into that hip socket."
+  ],
+  "advice_mentioned": [],
+  "warnings_or_limitations": [
+    "Though if you're not training this then you're missing out on a huge component of how hip mobility is expressed when the foot is fixated to the ground and interacting with it."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 0.0-3.8s: Most people think they need to do exercises like this to improve their hip mobil",
+      "summary": "Segment 0.0-3.8s: Most people think they need to do exercises like this to improve their hip mobility, or this, or like this.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Most people think they need to do exercises like this to improve their hip mobility, or this, or like this"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:00",
+        "00:03"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 3.8-4.9s: Most people think they need to do exercises like this to improve their hip mobil",
+      "summary": "Segment 3.8-4.9s: Most people think they need to do exercises like this to improve their hip mobility, or this, or like this.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Most people think they need to do exercises like this to improve their hip mobility, or this, or like this"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:03",
+        "00:04"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 4.9-6.1s: Most people think they need to do exercises like this to improve their hip mobil",
+      "summary": "Segment 4.9-6.1s: Most people think they need to do exercises like this to improve their hip mobility, or this, or like this. Now, the problem with only doing hip mobility drills like that is it's t",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Most people think they need to do exercises like this to improve their hip mobility, or this, or like this",
+        "the problem with only doing hip mobility drills like that is it's training primarily the action of the femur or the thigh bone rotating within the hip socket or on the hip socket"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:04",
+        "00:06"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 6.1-21.1s: Now, the problem with only doing hip mobility drills like that is it's training",
+      "summary": "Segment 6.1-21.1s: Now, the problem with only doing hip mobility drills like that is it's training primarily the action of the femur or the thigh bone rotating within the hip socket or on the hip soc",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "the problem with only doing hip mobility drills like that is it's training primarily the action of the femur or the thigh bone rotating within the hip socket or on the hip socket. But in real life with every single step that we've taken when we walk and even run, this action is occurring where the pelvis is rotating over or on the femur because the foot is fixated to the ground and the pelvis is moving on it"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:06",
+        "00:21"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 21.1-36.1s: But in real life with every single step that we've taken when we walk and even",
+      "summary": "Segment 21.1-36.1s: But in real life with every single step that we've taken when we walk and even run, this action is occurring where the pelvis is rotating over or on the femur because the foot is f",
+      "observable_signs": [
+        "BECAUSE"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "But in real life with every single step that we've taken when we walk and even run, this action is occurring where the pelvis is rotating over or on the femur because the foot is fixated to the ground and the pelvis is moving on it. Though if you're not training this",
+        "you're missing out on a huge component of how hip mobility is expressed when the foot is fixated to the ground and interacting with it. So when we train the mechanics of the hip joint internally rotating and the pelvis turning towards that side and the space closing off, we want to do it through things such as a front foot elevated split squat with an emphasis on slightly turning the pelvis to that side on the way down"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Though if you're not training this then you're missing out on a huge component of how hip mobility is expressed when the foot is fixated to the ground and interacting with it."
+      ],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:21",
+        "00:36"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 36.1-41.6s: So when we train the mechanics of the hip joint internally rotating and the pe",
+      "summary": "Segment 36.1-41.6s: So when we train the mechanics of the hip joint internally rotating and the pelvis turning towards that side and the space closing off, we want to do it through things such as a fr",
+      "observable_signs": [],
+      "mechanisms": [
+        "So when we train the mechanics of the hip joint internally rotating and the pelvis turning towards that side and the space closing off, we want to do it through things such as a front foot elevated split squat with an emphasis on slightly turning the pelvis to that side on the way down."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:36",
+        "00:41"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 41.6-47.6s: So when we train the mechanics of the hip joint internally rotating and the pe",
+      "summary": "Segment 41.6-47.6s: So when we train the mechanics of the hip joint internally rotating and the pelvis turning towards that side and the space closing off, we want to do it through things such as a fr",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "So when we train the mechanics of the hip joint internally rotating and the pelvis turning towards that side and the space closing off, we want to do it through things such as a front foot elevated split squat with an emphasis on slightly turning the pelvis to that side on the way down. Or a kickstand hinge which will get you really deep into that hip socket"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:41",
+        "00:47"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Corrective Exercise: 47.6-51.4s: Or a kickstand hinge which will get you really deep into that hip socket. And ",
+      "summary": "Segment 47.6-51.4s: Or a kickstand hinge which will get you really deep into that hip socket. And when we train the inverse or hip joint external rotation of the pelvis turning away from that side, a",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Or a kickstand hinge which will get you really deep into that hip socket. And when we train the inverse or hip joint external rotation of the pelvis turning away from that side, a split squat but with the emphasis of turning the pelvis slightly away from the stance leg on the way down"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:47",
+        "00:51"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 51.4-56.1s: And when we train the inverse or hip joint external rotation of the pelvis tur",
+      "summary": "Segment 51.4-56.1s: And when we train the inverse or hip joint external rotation of the pelvis turning away from that side, a split squat but with the emphasis of turning the pelvis slightly away from",
+      "observable_signs": [
+        ". ROTATION"
+      ],
+      "mechanisms": [
+        "And when we train the inverse or hip joint external rotation of the pelvis turning away from that side, a split squat but with the emphasis of turning the pelvis slightly away from the stance leg on the way down."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:51",
+        "00:56"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 56.1-61.6s: And when we train the inverse or hip joint external rotation of the pelvis tur",
+      "summary": "Segment 56.1-61.6s: And when we train the inverse or hip joint external rotation of the pelvis turning away from that side, a split squat but with the emphasis of turning the pelvis slightly away from",
+      "observable_signs": [],
+      "mechanisms": [
+        "And when we train the inverse or hip joint external rotation of the pelvis turning away from that side, a split squat but with the emphasis of turning the pelvis slightly away from the stance leg on the way down. Or even a cable rope lift with the emphasis of turning the pelvis away from that side."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "00:56",
+        "01:01"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Educational Point: 61.6-66.5s: Or even a cable rope lift with the emphasis of turning the pelvis away from th",
+      "summary": "Segment 61.6-66.5s: Or even a cable rope lift with the emphasis of turning the pelvis away from that side.",
+      "observable_signs": [
+        "| TURNING THE\n\nh"
+      ],
+      "mechanisms": [
+        "Or even a cable rope lift with the emphasis of turning the pelvis away from that side."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "01:01",
+        "01:06"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 11,
+    "transcript_segment_count": 8,
+    "ocr_observation_count": 3,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 11,
+    "asset_count": 13
+  }
+}

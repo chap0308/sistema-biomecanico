@@ -1,0 +1,1158 @@
+{
+  "source": {
+    "source_id": "src_6c8c9412ef27e8c9",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/_YTvkv5ftIw",
+    "canonical_uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+    "title": "Why Your Big Toe Unlocks Glute Activation",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [],
+    "duration_sec": 91.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-07T00:18:12.072475Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_db27f767f2b2adf5",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 91.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_c288eb9db906e1ab",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 91.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_23a2608af9e05a40",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 91.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_8a586f5e0e44eae0",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_001_0000916ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 0.9166666666666666,
+      "end_sec": 0.9166666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1da9604537e6dfd5",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_002_0003300ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 3.3,
+      "end_sec": 3.3,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7d65f0bb8ad551af",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_003_0006833ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 6.833333333333334,
+      "end_sec": 6.833333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_2188d9c3c3209dab",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_004_0010750ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 10.75,
+      "end_sec": 10.75,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_0e0e4ff6a9599dd1",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_005_0014583ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 14.583333333333332,
+      "end_sec": 14.583333333333332,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3f820783ae1c0869",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_006_0019166ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 19.166666666666664,
+      "end_sec": 19.166666666666664,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_164fa7e79a22ef43",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_007_0023066ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 23.066666666666666,
+      "end_sec": 23.066666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_93a167fd570f39ad",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_008_0025300ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 25.3,
+      "end_sec": 25.3,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_465db2be275097d1",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_009_0027866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 27.866666666666667,
+      "end_sec": 27.866666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5e16a232074dc06d",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_010_0038600ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 38.6,
+      "end_sec": 38.6,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_2c936202349ee539",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_011_0050100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 50.1,
+      "end_sec": 50.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_8a7de624b5c74075",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_012_0054250ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 54.25,
+      "end_sec": 54.25,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_621ffa5423038d49",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_013_0059133ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 59.13333333333333,
+      "end_sec": 59.13333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_d5180ac5f2e8ebdc",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_014_0064166ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 64.16666666666666,
+      "end_sec": 64.16666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5af5d289ed7b220d",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_015_0067516ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 67.51666666666667,
+      "end_sec": 67.51666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c9105773e2cd01ec",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_016_0075000ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 75.0,
+      "end_sec": 75.0,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_860d67a8bbe9bf2e",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_017_0085900ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 85.9,
+      "end_sec": 85.9,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b3ab4092dd50e605",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 91.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_c20b1dfcc0c7433c",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 1.8333333333333333,
+      "duration_sec": 1.8333333333333333,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "ABILITY TO",
+      "visual_description": "Representative frame contains OCR text: ABILITY TO",
+      "segment_summary": "Segment 0.0-1.8s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ability",
+        "ground",
+        "most",
+        "extension"
+      ],
+      "keywords": [
+        "ability",
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 0.9166666666666666,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_001_0000916ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | ABILITY TO | Representative frame contains OCR text: ABILITY TO | Segment 0.0-1.8s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ability ground most extension | ability ground most extension when we're",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_dd5608ef62c86c56",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 2,
+      "start_sec": 1.8333333333333333,
+      "end_sec": 4.766666666666667,
+      "duration_sec": 2.9333333333333336,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "IS/PROBABLY,",
+      "visual_description": "Representative frame contains OCR text: IS/PROBABLY,",
+      "segment_summary": "Segment 1.8-4.8s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 3.3,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_002_0003300ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | IS/PROBABLY, | Representative frame contains OCR text: IS/PROBABLY, | Segment 1.8-4.8s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_52145c7584de0627",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 3,
+      "start_sec": 4.766666666666667,
+      "end_sec": 8.9,
+      "duration_sec": 4.133333333333334,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 6.8s.",
+      "segment_summary": "Segment 4.8-8.9s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 6.833333333333334,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_003_0006833ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | Representative frame sampled at 6.8s. | Segment 4.8-8.9s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_d5eb253b420aa030",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 4,
+      "start_sec": 8.9,
+      "end_sec": 12.6,
+      "duration_sec": 3.6999999999999993,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 10.8s.",
+      "segment_summary": "Segment 8.9-12.6s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 10.75,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_004_0010750ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | Representative frame sampled at 10.8s. | Segment 8.9-12.6s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9bb1271d2452a34f",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 5,
+      "start_sec": 12.6,
+      "end_sec": 16.566666666666666,
+      "duration_sec": 3.966666666666667,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 14.6s.",
+      "segment_summary": "Segment 12.6-16.6s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 14.583333333333332,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_005_0014583ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | Representative frame sampled at 14.6s. | Segment 12.6-16.6s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f35f1a0d294016e1",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 6,
+      "start_sec": 16.566666666666666,
+      "end_sec": 21.766666666666666,
+      "duration_sec": 5.199999999999999,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 19.2s.",
+      "segment_summary": "Segment 16.6-21.8s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 19.166666666666664,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_006_0019166ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | Representative frame sampled at 19.2s. | Segment 16.6-21.8s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e4adba5496ac848f",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 7,
+      "start_sec": 21.766666666666666,
+      "end_sec": 24.366666666666667,
+      "duration_sec": 2.6000000000000014,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 23.1s.",
+      "segment_summary": "Segment 21.8-24.4s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 23.066666666666666,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_007_0023066ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | Representative frame sampled at 23.1s. | Segment 21.8-24.4s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_ee7e186da59af582",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 8,
+      "start_sec": 24.366666666666667,
+      "end_sec": 26.233333333333334,
+      "duration_sec": 1.8666666666666671,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "THE'GROUND\n\nvam",
+      "visual_description": "Representative frame contains OCR text: THE'GROUND\n\nvam",
+      "segment_summary": "Segment 24.4-26.2s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 25.3,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_008_0025300ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | THE'GROUND\n\nvam | Representative frame contains OCR text: THE'GROUND\n\nvam | Segment 24.4-26.2s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f0d9539e49143fca",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 9,
+      "start_sec": 26.233333333333334,
+      "end_sec": 29.5,
+      "duration_sec": 3.2666666666666657,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 27.9s.",
+      "segment_summary": "Segment 26.2-29.5s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "most",
+        "extension",
+        "when"
+      ],
+      "keywords": [
+        "ground",
+        "most",
+        "extension",
+        "when",
+        "we're",
+        "toe's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844091692939401,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 27.866666666666667,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_009_0027866ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg | Representative frame sampled at 27.9s. | Segment 26.2-29.5s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground most extension when | ground most extension when we're toe's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_25053d9eccd585bc",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 10,
+      "start_sec": 29.5,
+      "end_sec": 44.5,
+      "duration_sec": 15.0,
+      "transcript": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg So what we're trying to say here is that there's an inherent important connection between this part of your toe connecting with the ground and you being able to properly use your glutes and produce force You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 38.6s.",
+      "segment_summary": "Segment 29.5-44.5s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw",
+      "topics": [
+        "ground",
+        "when",
+        "we're",
+        "properly"
+      ],
+      "keywords": [
+        "ground",
+        "when",
+        "we're",
+        "properly",
+        "most",
+        "people"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9881682591512799,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 38.6,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_010_0038600ms.jpg"
+        }
+      ],
+      "retrieval_text": "Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's two main things we need to understand for this the first is that the glute max muscle primarily creates hip extension or it's straightens out our hips the second is that hip extension is cute when we're moving through the world in the gate cycle when our big toe makes contact with the ground and we're going to pull our body weight over that leg So what we're trying to say here is that there's an inherent important connection between this part of your toe connecting with the ground and you being able to properly use your glutes and produce force You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats | Representative frame sampled at 38.6s. | Segment 29.5-44.5s: Your big toe's ability to properly connect with the ground is probably the most single underrated element of glued activation that most people aren't aware of here's why there's tw | ground when we're properly | ground when we're properly most people",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_d91410be42760af4",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 11,
+      "start_sec": 44.5,
+      "end_sec": 47.7,
+      "duration_sec": 3.200000000000003,
+      "transcript": "You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 44.5-47.7s: You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected w",
+      "topics": [
+        "pain",
+        "exercises",
+        "squats",
+        "oftentimes"
+      ],
+      "keywords": [
+        "pain",
+        "exercises",
+        "squats",
+        "oftentimes",
+        "people",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9900478040799499,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats | Segment 44.5-47.7s: You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected w | pain exercises squats oftentimes | pain exercises squats oftentimes people back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_702339afbc1cc683",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 12,
+      "start_sec": 47.7,
+      "end_sec": 52.5,
+      "duration_sec": 4.799999999999997,
+      "transcript": "You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats",
+      "ocr_text": "a GA a\n\nCONNECTED",
+      "visual_description": "Representative frame contains OCR text: a GA a\n\nCONNECTED",
+      "segment_summary": "Segment 47.7-52.5s: You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected w",
+      "topics": [
+        "pain",
+        "exercises",
+        "connected",
+        "squats"
+      ],
+      "keywords": [
+        "pain",
+        "exercises",
+        "connected",
+        "squats",
+        "oftentimes",
+        "people"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9900478040799499,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 50.1,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_011_0050100ms.jpg"
+        }
+      ],
+      "retrieval_text": "You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats | a GA a\n\nCONNECTED | Representative frame contains OCR text: a GA a\n\nCONNECTED | Segment 47.7-52.5s: You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected w | pain exercises connected squats | pain exercises connected squats oftentimes people",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3bbb35bc1e0a8de2",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 13,
+      "start_sec": 52.5,
+      "end_sec": 56.0,
+      "duration_sec": 3.5,
+      "transcript": "You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be highly effective",
+      "ocr_text": "LIKESQUATS",
+      "visual_description": "Representative frame contains OCR text: LIKESQUATS",
+      "segment_summary": "Segment 52.5-56.0s: You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected w",
+      "topics": [
+        "pain",
+        "exercises",
+        "like",
+        "squats"
+      ],
+      "keywords": [
+        "pain",
+        "exercises",
+        "like",
+        "squats",
+        "wedge",
+        "oftentimes"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9189770254306495,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 54.25,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_012_0054250ms.jpg"
+        }
+      ],
+      "retrieval_text": "You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected with the floor, especially when you see them do exercises like squats or split squats A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be highly effective | LIKESQUATS | Representative frame contains OCR text: LIKESQUATS | Segment 52.5-56.0s: You oftentimes see what people that have low back pain or knee pain during exercises they're just throughout the day they have a hard time getting this big toe down and connected w | pain exercises like squats | pain exercises like squats wedge oftentimes",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_98024ca74e749334",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 14,
+      "start_sec": 56.0,
+      "end_sec": 62.266666666666666,
+      "duration_sec": 6.266666666666666,
+      "transcript": "A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be highly effective",
+      "ocr_text": "8\nmyo\n\nTOBETTER\n\nSgn",
+      "visual_description": "Representative frame contains OCR text: 8\nmyo\n\nTOBETTER\n\nSgn",
+      "segment_summary": "Segment 56.0-62.3s: A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be high",
+      "topics": [
+        "wedge",
+        "really",
+        "easy",
+        "work"
+      ],
+      "keywords": [
+        "wedge",
+        "really",
+        "easy",
+        "work",
+        "reference",
+        "better"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8479062467813492,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 59.13333333333333,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_013_0059133ms.jpg"
+        }
+      ],
+      "retrieval_text": "A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be highly effective | 8\nmyo\n\nTOBETTER\n\nSgn | Representative frame contains OCR text: 8\nmyo\n\nTOBETTER\n\nSgn | Segment 56.0-62.3s: A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be high | wedge really easy work | wedge really easy work reference better",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0d97aac69cae64f2",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 15,
+      "start_sec": 62.266666666666666,
+      "end_sec": 66.06666666666666,
+      "duration_sec": 3.799999999999997,
+      "transcript": "A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be highly effective Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients",
+      "ocr_text": "~ MOBILITY",
+      "visual_description": "Representative frame contains OCR text: ~ MOBILITY",
+      "segment_summary": "Segment 62.3-66.1s: A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be high",
+      "topics": [
+        "wedge",
+        "really",
+        "better",
+        "ground"
+      ],
+      "keywords": [
+        "wedge",
+        "really",
+        "better",
+        "ground",
+        "mobility",
+        "little"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8479062467813492,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 64.16666666666666,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_014_0064166ms.jpg"
+        }
+      ],
+      "retrieval_text": "A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be highly effective Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients | ~ MOBILITY | Representative frame contains OCR text: ~ MOBILITY | Segment 62.3-66.1s: A really easy way to work on this is to add a reference for the big toe to better properly connect with the ground like a wedge adding this wedge to your ankle mobility can be high | wedge really better ground | wedge really better ground mobility little",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_cc88bdbc3d466d84",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 16,
+      "start_sec": 66.06666666666666,
+      "end_sec": 68.96666666666667,
+      "duration_sec": 2.9000000000000057,
+      "transcript": "Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients",
+      "ocr_text": "PAPER pone\n&",
+      "visual_description": "Representative frame contains OCR text: PAPER pone\n&",
+      "segment_summary": "Segment 66.1-69.0s: Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hing",
+      "topics": [
+        "little",
+        "paper",
+        "using",
+        "wedge"
+      ],
+      "keywords": [
+        "little",
+        "paper",
+        "using",
+        "wedge",
+        "setup",
+        "even"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8479062467813492,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 67.51666666666667,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_015_0067516ms.jpg"
+        }
+      ],
+      "retrieval_text": "Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients | PAPER pone\n& | Representative frame contains OCR text: PAPER pone\n& | Segment 66.1-69.0s: Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hing | little paper using wedge | little paper using wedge setup even",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5daaafe400d13f3c",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 17,
+      "start_sec": 68.96666666666667,
+      "end_sec": 81.03333333333333,
+      "duration_sec": 12.066666666666663,
+      "transcript": "Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 75.0s.",
+      "segment_summary": "Segment 69.0-81.0s: Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hing",
+      "topics": [
+        "little",
+        "using",
+        "wedge",
+        "setup"
+      ],
+      "keywords": [
+        "little",
+        "using",
+        "wedge",
+        "setup",
+        "even",
+        "folded"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8479062467813492,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 75.0,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_016_0075000ms.jpg"
+        }
+      ],
+      "retrieval_text": "Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients | Representative frame sampled at 75.0s. | Segment 69.0-81.0s: Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hing | little using wedge setup | little using wedge setup even folded",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_31ecfb55e25dd814",
+      "source_id": "src_6c8c9412ef27e8c9",
+      "segment_index": 18,
+      "start_sec": 81.03333333333333,
+      "end_sec": 90.76666666666667,
+      "duration_sec": 9.733333333333334,
+      "transcript": "Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients with knee and low back pain to help them connect that big toe to the ground as they do squats",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 85.9s.",
+      "segment_summary": "Segment 81.0-90.8s: Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hing",
+      "topics": [
+        "little",
+        "using",
+        "wedge",
+        "setup"
+      ],
+      "keywords": [
+        "little",
+        "using",
+        "wedge",
+        "setup",
+        "ground",
+        "even"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9197539361193776,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 85.9,
+          "path": "data\\processed\\rag\\src_6c8c9412ef27e8c9\\frames\\scene_017_0085900ms.jpg"
+        }
+      ],
+      "retrieval_text": "Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hinge focus to really feel more glutes and connects my big toe with the ground and finally I've had success using this wedge setup with a lot of my clients with knee and low back pain to help them connect that big toe to the ground as they do squats | Representative frame sampled at 85.9s. | Segment 81.0-90.8s: Or even a little folded up paper towel underneath that area can be better than nothing also I love using the wedge setup in a split squat especially one with a little bit of a hing | little using wedge setup | little using wedge setup ground even",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why Your Big Toe Unlocks Glute Activation",
+        "uri": "https://www.youtube.com/watch?v=_YTvkv5ftIw",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 18,
+    "transcript_segment_count": 6,
+    "ocr_observation_count": 8,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "sync_result": {
+    "source_id": "src_6c8c9412ef27e8c9",
+    "assets_upserted": 21,
+    "segments_inserted": 18,
+    "segments_skipped": 0,
+    "qdrant_points_upserted": 18
+  }
+}

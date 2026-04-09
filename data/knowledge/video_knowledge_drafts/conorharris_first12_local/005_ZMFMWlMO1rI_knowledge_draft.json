@@ -1,0 +1,191 @@
+{
+  "source_url": "https://www.youtube.com/shorts/ZMFMWlMO1rI",
+  "source_title_hint": "Why You Struggle To Cross Your Legs (do this to fix it)",
+  "analysis_origin": "hf_structured_analysis:openai/gpt-oss-120b",
+  "primary_summary": "The video explains that difficulty crossing one leg over the other is often due to limited external rotation of the hip joint caused by the femur being positioned slightly posterior in the socket. A simple side‑lying rolling exercise is demonstrated to open space, improve dynamic control, and restore external rotation. The exercise is performed with minimal tension, neutral spine, and controlled breathing, using two sets of ~10 repetitions with a brief hold at the top.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Provides a clear corrective protocol for a common mobility limitation with concrete exercise steps and cues.",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "hip",
+      "femur",
+      "pelvis",
+      "glute"
+    ],
+    "problem_layers": [
+      "mobility limitation",
+      "external rotation restriction"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": false,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "external rotation",
+    "hip mobility",
+    "leg crossing difficulty",
+    "rolling exercise"
+  ],
+  "searchable_tags": [
+    "hip external rotation",
+    "femur position",
+    "side‑lying roll",
+    "mobility exercise"
+  ],
+  "problem_statements": [
+    "Difficulty crossing one leg over the other"
+  ],
+  "habits_or_contexts": [],
+  "key_visual_points": [
+    "Side‑lying position with head neutral",
+    "Ankle hooked under opposite shin",
+    "Rolling onto back with gentle inhale",
+    "External rotation of femur observed during roll"
+  ],
+  "tests_mentioned": [
+    "External rotation test (cross leg over) before and after exercise"
+  ],
+  "exercises_mentioned": [
+    "Side‑lying hip external rotation roll"
+  ],
+  "advice_mentioned": [
+    "Keep spine neutral, use minimal tension, hold top for 2‑3 seconds"
+  ],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Limited hip external rotation limits leg crossing",
+      "summary": "When the femur sits slightly posterior in the hip socket, external rotation is restricted, making it hard to cross one leg over the other. This limitation often appears as asymmetrical difficulty crossing legs.",
+      "observable_signs": [
+        "Difficulty crossing one leg more than the other",
+        "Limited external rotation range when trying to rotate the thigh outward"
+      ],
+      "mechanisms": [
+        "Posterior femoral position reduces joint space for external rotation",
+        "Insufficient capsular/glenohumeral space limits femoral glide"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Assessing why a client cannot cross legs comfortably"
+      ],
+      "when_not_useful": [
+        "When leg crossing difficulty is due to neural or muscular strength issues rather than joint mobility"
+      ],
+      "retest": [],
+      "advice": [],
+      "timestamps": []
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Side‑lying hip external rotation rolling exercise",
+      "summary": "A low‑tension rolling movement performed on the side to open hip external rotation space and improve dynamic control.",
+      "observable_signs": [
+        "Outside knee maintains contact with floor",
+        "Femur rotates outward during roll"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Lie on your side with head supported in neutral alignment (keep neck neutral) [~55 s]",
+        "Bend knees to ~90°; keep bottom knee relaxed on floor",
+        "Hook the top ankle under the bottom shin (ankle‑under‑shin position)",
+        "Place hand on side of head to maintain neck neutrality",
+        "Inhale gently through the nose and roll your top leg and torso onto your back, allowing the femur to glide outward (minimal tension)",
+        "Exhale and roll back to the starting side‑lying position, keeping the outside knee in contact with the floor",
+        "Repeat the roll for 2 sets of ~10 repetitions, holding the top position for 2‑3 seconds while feeling the external rotation contraction",
+        "Maintain a neutral spine throughout; avoid excessive tension in shoulders or hips"
+      ],
+      "cues": [
+        "Keep spine neutral",
+        "Use minimal tension—let gravity assist the roll",
+        "Feel the outside knee stay in contact with the floor",
+        "Notice the femur rotating outward during the roll"
+      ],
+      "breathing_cues": [
+        "Inhale as you roll onto your back",
+        "Exhale as you return to side‑lying"
+      ],
+      "errors_to_avoid": [
+        "Applying excessive force to force rotation",
+        "Losing spine neutrality",
+        "Letting the head drop into flexion"
+      ],
+      "when_useful": [
+        "Improving hip external rotation when crossing legs is limited"
+      ],
+      "when_not_useful": [
+        "If pain is present in the hip joint or if the client has acute injury"
+      ],
+      "retest": [
+        "Perform the leg‑cross test before and after the exercise to assess improvement"
+      ],
+      "advice": [
+        "Start with low tension and increase roll depth gradually",
+        "Hold the top position briefly to reinforce the external rotation"
+      ],
+      "timestamps": [
+        "0:55‑1:30 (setup and roll start)",
+        "1:30‑1:40 (hold)",
+        "1:40‑2:00 (return)"
+      ]
+    },
+    {
+      "unit_type": "assessment",
+      "title": "External rotation test for leg crossing ability",
+      "summary": "Evaluate hip external rotation by asking the client to cross one leg over the opposite side while lying supine or standing, noting any asymmetry or restriction.",
+      "observable_signs": [
+        "Inability to fully cross the leg",
+        "Pain or discomfort during the movement"
+      ],
+      "mechanisms": [],
+      "execution_steps": [
+        "Ask the client to lie supine (or stand) and attempt to cross the right leg over the left side",
+        "Observe the range of external rotation and any compensations",
+        "Repeat on the left leg",
+        "Compare both sides for asymmetry"
+      ],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Before starting the rolling exercise to establish a baseline"
+      ],
+      "when_not_useful": [
+        "If the client cannot safely perform the test due to pain"
+      ],
+      "retest": [
+        "Repeat after completing the rolling protocol to gauge mobility improvement"
+      ],
+      "advice": [],
+      "timestamps": []
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 20,
+    "transcript_segment_count": 35,
+    "ocr_observation_count": 3,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 20,
+    "asset_count": 16
+  },
+  "analysis_provider": "hf_structured",
+  "analysis_quality": "standard",
+  "is_active": true,
+  "supersedes_draft_id": null
+}

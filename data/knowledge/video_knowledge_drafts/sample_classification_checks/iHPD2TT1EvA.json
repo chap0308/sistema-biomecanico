@@ -1,0 +1,32 @@
+{
+  "source_url": "https://www.youtube.com/shorts/iHPD2TT1EvA",
+  "source_title_hint": "",
+  "primary_summary": "The video features the presenter promoting his biomechanics course, claiming it teaches how to fix pain and posture from head to toe. The majority of the video consists of testimonials from individuals who have taken the course, praising its value, structure, and effectiveness in improving their clients' movement and pain, as well as increasing their own business income and client retention.",
+  "classification": {
+    "usefulness": "not_useful",
+    "usefulness_reason": "The video is purely promotional and consists of testimonials for a paid course. It does not provide any specific biomechanical concepts, exercises, diagnostic information, or actionable advice suitable for a knowledge base.",
+    "exclusion_reason": "Promotional content and testimonials, lacks specific biomechanical information, exercises, or concepts.",
+    "content_kind": "promotional",
+    "body_regions": [],
+    "problem_layers": [],
+    "suitable_for_protocol_database": false,
+    "suitable_for_concept_knowledge_base": false,
+    "suitable_for_recommendation_mapping": false,
+    "contains_visual_execution_detail": false,
+    "confidence": "high"
+  },
+  "searchable_topics": [],
+  "searchable_tags": [],
+  "problem_statements": [],
+  "habits_or_contexts": [],
+  "key_visual_points": [
+    "Presenter stands next to a full human skeleton model while introducing his course.",
+    "Various individuals provide video testimonials, speaking directly to the camera."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [],
+  "advice_mentioned": [],
+  "warnings_or_limitations": [],
+  "knowledge_units": [],
+  "model_notes": "This video is a promotional piece for a biomechanics course, featuring testimonials that highlight business growth and general improvements in client outcomes and personal pain. It does not offer any direct biomechanical instruction or information."
+}

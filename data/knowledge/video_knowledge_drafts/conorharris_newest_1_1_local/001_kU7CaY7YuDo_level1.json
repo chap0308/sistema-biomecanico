@@ -1,0 +1,1776 @@
+{
+  "source": {
+    "source_id": "src_7132ba92332213aa",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/kU7CaY7YuDo",
+    "canonical_uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+    "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [],
+    "duration_sec": 179.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-05T15:18:15.252704Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_9047c021c0f7dcc9",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_a5821b222ac920f1",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_799d6b2e1fa41ad5",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_4d88a872bf73a413",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_001_0001750ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 1.75,
+      "end_sec": 1.75,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1b8f368a23684868",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_002_0005366ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 5.366666666666667,
+      "end_sec": 5.366666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_af5d3098354cf368",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_003_0007716ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 7.716666666666667,
+      "end_sec": 7.716666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_68c97a6c14da5955",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_004_0010533ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 10.533333333333333,
+      "end_sec": 10.533333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_4a0a3c22cae4aa98",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_005_0013550ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 13.55,
+      "end_sec": 13.55,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a0e26cc1984d26c1",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_006_0015733ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 15.733333333333334,
+      "end_sec": 15.733333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_31e770333d8b8719",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_007_0018200ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 18.200000000000003,
+      "end_sec": 18.200000000000003,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a218ee19c101994d",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_008_0025400ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 25.4,
+      "end_sec": 25.4,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_ab68bd5e7e6146fd",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_009_0038233ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 38.233333333333334,
+      "end_sec": 38.233333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6b8223f88956d65d",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_010_0047450ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 47.45,
+      "end_sec": 47.45,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_d981e213d77eef82",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_011_0050816ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 50.81666666666667,
+      "end_sec": 50.81666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_aeb7f50f7e016c83",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_012_0054283ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 54.28333333333333,
+      "end_sec": 54.28333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_840d0b0d0ccf086e",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_013_0069500ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 69.5,
+      "end_sec": 69.5,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_4b4ea068edbe5776",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_014_0085033ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 85.03333333333333,
+      "end_sec": 85.03333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3ed4a625c97ab995",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_015_0092866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 92.86666666666667,
+      "end_sec": 92.86666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_69593e655c4220e2",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_016_0100483ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 100.48333333333333,
+      "end_sec": 100.48333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_ca472ce8af34f25c",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_017_0104966ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 104.96666666666667,
+      "end_sec": 104.96666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bd02bba5ac3e6193",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_018_0108100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 108.1,
+      "end_sec": 108.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3a6de501788eeeea",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_019_0113150ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 113.15,
+      "end_sec": 113.15,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_344b555290b0818d",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_020_0124083ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 124.08333333333334,
+      "end_sec": 124.08333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_8fc85979caae5ea8",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_021_0142016ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 142.01666666666665,
+      "end_sec": 142.01666666666665,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c73ced9333734c75",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_022_0153600ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 153.6,
+      "end_sec": 153.6,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e7912c2df3625e76",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_023_0156100ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 156.1,
+      "end_sec": 156.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_3e7d40dbb8bddd00",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_024_0159350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 159.35,
+      "end_sec": 159.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_37a89cd4bef5ba5c",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_025_0162600ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 162.6,
+      "end_sec": 162.6,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bb4d5b8d86232402",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_026_0171616ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 171.61666666666667,
+      "end_sec": 171.61666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_4f1cdb4df3b26525",
+      "source_id": "src_7132ba92332213aa",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_7132ba92332213aa\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 179.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_131d52f392dc83a2",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 3.5,
+      "duration_sec": 3.5,
+      "transcript": "If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this instead.",
+      "ocr_text": "SI JOINT +\ny",
+      "visual_description": "Representative frame contains OCR text: SI JOINT +\ny",
+      "segment_summary": "Segment 0.0-3.5s: If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this inste",
+      "topics": [
+        "joint",
+        "stiffer",
+        "locked",
+        "side"
+      ],
+      "keywords": [
+        "joint",
+        "stiffer",
+        "locked",
+        "side",
+        "back",
+        "particular"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9981991004897282,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 1.75,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_001_0001750ms.jpg"
+        }
+      ],
+      "retrieval_text": "If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this instead. | SI JOINT +\ny | Representative frame contains OCR text: SI JOINT +\ny | Segment 0.0-3.5s: If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this inste | joint stiffer locked side | joint stiffer locked side back particular",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_a655022d48d8ad0b",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 2,
+      "start_sec": 3.5,
+      "end_sec": 7.233333333333333,
+      "duration_sec": 3.7333333333333334,
+      "transcript": "If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this instead.",
+      "ocr_text": "<r.\n\n“a\n’\n\nSTRENGTHENING\n\n@\n\n4",
+      "visual_description": "Representative frame contains OCR text: <r.\n\n“a\n’\n\nSTRENGTHENING\n\n@\n\n4",
+      "segment_summary": "Segment 3.5-7.2s: If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this inste",
+      "topics": [
+        "strengthening",
+        "stiffer",
+        "locked",
+        "joint"
+      ],
+      "keywords": [
+        "strengthening",
+        "stiffer",
+        "locked",
+        "joint",
+        "side",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9981991004897282,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 5.366666666666667,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_002_0005366ms.jpg"
+        }
+      ],
+      "retrieval_text": "If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this instead. | <r.\n\n“a\n’\n\nSTRENGTHENING\n\n@\n\n4 | Representative frame contains OCR text: <r.\n\n“a\n’\n\nSTRENGTHENING\n\n@\n\n4 | Segment 3.5-7.2s: If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this inste | strengthening stiffer locked joint | strengthening stiffer locked joint side back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_571a2946d8d64a82",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 3,
+      "start_sec": 7.233333333333333,
+      "end_sec": 8.2,
+      "duration_sec": 0.9666666666666659,
+      "transcript": "If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this instead.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 7.7s.",
+      "segment_summary": "Segment 7.2-8.2s: If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this inste",
+      "topics": [
+        "stiffer",
+        "locked",
+        "joint",
+        "side"
+      ],
+      "keywords": [
+        "stiffer",
+        "locked",
+        "joint",
+        "side",
+        "back",
+        "particular"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9981991004897282,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 7.716666666666667,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_003_0007716ms.jpg"
+        }
+      ],
+      "retrieval_text": "If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this instead. | Representative frame sampled at 7.7s. | Segment 7.2-8.2s: If you have a stiffer locked up SI joint on one side of your low back in particular and you've tried stretching and core strengthening exercises without much excess, try this inste | stiffer locked joint side | stiffer locked joint side back particular",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_83278819a86f110e",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 4,
+      "start_sec": 8.2,
+      "end_sec": 12.866666666666667,
+      "duration_sec": 4.666666666666668,
+      "transcript": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 10.5s.",
+      "segment_summary": "Segment 8.2-12.9s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam",
+      "topics": [
+        "foam",
+        "roller",
+        "we're",
+        "going"
+      ],
+      "keywords": [
+        "foam",
+        "roller",
+        "we're",
+        "going",
+        "here's",
+        "specific"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9981991004897282,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 10.533333333333333,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_004_0010533ms.jpg"
+        }
+      ],
+      "retrieval_text": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself. | Representative frame sampled at 10.5s. | Segment 8.2-12.9s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam | foam roller we're going | foam roller we're going here's specific",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_61c2fbb66040e431",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 5,
+      "start_sec": 12.866666666666667,
+      "end_sec": 14.233333333333333,
+      "duration_sec": 1.3666666666666654,
+      "transcript": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 13.6s.",
+      "segment_summary": "Segment 12.9-14.2s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam",
+      "topics": [
+        "foam",
+        "roller",
+        "we're",
+        "going"
+      ],
+      "keywords": [
+        "foam",
+        "roller",
+        "we're",
+        "going",
+        "here's",
+        "specific"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9981991004897282,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 13.55,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_005_0013550ms.jpg"
+        }
+      ],
+      "retrieval_text": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself. | Representative frame sampled at 13.6s. | Segment 12.9-14.2s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam | foam roller we're going | foam roller we're going here's specific",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_242c0a2444175ac3",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 6,
+      "start_sec": 14.233333333333333,
+      "end_sec": 17.233333333333334,
+      "duration_sec": 3.0000000000000018,
+      "transcript": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself.",
+      "ocr_text": "oe\n\nFe",
+      "visual_description": "Representative frame contains OCR text: oe\n\nFe",
+      "segment_summary": "Segment 14.2-17.2s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam",
+      "topics": [
+        "foam",
+        "roller",
+        "we're",
+        "going"
+      ],
+      "keywords": [
+        "foam",
+        "roller",
+        "we're",
+        "going",
+        "here's",
+        "specific"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9981991004897282,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 15.733333333333334,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_006_0015733ms.jpg"
+        }
+      ],
+      "retrieval_text": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself. | oe\n\nFe | Representative frame contains OCR text: oe\n\nFe | Segment 14.2-17.2s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam | foam roller we're going | foam roller we're going here's specific",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0fd16e3c04a704c4",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 7,
+      "start_sec": 17.233333333333334,
+      "end_sec": 19.166666666666668,
+      "duration_sec": 1.9333333333333336,
+      "transcript": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself. So we're not on tissue or muscle, we're on this bone right here. That's going to help push it into that internally rotated position because oftentimes it's stuck in this position.",
+      "ocr_text": "FOAM|ROLLER",
+      "visual_description": "Representative frame contains OCR text: FOAM|ROLLER",
+      "segment_summary": "Segment 17.2-19.2s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam",
+      "topics": [
+        "we're",
+        "going",
+        "foam",
+        "roller"
+      ],
+      "keywords": [
+        "we're",
+        "going",
+        "foam",
+        "roller",
+        "position",
+        "here's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9981991004897282,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 18.200000000000003,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_007_0018200ms.jpg"
+        }
+      ],
+      "retrieval_text": "We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam roller itself. So we're not on tissue or muscle, we're on this bone right here. That's going to help push it into that internally rotated position because oftentimes it's stuck in this position. | FOAM|ROLLER | Representative frame contains OCR text: FOAM|ROLLER | Segment 17.2-19.2s: We're going to do here's lay on this foam roller in a specific way. We want to place it so that way this top edge of our iliac crest, as we call it, is directly laying on the foam | we're going foam roller | we're going foam roller position here's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f345dfd198b0a648",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 8,
+      "start_sec": 19.166666666666668,
+      "end_sec": 31.633333333333333,
+      "duration_sec": 12.466666666666665,
+      "transcript": "So we're not on tissue or muscle, we're on this bone right here. That's going to help push it into that internally rotated position because oftentimes it's stuck in this position. So by applying pressure here, you push it in. So start just below that area on your hip and then slowly roll up until you can find yourself centered nice and firmly on the middle of that iliac crest.",
+      "ocr_text": "RNALLY\n«2",
+      "visual_description": "Representative frame contains OCR text: RNALLY\n«2",
+      "segment_summary": "Segment 19.2-31.6s: So we're not on tissue or muscle, we're on this bone right here. That's going to help push it into that internally rotated position because oftentimes it's stuck in this position.",
+      "topics": [
+        "we're",
+        "here",
+        "push",
+        "position"
+      ],
+      "keywords": [
+        "we're",
+        "here",
+        "push",
+        "position",
+        "tissue",
+        "muscle"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9843613253518319,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 25.4,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_008_0025400ms.jpg"
+        }
+      ],
+      "retrieval_text": "So we're not on tissue or muscle, we're on this bone right here. That's going to help push it into that internally rotated position because oftentimes it's stuck in this position. So by applying pressure here, you push it in. So start just below that area on your hip and then slowly roll up until you can find yourself centered nice and firmly on the middle of that iliac crest. | RNALLY\n«2 | Representative frame contains OCR text: RNALLY\n«2 | Segment 19.2-31.6s: So we're not on tissue or muscle, we're on this bone right here. That's going to help push it into that internally rotated position because oftentimes it's stuck in this position. | we're here push position | we're here push position tissue muscle",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_b2a15f5ca9eef9de",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 9,
+      "start_sec": 31.633333333333333,
+      "end_sec": 44.833333333333336,
+      "duration_sec": 13.200000000000003,
+      "transcript": "So start just below that area on your hip and then slowly roll up until you can find yourself centered nice and firmly on the middle of that iliac crest. If this is 90 degrees relative to my trunk of my leg, drop it down a little bit to about 60. Now stack your knees and feet on top of each other and just melt into this position for yourself heavy on the center there.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 38.2s.",
+      "segment_summary": "Segment 31.6-44.8s: So start just below that area on your hip and then slowly roll up until you can find yourself centered nice and firmly on the middle of that iliac crest. If this is 90 degrees rela",
+      "topics": [
+        "just",
+        "yourself",
+        "start",
+        "below"
+      ],
+      "keywords": [
+        "just",
+        "yourself",
+        "start",
+        "below",
+        "area",
+        "then"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9774424377828836,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 38.233333333333334,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_009_0038233ms.jpg"
+        }
+      ],
+      "retrieval_text": "So start just below that area on your hip and then slowly roll up until you can find yourself centered nice and firmly on the middle of that iliac crest. If this is 90 degrees relative to my trunk of my leg, drop it down a little bit to about 60. Now stack your knees and feet on top of each other and just melt into this position for yourself heavy on the center there. | Representative frame sampled at 38.2s. | Segment 31.6-44.8s: So start just below that area on your hip and then slowly roll up until you can find yourself centered nice and firmly on the middle of that iliac crest. If this is 90 degrees rela | just yourself start below | just yourself start below area then",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_ae6c96b02d3dab15",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 10,
+      "start_sec": 44.833333333333336,
+      "end_sec": 50.06666666666667,
+      "duration_sec": 5.233333333333334,
+      "transcript": "Now stack your knees and feet on top of each other and just melt into this position for yourself heavy on the center there. Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what.",
+      "ocr_text": "te,\n\nFie aid, obi\n\nOe '¢ -",
+      "visual_description": "Representative frame contains OCR text: te,\n\nFie aid, obi\n\nOe '¢ -",
+      "segment_summary": "Segment 44.8-50.1s: Now stack your knees and feet on top of each other and just melt into this position for yourself heavy on the center there. Now you always want to make sure that the outside of you",
+      "topics": [
+        "knees",
+        "always",
+        "outside",
+        "flat"
+      ],
+      "keywords": [
+        "knees",
+        "always",
+        "outside",
+        "flat",
+        "ground",
+        "here"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9774424377828836,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 47.45,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_010_0047450ms.jpg"
+        }
+      ],
+      "retrieval_text": "Now stack your knees and feet on top of each other and just melt into this position for yourself heavy on the center there. Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. | te,\n\nFie aid, obi\n\nOe '¢ - | Representative frame contains OCR text: te,\n\nFie aid, obi\n\nOe '¢ - | Segment 44.8-50.1s: Now stack your knees and feet on top of each other and just melt into this position for yourself heavy on the center there. Now you always want to make sure that the outside of you | knees always outside flat | knees always outside flat ground here",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_8b096d9e2495962c",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 11,
+      "start_sec": 50.06666666666667,
+      "end_sec": 51.56666666666667,
+      "duration_sec": 1.5,
+      "transcript": "Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 50.8s.",
+      "segment_summary": "Segment 50.1-51.6s: Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what.",
+      "topics": [
+        "always",
+        "outside",
+        "flat",
+        "ground"
+      ],
+      "keywords": [
+        "always",
+        "outside",
+        "flat",
+        "ground",
+        "here",
+        "want"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9774424377828836,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 50.81666666666667,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_011_0050816ms.jpg"
+        }
+      ],
+      "retrieval_text": "Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. | Representative frame sampled at 50.8s. | Segment 50.1-51.6s: Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. | always outside flat ground | always outside flat ground here want",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_50687d4420c73283",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 12,
+      "start_sec": 51.56666666666667,
+      "end_sec": 57.0,
+      "duration_sec": 5.43333333333333,
+      "transcript": "Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what.",
+      "ocr_text": "THE OUTSIDE",
+      "visual_description": "Representative frame contains OCR text: THE OUTSIDE",
+      "segment_summary": "Segment 51.6-57.0s: Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what.",
+      "topics": [
+        "outside",
+        "always",
+        "flat",
+        "ground"
+      ],
+      "keywords": [
+        "outside",
+        "always",
+        "flat",
+        "ground",
+        "here",
+        "want"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9774424377828836,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 54.28333333333333,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_012_0054283ms.jpg"
+        }
+      ],
+      "retrieval_text": "Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. | THE OUTSIDE | Representative frame contains OCR text: THE OUTSIDE | Segment 51.6-57.0s: Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. | outside always flat ground | outside always flat ground here want",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_4fccd7d121be6dbc",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 13,
+      "start_sec": 57.0,
+      "end_sec": 72.0,
+      "duration_sec": 15.0,
+      "transcript": "Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. The first thing you're going to do is just inhale, open up very gently, rest to this foot on the floor as you rock back a little bit. Now you should be on the back side of that pelvic crest as you exhale slowly synchronously roll your trunk and your leg at the same rate and at the same angle forward and just take a slight step forward like this.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 69.5s.",
+      "segment_summary": "Segment 57.0-72.0s: Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. The first thi",
+      "topics": [
+        "always",
+        "outside",
+        "flat",
+        "ground"
+      ],
+      "keywords": [
+        "always",
+        "outside",
+        "flat",
+        "ground",
+        "here",
+        "just"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9903661447266737,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 69.5,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_013_0069500ms.jpg"
+        }
+      ],
+      "retrieval_text": "Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. The first thing you're going to do is just inhale, open up very gently, rest to this foot on the floor as you rock back a little bit. Now you should be on the back side of that pelvic crest as you exhale slowly synchronously roll your trunk and your leg at the same rate and at the same angle forward and just take a slight step forward like this. | Representative frame sampled at 69.5s. | Segment 57.0-72.0s: Now you always want to make sure that the outside of your ankles flat on the ground here and the outside of your knees always flat on the ground here. No matter what. The first thi | always outside flat ground | always outside flat ground here just",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_98fa4341fe0bc4b1",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 14,
+      "start_sec": 72.0,
+      "end_sec": 82.0,
+      "duration_sec": 10.0,
+      "transcript": "Now you should be on the back side of that pelvic crest as you exhale slowly synchronously roll your trunk and your leg at the same rate and at the same angle forward and just take a slight step forward like this. You want to get this top knee slightly ahead of the bottom knee.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 72.0-82.0s: Now you should be on the back side of that pelvic crest as you exhale slowly synchronously roll your trunk and your leg at the same rate and at the same angle forward and just take",
+      "topics": [
+        "same",
+        "forward",
+        "knee",
+        "should"
+      ],
+      "keywords": [
+        "same",
+        "forward",
+        "knee",
+        "should",
+        "back",
+        "side"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9968279981985688,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "Now you should be on the back side of that pelvic crest as you exhale slowly synchronously roll your trunk and your leg at the same rate and at the same angle forward and just take a slight step forward like this. You want to get this top knee slightly ahead of the bottom knee. | Segment 72.0-82.0s: Now you should be on the back side of that pelvic crest as you exhale slowly synchronously roll your trunk and your leg at the same rate and at the same angle forward and just take | same forward knee should | same forward knee should back side",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_d1166d27818c6af3",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 15,
+      "start_sec": 82.0,
+      "end_sec": 88.06666666666666,
+      "duration_sec": 6.066666666666663,
+      "transcript": "You want to get this top knee slightly ahead of the bottom knee. Now you should be on the front side of that pelvic crest bone and your mileage may vary here depending on how much of a step forward you can take. For some people, they're just going to end right here with the knee ahead and the inside ankle flat on the top.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 85.0s.",
+      "segment_summary": "Segment 82.0-88.1s: You want to get this top knee slightly ahead of the bottom knee. Now you should be on the front side of that pelvic crest bone and your mileage may vary here depending on how much",
+      "topics": [
+        "knee",
+        "ahead",
+        "here",
+        "want"
+      ],
+      "keywords": [
+        "knee",
+        "ahead",
+        "here",
+        "want",
+        "slightly",
+        "bottom"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9963758133041362,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 85.03333333333333,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_014_0085033ms.jpg"
+        }
+      ],
+      "retrieval_text": "You want to get this top knee slightly ahead of the bottom knee. Now you should be on the front side of that pelvic crest bone and your mileage may vary here depending on how much of a step forward you can take. For some people, they're just going to end right here with the knee ahead and the inside ankle flat on the top. | Representative frame sampled at 85.0s. | Segment 82.0-88.1s: You want to get this top knee slightly ahead of the bottom knee. Now you should be on the front side of that pelvic crest bone and your mileage may vary here depending on how much | knee ahead here want | knee ahead here want slightly bottom",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_ffd7c522a6dbfaad",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 16,
+      "start_sec": 88.06666666666666,
+      "end_sec": 97.66666666666667,
+      "duration_sec": 9.600000000000009,
+      "transcript": "For some people, they're just going to end right here with the knee ahead and the inside ankle flat on the top. But others can't take that much of a step forward without locking up or jamming up their hip because they don't have as much space yet. So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side of that bone.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 92.9s.",
+      "segment_summary": "Segment 88.1-97.7s: For some people, they're just going to end right here with the knee ahead and the inside ankle flat on the top. But others can't take that much of a step forward without locking up",
+      "topics": [
+        "just",
+        "take",
+        "much",
+        "step"
+      ],
+      "keywords": [
+        "just",
+        "take",
+        "much",
+        "step",
+        "some",
+        "people"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9961497208569199,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 92.86666666666667,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_015_0092866ms.jpg"
+        }
+      ],
+      "retrieval_text": "For some people, they're just going to end right here with the knee ahead and the inside ankle flat on the top. But others can't take that much of a step forward without locking up or jamming up their hip because they don't have as much space yet. So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side of that bone. | Representative frame sampled at 92.9s. | Segment 88.1-97.7s: For some people, they're just going to end right here with the knee ahead and the inside ankle flat on the top. But others can't take that much of a step forward without locking up | just take much step | just take much step some people",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_52f228c19aa7d27b",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 17,
+      "start_sec": 97.66666666666667,
+      "end_sec": 103.3,
+      "duration_sec": 5.633333333333326,
+      "transcript": "So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side of that bone.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 100.5s.",
+      "segment_summary": "Segment 97.7-103.3s: So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side",
+      "topics": [
+        "just",
+        "that's",
+        "recommend",
+        "slightly"
+      ],
+      "keywords": [
+        "just",
+        "that's",
+        "recommend",
+        "slightly",
+        "take",
+        "step"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9961497208569199,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 100.48333333333333,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_016_0100483ms.jpg"
+        }
+      ],
+      "retrieval_text": "So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side of that bone. | Representative frame sampled at 100.5s. | Segment 97.7-103.3s: So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side | just that's recommend slightly | just that's recommend slightly take step",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_b0e67425e48b3265",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 18,
+      "start_sec": 103.3,
+      "end_sec": 106.63333333333334,
+      "duration_sec": 3.333333333333343,
+      "transcript": "So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side of that bone. You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 105.0s.",
+      "segment_summary": "Segment 103.3-106.6s: So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side",
+      "topics": [
+        "just",
+        "side",
+        "that's",
+        "recommend"
+      ],
+      "keywords": [
+        "just",
+        "side",
+        "that's",
+        "recommend",
+        "slightly",
+        "take"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9903209308395162,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 104.96666666666667,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_017_0104966ms.jpg"
+        }
+      ],
+      "retrieval_text": "So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side of that bone. You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all. | Representative frame sampled at 105.0s. | Segment 103.3-106.6s: So if that's you what I'd recommend is just slightly take a step over and just stack your knees on top again and that should be enough to get you relatively more on the front side | just side that's recommend | just side that's recommend slightly take",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e12dc36529950609",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 19,
+      "start_sec": 106.63333333333334,
+      "end_sec": 109.56666666666666,
+      "duration_sec": 2.933333333333323,
+      "transcript": "You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all.",
+      "ocr_text": "= os",
+      "visual_description": "Representative frame contains OCR text: = os",
+      "segment_summary": "Segment 106.6-109.6s: You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all.",
+      "topics": [
+        "maybe",
+        "even",
+        "slide",
+        "knee"
+      ],
+      "keywords": [
+        "maybe",
+        "even",
+        "slide",
+        "knee",
+        "forward",
+        "just"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844921408221126,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 108.1,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_018_0108100ms.jpg"
+        }
+      ],
+      "retrieval_text": "You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all. | = os | Representative frame contains OCR text: = os | Segment 106.6-109.6s: You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all. | maybe even slide knee | maybe even slide knee forward just",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_a6c4fb7440da54de",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 20,
+      "start_sec": 109.56666666666666,
+      "end_sec": 116.73333333333333,
+      "duration_sec": 7.166666666666671,
+      "transcript": "You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all. Then slowly and healthier nose and go back to the starting position where you get your foot flat on the ground there trunk slightly opened up.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 113.2s.",
+      "segment_summary": "Segment 109.6-116.7s: You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all. Then slowly and healthier n",
+      "topics": [
+        "maybe",
+        "even",
+        "slide",
+        "knee"
+      ],
+      "keywords": [
+        "maybe",
+        "even",
+        "slide",
+        "knee",
+        "forward",
+        "just"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844921408221126,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 113.15,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_019_0113150ms.jpg"
+        }
+      ],
+      "retrieval_text": "You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all. Then slowly and healthier nose and go back to the starting position where you get your foot flat on the ground there trunk slightly opened up. | Representative frame sampled at 113.2s. | Segment 109.6-116.7s: You can maybe even slide the top knee forward just a little bit but don't go to the point where you feel any restriction in your bottom side hip at all. Then slowly and healthier n | maybe even slide knee | maybe even slide knee forward just",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3289e38038e9d03f",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 21,
+      "start_sec": 116.73333333333333,
+      "end_sec": 131.43333333333334,
+      "duration_sec": 14.700000000000003,
+      "transcript": "Then slowly and healthier nose and go back to the starting position where you get your foot flat on the ground there trunk slightly opened up. Always make sure that outside knee and outside ankle is flat on the ground and then exhale slowly step over again. Repeat this for about two sets of 15 slow rolls.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 124.1s.",
+      "segment_summary": "Segment 116.7-131.4s: Then slowly and healthier nose and go back to the starting position where you get your foot flat on the ground there trunk slightly opened up. Always make sure that outside knee an",
+      "topics": [
+        "then",
+        "slowly",
+        "flat",
+        "ground"
+      ],
+      "keywords": [
+        "then",
+        "slowly",
+        "flat",
+        "ground",
+        "outside",
+        "healthier"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9844921408221126,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 124.08333333333334,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_020_0124083ms.jpg"
+        }
+      ],
+      "retrieval_text": "Then slowly and healthier nose and go back to the starting position where you get your foot flat on the ground there trunk slightly opened up. Always make sure that outside knee and outside ankle is flat on the ground and then exhale slowly step over again. Repeat this for about two sets of 15 slow rolls. | Representative frame sampled at 124.1s. | Segment 116.7-131.4s: Then slowly and healthier nose and go back to the starting position where you get your foot flat on the ground there trunk slightly opened up. Always make sure that outside knee an | then slowly flat ground | then slowly flat ground outside healthier",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_16453b187be68775",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 22,
+      "start_sec": 131.43333333333334,
+      "end_sec": 146.43333333333334,
+      "duration_sec": 15.0,
+      "transcript": "Repeat this for about two sets of 15 slow rolls. Many instances of SI joint can have one side in particular what I see is a pelvis that's kind of twisted and torqued a little bit. Now there is very very little and minimal movement available at the SI joint but it does have an influence. This position right here is a position of external rotation of this enominant or pelvic bone right here.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 142.0s.",
+      "segment_summary": "Segment 131.4-146.4s: Repeat this for about two sets of 15 slow rolls. Many instances of SI joint can have one side in particular what I see is a pelvis that's kind of twisted and torqued a little bit.",
+      "topics": [
+        "joint",
+        "little",
+        "very",
+        "position"
+      ],
+      "keywords": [
+        "joint",
+        "little",
+        "very",
+        "position",
+        "right",
+        "here"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9344126253854483,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 142.01666666666665,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_021_0142016ms.jpg"
+        }
+      ],
+      "retrieval_text": "Repeat this for about two sets of 15 slow rolls. Many instances of SI joint can have one side in particular what I see is a pelvis that's kind of twisted and torqued a little bit. Now there is very very little and minimal movement available at the SI joint but it does have an influence. This position right here is a position of external rotation of this enominant or pelvic bone right here. | Representative frame sampled at 142.0s. | Segment 131.4-146.4s: Repeat this for about two sets of 15 slow rolls. Many instances of SI joint can have one side in particular what I see is a pelvis that's kind of twisted and torqued a little bit. | joint little very position | joint little very position right here",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_eb3b4f76cdb4331c",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 23,
+      "start_sec": 146.43333333333334,
+      "end_sec": 152.6,
+      "duration_sec": 6.166666666666657,
+      "transcript": "This position right here is a position of external rotation of this enominant or pelvic bone right here. It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 146.4-152.6s: This position right here is a position of external rotation of this enominant or pelvic bone right here. It has key muscles in this region attached both on the sacrum and the femur",
+      "topics": [
+        "position",
+        "right",
+        "here",
+        "muscles"
+      ],
+      "keywords": [
+        "position",
+        "right",
+        "here",
+        "muscles",
+        "external",
+        "rotation"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.901780117303133,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "This position right here is a position of external rotation of this enominant or pelvic bone right here. It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. | Segment 146.4-152.6s: This position right here is a position of external rotation of this enominant or pelvic bone right here. It has key muscles in this region attached both on the sacrum and the femur | position right here muscles | position right here muscles external rotation",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_2a26fdeaa11a9c46",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 24,
+      "start_sec": 152.6,
+      "end_sec": 154.6,
+      "duration_sec": 2.0,
+      "transcript": "It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 153.6s.",
+      "segment_summary": "Segment 152.6-154.6s: It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight.",
+      "topics": [
+        "muscles",
+        "region",
+        "attached",
+        "both"
+      ],
+      "keywords": [
+        "muscles",
+        "region",
+        "attached",
+        "both",
+        "sacrum",
+        "femur"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8858407810330391,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 153.6,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_022_0153600ms.jpg"
+        }
+      ],
+      "retrieval_text": "It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. | Representative frame sampled at 153.6s. | Segment 152.6-154.6s: It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. | muscles region attached both | muscles region attached both sacrum femur",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_dd121feda7497bef",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 25,
+      "start_sec": 154.6,
+      "end_sec": 157.6,
+      "duration_sec": 3.0,
+      "transcript": "It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 156.1s.",
+      "segment_summary": "Segment 154.6-157.6s: It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight.",
+      "topics": [
+        "muscles",
+        "region",
+        "attached",
+        "both"
+      ],
+      "keywords": [
+        "muscles",
+        "region",
+        "attached",
+        "both",
+        "sacrum",
+        "femur"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8858407810330391,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 156.1,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_023_0156100ms.jpg"
+        }
+      ],
+      "retrieval_text": "It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. | Representative frame sampled at 156.1s. | Segment 154.6-157.6s: It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. | muscles region attached both | muscles region attached both sacrum femur",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_07390f087d15935c",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 26,
+      "start_sec": 157.6,
+      "end_sec": 161.1,
+      "duration_sec": 3.5,
+      "transcript": "It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. They tug on the SI joint and pull the femur into this position and drag it out into external rotation.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 159.3s.",
+      "segment_summary": "Segment 157.6-161.1s: It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. They tug on the SI joint and pull the femur into thi",
+      "topics": [
+        "muscles",
+        "femur",
+        "region",
+        "attached"
+      ],
+      "keywords": [
+        "muscles",
+        "femur",
+        "region",
+        "attached",
+        "both",
+        "sacrum"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8858407810330391,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 159.35,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_024_0159350ms.jpg"
+        }
+      ],
+      "retrieval_text": "It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. They tug on the SI joint and pull the femur into this position and drag it out into external rotation. | Representative frame sampled at 159.3s. | Segment 157.6-161.1s: It has key muscles in this region attached both on the sacrum and the femur itself when these muscles get tightened stay tight. They tug on the SI joint and pull the femur into thi | muscles femur region attached | muscles femur region attached both sacrum",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_85c4274f125a2c38",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 27,
+      "start_sec": 161.1,
+      "end_sec": 164.1,
+      "duration_sec": 3.0,
+      "transcript": "They tug on the SI joint and pull the femur into this position and drag it out into external rotation. So the solution would be to help create a more internally rotated position of the pelvis and femur on that side and create more decompression of muscles and tissues on the back side of the pelvis to help open up the SI joint on that side as well.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 162.6s.",
+      "segment_summary": "Segment 161.1-164.1s: They tug on the SI joint and pull the femur into this position and drag it out into external rotation. So the solution would be to help create a more internally rotated position of",
+      "topics": [
+        "side",
+        "joint",
+        "femur",
+        "position"
+      ],
+      "keywords": [
+        "side",
+        "joint",
+        "femur",
+        "position",
+        "help",
+        "create"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.8858407810330391,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 162.6,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_025_0162600ms.jpg"
+        }
+      ],
+      "retrieval_text": "They tug on the SI joint and pull the femur into this position and drag it out into external rotation. So the solution would be to help create a more internally rotated position of the pelvis and femur on that side and create more decompression of muscles and tissues on the back side of the pelvis to help open up the SI joint on that side as well. | Representative frame sampled at 162.6s. | Segment 161.1-164.1s: They tug on the SI joint and pull the femur into this position and drag it out into external rotation. So the solution would be to help create a more internally rotated position of | side joint femur position | side joint femur position help create",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f03bfb97e7185dbc",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 28,
+      "start_sec": 164.1,
+      "end_sec": 179.1,
+      "duration_sec": 15.0,
+      "transcript": "So the solution would be to help create a more internally rotated position of the pelvis and femur on that side and create more decompression of muscles and tissues on the back side of the pelvis to help open up the SI joint on that side as well. That is well.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 171.6s.",
+      "segment_summary": "Segment 164.1-179.1s: So the solution would be to help create a more internally rotated position of the pelvis and femur on that side and create more decompression of muscles and tissues on the back sid",
+      "topics": [
+        "side",
+        "help",
+        "create",
+        "more"
+      ],
+      "keywords": [
+        "side",
+        "help",
+        "create",
+        "more",
+        "pelvis",
+        "well"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.624543521553278,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 171.61666666666667,
+          "path": "data\\processed\\rag\\src_7132ba92332213aa\\frames\\scene_026_0171616ms.jpg"
+        }
+      ],
+      "retrieval_text": "So the solution would be to help create a more internally rotated position of the pelvis and femur on that side and create more decompression of muscles and tissues on the back side of the pelvis to help open up the SI joint on that side as well. That is well. | Representative frame sampled at 171.6s. | Segment 164.1-179.1s: So the solution would be to help create a more internally rotated position of the pelvis and femur on that side and create more decompression of muscles and tissues on the back sid | side help create more | side help create more pelvis well",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_860d87b82779175f",
+      "source_id": "src_7132ba92332213aa",
+      "segment_index": 29,
+      "start_sec": 179.1,
+      "end_sec": 179.13333333333333,
+      "duration_sec": 0.03333333333333144,
+      "transcript": "That is well.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 179.1-179.1s: That is well.",
+      "topics": [
+        "well"
+      ],
+      "keywords": [
+        "well"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.36324626207351685,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "That is well. | Segment 179.1-179.1s: That is well. | well | well",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "How To Instantly Unlock Your SI-Joint In 1 Simple Exercise",
+        "uri": "https://www.youtube.com/watch?v=kU7CaY7YuDo",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 29,
+    "transcript_segment_count": 26,
+    "ocr_observation_count": 8,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "sync_result": {
+    "source_id": "src_7132ba92332213aa",
+    "assets_upserted": 30,
+    "segments_inserted": 29,
+    "segments_skipped": 0,
+    "qdrant_points_upserted": 29
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "source_url": "https://www.youtube.com/shorts/zrylJdSAQ0Y",
+  "source_title_hint": "How To Un-Fu*k Your Tight Upper Traps",
+  "analysis_origin": "hf_structured_analysis:openai/gpt-oss-120b",
+  "primary_summary": "The video explains that unilateral upper‑trap tightness is often rooted in a restricted posterior rib‑cage that cannot expand fully on inhalation. This restriction causes the rib cage to compress, leading to compensatory shoulder elevation and over‑activation of the upper traps. Restoring rib‑cage mobility and anchoring it with active obliques/deep abdominal muscles reduces the need for trap over‑use and improves posture.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "Provides a clear biomechanical cause‑effect chain and actionable core‑driven cues for addressing tight upper traps",
+    "exclusion_reason": null,
+    "content_kind": "informational_concept",
+    "body_regions": [
+      "upper trapezius",
+      "shoulder",
+      "rib cage",
+      "thorax",
+      "core",
+      "obliques",
+      "deep abdominal muscles"
+    ],
+    "problem_layers": [
+      "muscle tightness",
+      "postural compensation",
+      "breathing restriction"
+    ],
+    "suitable_for_protocol_database": false,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": false,
+    "contains_visual_execution_detail": false,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "upper trap tightness",
+    "rib cage restriction",
+    "shoulder elevation",
+    "core activation"
+  ],
+  "searchable_tags": [
+    "upper trapezius",
+    "rib cage mobility",
+    "breathing mechanics",
+    "oblique engagement"
+  ],
+  "problem_statements": [
+    "Why does stretching the upper trap alone not resolve unilateral tightness?",
+    "How does restricted rib‑cage expansion contribute to trap over‑activation?"
+  ],
+  "habits_or_contexts": [
+    "Inhalation without full rib‑cage expansion",
+    "Shoulder elevation during breathing"
+  ],
+  "key_visual_points": [
+    "Shoulder height difference on affected side",
+    "Sternum rotates opposite to elevated shoulder"
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [],
+  "advice_mentioned": [
+    "Engage obliques and deep abs to anchor rib cage",
+    "Practice circumferential rib‑cage expansion on each inhale"
+  ],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Upper trap tightness linked to posterior rib‑cage compression",
+      "summary": "A tight upper trapezius on one side often reflects a compressed backside of the rib cage that cannot expand fully during inhalation, causing compensatory shoulder elevation and trap over‑use.",
+      "observable_signs": [
+        "Shoulder higher on the tight‑trap side",
+        "Sternum rotates away from the elevated shoulder"
+      ],
+      "mechanisms": [
+        "Restricted posterior rib‑cage expansion → increased intra‑thoracic pressure → shoulder elevation to aid inhalation → upper trap activation"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "6.4-22.5"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Core‑driven rib‑cage depression to reduce trap over‑activation",
+      "summary": "Use deep breathing combined with active oblique and deep‑abdominal engagement to lower the rib cage on the tight‑trap side, decreasing the need for trap elevation.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Inhale slowly, allowing the rib cage to expand circumferentially (front, back, sides)",
+        "Exhale while gently pulling the rib cage down toward the pelvis by bracing the obliques and deep abs",
+        "Repeat for several breaths, maintaining relaxed shoulders",
+        "Perform the movement seated or standing, keeping the neck neutral"
+      ],
+      "cues": [
+        "Keep shoulders relaxed – avoid shrugging",
+        "Feel the ribs move down and inward on exhale",
+        "Maintain a steady breath rhythm"
+      ],
+      "breathing_cues": [
+        "Inhale through the nose, expanding the rib cage fully",
+        "Exhale through the mouth while engaging the core"
+      ],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "When unilateral upper‑trap tightness is present",
+        "When the rib cage feels “stuck” or compressed on one side"
+      ],
+      "when_not_useful": [
+        "If the tightness is due to acute injury or inflammation"
+      ],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "53.9-95.9"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 42,
+    "transcript_segment_count": 21,
+    "ocr_observation_count": 7,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 42,
+    "asset_count": 44
+  },
+  "analysis_provider": "hf_structured",
+  "analysis_quality": "standard",
+  "is_active": true,
+  "supersedes_draft_id": null
+}

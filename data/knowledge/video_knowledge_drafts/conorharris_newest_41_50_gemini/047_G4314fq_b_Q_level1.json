@@ -1,0 +1,919 @@
+{
+  "source": {
+    "source_id": "src_2291016fe97f151f",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/G4314fq_b_Q",
+    "canonical_uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+    "title": "Why You Clench Your Glutes When You Stand",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [],
+    "duration_sec": 180.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-08T06:25:40.420291Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_b175bbf117659fa7",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_a61ae00e10416c27",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_b943714a0fe4d74e",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_4ac29351f899078a",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_001_0014400ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 14.4,
+      "end_sec": 14.4,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a2594aabd9fa89d3",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_002_0031416ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 31.416666666666664,
+      "end_sec": 31.416666666666664,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bf7824bd8811170d",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_003_0048783ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 48.78333333333333,
+      "end_sec": 48.78333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bb48a32347fd82ca",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_004_0065099ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 65.1,
+      "end_sec": 65.1,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_cc97881ec24da7d5",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_005_0072833ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 72.83333333333334,
+      "end_sec": 72.83333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_be33bb265769f6d1",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_006_0081083ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 81.08333333333334,
+      "end_sec": 81.08333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_945f0cf2e6f317b3",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_007_0092600ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 92.6,
+      "end_sec": 92.6,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_945ae7a63a913089",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_008_0141016ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 141.01666666666665,
+      "end_sec": 141.01666666666665,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_a0dd254a589bf3a5",
+      "source_id": "src_2291016fe97f151f",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_2291016fe97f151f\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_41be53da999e0cbd",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 15.0,
+      "duration_sec": 15.0,
+      "transcript": "Have you ever noticed that your glutes are always tight or clenched when you're standing up? This is actually pretty common and is telling us something important about your body. Here's what's going on and how you can fix it. The reason why your glutes are always tight when you're standing is because they're trying to help you stand upright against gravity,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 14.4s.",
+      "segment_summary": "Segment 0.0-15.0s: Have you ever noticed that your glutes are always tight or clenched when you're standing up? This is actually pretty common and is telling us something important about your body. H",
+      "topics": [
+        "glutes",
+        "always",
+        "tight",
+        "when"
+      ],
+      "keywords": [
+        "glutes",
+        "always",
+        "tight",
+        "when",
+        "you're",
+        "standing"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.982647716999054,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 14.4,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_001_0014400ms.jpg"
+        }
+      ],
+      "retrieval_text": "Have you ever noticed that your glutes are always tight or clenched when you're standing up? This is actually pretty common and is telling us something important about your body. Here's what's going on and how you can fix it. The reason why your glutes are always tight when you're standing is because they're trying to help you stand upright against gravity, | Representative frame sampled at 14.4s. | Segment 0.0-15.0s: Have you ever noticed that your glutes are always tight or clenched when you're standing up? This is actually pretty common and is telling us something important about your body. H | glutes always tight when | glutes always tight when you're standing",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_2103ef6d893165f1",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 2,
+      "start_sec": 15.0,
+      "end_sec": 28.8,
+      "duration_sec": 13.8,
+      "transcript": "standing is because they're trying to help you stand upright against gravity, but this is happening for a specific reason. See posture is just a representation of your body's ability to keep an even center of gravity down the midline of the body. So the body is going to change and alter its spine curves based off of your own individual situation to accommodate for that",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 15.0-28.8s: standing is because they're trying to help you stand upright against gravity, but this is happening for a specific reason. See posture is just a representation of your body's abili",
+      "topics": [
+        "gravity",
+        "body",
+        "standing",
+        "because"
+      ],
+      "keywords": [
+        "gravity",
+        "body",
+        "standing",
+        "because",
+        "they're",
+        "trying"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9847557216417044,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "standing is because they're trying to help you stand upright against gravity, but this is happening for a specific reason. See posture is just a representation of your body's ability to keep an even center of gravity down the midline of the body. So the body is going to change and alter its spine curves based off of your own individual situation to accommodate for that | Segment 15.0-28.8s: standing is because they're trying to help you stand upright against gravity, but this is happening for a specific reason. See posture is just a representation of your body's abili | gravity body standing because | gravity body standing because they're trying",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_dca5b06e9885a49e",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 3,
+      "start_sec": 28.8,
+      "end_sec": 34.03333333333333,
+      "duration_sec": 5.233333333333331,
+      "transcript": "and alter its spine curves based off of your own individual situation to accommodate for that and move your spine curves around that center of gravity line. So many people with tight glutes",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 31.4s.",
+      "segment_summary": "Segment 28.8-34.0s: and alter its spine curves based off of your own individual situation to accommodate for that and move your spine curves around that center of gravity line. So many people with tig",
+      "topics": [
+        "spine",
+        "curves",
+        "alter",
+        "based"
+      ],
+      "keywords": [
+        "spine",
+        "curves",
+        "alter",
+        "based",
+        "individual",
+        "situation"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9910797355696559,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 31.416666666666664,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_002_0031416ms.jpg"
+        }
+      ],
+      "retrieval_text": "and alter its spine curves based off of your own individual situation to accommodate for that and move your spine curves around that center of gravity line. So many people with tight glutes | Representative frame sampled at 31.4s. | Segment 28.8-34.0s: and alter its spine curves based off of your own individual situation to accommodate for that and move your spine curves around that center of gravity line. So many people with tig | spine curves alter based | spine curves alter based individual situation",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_78d2a4eaba20d488",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 4,
+      "start_sec": 34.03333333333333,
+      "end_sec": 49.03333333333333,
+      "duration_sec": 15.0,
+      "transcript": "and move your spine curves around that center of gravity line. So many people with tight glutes have a forward head and rounded forward shoulders like this. If this happens, then something needs to slow down the forward progression of the body. So let's say if this is going really",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 48.8s.",
+      "segment_summary": "Segment 34.0-49.0s: and move your spine curves around that center of gravity line. So many people with tight glutes have a forward head and rounded forward shoulders like this. If this happens, then s",
+      "topics": [
+        "forward",
+        "move",
+        "spine",
+        "curves"
+      ],
+      "keywords": [
+        "forward",
+        "move",
+        "spine",
+        "curves",
+        "around",
+        "center"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9910797355696559,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 48.78333333333333,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_003_0048783ms.jpg"
+        }
+      ],
+      "retrieval_text": "and move your spine curves around that center of gravity line. So many people with tight glutes have a forward head and rounded forward shoulders like this. If this happens, then something needs to slow down the forward progression of the body. So let's say if this is going really | Representative frame sampled at 48.8s. | Segment 34.0-49.0s: and move your spine curves around that center of gravity line. So many people with tight glutes have a forward head and rounded forward shoulders like this. If this happens, then s | forward move spine curves | forward move spine curves around center",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_489a27168ae63faf",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 5,
+      "start_sec": 49.03333333333333,
+      "end_sec": 63.53333333333333,
+      "duration_sec": 14.5,
+      "transcript": "needs to slow down the forward progression of the body. So let's say if this is going really far forward, stuff on the back side of the body has to start gripping to prevent them from literally falling forward on their face and so that way they can even out their spine curves. People take this usually have one of two situations. The first is that their pelvis is being tilted forward and the pelvis is",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 49.0-63.5s: needs to slow down the forward progression of the body. So let's say if this is going really far forward, stuff on the back side of the body has to start gripping to prevent them f",
+      "topics": [
+        "forward",
+        "their",
+        "body",
+        "pelvis"
+      ],
+      "keywords": [
+        "forward",
+        "their",
+        "body",
+        "pelvis",
+        "needs",
+        "slow"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9929761006496847,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "needs to slow down the forward progression of the body. So let's say if this is going really far forward, stuff on the back side of the body has to start gripping to prevent them from literally falling forward on their face and so that way they can even out their spine curves. People take this usually have one of two situations. The first is that their pelvis is being tilted forward and the pelvis is | Segment 49.0-63.5s: needs to slow down the forward progression of the body. So let's say if this is going really far forward, stuff on the back side of the body has to start gripping to prevent them f | forward their body pelvis | forward their body pelvis needs slow",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3e7c39a542a0aa78",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 6,
+      "start_sec": 63.53333333333333,
+      "end_sec": 66.66666666666667,
+      "duration_sec": 3.13333333333334,
+      "transcript": "have one of two situations. The first is that their pelvis is being tilted forward and the pelvis is so tilted forward that the body senses this. So it's gripping the backside of the pelvis to prevent",
+      "ocr_text": "7\n\ner-lordotic\n\n#2 Hype\nire",
+      "visual_description": "Representative frame contains OCR text: 7\n\ner-lordotic\n\n#2 Hype\nire",
+      "segment_summary": "Segment 63.5-66.7s: have one of two situations. The first is that their pelvis is being tilted forward and the pelvis is so tilted forward that the body senses this. So it's gripping the backside of t",
+      "topics": [
+        "pelvis",
+        "tilted",
+        "forward",
+        "situations"
+      ],
+      "keywords": [
+        "pelvis",
+        "tilted",
+        "forward",
+        "situations",
+        "first",
+        "their"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948724657297134,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 65.1,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_004_0065099ms.jpg"
+        }
+      ],
+      "retrieval_text": "have one of two situations. The first is that their pelvis is being tilted forward and the pelvis is so tilted forward that the body senses this. So it's gripping the backside of the pelvis to prevent | 7\n\ner-lordotic\n\n#2 Hype\nire | Representative frame contains OCR text: 7\n\ner-lordotic\n\n#2 Hype\nire | Segment 63.5-66.7s: have one of two situations. The first is that their pelvis is being tilted forward and the pelvis is so tilted forward that the body senses this. So it's gripping the backside of t | pelvis tilted forward situations | pelvis tilted forward situations first their",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3ad04c4fcff55c36",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 7,
+      "start_sec": 66.66666666666667,
+      "end_sec": 79.0,
+      "duration_sec": 12.333333333333329,
+      "transcript": "so tilted forward that the body senses this. So it's gripping the backside of the pelvis to prevent them from falling too far forward within their center of gravity. The other thing is that the upper body is forward. So they need to grip something down here to help pull them underneath themselves. So again,",
+      "ocr_text": "An/\nFARIFORWARD",
+      "visual_description": "Representative frame contains OCR text: An/\nFARIFORWARD",
+      "segment_summary": "Segment 66.7-79.0s: so tilted forward that the body senses this. So it's gripping the backside of the pelvis to prevent them from falling too far forward within their center of gravity. The other thin",
+      "topics": [
+        "forward",
+        "body",
+        "them",
+        "tilted"
+      ],
+      "keywords": [
+        "forward",
+        "body",
+        "them",
+        "tilted",
+        "senses",
+        "it's"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9948724657297134,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 72.83333333333334,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_005_0072833ms.jpg"
+        }
+      ],
+      "retrieval_text": "so tilted forward that the body senses this. So it's gripping the backside of the pelvis to prevent them from falling too far forward within their center of gravity. The other thing is that the upper body is forward. So they need to grip something down here to help pull them underneath themselves. So again, | An/\nFARIFORWARD | Representative frame contains OCR text: An/\nFARIFORWARD | Segment 66.7-79.0s: so tilted forward that the body senses this. So it's gripping the backside of the pelvis to prevent them from falling too far forward within their center of gravity. The other thin | forward body them tilted | forward body them tilted senses it's",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_b8a8704b106a9433",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 8,
+      "start_sec": 79.0,
+      "end_sec": 83.16666666666667,
+      "duration_sec": 4.166666666666671,
+      "transcript": "is forward. So they need to grip something down here to help pull them underneath themselves. So again, they don't fall too far forward in their upper body. So the key is yes, we want to open up the back side",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 81.1s.",
+      "segment_summary": "Segment 79.0-83.2s: is forward. So they need to grip something down here to help pull them underneath themselves. So again, they don't fall too far forward in their upper body. So the key is yes, we w",
+      "topics": [
+        "forward",
+        "they",
+        "need",
+        "grip"
+      ],
+      "keywords": [
+        "forward",
+        "they",
+        "need",
+        "grip",
+        "something",
+        "down"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9949883208610117,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 81.08333333333334,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_006_0081083ms.jpg"
+        }
+      ],
+      "retrieval_text": "is forward. So they need to grip something down here to help pull them underneath themselves. So again, they don't fall too far forward in their upper body. So the key is yes, we want to open up the back side | Representative frame sampled at 81.1s. | Segment 79.0-83.2s: is forward. So they need to grip something down here to help pull them underneath themselves. So again, they don't fall too far forward in their upper body. So the key is yes, we w | forward they need grip | forward they need grip something down",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e6c1981840ee7432",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 9,
+      "start_sec": 83.16666666666667,
+      "end_sec": 98.16666666666667,
+      "duration_sec": 15.0,
+      "transcript": "they don't fall too far forward in their upper body. So the key is yes, we want to open up the back side of the hips, but we also want to teach the body how to stack the head over the rib cage over the pelvis and achieve that position of relative neutrality. That way we can move away from neutrality and access",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 92.6s.",
+      "segment_summary": "Segment 83.2-98.2s: they don't fall too far forward in their upper body. So the key is yes, we want to open up the back side of the hips, but we also want to teach the body how to stack the head over",
+      "topics": [
+        "body",
+        "want",
+        "over",
+        "neutrality"
+      ],
+      "keywords": [
+        "body",
+        "want",
+        "over",
+        "neutrality",
+        "they",
+        "don't"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.99510417599231,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 92.6,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_007_0092600ms.jpg"
+        }
+      ],
+      "retrieval_text": "they don't fall too far forward in their upper body. So the key is yes, we want to open up the back side of the hips, but we also want to teach the body how to stack the head over the rib cage over the pelvis and achieve that position of relative neutrality. That way we can move away from neutrality and access | Representative frame sampled at 92.6s. | Segment 83.2-98.2s: they don't fall too far forward in their upper body. So the key is yes, we want to open up the back side of the hips, but we also want to teach the body how to stack the head over | body want over neutrality | body want over neutrality they don't",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9775e9be270970ce",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 10,
+      "start_sec": 98.16666666666667,
+      "end_sec": 102.03333333333333,
+      "duration_sec": 3.86666666666666,
+      "transcript": "and achieve that position of relative neutrality. That way we can move away from neutrality and access other positions more genuinely. So get a foam roller in between your upper thighs like this.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 98.2-102.0s: and achieve that position of relative neutrality. That way we can move away from neutrality and access other positions more genuinely. So get a foam roller in between your upper th",
+      "topics": [
+        "neutrality",
+        "achieve",
+        "position",
+        "relative"
+      ],
+      "keywords": [
+        "neutrality",
+        "achieve",
+        "position",
+        "relative",
+        "move",
+        "away"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.99510417599231,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "and achieve that position of relative neutrality. That way we can move away from neutrality and access other positions more genuinely. So get a foam roller in between your upper thighs like this. | Segment 98.2-102.0s: and achieve that position of relative neutrality. That way we can move away from neutrality and access other positions more genuinely. So get a foam roller in between your upper th | neutrality achieve position relative | neutrality achieve position relative move away",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_70a261817c4ad6ef",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 11,
+      "start_sec": 102.03333333333333,
+      "end_sec": 117.03333333333333,
+      "duration_sec": 15.0,
+      "transcript": "other positions more genuinely. So get a foam roller in between your upper thighs like this. Find a desk or a box about waist tight, gently bend both knees. You want to feel the foot contacts of your heels, the base of your big toe, the base of the little toe on both sides. Now keeping a flat",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 102.0-117.0s: other positions more genuinely. So get a foam roller in between your upper thighs like this. Find a desk or a box about waist tight, gently bend both knees. You want to feel the fo",
+      "topics": [
+        "both",
+        "base",
+        "other",
+        "positions"
+      ],
+      "keywords": [
+        "both",
+        "base",
+        "other",
+        "positions",
+        "more",
+        "genuinely"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9941729105388125,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "other positions more genuinely. So get a foam roller in between your upper thighs like this. Find a desk or a box about waist tight, gently bend both knees. You want to feel the foot contacts of your heels, the base of your big toe, the base of the little toe on both sides. Now keeping a flat | Segment 102.0-117.0s: other positions more genuinely. So get a foam roller in between your upper thighs like this. Find a desk or a box about waist tight, gently bend both knees. You want to feel the fo | both base other positions | both base other positions more genuinely",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_755357786e4ded9b",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 12,
+      "start_sec": 117.03333333333333,
+      "end_sec": 132.03333333333333,
+      "duration_sec": 15.0,
+      "transcript": "of your heels, the base of your big toe, the base of the little toe on both sides. Now keeping a flat low back position, you're going to very gently bend your knees and slide your hands forward as you push your hips back very slowly. Stopping at the first sensation of stretching your glutes. You're going to maintain this position and very gently squeeze the foam roller just a two out of ten, not any more than that.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 117.0-132.0s: of your heels, the base of your big toe, the base of the little toe on both sides. Now keeping a flat low back position, you're going to very gently bend your knees and slide your",
+      "topics": [
+        "very",
+        "base",
+        "back",
+        "position"
+      ],
+      "keywords": [
+        "very",
+        "base",
+        "back",
+        "position",
+        "you're",
+        "going"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9923103796318173,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "of your heels, the base of your big toe, the base of the little toe on both sides. Now keeping a flat low back position, you're going to very gently bend your knees and slide your hands forward as you push your hips back very slowly. Stopping at the first sensation of stretching your glutes. You're going to maintain this position and very gently squeeze the foam roller just a two out of ten, not any more than that. | Segment 117.0-132.0s: of your heels, the base of your big toe, the base of the little toe on both sides. Now keeping a flat low back position, you're going to very gently bend your knees and slide your | very base back position | very base back position you're going",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_f6e4f59d90ed89e0",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 13,
+      "start_sec": 132.03333333333333,
+      "end_sec": 147.03333333333333,
+      "duration_sec": 15.0,
+      "transcript": "maintain this position and very gently squeeze the foam roller just a two out of ten, not any more than that. And then you're going to hang out here for a couple of slow breath cycles. And then you're going to release that squeeze on the foam roller, go down just another inch or two, increasing that stretch",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 141.0s.",
+      "segment_summary": "Segment 132.0-147.0s: maintain this position and very gently squeeze the foam roller just a two out of ten, not any more than that. And then you're going to hang out here for a couple of slow breath cyc",
+      "topics": [
+        "squeeze",
+        "foam",
+        "roller",
+        "just"
+      ],
+      "keywords": [
+        "squeeze",
+        "foam",
+        "roller",
+        "just",
+        "then",
+        "you're"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9920632333184282,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 141.01666666666665,
+          "path": "data\\processed\\rag\\src_2291016fe97f151f\\frames\\scene_008_0141016ms.jpg"
+        }
+      ],
+      "retrieval_text": "maintain this position and very gently squeeze the foam roller just a two out of ten, not any more than that. And then you're going to hang out here for a couple of slow breath cycles. And then you're going to release that squeeze on the foam roller, go down just another inch or two, increasing that stretch | Representative frame sampled at 141.0s. | Segment 132.0-147.0s: maintain this position and very gently squeeze the foam roller just a two out of ten, not any more than that. And then you're going to hang out here for a couple of slow breath cyc | squeeze foam roller just | squeeze foam roller just then you're",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_de10ee109abce584",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 14,
+      "start_sec": 147.03333333333333,
+      "end_sec": 162.03333333333333,
+      "duration_sec": 15.0,
+      "transcript": "release that squeeze on the foam roller, go down just another inch or two, increasing that stretch in your glutes, staying heavy over those foot contacts on both sides, re-squeeze just a two out of ten, hang out here for a couple of breaths, then do a third progression down right here and then re-squeeze, go back up to the top and restart. What you do not want to do is just shove your hips back",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 147.0-162.0s: release that squeeze on the foam roller, go down just another inch or two, increasing that stretch in your glutes, staying heavy over those foot contacts on both sides, re-squeeze",
+      "topics": [
+        "just",
+        "down",
+        "re-squeeze",
+        "here"
+      ],
+      "keywords": [
+        "just",
+        "down",
+        "re-squeeze",
+        "here",
+        "then",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9919396601617336,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "release that squeeze on the foam roller, go down just another inch or two, increasing that stretch in your glutes, staying heavy over those foot contacts on both sides, re-squeeze just a two out of ten, hang out here for a couple of breaths, then do a third progression down right here and then re-squeeze, go back up to the top and restart. What you do not want to do is just shove your hips back | Segment 147.0-162.0s: release that squeeze on the foam roller, go down just another inch or two, increasing that stretch in your glutes, staying heavy over those foot contacts on both sides, re-squeeze | just down re-squeeze here | just down re-squeeze here then back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e08359b9cc60ee52",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 15,
+      "start_sec": 162.03333333333333,
+      "end_sec": 177.03333333333333,
+      "duration_sec": 15.0,
+      "transcript": "go back up to the top and restart. What you do not want to do is just shove your hips back lock out your knees more and do this sort of thing. This is not going to give you the light of the glutes that we want. This is a very gentle knee bend and a forward fold more so",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 162.0-177.0s: go back up to the top and restart. What you do not want to do is just shove your hips back lock out your knees more and do this sort of thing. This is not going to give you the lig",
+      "topics": [
+        "back",
+        "want",
+        "more",
+        "restart"
+      ],
+      "keywords": [
+        "back",
+        "want",
+        "more",
+        "restart",
+        "just",
+        "shove"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.993462100935479,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "go back up to the top and restart. What you do not want to do is just shove your hips back lock out your knees more and do this sort of thing. This is not going to give you the light of the glutes that we want. This is a very gentle knee bend and a forward fold more so | Segment 162.0-177.0s: go back up to the top and restart. What you do not want to do is just shove your hips back lock out your knees more and do this sort of thing. This is not going to give you the lig | back want more restart | back want more restart just shove",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0000542fd6c24cdd",
+      "source_id": "src_2291016fe97f151f",
+      "segment_index": 16,
+      "start_sec": 177.03333333333333,
+      "end_sec": 180.0,
+      "duration_sec": 2.9666666666666686,
+      "transcript": "light of the glutes that we want. This is a very gentle knee bend and a forward fold more so then doing something like this.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 177.0-180.0s: light of the glutes that we want. This is a very gentle knee bend and a forward fold more so then doing something like this.",
+      "topics": [
+        "light",
+        "glutes",
+        "want",
+        "very"
+      ],
+      "keywords": [
+        "light",
+        "glutes",
+        "want",
+        "very",
+        "gentle",
+        "knee"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9942233213223517,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "light of the glutes that we want. This is a very gentle knee bend and a forward fold more so then doing something like this. | Segment 177.0-180.0s: light of the glutes that we want. This is a very gentle knee bend and a forward fold more so then doing something like this. | light glutes want very | light glutes want very gentle knee",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Why You Clench Your Glutes When You Stand",
+        "uri": "https://www.youtube.com/watch?v=G4314fq_b_Q",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 16,
+    "transcript_segment_count": 33,
+    "ocr_observation_count": 2,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "sync_result": {
+    "source_id": "src_2291016fe97f151f",
+    "assets_upserted": 12,
+    "segments_inserted": 16,
+    "segments_skipped": 0,
+    "qdrant_points_upserted": 16
+  }
+}

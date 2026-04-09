@@ -1,0 +1,1726 @@
+{
+  "source": {
+    "source_id": "src_7695b327ee5cb8e3",
+    "source_type": "local_video",
+    "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+    "canonical_uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+    "title": "Fix Scapular Winging - For Good",
+    "channel_or_author": null,
+    "language_hint": "es",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [
+      "scapula",
+      "winging"
+    ],
+    "duration_sec": null,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-04T14:59:35.203340Z",
+    "metadata": {
+      "path": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4"
+    }
+  },
+  "assets": [
+    {
+      "asset_id": "ast_7b906eba6254b336",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "video",
+      "path": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": null,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6601ff61e05a8cb1",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": null,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_0d2bc81832d9cc9e",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": null,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_353cae0bb76de352",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_001_0001816ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 1.8166666666666667,
+      "end_sec": 1.8166666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_78559b3fc7bc0c7c",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_002_0004633ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 4.633333333333334,
+      "end_sec": 4.633333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_220d6efa33fcc473",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_003_0007350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 7.35,
+      "end_sec": 7.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_edd184eb161269b6",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_004_0011216ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 11.216666666666667,
+      "end_sec": 11.216666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_968c4a81799918c0",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_005_0025250ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 25.25,
+      "end_sec": 25.25,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_19429683a80b24f0",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_006_0039616ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 39.61666666666667,
+      "end_sec": 39.61666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_03c9c5e352cb7882",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_007_0043866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 43.86666666666667,
+      "end_sec": 43.86666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_2a6bf708140967f3",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_008_0047166ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 47.16666666666667,
+      "end_sec": 47.16666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_7038df6230c4dd58",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_009_0049750ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 49.75,
+      "end_sec": 49.75,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_9241f4f976e4152e",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_010_0055400ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 55.4,
+      "end_sec": 55.4,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_2bb0cd51a25086d7",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_011_0060833ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 60.83333333333333,
+      "end_sec": 60.83333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5ca610f623c05f68",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_012_0062333ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 62.33333333333333,
+      "end_sec": 62.33333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_66cd3c5de00bb9d7",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_013_0063750ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 63.75,
+      "end_sec": 63.75,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_4f5c8ea7ed77955b",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_014_0066483ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 66.48333333333333,
+      "end_sec": 66.48333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_41af2017f939506e",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_015_0069516ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 69.51666666666667,
+      "end_sec": 69.51666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_9f216e91f9a38609",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_016_0072350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 72.35,
+      "end_sec": 72.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_688a88d696f629ae",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_017_0076766ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 76.76666666666668,
+      "end_sec": 76.76666666666668,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_26dba550f19a8097",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_018_0089600ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 89.6,
+      "end_sec": 89.6,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_27d2a43b141e4bd3",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_019_0113033ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 113.03333333333333,
+      "end_sec": 113.03333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_2949858a09c0dcff",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_020_0131116ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 131.11666666666667,
+      "end_sec": 131.11666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_339a276c093e0e89",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_021_0151350ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 151.35,
+      "end_sec": 151.35,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_66b7edf951eb25d0",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_022_0171683ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 171.68333333333334,
+      "end_sec": 171.68333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_8fd71b914d4308a2",
+      "source_id": "src_7695b327ee5cb8e3",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": null,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_2b3af340605132b8",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 3.6333333333333333,
+      "duration_sec": 3.6333333333333333,
+      "transcript": "A nuestros pasos dos puntos de apreciación hay similaros a las dos personas que buildings se acercan, que hay que hacerando rebeles straightening a los vecinos.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 1.8s.",
+      "segment_summary": "Segment 0.0-3.6s: A nuestros pasos dos puntos de apreciación hay similaros a las dos personas que buildings se acercan, que hay que hacerando rebeles straightening a los vecinos.",
+      "topics": [
+        "scapula",
+        "winging",
+        "nuestros",
+        "pasos",
+        "puntos",
+        "apreciación"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "nuestros",
+        "pasos",
+        "puntos",
+        "apreciación",
+        "similaros",
+        "personas"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9954355456866324,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 1.8166666666666667,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_001_0001816ms.jpg"
+        }
+      ],
+      "retrieval_text": "A nuestros pasos dos puntos de apreciación hay similaros a las dos personas que buildings se acercan, que hay que hacerando rebeles straightening a los vecinos. | Representative frame sampled at 1.8s. | Segment 0.0-3.6s: A nuestros pasos dos puntos de apreciación hay similaros a las dos personas que buildings se acercan, que hay que hacerando rebeles straightening a los vecinos. | scapula winging nuestros pasos puntos apreciación | scapula winging nuestros pasos puntos apreciación similaros personas",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_fbe3119d94b91524",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 2,
+      "start_sec": 3.6333333333333333,
+      "end_sec": 5.633333333333334,
+      "duration_sec": 2.0000000000000004,
+      "transcript": "se acercan, que hay que hacerando rebeles straightening a los vecinos. Hay que rellenar y mantener un poco más hipnotino de la vida.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 4.6s.",
+      "segment_summary": "Segment 3.6-5.6s: se acercan, que hay que hacerando rebeles straightening a los vecinos. Hay que rellenar y mantener un poco más hipnotino de la vida.",
+      "topics": [
+        "scapula",
+        "winging",
+        "acercan",
+        "hacerando",
+        "rebeles",
+        "straightening"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "acercan",
+        "hacerando",
+        "rebeles",
+        "straightening",
+        "vecinos",
+        "rellenar"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9954355456866324,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 4.633333333333334,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_002_0004633ms.jpg"
+        }
+      ],
+      "retrieval_text": "se acercan, que hay que hacerando rebeles straightening a los vecinos. Hay que rellenar y mantener un poco más hipnotino de la vida. | Representative frame sampled at 4.6s. | Segment 3.6-5.6s: se acercan, que hay que hacerando rebeles straightening a los vecinos. Hay que rellenar y mantener un poco más hipnotino de la vida. | scapula winging acercan hacerando rebeles straightening | scapula winging acercan hacerando rebeles straightening vecinos rellenar",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_94248772c28e4985",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 3,
+      "start_sec": 5.633333333333334,
+      "end_sec": 9.066666666666666,
+      "duration_sec": 3.4333333333333327,
+      "transcript": "Hay que rellenar y mantener un poco más hipnotino de la vida. Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida.",
+      "ocr_text": "POSITION",
+      "visual_description": "Representative frame contains OCR text: POSITION",
+      "segment_summary": "Segment 5.6-9.1s: Hay que rellenar y mantener un poco más hipnotino de la vida. Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida.",
+      "topics": [
+        "scapula",
+        "winging",
+        "hipnotino",
+        "vida",
+        "rellenar",
+        "mantener"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "hipnotino",
+        "vida",
+        "rellenar",
+        "mantener",
+        "poco",
+        "si黃pen"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9954355456866324,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 7.35,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_003_0007350ms.jpg"
+        }
+      ],
+      "retrieval_text": "Hay que rellenar y mantener un poco más hipnotino de la vida. Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida. | POSITION | Representative frame contains OCR text: POSITION | Segment 5.6-9.1s: Hay que rellenar y mantener un poco más hipnotino de la vida. Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida. | scapula winging hipnotino vida rellenar mantener | scapula winging hipnotino vida rellenar mantener poco si黃pen",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_e976eca26cccc20d",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 4,
+      "start_sec": 9.066666666666666,
+      "end_sec": 13.366666666666667,
+      "duration_sec": 4.300000000000001,
+      "transcript": "Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida. Aquí lo que probo a una cosa, como que no se le sortió,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 11.2s.",
+      "segment_summary": "Segment 9.1-13.4s: Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida. Aquí lo que probo a una cosa, como que no se le sortió,",
+      "topics": [
+        "scapula",
+        "winging",
+        "si黃pen",
+        "quien",
+        "corpses",
+        "atendió"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "si黃pen",
+        "quien",
+        "corpses",
+        "atendió",
+        "heido",
+        "hayas"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9954355456866324,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 11.216666666666667,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_004_0011216ms.jpg"
+        }
+      ],
+      "retrieval_text": "Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida. Aquí lo que probo a una cosa, como que no se le sortió, | Representative frame sampled at 11.2s. | Segment 9.1-13.4s: Pero si黃pen, quien se corpses, se atendió al heido, te hayas agerado mucho más hipnotino de la vida. Aquí lo que probo a una cosa, como que no se le sortió, | scapula winging si黃pen quien corpses atendió | scapula winging si黃pen quien corpses atendió heido hayas",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_9f07840daa7470a9",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 5,
+      "start_sec": 13.366666666666667,
+      "end_sec": 28.366666666666667,
+      "duration_sec": 15.0,
+      "transcript": "Aquí lo que probo a una cosa, como que no se le sortió, y que se le utilise la otra. Pero, particularmente, pero como la logra. La logra es de la moda, porque es una logra para dar ese lugar porque se at Bret Aaa's por la擊 o la otra forma con las bilas de la vida. Esta es laiva, la Cleveland, una de las cosas que gusta y cosas. Para parar de trabajar bajo la cara, en el tipo de la que hemos escuchado de la reunión de la�era,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 25.2s.",
+      "segment_summary": "Segment 13.4-28.4s: Aquí lo que probo a una cosa, como que no se le sortió, y que se le utilise la otra. Pero, particularmente, pero como la logra. La logra es de la moda, porque es una logra para dar",
+      "topics": [
+        "scapula",
+        "winging",
+        "logra",
+        "otra",
+        "cosas",
+        "aquí"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "logra",
+        "otra",
+        "cosas",
+        "aquí",
+        "probo",
+        "cosa"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.990594913426321,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 25.25,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_005_0025250ms.jpg"
+        }
+      ],
+      "retrieval_text": "Aquí lo que probo a una cosa, como que no se le sortió, y que se le utilise la otra. Pero, particularmente, pero como la logra. La logra es de la moda, porque es una logra para dar ese lugar porque se at Bret Aaa's por la擊 o la otra forma con las bilas de la vida. Esta es laiva, la Cleveland, una de las cosas que gusta y cosas. Para parar de trabajar bajo la cara, en el tipo de la que hemos escuchado de la reunión de la�era, | Representative frame sampled at 25.2s. | Segment 13.4-28.4s: Aquí lo que probo a una cosa, como que no se le sortió, y que se le utilise la otra. Pero, particularmente, pero como la logra. La logra es de la moda, porque es una logra para dar | scapula winging logra otra cosas aquí | scapula winging logra otra cosas aquí probo cosa",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_4844d62516f6740f",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 6,
+      "start_sec": 28.366666666666667,
+      "end_sec": 37.13333333333333,
+      "duration_sec": 8.766666666666666,
+      "transcript": "en el tipo de la que hemos escuchado de la reunión de la�era, de una una resistencia de relativa y suничación. Esta es la resistencia de que los que se declaran la vida de sus escuelas, porque este tipo de sesuas de una�era",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 28.4-37.1s: en el tipo de la que hemos escuchado de la reunión de la�era, de una una resistencia de relativa y suничación. Esta es la resistencia de que los que se declaran la vida de sus escu",
+      "topics": [
+        "scapula",
+        "winging",
+        "tipo",
+        "resistencia",
+        "hemos",
+        "escuchado"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "tipo",
+        "resistencia",
+        "hemos",
+        "escuchado",
+        "reunión",
+        "la�era"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9567104876041412,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "en el tipo de la que hemos escuchado de la reunión de la�era, de una una resistencia de relativa y suничación. Esta es la resistencia de que los que se declaran la vida de sus escuelas, porque este tipo de sesuas de una�era | Segment 28.4-37.1s: en el tipo de la que hemos escuchado de la reunión de la�era, de una una resistencia de relativa y suничación. Esta es la resistencia de que los que se declaran la vida de sus escu | scapula winging tipo resistencia hemos escuchado | scapula winging tipo resistencia hemos escuchado reunión la�era",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_2838f567ca0e1a93",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 7,
+      "start_sec": 37.13333333333333,
+      "end_sec": 42.1,
+      "duration_sec": 4.966666666666669,
+      "transcript": "la vida de sus escuelas, porque este tipo de sesuas de una�era es a la�era, es un relativo operado y sustanso del relativo. Y en muchas veces, el tiempo de la taña de la forma",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 39.6s.",
+      "segment_summary": "Segment 37.1-42.1s: la vida de sus escuelas, porque este tipo de sesuas de una�era es a la�era, es un relativo operado y sustanso del relativo. Y en muchas veces, el tiempo de la taña de la forma",
+      "topics": [
+        "scapula",
+        "winging",
+        "relativo",
+        "vida",
+        "escuelas",
+        "este"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "relativo",
+        "vida",
+        "escuelas",
+        "este",
+        "tipo",
+        "sesuas"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9567104876041412,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 39.61666666666667,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_006_0039616ms.jpg"
+        }
+      ],
+      "retrieval_text": "la vida de sus escuelas, porque este tipo de sesuas de una�era es a la�era, es un relativo operado y sustanso del relativo. Y en muchas veces, el tiempo de la taña de la forma | Representative frame sampled at 39.6s. | Segment 37.1-42.1s: la vida de sus escuelas, porque este tipo de sesuas de una�era es a la�era, es un relativo operado y sustanso del relativo. Y en muchas veces, el tiempo de la taña de la forma | scapula winging relativo vida escuelas este | scapula winging relativo vida escuelas este tipo sesuas",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_bddf1e747b3aeb16",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 8,
+      "start_sec": 42.1,
+      "end_sec": 45.63333333333333,
+      "duration_sec": 3.5333333333333314,
+      "transcript": "Y en muchas veces, el tiempo de la taña de la forma está en realidad, está bien entendiendo el trabajo en la parte de la gente activada",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 43.9s.",
+      "segment_summary": "Segment 42.1-45.6s: Y en muchas veces, el tiempo de la taña de la forma está en realidad, está bien entendiendo el trabajo en la parte de la gente activada",
+      "topics": [
+        "scapula",
+        "winging",
+        "está",
+        "muchas",
+        "veces",
+        "tiempo"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "está",
+        "muchas",
+        "veces",
+        "tiempo",
+        "taña",
+        "forma"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9567104876041412,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 43.86666666666667,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_007_0043866ms.jpg"
+        }
+      ],
+      "retrieval_text": "Y en muchas veces, el tiempo de la taña de la forma está en realidad, está bien entendiendo el trabajo en la parte de la gente activada | Representative frame sampled at 43.9s. | Segment 42.1-45.6s: Y en muchas veces, el tiempo de la taña de la forma está en realidad, está bien entendiendo el trabajo en la parte de la gente activada | scapula winging está muchas veces tiempo | scapula winging está muchas veces tiempo taña forma",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_2e543e8e52a3087c",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 9,
+      "start_sec": 45.63333333333333,
+      "end_sec": 48.7,
+      "duration_sec": 3.06666666666667,
+      "transcript": "el trabajo en la parte de la gente activada de poder poder poder atener a la�era,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 47.2s.",
+      "segment_summary": "Segment 45.6-48.7s: el trabajo en la parte de la gente activada de poder poder poder atener a la�era,",
+      "topics": [
+        "scapula",
+        "winging",
+        "poder",
+        "trabajo",
+        "parte",
+        "gente"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "poder",
+        "trabajo",
+        "parte",
+        "gente",
+        "activada",
+        "atener"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9567104876041412,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 47.16666666666667,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_008_0047166ms.jpg"
+        }
+      ],
+      "retrieval_text": "el trabajo en la parte de la gente activada de poder poder poder atener a la�era, | Representative frame sampled at 47.2s. | Segment 45.6-48.7s: el trabajo en la parte de la gente activada de poder poder poder atener a la�era, | scapula winging poder trabajo parte gente | scapula winging poder trabajo parte gente activada atener",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_66584fdc860921ec",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 10,
+      "start_sec": 48.7,
+      "end_sec": 50.8,
+      "duration_sec": 2.0999999999999943,
+      "transcript": "pero en el momento en estas cosas de esta manera es que la�era con la cancha y se puede atener.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 49.8s.",
+      "segment_summary": "Segment 48.7-50.8s: pero en el momento en estas cosas de esta manera es que la�era con la cancha y se puede atener.",
+      "topics": [
+        "scapula",
+        "winging",
+        "momento",
+        "estas",
+        "cosas",
+        "manera"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "momento",
+        "estas",
+        "cosas",
+        "manera",
+        "la�era",
+        "cancha"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9567104876041412,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 49.75,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_009_0049750ms.jpg"
+        }
+      ],
+      "retrieval_text": "pero en el momento en estas cosas de esta manera es que la�era con la cancha y se puede atener. | Representative frame sampled at 49.8s. | Segment 48.7-50.8s: pero en el momento en estas cosas de esta manera es que la�era con la cancha y se puede atener. | scapula winging momento estas cosas manera | scapula winging momento estas cosas manera la�era cancha",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_dead9a5df0dd0b54",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 11,
+      "start_sec": 50.8,
+      "end_sec": 60.0,
+      "duration_sec": 9.200000000000003,
+      "transcript": "es que la�era con la cancha y se puede atener. Pero yo no puedo hacer el trabajo de la�era de la�era, como yo me estoy de mi content. people with scapular winging are going to have a shoulder that's rounded forward",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 55.4s.",
+      "segment_summary": "Segment 50.8-60.0s: es que la�era con la cancha y se puede atener. Pero yo no puedo hacer el trabajo de la�era de la�era, como yo me estoy de mi content. people with scapular winging are going to have",
+      "topics": [
+        "scapula",
+        "winging",
+        "la�era",
+        "cancha",
+        "puede",
+        "atener"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "la�era",
+        "cancha",
+        "puede",
+        "atener",
+        "puedo",
+        "hacer"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9658829307882115,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 55.4,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_010_0055400ms.jpg"
+        }
+      ],
+      "retrieval_text": "es que la�era con la cancha y se puede atener. Pero yo no puedo hacer el trabajo de la�era de la�era, como yo me estoy de mi content. people with scapular winging are going to have a shoulder that's rounded forward | Representative frame sampled at 55.4s. | Segment 50.8-60.0s: es que la�era con la cancha y se puede atener. Pero yo no puedo hacer el trabajo de la�era de la�era, como yo me estoy de mi content. people with scapular winging are going to have | scapula winging la�era cancha puede atener | scapula winging la�era cancha puede atener puedo hacer",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_5e25f9af9e930418",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 12,
+      "start_sec": 60.0,
+      "end_sec": 61.666666666666664,
+      "duration_sec": 1.6666666666666643,
+      "transcript": "people with scapular winging are going to have a shoulder that's rounded forward on that side, that's going to create a lot of compression and tightness of tissues",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 60.8s.",
+      "segment_summary": "Segment 60.0-61.7s: people with scapular winging are going to have a shoulder that's rounded forward on that side, that's going to create a lot of compression and tightness of tissues",
+      "topics": [
+        "scapula",
+        "winging",
+        "going",
+        "that's",
+        "people",
+        "scapular"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "going",
+        "that's",
+        "people",
+        "scapular",
+        "shoulder"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9934002603404224,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 60.83333333333333,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_011_0060833ms.jpg"
+        }
+      ],
+      "retrieval_text": "people with scapular winging are going to have a shoulder that's rounded forward on that side, that's going to create a lot of compression and tightness of tissues | Representative frame sampled at 60.8s. | Segment 60.0-61.7s: people with scapular winging are going to have a shoulder that's rounded forward on that side, that's going to create a lot of compression and tightness of tissues | scapula winging going that's people scapular | scapula winging going that's people scapular shoulder",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_8e6a1507b7458a67",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 13,
+      "start_sec": 61.666666666666664,
+      "end_sec": 63.0,
+      "duration_sec": 1.3333333333333357,
+      "transcript": "on that side, that's going to create a lot of compression and tightness of tissues",
+      "ocr_text": "€\n“",
+      "visual_description": "Representative frame contains OCR text: €\n“",
+      "segment_summary": "Segment 61.7-63.0s: on that side, that's going to create a lot of compression and tightness of tissues",
+      "topics": [
+        "scapula",
+        "winging",
+        "side",
+        "that's",
+        "going",
+        "create"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "side",
+        "that's",
+        "going",
+        "create",
+        "compression",
+        "tightness"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9934002603404224,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 62.33333333333333,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_012_0062333ms.jpg"
+        }
+      ],
+      "retrieval_text": "on that side, that's going to create a lot of compression and tightness of tissues | €\n“ | Representative frame contains OCR text: €\n“ | Segment 61.7-63.0s: on that side, that's going to create a lot of compression and tightness of tissues | scapula winging side that's going create | scapula winging side that's going create compression tightness",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_b01c722e9d86435c",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 14,
+      "start_sec": 63.0,
+      "end_sec": 64.5,
+      "duration_sec": 1.5,
+      "transcript": "on that side, that's going to create a lot of compression and tightness of tissues and muscles on front side of the ribcage, on that side in particular.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 63.8s.",
+      "segment_summary": "Segment 63.0-64.5s: on that side, that's going to create a lot of compression and tightness of tissues and muscles on front side of the ribcage, on that side in particular.",
+      "topics": [
+        "scapula",
+        "winging",
+        "side",
+        "that's",
+        "going",
+        "create"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "side",
+        "that's",
+        "going",
+        "create",
+        "compression",
+        "tightness"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9934002603404224,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 63.75,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_013_0063750ms.jpg"
+        }
+      ],
+      "retrieval_text": "on that side, that's going to create a lot of compression and tightness of tissues and muscles on front side of the ribcage, on that side in particular. | Representative frame sampled at 63.8s. | Segment 63.0-64.5s: on that side, that's going to create a lot of compression and tightness of tissues and muscles on front side of the ribcage, on that side in particular. | scapula winging side that's going create | scapula winging side that's going create compression tightness",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_d644f2ee6dbd56ba",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 15,
+      "start_sec": 64.5,
+      "end_sec": 68.46666666666667,
+      "duration_sec": 3.9666666666666686,
+      "transcript": "and muscles on front side of the ribcage, on that side in particular. So, while we do pull the shoulder back into a better position, we also want to educate",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 66.5s.",
+      "segment_summary": "Segment 64.5-68.5s: and muscles on front side of the ribcage, on that side in particular. So, while we do pull the shoulder back into a better position, we also want to educate",
+      "topics": [
+        "scapula",
+        "winging",
+        "side",
+        "muscles",
+        "front",
+        "ribcage"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "side",
+        "muscles",
+        "front",
+        "ribcage",
+        "particular",
+        "while"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9934002603404224,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 66.48333333333333,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_014_0066483ms.jpg"
+        }
+      ],
+      "retrieval_text": "and muscles on front side of the ribcage, on that side in particular. So, while we do pull the shoulder back into a better position, we also want to educate | Representative frame sampled at 66.5s. | Segment 64.5-68.5s: and muscles on front side of the ribcage, on that side in particular. So, while we do pull the shoulder back into a better position, we also want to educate | scapula winging side muscles front ribcage | scapula winging side muscles front ribcage particular while",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_a37125c71c256289",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 16,
+      "start_sec": 68.46666666666667,
+      "end_sec": 70.56666666666666,
+      "duration_sec": 2.0999999999999943,
+      "transcript": "So, while we do pull the shoulder back into a better position, we also want to educate",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 69.5s.",
+      "segment_summary": "Segment 68.5-70.6s: So, while we do pull the shoulder back into a better position, we also want to educate",
+      "topics": [
+        "scapula",
+        "winging",
+        "while",
+        "pull",
+        "shoulder",
+        "back"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "while",
+        "pull",
+        "shoulder",
+        "back",
+        "better",
+        "position"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9934002603404224,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 69.51666666666667,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_015_0069516ms.jpg"
+        }
+      ],
+      "retrieval_text": "So, while we do pull the shoulder back into a better position, we also want to educate | Representative frame sampled at 69.5s. | Segment 68.5-70.6s: So, while we do pull the shoulder back into a better position, we also want to educate | scapula winging while pull shoulder back | scapula winging while pull shoulder back better position",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_85aa311c31070a2c",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 17,
+      "start_sec": 70.56666666666666,
+      "end_sec": 74.13333333333334,
+      "duration_sec": 3.566666666666677,
+      "transcript": "So, while we do pull the shoulder back into a better position, we also want to educate better opening and expansion of the space that should be happening with every single",
+      "ocr_text": "sae\nye",
+      "visual_description": "Representative frame contains OCR text: sae\nye",
+      "segment_summary": "Segment 70.6-74.1s: So, while we do pull the shoulder back into a better position, we also want to educate better opening and expansion of the space that should be happening with every single",
+      "topics": [
+        "scapula",
+        "winging",
+        "better",
+        "while",
+        "pull",
+        "shoulder"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "better",
+        "while",
+        "pull",
+        "shoulder",
+        "back",
+        "position"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9934002603404224,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 72.35,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_016_0072350ms.jpg"
+        }
+      ],
+      "retrieval_text": "So, while we do pull the shoulder back into a better position, we also want to educate better opening and expansion of the space that should be happening with every single | sae\nye | Representative frame contains OCR text: sae\nye | Segment 70.6-74.1s: So, while we do pull the shoulder back into a better position, we also want to educate better opening and expansion of the space that should be happening with every single | scapula winging better while pull shoulder | scapula winging better while pull shoulder back position",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_10db23eb7838dceb",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 18,
+      "start_sec": 74.13333333333334,
+      "end_sec": 79.4,
+      "duration_sec": 5.266666666666666,
+      "transcript": "better opening and expansion of the space that should be happening with every single breath that we take. If that's not happening, then we might strengthen the muscles and reposition the shoulder blade",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 76.8s.",
+      "segment_summary": "Segment 74.1-79.4s: better opening and expansion of the space that should be happening with every single breath that we take. If that's not happening, then we might strengthen the muscles and repositi",
+      "topics": [
+        "scapula",
+        "winging",
+        "happening",
+        "better",
+        "opening",
+        "expansion"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "happening",
+        "better",
+        "opening",
+        "expansion",
+        "space",
+        "should"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9934002603404224,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 76.76666666666668,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_017_0076766ms.jpg"
+        }
+      ],
+      "retrieval_text": "better opening and expansion of the space that should be happening with every single breath that we take. If that's not happening, then we might strengthen the muscles and reposition the shoulder blade | Representative frame sampled at 76.8s. | Segment 74.1-79.4s: better opening and expansion of the space that should be happening with every single breath that we take. If that's not happening, then we might strengthen the muscles and repositi | scapula winging happening better opening expansion | scapula winging happening better opening expansion space should",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_60882453c5e70e4e",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 19,
+      "start_sec": 79.4,
+      "end_sec": 94.4,
+      "duration_sec": 15.0,
+      "transcript": "If that's not happening, then we might strengthen the muscles and reposition the shoulder blade better on the back ribcage, but it won't last because our body won't know how to open the space and keep it open. So an optimal solution would entail opening up this front side ribcage space for better expansion. Wow, repositioning the scapula into a better position on the back ribcage via the long head",
+      "ocr_text": "sh .\n\n1 [Pp\n\n(ie Sy\n\n<< I mand\n—)) @\n\n(\n\nwe\n\nG",
+      "visual_description": "Representative frame contains OCR text: sh .\n\n1 [Pp\n\n(ie Sy\n\n<< I mand\n—)) @\n\n(\n\nwe\n\nG",
+      "segment_summary": "Segment 79.4-94.4s: If that's not happening, then we might strengthen the muscles and reposition the shoulder blade better on the back ribcage, but it won't last because our body won't know how to ope",
+      "topics": [
+        "scapula",
+        "winging",
+        "better",
+        "ribcage",
+        "back",
+        "won't"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "better",
+        "ribcage",
+        "back",
+        "won't",
+        "open",
+        "space"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9949056277982891,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 89.6,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_018_0089600ms.jpg"
+        }
+      ],
+      "retrieval_text": "If that's not happening, then we might strengthen the muscles and reposition the shoulder blade better on the back ribcage, but it won't last because our body won't know how to open the space and keep it open. So an optimal solution would entail opening up this front side ribcage space for better expansion. Wow, repositioning the scapula into a better position on the back ribcage via the long head | sh .\n\n1 [Pp\n\n(ie Sy\n\n<< I mand\n—)) @\n\n(\n\nwe\n\nG | Representative frame contains OCR text: sh .\n\n1 [Pp\n\n(ie Sy\n\n<< I mand\n—)) @\n\n(\n\nwe\n\nG | Segment 79.4-94.4s: If that's not happening, then we might strengthen the muscles and reposition the shoulder blade better on the back ribcage, but it won't last because our body won't know how to ope | scapula winging better ribcage back won't | scapula winging better ribcage back won't open space",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_b9e33f610399b8eb",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 20,
+      "start_sec": 94.4,
+      "end_sec": 99.8,
+      "duration_sec": 5.3999999999999915,
+      "transcript": "Wow, repositioning the scapula into a better position on the back ribcage via the long head of the triceps and the low traps.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 94.4-99.8s: Wow, repositioning the scapula into a better position on the back ribcage via the long head of the triceps and the low traps.",
+      "topics": [
+        "scapula",
+        "winging",
+        "repositioning",
+        "better",
+        "position"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "repositioning",
+        "better",
+        "position",
+        "back",
+        "ribcage"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9964109952561557,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "Wow, repositioning the scapula into a better position on the back ribcage via the long head of the triceps and the low traps. | Segment 94.4-99.8s: Wow, repositioning the scapula into a better position on the back ribcage via the long head of the triceps and the low traps. | scapula winging repositioning better position | scapula winging repositioning better position back ribcage",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_ca61339028d1fa92",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 21,
+      "start_sec": 99.8,
+      "end_sec": 114.8,
+      "duration_sec": 15.0,
+      "transcript": "of the triceps and the low traps. All you need for this is a band attached to something high, like a door frame or a rack. So that way when you're in a seated position, when you pull your arm across your body like this, you have a perfectly straight line from your arms through the band. So sit feeling both sit bones evenly as you can and then what you're going to do is very slightly",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 113.0s.",
+      "segment_summary": "Segment 99.8-114.8s: of the triceps and the low traps. All you need for this is a band attached to something high, like a door frame or a rack. So that way when you're in a seated position, when you pu",
+      "topics": [
+        "scapula",
+        "winging",
+        "band",
+        "like",
+        "when",
+        "you're"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "band",
+        "like",
+        "when",
+        "you're",
+        "triceps",
+        "traps"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9964109952561557,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 113.03333333333333,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_019_0113033ms.jpg"
+        }
+      ],
+      "retrieval_text": "of the triceps and the low traps. All you need for this is a band attached to something high, like a door frame or a rack. So that way when you're in a seated position, when you pull your arm across your body like this, you have a perfectly straight line from your arms through the band. So sit feeling both sit bones evenly as you can and then what you're going to do is very slightly | Representative frame sampled at 113.0s. | Segment 99.8-114.8s: of the triceps and the low traps. All you need for this is a band attached to something high, like a door frame or a rack. So that way when you're in a seated position, when you pu | scapula winging band like when you're | scapula winging band like when you're triceps traps",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_e1ac2c88e9440415",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 22,
+      "start_sec": 114.8,
+      "end_sec": 126.26666666666667,
+      "duration_sec": 11.466666666666669,
+      "transcript": "So sit feeling both sit bones evenly as you can and then what you're going to do is very slightly dip the shoulder down on the opposite side and you're going to feel a little bit of tension through your side abs or obliques right here. That's going to help open up this chest wall to expand better. And then not elevating your shoulder, keeping it relaxed, just pull your elbow into extension",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 114.8-126.3s: So sit feeling both sit bones evenly as you can and then what you're going to do is very slightly dip the shoulder down on the opposite side and you're going to feel a little bit o",
+      "topics": [
+        "scapula",
+        "winging",
+        "going",
+        "then",
+        "you're",
+        "shoulder"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "going",
+        "then",
+        "you're",
+        "shoulder",
+        "side",
+        "feeling"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9926808885298669,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "So sit feeling both sit bones evenly as you can and then what you're going to do is very slightly dip the shoulder down on the opposite side and you're going to feel a little bit of tension through your side abs or obliques right here. That's going to help open up this chest wall to expand better. And then not elevating your shoulder, keeping it relaxed, just pull your elbow into extension | Segment 114.8-126.3s: So sit feeling both sit bones evenly as you can and then what you're going to do is very slightly dip the shoulder down on the opposite side and you're going to feel a little bit o | scapula winging going then you're shoulder | scapula winging going then you're shoulder side feeling",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_9de099c5bc8a22cd",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 23,
+      "start_sec": 126.26666666666667,
+      "end_sec": 135.96666666666667,
+      "duration_sec": 9.700000000000003,
+      "transcript": "And then not elevating your shoulder, keeping it relaxed, just pull your elbow into extension like this and you should feel your triceps start to work with a little bit of your lower trap",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 131.1s.",
+      "segment_summary": "Segment 126.3-136.0s: And then not elevating your shoulder, keeping it relaxed, just pull your elbow into extension like this and you should feel your triceps start to work with a little bit of your low",
+      "topics": [
+        "scapula",
+        "winging",
+        "then",
+        "elevating",
+        "shoulder",
+        "keeping"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "then",
+        "elevating",
+        "shoulder",
+        "keeping",
+        "relaxed",
+        "just"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9917483618482947,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 131.11666666666667,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_020_0131116ms.jpg"
+        }
+      ],
+      "retrieval_text": "And then not elevating your shoulder, keeping it relaxed, just pull your elbow into extension like this and you should feel your triceps start to work with a little bit of your lower trap | Representative frame sampled at 131.1s. | Segment 126.3-136.0s: And then not elevating your shoulder, keeping it relaxed, just pull your elbow into extension like this and you should feel your triceps start to work with a little bit of your low | scapula winging then elevating shoulder keeping | scapula winging then elevating shoulder keeping relaxed just",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_a4a047bed1cea212",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 24,
+      "start_sec": 135.96666666666667,
+      "end_sec": 150.96666666666667,
+      "duration_sec": 15.0,
+      "transcript": "like this and you should feel your triceps start to work with a little bit of your lower trap as well without again, shrugging up the shoulder, just this shoulder is relatively down. Now breathe in through your nose, out through your mouth, nice and relaxed in this position for an isometric contraction like this. You want to make sure your eyes stay perfectly straight ahead because this shoulders drop down a little",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 136.0-151.0s: like this and you should feel your triceps start to work with a little bit of your lower trap as well without again, shrugging up the shoulder, just this shoulder is relatively dow",
+      "topics": [
+        "scapula",
+        "winging",
+        "like",
+        "little",
+        "shoulder",
+        "down"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "like",
+        "little",
+        "shoulder",
+        "down",
+        "through",
+        "should"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9827759275212884,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "like this and you should feel your triceps start to work with a little bit of your lower trap as well without again, shrugging up the shoulder, just this shoulder is relatively down. Now breathe in through your nose, out through your mouth, nice and relaxed in this position for an isometric contraction like this. You want to make sure your eyes stay perfectly straight ahead because this shoulders drop down a little | Segment 136.0-151.0s: like this and you should feel your triceps start to work with a little bit of your lower trap as well without again, shrugging up the shoulder, just this shoulder is relatively dow | scapula winging like little shoulder down | scapula winging like little shoulder down through should",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_399666e3771d0b06",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 25,
+      "start_sec": 150.96666666666667,
+      "end_sec": 165.96666666666667,
+      "duration_sec": 15.0,
+      "transcript": "You want to make sure your eyes stay perfectly straight ahead because this shoulders drop down a little bit, don't let your head come off with you like that, keep your eyes relatively level. You can also make this a dynamic exercise by turning into a tricep extension like this.",
+      "ocr_text": "EYES STAY",
+      "visual_description": "Representative frame contains OCR text: EYES STAY",
+      "segment_summary": "Segment 151.0-166.0s: You want to make sure your eyes stay perfectly straight ahead because this shoulders drop down a little bit, don't let your head come off with you like that, keep your eyes relativ",
+      "topics": [
+        "scapula",
+        "winging",
+        "eyes",
+        "make",
+        "stay",
+        "like"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "eyes",
+        "make",
+        "stay",
+        "like",
+        "want",
+        "sure"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9693172760307789,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 151.35,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_021_0151350ms.jpg"
+        }
+      ],
+      "retrieval_text": "You want to make sure your eyes stay perfectly straight ahead because this shoulders drop down a little bit, don't let your head come off with you like that, keep your eyes relatively level. You can also make this a dynamic exercise by turning into a tricep extension like this. | EYES STAY | Representative frame contains OCR text: EYES STAY | Segment 151.0-166.0s: You want to make sure your eyes stay perfectly straight ahead because this shoulders drop down a little bit, don't let your head come off with you like that, keep your eyes relativ | scapula winging eyes make stay like | scapula winging eyes make stay like want sure",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_e274831f2db4a260",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 26,
+      "start_sec": 165.96666666666667,
+      "end_sec": 166.73333333333332,
+      "duration_sec": 0.7666666666666515,
+      "transcript": "You can also make this a dynamic exercise by turning into a tricep extension like this.",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 166.0-166.7s: You can also make this a dynamic exercise by turning into a tricep extension like this.",
+      "topics": [
+        "scapula",
+        "winging",
+        "also",
+        "make",
+        "dynamic",
+        "exercise"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "also",
+        "make",
+        "dynamic",
+        "exercise",
+        "turning",
+        "tricep"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9693172760307789,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "You can also make this a dynamic exercise by turning into a tricep extension like this. | Segment 166.0-166.7s: You can also make this a dynamic exercise by turning into a tricep extension like this. | scapula winging also make dynamic exercise | scapula winging also make dynamic exercise turning tricep",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    },
+    {
+      "segment_id": "seg_1ae76318b14d7407",
+      "source_id": "src_7695b327ee5cb8e3",
+      "segment_index": 27,
+      "start_sec": 166.73333333333332,
+      "end_sec": 176.63333333333333,
+      "duration_sec": 9.900000000000006,
+      "transcript": "You can also make this a dynamic exercise by turning into a tricep extension like this. And once you get an idea for what that should feel like, you can actually really build strength through those triceps and not long head in particular by turning it into a full-blown cable machine exercise like this.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 171.7s.",
+      "segment_summary": "Segment 166.7-176.6s: You can also make this a dynamic exercise by turning into a tricep extension like this. And once you get an idea for what that should feel like, you can actually really build stren",
+      "topics": [
+        "scapula",
+        "winging",
+        "like",
+        "exercise",
+        "turning",
+        "also"
+      ],
+      "keywords": [
+        "scapula",
+        "winging",
+        "like",
+        "exercise",
+        "turning",
+        "also",
+        "make",
+        "dynamic"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "es",
+      "confidence": {
+        "asr": 0.9100438049063087,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 171.68333333333334,
+          "path": "data\\processed\\rag\\src_7695b327ee5cb8e3\\frames\\scene_022_0171683ms.jpg"
+        }
+      ],
+      "retrieval_text": "You can also make this a dynamic exercise by turning into a tricep extension like this. And once you get an idea for what that should feel like, you can actually really build strength through those triceps and not long head in particular by turning it into a full-blown cable machine exercise like this. | Representative frame sampled at 171.7s. | Segment 166.7-176.6s: You can also make this a dynamic exercise by turning into a tricep extension like this. And once you get an idea for what that should feel like, you can actually really build stren | scapula winging like exercise turning also | scapula winging like exercise turning also make dynamic",
+      "payload": {
+        "source_type": "local_video",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Fix Scapular Winging - For Good",
+        "uri": "D:\\sistema-biomecanico\\data\\to-learn\\Fix Scapular Winging - For Good.mp4",
+        "channel_or_author": ""
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "sync_result": {
+    "source_id": "src_7695b327ee5cb8e3",
+    "assets_upserted": 26,
+    "segments_inserted": 27,
+    "segments_skipped": 0,
+    "qdrant_points_upserted": 27
+  }
+}

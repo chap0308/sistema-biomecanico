@@ -1,0 +1,65 @@
+{
+  "answer": "Con la evidencia disponible, el recurso mas cercano es 'Corrective Exercise: 9.2-11.8s: traditional corrective exercises that don't get them the results they're lookin': Segment 9.2-11.8s: traditional corrective exercises that don't get them the results they're looking for. But in order Ejercicios relacionados encontrados: Corrective Exercise: 9.2-11.8s: traditional corrective exercises that don't get them the results they're lookin, Side Plank with Wall Push for Scapular Repositioning.",
+  "recommended_exercises": [
+    "Corrective Exercise: 9.2-11.8s: traditional corrective exercises that don't get them the results they're lookin",
+    "Side Plank with Wall Push for Scapular Repositioning"
+  ],
+  "key_points": [
+    "Segment 9.2-11.8s: traditional corrective exercises that don't get them the results they're looking for. But in order",
+    "This exercise builds on the side plank with overhead arm by adding an isometric push into the wall with the top hand to actively reposition the shoulder blade back onto the rib cage, improving scapular stability and congruence.",
+    "Segment 0.0-2.8s: Most people that can't squat deep or get the full depth without butt-winking are struggling with one thing in particular.",
+    "When the pectorals and latissimus dorsi are too short and overactive, they pull the shoulders forward, round the upper spine, and can push the lower spine into extension (hyper-lordosis). This creates a shortened and compressed spinal position and restricts rib cage expansion."
+  ],
+  "cautions": [
+    "traditional corrective exercises that don't get them the results they're looking for.",
+    "Arm being too far behind, which will flare the rib cage and arch the back.",
+    "Most people that can't squat deep or get the full depth without butt-winking are struggling with one thing in particular."
+  ],
+  "citations": [
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/25e3u65qssY",
+      "segment_id": "kseg_bce5faa488c4be7b",
+      "knowledge_unit_title": "Corrective Exercise: 9.2-11.8s: traditional corrective exercises that don't get them the results they're lookin",
+      "timestamp_hint": "00:09, 00:11"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/xFNPwIoJbTI",
+      "segment_id": "kseg_bcff045692985c9a",
+      "knowledge_unit_title": "Side Plank with Wall Push for Scapular Repositioning",
+      "timestamp_hint": "1:38-1:49, 2:40-2:59"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/_AdB1lzI4Rk",
+      "segment_id": "kseg_61b23a28f548e9a2",
+      "knowledge_unit_title": "Compensation Pattern: 0.0-2.8s: Most people that can't squat deep or get the full depth without butt-winking are",
+      "timestamp_hint": "00:00, 00:02"
+    },
+    {
+      "source_type": "youtube",
+      "title": "",
+      "source_uri": "https://www.youtube.com/shorts/FoNjEz5rUW4",
+      "segment_id": "kseg_316b315cb3d574b6",
+      "knowledge_unit_title": "Impact of Tight Lats and Pectorals on Posture and Spine",
+      "timestamp_hint": "0:11, 0:20, 0:30, 0:36, 1:45"
+    }
+  ],
+  "retrieval_quality": "high",
+  "used_collections": [
+    "video_knowledge_units_v1",
+    "video_segments_v1"
+  ],
+  "model_used": "grounded_fallback (fallback)",
+  "answer_backend": "grounded_fallback",
+  "fallback_reason": "",
+  "fallback_error_code": "",
+  "attempted_backends": [
+    "grounded"
+  ],
+  "query": "No puedo tocar mi omoplato contrario con mi brazo derecho y siento rigidez en el hombro"
+}

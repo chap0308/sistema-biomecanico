@@ -1,0 +1,1887 @@
+{
+  "source": {
+    "source_id": "src_ab2e584294246201",
+    "source_type": "youtube",
+    "uri": "https://www.youtube.com/shorts/XvWPTgl24ZE",
+    "canonical_uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+    "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+    "channel_or_author": "Conor Harris",
+    "language_hint": "en",
+    "course_id": "biomechanics_knowledge_v1",
+    "tags": [],
+    "duration_sec": 180.0,
+    "ingest_status": "processed_local_level1",
+    "created_at": "2026-04-05T17:43:10.587264Z",
+    "metadata": {}
+  },
+  "assets": [
+    {
+      "asset_id": "ast_964b76cf44c6d4dc",
+      "source_id": "src_ab2e584294246201",
+      "kind": "video",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\downloads\\source.mp4",
+      "mime_type": "video/mp4",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "origin": "youtube_download"
+      }
+    },
+    {
+      "asset_id": "ast_87c865ac459d035b",
+      "source_id": "src_ab2e584294246201",
+      "kind": "audio",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\audio.wav",
+      "mime_type": "audio/wav",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "extractor": "ffmpeg"
+      }
+    },
+    {
+      "asset_id": "ast_3757b6b6a7721aa1",
+      "source_id": "src_ab2e584294246201",
+      "kind": "transcript",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\transcript.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    },
+    {
+      "asset_id": "ast_3543146d03823e57",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_001_0000366ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 0.36666666666666664,
+      "end_sec": 0.36666666666666664,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_6bbc38b82e14cd6f",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_002_0001566ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 1.5666666666666667,
+      "end_sec": 1.5666666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_9a23a3d203716012",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_003_0003900ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 3.9000000000000004,
+      "end_sec": 3.9000000000000004,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c743f5877c22a11d",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_004_0008950ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 8.95,
+      "end_sec": 8.95,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_97e3929988471000",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_005_0014666ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 14.666666666666666,
+      "end_sec": 14.666666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_e3215ba35b65a2ca",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_006_0017866ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 17.866666666666667,
+      "end_sec": 17.866666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_5a8f5c2d4593544d",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_007_0020483ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 20.483333333333334,
+      "end_sec": 20.483333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b469506003ec02ec",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_008_0027700ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 27.700000000000003,
+      "end_sec": 27.700000000000003,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_09c2cfb961f71ca8",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_009_0035216ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 35.21666666666667,
+      "end_sec": 35.21666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1d6b9edd3d62107f",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_010_0043616ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 43.61666666666667,
+      "end_sec": 43.61666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_bf21ee1ace3d194f",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_011_0054066ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 54.06666666666666,
+      "end_sec": 54.06666666666666,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_8341f81f386cc789",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_012_0060233ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 60.233333333333334,
+      "end_sec": 60.233333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1bd158fa9a908074",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_013_0064016ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 64.01666666666667,
+      "end_sec": 64.01666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_75fdb0e3072fc7a0",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_014_0066699ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 66.69999999999999,
+      "end_sec": 66.69999999999999,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1bec21fe9e8aa586",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_015_0070800ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 70.8,
+      "end_sec": 70.8,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_17883401b8f1d000",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_016_0084183ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 84.18333333333334,
+      "end_sec": 84.18333333333334,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_06ee28fea93c5809",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_017_0097250ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 97.25,
+      "end_sec": 97.25,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_cb068c07b2d0a18b",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_018_0101750ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 101.75,
+      "end_sec": 101.75,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_b69f7a361c9193b7",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_019_0105016ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 105.01666666666667,
+      "end_sec": 105.01666666666667,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_428d74495584c83d",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_020_0110050ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 110.05000000000001,
+      "end_sec": 110.05000000000001,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_c4058febd6dc2b12",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_021_0123600ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 123.6,
+      "end_sec": 123.6,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_352733f69660e959",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_022_0134983ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 134.98333333333335,
+      "end_sec": 134.98333333333335,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_1aeb5f6ae83ecffe",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_023_0137733ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 137.73333333333335,
+      "end_sec": 137.73333333333335,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_f1834a86ab327a1d",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_024_0141083ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 141.08333333333331,
+      "end_sec": 141.08333333333331,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_55ef6e65fc468e11",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_025_0159033ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 159.03333333333333,
+      "end_sec": 159.03333333333333,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_fe9b612b3a08e9af",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_026_0176300ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 176.3,
+      "end_sec": 176.3,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_ea645aa0dedb879b",
+      "source_id": "src_ab2e584294246201",
+      "kind": "frame",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_027_0178766ms.jpg",
+      "mime_type": "image/jpeg",
+      "start_sec": 178.76666666666665,
+      "end_sec": 178.76666666666665,
+      "metadata": {
+        "pipeline_level": 1
+      }
+    },
+    {
+      "asset_id": "ast_f2dfb56c9b5b2f1a",
+      "source_id": "src_ab2e584294246201",
+      "kind": "ocr",
+      "path": "data\\processed\\rag\\src_ab2e584294246201\\ocr.txt",
+      "mime_type": "text/plain",
+      "start_sec": 0.0,
+      "end_sec": 180.0,
+      "metadata": {
+        "pipeline_level": 1,
+        "status": "ok"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_34f101aa9b59b991",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 1,
+      "start_sec": 0.0,
+      "end_sec": 0.7333333333333333,
+      "duration_sec": 0.7333333333333333,
+      "transcript": "Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 0.4s.",
+      "segment_summary": "Segment 0.0-0.7s: Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles.",
+      "topics": [
+        "most",
+        "people",
+        "elevated",
+        "shoulders"
+      ],
+      "keywords": [
+        "most",
+        "people",
+        "elevated",
+        "shoulders",
+        "like",
+        "their"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9947199476882815,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 0.36666666666666664,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_001_0000366ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. | Representative frame sampled at 0.4s. | Segment 0.0-0.7s: Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. | most people elevated shoulders | most people elevated shoulders like their",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_285251887f20f5c3",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 2,
+      "start_sec": 0.7333333333333333,
+      "end_sec": 2.4,
+      "duration_sec": 1.6666666666666665,
+      "transcript": "Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 1.6s.",
+      "segment_summary": "Segment 0.7-2.4s: Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles.",
+      "topics": [
+        "most",
+        "people",
+        "elevated",
+        "shoulders"
+      ],
+      "keywords": [
+        "most",
+        "people",
+        "elevated",
+        "shoulders",
+        "like",
+        "their"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9947199476882815,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 1.5666666666666667,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_002_0001566ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. | Representative frame sampled at 1.6s. | Segment 0.7-2.4s: Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. | most people elevated shoulders | most people elevated shoulders like their",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_897d859a4993d490",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 3,
+      "start_sec": 2.4,
+      "end_sec": 5.4,
+      "duration_sec": 3.0000000000000004,
+      "transcript": "Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. So they try to do a lot of exercises like this when they try to pull the shoulders back and down,",
+      "ocr_text": "‘4 Z Y upper trapezius\n\n7\n\n\\ 4 a\n\\ =\nie\n\nAl UP",
+      "visual_description": "Representative frame contains OCR text: ‘4 Z Y upper trapezius\n\n7\n\n\\ 4 a\n\\ =\nie\n\nAl UP",
+      "segment_summary": "Segment 2.4-5.4s: Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. So they try to do a lot of exercis",
+      "topics": [
+        "they",
+        "shoulders",
+        "like",
+        "upper"
+      ],
+      "keywords": [
+        "they",
+        "shoulders",
+        "like",
+        "upper",
+        "most",
+        "people"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9947199476882815,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 3.9000000000000004,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_003_0003900ms.jpg"
+        }
+      ],
+      "retrieval_text": "Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. So they try to do a lot of exercises like this when they try to pull the shoulders back and down, | ‘4 Z Y upper trapezius\n\n7\n\n\\ 4 a\n\\ =\nie\n\nAl UP | Representative frame contains OCR text: ‘4 Z Y upper trapezius\n\n7\n\n\\ 4 a\n\\ =\nie\n\nAl UP | Segment 2.4-5.4s: Most people that have elevated shoulders like this in their posture, think of this because they have two tightened overactive upper trap muscles. So they try to do a lot of exercis | they shoulders like upper | they shoulders like upper most people",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7754cbad7d81bda5",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 4,
+      "start_sec": 5.4,
+      "end_sec": 12.5,
+      "duration_sec": 7.1,
+      "transcript": "So they try to do a lot of exercises like this when they try to pull the shoulders back and down, but this could actually be making your problem worse, not better. Here's what you need to know, and we'll actually help you fix the issue.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 8.9s.",
+      "segment_summary": "Segment 5.4-12.5s: So they try to do a lot of exercises like this when they try to pull the shoulders back and down, but this could actually be making your problem worse, not better. Here's what you",
+      "topics": [
+        "they",
+        "actually",
+        "exercises",
+        "like"
+      ],
+      "keywords": [
+        "they",
+        "actually",
+        "exercises",
+        "like",
+        "when",
+        "pull"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9947199476882815,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 8.95,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_004_0008950ms.jpg"
+        }
+      ],
+      "retrieval_text": "So they try to do a lot of exercises like this when they try to pull the shoulders back and down, but this could actually be making your problem worse, not better. Here's what you need to know, and we'll actually help you fix the issue. | Representative frame sampled at 8.9s. | Segment 5.4-12.5s: So they try to do a lot of exercises like this when they try to pull the shoulders back and down, but this could actually be making your problem worse, not better. Here's what you | they actually exercises like | they actually exercises like when pull",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_9aa5ba768adc6dc5",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 5,
+      "start_sec": 12.5,
+      "end_sec": 16.833333333333332,
+      "duration_sec": 4.333333333333332,
+      "transcript": "Here's what you need to know, and we'll actually help you fix the issue. First, yes, it is true that if your shoulders are in an elevated position,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 14.7s.",
+      "segment_summary": "Segment 12.5-16.8s: Here's what you need to know, and we'll actually help you fix the issue. First, yes, it is true that if your shoulders are in an elevated position,",
+      "topics": [
+        "here's",
+        "need",
+        "know",
+        "we'll"
+      ],
+      "keywords": [
+        "here's",
+        "need",
+        "know",
+        "we'll",
+        "actually",
+        "help"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9947199476882815,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 14.666666666666666,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_005_0014666ms.jpg"
+        }
+      ],
+      "retrieval_text": "Here's what you need to know, and we'll actually help you fix the issue. First, yes, it is true that if your shoulders are in an elevated position, | Representative frame sampled at 14.7s. | Segment 12.5-16.8s: Here's what you need to know, and we'll actually help you fix the issue. First, yes, it is true that if your shoulders are in an elevated position, | here's need know we'll | here's need know we'll actually help",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_4f34dc19f78ecb8f",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 6,
+      "start_sec": 16.833333333333332,
+      "end_sec": 18.9,
+      "duration_sec": 2.0666666666666664,
+      "transcript": "First, yes, it is true that if your shoulders are in an elevated position, you're going to have likely tight upper trap muscles.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 17.9s.",
+      "segment_summary": "Segment 16.8-18.9s: First, yes, it is true that if your shoulders are in an elevated position, you're going to have likely tight upper trap muscles.",
+      "topics": [
+        "first",
+        "true",
+        "shoulders",
+        "elevated"
+      ],
+      "keywords": [
+        "first",
+        "true",
+        "shoulders",
+        "elevated",
+        "position",
+        "you're"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9947199476882815,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 17.866666666666667,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_006_0017866ms.jpg"
+        }
+      ],
+      "retrieval_text": "First, yes, it is true that if your shoulders are in an elevated position, you're going to have likely tight upper trap muscles. | Representative frame sampled at 17.9s. | Segment 16.8-18.9s: First, yes, it is true that if your shoulders are in an elevated position, you're going to have likely tight upper trap muscles. | first true shoulders elevated | first true shoulders elevated position you're",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7a835a15cd277da0",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 7,
+      "start_sec": 18.9,
+      "end_sec": 22.066666666666666,
+      "duration_sec": 3.166666666666668,
+      "transcript": "you're going to have likely tight upper trap muscles. But another key muscle grip involved in this is your rhomboids,",
+      "ocr_text": "upper trapezius\nmi\nju\n\n\\ ye\n\n! ARS",
+      "visual_description": "Representative frame contains OCR text: upper trapezius\nmi\nju\n\n\\ ye\n\n! ARS",
+      "segment_summary": "Segment 18.9-22.1s: you're going to have likely tight upper trap muscles. But another key muscle grip involved in this is your rhomboids,",
+      "topics": [
+        "upper",
+        "you're",
+        "going",
+        "likely"
+      ],
+      "keywords": [
+        "upper",
+        "you're",
+        "going",
+        "likely",
+        "tight",
+        "trap"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9947199476882815,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 20.483333333333334,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_007_0020483ms.jpg"
+        }
+      ],
+      "retrieval_text": "you're going to have likely tight upper trap muscles. But another key muscle grip involved in this is your rhomboids, | upper trapezius\nmi\nju\n\n\\ ye\n\n! ARS | Representative frame contains OCR text: upper trapezius\nmi\nju\n\n\\ ye\n\n! ARS | Segment 18.9-22.1s: you're going to have likely tight upper trap muscles. But another key muscle grip involved in this is your rhomboids, | upper you're going likely | upper you're going likely tight trap",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_11a92d031114074a",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 8,
+      "start_sec": 22.066666666666666,
+      "end_sec": 33.333333333333336,
+      "duration_sec": 11.26666666666667,
+      "transcript": "But another key muscle grip involved in this is your rhomboids, which have sort of this upward diagonal angle of their muscle fiber orientation, which as they pull the shoulders back closer together, they also elevate them up. So a really big problem with doing exercises like this that pull the shoulders back is that",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 27.7s.",
+      "segment_summary": "Segment 22.1-33.3s: But another key muscle grip involved in this is your rhomboids, which have sort of this upward diagonal angle of their muscle fiber orientation, which as they pull the shoulders ba",
+      "topics": [
+        "muscle",
+        "which",
+        "they",
+        "pull"
+      ],
+      "keywords": [
+        "muscle",
+        "which",
+        "they",
+        "pull",
+        "shoulders",
+        "back"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9970853501290549,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 27.700000000000003,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_008_0027700ms.jpg"
+        }
+      ],
+      "retrieval_text": "But another key muscle grip involved in this is your rhomboids, which have sort of this upward diagonal angle of their muscle fiber orientation, which as they pull the shoulders back closer together, they also elevate them up. So a really big problem with doing exercises like this that pull the shoulders back is that | Representative frame sampled at 27.7s. | Segment 22.1-33.3s: But another key muscle grip involved in this is your rhomboids, which have sort of this upward diagonal angle of their muscle fiber orientation, which as they pull the shoulders ba | muscle which they pull | muscle which they pull shoulders back",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5e41a07771ff5ffe",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 9,
+      "start_sec": 33.333333333333336,
+      "end_sec": 37.1,
+      "duration_sec": 3.7666666666666657,
+      "transcript": "So a really big problem with doing exercises like this that pull the shoulders back is that",
+      "ocr_text": "LIKE THIS\n\nr",
+      "visual_description": "Representative frame contains OCR text: LIKE THIS\n\nr",
+      "segment_summary": "Segment 33.3-37.1s: So a really big problem with doing exercises like this that pull the shoulders back is that",
+      "topics": [
+        "like",
+        "really",
+        "problem",
+        "doing"
+      ],
+      "keywords": [
+        "like",
+        "really",
+        "problem",
+        "doing",
+        "exercises",
+        "pull"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9994507525698282,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 35.21666666666667,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_009_0035216ms.jpg"
+        }
+      ],
+      "retrieval_text": "So a really big problem with doing exercises like this that pull the shoulders back is that | LIKE THIS\n\nr | Representative frame contains OCR text: LIKE THIS\n\nr | Segment 33.3-37.1s: So a really big problem with doing exercises like this that pull the shoulders back is that | like really problem doing | like really problem doing exercises pull",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_cb6a8426437e6c72",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 10,
+      "start_sec": 37.1,
+      "end_sec": 50.13333333333333,
+      "duration_sec": 13.033333333333331,
+      "transcript": "So a really big problem with doing exercises like this that pull the shoulders back is that one of the main muscles you're going to be using in those exercises is your rhomboids and all likely put. And those things are already very likely tight in some capacity as they're elevating your shoulders. If you squeeze your shoulders back enough, you'll eventually feel how they start to raise up.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 43.6s.",
+      "segment_summary": "Segment 37.1-50.1s: So a really big problem with doing exercises like this that pull the shoulders back is that one of the main muscles you're going to be using in those exercises is your rhomboids an",
+      "topics": [
+        "shoulders",
+        "exercises",
+        "back",
+        "likely"
+      ],
+      "keywords": [
+        "shoulders",
+        "exercises",
+        "back",
+        "likely",
+        "really",
+        "problem"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9994507525698282,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 43.61666666666667,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_010_0043616ms.jpg"
+        }
+      ],
+      "retrieval_text": "So a really big problem with doing exercises like this that pull the shoulders back is that one of the main muscles you're going to be using in those exercises is your rhomboids and all likely put. And those things are already very likely tight in some capacity as they're elevating your shoulders. If you squeeze your shoulders back enough, you'll eventually feel how they start to raise up. | Representative frame sampled at 43.6s. | Segment 37.1-50.1s: So a really big problem with doing exercises like this that pull the shoulders back is that one of the main muscles you're going to be using in those exercises is your rhomboids an | shoulders exercises back likely | shoulders exercises back likely really problem",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e04129a645f3197a",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 11,
+      "start_sec": 50.13333333333333,
+      "end_sec": 58.0,
+      "duration_sec": 7.866666666666667,
+      "transcript": "shoulders. If you squeeze your shoulders back enough, you'll eventually feel how they start to raise up. So doing a bunch of exercises that promote the shoulders being pulled back aggressively is not a good idea.",
+      "ocr_text": "n\npony\nZe}\nSs\n[=a\nlu\n=<\nku\non\nSs",
+      "visual_description": "Representative frame contains OCR text: n\npony\nZe}\nSs\n[=a\nlu\n=<\nku\non\nSs",
+      "segment_summary": "Segment 50.1-58.0s: shoulders. If you squeeze your shoulders back enough, you'll eventually feel how they start to raise up. So doing a bunch of exercises that promote the shoulders being pulled back",
+      "topics": [
+        "shoulders",
+        "back",
+        "squeeze",
+        "enough"
+      ],
+      "keywords": [
+        "shoulders",
+        "back",
+        "squeeze",
+        "enough",
+        "you'll",
+        "eventually"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9994507525698282,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 54.06666666666666,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_011_0054066ms.jpg"
+        }
+      ],
+      "retrieval_text": "shoulders. If you squeeze your shoulders back enough, you'll eventually feel how they start to raise up. So doing a bunch of exercises that promote the shoulders being pulled back aggressively is not a good idea. | n\npony\nZe}\nSs\n[=a\nlu\n=<\nku\non\nSs | Representative frame contains OCR text: n\npony\nZe}\nSs\n[=a\nlu\n=<\nku\non\nSs | Segment 50.1-58.0s: shoulders. If you squeeze your shoulders back enough, you'll eventually feel how they start to raise up. So doing a bunch of exercises that promote the shoulders being pulled back | shoulders back squeeze enough | shoulders back squeeze enough you'll eventually",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_393576ec079c9d13",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 12,
+      "start_sec": 58.0,
+      "end_sec": 62.46666666666667,
+      "duration_sec": 4.466666666666669,
+      "transcript": "Besides, we need to ask, well, why are these muscles even tight in the first place? Every single time that we inhale, we should be getting circumferential expansion of our ribcage in all directions.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 60.2s.",
+      "segment_summary": "Segment 58.0-62.5s: Besides, we need to ask, well, why are these muscles even tight in the first place? Every single time that we inhale, we should be getting circumferential expansion of our ribcage",
+      "topics": [
+        "besides",
+        "need",
+        "well",
+        "muscles"
+      ],
+      "keywords": [
+        "besides",
+        "need",
+        "well",
+        "muscles",
+        "even",
+        "tight"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946511168964207,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 60.233333333333334,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_012_0060233ms.jpg"
+        }
+      ],
+      "retrieval_text": "Besides, we need to ask, well, why are these muscles even tight in the first place? Every single time that we inhale, we should be getting circumferential expansion of our ribcage in all directions. | Representative frame sampled at 60.2s. | Segment 58.0-62.5s: Besides, we need to ask, well, why are these muscles even tight in the first place? Every single time that we inhale, we should be getting circumferential expansion of our ribcage | besides need well muscles | besides need well muscles even tight",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5954c79cfdcf36b4",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 13,
+      "start_sec": 62.46666666666667,
+      "end_sec": 65.56666666666666,
+      "duration_sec": 3.0999999999999943,
+      "transcript": "Every single time that we inhale, we should be getting circumferential expansion of our ribcage in all directions. The front and also including the back. There's a huge chunk of space in the back side of our ribcage",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 64.0s.",
+      "segment_summary": "Segment 62.5-65.6s: Every single time that we inhale, we should be getting circumferential expansion of our ribcage in all directions. The front and also including the back. There's a huge chunk of sp",
+      "topics": [
+        "ribcage",
+        "back",
+        "every",
+        "single"
+      ],
+      "keywords": [
+        "ribcage",
+        "back",
+        "every",
+        "single",
+        "time",
+        "inhale"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946511168964207,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 64.01666666666667,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_013_0064016ms.jpg"
+        }
+      ],
+      "retrieval_text": "Every single time that we inhale, we should be getting circumferential expansion of our ribcage in all directions. The front and also including the back. There's a huge chunk of space in the back side of our ribcage | Representative frame sampled at 64.0s. | Segment 62.5-65.6s: Every single time that we inhale, we should be getting circumferential expansion of our ribcage in all directions. The front and also including the back. There's a huge chunk of sp | ribcage back every single | ribcage back every single time inhale",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_5333962a0a7b39e8",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 14,
+      "start_sec": 65.56666666666666,
+      "end_sec": 67.83333333333333,
+      "duration_sec": 2.2666666666666657,
+      "transcript": "The front and also including the back. There's a huge chunk of space in the back side of our ribcage",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 66.7s.",
+      "segment_summary": "Segment 65.6-67.8s: The front and also including the back. There's a huge chunk of space in the back side of our ribcage",
+      "topics": [
+        "back",
+        "front",
+        "also",
+        "including"
+      ],
+      "keywords": [
+        "back",
+        "front",
+        "also",
+        "including",
+        "there's",
+        "huge"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946511168964207,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 66.69999999999999,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_014_0066699ms.jpg"
+        }
+      ],
+      "retrieval_text": "The front and also including the back. There's a huge chunk of space in the back side of our ribcage | Representative frame sampled at 66.7s. | Segment 65.6-67.8s: The front and also including the back. There's a huge chunk of space in the back side of our ribcage | back front also including | back front also including there's huge",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_76993530d82f752e",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 15,
+      "start_sec": 67.83333333333333,
+      "end_sec": 73.76666666666667,
+      "duration_sec": 5.933333333333337,
+      "transcript": "The front and also including the back. There's a huge chunk of space in the back side of our ribcage that we have to expand into that a lot of people don't appreciate or realize. And every single time we inhale, we should be getting these little micro decompressions of the",
+      "ocr_text": "‘THAT WE HAVE",
+      "visual_description": "Representative frame contains OCR text: ‘THAT WE HAVE",
+      "segment_summary": "Segment 67.8-73.8s: The front and also including the back. There's a huge chunk of space in the back side of our ribcage that we have to expand into that a lot of people don't appreciate or realize. A",
+      "topics": [
+        "back",
+        "front",
+        "also",
+        "including"
+      ],
+      "keywords": [
+        "back",
+        "front",
+        "also",
+        "including",
+        "there's",
+        "huge"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9946511168964207,
+        "ocr": 1.0,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 70.8,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_015_0070800ms.jpg"
+        }
+      ],
+      "retrieval_text": "The front and also including the back. There's a huge chunk of space in the back side of our ribcage that we have to expand into that a lot of people don't appreciate or realize. And every single time we inhale, we should be getting these little micro decompressions of the | ‘THAT WE HAVE | Representative frame contains OCR text: ‘THAT WE HAVE | Segment 67.8-73.8s: The front and also including the back. There's a huge chunk of space in the back side of our ribcage that we have to expand into that a lot of people don't appreciate or realize. A | back front also including | back front also including there's huge",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_8f5d0818f5e570ce",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 16,
+      "start_sec": 73.76666666666667,
+      "end_sec": 88.76666666666667,
+      "duration_sec": 15.0,
+      "transcript": "And every single time we inhale, we should be getting these little micro decompressions of the tissues in between the shoulder blades and the spine as they gently separate to allow for that expansion to occur. If we're not getting that expansion, then our body knows this, and it's going to create compensatory mechanisms to create enough elevation and opening of the ribcage.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 84.2s.",
+      "segment_summary": "Segment 73.8-88.8s: And every single time we inhale, we should be getting these little micro decompressions of the tissues in between the shoulder blades and the spine as they gently separate to allow",
+      "topics": [
+        "getting",
+        "expansion",
+        "create",
+        "every"
+      ],
+      "keywords": [
+        "getting",
+        "expansion",
+        "create",
+        "every",
+        "single",
+        "time"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9951002177549526,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 84.18333333333334,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_016_0084183ms.jpg"
+        }
+      ],
+      "retrieval_text": "And every single time we inhale, we should be getting these little micro decompressions of the tissues in between the shoulder blades and the spine as they gently separate to allow for that expansion to occur. If we're not getting that expansion, then our body knows this, and it's going to create compensatory mechanisms to create enough elevation and opening of the ribcage. | Representative frame sampled at 84.2s. | Segment 73.8-88.8s: And every single time we inhale, we should be getting these little micro decompressions of the tissues in between the shoulder blades and the spine as they gently separate to allow | getting expansion create every | getting expansion create every single time",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0f033d52ec737374",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 17,
+      "start_sec": 88.76666666666667,
+      "end_sec": 94.6,
+      "duration_sec": 5.833333333333329,
+      "transcript": "compensatory mechanisms to create enough elevation and opening of the ribcage. So it's going to excessively send air in the front of the ribcage and use compensatory breathing muscles,",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 88.8-94.6s: compensatory mechanisms to create enough elevation and opening of the ribcage. So it's going to excessively send air in the front of the ribcage and use compensatory breathing musc",
+      "topics": [
+        "compensatory",
+        "ribcage",
+        "mechanisms",
+        "create"
+      ],
+      "keywords": [
+        "compensatory",
+        "ribcage",
+        "mechanisms",
+        "create",
+        "enough",
+        "elevation"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9964475203305483,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "compensatory mechanisms to create enough elevation and opening of the ribcage. So it's going to excessively send air in the front of the ribcage and use compensatory breathing muscles, | Segment 88.8-94.6s: compensatory mechanisms to create enough elevation and opening of the ribcage. So it's going to excessively send air in the front of the ribcage and use compensatory breathing musc | compensatory ribcage mechanisms create | compensatory ribcage mechanisms create enough elevation",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_34f48e6d807e9dcc",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 18,
+      "start_sec": 94.6,
+      "end_sec": 99.9,
+      "duration_sec": 5.300000000000011,
+      "transcript": "So it's going to excessively send air in the front of the ribcage and use compensatory breathing muscles, like the upper traps, and neck to help further facilitate the ribcage getting compensatory expansion. So the solution is actually first to help create a better ability to open up the space in between",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 97.2s.",
+      "segment_summary": "Segment 94.6-99.9s: So it's going to excessively send air in the front of the ribcage and use compensatory breathing muscles, like the upper traps, and neck to help further facilitate the ribcage gett",
+      "topics": [
+        "ribcage",
+        "compensatory",
+        "help",
+        "it's"
+      ],
+      "keywords": [
+        "ribcage",
+        "compensatory",
+        "help",
+        "it's",
+        "going",
+        "excessively"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9964475203305483,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 97.25,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_017_0097250ms.jpg"
+        }
+      ],
+      "retrieval_text": "So it's going to excessively send air in the front of the ribcage and use compensatory breathing muscles, like the upper traps, and neck to help further facilitate the ribcage getting compensatory expansion. So the solution is actually first to help create a better ability to open up the space in between | Representative frame sampled at 97.2s. | Segment 94.6-99.9s: So it's going to excessively send air in the front of the ribcage and use compensatory breathing muscles, like the upper traps, and neck to help further facilitate the ribcage gett | ribcage compensatory help it's | ribcage compensatory help it's going excessively",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0055e17909037f62",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 19,
+      "start_sec": 99.9,
+      "end_sec": 103.6,
+      "duration_sec": 3.6999999999999886,
+      "transcript": "So the solution is actually first to help create a better ability to open up the space in between",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 101.8s.",
+      "segment_summary": "Segment 99.9-103.6s: So the solution is actually first to help create a better ability to open up the space in between",
+      "topics": [
+        "solution",
+        "actually",
+        "first",
+        "help"
+      ],
+      "keywords": [
+        "solution",
+        "actually",
+        "first",
+        "help",
+        "create",
+        "better"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9964475203305483,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 101.75,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_018_0101750ms.jpg"
+        }
+      ],
+      "retrieval_text": "So the solution is actually first to help create a better ability to open up the space in between | Representative frame sampled at 101.8s. | Segment 99.9-103.6s: So the solution is actually first to help create a better ability to open up the space in between | solution actually first help | solution actually first help create better",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_e215df471722fa18",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 20,
+      "start_sec": 103.6,
+      "end_sec": 106.43333333333334,
+      "duration_sec": 2.833333333333343,
+      "transcript": "So the solution is actually first to help create a better ability to open up the space in between our scapula and spine with our breath. From there, we can start to re-educate a little bit better",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 105.0s.",
+      "segment_summary": "Segment 103.6-106.4s: So the solution is actually first to help create a better ability to open up the space in between our scapula and spine with our breath. From there, we can start to re-educate a li",
+      "topics": [
+        "better",
+        "solution",
+        "actually",
+        "first"
+      ],
+      "keywords": [
+        "better",
+        "solution",
+        "actually",
+        "first",
+        "help",
+        "create"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9964475203305483,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 105.01666666666667,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_019_0105016ms.jpg"
+        }
+      ],
+      "retrieval_text": "So the solution is actually first to help create a better ability to open up the space in between our scapula and spine with our breath. From there, we can start to re-educate a little bit better | Representative frame sampled at 105.0s. | Segment 103.6-106.4s: So the solution is actually first to help create a better ability to open up the space in between our scapula and spine with our breath. From there, we can start to re-educate a li | better solution actually first | better solution actually first help create",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_1252506a4bf50474",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 21,
+      "start_sec": 106.43333333333334,
+      "end_sec": 113.66666666666667,
+      "duration_sec": 7.233333333333334,
+      "transcript": "our scapula and spine with our breath. From there, we can start to re-educate a little bit better patterning of the scapula resting in a better position on the ribcage. Here's how you can do that.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 110.1s.",
+      "segment_summary": "Segment 106.4-113.7s: our scapula and spine with our breath. From there, we can start to re-educate a little bit better patterning of the scapula resting in a better position on the ribcage. Here's how",
+      "topics": [
+        "scapula",
+        "better",
+        "spine",
+        "breath"
+      ],
+      "keywords": [
+        "scapula",
+        "better",
+        "spine",
+        "breath",
+        "there",
+        "start"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9964475203305483,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 110.05000000000001,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_020_0110050ms.jpg"
+        }
+      ],
+      "retrieval_text": "our scapula and spine with our breath. From there, we can start to re-educate a little bit better patterning of the scapula resting in a better position on the ribcage. Here's how you can do that. | Representative frame sampled at 110.1s. | Segment 106.4-113.7s: our scapula and spine with our breath. From there, we can start to re-educate a little bit better patterning of the scapula resting in a better position on the ribcage. Here's how | scapula better spine breath | scapula better spine breath there start",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_3ca9aed923c74ad1",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 22,
+      "start_sec": 113.66666666666667,
+      "end_sec": 128.66666666666669,
+      "duration_sec": 15.000000000000014,
+      "transcript": "For this variation, all you need is a chair and a table. Sit tall feeling your sit bones evenly on both sides. Make sure the table or desk is at a height so that way your arm bone can be at a 45 degree angle ish relative to your trunk. Wrap a very very light band around your wrist like this, or you can just use no band at all. Sit in this position with your palms facing you",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 123.6s.",
+      "segment_summary": "Segment 113.7-128.7s: For this variation, all you need is a chair and a table. Sit tall feeling your sit bones evenly on both sides. Make sure the table or desk is at a height so that way your arm bone",
+      "topics": [
+        "table",
+        "very",
+        "band",
+        "variation"
+      ],
+      "keywords": [
+        "table",
+        "very",
+        "band",
+        "variation",
+        "need",
+        "chair"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9970751572400331,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 123.6,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_021_0123600ms.jpg"
+        }
+      ],
+      "retrieval_text": "For this variation, all you need is a chair and a table. Sit tall feeling your sit bones evenly on both sides. Make sure the table or desk is at a height so that way your arm bone can be at a 45 degree angle ish relative to your trunk. Wrap a very very light band around your wrist like this, or you can just use no band at all. Sit in this position with your palms facing you | Representative frame sampled at 123.6s. | Segment 113.7-128.7s: For this variation, all you need is a chair and a table. Sit tall feeling your sit bones evenly on both sides. Make sure the table or desk is at a height so that way your arm bone | table very band variation | table very band variation need chair",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_321ae63498c09fc1",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 23,
+      "start_sec": 128.66666666666669,
+      "end_sec": 133.53333333333333,
+      "duration_sec": 4.866666666666646,
+      "transcript": "like this, or you can just use no band at all. Sit in this position with your palms facing you being sure your arms are at about a 45 degree angle relative to your trunk. Now very gently just separate",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 128.7-133.5s: like this, or you can just use no band at all. Sit in this position with your palms facing you being sure your arms are at about a 45 degree angle relative to your trunk. Now very",
+      "topics": [
+        "just",
+        "like",
+        "band",
+        "position"
+      ],
+      "keywords": [
+        "just",
+        "like",
+        "band",
+        "position",
+        "palms",
+        "facing"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9970751572400331,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "like this, or you can just use no band at all. Sit in this position with your palms facing you being sure your arms are at about a 45 degree angle relative to your trunk. Now very gently just separate | Segment 128.7-133.5s: like this, or you can just use no band at all. Sit in this position with your palms facing you being sure your arms are at about a 45 degree angle relative to your trunk. Now very | just like band position | just like band position palms facing",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_7b4faa35bec01e4c",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 24,
+      "start_sec": 133.53333333333333,
+      "end_sec": 136.43333333333334,
+      "duration_sec": 2.9000000000000057,
+      "transcript": "being sure your arms are at about a 45 degree angle relative to your trunk. Now very gently just separate your shoulder blades away from your spine. Again, just a one or two out of 10 intensity.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 135.0s.",
+      "segment_summary": "Segment 133.5-136.4s: being sure your arms are at about a 45 degree angle relative to your trunk. Now very gently just separate your shoulder blades away from your spine. Again, just a one or two out of",
+      "topics": [
+        "just",
+        "being",
+        "sure",
+        "arms"
+      ],
+      "keywords": [
+        "just",
+        "being",
+        "sure",
+        "arms",
+        "degree",
+        "angle"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9970751572400331,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 134.98333333333335,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_022_0134983ms.jpg"
+        }
+      ],
+      "retrieval_text": "being sure your arms are at about a 45 degree angle relative to your trunk. Now very gently just separate your shoulder blades away from your spine. Again, just a one or two out of 10 intensity. | Representative frame sampled at 135.0s. | Segment 133.5-136.4s: being sure your arms are at about a 45 degree angle relative to your trunk. Now very gently just separate your shoulder blades away from your spine. Again, just a one or two out of | just being sure arms | just being sure arms degree angle",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_47f4bb6438b7d872",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 25,
+      "start_sec": 136.43333333333334,
+      "end_sec": 139.03333333333333,
+      "duration_sec": 2.5999999999999943,
+      "transcript": "your shoulder blades away from your spine. Again, just a one or two out of 10 intensity.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 137.7s.",
+      "segment_summary": "Segment 136.4-139.0s: your shoulder blades away from your spine. Again, just a one or two out of 10 intensity.",
+      "topics": [
+        "shoulder",
+        "blades",
+        "away",
+        "spine"
+      ],
+      "keywords": [
+        "shoulder",
+        "blades",
+        "away",
+        "spine",
+        "again",
+        "just"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9970751572400331,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 137.73333333333335,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_023_0137733ms.jpg"
+        }
+      ],
+      "retrieval_text": "your shoulder blades away from your spine. Again, just a one or two out of 10 intensity. | Representative frame sampled at 137.7s. | Segment 136.4-139.0s: your shoulder blades away from your spine. Again, just a one or two out of 10 intensity. | shoulder blades away spine | shoulder blades away spine again just",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_0405441d2c97e1a3",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 26,
+      "start_sec": 139.03333333333333,
+      "end_sec": 143.13333333333333,
+      "duration_sec": 4.099999999999994,
+      "transcript": "your shoulder blades away from your spine. Again, just a one or two out of 10 intensity. I mean, taking your elbows shoulder with the part, all you're going to do is very gently separate your hands away from each other. If you do this very gently again one or two out of 10,",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 141.1s.",
+      "segment_summary": "Segment 139.0-143.1s: your shoulder blades away from your spine. Again, just a one or two out of 10 intensity. I mean, taking your elbows shoulder with the part, all you're going to do is very gently se",
+      "topics": [
+        "shoulder",
+        "away",
+        "again",
+        "very"
+      ],
+      "keywords": [
+        "shoulder",
+        "away",
+        "again",
+        "very",
+        "gently",
+        "blades"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9974554320021222,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 141.08333333333331,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_024_0141083ms.jpg"
+        }
+      ],
+      "retrieval_text": "your shoulder blades away from your spine. Again, just a one or two out of 10 intensity. I mean, taking your elbows shoulder with the part, all you're going to do is very gently separate your hands away from each other. If you do this very gently again one or two out of 10, | Representative frame sampled at 141.1s. | Segment 139.0-143.1s: your shoulder blades away from your spine. Again, just a one or two out of 10 intensity. I mean, taking your elbows shoulder with the part, all you're going to do is very gently se | shoulder away again very | shoulder away again very gently blades",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_20308937ba7d581d",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 27,
+      "start_sec": 143.13333333333333,
+      "end_sec": 158.13333333333333,
+      "duration_sec": 15.0,
+      "transcript": "your hands away from each other. If you do this very gently again one or two out of 10, you're going to feel a little bit of engagement of the muscles on the backside of your shoulders. This is all you're looking for, but it should not come at the cost of you doing it too much and extending your back or feeling any tension in the front or sides of your shoulders. If you do feel tension in the front or",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 143.1-158.1s: your hands away from each other. If you do this very gently again one or two out of 10, you're going to feel a little bit of engagement of the muscles on the backside of your shoul",
+      "topics": [
+        "you're",
+        "feel",
+        "shoulders",
+        "tension"
+      ],
+      "keywords": [
+        "you're",
+        "feel",
+        "shoulders",
+        "tension",
+        "front",
+        "hands"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9982159815263003,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "your hands away from each other. If you do this very gently again one or two out of 10, you're going to feel a little bit of engagement of the muscles on the backside of your shoulders. This is all you're looking for, but it should not come at the cost of you doing it too much and extending your back or feeling any tension in the front or sides of your shoulders. If you do feel tension in the front or | Segment 143.1-158.1s: your hands away from each other. If you do this very gently again one or two out of 10, you're going to feel a little bit of engagement of the muscles on the backside of your shoul | you're feel shoulders tension | you're feel shoulders tension front hands",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_28d419e0f83e65c1",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 28,
+      "start_sec": 158.13333333333333,
+      "end_sec": 173.13333333333333,
+      "duration_sec": 15.0,
+      "transcript": "or feeling any tension in the front or sides of your shoulders. If you do feel tension in the front or side of your shoulders, just don't use a band or just try less. Now it's the same exact breathing just very gently exhale, let the air fall out of you for five to ten seconds. Pause. After two to three seconds pause, inhale letting the air fall into you and you should feel that expansion of",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 159.0s.",
+      "segment_summary": "Segment 158.1-173.1s: or feeling any tension in the front or sides of your shoulders. If you do feel tension in the front or side of your shoulders, just don't use a band or just try less. Now it's the",
+      "topics": [
+        "just",
+        "tension",
+        "front",
+        "shoulders"
+      ],
+      "keywords": [
+        "just",
+        "tension",
+        "front",
+        "shoulders",
+        "feel",
+        "fall"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.992813597782515,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 159.03333333333333,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_025_0159033ms.jpg"
+        }
+      ],
+      "retrieval_text": "or feeling any tension in the front or sides of your shoulders. If you do feel tension in the front or side of your shoulders, just don't use a band or just try less. Now it's the same exact breathing just very gently exhale, let the air fall out of you for five to ten seconds. Pause. After two to three seconds pause, inhale letting the air fall into you and you should feel that expansion of | Representative frame sampled at 159.0s. | Segment 158.1-173.1s: or feeling any tension in the front or sides of your shoulders. If you do feel tension in the front or side of your shoulders, just don't use a band or just try less. Now it's the | just tension front shoulders | just tension front shoulders feel fall",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_56c61e88062897b3",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 29,
+      "start_sec": 173.13333333333333,
+      "end_sec": 174.93333333333334,
+      "duration_sec": 1.8000000000000114,
+      "transcript": "seconds pause, inhale letting the air fall into you and you should feel that expansion of",
+      "ocr_text": "",
+      "visual_description": "",
+      "segment_summary": "Segment 173.1-174.9s: seconds pause, inhale letting the air fall into you and you should feel that expansion of",
+      "topics": [
+        "seconds",
+        "pause",
+        "inhale",
+        "letting"
+      ],
+      "keywords": [
+        "seconds",
+        "pause",
+        "inhale",
+        "letting",
+        "fall",
+        "should"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9874112140387297,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [],
+      "retrieval_text": "seconds pause, inhale letting the air fall into you and you should feel that expansion of | Segment 173.1-174.9s: seconds pause, inhale letting the air fall into you and you should feel that expansion of | seconds pause inhale letting | seconds pause inhale letting fall should",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c0507aff19b994f7",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 30,
+      "start_sec": 174.93333333333334,
+      "end_sec": 177.66666666666666,
+      "duration_sec": 2.73333333333332,
+      "transcript": "seconds pause, inhale letting the air fall into you and you should feel that expansion of between your shoulder blades and spine. Repeat this for about two sets of ten breaths as well.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 176.3s.",
+      "segment_summary": "Segment 174.9-177.7s: seconds pause, inhale letting the air fall into you and you should feel that expansion of between your shoulder blades and spine. Repeat this for about two sets of ten breaths as w",
+      "topics": [
+        "seconds",
+        "pause",
+        "inhale",
+        "letting"
+      ],
+      "keywords": [
+        "seconds",
+        "pause",
+        "inhale",
+        "letting",
+        "fall",
+        "should"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9874112140387297,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 176.3,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_026_0176300ms.jpg"
+        }
+      ],
+      "retrieval_text": "seconds pause, inhale letting the air fall into you and you should feel that expansion of between your shoulder blades and spine. Repeat this for about two sets of ten breaths as well. | Representative frame sampled at 176.3s. | Segment 174.9-177.7s: seconds pause, inhale letting the air fall into you and you should feel that expansion of between your shoulder blades and spine. Repeat this for about two sets of ten breaths as w | seconds pause inhale letting | seconds pause inhale letting fall should",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    },
+    {
+      "segment_id": "seg_c2b4c111b483504a",
+      "source_id": "src_ab2e584294246201",
+      "segment_index": 31,
+      "start_sec": 177.66666666666666,
+      "end_sec": 179.86666666666667,
+      "duration_sec": 2.200000000000017,
+      "transcript": "between your shoulder blades and spine. Repeat this for about two sets of ten breaths as well.",
+      "ocr_text": "",
+      "visual_description": "Representative frame sampled at 178.8s.",
+      "segment_summary": "Segment 177.7-179.9s: between your shoulder blades and spine. Repeat this for about two sets of ten breaths as well.",
+      "topics": [
+        "between",
+        "shoulder",
+        "blades",
+        "spine"
+      ],
+      "keywords": [
+        "between",
+        "shoulder",
+        "blades",
+        "spine",
+        "repeat",
+        "sets"
+      ],
+      "entities": [],
+      "speaker": null,
+      "language": "en",
+      "confidence": {
+        "asr": 0.9874112140387297,
+        "ocr": null,
+        "vision": null
+      },
+      "frame_refs": [
+        {
+          "sec": 178.76666666666665,
+          "path": "data\\processed\\rag\\src_ab2e584294246201\\frames\\scene_027_0178766ms.jpg"
+        }
+      ],
+      "retrieval_text": "between your shoulder blades and spine. Repeat this for about two sets of ten breaths as well. | Representative frame sampled at 178.8s. | Segment 177.7-179.9s: between your shoulder blades and spine. Repeat this for about two sets of ten breaths as well. | between shoulder blades spine | between shoulder blades spine repeat sets",
+      "payload": {
+        "source_type": "youtube",
+        "course_id": "biomechanics_knowledge_v1",
+        "title": "Finally Fix Your Tight Upper Traps (no stretching required)",
+        "uri": "https://www.youtube.com/watch?v=XvWPTgl24ZE",
+        "channel_or_author": "Conor Harris"
+      }
+    }
+  ],
+  "pipeline": "process_video_local",
+  "status": "processed_local_level1",
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 31,
+    "transcript_segment_count": 42,
+    "ocr_observation_count": 5,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "sync_result": {
+    "source_id": "src_ab2e584294246201",
+    "assets_upserted": 31,
+    "segments_inserted": 0,
+    "segments_skipped": 31,
+    "qdrant_points_upserted": 31
+  }
+}

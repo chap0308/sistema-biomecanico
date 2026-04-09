@@ -1,0 +1,65 @@
+{
+  "selection_mode": "limit",
+  "requested_limit": 5,
+  "requested_urls": [],
+  "selected_count": 5,
+  "model": "gemini-2.5-flash",
+  "results": [
+    {
+      "source_id": "src_a60018c5a76bdb14",
+      "source_url": "https://www.youtube.com/shorts/Dd35gNrQtl0",
+      "previous_draft_id": "kdraft_0c42ad80896ea6cf",
+      "previous_analysis_provider": "local_fallback",
+      "new_draft_id": "kdraft_df4997c3250617e5",
+      "gemini_model": "gemini-2.5-flash",
+      "usefulness": "useful",
+      "promoted_to_active": true,
+      "knowledge_units_upserted": 4,
+      "qdrant_points_upserted": 4
+    },
+    {
+      "source_id": "src_e9ef40d92a4e449e",
+      "source_url": "https://www.youtube.com/shorts/ZMFMWlMO1rI",
+      "previous_draft_id": "kdraft_95cefab48c90b579",
+      "previous_analysis_provider": "local_fallback",
+      "new_draft_id": "kdraft_c16449989f533800",
+      "gemini_model": "gemini-2.5-flash",
+      "usefulness": "useful",
+      "promoted_to_active": true,
+      "knowledge_units_upserted": 3,
+      "qdrant_points_upserted": 3
+    },
+    {
+      "source_id": "src_e7a2759fda05b986",
+      "source_url": "https://www.youtube.com/shorts/pQkwgsOYzRM",
+      "previous_draft_id": "kdraft_6ed5176d285b8e1c",
+      "previous_analysis_provider": "local_fallback",
+      "new_draft_id": "kdraft_9ea763e213e0c41f",
+      "gemini_model": "gemini-2.5-flash",
+      "usefulness": "useful",
+      "promoted_to_active": true,
+      "knowledge_units_upserted": 4,
+      "qdrant_points_upserted": 4
+    },
+    {
+      "source_id": "src_b2e256988769626b",
+      "source_url": "https://www.youtube.com/shorts/d4d5Ta8UXRg",
+      "previous_draft_id": "kdraft_7da11643e187f735",
+      "status": "error",
+      "error_code": "unknown_error",
+      "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The request timed out. Please try again.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "source_id": "src_92cbf14929b4bfa8",
+      "source_url": "https://www.youtube.com/shorts/ViWJ5y25BDU",
+      "previous_draft_id": "kdraft_0150a967f75b9ca8",
+      "previous_analysis_provider": "local_fallback",
+      "new_draft_id": "kdraft_9784e95693162eed",
+      "gemini_model": "gemini-2.5-flash",
+      "usefulness": "useful",
+      "promoted_to_active": true,
+      "knowledge_units_upserted": 3,
+      "qdrant_points_upserted": 3
+    }
+  ]
+}

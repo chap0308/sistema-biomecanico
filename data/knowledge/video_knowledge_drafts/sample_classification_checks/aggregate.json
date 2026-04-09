@@ -1,0 +1,71 @@
+[
+  {
+    "video_id": "LhHzjljWriE",
+    "url": "https://www.youtube.com/shorts/LhHzjljWriE",
+    "classification": {
+      "usefulness": "useful",
+      "usefulness_reason": "The video clearly explains a key biomechanical concept (hip-knee sequencing) and its implications across multiple movements, highlighting both optimal patterns and common compensatory errors that can lead to injury.",
+      "exclusion_reason": null,
+      "content_kind": "informational_concept",
+      "body_regions": [
+        "Hips",
+        "Knees",
+        "Low Back"
+      ],
+      "problem_layers": [
+        "Biomechanical",
+        "Movement Pattern"
+      ],
+      "suitable_for_protocol_database": false,
+      "suitable_for_concept_knowledge_base": true,
+      "suitable_for_recommendation_mapping": true,
+      "contains_visual_execution_detail": true,
+      "confidence": "high"
+    },
+    "primary_summary": "The video explains that elite athletes and fast runners extend their hip before their knee for proper propulsion. It demonstrates how early knee extension, without full hip extension, can lead to repetitive low back stress in running, walking, and lifting (like deadlifts)."
+  },
+  {
+    "video_id": "eZG6vYdJj2E",
+    "url": "https://www.youtube.com/shorts/eZG6vYdJj2E",
+    "classification": {
+      "usefulness": "useful",
+      "usefulness_reason": "The video presents specific exercise variations claimed to address plantar fasciitis by strengthening the posterior tibialis, which is relevant for corrective exercise selection and biomechanical concept retrieval.",
+      "exclusion_reason": null,
+      "content_kind": "corrective_protocol",
+      "body_regions": [
+        "foot",
+        "ankle",
+        "lower leg"
+      ],
+      "problem_layers": [
+        "musculoskeletal",
+        "muscle weakness",
+        "tendinopathy"
+      ],
+      "suitable_for_protocol_database": true,
+      "suitable_for_concept_knowledge_base": true,
+      "suitable_for_recommendation_mapping": true,
+      "contains_visual_execution_detail": true,
+      "confidence": "high"
+    },
+    "primary_summary": "The video demonstrates two variations of calf raises, claiming they strengthen the posterior tibialis and alleviate plantar fasciitis. The first variation involves lifting the forefoot with the heel supported by a ball, and the second is a standard calf raise with the forefoot elevated on blocks."
+  },
+  {
+    "video_id": "iHPD2TT1EvA",
+    "url": "https://www.youtube.com/shorts/iHPD2TT1EvA",
+    "classification": {
+      "usefulness": "not_useful",
+      "usefulness_reason": "The video is purely promotional and consists of testimonials for a paid course. It does not provide any specific biomechanical concepts, exercises, diagnostic information, or actionable advice suitable for a knowledge base.",
+      "exclusion_reason": "Promotional content and testimonials, lacks specific biomechanical information, exercises, or concepts.",
+      "content_kind": "promotional",
+      "body_regions": [],
+      "problem_layers": [],
+      "suitable_for_protocol_database": false,
+      "suitable_for_concept_knowledge_base": false,
+      "suitable_for_recommendation_mapping": false,
+      "contains_visual_execution_detail": false,
+      "confidence": "high"
+    },
+    "primary_summary": "The video features the presenter promoting his biomechanics course, claiming it teaches how to fix pain and posture from head to toe. The majority of the video consists of testimonials from individuals who have taken the course, praising its value, structure, and effectiveness in improving their clients' movement and pain, as well as increasing their own business income and client retention."
+  }
+]

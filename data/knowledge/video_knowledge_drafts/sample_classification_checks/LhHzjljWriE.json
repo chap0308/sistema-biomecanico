@@ -1,0 +1,146 @@
+{
+  "source_url": "https://www.youtube.com/shorts/LhHzjljWriE",
+  "source_title_hint": "The Best Athletes Do This",
+  "primary_summary": "The video explains that elite athletes and fast runners extend their hip before their knee for proper propulsion. It demonstrates how early knee extension, without full hip extension, can lead to repetitive low back stress in running, walking, and lifting (like deadlifts).",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "The video clearly explains a key biomechanical concept (hip-knee sequencing) and its implications across multiple movements, highlighting both optimal patterns and common compensatory errors that can lead to injury.",
+    "exclusion_reason": null,
+    "content_kind": "informational_concept",
+    "body_regions": [
+      "Hips",
+      "Knees",
+      "Low Back"
+    ],
+    "problem_layers": [
+      "Biomechanical",
+      "Movement Pattern"
+    ],
+    "suitable_for_protocol_database": false,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": true,
+    "contains_visual_execution_detail": true,
+    "confidence": "high"
+  },
+  "searchable_topics": [
+    "Running mechanics",
+    "Walking mechanics",
+    "Deadlift technique",
+    "Hip extension",
+    "Knee extension",
+    "Propulsion",
+    "Low back stress",
+    "Movement efficiency",
+    "Biomechanics"
+  ],
+  "searchable_tags": [
+    "Running",
+    "Walking",
+    "Deadlift",
+    "Hip extension",
+    "Knee extension",
+    "Biomechanics",
+    "Movement pattern",
+    "Low back pain",
+    "Propulsion",
+    "Athletic performance",
+    "Movement reeducation"
+  ],
+  "problem_statements": [
+    "Inefficient propulsion in running and walking",
+    "Repetitive stress on the low back due to compensatory movement patterns",
+    "Poor deadlift technique leading to low back strain"
+  ],
+  "habits_or_contexts": [
+    "Running",
+    "Walking",
+    "Lifting (specifically deadlifts)"
+  ],
+  "key_visual_points": [
+    "A female sprinter is shown in slow motion, demonstrating hip extension occurring before knee extension during the propulsion phase.",
+    "A black and white motion capture sequence compares two runners: one on the left shows hip extension before knee extension, while the runner on the right shows early knee extension.",
+    "A man demonstrates walking with early knee extension, visibly showing an exaggerated lumbar extension and anterior pelvic tilt.",
+    "A man demonstrates a deadlift with early knee extension, showing the knees locking out prematurely and the low back hyperextending at the top of the lift."
+  ],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Deadlifts"
+  ],
+  "advice_mentioned": [
+    "Extend your hip before your knee for proper propulsion.",
+    "Avoid early knee extension to prevent repetitive stress on the low back."
+  ],
+  "warnings_or_limitations": [
+    "Early knee extension can lead to repetitive stress on the low back over time."
+  ],
+  "knowledge_units": [
+    {
+      "unit_type": "biomechanical_mechanism",
+      "title": "Optimal Hip-Knee Sequencing for Propulsion",
+      "summary": "In efficient running and other propulsive movements, the hip should extend fully before the knee extends. This sequence allows for powerful gluteal activation and proper force transfer, essential for forward propulsion.",
+      "observable_signs": [
+        "During the push-off phase, the hip joint visibly extends significantly before the knee joint reaches full extension.",
+        "The leg moves behind the body (hip extension) before the knee straightens."
+      ],
+      "mechanisms": [
+        "Maximizes gluteal and hamstring contribution to propulsion.",
+        "Ensures efficient transfer of force from the ground through the kinetic chain.",
+        "Reduces compensatory strain on the lumbar spine."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [
+        "Optimizing athletic performance in sprinting and running.",
+        "Improving efficiency in walking.",
+        "Preventing low back pain related to gait mechanics."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:00",
+        "0:09"
+      ]
+    },
+    {
+      "unit_type": "compensation_pattern",
+      "title": "Early Knee Extension Compensation Pattern",
+      "summary": "Early knee extension, where the knee straightens prematurely before the hip achieves full extension, is a common compensation pattern. This can lead to inefficient movement and increased stress on the low back, as the lumbar spine may hyperextend to compensate for insufficient hip drive.",
+      "observable_signs": [
+        "Knee locks out or extends significantly before the hip reaches its full extended position.",
+        "In running/walking, the leg may not extend sufficiently behind the body.",
+        "In walking, visible lumbar hyperextension and anterior pelvic tilt.",
+        "In deadlifts, the knees may lock out early, followed by a compensatory hyperextension of the low back to complete the lift."
+      ],
+      "mechanisms": [
+        "Weakness or inhibition of hip extensors (glutes, hamstrings).",
+        "Tightness in hip flexors.",
+        "Poor motor control or awareness of hip movement.",
+        "Over-reliance on quadriceps and lumbar erectors."
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [
+        "Extending the knee early before the hip is fully extended during propulsive phases of movement.",
+        "Using the low back to finish a deadlift when the knees have already locked out."
+      ],
+      "when_useful": [
+        "Diagnosing inefficient gait patterns.",
+        "Identifying potential causes of low back pain in runners, walkers, or lifters.",
+        "Guiding corrective exercise selection for hip extensor strength and motor control."
+      ],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "0:12",
+        "0:21",
+        "0:27"
+      ]
+    }
+  ],
+  "model_notes": "The video effectively uses visual comparisons of both elite performance and common errors across different movements to illustrate the core biomechanical concept. The explanation is concise and directly applicable to movement re-education and injury prevention."
+}

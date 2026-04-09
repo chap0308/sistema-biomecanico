@@ -1,0 +1,155 @@
+{
+  "source_url": "https://www.youtube.com/shorts/pQkwgsOYzRM",
+  "source_title_hint": "How To Fix That Muscle Knot In Your Upper Back (works better than stretching)",
+  "analysis_origin": "hf_structured_analysis:openai/gpt-oss-120b",
+  "primary_summary": "Upper‑back muscle knots arise from either excessive compression (shortened muscles) or excessive lengthening (muscles pulled apart). The root cause is often poor scapular positioning due to rounded shoulders/kyphosis, which limits rib‑cage expansion. The video proposes a two‑part corrective protocol: (1) reposition the shoulder blades onto the rib cage, and (2) improve rib‑cage expansion with a seated elbow‑on‑table exercise using a light band, a 45° arm angle, and focused breathing.",
+  "classification": {
+    "usefulness": "useful",
+    "usefulness_reason": "",
+    "exclusion_reason": null,
+    "content_kind": "corrective_protocol",
+    "body_regions": [
+      "upper back",
+      "thoracic spine",
+      "scapula",
+      "rib cage"
+    ],
+    "problem_layers": [
+      "muscle tension",
+      "postural restriction"
+    ],
+    "suitable_for_protocol_database": true,
+    "suitable_for_concept_knowledge_base": true,
+    "suitable_for_recommendation_mapping": false,
+    "contains_visual_execution_detail": true,
+    "confidence": "medium"
+  },
+  "searchable_topics": [
+    "muscle knot",
+    "upper back tension",
+    "scapular positioning",
+    "rib cage expansion",
+    "posture correction"
+  ],
+  "searchable_tags": [
+    "muscle knot",
+    "upper back",
+    "scapula",
+    "rib cage",
+    "exercise"
+  ],
+  "problem_statements": [
+    "Muscle knots in the upper back persist after stretching or rolling because the underlying scapular position remains faulty and rib‑cage expansion is limited."
+  ],
+  "habits_or_contexts": [
+    "Rounded shoulders",
+    "Thoracic kyphosis",
+    "Limited rib‑cage breathing"
+  ],
+  "key_visual_points": [],
+  "tests_mentioned": [],
+  "exercises_mentioned": [
+    "Elbow‑on‑table rib‑cage expansion exercise"
+  ],
+  "advice_mentioned": [],
+  "warnings_or_limitations": [],
+  "knowledge_units": [
+    {
+      "unit_type": "educational_point",
+      "title": "Two mechanisms of upper‑back muscle tension",
+      "summary": "Muscle tension can result from (1) muscles being overly shortened and compressed, or (2) muscles being excessively lengthened, pulling their attachment sites apart.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Compression of muscle fibers when surrounding tissues are too short",
+        "Lengthening of muscle fibers when attachment sides are pulled away",
+        "Both mechanisms increase passive tension in the upper‑back musculature"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "24.6‑35.9"
+      ]
+    },
+    {
+      "unit_type": "corrective_exercise",
+      "title": "Elbow‑on‑table rib‑cage expansion exercise",
+      "summary": "A seated exercise that simultaneously repositions the scapula and trains rib‑cage expansion using a light resistance band.",
+      "observable_signs": [],
+      "mechanisms": [],
+      "execution_steps": [
+        "Sit tall with sit bones balanced on both sides",
+        "Place elbows on a sturdy table, creating roughly a 45° angle between the forearm and trunk",
+        "Wrap a very light band around the wrist (optional for cueing)",
+        "Take a deep breath, allowing the rib cage to expand in all directions while maintaining the scapular position",
+        "Exhale and repeat for several repetitions, focusing on a smooth, controlled breath",
+        "Maintain the elbows on the table throughout to keep the scapula in a better resting position"
+      ],
+      "cues": [
+        "Maintain a neutral spine",
+        "Feel the shoulder blades gently settle onto the rib cage",
+        "Expand the rib cage evenly with each inhale"
+      ],
+      "breathing_cues": [
+        "Inhale to broaden the rib cage fully",
+        "Exhale slowly, keeping the scapular position"
+      ],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "88.1‑110.2"
+      ]
+    },
+    {
+      "unit_type": "educational_point",
+      "title": "Two mechanisms of upper‑back muscle tension",
+      "summary": "Muscle tension can result from (1) muscles being overly shortened and compressed, or (2) muscles being excessively lengthened, pulling their attachment sites apart.",
+      "observable_signs": [],
+      "mechanisms": [
+        "Compression of muscle fibers when surrounding tissues are too short",
+        "Lengthening of muscle fibers when attachment sides are pulled away",
+        "Both mechanisms increase passive tension in the upper‑back musculature"
+      ],
+      "execution_steps": [],
+      "cues": [],
+      "breathing_cues": [],
+      "errors_to_avoid": [],
+      "when_useful": [],
+      "when_not_useful": [],
+      "retest": [],
+      "advice": [],
+      "timestamps": [
+        "24.6‑35.9"
+      ]
+    }
+  ],
+  "analysis_report": {
+    "audio_extracted": true,
+    "transcript_status": "ok",
+    "scene_status": "ok",
+    "frame_status": "ok",
+    "ocr_status": "ok",
+    "segment_alignment_status": "ok",
+    "scene_count": 30,
+    "transcript_segment_count": 37,
+    "ocr_observation_count": 5,
+    "metadata_status": "ok",
+    "download_status": "ok"
+  },
+  "source_artifacts": {
+    "segment_count": 30,
+    "asset_count": 29
+  },
+  "analysis_provider": "hf_structured",
+  "analysis_quality": "standard",
+  "is_active": true,
+  "supersedes_draft_id": null
+}

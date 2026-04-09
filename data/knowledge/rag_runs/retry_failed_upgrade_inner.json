@@ -1,0 +1,11 @@
+{
+  "selection_mode": "urls",
+  "requested_limit": null,
+  "requested_urls": [
+    "https://www.youtube.com/shorts/d4d5Ta8UXRg",
+    "https://www.youtube.com/shorts/kU7CaY7YuDo"
+  ],
+  "selected_count": 0,
+  "model": "gemini-2.5-flash",
+  "results": []
+}

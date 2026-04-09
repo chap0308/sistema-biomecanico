@@ -1,0 +1,6 @@
+{
+  "segment_count": 627,
+  "source_count": 22,
+  "qdrant_points_upserted": 627,
+  "collection_name": "video_segments_v1"
+}
