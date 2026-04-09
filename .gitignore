@@ -15,6 +15,15 @@ node_modules/*
 pytest-cache-files-*/
 data/to-learn/*
 data/images/*
+data/knowledge/rag_runs/
+data/knowledge/video_knowledge_drafts/conorharris_first12_local/
+data/knowledge/video_knowledge_drafts/conorharris_newest_1_1_local/
+data/knowledge/video_knowledge_drafts/conorharris_newest_11_20_rerun_check/
+data/knowledge/video_knowledge_drafts/conorharris_newest_31_40_local/
+data/knowledge/video_knowledge_drafts/conorharris_newest_41_50_gemini/
+data/knowledge/youtube_channels/
+tools/qdrant-server/*.exe
+tools/qdrant-server/*.zip
 debug/chat/*
 debug/*
 docs/legacy/*

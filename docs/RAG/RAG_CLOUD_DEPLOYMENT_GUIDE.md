@@ -350,6 +350,37 @@ Useful for:
 
 If the backend is already using `QDRANT_URL` and `QDRANT_API_KEY`, Qdrant Cloud does not need any extra local process.
 
+## Repository hygiene before deployment
+
+Not every file under `data/knowledge` belongs in the public repository.
+
+Recommended rule:
+
+- keep **canonical inputs or small reference datasets**
+- ignore **generated outputs** that can be reproduced from scripts
+
+### Good candidates to keep versioned
+
+- small reference files such as `data/knowledge/exercise_protocols.json`
+- curated draft examples used as fixtures or samples
+- compact registries that describe the dataset shape
+
+### Good candidates to keep out of git
+
+- `data/knowledge/rag_runs/*`
+- bulk generated `*_level1.json`
+- bulk generated `*_sync.json`
+- `run_summary.json`
+- scrape snapshots under `data/knowledge/youtube_channels/*`
+- local Qdrant binaries and ZIP downloads
+
+Why this matters:
+
+- the repositories stay lightweight for portfolio and deployment
+- generated artifacts do not create noisy commits
+- cloning and CI remain faster
+- public repos avoid carrying machine-specific tooling and temporary runs
+
 ## Buckets and debug assets
 
 For the chat MVP with `rest_phase1`, the backend uploads:
