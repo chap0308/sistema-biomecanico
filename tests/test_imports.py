@@ -54,6 +54,7 @@ def test_core_modules_import() -> None:
     import src.storage.supabase_store  # noqa: F401
     import src.storage.chat_store  # noqa: F401
     import src.squat.models  # noqa: F401
+    import src.squat.biomechanics  # noqa: F401
     import src.squat.pipeline  # noqa: F401
     import src.squat.pose_video  # noqa: F401
     import src.squat.registry  # noqa: F401

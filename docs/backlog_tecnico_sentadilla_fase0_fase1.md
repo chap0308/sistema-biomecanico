@@ -124,4 +124,4 @@ La extracción base de pose 2D ya fue implementada con:
 - gráfica temporal de visibilidad y disponibilidad de puntos;
 - evidencia Mermaid vinculada al Objetivo Específico 1.
 
-La Fase 3 de segmentación temporal quedó implementada y validada sobre los cuatro videos iniciales. La siguiente fase activa es el cálculo de variables biomecánicas observables por repetición y por fase, sin traducirlas todavía a compensaciones.
+Las Fases 3 y 4 quedaron implementadas y validadas sobre los cuatro videos iniciales. La Fase 3 segmenta repeticiones y fases; la Fase 4 calcula variables biomecánicas por fotograma y repetición sin usar etiquetas ni umbrales. La siguiente fase activa es la definición de reglas interpretables para traducir las variables en compensaciones observables.

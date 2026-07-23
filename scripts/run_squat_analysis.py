@@ -12,6 +12,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from src.squat.models import TARGET_FINDINGS, SquatCaseRecord
+from src.squat.biomechanics import calculate_squat_biomechanics
 from src.squat.pipeline import register_squat_case
 from src.squat.pose_video import extract_squat_pose_video
 from src.squat.registry import initialize_case_registry
@@ -81,6 +82,15 @@ def build_parser() -> argparse.ArgumentParser:
     segment_parser.add_argument("--landmarks-csv", type=Path, required=True)
     segment_parser.add_argument("--frame-quality-csv", type=Path, required=True)
     segment_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+
+    metrics_parser = subparsers.add_parser(
+        "metrics",
+        help="Calculate biomechanical proxy variables from segmented pose data.",
+    )
+    metrics_parser.add_argument("--case-id", required=True)
+    metrics_parser.add_argument("--landmarks-csv", type=Path, required=True)
+    metrics_parser.add_argument("--frame-phases-csv", type=Path, required=True)
+    metrics_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     return parser
 
 
@@ -107,6 +117,16 @@ def main(argv: list[str] | None = None) -> int:
         summary = segment_squat_pose_artifacts(
             args.landmarks_csv,
             args.frame_quality_csv,
+            case_id=args.case_id,
+            output_dir=args.output_dir,
+        )
+        print(json.dumps(summary.model_dump(mode="json"), indent=2, ensure_ascii=False))
+        return 0
+
+    if args.command == "metrics":
+        summary = calculate_squat_biomechanics(
+            args.landmarks_csv,
+            args.frame_phases_csv,
             case_id=args.case_id,
             output_dir=args.output_dir,
         )

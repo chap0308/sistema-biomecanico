@@ -212,6 +212,8 @@ flowchart LR
 | Implementar el prototipo funcional | Pipeline completo de procesamiento | Demostración con video de entrada y reporte de salida |
 | Evaluar el desempeño técnico frente a expertos | Comparación experto-sistema y métricas | Matriz comparativa, F1-score, Kappa, tabla de concordancia |
 
+La segmentación temporal de la Fase 3 funciona como evidencia habilitadora del segundo objetivo: determina las ventanas y fotogramas sobre los que se aplican las fórmulas. La evidencia completa del objetivo enlaza la segmentación con el cálculo de la Fase 4, sin presentar la fase previa como un objetivo independiente.
+
 Esta tabla es clave porque evita explicar el avance con frases como “ya existe esta función” y lo aterriza en evidencias observables.
 
 ## 7. Fases de desarrollo recomendadas
@@ -657,3 +659,5 @@ La preparación de videos de desarrollo se rige por [guia_tecnica_grabacion_vide
 La primera evidencia técnica por objetivo quedó documentada en [evidencia_objetivo_1_estimacion_pose_2d.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_1_estimacion_pose_2d.md). Los diagramas se producirán de manera incremental cuando el objetivo correspondiente cuente con implementación y artefactos verificables; al final se consolidarán y migrarán a una herramienta visual para presentación.
 
 La evidencia de la segmentación quedó documentada en [evidencia_fase_3_segmentacion_temporal.md](/D:/sistema-biomecanico/docs/evidencia_fase_3_segmentacion_temporal.md). Este incremento prepara los fotogramas y ventanas temporales sobre los que se calcularán las variables biomecánicas de la Fase 4.
+
+La Fase 4 y la trazabilidad completa del Objetivo Específico 2 quedaron documentadas en [evidencia_objetivo_2_variables_biomecanicas.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_2_variables_biomecanicas.md). El siguiente incremento corresponde a la Fase 5: reglas y umbrales interpretables separados del cálculo geométrico.

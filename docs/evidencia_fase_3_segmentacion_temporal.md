@@ -4,6 +4,8 @@
 
 Esta evidencia demuestra que el sistema puede dividir una grabación frontal de sentadilla bilateral en repeticiones y fases temporales antes de calcular variables biomecánicas. La segmentación no clasifica compensaciones ni establece diagnósticos.
 
+Esta fase es una **evidencia habilitadora del Objetivo Específico 2: definir variables biomecánicas observables**. No completa el objetivo por sí sola, pero determina en qué repetición, fase y fotograma deben calcularse y resumirse las variables. Su salida es la entrada directa de la Fase 4 documentada en [evidencia_objetivo_2_variables_biomecanicas.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_2_variables_biomecanicas.md).
+
 ## Señal utilizada
 
 La señal base es la coordenada vertical normalizada del punto medio entre ambas caderas. En coordenadas de imagen, un valor mayor representa un desplazamiento hacia abajo. Después de interpolar valores aislados y suavizar la serie, los máximos locales prominentes representan la mayor profundidad de cada repetición.
