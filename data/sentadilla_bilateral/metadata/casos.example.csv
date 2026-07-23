@@ -1,0 +1,2 @@
+case_id,video_path,participant_code,profile,intended_findings,protocol_review_status,exclusion_reason,view,plane,load_condition
+caso_001,data/sentadilla_bilateral/raw/caso_001.mp4,P001,no_etiquetado,,pendiente,,anterior,frontal,sin_carga_externa

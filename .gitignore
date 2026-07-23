@@ -42,5 +42,10 @@ dist/
 .venv/
 venv/
 data/qdrant_local/
+data/sentadilla_bilateral/raw/*
+data/sentadilla_bilateral/curated/*
+data/sentadilla_bilateral/labels_expertos/*
+data/sentadilla_bilateral/outputs/*
+data/sentadilla_bilateral/metadata/casos.csv
 *.pyc
 *.pyo
