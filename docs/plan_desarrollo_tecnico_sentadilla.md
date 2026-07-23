@@ -658,6 +658,8 @@ La preparación de videos de desarrollo se rige por [guia_tecnica_grabacion_vide
 
 La primera evidencia técnica por objetivo quedó documentada en [evidencia_objetivo_1_estimacion_pose_2d.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_1_estimacion_pose_2d.md). Los diagramas se producirán de manera incremental cuando el objetivo correspondiente cuente con implementación y artefactos verificables; al final se consolidarán y migrarán a una herramienta visual para presentación.
 
+El descarte de videos no aptos ya está materializado mediante una puerta posterior a pose y segmentación. Su lógica, estados y relación transversal con los Objetivos Específicos 1 y 4 se documentan en [evidencia_control_calidad_analitica.md](/D:/sistema-biomecanico/docs/evidencia_control_calidad_analitica.md).
+
 La evidencia de la segmentación quedó documentada en [evidencia_fase_3_segmentacion_temporal.md](/D:/sistema-biomecanico/docs/evidencia_fase_3_segmentacion_temporal.md). Este incremento prepara los fotogramas y ventanas temporales sobre los que se calcularán las variables biomecánicas de la Fase 4.
 
 La Fase 4 y la trazabilidad completa del Objetivo Específico 2 quedaron documentadas en [evidencia_objetivo_2_variables_biomecanicas.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_2_variables_biomecanicas.md). El siguiente incremento corresponde a la Fase 5: reglas y umbrales interpretables separados del cálculo geométrico.

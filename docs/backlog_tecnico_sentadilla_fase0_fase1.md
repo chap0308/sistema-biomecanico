@@ -125,3 +125,5 @@ La extracción base de pose 2D ya fue implementada con:
 - evidencia Mermaid vinculada al Objetivo Específico 1.
 
 Las Fases 3 y 4 quedaron implementadas y validadas sobre los cuatro videos iniciales. La Fase 3 segmenta repeticiones y fases; la Fase 4 calcula variables biomecánicas por fotograma y repetición sin usar etiquetas ni umbrales. La siguiente fase activa es la definición de reglas interpretables para traducir las variables en compensaciones observables.
+
+Antes de la Fase 5 se incorporó un control transversal de calidad analítica. Este control acepta, deriva a revisión o excluye cada video según procesamiento, disponibilidad de puntos, tres repeticiones y validez de la máxima profundidad. No utiliza umbrales biomecánicos y no clasifica compensaciones.

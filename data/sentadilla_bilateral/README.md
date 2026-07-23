@@ -34,7 +34,14 @@ D:\anaconda4\envs\analisis-bio\python.exe scripts\run_squat_analysis.py segment 
   --landmarks-csv data\sentadilla_bilateral\outputs\caso_001\landmarks.csv `
   --frame-quality-csv data\sentadilla_bilateral\outputs\caso_001\frame_quality.csv
 
-# 3. Calcular variables biomecánicas observables
+# 3. Verificar aptitud para el análisis formal
+D:\anaconda4\envs\analisis-bio\python.exe scripts\run_squat_analysis.py quality-check `
+  --case-id caso_001 `
+  --pose-summary-json data\sentadilla_bilateral\outputs\caso_001\pose_summary.json `
+  --segmentation-summary-json data\sentadilla_bilateral\outputs\caso_001\segmentation_summary.json `
+  --frame-quality-csv data\sentadilla_bilateral\outputs\caso_001\frame_quality.csv
+
+# 4. Calcular variables biomecánicas observables solo si el video es apto
 D:\anaconda4\envs\analisis-bio\python.exe scripts\run_squat_analysis.py metrics `
   --case-id caso_001 `
   --landmarks-csv data\sentadilla_bilateral\outputs\caso_001\landmarks.csv `

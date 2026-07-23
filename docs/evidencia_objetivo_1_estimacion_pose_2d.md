@@ -70,6 +70,10 @@ data/sentadilla_bilateral/outputs/<case_id>/
 
 El overlay incluye el esqueleto relevante, etiquetas de rodilla y tobillo, estado del fotograma, cantidad de puntos detectados, visibilidad mínima y pixelado facial. La gráfica permite ubicar temporalmente caídas de visibilidad y fotogramas que no cumplen la regla.
 
+## Control posterior de aptitud analítica
+
+La detección de puntos por fotograma se complementa con una puerta de calidad que verifica su disponibilidad durante las tres repeticiones y en cada fotograma de máxima profundidad. Esta evidencia transversal está documentada en [evidencia_control_calidad_analitica.md](/D:/sistema-biomecanico/docs/evidencia_control_calidad_analitica.md). El control forma parte del soporte del Objetivo Específico 1, pero también protege el flujo funcional asociado al Objetivo Específico 4.
+
 ## Interpretación de los nombres de archivo
 
 Los términos `normal` y `controlado` son etiquetas provisionales proporcionadas durante el desarrollo. No constituyen resultados del sistema ni referencia experta. La clasificación de compensaciones se realizará después de implementar segmentación temporal, variables biomecánicas y reglas interpretables, y se validará mediante el Instrumento 3.

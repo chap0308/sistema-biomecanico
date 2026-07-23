@@ -15,6 +15,7 @@ from src.squat.models import TARGET_FINDINGS, SquatCaseRecord
 from src.squat.biomechanics import calculate_squat_biomechanics
 from src.squat.pipeline import register_squat_case
 from src.squat.pose_video import extract_squat_pose_video
+from src.squat.quality_gate import evaluate_squat_analysis_quality
 from src.squat.registry import initialize_case_registry
 from src.squat.segmentation import segment_squat_pose_artifacts
 
@@ -91,6 +92,20 @@ def build_parser() -> argparse.ArgumentParser:
     metrics_parser.add_argument("--landmarks-csv", type=Path, required=True)
     metrics_parser.add_argument("--frame-phases-csv", type=Path, required=True)
     metrics_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+
+    quality_parser = subparsers.add_parser(
+        "quality-check",
+        help="Accept or reject a processed video for formal analysis.",
+    )
+    quality_parser.add_argument("--case-id", required=True)
+    quality_parser.add_argument("--pose-summary-json", type=Path, required=True)
+    quality_parser.add_argument(
+        "--segmentation-summary-json",
+        type=Path,
+        required=True,
+    )
+    quality_parser.add_argument("--frame-quality-csv", type=Path, required=True)
+    quality_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     return parser
 
 
@@ -132,6 +147,17 @@ def main(argv: list[str] | None = None) -> int:
         )
         print(json.dumps(summary.model_dump(mode="json"), indent=2, ensure_ascii=False))
         return 0
+
+    if args.command == "quality-check":
+        summary = evaluate_squat_analysis_quality(
+            args.pose_summary_json,
+            args.segmentation_summary_json,
+            args.frame_quality_csv,
+            case_id=args.case_id,
+            output_dir=args.output_dir,
+        )
+        print(json.dumps(summary.model_dump(mode="json"), indent=2, ensure_ascii=False))
+        return 0 if summary.eligible_for_analysis else 2
 
     case = SquatCaseRecord(
         case_id=args.case_id,
