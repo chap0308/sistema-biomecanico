@@ -324,6 +324,9 @@ Tareas:
 - definir reglas explícitas;
 - asignar umbrales iniciales;
 - probar reglas en casos positivos y negativos;
+- evaluar cada patrón mediante una regla independiente para permitir salidas multietiqueta;
+- emitir `no concluyente` cuando la calidad o cercanía al umbral no permita decidir;
+- probar casos combinados después de verificar los patrones aislados;
 - justificar cada regla con biomecánica observacional.
 
 Resultado esperado:
@@ -471,6 +474,31 @@ Aplican a:
 
 - evitar que un cambio rompa resultados previamente aceptados;
 - mantener consistencia de métricas entre iteraciones.
+
+### 9.5 Puertas de calidad por fase
+
+La calidad no debe resolverse mediante un único `try/catch` general. Las condiciones esperables de baja calidad deben producir estados estructurados y motivos trazables; los errores inesperados de archivo, dependencia o programación deben conservarse como excepciones y registros técnicos.
+
+| Momento del flujo | Condición controlada | Respuesta esperada | Relación principal |
+|---|---|---|---|
+| Registro y protocolo | Vista, iluminación, fondo, encuadre, ejecución o apoyo fuera del protocolo | Rechazar antes de pose y registrar motivo en el Instrumento 1 | OE1 y metodología |
+| Extracción de pose | Pérdida de puntos críticos, bajo porcentaje válido o procesamiento incompleto | `apto`, `revisión requerida` o `no apto` mediante puerta de calidad | OE1 y OE4 |
+| Segmentación | Cantidad distinta de tres repeticiones, ciclo incompleto o máxima profundidad no válida | No continuar al análisis formal; permitir depuración local | OE2 y OE4 |
+| Cálculo biomecánico | Referencia de normalización inválida, valores no finitos o variable ausente en fase crítica | Marcar variable o repetición como no calculable; no imputar silenciosamente | OE2 |
+| Reglas interpretables | Valor próximo al umbral, señal contradictoria o evidencia insuficiente | Salida `no concluyente` para el patrón afectado | OE3 |
+| Salida multietiqueta | Más de una regla positiva en el mismo video | Conservar todas las etiquetas compatibles y su evidencia independiente | OE3 y OE4 |
+| Comparación experta | Desacuerdo sin mayoría o consenso | Referencia `no concluyente`; excluir ese patrón del cálculo correspondiente | OE5 |
+| Evaluación estadística | Pocos positivos, negativos o casos no concluyentes | No reportar una métrica como estable; declarar tamaño efectivo por patrón | OE5 |
+| Reporte y exportación | Artefacto incompleto, identidad visible o inconsistencia entre JSON, CSV y reporte | Bloquear publicación del reporte y registrar el error | OE4 y ética |
+
+Estado actual:
+
+- registro y revisión de protocolo: implementados como contrato y estado manual;
+- calidad de pose y segmentación: implementada mediante `quality-check`;
+- valores no finitos: rechazados o conservados como nulos explícitos en el módulo de métricas;
+- controles de reglas, multietiqueta, referencia experta y reporte: pendientes de sus fases correspondientes.
+
+Esta matriz debe revisarse al cerrar cada fase. Una fase no se considerará terminada solo porque produzca resultados; también deberá demostrar cómo maneja entradas inválidas, resultados incompletos y casos ambiguos.
 
 ## 10. Qué artefactos conviene mostrar al asesor
 

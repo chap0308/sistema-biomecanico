@@ -76,6 +76,20 @@ La iluminación se considera adecuada cuando todos esos segmentos pueden disting
 
 No es necesario colocar marcadores físicos. La prioridad es que los puntos anatómicos estimados por MediaPipe sean visibles y estables.
 
+### 6.1 Referencias opcionales en el suelo
+
+Una referencia plana en el suelo puede mejorar la **repetibilidad de la colocación**, pero no aumenta directamente la precisión interna de MediaPipe ni sustituye los puntos anatómicos clave. Su utilidad es mantener estable la base de apoyo y facilitar la revisión visual entre repeticiones.
+
+No se recomienda una única cruz rígida en la punta de los pies para todos los participantes, porque podría forzar una separación u orientación que no corresponde a su postura cómoda. Si se usa cinta adhesiva, la configuración recomendada es:
+
+1. una línea central alineada con el centro de la cámara;
+2. una marca plana para cada talón;
+3. una línea corta desde cada talón hacia la dirección del segundo dedo del pie;
+4. colocación definida después de que el participante adopte una base cómoda;
+5. conservación de esa misma base durante las tres repeticiones y registros comparables.
+
+La cinta debe ser plana, antideslizante, de color contrastante y no reflectante. No debe colocarse ningún elemento elevado debajo del talón. La referencia del suelo se registrará como ayuda de estandarización, no como marcador anatómico ni como evidencia de una alteración del pie.
+
 ## 7. Posición inicial y ejecución estándar
 
 1. Colocarse de frente a la cámara.
@@ -109,6 +123,24 @@ Los siguientes patrones se pueden representar de manera deliberada solo para ver
 No debe forzarse el valgo, realizarse cerca del fallo ni buscar una profundidad que produzca dolor. Una desviación leve pero visible es suficiente para una prueba de software.
 
 La asimetría bilateral observable no se recomienda como gesto aislado en la primera ronda. Se calculará comparando las trayectorias o medidas derecha e izquierda y puede aparecer como consecuencia de valgo unilateral, desplazamiento pélvico u otro comportamiento desigual. Después de validar cada señal por separado se pueden grabar casos mixtos y ambiguos.
+
+### 8.1 Casos con más de un patrón
+
+Sí es posible que un mismo video presente simultáneamente inclinación del tronco, desplazamiento pélvico, valgo y diferencia bilateral. El sistema se diseñará como **clasificador multietiqueta**: cada patrón tendrá una regla independiente y un caso podrá conservar cero, una o varias salidas, además del estado `no concluyente` por patrón.
+
+La estrategia de grabación tendrá dos etapas:
+
+1. **Casos aislados controlados:** sirven para verificar signo, dirección, sensibilidad y umbral inicial de cada regla con la menor interferencia posible.
+2. **Casos combinados y espontáneos:** sirven para comprobar que las reglas pueden coexistir y que una compensación no oculta ni genera artificialmente otra.
+
+La asimetría bilateral no debe interpretarse como causa de las otras compensaciones. Es una medida transversal de desigualdad entre lados y puede coexistir con un valgo unilateral, un desplazamiento pélvico u otra diferencia lateral. Para evitar doble conteo, el reporte conservará por separado:
+
+- variables geométricas medidas;
+- patrones específicos detectados;
+- índice o estado de asimetría bilateral;
+- evidencia y regla aplicada para cada salida.
+
+El registro técnico ya admite varias etiquetas previstas mediante una lista de `intended_findings`. Para las pruebas aisladas se registrará una etiqueta principal; para casos combinados se podrán registrar varias sin cambiar el contrato de datos.
 
 Los casos controlados no demuestran que una persona tenga una deficiencia real ni constituyen diagnóstico. Su finalidad es comprobar dirección, sensibilidad, trazabilidad y estabilidad del algoritmo. La referencia final de evaluación será la clasificación consolidada de los expertos.
 
