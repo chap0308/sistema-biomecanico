@@ -133,3 +133,10 @@ evaluado en `docs/evaluacion_lote_piloto_fase5.md`. La Fase 5 puede comenzar
 con el contrato del motor de reglas, trazabilidad, estados de decisión y salida
 multietiqueta. La calibración final permanece bloqueada hasta repetir el caso
 de valgo derecho, incorporar valgo bilateral y ampliar negativos y réplicas.
+
+La estructura de la Fase 5 ya está implementada: configuración versionada,
+bandas de decisión, consenso entre repeticiones, salida multietiqueta,
+trazabilidad y artefactos `findings.json` y `rule_evidence.csv`. El siguiente
+incremento consiste en ampliar videos piloto, revisar falsos positivos de
+asimetría y preparar la visualización integrada del prototipo antes de congelar
+el conjunto de reglas.

@@ -700,3 +700,10 @@ intentados y no referencia experta. El lote permite verificar varias
 direcciones de señal; todavía se requiere repetir el valgo derecho, incorporar
 valgo bilateral y aumentar casos negativos y réplicas antes de congelar
 umbrales.
+
+La primera versión del motor de reglas quedó implementada mediante el
+`ruleset_v0.1` provisional. La evidencia del Objetivo Específico 3, sus bandas
+de decisión, resultados piloto y ciclo de trazabilidad se documentan en
+[evidencia_objetivo_3_criterios_interpretables.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_3_criterios_interpretables.md).
+Los umbrales todavía no están congelados y deberán evolucionar mediante
+versiones explícitas antes de la evaluación final.

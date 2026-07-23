@@ -17,10 +17,12 @@ from src.squat.pipeline import register_squat_case
 from src.squat.pose_video import extract_squat_pose_video
 from src.squat.quality_gate import evaluate_squat_analysis_quality
 from src.squat.registry import initialize_case_registry
+from src.squat.rules import classify_squat_findings
 from src.squat.segmentation import segment_squat_pose_artifacts
 
 DEFAULT_REGISTRY = Path("data/sentadilla_bilateral/metadata/casos.csv")
 DEFAULT_OUTPUT_DIR = Path("data/sentadilla_bilateral/outputs")
+DEFAULT_RULESET = Path("config/squat/ruleset_v0_1_provisional.json")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -106,6 +108,24 @@ def build_parser() -> argparse.ArgumentParser:
     )
     quality_parser.add_argument("--frame-quality-csv", type=Path, required=True)
     quality_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+
+    classify_parser = subparsers.add_parser(
+        "classify",
+        help="Apply versioned interpretable rules to biomechanical metrics.",
+    )
+    classify_parser.add_argument("--case-id", required=True)
+    classify_parser.add_argument(
+        "--biomechanics-summary-json",
+        type=Path,
+        required=True,
+    )
+    classify_parser.add_argument(
+        "--quality-summary-json",
+        type=Path,
+        required=True,
+    )
+    classify_parser.add_argument("--ruleset", type=Path, default=DEFAULT_RULESET)
+    classify_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     return parser
 
 
@@ -158,6 +178,17 @@ def main(argv: list[str] | None = None) -> int:
         )
         print(json.dumps(summary.model_dump(mode="json"), indent=2, ensure_ascii=False))
         return 0 if summary.eligible_for_analysis else 2
+
+    if args.command == "classify":
+        summary = classify_squat_findings(
+            args.biomechanics_summary_json,
+            args.quality_summary_json,
+            args.ruleset,
+            case_id=args.case_id,
+            output_dir=args.output_dir,
+        )
+        print(json.dumps(summary.model_dump(mode="json"), indent=2, ensure_ascii=False))
+        return 0
 
     case = SquatCaseRecord(
         case_id=args.case_id,

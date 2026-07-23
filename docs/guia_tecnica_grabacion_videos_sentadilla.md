@@ -224,7 +224,19 @@ data/sentadilla_bilateral/outputs/<case_id>/
 - `pose_quality.png`: gráfica temporal para revisar estabilidad, disponibilidad y umbral de visibilidad.
 - `pose_summary.json`: resumen agregado de procesamiento y rutas de artefactos.
 
-En fases posteriores se añadirán `metrics.csv`, `findings.json` y gráficas biomecánicas después de implementar segmentación temporal, variables y reglas interpretables.
+Las fases implementadas generan además métricas biomecánicas, `findings.json`
+y `rule_evidence.csv`. El primero contiene la clasificación multietiqueta y el
+segundo conserva los valores, estados por repetición, dirección y umbrales
+aplicados.
+
+La clasificación provisional se ejecuta con:
+
+```powershell
+D:\anaconda4\envs\analisis-bio\python.exe scripts\run_squat_analysis.py classify `
+  --case-id dev_valgo_izq_001 `
+  --biomechanics-summary-json data\sentadilla_bilateral\outputs\dev_valgo_izq_001\biomechanical_summary.json `
+  --quality-summary-json data\sentadilla_bilateral\outputs\dev_valgo_izq_001\quality_gate_summary.json
+```
 
 Las pruebas automatizadas se ejecutan con:
 
