@@ -124,4 +124,4 @@ La extracción base de pose 2D ya fue implementada con:
 - gráfica temporal de visibilidad y disponibilidad de puntos;
 - evidencia Mermaid vinculada al Objetivo Específico 1.
 
-La siguiente fase activa es la segmentación temporal de la sentadilla: reposo inicial, descenso, punto de máxima profundidad, ascenso y cierre.
+La Fase 3 de segmentación temporal quedó implementada y validada sobre los cuatro videos iniciales. La siguiente fase activa es el cálculo de variables biomecánicas observables por repetición y por fase, sin traducirlas todavía a compensaciones.

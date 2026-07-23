@@ -57,6 +57,7 @@ def test_core_modules_import() -> None:
     import src.squat.pipeline  # noqa: F401
     import src.squat.pose_video  # noqa: F401
     import src.squat.registry  # noqa: F401
+    import src.squat.segmentation  # noqa: F401
     import src.squat.video  # noqa: F401
     import scripts.process_rag_source  # noqa: F401
     import scripts.analyze_rag_segments  # noqa: F401

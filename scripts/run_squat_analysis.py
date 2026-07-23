@@ -15,6 +15,7 @@ from src.squat.models import TARGET_FINDINGS, SquatCaseRecord
 from src.squat.pipeline import register_squat_case
 from src.squat.pose_video import extract_squat_pose_video
 from src.squat.registry import initialize_case_registry
+from src.squat.segmentation import segment_squat_pose_artifacts
 
 DEFAULT_REGISTRY = Path("data/sentadilla_bilateral/metadata/casos.csv")
 DEFAULT_OUTPUT_DIR = Path("data/sentadilla_bilateral/outputs")
@@ -71,6 +72,15 @@ def build_parser() -> argparse.ArgumentParser:
         action=argparse.BooleanOptionalAction,
         default=True,
     )
+
+    segment_parser = subparsers.add_parser(
+        "segment",
+        help="Detect repetitions and temporal phases from pose artifacts.",
+    )
+    segment_parser.add_argument("--case-id", required=True)
+    segment_parser.add_argument("--landmarks-csv", type=Path, required=True)
+    segment_parser.add_argument("--frame-quality-csv", type=Path, required=True)
+    segment_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     return parser
 
 
@@ -89,6 +99,16 @@ def main(argv: list[str] | None = None) -> int:
             output_dir=args.output_dir,
             min_visibility=args.min_visibility,
             anonymize_face=args.anonymize_face,
+        )
+        print(json.dumps(summary.model_dump(mode="json"), indent=2, ensure_ascii=False))
+        return 0
+
+    if args.command == "segment":
+        summary = segment_squat_pose_artifacts(
+            args.landmarks_csv,
+            args.frame_quality_csv,
+            case_id=args.case_id,
+            output_dir=args.output_dir,
         )
         print(json.dumps(summary.model_dump(mode="json"), indent=2, ensure_ascii=False))
         return 0

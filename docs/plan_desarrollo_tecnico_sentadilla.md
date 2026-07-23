@@ -650,8 +650,10 @@ D:\anaconda4\envs\analisis-bio\python.exe scripts\run_squat_analysis.py register
   --protocol-review-status pendiente
 ```
 
-El siguiente incremento corresponde a la Fase 2: extracción temporal de los puntos anatómicos clave por fotograma, cálculo de fotogramas válidos y generación del primer overlay de sentadilla.
+Las Fases 2 y 3 quedaron implementadas. La Fase 2 extrae los puntos anatómicos clave por fotograma, calcula la validez de pose y genera el overlay anonimizado. La Fase 3 utiliza el punto medio vertical de ambas caderas para detectar repeticiones, máxima profundidad y fases de descenso, ascenso, cierre y reposo.
 
 La preparación de videos de desarrollo se rige por [guia_tecnica_grabacion_videos_sentadilla.md](/D:/sistema-biomecanico/docs/guia_tecnica_grabacion_videos_sentadilla.md), que complementa el protocolo formal con parámetros reproducibles de cámara, encuadre, iluminación, ropa, ejecución y casos controlados.
 
 La primera evidencia técnica por objetivo quedó documentada en [evidencia_objetivo_1_estimacion_pose_2d.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_1_estimacion_pose_2d.md). Los diagramas se producirán de manera incremental cuando el objetivo correspondiente cuente con implementación y artefactos verificables; al final se consolidarán y migrarán a una herramienta visual para presentación.
+
+La evidencia de la segmentación quedó documentada en [evidencia_fase_3_segmentacion_temporal.md](/D:/sistema-biomecanico/docs/evidencia_fase_3_segmentacion_temporal.md). Este incremento prepara los fotogramas y ventanas temporales sobre los que se calcularán las variables biomecánicas de la Fase 4.
