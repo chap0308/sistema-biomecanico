@@ -691,3 +691,12 @@ El descarte de videos no aptos ya está materializado mediante una puerta poster
 La evidencia de la segmentación quedó documentada en [evidencia_fase_3_segmentacion_temporal.md](/D:/sistema-biomecanico/docs/evidencia_fase_3_segmentacion_temporal.md). Este incremento prepara los fotogramas y ventanas temporales sobre los que se calcularán las variables biomecánicas de la Fase 4.
 
 La Fase 4 y la trazabilidad completa del Objetivo Específico 2 quedaron documentadas en [evidencia_objetivo_2_variables_biomecanicas.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_2_variables_biomecanicas.md). El siguiente incremento corresponde a la Fase 5: reglas y umbrales interpretables separados del cálculo geométrico.
+
+La evaluación previa del primer lote controlado quedó registrada en
+[evaluacion_lote_piloto_fase5.md](/D:/sistema-biomecanico/docs/evaluacion_lote_piloto_fase5.md).
+Los siete videos son técnicamente procesables y permiten iniciar la estructura
+del motor de reglas, pero las etiquetas de archivo se consideran patrones
+intentados y no referencia experta. El lote permite verificar varias
+direcciones de señal; todavía se requiere repetir el valgo derecho, incorporar
+valgo bilateral y aumentar casos negativos y réplicas antes de congelar
+umbrales.
