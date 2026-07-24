@@ -24,6 +24,7 @@ from fastapi.staticfiles import StaticFiles
 from api.routes.analyze import router as analyze_router
 from api.routes.chat import router as chat_router
 from api.routes.health import router as health_router
+from api.routes.squat import router as squat_router
 from app.config import get_settings
 from src.storage.supabase_storage import SupabaseStorageClient, SupabaseStorageError
 
@@ -46,6 +47,7 @@ app.add_middleware(
 app.include_router(health_router, prefix=settings.api_prefix, tags=["health"])
 app.include_router(analyze_router, prefix=settings.api_prefix, tags=["analysis"])
 app.include_router(chat_router, prefix=settings.api_prefix, tags=["chat"])
+app.include_router(squat_router, prefix=settings.api_prefix, tags=["squat"])
 
 debug_dir = Path("debug")
 debug_dir.mkdir(parents=True, exist_ok=True)

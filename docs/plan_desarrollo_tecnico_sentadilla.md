@@ -367,6 +367,14 @@ Resultado esperado:
 
 - demostración funcional para asesor y jurado.
 
+Avance actual:
+
+- contratos agregados de entrada y salida implementados;
+- orquestación completa disponible desde CLI y servicio Python;
+- capturas anonimizadas de inicio, máxima profundidad y final;
+- endpoints FastAPI para crear casos, consultar reportes y recuperar artefactos;
+- interfaz visual pendiente de diseño e implementación.
+
 ### Fase 8. Integración futura web o móvil
 
 Esta fase no debe ser el foco inicial de la tesis. La prioridad debe ser validar el núcleo analítico.

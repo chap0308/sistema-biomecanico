@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 from src.squat.models import SquatCaseRecord, VideoTechnicalMetadata
+from src.squat.contracts import SquatManualProtocolReview
 from src.squat.pipeline import register_squat_case
 from src.squat.registry import load_case_registry
 
@@ -34,11 +35,20 @@ def test_register_squat_case_persists_registry_and_json(tmp_path: Path, monkeypa
         case,
         registry_path=registry,
         output_dir=tmp_path / "outputs",
+        manual_review=SquatManualProtocolReview(
+            lighting="adecuada",
+            support_condition_compliant=True,
+        ),
     )
 
     payload = json.loads(result_path.read_text(encoding="utf-8"))
+    case_record_path = result_path.with_name("case_record.json")
+    case_record = json.loads(case_record_path.read_text(encoding="utf-8"))
     registered = load_case_registry(registry)
     assert result.ready_for_pose is True
     assert payload["analysis_id"] == result.analysis_id
     assert payload["case"]["video_path"] == str(resolved_video)
+    assert case_record["contract"] == "squat_case_record"
+    assert case_record["manual_protocol_review"]["lighting"] == "adecuada"
+    assert case_record["manual_protocol_review"]["support_condition_compliant"]
     assert registered[0].video_path == str(resolved_video)

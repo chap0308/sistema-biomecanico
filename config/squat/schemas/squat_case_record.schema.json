@@ -1,0 +1,451 @@
+{
+  "$defs": {
+    "SquatCaseRecord": {
+      "description": "Traceable record for one frontal bilateral-squat video.",
+      "properties": {
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "video_path": {
+          "title": "Video Path",
+          "type": "string"
+        },
+        "participant_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Participant Code"
+        },
+        "profile": {
+          "default": "no_etiquetado",
+          "enum": [
+            "positivo_controlado",
+            "negativo",
+            "no_etiquetado"
+          ],
+          "title": "Profile",
+          "type": "string"
+        },
+        "intended_findings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Intended Findings",
+          "type": "array"
+        },
+        "protocol_review_status": {
+          "default": "pendiente",
+          "enum": [
+            "pendiente",
+            "aceptado",
+            "rechazado"
+          ],
+          "title": "Protocol Review Status",
+          "type": "string"
+        },
+        "exclusion_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Exclusion Reason"
+        },
+        "view": {
+          "const": "anterior",
+          "default": "anterior",
+          "title": "View",
+          "type": "string"
+        },
+        "plane": {
+          "const": "frontal",
+          "default": "frontal",
+          "title": "Plane",
+          "type": "string"
+        },
+        "load_condition": {
+          "const": "sin_carga_externa",
+          "default": "sin_carga_externa",
+          "title": "Load Condition",
+          "type": "string"
+        }
+      },
+      "required": [
+        "case_id",
+        "video_path"
+      ],
+      "title": "SquatCaseRecord",
+      "type": "object"
+    },
+    "SquatManualProtocolReview": {
+      "additionalProperties": false,
+      "description": "Manual Instrument 1 fields that cannot be inferred by the pose model.",
+      "properties": {
+        "record_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Record Date"
+        },
+        "video_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Video Source"
+        },
+        "capture_device": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Capture Device"
+        },
+        "lighting": {
+          "default": "no_verificada",
+          "enum": [
+            "adecuada",
+            "regular",
+            "deficiente",
+            "no_verificada"
+          ],
+          "title": "Lighting",
+          "type": "string"
+        },
+        "background": {
+          "default": "no_verificado",
+          "enum": [
+            "adecuado",
+            "regular",
+            "deficiente",
+            "no_verificado"
+          ],
+          "title": "Background",
+          "type": "string"
+        },
+        "body_visibility": {
+          "default": "no_verificada",
+          "enum": [
+            "completa",
+            "parcial_utilizable",
+            "insuficiente",
+            "no_verificada"
+          ],
+          "title": "Body Visibility",
+          "type": "string"
+        },
+        "occlusions": {
+          "default": "no_verificada",
+          "enum": [
+            "ninguna",
+            "leve",
+            "moderada",
+            "severa",
+            "no_verificada"
+          ],
+          "title": "Occlusions",
+          "type": "string"
+        },
+        "complete_squat_observable": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Complete Squat Observable"
+        },
+        "surface": {
+          "default": "no_verificable",
+          "enum": [
+            "plana",
+            "no_plana",
+            "no_verificable"
+          ],
+          "title": "Surface",
+          "type": "string"
+        },
+        "external_heel_support": {
+          "default": "no_verificable",
+          "enum": [
+            "no",
+            "si",
+            "no_verificable"
+          ],
+          "title": "External Heel Support",
+          "type": "string"
+        },
+        "apparent_heel_contact": {
+          "default": "no_verificable",
+          "enum": [
+            "continuo",
+            "elevacion_breve",
+            "elevacion_evidente_o_sostenida",
+            "no_verificable"
+          ],
+          "title": "Apparent Heel Contact",
+          "type": "string"
+        },
+        "support_condition_compliant": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Support Condition Compliant"
+        },
+        "plantar_support_observation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plantar Support Observation"
+        },
+        "landmark_availability": {
+          "additionalProperties": {
+            "enum": [
+              "B",
+              "I",
+              "D",
+              "O",
+              "N",
+              "C"
+            ],
+            "type": "string"
+          },
+          "title": "Landmark Availability",
+          "type": "object"
+        },
+        "reviewed_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed By"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        }
+      },
+      "title": "SquatManualProtocolReview",
+      "type": "object"
+    },
+    "SquatRegistrationResult": {
+      "description": "Baseline output produced before pose extraction starts.",
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "analysis_id": {
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "stage": {
+          "const": "registro_tecnico",
+          "default": "registro_tecnico",
+          "title": "Stage",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "pendiente_revision_protocolo",
+            "listo_para_pose",
+            "rechazado"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "ready_for_pose": {
+          "title": "Ready For Pose",
+          "type": "boolean"
+        },
+        "case": {
+          "$ref": "#/$defs/SquatCaseRecord"
+        },
+        "video": {
+          "$ref": "#/$defs/VideoTechnicalMetadata"
+        },
+        "critical_landmarks": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Critical Landmarks",
+          "type": "array"
+        },
+        "target_findings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Findings",
+          "type": "array"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "status",
+        "ready_for_pose",
+        "case",
+        "video"
+      ],
+      "title": "SquatRegistrationResult",
+      "type": "object"
+    },
+    "VideoTechnicalMetadata": {
+      "description": "Technical properties obtained without biomechanical interpretation.",
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "suffix": {
+          "title": "Suffix",
+          "type": "string"
+        },
+        "width_px": {
+          "exclusiveMinimum": 0,
+          "title": "Width Px",
+          "type": "integer"
+        },
+        "height_px": {
+          "exclusiveMinimum": 0,
+          "title": "Height Px",
+          "type": "integer"
+        },
+        "fps": {
+          "exclusiveMinimum": 0,
+          "title": "Fps",
+          "type": "number"
+        },
+        "frame_count": {
+          "exclusiveMinimum": 0,
+          "title": "Frame Count",
+          "type": "integer"
+        },
+        "duration_seconds": {
+          "exclusiveMinimum": 0,
+          "title": "Duration Seconds",
+          "type": "number"
+        },
+        "first_frame_readable": {
+          "title": "First Frame Readable",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "path",
+        "suffix",
+        "width_px",
+        "height_px",
+        "fps",
+        "frame_count",
+        "duration_seconds",
+        "first_frame_readable"
+      ],
+      "title": "VideoTechnicalMetadata",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Instrument 1 contract persisted before computational analysis.",
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "contract": {
+      "const": "squat_case_record",
+      "default": "squat_case_record",
+      "title": "Contract",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "registration": {
+      "$ref": "#/$defs/SquatRegistrationResult"
+    },
+    "manual_protocol_review": {
+      "$ref": "#/$defs/SquatManualProtocolReview"
+    }
+  },
+  "required": [
+    "registration",
+    "manual_protocol_review"
+  ],
+  "title": "SquatCaseRecordContract",
+  "type": "object"
+}

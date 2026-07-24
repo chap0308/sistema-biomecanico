@@ -512,11 +512,23 @@ La misma estructura podrá reutilizarse posteriormente en una página web, una a
 
 ## 12. Prioridad recomendada
 
-1. Definir y validar los esquemas de `case_record.json` y `case_report.json`.
-2. Generar ambos contratos desde el pipeline actual.
-3. Generar capturas de inicio, máxima profundidad y final por repetición.
+1. Definir y validar los esquemas de `case_record.json` y `case_report.json`. **Implementado.**
+2. Generar ambos contratos desde el pipeline actual. **Implementado.**
+3. Generar capturas de inicio, máxima profundidad y final por repetición. **Implementado.**
 4. Implementar una vista web local con registro del caso y análisis automático.
 5. Sincronizar reproductor, eventos y gráficas.
 6. Añadir el módulo del Instrumento 3 y la comparación experta-sistema cuando corresponda realizar la evaluación formal.
 
 Esta secuencia aprovecha los artefactos actuales sin cambiar las fórmulas biomecánicas ni los criterios metodológicos aprobados.
+
+## 13. Implementación previa a la interfaz
+
+El incremento previo a la interfaz quedó implementado mediante:
+
+- `src/squat/contracts.py`, para los contratos agregados;
+- `src/squat/evidence.py`, para las capturas anonimizadas;
+- `src/squat/service.py`, para la orquestación completa;
+- `api/routes/squat.py`, para carga, consulta y acceso a artefactos;
+- `config/squat/schemas/`, para compartir los esquemas con el frontend.
+
+La arquitectura y los endpoints se detallan en `arquitectura_api_preinterfaz_sentadilla.md`. La validación del incremento se documenta en `evidencia_contratos_api_preinterfaz_sentadilla.md`.

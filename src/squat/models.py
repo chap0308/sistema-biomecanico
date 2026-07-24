@@ -178,7 +178,7 @@ class SquatPoseSummary(BaseModel):
     valid_frames: int = Field(ge=0)
     processed_frames_percentage: float = Field(ge=0.0, le=100.0)
     valid_frames_percentage: float = Field(ge=0.0, le=100.0)
-    mean_detected_keypoints: float = Field(ge=0.0)
+    mean_detected_keypoints: float = Field(ge=0.0, le=13.0)
     artifacts: SquatPoseArtifacts
 
 

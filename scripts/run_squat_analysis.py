@@ -11,18 +11,28 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from src.squat.models import TARGET_FINDINGS, SquatCaseRecord
 from src.squat.biomechanics import calculate_squat_biomechanics
+from src.squat.contracts import (
+    SquatManualProtocolReview,
+    export_contract_schemas,
+)
+from src.squat.evidence import generate_repetition_event_captures
+from src.squat.models import TARGET_FINDINGS, SquatCaseRecord, SquatSegmentationSummary
 from src.squat.pipeline import register_squat_case
 from src.squat.pose_video import extract_squat_pose_video
 from src.squat.quality_gate import evaluate_squat_analysis_quality
 from src.squat.registry import initialize_case_registry
 from src.squat.rules import classify_squat_findings
 from src.squat.segmentation import segment_squat_pose_artifacts
+from src.squat.service import (
+    assemble_existing_squat_case,
+    run_squat_case_analysis,
+)
 
 DEFAULT_REGISTRY = Path("data/sentadilla_bilateral/metadata/casos.csv")
 DEFAULT_OUTPUT_DIR = Path("data/sentadilla_bilateral/outputs")
 DEFAULT_RULESET = Path("config/squat/ruleset_v0_1_provisional.json")
+DEFAULT_SCHEMA_DIR = Path("config/squat/schemas")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -60,8 +70,73 @@ def build_parser() -> argparse.ArgumentParser:
         default="pendiente",
     )
     register_parser.add_argument("--exclusion-reason")
+    register_parser.add_argument("--manual-review-json", type=Path)
     register_parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
     register_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+
+    analyze_parser = subparsers.add_parser(
+        "analyze",
+        help="Run registration, pose, segmentation, quality, metrics and rules.",
+    )
+    analyze_parser.add_argument("--case-id", required=True)
+    analyze_parser.add_argument("--video", type=Path, required=True)
+    analyze_parser.add_argument("--participant-code")
+    analyze_parser.add_argument(
+        "--profile",
+        choices=("positivo_controlado", "negativo", "no_etiquetado"),
+        default="no_etiquetado",
+    )
+    analyze_parser.add_argument(
+        "--intended-finding",
+        action="append",
+        choices=TARGET_FINDINGS,
+        default=[],
+    )
+    analyze_parser.add_argument("--manual-review-json", type=Path)
+    analyze_parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
+    analyze_parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    analyze_parser.add_argument("--ruleset", type=Path, default=DEFAULT_RULESET)
+    analyze_parser.add_argument("--min-visibility", type=float, default=0.5)
+    analyze_parser.add_argument(
+        "--anonymize-face",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+
+    schemas_parser = subparsers.add_parser(
+        "export-schemas",
+        help="Export JSON Schemas for the case record and report contracts.",
+    )
+    schemas_parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=DEFAULT_SCHEMA_DIR,
+    )
+
+    captures_parser = subparsers.add_parser(
+        "capture-events",
+        help="Export start, peak and end images from an anonymized overlay.",
+    )
+    captures_parser.add_argument("--overlay", type=Path, required=True)
+    captures_parser.add_argument(
+        "--segmentation-summary-json",
+        type=Path,
+        required=True,
+    )
+    captures_parser.add_argument("--output-dir", type=Path, required=True)
+
+    assemble_parser = subparsers.add_parser(
+        "assemble-existing",
+        help="Build aggregate contracts from an existing case output directory.",
+    )
+    assemble_parser.add_argument("--case-id", required=True)
+    assemble_parser.add_argument("--case-output-dir", type=Path, required=True)
+    assemble_parser.add_argument("--manual-review-json", type=Path)
+    assemble_parser.add_argument(
+        "--protocol-review-status",
+        choices=("pendiente", "aceptado", "rechazado"),
+        default="pendiente",
+    )
 
     pose_parser = subparsers.add_parser(
         "extract-pose",
@@ -137,6 +212,48 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"status": "initialized", "registry": str(path)}, ensure_ascii=False))
         return 0
 
+    if args.command == "export-schemas":
+        record_path, report_path = export_contract_schemas(args.output_dir)
+        print(
+            json.dumps(
+                {
+                    "case_record_schema": str(record_path),
+                    "case_report_schema": str(report_path),
+                },
+                indent=2,
+                ensure_ascii=False,
+            )
+        )
+        return 0
+
+    if args.command == "capture-events":
+        segmentation = SquatSegmentationSummary.model_validate_json(
+            args.segmentation_summary_json.read_text(encoding="utf-8")
+        )
+        captures = generate_repetition_event_captures(
+            args.overlay,
+            segmentation,
+            output_dir=args.output_dir,
+        )
+        print(
+            json.dumps(
+                [capture.model_dump(mode="json") for capture in captures],
+                indent=2,
+                ensure_ascii=False,
+            )
+        )
+        return 0
+
+    if args.command == "assemble-existing":
+        report = assemble_existing_squat_case(
+            args.case_id,
+            case_output_dir=args.case_output_dir,
+            manual_review=_load_manual_review(args.manual_review_json),
+            protocol_review_status=args.protocol_review_status,
+        )
+        print(json.dumps(report.model_dump(mode="json"), indent=2, ensure_ascii=False))
+        return 0
+
     if args.command == "extract-pose":
         summary = extract_squat_pose_video(
             args.video,
@@ -196,13 +313,34 @@ def main(argv: list[str] | None = None) -> int:
         participant_code=args.participant_code,
         profile=args.profile,
         intended_findings=args.intended_finding,
-        protocol_review_status=args.protocol_review_status,
-        exclusion_reason=args.exclusion_reason,
+        protocol_review_status=(
+            args.protocol_review_status
+            if args.command == "register"
+            else "aceptado"
+        ),
+        exclusion_reason=(
+            args.exclusion_reason if args.command == "register" else None
+        ),
     )
+    manual_review = _load_manual_review(args.manual_review_json)
+    if args.command == "analyze":
+        report = run_squat_case_analysis(
+            case,
+            manual_review=manual_review,
+            registry_path=args.registry,
+            output_dir=args.output_dir,
+            ruleset_path=args.ruleset,
+            min_visibility=args.min_visibility,
+            anonymize_face=args.anonymize_face,
+        )
+        print(json.dumps(report.model_dump(mode="json"), indent=2, ensure_ascii=False))
+        return 0
+
     result, result_path = register_squat_case(
         case,
         registry_path=args.registry,
         output_dir=args.output_dir,
+        manual_review=manual_review,
     )
     print(
         json.dumps(
@@ -217,6 +355,14 @@ def main(argv: list[str] | None = None) -> int:
         )
     )
     return 0
+
+
+def _load_manual_review(path: Path | None) -> SquatManualProtocolReview:
+    if path is None:
+        return SquatManualProtocolReview()
+    return SquatManualProtocolReview.model_validate_json(
+        path.read_text(encoding="utf-8")
+    )
 
 
 if __name__ == "__main__":
