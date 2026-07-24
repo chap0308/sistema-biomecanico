@@ -40,6 +40,7 @@ class Settings(BaseSettings):
     supabase_posture_bucket: str = "Postura"
     supabase_posture_analysis_bucket: str = "Postura-analisis"
     squat_auth_required: bool = False
+    squat_persistence_required: bool = False
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

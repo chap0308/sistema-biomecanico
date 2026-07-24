@@ -4,14 +4,26 @@ from __future__ import annotations
 
 import json
 import os
+from datetime import datetime
+from math import ceil
 from pathlib import Path
 
-from fastapi import APIRouter, File, Form, HTTPException, UploadFile, status
+from fastapi import (
+    APIRouter,
+    File,
+    Form,
+    HTTPException,
+    Query,
+    UploadFile,
+    status,
+)
 from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import FileResponse
 from pydantic import ValidationError
+from pydantic import BaseModel, Field
 
 from api.auth import SquatUserDependency
+from app.config import get_settings
 from src.squat.contracts import (
     SquatCaseRecordContract,
     SquatCaseReport,
@@ -19,6 +31,10 @@ from src.squat.contracts import (
 )
 from src.squat.models import SquatCaseRecord
 from src.squat.service import run_squat_case_analysis
+from src.squat.persistence import (
+    SquatPersistenceError,
+    SupabaseSquatStore,
+)
 
 router = APIRouter()
 
@@ -41,6 +57,75 @@ _RULESET_PATH = Path(
         "config/squat/ruleset_v0_1_provisional.json",
     )
 )
+
+
+class SquatCaseListItem(BaseModel):
+    """Compact case data shown in the paginated web history."""
+
+    case_id: str
+    participant_code: str | None = None
+    status: str
+    protocol_review_status: str | None = None
+    created_at: datetime
+    updated_at: datetime
+
+
+class SquatCasePage(BaseModel):
+    """Paginated response consumed by the Next.js server component."""
+
+    items: list[SquatCaseListItem]
+    page: int = Field(ge=1)
+    page_size: int = Field(ge=1)
+    total: int = Field(ge=0)
+    total_pages: int = Field(ge=0)
+
+
+@router.get(
+    "/squat/cases",
+    response_model=SquatCasePage,
+    summary="List persistent squat cases for the investigator",
+)
+async def list_squat_cases(
+    current_user: SquatUserDependency,
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=10, ge=1, le=50),
+    case_status: str | None = Query(default=None, alias="status"),
+) -> SquatCasePage:
+    """Return a stable server-paginated history from Supabase."""
+    if current_user.role != "investigator":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only the investigator can list squat cases.",
+        )
+    try:
+        result = await run_in_threadpool(
+            SupabaseSquatStore().list_cases,
+            page=page,
+            page_size=page_size,
+            status_filter=case_status,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    return SquatCasePage(
+        items=[
+            SquatCaseListItem(
+                case_id=row["external_case_id"],
+                participant_code=row.get("participant_code"),
+                status=row["status"],
+                protocol_review_status=row.get("protocol_review_status"),
+                created_at=row["created_at"],
+                updated_at=row["updated_at"],
+            )
+            for row in result.rows
+        ],
+        page=page,
+        page_size=page_size,
+        total=result.total,
+        total_pages=ceil(result.total / page_size) if result.total else 0,
+    )
 
 
 @router.post(
@@ -98,7 +183,7 @@ async def analyze_squat_case(
     case = case.model_copy(update={"video_path": str(upload_path)})
 
     try:
-        return await run_in_threadpool(
+        report = await run_in_threadpool(
             run_squat_case_analysis,
             case,
             manual_review=manual_review,
@@ -106,6 +191,20 @@ async def analyze_squat_case(
             output_dir=_OUTPUT_ROOT,
             ruleset_path=_RULESET_PATH,
         )
+        if get_settings().squat_persistence_required:
+            record_path = _OUTPUT_ROOT / case.case_id / "case_record.json"
+            case_record = SquatCaseRecordContract.model_validate_json(
+                record_path.read_text(encoding="utf-8")
+            )
+            await run_in_threadpool(
+                SupabaseSquatStore().persist_completed_case,
+                created_by=current_user.user_id,
+                upload_path=upload_path,
+                content_type=video.content_type or "video/mp4",
+                case_record=case_record,
+                report=report,
+            )
+        return report
     except ValueError as exc:
         if "case_id already exists" in str(exc):
             raise HTTPException(
@@ -116,7 +215,7 @@ async def analyze_squat_case(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail=str(exc),
         ) from exc
-    except (FileNotFoundError, RuntimeError) as exc:
+    except (FileNotFoundError, RuntimeError, SquatPersistenceError) as exc:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail=str(exc),
@@ -141,10 +240,27 @@ async def get_squat_case_report(
     safe_case_id = _validated_case_id(case_id)
     report_path = _OUTPUT_ROOT / safe_case_id / "case_report.json"
     if not report_path.is_file():
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Squat case report was not found.",
-        )
+        if not get_settings().squat_persistence_required:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Squat case report was not found.",
+            )
+        try:
+            stored_report = await run_in_threadpool(
+                SupabaseSquatStore().get_case_report,
+                safe_case_id,
+            )
+        except SquatPersistenceError as exc:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail=str(exc),
+            ) from exc
+        if stored_report is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Squat case report was not found.",
+            )
+        return SquatCaseReport.model_validate(stored_report)
     try:
         return SquatCaseReport.model_validate_json(
             report_path.read_text(encoding="utf-8")
@@ -174,10 +290,27 @@ async def get_squat_case_record(
     safe_case_id = _validated_case_id(case_id)
     record_path = _OUTPUT_ROOT / safe_case_id / "case_record.json"
     if not record_path.is_file():
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Squat case record was not found.",
-        )
+        if not get_settings().squat_persistence_required:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Squat case record was not found.",
+            )
+        try:
+            stored_record = await run_in_threadpool(
+                SupabaseSquatStore().get_case_record,
+                safe_case_id,
+            )
+        except SquatPersistenceError as exc:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail=str(exc),
+            ) from exc
+        if stored_record is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Squat case record was not found.",
+            )
+        return SquatCaseRecordContract.model_validate(stored_record)
     try:
         return SquatCaseRecordContract.model_validate_json(
             record_path.read_text(encoding="utf-8")

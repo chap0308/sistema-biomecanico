@@ -19,6 +19,7 @@ from src.squat.models import (
     SquatRegistrationResult,
     VideoTechnicalMetadata,
 )
+from src.squat.persistence import SquatCasePageData
 
 
 def _report(case_id: str) -> SquatCaseReport:
@@ -123,3 +124,39 @@ def test_squat_endpoint_rejects_non_video_upload() -> None:
     )
 
     assert response.status_code == 415
+
+
+def test_squat_history_endpoint_returns_pagination(
+    monkeypatch,
+) -> None:
+    class FakeStore:
+        def list_cases(self, **kwargs) -> SquatCasePageData:
+            assert kwargs == {
+                "page": 2,
+                "page_size": 10,
+                "status_filter": "completed",
+            }
+            return SquatCasePageData(
+                rows=[
+                    {
+                        "external_case_id": "caso_api_004",
+                        "participant_code": "P-004",
+                        "status": "completed",
+                        "protocol_review_status": "aceptado",
+                        "created_at": "2026-07-24T10:00:00Z",
+                        "updated_at": "2026-07-24T10:05:00Z",
+                    }
+                ],
+                total=11,
+            )
+
+    monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
+    response = TestClient(app).get(
+        "/api/v1/squat/cases",
+        params={"page": 2, "page_size": 10, "status": "completed"},
+    )
+
+    assert response.status_code == 200
+    assert response.json()["total"] == 11
+    assert response.json()["total_pages"] == 2
+    assert response.json()["items"][0]["case_id"] == "caso_api_004"

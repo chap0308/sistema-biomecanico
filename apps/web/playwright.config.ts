@@ -1,5 +1,9 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const hasAuthenticatedTests = Boolean(
+  process.env.SQUAT_E2E_EMAIL && process.env.SQUAT_E2E_PASSWORD,
+);
+
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
@@ -17,8 +21,26 @@ export default defineConfig({
   },
   projects: [
     {
-      name: "chromium",
+      name: "chromium-public",
+      testIgnore: [/auth\.spec\.ts/, /case-intake\.spec\.ts/],
       use: { ...devices["Desktop Chrome"] },
     },
+    ...(hasAuthenticatedTests
+      ? [
+          {
+            name: "auth-setup",
+            testMatch: /auth\.setup\.ts/,
+          },
+          {
+            name: "chromium-authenticated",
+            dependencies: ["auth-setup"],
+            testMatch: [/auth\.spec\.ts/, /case-intake\.spec\.ts/],
+            use: {
+              ...devices["Desktop Chrome"],
+              storageState: "playwright/.auth/investigator.json",
+            },
+          },
+        ]
+      : []),
   ],
 });
