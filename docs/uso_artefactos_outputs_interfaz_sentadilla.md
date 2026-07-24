@@ -101,7 +101,175 @@ Las condiciones de apoyo de los talones y la presencia de soportes externos pert
 
 El valor agregado y la distancia respecto al umbral no deben presentarse como una probabilidad ni como un porcentaje de confianza. Los umbrales actuales son provisionales y describen bandas de decisión interpretables, no puntos de corte clínicos.
 
-## 4. Qué aporta el overlay y qué no aporta por sí solo
+## 4. Relación con los instrumentos metodológicos
+
+Los instrumentos representan cómo se recolectan y organizan los datos de la investigación. La interfaz no necesita reproducir las hojas de Excel de forma literal, pero sí debe conservar todos sus campos, reglas y relaciones.
+
+La correspondencia funcional será:
+
+| Instrumento | Función metodológica | Traducción a la interfaz |
+|---|---|---|
+| Instrumento 1 | Registrar el video, sus condiciones de captura, la disponibilidad de puntos anatómicos y su aceptación | Formulario de registro, revisión técnica y decisión de incorporación |
+| Instrumento 2 | Registrar la salida computacional, las variables biomecánicas y los criterios aplicados | Panel automático de procesamiento, métricas, reglas y visualizaciones |
+| Instrumento 3 | Comparar las clasificaciones de los expertos con las del sistema | Módulo restringido de evaluación experta y consolidación |
+
+### 4.1. Instrumento 1 como entrada y control del caso
+
+El Instrumento 1 debe transformarse en el primer paso de la interfaz. Su finalidad no es mostrar compensaciones, sino crear un caso trazable y determinar si el video puede incorporarse al análisis.
+
+#### Datos ingresados o confirmados por el investigador
+
+- código del video;
+- fecha de registro;
+- fuente del video;
+- enlace o ruta del archivo;
+- edad y sexo del participante;
+- vista de captura;
+- dispositivo utilizado;
+- iluminación;
+- fondo visual;
+- visibilidad corporal;
+- presencia de oclusiones;
+- observación de una sentadilla completa;
+- condiciones manuales del protocolo, incluido el apoyo de los talones cuando estos campos se incorporen formalmente al instrumento.
+
+#### Datos que pueden obtenerse automáticamente
+
+- ruta del archivo cargado;
+- resolución;
+- frecuencia de video;
+- cantidad de fotogramas;
+- disponibilidad de pose;
+- disponibilidad de puntos anatómicos clave;
+- porcentaje de fotogramas procesados y válidos;
+- motivos técnicos detectados por el control automático de calidad.
+
+Los datos obtenidos automáticamente deben poder ser revisados por el investigador antes de confirmar la aceptación. Las condiciones que el sistema no evalúa, como la presencia de soportes debajo de los talones, permanecerán como verificaciones manuales.
+
+#### Pantalla propuesta
+
+El módulo puede dividirse en tres bloques:
+
+1. **Registro del caso:** código, fecha, fuente, participante y archivo.
+2. **Condiciones de captura:** vista, dispositivo, iluminación, fondo, visibilidad, oclusiones y cumplimiento manual del protocolo.
+3. **Factibilidad analítica:** disponibilidad de puntos anatómicos, sentadilla completa, resultado del control técnico y motivo de no incorporación cuando corresponda.
+
+La decisión final de este módulo será “registro incorporado al análisis” o “registro no incorporado”, acompañada por su justificación. Esta decisión no debe confundirse con la detección de una compensación.
+
+#### Relación del Instrumento 1 con los outputs
+
+| Campo del Instrumento 1 | Fuente principal |
+|---|---|
+| Código del video | Entrada manual y nombre del caso |
+| Fecha, fuente, edad, sexo, vista y dispositivo | Entrada o confirmación manual |
+| Ruta del video | Archivo cargado |
+| Resolución y frecuencia | Metadatos del video |
+| Iluminación, fondo, visibilidad y oclusiones | Evaluación manual del investigador |
+| Sentadilla observable completa | Protocolo y `segmentation_summary.json` |
+| Disponibilidad de puntos anatómicos | `frame_quality.csv`, `pose_summary.json` y revisión del overlay |
+| Video válido para procesamiento | Decisión integrada a partir del Instrumento 1 y `quality_gate_summary.json` |
+| Motivo de exclusión | Registro manual y motivos contenidos en `quality_gate_summary.json` |
+
+El `quality_gate_summary.json` no reemplaza al Instrumento 1. Solo aporta las verificaciones automáticas implementadas; la decisión metodológica completa también depende de condiciones manuales de captura.
+
+### 4.2. Instrumento 2 como salida automática del sistema
+
+El Instrumento 2 tiene la relación más directa con los outputs. La interfaz debería llenarlo automáticamente después de procesar un video aceptado.
+
+| Campo del Instrumento 2 | Output o fuente |
+|---|---|
+| Código del video | Identificador del caso |
+| Estado de procesamiento | Estados de `pose_summary.json`, `quality_gate_summary.json`, `biomechanical_summary.json` y `findings.json` |
+| Cantidad total de fotogramas | `pose_summary.json` |
+| Fotogramas válidos y porcentaje | `pose_summary.json` y `frame_quality.csv` |
+| Fotogramas procesados correctamente y porcentaje | `pose_summary.json` |
+| Número de puntos anatómicos clave detectados | `pose_summary.json` y `frame_quality.csv` |
+| Inclinación del tronco | `biomechanical_repetition_metrics.csv` y `biomechanical_summary.json` |
+| Desplazamiento lateral de pelvis | `biomechanical_repetition_metrics.csv` y `biomechanical_summary.json` |
+| Alineación rodilla-cadera-tobillo | Métricas de desviación medial por rodilla en los outputs biomecánicos |
+| Diferencias bilaterales | Métrica de diferencia bilateral en los outputs biomecánicos |
+| Número de criterios implementados | Conjunto de reglas aplicado |
+| Tipo de compensación detectada | `findings.json` |
+| Umbral aplicado | `rule_evidence.csv` |
+| Generación de reporte | Existencia del resumen o reporte por caso |
+| Visualización de resultados | Existencia de overlay, capturas y gráficas |
+
+La denominación “número de puntos anatómicos clave detectados” debe conservar una definición única. En la implementación actual, el gráfico de calidad utiliza los puntos críticos requeridos para el análisis, no necesariamente los 33 puntos completos de MediaPipe Pose. Esta semántica deberá fijarse en el contrato de datos antes de desarrollar la interfaz definitiva.
+
+#### Presentación recomendada del Instrumento 2
+
+No conviene mostrar sus 18 columnas en una sola tabla al usuario. La misma información puede organizarse en:
+
+- **Procesamiento:** estado, fotogramas totales, válidos y procesados;
+- **Cobertura de pose:** puntos anatómicos detectados y estabilidad;
+- **Variables biomecánicas:** valores por repetición y resumen;
+- **Criterios:** regla, banda de decisión y estado por patrón;
+- **Resultado:** compensaciones detectadas, reporte y visualizaciones disponibles.
+
+La interfaz podrá ofrecer una opción “Ver ficha técnica” o “Exportar Instrumento 2” para reconstruir la fila completa requerida por la investigación.
+
+### 4.3. Instrumento 3 como comparación experta-sistema
+
+Las compensaciones contenidas en `findings.json` alimentan las columnas correspondientes al sistema computacional dentro del Instrumento 3. Sin embargo, el instrumento completo no equivale únicamente al resultado automático. También incluye:
+
+- clasificación del evaluador 1;
+- clasificación del evaluador 2;
+- clasificación opcional del evaluador 3;
+- clasificación del sistema;
+- referencia final consolidada para cada patrón.
+
+Por ello, la interfaz debe disponer de un modo de investigación o evaluación experta separado de la vista general.
+
+#### Flujo propuesto para expertos
+
+1. El experto ingresa con un perfil autorizado.
+2. Revisa el video y, si se define metodológicamente, el material visual permitido.
+3. Clasifica de forma independiente tronco, pelvis, valgo y asimetría bilateral.
+4. Guarda su evaluación sin visualizar inicialmente la clasificación de otros expertos ni la del sistema.
+5. El investigador consolida la referencia final mediante coincidencia, consenso o mayoría.
+6. La interfaz compara la referencia final con la salida del sistema.
+
+Ocultar inicialmente la salida del sistema reduce el riesgo de influir sobre el juicio independiente del experto.
+
+#### Presentación del resultado comparativo
+
+La interfaz de investigación puede mostrar una tabla por video:
+
+| Patrón | Evaluador 1 | Evaluador 2 | Evaluador 3 | Sistema | Referencia final | Coincidencia |
+|---|---|---|---|---|---|---|
+| Tronco | Clasificación | Clasificación | Opcional | Automática | Consolidada | Sí / No |
+| Pelvis | Clasificación | Clasificación | Opcional | Automática | Consolidada | Sí / No |
+| Valgo | Clasificación | Clasificación | Opcional | Automática | Consolidada | Sí / No |
+| Asimetría bilateral | Clasificación | Clasificación | Opcional | Automática | Consolidada | Sí / No |
+
+La base consolidada para calcular métricas se generará después de completar este instrumento. No constituye un cuarto instrumento ni una pantalla que deban llenar los participantes.
+
+### 4.4. Flujo de interfaz alineado con los instrumentos
+
+```mermaid
+flowchart LR
+    A["Registrar caso y cargar video"] --> B["Instrumento 1: datos y protocolo"]
+    B --> C["Procesamiento automático"]
+    C --> D["Instrumento 1: factibilidad y aceptación"]
+    D -->|"No incorporado"| E["Motivo y nueva captura"]
+    D -->|"Incorporado"| F["Instrumento 2: métricas y resultados"]
+    F --> G["Vista individual del análisis"]
+    F --> H["Instrumento 3: columnas del sistema"]
+    I["Evaluadores expertos"] --> H
+    H --> J["Referencia final consolidada"]
+    J --> K["Métricas de desempeño"]
+```
+
+### 4.5. Vistas según el tipo de usuario
+
+| Perfil | Información principal |
+|---|---|
+| Investigador | Instrumentos 1 y 2 completos, control de calidad, outputs y consolidación |
+| Evaluador experto | Video, protocolo e Instrumento 3 con sus propias columnas |
+| Asesor o jurado | Flujo demostrativo, overlay, segmentación, variables, reglas y resultados |
+| Usuario general futuro | Resultado resumido y evidencia visual, sin datos internos de investigación |
+
+## 5. Qué aporta el overlay y qué no aporta por sí solo
 
 El overlay es la evidencia visual más comprensible para una demostración, porque permite observar:
 
@@ -126,9 +294,9 @@ Una explicación breve para el asesor puede formularse así:
 
 > El video overlay permite verificar visualmente que el sistema identificó y siguió los puntos anatómicos utilizados. A partir de esas coordenadas, el sistema segmenta las repeticiones, calcula variables biomecánicas y aplica criterios interpretables. Las gráficas, tablas y archivos estructurados conservan la evidencia numérica que vincula el movimiento observado con la compensación finalmente detectada. De esta manera, el resultado no depende únicamente de una impresión visual ni de una etiqueta opaca, sino de una cadena trazable de procesamiento.
 
-## 5. Propuesta de interfaz por caso
+## 6. Propuesta de interfaz por caso
 
-### 5.1. Encabezado del análisis
+### 6.1. Encabezado del análisis
 
 La primera pantalla debe responder rápidamente qué ocurrió:
 
@@ -139,7 +307,7 @@ La primera pantalla debe responder rápidamente qué ocurrió:
 - versión del conjunto de reglas;
 - advertencia de que los umbrales son provisionales durante el desarrollo.
 
-### 5.2. Resultado principal
+### 6.2. Resultado principal
 
 La sección principal debe presentar una tarjeta independiente por patrón:
 
@@ -159,7 +327,7 @@ Ejemplo de salida legible para `dev_valgo_izq_002`:
 - desplazamiento lateral de pelvis: no concluyente;
 - inclinación lateral del tronco: ausente.
 
-### 5.3. Reproductor sincronizado
+### 6.3. Reproductor sincronizado
 
 El reproductor debe utilizar `overlay.mp4` e incorporar:
 
@@ -171,7 +339,7 @@ El reproductor debe utilizar `overlay.mp4` e incorporar:
 
 Los tiempos se obtienen de `segmentation_summary.json` o `repetitions.csv`. La línea de calidad se obtiene de `frame_quality.csv`.
 
-### 5.4. Comparación visual de repeticiones
+### 6.4. Comparación visual de repeticiones
 
 Las tres capturas de máxima profundidad deben mostrarse en paralelo o mediante un carrusel. Cada captura puede incluir debajo:
 
@@ -185,7 +353,7 @@ Las tres capturas de máxima profundidad deben mostrarse en paralelo o mediante 
 
 Esta comparación permite explicar por qué el motor exige concordancia entre repeticiones. También permite evidenciar casos en los que una señal aparece solo una vez y el resultado final permanece no concluyente.
 
-### 5.5. Gráficas recomendadas
+### 6.5. Gráficas recomendadas
 
 #### Vista principal
 
@@ -202,7 +370,7 @@ Esta comparación permite explicar por qué el motor exige concordancia entre re
 
 No conviene mostrar todas las series simultáneamente en la pantalla inicial. La primera vista debe priorizar el resultado y su explicación; el detalle temporal debe quedar disponible en una sección expandible.
 
-### 5.6. Evidencia y exportación
+### 6.6. Evidencia y exportación
 
 La interfaz puede ofrecer una sección de descarga con:
 
@@ -215,9 +383,9 @@ La interfaz puede ofrecer una sección de descarga con:
 
 `landmarks.csv` y los datos por fotograma deben considerarse descargas técnicas avanzadas, porque su volumen y granularidad no son adecuados para un usuario general.
 
-## 6. Adaptación a web y móvil
+## 7. Adaptación a web y móvil
 
-### 6.1. Interfaz web
+### 7.1. Interfaz web
 
 La versión web permite una vista de dos columnas:
 
@@ -227,7 +395,7 @@ La versión web permite una vista de dos columnas:
 
 Es la opción más adecuada para demostraciones al asesor, revisión experta y análisis comparativo.
 
-### 6.2. Interfaz móvil
+### 7.2. Interfaz móvil
 
 La versión móvil debe usar una secuencia vertical:
 
@@ -241,7 +409,7 @@ La versión móvil debe usar una secuencia vertical:
 
 En móvil, las gráficas temporales deben permitir desplazamiento horizontal o mostrar inicialmente solo los valores por repetición.
 
-## 7. Vista de lote para la investigación
+## 8. Vista de lote para la investigación
 
 Además de la vista individual, una interfaz de investigación puede mostrar un resumen de todos los videos:
 
@@ -262,7 +430,7 @@ Cuando se disponga de la referencia experta final, esta vista también podrá in
 
 Esta vista corresponde principalmente al análisis de desempeño de la tesis y no debe confundirse con la evaluación individual de una persona.
 
-## 8. Relación con los objetivos específicos
+## 9. Relación con los objetivos específicos
 
 | Evidencia | Objetivo al que contribuye |
 |---|---|
@@ -273,7 +441,7 @@ Esta vista corresponde principalmente al análisis de desempeño de la tesis y n
 | Integración de overlay, segmentación, métricas, reglas y resultados | Implementación del prototipo funcional |
 | Comparación experta-sistema y métricas finales | Evaluación del desempeño técnico |
 
-## 9. Relación con las evidencias existentes
+## 10. Relación con las evidencias existentes
 
 Este documento complementa las evidencias ya generadas:
 
@@ -284,15 +452,25 @@ Este documento complementa las evidencias ya generadas:
 
 Las evaluaciones piloto sustentan el contenido que deberá mostrarse, mientras que este documento define cómo convertirlo en una experiencia comprensible para el asesor, los evaluadores expertos y, posteriormente, un usuario de la aplicación.
 
-## 10. Propuesta de siguiente implementación
+## 11. Propuesta de siguiente implementación
 
-Para convertir los artefactos actuales en una demostración coherente, el siguiente incremento debería generar un resumen único por caso.
+Para convertir los artefactos actuales en una demostración coherente, el siguiente incremento debe definir contratos que separen el registro de entrada de los resultados computacionales.
 
-### 10.1. Contrato agregado recomendado
+### 11.1. Contratos agregados recomendados
 
-Crear un archivo `case_report.json` que reúna:
+Crear un archivo `case_record.json`, asociado con el Instrumento 1, que reúna:
 
 - identificación del caso;
+- datos manuales de procedencia y captura;
+- metadatos técnicos extraídos del video;
+- verificación manual del protocolo;
+- disponibilidad resumida de puntos anatómicos clave;
+- decisión de incorporación y su justificación;
+- fecha, responsable y versión del registro.
+
+Crear un archivo `case_report.json`, asociado con el Instrumento 2, que reúna:
+
+- referencia al registro del caso;
 - estado de calidad;
 - resumen de pose;
 - repeticiones y eventos temporales;
@@ -301,9 +479,11 @@ Crear un archivo `case_report.json` que reúna:
 - rutas relativas del overlay, capturas y gráficas;
 - versión del pipeline y del conjunto de reglas.
 
-Este archivo no reemplazaría los CSV ni JSON existentes. Funcionaría como índice para que una API o interfaz local pueda cargar un caso sin reconstruir manualmente todas las relaciones.
+Estos archivos no reemplazarían los CSV ni JSON existentes. `case_record.json` conservaría la información previa y la aceptación metodológica; `case_report.json` funcionaría como índice de las salidas computacionales para que una API o interfaz pueda cargar un caso sin reconstruir manualmente todas las relaciones.
 
-### 10.2. Capturas adicionales
+Las evaluaciones correspondientes al Instrumento 3 deberán almacenarse posteriormente como registros independientes vinculados por el código del video y el identificador del evaluador. No deben incorporarse al reporte automático antes de que el experto emita su juicio.
+
+### 11.2. Capturas adicionales
 
 Generar por repetición:
 
@@ -313,7 +493,7 @@ Generar por repetición:
 
 La información temporal necesaria ya existe en `repetitions.csv`. Esta mejora es principalmente de presentación y trazabilidad visual.
 
-### 10.3. Reporte legible
+### 11.3. Reporte legible
 
 Generar un reporte por caso que incluya:
 
@@ -326,12 +506,13 @@ Generar un reporte por caso que incluya:
 
 La misma estructura podrá reutilizarse posteriormente en una página web, una aplicación móvil o un PDF de evidencia.
 
-## 11. Prioridad recomendada
+## 12. Prioridad recomendada
 
-1. Crear `case_report.json` como contrato único para la interfaz.
-2. Generar capturas de inicio, máxima profundidad y final por repetición.
-3. Implementar una vista web local de análisis por caso.
-4. Sincronizar reproductor, eventos y gráficas.
-5. Añadir la vista de lote y la comparación experta-sistema cuando exista la muestra formal.
+1. Definir y validar los esquemas de `case_record.json` y `case_report.json`.
+2. Generar ambos contratos desde el pipeline actual.
+3. Generar capturas de inicio, máxima profundidad y final por repetición.
+4. Implementar una vista web local con registro del caso y análisis automático.
+5. Sincronizar reproductor, eventos y gráficas.
+6. Añadir el módulo del Instrumento 3 y la comparación experta-sistema cuando corresponda realizar la evaluación formal.
 
 Esta secuencia aprovecha los artefactos actuales sin cambiar las fórmulas biomecánicas ni los criterios metodológicos aprobados.
