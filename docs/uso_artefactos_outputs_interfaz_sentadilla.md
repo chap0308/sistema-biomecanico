@@ -376,16 +376,31 @@ No conviene mostrar todas las series simultáneamente en la pantalla inicial. La
 
 ### 6.6. Evidencia y exportación
 
-La interfaz puede ofrecer una sección de descarga con:
+La interfaz debe distinguir entre descargas técnicas y exportaciones metodológicas.
+
+#### Descargas técnicas
 
 - overlay;
 - capturas de máxima profundidad;
 - resumen del análisis en JSON;
 - evidencia de reglas en CSV;
 - métricas por repetición en CSV;
-- reporte final en PDF cuando se implemente.
+- datos por fotograma para revisión avanzada.
 
 `landmarks.csv` y los datos por fotograma deben considerarse descargas técnicas avanzadas, porque su volumen y granularidad no son adecuados para un usuario general.
+
+#### Exportaciones metodológicas
+
+La interfaz deberá permitir reconstruir y descargar:
+
+- el Instrumento 1 con los datos manuales, técnicos, de disponibilidad de puntos anatómicos y de incorporación del video;
+- el Instrumento 2 con la salida computacional, las variables biomecánicas, los criterios aplicados y los resultados;
+- el Instrumento 3 con las valoraciones expertas, la referencia final y la salida del sistema, únicamente cuando la evaluación comparativa esté completa;
+- un consolidado del estudio para el análisis estadístico.
+
+El primer formato será Excel, porque conserva la estructura tabular de los instrumentos y permite continuar el análisis. El PDF se añadirá después como reporte legible por caso. Las exportaciones deben generarse en FastAPI a partir de los contratos y registros persistidos, no reconstruirse con cálculos dentro del frontend.
+
+Los permisos también forman parte de la exportación. Un evaluador experto no podrá descargar información que revele la clasificación del sistema antes de enviar su propia valoración. El investigador podrá acceder a los instrumentos 1 y 2 al finalizar el procesamiento, mientras que el Instrumento 3 completo solo estará disponible al concluir la fase comparativa.
 
 ## 7. Adaptación a web y móvil
 
@@ -518,6 +533,7 @@ La misma estructura podrá reutilizarse posteriormente en una página web, una a
 4. Implementar una vista web local con registro del caso y análisis automático.
 5. Sincronizar reproductor, eventos y gráficas.
 6. Añadir el módulo del Instrumento 3 y la comparación experta-sistema cuando corresponda realizar la evaluación formal.
+7. Añadir la exportación de los instrumentos en Excel y, posteriormente, el reporte PDF.
 
 Esta secuencia aprovecha los artefactos actuales sin cambiar las fórmulas biomecánicas ni los criterios metodológicos aprobados.
 
@@ -532,3 +548,5 @@ El incremento previo a la interfaz quedó implementado mediante:
 - `config/squat/schemas/`, para compartir los esquemas con el frontend.
 
 La arquitectura y los endpoints se detallan en `arquitectura_api_preinterfaz_sentadilla.md`. La validación del incremento se documenta en `evidencia_contratos_api_preinterfaz_sentadilla.md`.
+
+El stack, la persistencia, los roles, las rutas, las pruebas y las fases de construcción de la interfaz se definen en `plan_frontend_web_sentadilla.md`.

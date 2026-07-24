@@ -218,14 +218,13 @@ No conviene introducir una cola de trabajos antes de demostrar que se necesita.
 - El almacenamiento actual es local.
 - La autenticación y la base de datos se incorporarán solo si el uso lo exige.
 
-## 11. Próximo punto de decisión
+## 11. Decisiones para la interfaz web
 
-Antes de escribir el frontend se debe definir:
+Las decisiones posteriores a esta arquitectura se documentan en `plan_frontend_web_sentadilla.md`:
 
-1. si la primera interfaz será únicamente para el investigador;
-2. si el procesamiento síncrono es aceptable;
-3. qué campos del Instrumento 1 serán obligatorios;
-4. qué artefactos se mostrarán por defecto;
-5. si Next.js vivirá en este repositorio o en otro.
-
-La recomendación inicial es Next.js en un subdirectorio separado del motor Python, consumiendo exclusivamente estos endpoints.
+1. Next.js vivirá inicialmente en `apps/web/` dentro del repositorio actual.
+2. FastAPI continuará como única capa de dominio y análisis.
+3. Supabase local proporcionará persistencia, autenticación y almacenamiento privado.
+4. La primera integración reutilizará el procesamiento síncrono; antes del uso multiusuario se añadirá estado persistente y ejecución de fondo local sin incorporar una cola distribuida.
+5. La interfaz incluirá el flujo del investigador y, después de estabilizarlo, el flujo ciego del Instrumento 3 para expertos.
+6. Las exportaciones metodológicas se generarán en el backend.
