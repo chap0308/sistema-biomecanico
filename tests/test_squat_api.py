@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 from fastapi.testclient import TestClient
 
@@ -19,7 +20,7 @@ from src.squat.models import (
     SquatRegistrationResult,
     VideoTechnicalMetadata,
 )
-from src.squat.persistence import SquatCasePageData
+from src.squat.persistence import SquatCasePageData, SquatStoredArtifact
 
 
 def _report(case_id: str) -> SquatCaseReport:
@@ -160,3 +161,43 @@ def test_squat_history_endpoint_returns_pagination(
     assert response.json()["total"] == 11
     assert response.json()["total_pages"] == 2
     assert response.json()["items"][0]["case_id"] == "caso_api_004"
+
+
+def test_squat_asset_endpoint_falls_back_to_private_storage(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    class FakeStore:
+        def get_case_artifact(
+            self,
+            case_id: str,
+            filename: str,
+            *,
+            range_header: str | None = None,
+        ) -> SquatStoredArtifact:
+            assert case_id == "caso_api_005"
+            assert filename == "overlay.mp4"
+            assert range_header == "bytes=0-6"
+            return SquatStoredArtifact(
+                content=b"overlay",
+                mime_type="video/mp4",
+                status_code=206,
+                content_range="bytes 0-6/7",
+                accept_ranges="bytes",
+            )
+
+    monkeypatch.setattr(squat_route, "_OUTPUT_ROOT", tmp_path / "outputs")
+    monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
+    monkeypatch.setattr(
+        squat_route,
+        "get_settings",
+        lambda: SimpleNamespace(squat_persistence_required=True),
+    )
+    response = TestClient(app).get(
+        "/api/v1/squat/cases/caso_api_005/assets/overlay.mp4",
+        headers={"Range": "bytes=0-6"},
+    )
+
+    assert response.status_code == 206
+    assert response.content == b"overlay"
+    assert response.headers["content-range"] == "bytes 0-6/7"

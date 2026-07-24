@@ -22,7 +22,11 @@ export default defineConfig({
   projects: [
     {
       name: "chromium-public",
-      testIgnore: [/auth\.spec\.ts/, /case-intake\.spec\.ts/],
+      testIgnore: [
+        /auth\.spec\.ts/,
+        /case-intake\.spec\.ts/,
+        /case-results\.spec\.ts/,
+      ],
       use: { ...devices["Desktop Chrome"] },
     },
     ...(hasAuthenticatedTests
@@ -34,7 +38,11 @@ export default defineConfig({
           {
             name: "chromium-authenticated",
             dependencies: ["auth-setup"],
-            testMatch: [/auth\.spec\.ts/, /case-intake\.spec\.ts/],
+            testMatch: [
+              /auth\.spec\.ts/,
+              /case-intake\.spec\.ts/,
+              /case-results\.spec\.ts/,
+            ],
             use: {
               ...devices["Desktop Chrome"],
               storageState: "playwright/.auth/investigator.json",

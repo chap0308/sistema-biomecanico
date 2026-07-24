@@ -14,6 +14,8 @@ from fastapi import (
     Form,
     HTTPException,
     Query,
+    Request,
+    Response,
     UploadFile,
     status,
 )
@@ -200,6 +202,7 @@ async def analyze_squat_case(
                 SupabaseSquatStore().persist_completed_case,
                 created_by=current_user.user_id,
                 upload_path=upload_path,
+                output_dir=_OUTPUT_ROOT / case.case_id,
                 content_type=video.content_type or "video/mp4",
                 case_record=case_record,
                 report=report,
@@ -331,7 +334,8 @@ async def get_squat_case_asset(
     case_id: str,
     filename: str,
     current_user: SquatUserDependency,
-) -> FileResponse:
+    request: Request,
+) -> Response:
     """Serve direct case artifacts without exposing arbitrary filesystem paths."""
     if current_user.role != "investigator":
         raise HTTPException(
@@ -347,24 +351,54 @@ async def get_squat_case_asset(
     case_dir = (_OUTPUT_ROOT / safe_case_id).resolve()
     artifact = (case_dir / filename).resolve()
     report_path = case_dir / "case_report.json"
-    if not report_path.is_file():
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Squat case report was not found.",
+    if report_path.is_file():
+        report = SquatCaseReport.model_validate_json(
+            report_path.read_text(encoding="utf-8")
         )
-    report = SquatCaseReport.model_validate_json(
-        report_path.read_text(encoding="utf-8")
-    )
-    if (
-        artifact.parent != case_dir
-        or filename not in _allowed_asset_names(report)
-        or not artifact.is_file()
-    ):
+        if (
+            artifact.parent != case_dir
+            or filename not in _allowed_asset_names(report)
+            or not artifact.is_file()
+        ):
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Squat case asset was not found.",
+            )
+        return FileResponse(artifact)
+    if not get_settings().squat_persistence_required:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Squat case asset was not found.",
         )
-    return FileResponse(artifact)
+    try:
+        stored = await run_in_threadpool(
+            SupabaseSquatStore().get_case_artifact,
+            safe_case_id,
+            filename,
+            range_header=request.headers.get("range"),
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    if stored is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Squat case asset was not found.",
+        )
+    headers = {
+        "Accept-Ranges": stored.accept_ranges or "bytes",
+        "Content-Length": str(len(stored.content)),
+    }
+    if stored.content_range:
+        headers["Content-Range"] = stored.content_range
+    return Response(
+        content=stored.content,
+        status_code=stored.status_code,
+        media_type=stored.mime_type,
+        headers=headers,
+    )
 
 
 def _validate_video_upload(video: UploadFile) -> None:

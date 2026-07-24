@@ -8,7 +8,7 @@ La interfaz se construirá sobre la API FastAPI existente y utilizará los contr
 
 ## 2. Decisión resumida
 
-**Estado de implementación:** las fases F0, F1 y F2 se encuentran completadas. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md`, `evidencia_frontend_fase_f1.md` y `evidencia_frontend_fase_f2.md`. La migración, las cuentas locales, la autenticación, la carga real, la persistencia y el historial paginado fueron comprobados.
+**Estado de implementación:** las fases F0, F1, F2 y F3 se encuentran completadas. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md`, `evidencia_frontend_fase_f1.md`, `evidencia_frontend_fase_f2.md` y `evidencia_frontend_fase_f3.md`. La migración, las cuentas locales, la autenticación, la carga real, la persistencia, el historial paginado y la visualización trazable de resultados fueron comprobados.
 
 | Decisión | Elección |
 |---|---|
@@ -20,7 +20,7 @@ La interfaz se construirá sobre la API FastAPI existente y utilizará los contr
 | Carga de videos | `react-dropzone` sobre un control de archivo accesible |
 | Estado remoto | Server Components y URL; TanStack Query solo para sondeo de procesamiento |
 | Validación de formularios | Zod y React Hook Form |
-| Gráficas | Componente Chart de shadcn/ui, basado en Recharts |
+| Gráficas | PNG reproducibles generados con Matplotlib y barras CSS; Recharts solo si se requiere interacción temporal |
 | Base de datos local | PostgreSQL mediante Supabase CLI y Docker |
 | Autenticación | Supabase Auth con correo y contraseña |
 | Archivos | Buckets privados de Supabase Storage |
@@ -500,12 +500,16 @@ feat(web): add case intake upload and history
 
 ### Fase F3. Procesamiento y resultados
 
-- integrar el endpoint de análisis;
-- persistir estados;
-- mostrar progreso, errores y resultado;
-- reproducir overlay;
-- representar eventos, capturas y gráficas;
-- completar la vista técnica del Instrumento 2.
+- integrar el endpoint de análisis; **implementado**;
+- persistir el resultado y los artefactos privados; **implementado**;
+- mostrar espera, errores y resultado; **implementado para el procesamiento síncrono actual**;
+- reproducir overlay; **implementado**;
+- representar eventos, capturas y gráficas; **implementado**;
+- completar la vista técnica del Instrumento 2; **implementado**.
+
+El sondeo periódico se mantiene diferido. Se incorporará únicamente si el
+procesamiento pasa a ejecutarse en segundo plano o si los tiempos medidos
+justifican separar la solicitud de carga de la ejecución analítica.
 
 Commit sugerido:
 

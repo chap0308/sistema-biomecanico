@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import mimetypes
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -23,6 +24,17 @@ class SquatCasePageData:
 
     rows: list[dict[str, Any]]
     total: int
+
+
+@dataclass(slots=True, frozen=True)
+class SquatStoredArtifact:
+    """Private artifact downloaded from Supabase Storage."""
+
+    content: bytes
+    mime_type: str
+    status_code: int
+    content_range: str | None = None
+    accept_ranges: str | None = None
 
 
 class SupabaseSquatStore:
@@ -46,11 +58,12 @@ class SupabaseSquatStore:
         *,
         created_by: str,
         upload_path: Path,
+        output_dir: Path,
         content_type: str,
         case_record: SquatCaseRecordContract,
         report: SquatCaseReport,
     ) -> None:
-        """Store the original video and aggregate contracts atomically enough for F2."""
+        """Store one completed case plus its declared private artifacts."""
         self._require_configuration()
         external_case_id = report.case_id
         object_path = f"{external_case_id}/original{upload_path.suffix.lower()}"
@@ -78,7 +91,7 @@ class SupabaseSquatStore:
                 "instrument_1": case_record.model_dump(mode="json"),
             },
         )
-        self._insert(
+        run_row = self._insert(
             "squat_analysis_runs",
             {
                 "case_id": case_row["case_id"],
@@ -92,6 +105,31 @@ class SupabaseSquatStore:
                 "completed_at": report.generated_at.isoformat(),
             },
         )
+        for artifact_kind, filename, metadata in _report_artifacts(report):
+            local_path = output_dir / filename
+            if not local_path.is_file():
+                continue
+            artifact_path = f"{external_case_id}/{filename}"
+            mime_type = (
+                mimetypes.guess_type(filename)[0]
+                or "application/octet-stream"
+            )
+            self._upload_private_file(
+                bucket="squat-artifacts",
+                object_path=artifact_path,
+                local_path=local_path,
+                content_type=mime_type,
+            )
+            self._insert(
+                "squat_artifacts",
+                {
+                    "run_id": run_row["run_id"],
+                    "artifact_kind": artifact_kind,
+                    "object_path": artifact_path,
+                    "mime_type": mime_type,
+                    "metadata": metadata,
+                },
+            )
 
     def list_cases(
         self,
@@ -170,6 +208,75 @@ class SupabaseSquatStore:
         )
         return rows[0]["instrument_1"] if rows else None
 
+    def get_case_artifact(
+        self,
+        external_case_id: str,
+        filename: str,
+        *,
+        range_header: str | None = None,
+    ) -> SquatStoredArtifact | None:
+        """Download one artifact previously declared by the aggregate report."""
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "case_id",
+                "external_case_id": f"eq.{external_case_id}",
+                "limit": "1",
+            },
+        )
+        if not case_rows:
+            return None
+        run_rows = self._select(
+            "squat_analysis_runs",
+            params={
+                "select": "run_id",
+                "case_id": f"eq.{case_rows[0]['case_id']}",
+                "order": "created_at.desc",
+                "limit": "1",
+            },
+        )
+        if not run_rows:
+            return None
+        object_path = f"{external_case_id}/{filename}"
+        artifact_rows = self._select(
+            "squat_artifacts",
+            params={
+                "select": "object_path,mime_type",
+                "run_id": f"eq.{run_rows[0]['run_id']}",
+                "object_path": f"eq.{object_path}",
+                "limit": "1",
+            },
+        )
+        if not artifact_rows:
+            return None
+        headers = self._headers()
+        if range_header:
+            headers["Range"] = range_header
+        response = requests.get(
+            f"{self.url}/storage/v1/object/authenticated/"
+            f"squat-artifacts/{quote(object_path, safe='/')}",
+            headers=headers,
+            timeout=120,
+        )
+        if response.status_code == 404:
+            return None
+        if response.status_code not in {200, 206}:
+            raise SquatPersistenceError(
+                f"Failed to read squat artifact: {response.status_code} "
+                f"{response.text}"
+            )
+        return SquatStoredArtifact(
+            content=response.content,
+            mime_type=(
+                artifact_rows[0].get("mime_type")
+                or response.headers.get("content-type")
+                or "application/octet-stream"
+            ),
+            status_code=response.status_code,
+            content_range=response.headers.get("content-range"),
+            accept_ranges=response.headers.get("accept-ranges"),
+        )
+
     def _insert(self, table: str, payload: dict[str, Any]) -> dict[str, Any]:
         response = requests.post(
             f"{self.url}/rest/v1/{table}",
@@ -233,7 +340,7 @@ class SupabaseSquatStore:
             )
         if response.status_code not in {200, 201}:
             raise SquatPersistenceError(
-                f"Failed to store input video: {response.status_code} "
+                f"Failed to store private file: {response.status_code} "
                 f"{response.text}"
             )
 
@@ -270,8 +377,35 @@ def _run_status(report_status: str) -> str:
     }[report_status]
 
 
+def _report_artifacts(
+    report: SquatCaseReport,
+) -> list[tuple[str, str, dict[str, Any]]]:
+    payload = report.artifacts.model_dump(mode="json")
+    captures = payload.pop("event_captures", [])
+    artifacts = [
+        (kind, filename, {})
+        for kind, filename in payload.items()
+        if isinstance(filename, str)
+    ]
+    artifacts.extend(
+        (
+            "event_capture",
+            capture["relative_path"],
+            {
+                "repetition_index": capture["repetition_index"],
+                "event": capture["event"],
+                "timestamp_seconds": capture["timestamp_seconds"],
+            },
+        )
+        for capture in captures
+        if isinstance(capture.get("relative_path"), str)
+    )
+    return artifacts
+
+
 __all__ = [
     "SquatCasePageData",
     "SquatPersistenceError",
+    "SquatStoredArtifact",
     "SupabaseSquatStore",
 ]
