@@ -3,6 +3,11 @@ import { defineConfig, devices } from "@playwright/test";
 const hasAuthenticatedTests = Boolean(
   process.env.SQUAT_E2E_EMAIL && process.env.SQUAT_E2E_PASSWORD,
 );
+const hasExpertTests = Boolean(
+  process.env.SQUAT_E2E_EXPERT_EMAIL &&
+    process.env.SQUAT_E2E_EXPERT_PASSWORD &&
+    process.env.SQUAT_E2E_EXPERT_ASSIGNMENT_ID,
+);
 
 export default defineConfig({
   testDir: "./e2e",
@@ -22,11 +27,7 @@ export default defineConfig({
   projects: [
     {
       name: "chromium-public",
-      testIgnore: [
-        /auth\.spec\.ts/,
-        /case-intake\.spec\.ts/,
-        /case-results\.spec\.ts/,
-      ],
+      testMatch: /home\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
     ...(hasAuthenticatedTests
@@ -46,6 +47,23 @@ export default defineConfig({
             use: {
               ...devices["Desktop Chrome"],
               storageState: "playwright/.auth/investigator.json",
+            },
+          },
+        ]
+      : []),
+    ...(hasExpertTests
+      ? [
+          {
+            name: "expert-auth-setup",
+            testMatch: /expert-auth\.setup\.ts/,
+          },
+          {
+            name: "chromium-expert",
+            dependencies: ["expert-auth-setup"],
+            testMatch: /expert-evaluation\.spec\.ts/,
+            use: {
+              ...devices["Desktop Chrome"],
+              storageState: "playwright/.auth/expert.json",
             },
           },
         ]

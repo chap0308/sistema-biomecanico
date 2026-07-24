@@ -58,6 +58,7 @@ def _pose(case_id: str = "caso_001") -> SquatPoseSummary:
             landmarks_csv="outputs/caso_001/landmarks.csv",
             frame_quality_csv="outputs/caso_001/frame_quality.csv",
             overlay_video="outputs/caso_001/overlay.mp4",
+            review_video="outputs/caso_001/review.mp4",
             quality_plot="outputs/caso_001/pose_quality.png",
             summary_json="outputs/caso_001/pose_summary.json",
         ),
@@ -88,6 +89,7 @@ def test_case_record_and_partial_report_are_persisted(tmp_path: Path) -> None:
     assert payload["pose"]["video_path"] == "video.mp4"
     assert payload["pose"]["artifacts"]["landmarks_csv"] == "landmarks.csv"
     assert payload["artifacts"]["overlay_video"] == "overlay.mp4"
+    assert payload["artifacts"]["review_video"] == "review.mp4"
     assert payload["case_record_path"] == "case_record.json"
 
 

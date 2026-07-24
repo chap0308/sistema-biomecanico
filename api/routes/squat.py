@@ -25,6 +25,14 @@ from pydantic import ValidationError
 from pydantic import BaseModel, Field
 
 from api.auth import SquatUserDependency
+from api.schemas.squat_expert import (
+    SquatAssignmentCreateRequest,
+    SquatAssignmentCreatedResponse,
+    SquatEvaluationSavedResponse,
+    SquatExpertAssignmentResponse,
+    SquatExpertEvaluationRequest,
+    SquatExpertProfileResponse,
+)
 from app.config import get_settings
 from src.squat.contracts import (
     SquatCaseRecordContract,
@@ -35,6 +43,7 @@ from src.squat.models import SquatCaseRecord
 from src.squat.service import run_squat_case_analysis
 from src.squat.persistence import (
     SquatPersistenceError,
+    SquatStoredArtifact,
     SupabaseSquatStore,
 )
 
@@ -80,6 +89,199 @@ class SquatCasePage(BaseModel):
     page_size: int = Field(ge=1)
     total: int = Field(ge=0)
     total_pages: int = Field(ge=0)
+
+
+@router.get(
+    "/squat/experts",
+    response_model=list[SquatExpertProfileResponse],
+    summary="List expert accounts available for case assignment",
+)
+async def list_squat_experts(
+    current_user: SquatUserDependency,
+) -> list[SquatExpertProfileResponse]:
+    """Return only expert identities needed by the investigator."""
+    _require_squat_role(current_user.role, "investigator")
+    try:
+        rows = await run_in_threadpool(SupabaseSquatStore().list_experts)
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    return [SquatExpertProfileResponse.model_validate(row) for row in rows]
+
+
+@router.post(
+    "/squat/cases/{case_id}/assignments",
+    response_model=SquatAssignmentCreatedResponse,
+    summary="Assign one completed case to expert evaluators",
+)
+async def assign_squat_case(
+    case_id: str,
+    payload: SquatAssignmentCreateRequest,
+    current_user: SquatUserDependency,
+) -> SquatAssignmentCreatedResponse:
+    """Create idempotent expert assignments without exposing system output."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    try:
+        rows = await run_in_threadpool(
+            SupabaseSquatStore().assign_case,
+            external_case_id=safe_case_id,
+            evaluator_ids=payload.evaluator_ids,
+            assigned_by=current_user.user_id,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    return SquatAssignmentCreatedResponse(
+        case_id=safe_case_id,
+        assigned=len(rows),
+    )
+
+
+@router.get(
+    "/squat/expert/assignments",
+    response_model=list[SquatExpertAssignmentResponse],
+    summary="List blinded assignments for the current expert",
+)
+async def list_current_expert_assignments(
+    current_user: SquatUserDependency,
+) -> list[SquatExpertAssignmentResponse]:
+    """Return assignment metadata and only the current expert's own draft."""
+    _require_squat_role(current_user.role, "expert")
+    try:
+        rows = await run_in_threadpool(
+            SupabaseSquatStore().list_expert_assignments,
+            current_user.user_id,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    return [
+        SquatExpertAssignmentResponse.model_validate(row) for row in rows
+    ]
+
+
+@router.get(
+    "/squat/expert/assignments/{assignment_id}",
+    response_model=SquatExpertAssignmentResponse,
+    summary="Get one blinded assignment for the current expert",
+)
+async def get_current_expert_assignment(
+    assignment_id: str,
+    current_user: SquatUserDependency,
+) -> SquatExpertAssignmentResponse:
+    """Return no report, rule, metric or system classification."""
+    _require_squat_role(current_user.role, "expert")
+    try:
+        row = await run_in_threadpool(
+            SupabaseSquatStore().get_expert_assignment,
+            assignment_id,
+            evaluator_id=current_user.user_id,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    if row is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Expert assignment was not found.",
+        )
+    return SquatExpertAssignmentResponse.model_validate(row)
+
+
+@router.put(
+    "/squat/expert/assignments/{assignment_id}/evaluation",
+    response_model=SquatEvaluationSavedResponse,
+    summary="Save or submit the current expert evaluation",
+)
+async def save_current_expert_evaluation(
+    assignment_id: str,
+    payload: SquatExpertEvaluationRequest,
+    current_user: SquatUserDependency,
+) -> SquatEvaluationSavedResponse:
+    """Persist Instrument 3 while permanently locking submitted responses."""
+    _require_squat_role(current_user.role, "expert")
+    try:
+        result = await run_in_threadpool(
+            SupabaseSquatStore().save_expert_evaluation,
+            assignment_id=assignment_id,
+            evaluator_id=current_user.user_id,
+            status=payload.status,
+            general_observation=payload.general_observation,
+            items=[item.model_dump(mode="json") for item in payload.items],
+        )
+    except SquatPersistenceError as exc:
+        conflict = "cannot be modified" in str(exc)
+        raise HTTPException(
+            status_code=(
+                status.HTTP_409_CONFLICT
+                if conflict
+                else status.HTTP_422_UNPROCESSABLE_ENTITY
+            ),
+            detail=str(exc),
+        ) from exc
+    return SquatEvaluationSavedResponse.model_validate(result)
+
+
+@router.get(
+    "/squat/expert/assignments/{assignment_id}/video",
+    summary="Stream the clean anonymized review video",
+)
+async def get_current_expert_review_video(
+    assignment_id: str,
+    current_user: SquatUserDependency,
+    request: Request,
+) -> Response:
+    """Serve no overlay, landmarks, metrics or system classification."""
+    _require_squat_role(current_user.role, "expert")
+    store = SupabaseSquatStore()
+    try:
+        assignment = await run_in_threadpool(
+            store.get_expert_assignment,
+            assignment_id,
+            evaluator_id=current_user.user_id,
+        )
+        if assignment is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Expert assignment was not found.",
+            )
+        case_dir = (_OUTPUT_ROOT / assignment["case_id"]).resolve()
+        report_path = case_dir / "case_report.json"
+        if report_path.is_file():
+            report = SquatCaseReport.model_validate_json(
+                report_path.read_text(encoding="utf-8")
+            )
+            review_name = report.artifacts.review_video
+            if review_name:
+                review_path = (case_dir / review_name).resolve()
+                if review_path.parent == case_dir and review_path.is_file():
+                    return FileResponse(review_path)
+        stored = await run_in_threadpool(
+            store.get_expert_review_artifact,
+            assignment_id,
+            evaluator_id=current_user.user_id,
+            range_header=request.headers.get("range"),
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    if stored is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Expert review video was not found.",
+        )
+    return _stored_artifact_response(stored)
 
 
 @router.get(
@@ -387,6 +589,10 @@ async def get_squat_case_asset(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Squat case asset was not found.",
         )
+    return _stored_artifact_response(stored)
+
+
+def _stored_artifact_response(stored: SquatStoredArtifact) -> Response:
     headers = {
         "Accept-Ranges": stored.accept_ranges or "bytes",
         "Content-Length": str(len(stored.content)),
@@ -399,6 +605,14 @@ async def get_squat_case_asset(
         media_type=stored.mime_type,
         headers=headers,
     )
+
+
+def _require_squat_role(current_role: str, expected_role: str) -> None:
+    if current_role != expected_role:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail=f"This operation requires the {expected_role} role.",
+        )
 
 
 def _validate_video_upload(video: UploadFile) -> None:

@@ -16,6 +16,18 @@
           "default": null,
           "title": "Overlay Video"
         },
+        "review_video": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Review Video"
+        },
         "landmarks_csv": {
           "anyOf": [
             {
@@ -418,6 +430,18 @@
         "overlay_video": {
           "title": "Overlay Video",
           "type": "string"
+        },
+        "review_video": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Review Video"
         },
         "quality_plot": {
           "title": "Quality Plot",

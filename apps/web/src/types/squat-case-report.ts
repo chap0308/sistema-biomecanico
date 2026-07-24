@@ -28,6 +28,7 @@ export type MeanDetectedKeypoints = number;
 export type LandmarksCsv = string;
 export type FrameQualityCsv = string;
 export type OverlayVideo = string;
+export type ReviewVideo = string | null;
 export type QualityPlot = string;
 export type SummaryJson = string;
 export type SchemaVersion2 = "1.0";
@@ -125,6 +126,7 @@ export type Notes = string[];
 export type RuleEvidenceCsv = string;
 export type FindingsJson = string;
 export type OverlayVideo1 = string | null;
+export type ReviewVideo1 = string | null;
 export type LandmarksCsv3 = string | null;
 export type FrameQualityCsv2 = string | null;
 export type PoseQualityPlot = string | null;
@@ -190,6 +192,7 @@ export interface SquatPoseArtifacts {
   landmarks_csv: LandmarksCsv;
   frame_quality_csv: FrameQualityCsv;
   overlay_video: OverlayVideo;
+  review_video?: ReviewVideo;
   quality_plot: QualityPlot;
   summary_json: SummaryJson;
   [k: string]: unknown;
@@ -369,6 +372,7 @@ export interface SquatFindingsArtifacts {
  */
 export interface SquatArtifactManifest {
   overlay_video?: OverlayVideo1;
+  review_video?: ReviewVideo1;
   landmarks_csv?: LandmarksCsv3;
   frame_quality_csv?: FrameQualityCsv2;
   pose_quality_plot?: PoseQualityPlot;

@@ -58,6 +58,7 @@ def test_persist_completed_case_uploads_only_manifest_artifacts(
     output_dir.mkdir()
     upload.write_bytes(b"input")
     (output_dir / "overlay.mp4").write_bytes(b"overlay")
+    (output_dir / "review.mp4").write_bytes(b"review")
     (output_dir / "rep_01_maxima_profundidad.png").write_bytes(b"capture")
     (output_dir / "internal.json").write_text("{}", encoding="utf-8")
 
@@ -90,6 +91,7 @@ def test_persist_completed_case_uploads_only_manifest_artifacts(
         pipeline_version="test",
         artifacts=SquatArtifactManifest(
             overlay_video="overlay.mp4",
+            review_video="review.mp4",
             event_captures=[
                 SquatEventCapture(
                     repetition_index=1,
@@ -116,10 +118,11 @@ def test_persist_completed_case_uploads_only_manifest_artifacts(
     assert uploaded_paths == {
         "caso_persistencia_001/original.mp4",
         "caso_persistencia_001/overlay.mp4",
+        "caso_persistencia_001/review.mp4",
         "caso_persistencia_001/rep_01_maxima_profundidad.png",
     }
     artifact_rows = [
         payload for table, payload in store.inserts if table == "squat_artifacts"
     ]
-    assert len(artifact_rows) == 2
-    assert artifact_rows[1]["metadata"]["event"] == "maxima_profundidad"
+    assert len(artifact_rows) == 3
+    assert artifact_rows[2]["metadata"]["event"] == "maxima_profundidad"

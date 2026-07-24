@@ -227,13 +227,22 @@ Por ello, la interfaz debe disponer de un modo de investigación o evaluación e
 #### Flujo propuesto para expertos
 
 1. El experto ingresa con un perfil autorizado.
-2. Revisa el video y, si se define metodológicamente, el material visual permitido.
+2. Revisa `review.mp4`, que conserva la anonimización facial pero no contiene
+   landmarks, paneles, umbrales ni clasificaciones computacionales.
 3. Clasifica de forma independiente tronco, pelvis, valgo y asimetría bilateral.
 4. Guarda su evaluación sin visualizar inicialmente la clasificación de otros expertos ni la del sistema.
 5. El investigador consolida la referencia final mediante coincidencia, consenso o mayoría.
 6. La interfaz compara la referencia final con la salida del sistema.
 
 Ocultar inicialmente la salida del sistema reduce el riesgo de influir sobre el juicio independiente del experto.
+
+`overlay.mp4` y `review.mp4` proceden del mismo video y conservan la misma
+secuencia temporal, pero cumplen funciones diferentes. El primero incluye
+landmarks y evidencia computacional para el investigador; el segundo solo
+presenta el movimiento anonimizado que necesita el evaluador. Esta separación
+se aplica también en la API: el rol experto dispone de un endpoint específico
+para el video de revisión y no puede acceder al reporte ni a los artefactos
+técnicos del caso.
 
 #### Presentación del resultado comparativo
 

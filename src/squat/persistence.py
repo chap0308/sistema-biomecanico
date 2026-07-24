@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime, timezone
 import mimetypes
 from pathlib import Path
 from typing import Any
@@ -277,6 +278,292 @@ class SupabaseSquatStore:
             accept_ranges=response.headers.get("accept-ranges"),
         )
 
+    def list_experts(self) -> list[dict[str, Any]]:
+        """Return active expert profiles available for assignment."""
+        return self._select(
+            "profiles",
+            params={
+                "select": "user_id,email,display_name",
+                "squat_role": "eq.expert",
+                "order": "display_name.asc",
+            },
+        )
+
+    def assign_case(
+        self,
+        *,
+        external_case_id: str,
+        evaluator_ids: list[str],
+        assigned_by: str,
+    ) -> list[dict[str, Any]]:
+        """Assign one completed case to one or more expert evaluators."""
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "case_id,status",
+                "external_case_id": f"eq.{external_case_id}",
+                "limit": "1",
+            },
+        )
+        if not case_rows:
+            raise SquatPersistenceError("Squat case was not found.")
+        if case_rows[0]["status"] != "completed":
+            raise SquatPersistenceError(
+                "Only completed squat cases can be assigned."
+            )
+        for evaluator_id in evaluator_ids:
+            expert_rows = self._select(
+                "profiles",
+                params={
+                    "select": "user_id",
+                    "user_id": f"eq.{evaluator_id}",
+                    "squat_role": "eq.expert",
+                    "limit": "1",
+                },
+            )
+            if not expert_rows:
+                raise SquatPersistenceError(
+                    f"Evaluator {evaluator_id} is not an expert account."
+                )
+        return self._upsert_many(
+            "squat_expert_assignments",
+            [
+                {
+                    "case_id": case_rows[0]["case_id"],
+                    "evaluator_id": evaluator_id,
+                    "assigned_by": assigned_by,
+                    "status": "pending",
+                }
+                for evaluator_id in evaluator_ids
+            ],
+            on_conflict="case_id,evaluator_id",
+            ignore_duplicates=True,
+        )
+
+    def list_expert_assignments(
+        self,
+        evaluator_id: str,
+    ) -> list[dict[str, Any]]:
+        """List assignment cards without exposing computational results."""
+        assignments = self._select(
+            "squat_expert_assignments",
+            params={
+                "select": "assignment_id,case_id,status,created_at,updated_at",
+                "evaluator_id": f"eq.{evaluator_id}",
+                "order": "created_at.desc",
+            },
+        )
+        return [
+            self._assignment_view(assignment, evaluator_id=evaluator_id)
+            for assignment in assignments
+        ]
+
+    def get_expert_assignment(
+        self,
+        assignment_id: str,
+        *,
+        evaluator_id: str,
+    ) -> dict[str, Any] | None:
+        """Load one expert-owned assignment and its own draft only."""
+        rows = self._select(
+            "squat_expert_assignments",
+            params={
+                "select": "assignment_id,case_id,status,created_at,updated_at",
+                "assignment_id": f"eq.{assignment_id}",
+                "evaluator_id": f"eq.{evaluator_id}",
+                "limit": "1",
+            },
+        )
+        return (
+            self._assignment_view(rows[0], evaluator_id=evaluator_id)
+            if rows
+            else None
+        )
+
+    def save_expert_evaluation(
+        self,
+        *,
+        assignment_id: str,
+        evaluator_id: str,
+        status: str,
+        general_observation: str | None,
+        items: list[dict[str, Any]],
+    ) -> dict[str, Any]:
+        """Save a draft or atomically lock a submitted expert evaluation."""
+        assignment = self.get_expert_assignment(
+            assignment_id,
+            evaluator_id=evaluator_id,
+        )
+        if assignment is None:
+            raise SquatPersistenceError("Expert assignment was not found.")
+        if assignment["status"] == "submitted":
+            raise SquatPersistenceError(
+                "Submitted expert evaluations cannot be modified."
+            )
+        existing = self._select(
+            "squat_expert_evaluations",
+            params={
+                "select": "evaluation_id,status",
+                "assignment_id": f"eq.{assignment_id}",
+                "limit": "1",
+            },
+        )
+        payload = {
+            "assignment_id": assignment_id,
+            "evaluator_id": evaluator_id,
+            "status": status,
+            "general_observation": general_observation,
+            "submitted_at": (
+                datetime.now(timezone.utc).isoformat()
+                if status == "submitted"
+                else None
+            ),
+        }
+        if existing:
+            if existing[0]["status"] == "submitted":
+                raise SquatPersistenceError(
+                    "Submitted expert evaluations cannot be modified."
+                )
+            evaluation = self._update(
+                "squat_expert_evaluations",
+                filters={"evaluation_id": f"eq.{existing[0]['evaluation_id']}"},
+                payload=payload,
+            )
+        else:
+            evaluation = self._insert("squat_expert_evaluations", payload)
+        evaluation_id = evaluation["evaluation_id"]
+        self._delete(
+            "squat_expert_evaluation_items",
+            filters={"evaluation_id": f"eq.{evaluation_id}"},
+        )
+        if items:
+            self._insert_many(
+                "squat_expert_evaluation_items",
+                [
+                    {
+                        **item,
+                        "evaluation_id": evaluation_id,
+                    }
+                    for item in items
+                ],
+            )
+        self._update(
+            "squat_expert_assignments",
+            filters={"assignment_id": f"eq.{assignment_id}"},
+            payload={
+                "status": (
+                    "submitted" if status == "submitted" else "in_progress"
+                )
+            },
+        )
+        return {
+            "evaluation_id": evaluation_id,
+            "status": status,
+        }
+
+    def get_expert_review_artifact(
+        self,
+        assignment_id: str,
+        *,
+        evaluator_id: str,
+        range_header: str | None = None,
+    ) -> SquatStoredArtifact | None:
+        """Return only the clean anonymized review video for one assignee."""
+        assignment = self.get_expert_assignment(
+            assignment_id,
+            evaluator_id=evaluator_id,
+        )
+        if assignment is None:
+            return None
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "case_id",
+                "external_case_id": f"eq.{assignment['case_id']}",
+                "limit": "1",
+            },
+        )
+        if not case_rows:
+            return None
+        run_rows = self._select(
+            "squat_analysis_runs",
+            params={
+                "select": "run_id",
+                "case_id": f"eq.{case_rows[0]['case_id']}",
+                "order": "created_at.desc",
+                "limit": "1",
+            },
+        )
+        if not run_rows:
+            return None
+        artifact_rows = self._select(
+            "squat_artifacts",
+            params={
+                "select": "object_path,mime_type",
+                "run_id": f"eq.{run_rows[0]['run_id']}",
+                "artifact_kind": "eq.review_video",
+                "limit": "1",
+            },
+        )
+        if not artifact_rows:
+            return None
+        return self._download_private_object(
+            bucket="squat-artifacts",
+            object_path=artifact_rows[0]["object_path"],
+            mime_type=artifact_rows[0].get("mime_type"),
+            range_header=range_header,
+        )
+
+    def _assignment_view(
+        self,
+        assignment: dict[str, Any],
+        *,
+        evaluator_id: str,
+    ) -> dict[str, Any]:
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "external_case_id",
+                "case_id": f"eq.{assignment['case_id']}",
+                "limit": "1",
+            },
+        )
+        evaluation_rows = self._select(
+            "squat_expert_evaluations",
+            params={
+                "select": (
+                    "evaluation_id,status,general_observation,"
+                    "created_at,updated_at,submitted_at"
+                ),
+                "assignment_id": f"eq.{assignment['assignment_id']}",
+                "evaluator_id": f"eq.{evaluator_id}",
+                "limit": "1",
+            },
+        )
+        evaluation = evaluation_rows[0] if evaluation_rows else None
+        if evaluation:
+            evaluation["items"] = self._select(
+                "squat_expert_evaluation_items",
+                params={
+                    "select": (
+                        "pattern_key,classification,observed_side,"
+                        "confidence,observation"
+                    ),
+                    "evaluation_id": f"eq.{evaluation['evaluation_id']}",
+                    "order": "pattern_key.asc",
+                },
+            )
+        return {
+            "assignment_id": assignment["assignment_id"],
+            "case_id": (
+                case_rows[0]["external_case_id"] if case_rows else "unknown"
+            ),
+            "status": assignment["status"],
+            "created_at": assignment["created_at"],
+            "updated_at": assignment["updated_at"],
+            "evaluation": evaluation,
+        }
+
     def _insert(self, table: str, payload: dict[str, Any]) -> dict[str, Any]:
         response = requests.post(
             f"{self.url}/rest/v1/{table}",
@@ -297,6 +584,103 @@ class SupabaseSquatStore:
         if not rows:
             raise SquatPersistenceError(f"Supabase returned no {table} row.")
         return rows[0]
+
+    def _insert_many(
+        self,
+        table: str,
+        payload: list[dict[str, Any]],
+    ) -> list[dict[str, Any]]:
+        response = requests.post(
+            f"{self.url}/rest/v1/{table}",
+            headers={
+                **self._headers(),
+                "Content-Type": "application/json",
+                "Prefer": "return=representation",
+            },
+            json=payload,
+            timeout=30,
+        )
+        if response.status_code not in {200, 201}:
+            raise SquatPersistenceError(
+                f"Failed to insert {table}: {response.status_code} "
+                f"{response.text}"
+            )
+        return response.json()
+
+    def _upsert_many(
+        self,
+        table: str,
+        payload: list[dict[str, Any]],
+        *,
+        on_conflict: str,
+        ignore_duplicates: bool,
+    ) -> list[dict[str, Any]]:
+        resolution = (
+            "ignore-duplicates" if ignore_duplicates else "merge-duplicates"
+        )
+        response = requests.post(
+            f"{self.url}/rest/v1/{table}",
+            params={"on_conflict": on_conflict},
+            headers={
+                **self._headers(),
+                "Content-Type": "application/json",
+                "Prefer": f"resolution={resolution},return=representation",
+            },
+            json=payload,
+            timeout=30,
+        )
+        if response.status_code not in {200, 201}:
+            raise SquatPersistenceError(
+                f"Failed to upsert {table}: {response.status_code} "
+                f"{response.text}"
+            )
+        return response.json()
+
+    def _update(
+        self,
+        table: str,
+        *,
+        filters: dict[str, str],
+        payload: dict[str, Any],
+    ) -> dict[str, Any]:
+        response = requests.patch(
+            f"{self.url}/rest/v1/{table}",
+            params=filters,
+            headers={
+                **self._headers(),
+                "Content-Type": "application/json",
+                "Prefer": "return=representation",
+            },
+            json=payload,
+            timeout=30,
+        )
+        if response.status_code != 200:
+            raise SquatPersistenceError(
+                f"Failed to update {table}: {response.status_code} "
+                f"{response.text}"
+            )
+        rows = response.json()
+        if not rows:
+            raise SquatPersistenceError(f"Supabase updated no {table} row.")
+        return rows[0]
+
+    def _delete(
+        self,
+        table: str,
+        *,
+        filters: dict[str, str],
+    ) -> None:
+        response = requests.delete(
+            f"{self.url}/rest/v1/{table}",
+            params=filters,
+            headers=self._headers(),
+            timeout=30,
+        )
+        if response.status_code not in {200, 204}:
+            raise SquatPersistenceError(
+                f"Failed to delete {table}: {response.status_code} "
+                f"{response.text}"
+            )
 
     def _select(
         self,
@@ -343,6 +727,42 @@ class SupabaseSquatStore:
                 f"Failed to store private file: {response.status_code} "
                 f"{response.text}"
             )
+
+    def _download_private_object(
+        self,
+        *,
+        bucket: str,
+        object_path: str,
+        mime_type: str | None,
+        range_header: str | None,
+    ) -> SquatStoredArtifact | None:
+        headers = self._headers()
+        if range_header:
+            headers["Range"] = range_header
+        response = requests.get(
+            f"{self.url}/storage/v1/object/authenticated/{bucket}/"
+            f"{quote(object_path, safe='/')}",
+            headers=headers,
+            timeout=120,
+        )
+        if response.status_code == 404:
+            return None
+        if response.status_code not in {200, 206}:
+            raise SquatPersistenceError(
+                f"Failed to read squat artifact: {response.status_code} "
+                f"{response.text}"
+            )
+        return SquatStoredArtifact(
+            content=response.content,
+            mime_type=(
+                mime_type
+                or response.headers.get("content-type")
+                or "application/octet-stream"
+            ),
+            status_code=response.status_code,
+            content_range=response.headers.get("content-range"),
+            accept_ranges=response.headers.get("accept-ranges"),
+        )
 
     def _headers(self) -> dict[str, str]:
         return {

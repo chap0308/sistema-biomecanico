@@ -170,10 +170,12 @@ def _metadata(tmp_path: Path) -> VideoTechnicalMetadata:
 
 def test_extract_pose_video_writes_summary_and_csv_artifacts(tmp_path: Path, monkeypatch) -> None:
     capture = _FakeCapture([np.zeros((100, 80, 3), dtype=np.uint8) for _ in range(2)])
-    writer = _FakeWriter()
+    overlay_writer = _FakeWriter()
+    review_writer = _FakeWriter()
+    writers = iter([overlay_writer, review_writer])
     monkeypatch.setattr("src.squat.pose_video.probe_video", lambda _: _metadata(tmp_path))
     monkeypatch.setattr(cv2, "VideoCapture", lambda _: capture)
-    monkeypatch.setattr(cv2, "VideoWriter", lambda *_args: writer)
+    monkeypatch.setattr(cv2, "VideoWriter", lambda *_args: next(writers))
     monkeypatch.setattr("src.squat.pose_video._create_pose_model", _FakePoseModel)
 
     summary = extract_squat_pose_video(
@@ -189,9 +191,16 @@ def test_extract_pose_video_writes_summary_and_csv_artifacts(tmp_path: Path, mon
     assert Path(summary.artifacts.landmarks_csv).exists()
     assert Path(summary.artifacts.frame_quality_csv).exists()
     assert Path(summary.artifacts.quality_plot).exists()
-    assert len(writer.frames) == 2
+    assert summary.artifacts.review_video.endswith("review.mp4")
+    assert len(overlay_writer.frames) == 2
+    assert len(review_writer.frames) == 2
+    assert not np.array_equal(
+        overlay_writer.frames[0],
+        review_writer.frames[0],
+    )
     assert capture.released is True
-    assert writer.released is True
+    assert overlay_writer.released is True
+    assert review_writer.released is True
 
 
 def test_extract_pose_video_validates_threshold(tmp_path: Path) -> None:

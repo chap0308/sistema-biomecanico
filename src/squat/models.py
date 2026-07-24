@@ -159,6 +159,7 @@ class SquatPoseArtifacts(BaseModel):
     landmarks_csv: str
     frame_quality_csv: str
     overlay_video: str
+    review_video: str | None = None
     quality_plot: str
     summary_json: str
 

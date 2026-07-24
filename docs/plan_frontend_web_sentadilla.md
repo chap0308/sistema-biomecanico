@@ -519,11 +519,21 @@ feat(web): visualize squat analysis evidence
 
 ### Fase F4. Evaluación experta ciega
 
-- asignar casos;
-- construir la vista restringida;
-- guardar borradores;
-- bloquear evaluaciones enviadas;
-- impedir acceso previo a resultados.
+- asignar casos; **implementado**;
+- construir la vista restringida; **implementado**;
+- generar y servir un video anonimizado sin superposiciones para la revisión
+  experta; **implementado**;
+- guardar borradores; **implementado**;
+- bloquear evaluaciones enviadas; **implementado**;
+- impedir desde la API y la interfaz el acceso previo a resultados;
+  **implementado**;
+- verificar el flujo completo con dos cuentas y una prueba E2E;
+  **implementado**.
+
+La evidencia de esta fase se encuentra en
+`docs/evidencia_frontend_fase_f4_evaluacion_experta.md`. La comparación entre
+evaluadores, la consolidación de la referencia final y el cálculo de métricas
+pertenecen a la fase F5 y no forman parte del formulario ciego.
 
 Commit sugerido:
 

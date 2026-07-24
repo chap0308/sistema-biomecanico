@@ -8,6 +8,7 @@ import {
   DownloadIcon,
   FlaskConicalIcon,
   ScanLineIcon,
+  UserRoundPlusIcon,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -100,6 +101,19 @@ export default async function CaseDetailPage({
           {report.findings?.ruleset_status === "provisional" && (
             <Badge variant="outline">Umbrales provisionales</Badge>
           )}
+          {report.status === "analisis_completo" ? (
+            <Link
+              href={`/cases/${report.case_id}/assignments`}
+              className={buttonVariants({
+                size: "sm",
+                variant: "outline",
+                className: "ml-auto",
+              })}
+            >
+              <UserRoundPlusIcon aria-hidden="true" />
+              Asignar evaluadores
+            </Link>
+          ) : null}
         </div>
         <div className="mt-4 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
           <div>

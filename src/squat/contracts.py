@@ -128,6 +128,7 @@ class SquatArtifactManifest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     overlay_video: str | None = None
+    review_video: str | None = None
     landmarks_csv: str | None = None
     frame_quality_csv: str | None = None
     pose_quality_plot: str | None = None
@@ -306,6 +307,11 @@ def _artifact_manifest(
 ) -> SquatArtifactManifest:
     return SquatArtifactManifest(
         overlay_video=_name(pose.artifacts.overlay_video) if pose else None,
+        review_video=(
+            _name(pose.artifacts.review_video)
+            if pose and pose.artifacts.review_video
+            else None
+        ),
         landmarks_csv=_name(pose.artifacts.landmarks_csv) if pose else None,
         frame_quality_csv=_name(pose.artifacts.frame_quality_csv) if pose else None,
         pose_quality_plot=_name(pose.artifacts.quality_plot) if pose else None,
@@ -370,6 +376,11 @@ def _portable_pose(summary: SquatPoseSummary | None) -> SquatPoseSummary | None:
                         summary.artifacts.frame_quality_csv
                     ),
                     "overlay_video": _name(summary.artifacts.overlay_video),
+                    "review_video": (
+                        _name(summary.artifacts.review_video)
+                        if summary.artifacts.review_video
+                        else None
+                    ),
                     "quality_plot": _name(summary.artifacts.quality_plot),
                     "summary_json": _name(summary.artifacts.summary_json),
                 }

@@ -149,6 +149,7 @@ def extract_squat_pose_video(
     landmarks_path = case_output_dir / "landmarks.csv"
     quality_path = case_output_dir / "frame_quality.csv"
     overlay_path = case_output_dir / "overlay.mp4"
+    review_path = case_output_dir / "review.mp4"
     plot_path = case_output_dir / "pose_quality.png"
     summary_path = case_output_dir / "pose_summary.json"
 
@@ -159,12 +160,24 @@ def extract_squat_pose_video(
         video.fps,
         (video.width_px, video.height_px),
     )
+    review_writer = cv2.VideoWriter(
+        str(review_path),
+        cv2.VideoWriter_fourcc(*"mp4v"),
+        video.fps,
+        (video.width_px, video.height_px),
+    )
     if not capture.isOpened():
         writer.release()
+        review_writer.release()
         raise RuntimeError(f"Unable to open squat video for pose extraction: {video.path}")
     if not writer.isOpened():
         capture.release()
+        review_writer.release()
         raise RuntimeError(f"Unable to create squat overlay video: {overlay_path}")
+    if not review_writer.isOpened():
+        capture.release()
+        writer.release()
+        raise RuntimeError(f"Unable to create squat review video: {review_path}")
 
     quality_rows: list[dict[str, object]] = []
     processed_frames = 0
@@ -229,12 +242,14 @@ def extract_squat_pose_video(
                 annotated = frame_bgr.copy()
                 if anonymize_face:
                     _pixelate_face(annotated, assessment.all_landmarks)
+                review_writer.write(annotated)
                 _draw_pose_overlay(annotated, assessment, frame_index=frame_index)
                 writer.write(annotated)
                 frame_index += 1
     finally:
         capture.release()
         writer.release()
+        review_writer.release()
 
     _save_pose_quality_plot(
         quality_rows,
@@ -248,6 +263,7 @@ def extract_squat_pose_video(
         landmarks_csv=str(landmarks_path),
         frame_quality_csv=str(quality_path),
         overlay_video=str(overlay_path),
+        review_video=str(review_path),
         quality_plot=str(plot_path),
         summary_json=str(summary_path),
     )
