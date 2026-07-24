@@ -1,93 +1,114 @@
 # Ajustes metodológicos durante el desarrollo de la sentadilla bilateral
 
-## 1. Finalidad del documento
+## 1. Finalidad
 
-Este archivo consolida la redacción metodológica vigente de las secciones que pueden requerir precisión durante el desarrollo técnico del sistema. Su propósito es mantener trazabilidad entre las decisiones de implementación, el protocolo de captura, los instrumentos de recolección y el documento formal de la tesis.
+Este archivo contiene la redacción completa de los párrafos que deberán reemplazarse manualmente en `Plantilla_proyecto_de_tesis_completada.docx` cuando las decisiones metodológicas aquí registradas sean aprobadas. La redacción conserva la estructura y el contenido vigente del documento Word y modifica únicamente los aspectos precisados durante el desarrollo.
 
-Las modificaciones registradas aquí no deben trasladarse automáticamente al documento final. Antes de incorporarlas, se debe comprobar que sean coherentes con la versión vigente de la plantilla institucional y que no contradigan decisiones aprobadas por el asesor.
+No se debe sustituir una sección completa del documento de tesis por una versión resumida. Los textos incluidos a continuación están preparados para copiarse y pegarse en las secciones correspondientes.
 
-## 2. Decisión metodológica vigente
+## 2. Decisión metodológica vigente sobre el apoyo de los talones
 
-La condición principal de evaluación será una sentadilla bilateral:
+La sentadilla bilateral se registrará:
 
-- capturada desde una vista frontal;
-- ejecutada sin carga externa;
-- realizada sobre una superficie plana;
-- realizada sin discos, cuñas ni otros soportes externos bajo los talones;
-- con mantenimiento aparente del contacto de ambos talones con el suelo;
-- registrada con visibilidad suficiente del tronco, pelvis y miembros inferiores.
+- en vista anterior dentro del plano frontal;
+- sin carga externa;
+- sobre una superficie plana;
+- sin discos, cuñas ni otros soportes externos debajo de los talones;
+- procurando mantener ambos talones en contacto con el suelo.
 
-El sistema no implementará una función automática para detectar soportes bajo los talones ni para determinar el contacto efectivo entre el talón y el suelo. Estas condiciones serán controladas durante la grabación y verificadas manualmente por el investigador mediante el Instrumento 1.
+El sistema no detectará automáticamente los soportes externos ni determinará el contacto efectivo entre el talón y el suelo. El investigador verificará manualmente estas condiciones durante la grabación y mediante el Instrumento 1.
 
-La presencia de soportes externos o una pérdida evidente y sostenida del contacto de los talones implica solicitar una nueva grabación. Si no fuera posible repetirla, el registro no será incorporado a la muestra analítica principal. Esta decisión corresponde al control metodológico de la captura y no a una clasificación automática emitida por el sistema.
+Si se observa el uso de soportes externos o una elevación evidente y sostenida de los talones, se solicitará repetir la ejecución. Si no fuera posible obtener un nuevo registro que cumpla el protocolo, el video no será incorporado a la muestra analítica principal. Esta decisión será metodológica y manual; no constituirá una regla computacional del sistema.
 
-## 3. Redacción consolidada de población
+## 3. Sección 8.2. Población
 
-### 3.1. Población
+### 3.1. Párrafo inicial
 
-La población del estudio estará conformada por videos de personas adultas ejecutando sentadillas bilaterales, capturados mediante una cámara convencional en un gimnasio comercial de Lima Sur durante el año 2026 y bajo condiciones previamente definidas de registro. La unidad de análisis será cada video procesable que contenga una ejecución completa y observable del ejercicio, permita estimar puntos anatómicos clave en dos dimensiones, calcular las variables biomecánicas establecidas y comparar las clasificaciones emitidas por el sistema con la referencia construida por evaluadores expertos.
+Este párrafo se mantiene como aparece en el documento:
 
-Los participantes deberán ser personas adultas capaces de ejecutar una sentadilla bilateral sin carga externa y sin dolor incapacitante durante la prueba. La ejecución se realizará desde una posición frontal respecto de la cámara, sobre una superficie plana y sin discos, cuñas u otros soportes externos bajo los talones. Estas condiciones buscan estandarizar la captura y reducir la influencia de variantes externas sobre las mediciones obtenidas.
+La población del estudio estará conformada por videos de personas ejecutando sentadillas bilaterales, capturados mediante cámara convencional bajo condiciones definidas de registro. La unidad de análisis principal será el video procesable que contenga una ejecución observable del ejercicio y que permita extraer puntos anatómicos clave del cuerpo, calcular variables biomecánicas y comparar los resultados del sistema con una referencia experta.
 
-Se considerarán registros elegibles aquellos que presenten una ejecución completa de la sentadilla bilateral, correspondan a la vista frontal definida por el protocolo, mantengan una visibilidad suficiente del tronco, pelvis y miembros inferiores, no presenten oclusiones críticas y permitan estimar de manera estable los puntos anatómicos requeridos. Asimismo, el investigador verificará durante la captura el cumplimiento de la condición de apoyo establecida en el protocolo.
+### 3.2. Criterios de inclusión y exclusión
 
-No serán incorporados a la muestra analítica principal los registros realizados con carga externa, los capturados desde una orientación distinta de la vista frontal establecida, los que presenten recortes u oclusiones que impidan observar los segmentos corporales necesarios, los que no contengan una ejecución completa o aquellos en los que no pueda obtenerse una estimación de pose suficientemente estable. Cuando durante la captura se identifique la presencia de soportes externos bajo los talones o una pérdida evidente y sostenida del contacto con el suelo, se solicitará repetir la ejecución; si ello no fuera posible, el registro no será incorporado al análisis principal.
+Reemplazar el párrafo actual de criterios por el siguiente:
 
-La elevación del talón no será interpretada por el sistema como diagnóstico, compensación postural ni asimetría cinemática. Su control tendrá únicamente la finalidad de mantener homogénea la condición de ejecución utilizada para construir y evaluar la muestra de videos.
+Como criterios de inclusión se considerarán videos de personas adultas capaces de ejecutar sentadillas bilaterales completas o suficientemente observables para identificar las fases de descenso y ascenso, con visibilidad del cuerpo completo o de los segmentos necesarios para el análisis del tronco, pelvis y miembros inferiores, capturados con cámara convencional en vista anterior dentro del plano frontal y con calidad visual suficiente para la detección estable de pose. La ejecución deberá realizarse sin carga externa, sobre una superficie plana, sin discos, cuñas u otros soportes colocados debajo de los talones y procurando mantener ambos talones en contacto con el suelo durante el movimiento. Como criterios de exclusión se contemplarán videos con oclusión significativa, iluminación deficiente, desenfoque excesivo, movimientos incompletos, registros fuera del plano frontal, carga externa, implementos que oculten segmentos relevantes, uso de soportes elevados debajo de los talones, elevación evidente o sostenida de estos o casos en los que el modelo de pose no detecte adecuadamente los puntos anatómicos requeridos. Una elevación breve y espontánea del talón será registrada como observación técnica y motivará la repetición del intento antes de determinar la exclusión del registro. Esta delimitación se apoya en Bae et al. [24], Armitano-Lago et al. [21], Ohmura et al. [36] y Needham et al. [45].
 
-## 4. Redacción consolidada de muestreo
+### 3.3. Aclaración sobre la exclusión
 
-### 4.1. Muestreo
+La exclusión por soportes externos o elevación evidente y sostenida de los talones será determinada manualmente por el investigador a partir del protocolo de captura y del Instrumento 1. No deberá describirse como una detección o decisión automática del sistema.
 
-Se empleará un muestreo no probabilístico e intencional, debido a que los videos serán seleccionados según su utilidad técnica y su correspondencia con las condiciones requeridas para desarrollar y evaluar el sistema. La selección no buscará estimar la prevalencia poblacional de las compensaciones estudiadas, sino reunir registros suficientes y metodológicamente comparables para probar la extracción de puntos anatómicos clave, el cálculo de variables biomecánicas, la aplicación de criterios interpretables y la comparación con la referencia experta.
+## 4. Sección 8.3. Muestra
 
-La selección de los videos considerará el cumplimiento del protocolo de captura, la correspondencia con la vista frontal, la ejecución completa de la sentadilla bilateral, la visibilidad suficiente del cuerpo, la ausencia de oclusiones críticas y la estabilidad necesaria de la estimación de pose. También se verificará manualmente que la ejecución se haya realizado sobre una superficie plana, sin soportes externos bajo los talones y con mantenimiento aparente de su contacto con el suelo.
+La muestra no cambia como consecuencia de esta decisión metodológica. Se conserva la siguiente redacción del documento:
 
-El control de la condición de apoyo será efectuado por el investigador durante la grabación y mediante el Instrumento 1. No se utilizará un algoritmo para detectar automáticamente discos, cuñas o elevaciones del talón. Cuando se advierta un incumplimiento de esta condición, se priorizará la repetición de la captura. Solo los registros que satisfagan las condiciones metodológicas y técnicas establecidas serán incorporados a la muestra analítica principal.
+La muestra estará constituida por 75 videos válidos de sentadilla bilateral. Se considerarán 15 videos positivos para cada uno de los cuatro patrones evaluados en el estudio —inclinación lateral del tronco, desplazamiento lateral de pelvis, valgo dinámico visible y asimetría bilateral observable— y 15 videos negativos en los que no se detecte ninguna compensación observable. Esta distribución permitirá asegurar la presencia de casos representativos para cada patrón y, al mismo tiempo, incorporar registros de contraste sin hallazgos. La unidad de análisis de la muestra será un video válido por caso, correspondiente a una ejecución de sentadilla bilateral, capturada en vista anterior dentro del plano frontal, que pueda ser procesada de manera completa por el sistema y revisada por los evaluadores expertos.
 
-La muestra prevista estará compuesta por 75 videos: 15 registros asociados con inclinación lateral del tronco, 15 con desplazamiento lateral de pelvis, 15 con valgo dinámico visible, 15 con asimetría bilateral general y 15 sin presencia observable de las compensaciones evaluadas. La organización de los registros por patrón principal no impedirá documentar la presencia simultánea de más de una compensación en un mismo video, debido a que cada patrón será evaluado mediante un criterio independiente.
+Dado que la población operativa del estudio está formada por registros audiovisuales seleccionados bajo criterios técnicos y no por una población estadística plenamente enumerada, no se plantea en esta etapa un cálculo muestral probabilístico clásico. En su lugar, se adopta un tamaño de muestra metodológicamente manejable y suficiente para sustentar pruebas de funcionamiento, detección y concordancia, sin perder coherencia con el alcance de la tesis.
 
-## 5. Redacción consolidada de técnicas e instrumentos
+## 5. Sección 8.4. Muestreo
 
-### 5.1. Técnicas e instrumentos
+Reemplazar el primer párrafo de muestreo por el siguiente:
 
-La técnica principal de recolección de datos será el análisis estructurado de video, complementado por el registro técnico del procesamiento computacional y la evaluación observacional experta. En coherencia con la matriz de operacionalización, los instrumentos se han organizado para que cada uno mida dimensiones e indicadores concretos del estudio, evitando presentar como instrumentos documentos que correspondan exclusivamente a procedimientos posteriores de análisis.
+El muestreo será no probabilístico e intencional. Esta estrategia se elige porque la selección de cada video dependerá del cumplimiento de condiciones específicas de calidad, visibilidad corporal, vista anterior dentro del plano frontal, ausencia de carga externa, ejecución sin soportes elevados debajo de los talones, apoyo plantar observable y posibilidad de estimación estable de pose. La verificación de las condiciones relacionadas con el apoyo de los talones será realizada manualmente por el investigador mediante el protocolo de captura y el Instrumento 1, y no constituirá una función automática del sistema. En este estudio, la prioridad no será la representatividad estadística poblacional en sentido estricto, sino la disponibilidad de registros válidos para diseñar, probar y evaluar el sistema propuesto.
 
-El primer instrumento será una ficha maestra de registro técnico, factibilidad analítica y disponibilidad de puntos anatómicos clave. Esta ficha integrará, en una sola hoja de trabajo, la identificación del video, fecha de registro, fuente, condiciones de captura, resolución, iluminación, fondo visual, visibilidad corporal, presencia de oclusiones, validez del registro para procesamiento y disponibilidad observable de los puntos anatómicos clave relevantes. Su función metodológica será documentar la base de videos y sustentar la medición de la dimensión estimación de pose 2D desde la calidad de la entrada.
+El segundo párrafo se mantiene como aparece en el documento:
 
-La ficha incorporará una leyenda operativa con la codificación de disponibilidad de puntos anatómicos clave, escalas cerradas para iluminación, fondo visual, visibilidad corporal y oclusiones, así como un criterio explícito de aceptación del video. Además, permitirá verificar manualmente el cumplimiento de la condición de apoyo establecida en el protocolo. Para que un registro sea aceptado, la sentadilla deberá ejecutarse sobre una superficie plana, sin discos, cuñas u otros soportes externos bajo los talones, y deberá observarse el mantenimiento aparente del contacto de ambos talones con el suelo. Cuando se identifique una pérdida evidente y sostenida de dicho contacto o la presencia de soportes externos, se solicitará repetir la grabación; si ello no fuera posible, el registro no será incorporado a la muestra analítica principal. Esta verificación será realizada por el investigador y no constituirá una funcionalidad automática del sistema.
+La literatura metodológica del campo muestra que la calidad del protocolo de captura incide directamente sobre la validez del análisis del movimiento sin marcadores. Por ello, la elección de un muestreo intencional es coherente con antecedentes como Lopes et al. [39], Kim et al. [32], Ohmura et al. [36] y Needham et al. [45].
 
-El segundo instrumento será una ficha de procesamiento computacional, variables biomecánicas y criterios interpretables. Esta ficha registrará, para cada video aceptado, el estado del procesamiento, la cantidad total de fotogramas, los fotogramas válidos, el porcentaje de fotogramas procesados correctamente, el número de puntos anatómicos clave detectados, los valores de las variables biomecánicas observables y la salida interpretativa emitida por el sistema. De esta forma, permitirá medir operativamente las dimensiones de estimación de pose 2D, extracción y cálculo de variables biomecánicas observables, aplicación de criterios biomecánicos interpretables, y procesamiento y generación de resultados.
+## 6. Sección 8.5. Técnicas e instrumentos
 
-La salida del sistema evaluará de manera independiente la inclinación lateral del tronco, el desplazamiento lateral de pelvis, el valgo dinámico visible y la asimetría bilateral general. En consecuencia, un mismo video podrá presentar simultáneamente más de una compensación observable. Cuando la evidencia disponible resulte insuficiente o se encuentre dentro del margen de decisión definido para un criterio, se dejará constancia de que no fue posible establecer una clasificación definitiva para ese patrón, sin extender esta incertidumbre necesariamente a los demás patrones analizados.
+La siguiente redacción corresponde a la sección completa y está preparada para copiarse y pegarse.
 
-El tercer instrumento será una ficha comparativa de evaluación experta y sistema. En ella se registrará, por cada video, la clasificación emitida por los evaluadores expertos y por el sistema computacional respecto de la inclinación lateral del tronco, el desplazamiento lateral de pelvis, el valgo dinámico visible y la asimetría bilateral general. Cada patrón será valorado de manera independiente para conservar la posibilidad de registrar múltiples compensaciones en una misma ejecución.
+### 6.1. Técnica principal
 
-La referencia experta se construirá inicialmente con dos evaluadores con experiencia en análisis del movimiento. Cada evaluador revisará los videos de manera independiente mediante la ficha comparativa. Cuando ambos coincidan, su clasificación conformará la referencia final. En caso de discrepancia, se realizará una revisión de consenso y se dejará constancia de la decisión adoptada. Si se incorpora un tercer evaluador, la referencia final se determinará mediante mayoría absoluta; una discrepancia total requerirá consenso guiado y registro de su justificación. Esta ficha medirá directamente las dimensiones de detección de compensaciones posturales y detección de asimetrías cinemáticas, y servirá de base para evaluar el desempeño técnico del sistema.
+La técnica principal de recolección de datos será el análisis estructurado de video, complementado por registro técnico del procesamiento computacional y evaluación observacional experta. En coherencia con la matriz de operacionalización, los instrumentos se han reorganizado para que cada uno mida dimensiones e indicadores concretos del estudio, evitando presentar anexos como referencias conceptuales aisladas.
 
-Los instrumentos serán sometidos a validación por dos o tres expertos vinculados con visión por computadora, ingeniería aplicada o análisis del movimiento, utilizando la ficha institucional de validación por juicio de expertos proporcionada por la universidad. Esta validación revisará la claridad, pertinencia, coherencia con las dimensiones e indicadores y suficiencia de las cabeceras propuestas. Su función no será registrar videos ni clasificaciones del movimiento, sino asegurar previamente la calidad metodológica de las fichas que serán aplicadas en el estudio.
+### 6.2. Instrumento 1
 
-Como parte del análisis de datos, el investigador construirá una base consolidada interna derivada de la información registrada en el Instrumento 3. Esta base se utilizará exclusivamente para comparar la referencia experta final con la salida del sistema y mantener trazabilidad de coincidencias, discrepancias y observaciones analíticas, sin considerarse un instrumento adicional de recolección de datos. Para el análisis del desempeño, cada patrón evaluado dentro de cada video constituirá un registro independiente.
+El primer instrumento será una ficha maestra de registro técnico, factibilidad analítica y disponibilidad de puntos anatómicos clave. Esta ficha integrará, en una sola hoja de trabajo, la identificación del video, fecha de registro, fuente, condiciones de captura, resolución, iluminación, visibilidad corporal, presencia de oclusiones, cumplimiento de la vista anterior dentro del plano frontal, validez del registro para procesamiento y disponibilidad observable de los puntos anatómicos clave relevantes. También permitirá registrar manualmente las condiciones de ejecución que puedan comprometer la comparabilidad del análisis, como el uso de discos, cuñas u otros soportes debajo de los talones, la elevación evidente o sostenida de estos y la pérdida de visibilidad de los segmentos corporales requeridos.
 
-Desde el punto de vista procedimental, el Instrumento 1 operará durante la selección y aceptación manual de videos; el Instrumento 2, durante la ejecución y registro de las salidas del sistema; y el Instrumento 3, durante la evaluación comparativa entre expertos y software. La ficha institucional de validación por juicio de expertos operará antes de la aplicación definitiva como mecanismo de aseguramiento metodológico externo. Posteriormente, el investigador integrará la información resultante en la base consolidada interna para el cálculo de las métricas de desempeño. Esta organización vincula directamente los instrumentos con las dimensiones del estudio.
+Para que un registro sea aceptado, la sentadilla deberá ejecutarse sobre una superficie plana, sin soportes externos debajo de los talones y procurando mantener el contacto de ambos talones con el suelo. Cuando el investigador identifique la presencia de soportes externos o una elevación evidente y sostenida de los talones, se solicitará repetir la grabación; si ello no fuera posible, el registro no será incorporado a la muestra analítica principal. De igual manera, los videos capturados fuera del plano frontal, que presenten baja calidad visual o que incumplan otras condiciones críticas del protocolo serán considerados no aptos para el análisis. Estas verificaciones serán realizadas mediante el protocolo de captura y el Instrumento 1, y no constituirán funcionalidades automáticas del sistema. De esta manera, se busca reducir la ambigüedad en la selección de casos y fortalecer la trazabilidad metodológica del proceso de inclusión y exclusión.
 
-## 6. Campos adicionales para el Instrumento 1
+### 6.3. Instrumento 2
 
-Los siguientes campos permiten controlar manualmente la condición de apoyo sin atribuir esta función al sistema:
+El segundo instrumento será una ficha de procesamiento computacional, variables biomecánicas y criterios interpretables. Esta ficha registrará, para cada video aceptado, el estado del procesamiento, cantidad de fotogramas, fotogramas válidos, porcentaje de fotogramas procesados correctamente, número de puntos anatómicos clave detectados, valores de las variables biomecánicas observables y salidas interpretativas emitidas por el sistema. Cada patrón será evaluado mediante un criterio independiente, por lo que un mismo video podrá presentar ninguna, una o varias compensaciones o asimetrías de manera simultánea. Cuando la evidencia obtenida sea insuficiente o se encuentre dentro de un margen de decisión ambiguo, se registrará que no fue posible establecer una clasificación definitiva para el patrón correspondiente. De esta forma, el instrumento permitirá conservar la relación entre el valor calculado, el criterio aplicado y el resultado interpretativo obtenido.
 
-| Campo | Opciones de registro | Regla de uso |
+### 6.4. Instrumento 3
+
+El tercer instrumento será una ficha comparativa de evaluación experta y sistema. En ella se registrará, por cada video, la clasificación emitida por dos evaluadores expertos y por el sistema computacional respecto de inclinación lateral del tronco, desplazamiento lateral de pelvis, valgo dinámico visible y asimetría bilateral observable. Estos patrones serán valorados de manera independiente, de modo que la identificación de uno no excluirá la presencia simultánea de otros. Por ejemplo, un mismo video podrá presentar desplazamiento lateral de pelvis, valgo dinámico visible y asimetría bilateral. Si durante el desarrollo del estudio se incorpora un tercer evaluador, la misma estructura permitirá integrar su valoración para fortalecer la referencia final.
+
+### 6.5. Validación de los instrumentos
+
+De manera complementaria, los instrumentos serán sometidos a validación por dos o tres expertos vinculados con visión por computadora, ingeniería aplicada o análisis del movimiento, utilizando la ficha institucional de validación por juicio de expertos proporcionada por la universidad. Esta validación revisará claridad, pertinencia, coherencia con dimensiones e indicadores y suficiencia de las cabeceras planteadas. El producto esperado será la aprobación formal de los instrumentos antes de su uso definitivo, con observaciones y firma de los expertos validadores. Su función no será registrar videos ni clasificaciones del movimiento, sino asegurar previamente la calidad metodológica de las fichas que serán aplicadas en el estudio.
+
+### 6.6. Base consolidada para el análisis
+
+Como parte del análisis de datos, el investigador construirá una base consolidada interna derivada de la información registrada en el Instrumento 3. Esta base se utilizará exclusivamente para comparar la referencia experta final con la salida del sistema, dejando trazabilidad de coincidencias, discrepancias y observaciones analíticas, sin considerarse un instrumento adicional de recolección de datos. Debido a que un mismo video puede presentar más de un patrón, cada patrón evaluado dentro de cada video constituirá un registro independiente para el análisis. Esta organización permitirá calcular métricas de desempeño específicas para tronco, pelvis, valgo y asimetría bilateral, evitando que el acierto en una categoría compense una clasificación incorrecta en otra.
+
+### 6.7. Construcción de la referencia experta
+
+La referencia experta se construirá inicialmente con dos evaluadores con perfil de entrenador con experiencia en análisis del movimiento. Cada uno revisará de manera independiente los videos mediante la ficha comparativa y, cuando corresponda, se establecerá una referencia final por coincidencia directa, consenso o criterio de mayoría si se incorpora un tercer evaluador. Este procedimiento es consistente con Falk et al. [10], Gomes et al. [11], Ressman et al. [12], Whatman et al. [44] y Nutarelli et al. [13], quienes muestran que la observación humana mejora cuando se apoya en criterios definidos y revisión audiovisual estructurada.
+
+### 6.8. Uso procedimental
+
+Desde el punto de vista procedimental, el Instrumento 1 operará durante la selección y aceptación de videos; el Instrumento 2 durante la ejecución y registro del sistema; y el Instrumento 3 durante la evaluación comparativa entre expertos y software. La ficha institucional de validación por juicio de expertos operará antes de la aplicación definitiva, como mecanismo de aseguramiento metodológico externo. Posteriormente, el investigador integrará la información resultante en una base consolidada interna para la fase de análisis y cálculo de métricas. Esta organización vincula de manera directa los instrumentos con las dimensiones del estudio y responde a la necesidad de que los anexos metodológicos funcionen realmente como herramientas de medición.
+
+## 7. Campos que deben añadirse al Instrumento 1
+
+Los siguientes campos corresponden a observaciones manuales del investigador. No serán calculados por MediaPipe Pose ni por el sistema de criterios biomecánicos.
+
+| Campo | Opciones de registro | Criterio de decisión |
 |---|---|---|
-| Superficie de ejecución | Plana / No plana / No verificable | Solo la opción "Plana" permite aceptar el registro. |
-| Soporte externo bajo los talones | No / Sí / No verificable | La presencia de soporte o la imposibilidad de verificarlo requiere repetir la captura; si no es posible, el video no ingresa al análisis principal. |
-| Contacto aparente de ambos talones con el suelo | Continuo / Pérdida evidente / No verificable | La pérdida evidente o la imposibilidad de verificar el contacto requiere repetir la captura; si no es posible, el video no ingresa al análisis principal. |
-| Cumplimiento de la condición de apoyo | Sí / No | Resume la decisión manual de acuerdo con los tres campos anteriores. |
-| Observación sobre el apoyo plantar | Texto breve | Registra incidencias relevantes y la razón de repetición o no incorporación. |
+| Superficie de ejecución | Plana / No plana / No verificable | La ejecución debe realizarse sobre una superficie plana. En caso contrario, se solicita repetir la captura. |
+| Soporte externo debajo de los talones | No / Sí / No verificable | Si existe un soporte o no puede verificarse la condición, se solicita repetir la captura. |
+| Contacto aparente de ambos talones con el suelo | Continuo / Elevación breve / Elevación evidente o sostenida / No verificable | La elevación breve motiva una repetición preventiva. La elevación evidente o sostenida y la imposibilidad de verificación impiden incorporar el registro si no puede repetirse. |
+| Cumplimiento de la condición de apoyo | Sí / No | Resume la decisión manual adoptada a partir de los campos anteriores. |
+| Observación sobre el apoyo plantar | Texto breve | Permite justificar la repetición o la no incorporación del registro. |
 
-Estos campos deben ser completados por el investigador durante la captura o durante la revisión técnica inicial. No serán calculados por MediaPipe Pose ni por el módulo de criterios biomecánicos.
+## 8. Delimitación del control automático de calidad
 
-## 7. Delimitación de la validación automática de calidad
-
-La validación automática de calidad podrá considerar únicamente condiciones que el sistema pueda evaluar con la información disponible, tales como:
+La validación automática de calidad del sistema podrá considerar:
 
 - correspondencia general con la vista frontal requerida;
 - visibilidad suficiente del cuerpo;
@@ -98,20 +119,18 @@ La validación automática de calidad podrá considerar únicamente condiciones 
 
 No formarán parte de la validación automática:
 
-- la detección de discos, cuñas u otros soportes bajo los talones;
+- la detección de discos, cuñas u otros soportes debajo de los talones;
 - la determinación física del contacto entre el talón y el suelo;
 - la clasificación de la elevación del talón como compensación;
 - la inferencia de restricciones de movilidad del tobillo.
 
-## 8. Limitación metodológica asociada
+## 9. Limitación metodológica asociada
 
-El sistema no está diseñado para determinar automáticamente el contacto efectivo entre el talón y el suelo ni para identificar soportes colocados bajo los pies. Estas condiciones serán controladas mediante el protocolo de grabación y registradas manualmente en la ficha técnica. En consecuencia, los resultados describirán las compensaciones observables durante la condición estandarizada en la que se ejecutó la sentadilla y no permitirán inferir restricciones específicas de movilidad del tobillo.
+El sistema no está diseñado para determinar automáticamente el contacto efectivo entre el talón y el suelo ni para identificar soportes colocados debajo de los pies. Estas condiciones serán controladas mediante el protocolo de grabación y registradas manualmente en la ficha técnica. En consecuencia, los resultados describirán las compensaciones observables durante la condición estandarizada en la que se ejecutó la sentadilla y no permitirán inferir restricciones específicas de movilidad del tobillo.
 
-## 9. Registro de futuras modificaciones
+## 10. Registro de futuras modificaciones
 
-Toda nueva decisión que aparezca durante el desarrollo debe registrarse en esta sección antes de modificar la tesis o los instrumentos.
-
-| Fecha | Sección afectada | Decisión o hallazgo | Impacto en el sistema | Impacto en instrumentos | Estado de aprobación |
+| Fecha | Sección afectada | Decisión o hallazgo | Cambio de redacción requerido | Impacto técnico | Estado |
 |---|---|---|---|---|---|
-| 2026-07-24 | Población, muestreo, técnicas e instrumentos | La condición de apoyo se controlará mediante el protocolo y el Instrumento 1. No se implementará detección automática de soportes ni del contacto talón-suelo. | No se agrega una regla automática de descarte por elevación del talón. | Se proponen campos manuales de superficie, soporte externo, contacto aparente y cumplimiento de la condición de apoyo. | Pendiente de traslado al documento formal |
+| 2026-07-24 | Población, muestreo e Instrumento 1 | La condición de apoyo será verificada manualmente. No se implementará detección automática de soportes ni del contacto talón-suelo. | Incorporado en este archivo | No se añade una regla computacional de descarte por elevación del talón | Pendiente de traslado manual al Word |
 
