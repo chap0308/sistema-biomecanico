@@ -72,7 +72,7 @@ Para que un registro sea aceptado, la sentadilla deberá ejecutarse sobre una su
 
 ### 6.3. Instrumento 2
 
-El segundo instrumento será una ficha de procesamiento computacional, variables biomecánicas y criterios interpretables. Esta ficha registrará, para cada video aceptado, el estado del procesamiento, cantidad de fotogramas, fotogramas válidos, porcentaje de fotogramas procesados correctamente, número de puntos anatómicos clave detectados, valores de las variables biomecánicas observables y salidas interpretativas emitidas por el sistema. Cada patrón será evaluado mediante un criterio independiente, por lo que un mismo video podrá presentar ninguna, una o varias compensaciones o asimetrías de manera simultánea. Cuando la evidencia obtenida sea insuficiente o se encuentre dentro de un margen de decisión ambiguo, se registrará que no fue posible establecer una clasificación definitiva para el patrón correspondiente. De esta forma, el instrumento permitirá conservar la relación entre el valor calculado, el criterio aplicado y el resultado interpretativo obtenido.
+El segundo instrumento será una ficha de procesamiento computacional, variables biomecánicas y criterios interpretables. Esta ficha registrará, para cada video aceptado, el estado del procesamiento, cantidad de fotogramas, fotogramas válidos, porcentaje de fotogramas procesados correctamente, promedio de puntos anatómicos clave detectados por fotograma, valores de las variables biomecánicas observables y salidas interpretativas emitidas por el sistema. Para este indicador se considerarán 13 puntos seleccionados: nariz y referencias bilaterales de hombros, caderas, rodillas, tobillos, talones y puntas de los pies. Un punto será contabilizado como detectado cuando alcance el umbral de visibilidad establecido por el sistema; el resultado resumido corresponderá al promedio obtenido en todos los fotogramas procesados y se expresará como puntos detectados de un total de 13. Cada patrón será evaluado mediante un criterio independiente, por lo que un mismo video podrá presentar ninguna, una o varias compensaciones o asimetrías de manera simultánea. Cuando la evidencia obtenida sea insuficiente o se encuentre dentro de un margen de decisión ambiguo, se registrará que no fue posible establecer una clasificación definitiva para el patrón correspondiente. De esta forma, el instrumento permitirá conservar la relación entre el valor calculado, el criterio aplicado y el resultado interpretativo obtenido.
 
 ### 6.4. Instrumento 3
 
@@ -128,9 +128,72 @@ No formarán parte de la validación automática:
 
 El sistema no está diseñado para determinar automáticamente el contacto efectivo entre el talón y el suelo ni para identificar soportes colocados debajo de los pies. Estas condiciones serán controladas mediante el protocolo de grabación y registradas manualmente en la ficha técnica. En consecuencia, los resultados describirán las compensaciones observables durante la condición estandarizada en la que se ejecutó la sentadilla y no permitirán inferir restricciones específicas de movilidad del tobillo.
 
-## 10. Registro de futuras modificaciones
+## 10. Ajuste del indicador de puntos anatómicos clave detectados
+
+### 10.1. Razón del ajuste
+
+La implementación ya define este indicador, pero la redacción vigente de la matriz y del Instrumento 2 puede interpretarse de varias maneras: cantidad detectada en un fotograma, cantidad total de puntos diferentes o promedio del video. Para mantener coherencia con la salida real del sistema, se utilizará el promedio de puntos anatómicos clave detectados por fotograma.
+
+El sistema analiza 13 puntos seleccionados para la sentadilla: nariz y referencias bilaterales de hombros, caderas, rodillas, tobillos, talones y puntas de los pies. En cada fotograma, un punto se considera detectado cuando su visibilidad es igual o superior a 0,5. El promedio se calcula sobre todos los fotogramas procesados.
+
+Este indicador describe la cobertura de la estimación de pose, pero no determina por sí solo que un fotograma sea válido. La regla de validez requiere ambos hombros, caderas, rodillas y tobillos, además de al menos una referencia distal por cada pie, que puede ser el talón o la punta del pie.
+
+### 10.2. Redacción para el marco teórico
+
+Añadir esta definición dentro de la dimensión **Estimación de pose 2D**, en el apartado correspondiente al indicador:
+
+**Promedio de puntos anatómicos clave detectados por fotograma.** Este indicador expresa la cobertura media de las referencias corporales seleccionadas durante el procesamiento del video. Para cada fotograma se contabilizan los puntos cuya visibilidad alcanza el umbral mínimo establecido y, posteriormente, se obtiene la media aritmética de todos los fotogramas procesados. En el sistema propuesto se consideran 13 puntos: nariz y referencias bilaterales de hombros, caderas, rodillas, tobillos, talones y puntas de los pies. Su valor se expresa como cantidad promedio de puntos detectados por fotograma, respecto de un máximo de 13. Este indicador permite describir la estabilidad general de la estimación de pose, aunque la validez analítica del fotograma se determina adicionalmente mediante la disponibilidad de las referencias críticas requeridas para los cálculos biomecánicos.
+
+La fórmula operativa será:
+
+`Promedio de puntos detectados = (suma de puntos detectados en todos los fotogramas procesados) / (número de fotogramas procesados)`
+
+De forma equivalente:
+
+`P_prom = (1 / N) × Σ P_f`
+
+donde `N` representa el número de fotogramas procesados y `P_f` la cantidad de los 13 puntos seleccionados cuya visibilidad es igual o superior a 0,5 en el fotograma `f`.
+
+La explicación conceptual de la estimación de pose y del atributo de visibilidad debe apoyarse en las referencias bibliográficas correspondientes del marco teórico. La selección de los 13 puntos y el umbral operativo de 0,5 deben presentarse como decisiones metodológicas y de configuración del sistema propuesto, no como valores clínicos universales.
+
+### 10.3. Ajuste en la matriz de operacionalización
+
+En la dimensión **Estimación de pose 2D**, reemplazar el indicador genérico por:
+
+| Elemento | Redacción |
+|---|---|
+| Indicador | Promedio de puntos anatómicos clave detectados por fotograma |
+| Definición operacional | Media aritmética de la cantidad de puntos seleccionados con visibilidad igual o superior a 0,5 en todos los fotogramas procesados |
+| Unidad de medida | Puntos por fotograma, de un máximo de 13 |
+| Instrumento | Instrumento 2. Ficha de procesamiento computacional, variables biomecánicas y criterios interpretables |
+
+El Instrumento 1 mantiene su función de registrar la disponibilidad observable o detectable de las referencias anatómicas mediante su codificación cualitativa. El valor numérico promedio corresponde al Instrumento 2.
+
+### 10.4. Ajuste en el Instrumento 2
+
+Cambiar la cabecera:
+
+`N.° de puntos anatómicos clave detectados`
+
+por:
+
+`Promedio de puntos anatómicos clave detectados por fotograma`
+
+Incorporar debajo de la ficha o en su leyenda:
+
+> Media aritmética de los puntos anatómicos seleccionados cuya visibilidad es igual o superior a 0,5 en cada fotograma procesado. Se consideran 13 puntos y el resultado se expresa de 0 a 13 puntos por fotograma.
+
+### 10.5. Precisión para la sección 8.6. Análisis de datos
+
+En el párrafo dedicado al resumen del comportamiento técnico del sistema, utilizar la siguiente redacción:
+
+> En una segunda etapa se resumirá el comportamiento técnico del sistema mediante indicadores como porcentaje de fotogramas válidos, porcentaje de fotogramas procesados correctamente, promedio de puntos anatómicos clave detectados por fotograma y distribución de las salidas interpretativas emitidas por el prototipo. El promedio de puntos detectados se calculará sobre los 13 puntos seleccionados para el análisis y sobre la totalidad de los fotogramas procesados.
+
+No es necesario repetir en 8.6 la lista completa de los 13 puntos ni la regla detallada de validez, porque ambas estarán definidas en el marco teórico, la matriz y el Instrumento 2.
+
+## 11. Registro de futuras modificaciones
 
 | Fecha | Sección afectada | Decisión o hallazgo | Cambio de redacción requerido | Impacto técnico | Estado |
 |---|---|---|---|---|---|
 | 2026-07-24 | Población, muestreo e Instrumento 1 | La condición de apoyo será verificada manualmente. No se implementará detección automática de soportes ni del contacto talón-suelo. | Incorporado en este archivo | No se añade una regla computacional de descarte por elevación del talón | Pendiente de traslado manual al Word |
-
+| 2026-07-24 | Marco teórico, matriz de operacionalización, 8.5, 8.6 e Instrumento 2 | El indicador numérico se define como promedio de 13 puntos anatómicos clave detectados por fotograma con visibilidad mínima de 0,5. | Incorporado en la sección 10 de este archivo | No cambia el cálculo actual; formaliza su significado | Pendiente de traslado al Word, Excel e instrumento |
