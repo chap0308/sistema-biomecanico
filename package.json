@@ -1,4 +1,15 @@
 {
+  "name": "sistema-biomecanico",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "web:dev": "npm run dev --workspace @sistema-biomecanico/web",
+    "web:build": "npm run build --workspace @sistema-biomecanico/web",
+    "web:lint": "npm run lint --workspace @sistema-biomecanico/web",
+    "web:test": "npm run test --workspace @sistema-biomecanico/web"
+  },
   "devDependencies": {
     "supabase": "^2.84.7"
   }

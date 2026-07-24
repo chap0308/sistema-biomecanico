@@ -8,6 +8,8 @@ La interfaz se construirá sobre la API FastAPI existente y utilizará los contr
 
 ## 2. Decisión resumida
 
+**Estado de implementación:** la fase F0 se encuentra completada. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md`.
+
 | Decisión | Elección |
 |---|---|
 | Framework web | Next.js con App Router y TypeScript |
@@ -601,4 +603,3 @@ La primera demostración útil debe permitir que el investigador inicie sesión,
 - [Playwright: autenticación](https://playwright.dev/docs/auth)
 - [Vitest](https://vitest.dev/guide/)
 - [react-dropzone](https://react-dropzone.js.org/)
-
