@@ -34,7 +34,7 @@ export default defineConfig({
       ? [
           {
             name: "auth-setup",
-            testMatch: /auth\.setup\.ts/,
+            testMatch: /(^|[\\/])auth\.setup\.ts$/,
           },
           {
             name: "chromium-authenticated",
@@ -43,6 +43,7 @@ export default defineConfig({
               /auth\.spec\.ts/,
               /case-intake\.spec\.ts/,
               /case-results\.spec\.ts/,
+              /case-comparison\.spec\.ts/,
             ],
             use: {
               ...devices["Desktop Chrome"],
@@ -55,7 +56,7 @@ export default defineConfig({
       ? [
           {
             name: "expert-auth-setup",
-            testMatch: /expert-auth\.setup\.ts/,
+            testMatch: /(^|[\\/])expert-auth\.setup\.ts$/,
           },
           {
             name: "chromium-expert",

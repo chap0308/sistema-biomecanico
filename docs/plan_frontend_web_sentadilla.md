@@ -8,7 +8,13 @@ La interfaz se construirá sobre la API FastAPI existente y utilizará los contr
 
 ## 2. Decisión resumida
 
-**Estado de implementación:** las fases F0, F1, F2 y F3 se encuentran completadas. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md`, `evidencia_frontend_fase_f1.md`, `evidencia_frontend_fase_f2.md` y `evidencia_frontend_fase_f3.md`. La migración, las cuentas locales, la autenticación, la carga real, la persistencia, el historial paginado y la visualización trazable de resultados fueron comprobados.
+**Estado de implementación:** las fases F0, F1, F2, F3, F4 y F5 se
+encuentran completadas. La evidencia técnica de las fases recientes se
+documenta en `evidencia_frontend_fase_f4_evaluacion_experta.md` y
+`evidencia_frontend_fase_f5_comparacion_exportacion.md`. La autenticación, la
+carga, el procesamiento, la persistencia, la evaluación ciega, la
+consolidación, las métricas y las exportaciones fueron comprobadas con
+servicios locales reales.
 
 | Decisión | Elección |
 |---|---|
@@ -543,11 +549,20 @@ feat(web): add blinded expert evaluation flow
 
 ### Fase F5. Comparación y exportación
 
-- consolidar la referencia final;
-- mostrar coincidencias y discrepancias;
-- calcular y presentar métricas;
-- exportar instrumentos en Excel;
-- añadir reporte PDF después de validar Excel.
+- consolidar automáticamente coincidencia directa y mayoría absoluta;
+  **implementado**;
+- registrar consenso guiado cuando existe discrepancia; **implementado**;
+- mostrar coincidencias y discrepancias por patrón; **implementado**;
+- calcular matriz binaria, exactitud, precisión, sensibilidad, especificidad,
+  F1-score, acuerdo exacto y Kappa; **implementado**;
+- excluir y contabilizar pares no concluyentes; **implementado**;
+- exportar Instrumentos 1, 2 y 3, matriz de análisis y métricas en Excel;
+  **implementado**;
+- generar reporte comparativo PDF; **implementado**;
+- verificar comparación y descargas con Playwright; **implementado**.
+
+La evidencia se encuentra en
+`docs/evidencia_frontend_fase_f5_comparacion_exportacion.md`.
 
 Commit sugerido:
 
@@ -561,7 +576,19 @@ feat(web): add expert comparison and instrument exports
 - completar Playwright;
 - revisar accesibilidad y responsive;
 - validar trazabilidad con los objetivos específicos;
-- preparar evidencias y diagramas para el asesor.
+- preparar evidencias y diagramas para el asesor;
+- consolidar en Mermaid los flujos de investigador, experto y video no apto;
+- generar archivos `.drawio` editables con la arquitectura conjunta de
+  Next.js, FastAPI, Supabase y el pipeline de visión por computadora;
+- generar un diagrama de secuencia para carga, procesamiento y persistencia;
+- generar un diagrama de secuencia para evaluación ciega, consenso y métricas;
+- relacionar cada prueba Playwright con su caso de uso y evidencia visual.
+
+El inventario inicial de flujos y diagramas se encuentra en
+`docs/flujos_sistema_roles_y_evidencias_fase6.md`. No se requiere instalar un
+MCP específico para diagrams.net: el editor importa Mermaid y archivos
+`.drawio` o XML. Durante F6 se conservarán ambas versiones para facilitar la
+edición manual y la trazabilidad en Git.
 
 Commit sugerido:
 

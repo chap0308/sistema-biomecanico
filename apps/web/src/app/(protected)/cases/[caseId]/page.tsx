@@ -102,17 +102,25 @@ export default async function CaseDetailPage({
             <Badge variant="outline">Umbrales provisionales</Badge>
           )}
           {report.status === "analisis_completo" ? (
-            <Link
-              href={`/cases/${report.case_id}/assignments`}
-              className={buttonVariants({
-                size: "sm",
-                variant: "outline",
-                className: "ml-auto",
-              })}
-            >
-              <UserRoundPlusIcon aria-hidden="true" />
-              Asignar evaluadores
-            </Link>
+            <div className="ml-auto flex flex-wrap gap-2">
+              <Link
+                href={`/cases/${report.case_id}/assignments`}
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "outline",
+                })}
+              >
+                <UserRoundPlusIcon aria-hidden="true" />
+                Asignar evaluadores
+              </Link>
+              <Link
+                href={`/cases/${report.case_id}/comparison`}
+                className={buttonVariants({ size: "sm" })}
+              >
+                <ActivityIcon aria-hidden="true" />
+                Comparar resultados
+              </Link>
+            </div>
           ) : null}
         </div>
         <div className="mt-4 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">

@@ -7,6 +7,7 @@ import os
 from datetime import datetime
 from math import ceil
 from pathlib import Path
+from typing import Any, Literal
 
 from fastapi import (
     APIRouter,
@@ -33,13 +34,22 @@ from api.schemas.squat_expert import (
     SquatExpertEvaluationRequest,
     SquatExpertProfileResponse,
 )
+from api.schemas.squat_comparison import SquatManualReferenceRequest
 from app.config import get_settings
+from src.squat.comparison import (
+    CaseComparison,
+    DatasetPerformance,
+    PatternKey,
+    build_stored_case_comparison,
+    calculate_dataset_performance,
+)
 from src.squat.contracts import (
     SquatCaseRecordContract,
     SquatCaseReport,
     SquatManualProtocolReview,
 )
 from src.squat.models import SquatCaseRecord
+from src.squat.exports import build_case_excel, build_case_pdf
 from src.squat.service import run_squat_case_analysis
 from src.squat.persistence import (
     SquatPersistenceError,
@@ -89,6 +99,208 @@ class SquatCasePage(BaseModel):
     page_size: int = Field(ge=1)
     total: int = Field(ge=0)
     total_pages: int = Field(ge=0)
+
+
+@router.get(
+    "/squat/cases/{case_id}/comparison",
+    response_model=CaseComparison,
+    summary="Compare submitted expert judgments with the system",
+)
+async def get_squat_case_comparison(
+    case_id: str,
+    current_user: SquatUserDependency,
+) -> CaseComparison:
+    """Return the four pattern comparisons for the investigator."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    store = SupabaseSquatStore()
+    try:
+        payload = await run_in_threadpool(
+            store.get_case_comparison_data,
+            safe_case_id,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    if payload is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Squat case was not found.",
+        )
+    return build_stored_case_comparison(payload)
+
+
+@router.put(
+    "/squat/cases/{case_id}/comparison/references/{pattern_key}",
+    response_model=CaseComparison,
+    summary="Record guided expert consensus for one unresolved pattern",
+)
+async def save_squat_manual_reference(
+    case_id: str,
+    pattern_key: PatternKey,
+    payload: SquatManualReferenceRequest,
+    current_user: SquatUserDependency,
+) -> CaseComparison:
+    """Persist investigator consensus and return the refreshed comparison."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    store = SupabaseSquatStore()
+    try:
+        current_payload = await run_in_threadpool(
+            store.get_case_comparison_data,
+            safe_case_id,
+        )
+        if current_payload is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Squat case was not found.",
+            )
+        unconsolidated_payload = {
+            **current_payload,
+            "manual_references": [],
+        }
+        current_comparison = build_stored_case_comparison(
+            unconsolidated_payload
+        )
+        current_pattern = next(
+            row
+            for row in current_comparison.patterns
+            if row.pattern_key == pattern_key
+        )
+        if current_pattern.reference_status != "consenso_requerido":
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail=(
+                    "Guided consensus can only resolve a submitted expert "
+                    "disagreement."
+                ),
+            )
+        await run_in_threadpool(
+            store.save_manual_reference,
+            external_case_id=safe_case_id,
+            pattern_key=pattern_key,
+            classification=payload.classification,
+            observed_side=payload.observed_side,
+            observation=payload.observation,
+            resolved_by=current_user.user_id,
+        )
+        comparison_payload = await run_in_threadpool(
+            store.get_case_comparison_data,
+            safe_case_id,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    if comparison_payload is None:  # pragma: no cover - guarded above
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
+    return build_stored_case_comparison(comparison_payload)
+
+
+@router.get(
+    "/squat/comparison/metrics",
+    response_model=DatasetPerformance,
+    summary="Calculate accumulated expert-system performance metrics",
+)
+async def get_squat_dataset_metrics(
+    current_user: SquatUserDependency,
+) -> DatasetPerformance:
+    """Return pooled and per-pattern metrics over consolidated cases."""
+    _require_squat_role(current_user.role, "investigator")
+    try:
+        payloads = await run_in_threadpool(
+            SupabaseSquatStore().list_comparison_data
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    comparisons = [
+        build_stored_case_comparison(payload) for payload in payloads
+    ]
+    return calculate_dataset_performance(comparisons)
+
+
+@router.get(
+    "/squat/cases/{case_id}/exports/{filename}",
+    summary="Export research instruments or the readable case report",
+)
+async def export_squat_case(
+    case_id: str,
+    filename: Literal["instruments.xlsx", "report.pdf"],
+    current_user: SquatUserDependency,
+) -> Response:
+    """Generate investigator-only exports from canonical persisted data."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    store = SupabaseSquatStore()
+    try:
+        comparison_payload, case_record, case_report, dataset_payloads = (
+            await run_in_threadpool(
+                _load_export_payload,
+                store,
+                safe_case_id,
+            )
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    if comparison_payload is None or case_record is None or case_report is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="The completed squat case was not found.",
+        )
+    comparison = build_stored_case_comparison(comparison_payload)
+    if not comparison.ready_for_metrics:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=(
+                "Expert references must be consolidated before exporting "
+                "the comparative instruments."
+            ),
+        )
+    performance = calculate_dataset_performance(
+        [
+            build_stored_case_comparison(payload)
+            for payload in dataset_payloads
+        ]
+    )
+    if filename == "instruments.xlsx":
+        content = await run_in_threadpool(
+            build_case_excel,
+            case_record=case_record,
+            case_report=case_report,
+            comparison=comparison,
+            performance=performance,
+        )
+        media_type = (
+            "application/vnd.openxmlformats-officedocument."
+            "spreadsheetml.sheet"
+        )
+    else:
+        content = await run_in_threadpool(
+            build_case_pdf,
+            case_report=case_report,
+            comparison=comparison,
+            performance=performance,
+        )
+        media_type = "application/pdf"
+    return Response(
+        content=content,
+        media_type=media_type,
+        headers={
+            "Content-Disposition": (
+                f'attachment; filename="{safe_case_id}-{filename}"'
+            ),
+            "Content-Length": str(len(content)),
+        },
+    )
 
 
 @router.get(
@@ -613,6 +825,24 @@ def _require_squat_role(current_role: str, expected_role: str) -> None:
             status_code=status.HTTP_403_FORBIDDEN,
             detail=f"This operation requires the {expected_role} role.",
         )
+
+
+def _load_export_payload(
+    store: SupabaseSquatStore,
+    case_id: str,
+) -> tuple[
+    dict[str, Any] | None,
+    dict[str, Any] | None,
+    dict[str, Any] | None,
+    list[dict[str, Any]],
+]:
+    """Load all canonical inputs needed by one export request."""
+    return (
+        store.get_case_comparison_data(case_id),
+        store.get_case_record(case_id),
+        store.get_case_report(case_id),
+        store.list_comparison_data(),
+    )
 
 
 def _validate_video_upload(video: UploadFile) -> None:

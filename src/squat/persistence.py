@@ -514,6 +514,161 @@ class SupabaseSquatStore:
             range_header=range_header,
         )
 
+    def get_case_comparison_data(
+        self,
+        external_case_id: str,
+    ) -> dict[str, Any] | None:
+        """Load submitted expert judgments, manual references, and report."""
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "case_id,external_case_id",
+                "external_case_id": f"eq.{external_case_id}",
+                "limit": "1",
+            },
+        )
+        if not case_rows:
+            return None
+        case_id = case_rows[0]["case_id"]
+        run_rows = self._select(
+            "squat_analysis_runs",
+            params={
+                "select": "report",
+                "case_id": f"eq.{case_id}",
+                "status": "eq.completed",
+                "order": "created_at.desc",
+                "limit": "1",
+            },
+        )
+        assignments = self._select(
+            "squat_expert_assignments",
+            params={
+                "select": "assignment_id,evaluator_id,status",
+                "case_id": f"eq.{case_id}",
+                "order": "created_at.asc",
+            },
+        )
+        judgments: list[dict[str, Any]] = []
+        submitted = 0
+        for assignment in assignments:
+            if assignment["status"] != "submitted":
+                continue
+            evaluation_rows = self._select(
+                "squat_expert_evaluations",
+                params={
+                    "select": "evaluation_id",
+                    "assignment_id": f"eq.{assignment['assignment_id']}",
+                    "evaluator_id": f"eq.{assignment['evaluator_id']}",
+                    "status": "eq.submitted",
+                    "limit": "1",
+                },
+            )
+            if not evaluation_rows:
+                continue
+            submitted += 1
+            items = self._select(
+                "squat_expert_evaluation_items",
+                params={
+                    "select": (
+                        "pattern_key,classification,observed_side,"
+                        "confidence"
+                    ),
+                    "evaluation_id": (
+                        f"eq.{evaluation_rows[0]['evaluation_id']}"
+                    ),
+                    "order": "pattern_key.asc",
+                },
+            )
+            judgments.extend(
+                {
+                    **item,
+                    "evaluator_id": assignment["evaluator_id"],
+                }
+                for item in items
+            )
+        manual_references = self._select(
+            "squat_expert_references",
+            params={
+                "select": (
+                    "pattern_key,classification,observed_side,"
+                    "method,observation"
+                ),
+                "case_id": f"eq.{case_id}",
+                "order": "pattern_key.asc",
+            },
+        )
+        return {
+            "case_id": external_case_id,
+            "database_case_id": case_id,
+            "report": run_rows[0]["report"] if run_rows else None,
+            "assigned_evaluators": len(assignments),
+            "submitted_evaluations": submitted,
+            "judgments": judgments,
+            "manual_references": manual_references,
+        }
+
+    def list_comparison_data(self) -> list[dict[str, Any]]:
+        """Load comparison inputs for every completed case."""
+        cases = self._select(
+            "squat_cases",
+            params={
+                "select": "external_case_id",
+                "status": "eq.completed",
+                "order": "created_at.asc",
+            },
+        )
+        return [
+            payload
+            for row in cases
+            if (
+                payload := self.get_case_comparison_data(
+                    row["external_case_id"]
+                )
+            )
+            is not None
+        ]
+
+    def save_manual_reference(
+        self,
+        *,
+        external_case_id: str,
+        pattern_key: str,
+        classification: str,
+        observed_side: str | None,
+        observation: str,
+        resolved_by: str,
+    ) -> dict[str, Any]:
+        """Upsert a guided consensus recorded by the investigator."""
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "case_id",
+                "external_case_id": f"eq.{external_case_id}",
+                "limit": "1",
+            },
+        )
+        if not case_rows:
+            raise SquatPersistenceError("Squat case was not found.")
+        rows = self._upsert_many(
+            "squat_expert_references",
+            [
+                {
+                    "case_id": case_rows[0]["case_id"],
+                    "pattern_key": pattern_key,
+                    "classification": classification,
+                    "observed_side": observed_side,
+                    "method": "consenso_guiado",
+                    "observation": observation,
+                    "resolved_by": resolved_by,
+                }
+            ],
+            on_conflict="case_id,pattern_key",
+            ignore_duplicates=False,
+        )
+        if not rows:
+            raise SquatPersistenceError("Supabase returned no reference row.")
+        return rows[0]
+
     def _assignment_view(
         self,
         assignment: dict[str, Any],
