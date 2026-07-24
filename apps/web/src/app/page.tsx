@@ -5,8 +5,10 @@ import {
   ChevronRightIcon,
   ScanLineIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardAction,
@@ -135,10 +137,13 @@ export default function Home() {
               Next.js SSR · FastAPI · Supabase local · procesamiento Python
             </p>
           </div>
-          <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-primary">
-            Inicio de sesión en la siguiente fase
+          <Link
+            href="/login"
+            className={buttonVariants({ variant: "outline" })}
+          >
+            Ingresar al estudio
             <ChevronRightIcon aria-hidden="true" />
-          </div>
+          </Link>
         </div>
       </section>
     </main>

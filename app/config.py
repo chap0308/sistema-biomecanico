@@ -17,6 +17,8 @@ class Settings(BaseSettings):
     temp_dir: str = "tmp"
     request_timeout_seconds: int = 120
     cors_allowed_origins: str = (
+        "http://localhost:3000,"
+        "http://127.0.0.1:3000,"
         "http://localhost:4173,"
         "http://127.0.0.1:4173,"
         "http://localhost:5173,"
@@ -37,6 +39,7 @@ class Settings(BaseSettings):
     supabase_chat_bucket: str = "chat-media"
     supabase_posture_bucket: str = "Postura"
     supabase_posture_analysis_bucket: str = "Postura-analisis"
+    squat_auth_required: bool = False
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

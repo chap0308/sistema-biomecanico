@@ -11,6 +11,7 @@ from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import FileResponse
 from pydantic import ValidationError
 
+from api.auth import SquatUserDependency
 from src.squat.contracts import (
     SquatCaseRecordContract,
     SquatCaseReport,
@@ -48,6 +49,7 @@ _RULESET_PATH = Path(
     summary="Register and analyze one frontal bilateral-squat video",
 )
 async def analyze_squat_case(
+    current_user: SquatUserDependency,
     video: UploadFile = File(...),
     case_id: str = Form(...),
     participant_code: str | None = Form(default=None),
@@ -58,6 +60,11 @@ async def analyze_squat_case(
     manual_review_json: str = Form(default="{}"),
 ) -> SquatCaseReport:
     """Receive a video plus Instrument 1 data and return the aggregate report."""
+    if current_user.role != "investigator":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only the investigator can register squat cases.",
+        )
     _validate_video_upload(video)
     try:
         intended_findings = json.loads(intended_findings_json)
@@ -121,8 +128,16 @@ async def analyze_squat_case(
     response_model=SquatCaseReport,
     summary="Get the aggregate report for one analyzed case",
 )
-async def get_squat_case_report(case_id: str) -> SquatCaseReport:
+async def get_squat_case_report(
+    case_id: str,
+    current_user: SquatUserDependency,
+) -> SquatCaseReport:
     """Load a previously generated report without recomputing the analysis."""
+    if current_user.role != "investigator":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="System results are restricted to the investigator.",
+        )
     safe_case_id = _validated_case_id(case_id)
     report_path = _OUTPUT_ROOT / safe_case_id / "case_report.json"
     if not report_path.is_file():
@@ -146,8 +161,16 @@ async def get_squat_case_report(case_id: str) -> SquatCaseReport:
     response_model=SquatCaseRecordContract,
     summary="Get the Instrument 1 record for one case",
 )
-async def get_squat_case_record(case_id: str) -> SquatCaseRecordContract:
+async def get_squat_case_record(
+    case_id: str,
+    current_user: SquatUserDependency,
+) -> SquatCaseRecordContract:
     """Load manual and technical registration fields through a typed endpoint."""
+    if current_user.role != "investigator":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Technical case records are restricted to the investigator.",
+        )
     safe_case_id = _validated_case_id(case_id)
     record_path = _OUTPUT_ROOT / safe_case_id / "case_record.json"
     if not record_path.is_file():
@@ -171,8 +194,17 @@ async def get_squat_case_record(case_id: str) -> SquatCaseRecordContract:
     response_class=FileResponse,
     summary="Get one report artifact using its manifest filename",
 )
-async def get_squat_case_asset(case_id: str, filename: str) -> FileResponse:
+async def get_squat_case_asset(
+    case_id: str,
+    filename: str,
+    current_user: SquatUserDependency,
+) -> FileResponse:
     """Serve direct case artifacts without exposing arbitrary filesystem paths."""
+    if current_user.role != "investigator":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="System artifacts are restricted to the investigator.",
+        )
     safe_case_id = _validated_case_id(case_id)
     if Path(filename).name != filename:
         raise HTTPException(

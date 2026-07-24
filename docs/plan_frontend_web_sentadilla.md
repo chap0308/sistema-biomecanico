@@ -8,7 +8,7 @@ La interfaz se construirá sobre la API FastAPI existente y utilizará los contr
 
 ## 2. Decisión resumida
 
-**Estado de implementación:** la fase F0 se encuentra completada. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md`.
+**Estado de implementación:** las fases F0 y F1 se encuentran completadas en código. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md` y `evidencia_frontend_fase_f1.md`. La aplicación de la migración y la prueba autenticada de extremo a extremo requieren que Supabase local se encuentre disponible.
 
 | Decisión | Elección |
 |---|---|
@@ -18,7 +18,7 @@ La interfaz se construirá sobre la API FastAPI existente y utilizará los contr
 | Gestor de paquetes | npm, conservando el `package-lock.json` existente |
 | Interfaz | Tailwind CSS y componentes de shadcn/ui |
 | Carga de videos | `react-dropzone` sobre un control de archivo accesible |
-| Estado remoto | TanStack Query |
+| Estado remoto | Server Components y URL; TanStack Query solo para sondeo de procesamiento |
 | Validación de formularios | Zod y React Hook Form |
 | Gráficas | Componente Chart de shadcn/ui, basado en Recharts |
 | Base de datos local | PostgreSQL mediante Supabase CLI y Docker |
@@ -300,7 +300,7 @@ Antes de habilitar uso multiusuario se aplicará una mejora local:
 1. la API crea el caso y devuelve un identificador;
 2. el análisis se ejecuta como tarea de fondo local;
 3. el estado se persiste en PostgreSQL;
-4. el frontend consulta el estado periódicamente con TanStack Query;
+4. el frontend consulta el estado periódicamente con TanStack Query cuando exista un proceso asíncrono real;
 5. al finalizar, recupera el reporte.
 
 Para el prototipo local puede utilizarse `BackgroundTasks` de FastAPI con manejo explícito de interrupciones. No se incorporarán Redis, Celery ni otra cola distribuida hasta que exista una necesidad comprobada de concurrencia o recuperación de trabajos.
