@@ -194,7 +194,11 @@ El Instrumento 2 tiene la relación más directa con los outputs. La interfaz de
 | Generación de reporte | Existencia del resumen o reporte por caso |
 | Visualización de resultados | Existencia de overlay, capturas y gráficas |
 
-La denominación “número de puntos anatómicos clave detectados” debe conservar una definición única. En la implementación actual, el gráfico de calidad utiliza los puntos críticos requeridos para el análisis, no necesariamente los 33 puntos completos de MediaPipe Pose. Esta semántica deberá fijarse en el contrato de datos antes de desarrollar la interfaz definitiva.
+En la implementación actual, el indicador “número de puntos anatómicos clave detectados” se calcula sobre los 13 puntos seleccionados para la sentadilla: nariz y referencias bilaterales de hombros, caderas, rodillas, tobillos, talones y puntas de los pies. En cada fotograma, un punto se considera detectado cuando su visibilidad es igual o superior a 0,5; por ello, `frame_quality.csv` registra un valor entero entre 0 y 13. `pose_summary.json` conserva el promedio de estos valores para todos los fotogramas procesados mediante el campo `mean_detected_keypoints`. No se contabilizan aquí los 33 puntos completos generados por MediaPipe Pose.
+
+Para evitar ambigüedad en el Instrumento 2 y en la interfaz, el indicador resumido debe presentarse como **promedio de puntos anatómicos clave detectados por fotograma**, con unidad “puntos de un total de 13”. La cantidad por fotograma permanecerá disponible en `frame_quality.csv`. Esta definición deberá reproducirse sin cambios en `case_report.json`.
+
+Este indicador describe cobertura, pero no decide por sí solo la validez del fotograma. La regla vigente exige visibilidad suficiente de ambos hombros, caderas, rodillas y tobillos, además de al menos una referencia distal del pie por lado, que puede ser el talón o la punta del pie. La nariz y la disponibilidad simultánea de talón y punta del pie no son requisitos independientes para aceptar un fotograma.
 
 #### Presentación recomendada del Instrumento 2
 
