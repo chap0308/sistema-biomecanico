@@ -707,3 +707,12 @@ de decisión, resultados piloto y ciclo de trazabilidad se documentan en
 [evidencia_objetivo_3_criterios_interpretables.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_3_criterios_interpretables.md).
 Los umbrales todavía no están congelados y deberán evolucionar mediante
 versiones explícitas antes de la evaluación final.
+
+El segundo lote piloto demostró el comportamiento multietiqueta y la
+integración de video, pose, segmentación, calidad, variables y reglas. La
+evaluación se documenta en
+[evaluacion_lote_piloto_002_multietiqueta.md](/D:/sistema-biomecanico/docs/evaluacion_lote_piloto_002_multietiqueta.md)
+y la evidencia inicial del Objetivo Específico 4 en
+[evidencia_objetivo_4_prototipo_funcional.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_4_prototipo_funcional.md).
+El núcleo analítico del prototipo ya es ejecutable; resta empaquetar el flujo y
+generar una presentación más legible por caso y por lote.
