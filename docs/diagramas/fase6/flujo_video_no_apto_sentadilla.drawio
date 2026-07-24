@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="sistema-biomecanico-phase6" version="26.0.16" type="device">
+  <diagram id="phase6" name="Página 1">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1650" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Flujo de control de calidad del video" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="25" width="1570" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="La calidad de entrada se separa de la clasificación biomecánica" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="1570" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="Video y metadatos&lt;br&gt;del Instrumento 1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="protocol" value="Validar vista frontal,&lt;br&gt;visibilidad y oclusiones" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#f8fafc;strokeColor=#334155;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="390" y="220" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pose" value="Verificar puntos críticos&lt;br&gt;y estabilidad de pose" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="720" y="220" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" value="¿Evidencia suficiente?" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ffedd5;strokeColor=#c2410c;fontColor=#0f172a;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="reject" value="Registrar motivo&lt;br&gt;No calcular compensaciones" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fee2e2;strokeColor=#b91c1c;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="410" width="220" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="retry" value="Solicitar nueva captura&lt;br&gt;si corresponde" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#f8fafc;strokeColor=#334155;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="720" y="520" width="230" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="accept" value="Procesar variables&lt;br&gt;y criterios interpretables" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="410" width="230" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="manual" value="Apoyo plantar y soportes:&lt;br&gt;registro manual contextual" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="390" y="410" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="input" target="protocol">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="protocol" target="pose">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="pose" target="decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-4" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="decision" target="reject">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="reject" target="retry">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-6" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="decision" target="accept">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-7" value="Documentar" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="protocol" target="manual">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

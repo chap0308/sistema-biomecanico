@@ -572,23 +572,33 @@ feat(web): add expert comparison and instrument exports
 
 ### Fase F6. Verificación
 
-- completar Vitest;
-- completar Playwright;
-- revisar accesibilidad y responsive;
-- validar trazabilidad con los objetivos específicos;
-- preparar evidencias y diagramas para el asesor;
+- completar Vitest; **implementado**;
+- completar Playwright; **implementado**;
+- revisar accesibilidad y responsive; **implementado para presentación móvil,
+  estructura principal y navegación por teclado**;
+- validar trazabilidad con los objetivos específicos; **implementado**;
+- preparar evidencias y diagramas para el asesor; **implementado**;
 - consolidar en Mermaid los flujos de investigador, experto y video no apto;
+  **implementado**;
 - generar archivos `.drawio` editables con la arquitectura conjunta de
   Next.js, FastAPI, Supabase y el pipeline de visión por computadora;
+  **implementado**;
 - generar un diagrama de secuencia para carga, procesamiento y persistencia;
+  **implementado**;
 - generar un diagrama de secuencia para evaluación ciega, consenso y métricas;
-- relacionar cada prueba Playwright con su caso de uso y evidencia visual.
+  **implementado**;
+- relacionar cada prueba Playwright con su caso de uso y evidencia visual;
+  **implementado**.
 
 El inventario inicial de flujos y diagramas se encuentra en
 `docs/flujos_sistema_roles_y_evidencias_fase6.md`. No se requiere instalar un
 MCP específico para diagrams.net: el editor importa Mermaid y archivos
 `.drawio` o XML. Durante F6 se conservarán ambas versiones para facilitar la
 edición manual y la trazabilidad en Git.
+
+La evidencia final se encuentra en
+`docs/evidencia_frontend_fase_f6_verificacion.md` y los diagramas editables en
+`docs/diagramas/fase6/`.
 
 Commit sugerido:
 

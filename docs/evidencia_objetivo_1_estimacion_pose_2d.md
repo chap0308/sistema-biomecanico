@@ -80,4 +80,4 @@ Los términos `normal` y `controlado` son etiquetas provisionales proporcionadas
 
 ## Estrategia de diagramación
 
-Los diagramas se crearán incrementalmente cuando exista una implementación demostrable para cada objetivo específico. Mermaid será la fuente versionable durante el desarrollo. Al consolidar la tesis, los diagramas estables podrán migrarse a diagrams.net, Eraser o Excalidraw para su presentación final sin perder trazabilidad entre código, evidencia y objetivo.
+Los diagramas se crearon cuando existió una implementación demostrable para cada objetivo específico. Mermaid se conserva como fuente textual versionable y los diagramas estables de la fase 6 se encuentran en `docs/diagramas/fase6/` como archivos `.drawio` editables, sin perder trazabilidad entre código, evidencia y objetivo.

@@ -16,6 +16,12 @@ export async function ProtectedShell({
 
   return (
     <div className="min-h-dvh">
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Ir al contenido principal
+      </a>
       <header className="border-b bg-background/90 backdrop-blur">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
           <Link
@@ -45,7 +51,9 @@ export async function ProtectedShell({
           </div>
         </div>
       </header>
-      {children}
+      <div id="main-content" tabIndex={-1}>
+        {children}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="sistema-biomecanico-phase6" version="26.0.16" type="device">
+  <diagram id="phase6" name="Página 1">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1550" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Flujo del evaluador experto" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="25" width="1470" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Aplicación ciega del Instrumento 3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="1470" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="login" value="Iniciar sesión&lt;br&gt;como experto" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="190" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="assignments" value="Consultar asignaciones&lt;br&gt;propias" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#f8fafc;strokeColor=#334155;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="330" y="180" width="190" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="review" value="Reproducir video&lt;br&gt;anonimizado" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#f8fafc;strokeColor=#334155;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="580" y="180" width="190" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="blind" value="Sin overlay, métricas&lt;br&gt;ni salida del sistema" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fee2e2;strokeColor=#b91c1c;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="580" y="330" width="200" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="classify" value="Clasificar cuatro&lt;br&gt;patrones independientes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="830" y="180" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="complete" value="¿Ficha completa?" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ffedd5;strokeColor=#c2410c;fontColor=#0f172a;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="180" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="draft" value="Guardar borrador" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#f8fafc;strokeColor=#334155;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="330" width="190" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="submit" value="Enviar evaluación" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="330" width="190" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="lock" value="Bloquear edición" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#f8fafc;strokeColor=#334155;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="500" width="190" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="reference" value="Disponible para&lt;br&gt;consolidación del investigador" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="780" y="500" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="login" target="assignments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="assignments" target="review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="review" target="classify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-4" value="Restricción" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="review" target="blind">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="classify" target="complete">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-6" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="complete" target="draft">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-7" value="Continuar" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="draft" target="review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-8" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="complete" target="submit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="submit" target="lock">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="lock" target="reference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

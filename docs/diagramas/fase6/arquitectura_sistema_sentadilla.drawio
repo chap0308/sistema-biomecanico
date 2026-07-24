@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="sistema-biomecanico-phase6" version="26.0.16" type="device">
+  <diagram id="phase6" name="Página 1">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="870" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Arquitectura del sistema de análisis de sentadilla bilateral" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="25" width="1420" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Fase 6 · Prototipo de investigación · Alcance no clínico" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="1420" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="browser" value="Navegador web" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#e0f2fe;strokeColor=#0369a1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="60" y="250" width="190" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="next" value="Next.js 16&lt;br&gt;React · Tailwind CSS · shadcn/ui" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fastapi" value="API FastAPI&lt;br&gt;Contratos Pydantic y autorización" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="610" y="220" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pipeline" value="Pipeline de visión&lt;br&gt;OpenCV · MediaPipe Pose" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="930" y="120" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="analysis" value="Cálculo y evidencia&lt;br&gt;NumPy · Pandas · Matplotlib" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="930" y="260" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rules" value="Criterios interpretables&lt;br&gt;Umbrales versionados" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ffedd5;strokeColor=#c2410c;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="930" y="400" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="metrics" value="Comparación experta&lt;br&gt;F1-score · Kappa" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fee2e2;strokeColor=#b91c1c;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="400" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Supabase Auth&lt;br&gt;Investigador y expertos" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="610" y="430" width="235" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="PostgreSQL + RLS&lt;br&gt;Casos · evaluaciones · métricas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="610" y="560" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="storage" value="Storage privado&lt;br&gt;Video · overlay · capturas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="930" y="560" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="exports" value="Exportaciones&lt;br&gt;Excel · PDF · CSV · JSON" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="560" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tests" value="Verificación&lt;br&gt;pytest · Vitest · Playwright" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ccfbf1;strokeColor=#0f766e;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="git" value="Trazabilidad&lt;br&gt;Git y documentación de evidencias" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ccfbf1;strokeColor=#0f766e;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="300" y="700" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-1" value="Interfaz" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="browser" target="next">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-2" value="JWT + REST" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="next" target="fastapi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-3" value="Video" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="fastapi" target="pipeline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-4" value="Puntos 2D" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="pipeline" target="analysis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-5" value="Variables" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="analysis" target="rules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-6" value="Etiquetas" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="rules" target="metrics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-7" value="Sesión" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="next" target="auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-8" value="Metadatos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="fastapi" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-9" value="Artefactos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="fastapi" target="storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-10" value="Resultados" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="metrics" target="exports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-11" value="Instrumentos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="db" target="exports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-12" value="Pruebas UI" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="tests" target="next">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-13" value="Pruebas API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="tests" target="fastapi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-14" value="Evidencia" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="git" target="tests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

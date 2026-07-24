@@ -44,6 +44,7 @@ export default defineConfig({
               /case-intake\.spec\.ts/,
               /case-results\.spec\.ts/,
               /case-comparison\.spec\.ts/,
+              /responsive-accessibility\.spec\.ts/,
             ],
             use: {
               ...devices["Desktop Chrome"],

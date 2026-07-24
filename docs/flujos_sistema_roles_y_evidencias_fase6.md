@@ -6,14 +6,14 @@ Este documento centraliza los casos de uso verificados con Playwright y sirve
 como fuente para generar diagramas editables en diagrams.net durante F6.
 
 No es necesario instalar un MCP específico. diagrams.net permite insertar
-Mermaid como formas editables mediante `Arrange > Insert > Mermaid` y también
-importa archivos `.drawio` y XML. Referencias oficiales:
+Mermaid y también importa archivos `.drawio` y XML. Referencias oficiales:
 
 - [Insertar Mermaid en draw.io](https://www.drawio.com/docs/manual/insert/insert-mermaid/)
 - [Formatos de importación de draw.io](https://www.drawio.com/docs/manual/import/import-formats/)
 
-En F6 se generarán archivos `.drawio` para la entrega visual y se mantendrá
-Mermaid como fuente textual versionable.
+En F6 se generaron archivos `.drawio` nativos para la entrega visual y se
+mantuvo Mermaid como fuente textual versionable. Los archivos fueron abiertos
+en diagrams.net y conservaron cajas, textos y conectores editables.
 
 ## 2. Flujo del investigador
 
@@ -162,7 +162,7 @@ flowchart LR
 | Evaluación experta ciega | `expert-evaluation.spec.ts` | Borrador, envío y bloqueo |
 | Comparación y exportación | `case-comparison.spec.ts` | Instrumento 3, métricas, Excel y PDF |
 
-## 7. Diagramas editables previstos para F6
+## 7. Diagramas editables generados en F6
 
 1. `arquitectura_sistema_sentadilla.drawio`
 2. `flujo_investigador_sentadilla.drawio`
@@ -170,6 +170,9 @@ flowchart LR
 4. `secuencia_procesamiento_video.drawio`
 5. `secuencia_comparacion_metricas.drawio`
 6. `trazabilidad_objetivos_evidencias.drawio`
+7. `flujo_video_no_apto_sentadilla.drawio`
 
-Cada archivo deberá incluir título, versión, alcance no clínico y relación con
-el objetivo específico correspondiente.
+Cada archivo incluye título, alcance de investigación y relación con el flujo
+u objetivo específico correspondiente. Se encuentran en
+`docs/diagramas/fase6/` y se regeneran mediante
+`scripts/generate_phase6_drawio.py`.
