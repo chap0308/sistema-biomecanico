@@ -107,9 +107,9 @@ Mientras esta variable permanezca en `false`, FastAPI utiliza un investigador lo
 - Pruebas unitarias de roles y rutas iniciales.
 - Compilación de producción de Next.js con Cache Components.
 - Pruebas de contratos y autorización de FastAPI.
-- Migración preparada para una reconstrucción local de Supabase.
+- Migración aplicada y comprobada en Supabase local: seis tablas del dominio, doce políticas RLS y tres buckets privados.
 
-La validación de extremo a extremo con las cuatro cuentas requiere que el stack de Supabase local esté iniciado. Esa comprobación se incorporará al recorrido Playwright autenticado una vez creados los usuarios locales.
+La validación de extremo a extremo con las cuatro cuentas se incorporará al recorrido Playwright autenticado una vez creados los usuarios locales.
 
 ## 9. Relación con el proyecto
 

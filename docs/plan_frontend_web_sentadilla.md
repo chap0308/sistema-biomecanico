@@ -8,7 +8,7 @@ La interfaz se construirá sobre la API FastAPI existente y utilizará los contr
 
 ## 2. Decisión resumida
 
-**Estado de implementación:** las fases F0 y F1 se encuentran completadas en código. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md` y `evidencia_frontend_fase_f1.md`. La aplicación de la migración y la prueba autenticada de extremo a extremo requieren que Supabase local se encuentre disponible.
+**Estado de implementación:** las fases F0 y F1 se encuentran completadas. La evidencia técnica se documenta en `evidencia_frontend_fase_f0.md` y `evidencia_frontend_fase_f1.md`. La migración fue aplicada y comprobada en Supabase local; la prueba autenticada de extremo a extremo se realizará al crear las cuatro cuentas del estudio.
 
 | Decisión | Elección |
 |---|---|
