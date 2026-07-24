@@ -93,6 +93,14 @@ Roles previstos:
 
 La contraseña no debe incorporarse al repositorio. Si una cuenta ya existía antes de la migración, su columna `profiles.squat_role` debe actualizarse desde Supabase Studio.
 
+En Windows puede iniciarse únicamente la infraestructura requerida por el prototipo:
+
+```powershell
+npx supabase start -x realtime,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+```
+
+Esta modalidad conserva PostgreSQL, Auth, PostgREST, Storage, Kong y Mailpit, y evita depender de servicios auxiliares que no intervienen en la evaluación de sentadilla.
+
 Para activar la validación obligatoria en FastAPI:
 
 ```env
@@ -105,6 +113,7 @@ Mientras esta variable permanezca en `false`, FastAPI utiliza un investigador lo
 
 - ESLint del frontend.
 - Pruebas unitarias de roles y rutas iniciales.
+- Prueba Playwright autenticada parametrizada mediante `SQUAT_E2E_EMAIL` y `SQUAT_E2E_PASSWORD`.
 - Compilación de producción de Next.js con Cache Components.
 - Pruebas de contratos y autorización de FastAPI.
 - Migración aplicada y comprobada en Supabase local: seis tablas del dominio, doce políticas RLS y tres buckets privados.

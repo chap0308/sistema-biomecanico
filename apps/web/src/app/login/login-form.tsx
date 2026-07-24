@@ -1,9 +1,9 @@
 "use client";
 
-import { useActionState } from "react";
+import { useState, type FormEvent } from "react";
 import { LockKeyholeIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-import { login, type LoginState } from "@/app/login/actions";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,14 +13,45 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-
-const initialState: LoginState = {};
+import { homeForRole, isSquatRole } from "@/lib/auth/roles";
+import { createClient } from "@/lib/supabase/client";
 
 export function LoginForm() {
-  const [state, formAction, pending] = useActionState(login, initialState);
+  const router = useRouter();
+  const [error, setError] = useState<string>();
+  const [pending, setPending] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setPending(true);
+    setError(undefined);
+
+    const formData = new FormData(event.currentTarget);
+    const email = String(formData.get("email") ?? "").trim();
+    const password = String(formData.get("password") ?? "");
+    const supabase = createClient();
+    const { data, error: authError } =
+      await supabase.auth.signInWithPassword({ email, password });
+    const role = data.user?.user_metadata.squat_role;
+
+    if (authError || !data.user) {
+      setError("No se pudo validar la cuenta indicada.");
+      setPending(false);
+      return;
+    }
+    if (!isSquatRole(role)) {
+      await supabase.auth.signOut();
+      setError("La cuenta no tiene un rol habilitado para este estudio.");
+      setPending(false);
+      return;
+    }
+
+    router.replace(homeForRole(role));
+    router.refresh();
+  }
 
   return (
-    <form action={formAction}>
+    <form onSubmit={handleSubmit}>
       <FieldGroup>
         <Field>
           <FieldLabel htmlFor="email">Correo institucional</FieldLabel>
@@ -45,9 +76,9 @@ export function LoginForm() {
             Acceso exclusivo para el investigador y evaluadores asignados.
           </FieldDescription>
         </Field>
-        {state.error ? (
+        {error ? (
           <Alert variant="destructive">
-            <AlertDescription>{state.error}</AlertDescription>
+            <AlertDescription>{error}</AlertDescription>
           </Alert>
         ) : null}
         <Button type="submit" disabled={pending} className="w-full">
