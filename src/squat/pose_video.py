@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 from pose.schemas import PoseLandmark
 from src.squat.models import SquatPoseArtifacts, SquatPoseSummary
 from src.squat.video import probe_video
+from src.squat.video_encoding import encode_h264_mp4
 
 SQUAT_LANDMARK_INDEXES: dict[str, int] = {
     "nose": 0,
@@ -150,18 +151,20 @@ def extract_squat_pose_video(
     quality_path = case_output_dir / "frame_quality.csv"
     overlay_path = case_output_dir / "overlay.mp4"
     review_path = case_output_dir / "review.mp4"
+    overlay_intermediate_path = case_output_dir / "overlay.intermediate.mp4"
+    review_intermediate_path = case_output_dir / "review.intermediate.mp4"
     plot_path = case_output_dir / "pose_quality.png"
     summary_path = case_output_dir / "pose_summary.json"
 
     capture = cv2.VideoCapture(video.path)
     writer = cv2.VideoWriter(
-        str(overlay_path),
+        str(overlay_intermediate_path),
         cv2.VideoWriter_fourcc(*"mp4v"),
         video.fps,
         (video.width_px, video.height_px),
     )
     review_writer = cv2.VideoWriter(
-        str(review_path),
+        str(review_intermediate_path),
         cv2.VideoWriter_fourcc(*"mp4v"),
         video.fps,
         (video.width_px, video.height_px),
@@ -250,6 +253,9 @@ def extract_squat_pose_video(
         capture.release()
         writer.release()
         review_writer.release()
+
+    encode_h264_mp4(overlay_intermediate_path, overlay_path)
+    encode_h264_mp4(review_intermediate_path, review_path)
 
     _save_pose_quality_plot(
         quality_rows,

@@ -8,9 +8,11 @@ const hasExpertTests = Boolean(
     process.env.SQUAT_E2E_EXPERT_PASSWORD &&
     process.env.SQUAT_E2E_EXPERT_ASSIGNMENT_ID,
 );
+const recordVideo = process.env.SQUAT_E2E_RECORD_VIDEO === "1";
 
 export default defineConfig({
   testDir: "./e2e",
+  timeout: 90_000,
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
@@ -18,6 +20,7 @@ export default defineConfig({
   use: {
     baseURL: "http://127.0.0.1:3000",
     trace: "on-first-retry",
+    video: recordVideo ? "on" : "retain-on-failure",
   },
   webServer: {
     command: "npm run dev",
@@ -42,6 +45,7 @@ export default defineConfig({
             testMatch: [
               /auth\.spec\.ts/,
               /case-intake\.spec\.ts/,
+              /case-analysis\.spec\.ts/,
               /case-results\.spec\.ts/,
               /case-comparison\.spec\.ts/,
               /responsive-accessibility\.spec\.ts/,

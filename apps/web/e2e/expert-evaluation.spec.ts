@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { expectPlayableVideo } from "./fixtures/media";
 
 const assignmentId = process.env.SQUAT_E2E_EXPERT_ASSIGNMENT_ID!;
 
@@ -15,6 +16,7 @@ test("expert completes a blinded Instrument 3 evaluation", async ({
     "src",
     `/api/squat/expert/assignments/${assignmentId}/video`,
   );
+  await expectPlayableVideo(page.locator("video"));
   await expect(page.getByText("Resultado del sistema")).toHaveCount(0);
   await expect(page.getByText("Compensaciones detectadas")).toHaveCount(0);
 

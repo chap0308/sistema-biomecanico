@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { expectPlayableVideo } from "./fixtures/media";
 
 const caseId = process.env.SQUAT_E2E_RESULT_CASE_ID;
 
@@ -12,7 +13,7 @@ test("shows traceable squat results for a completed case", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByText("Resultado por patrón", { exact: true })).toBeVisible();
   await expect(page.getByText("Umbrales provisionales")).toBeVisible();
-  await expect(page.locator("video")).toBeVisible();
+  await expectPlayableVideo(page.locator("video"));
   await expect(
     page.getByRole("heading", {
       name: "Máxima profundidad por repetición",

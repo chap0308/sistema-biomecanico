@@ -15,6 +15,7 @@ editables.
 | Procesamiento Python | Pruebas unitarias y de integración con `pytest` | Pose, segmentación, variables, reglas, API, comparación y exportaciones |
 | Componentes web | Pruebas con Vitest | Formularios y evidencia de variables y reglas |
 | Flujo completo | Pruebas con Playwright | Acceso, registro, resultado, evaluación experta, comparación y descargas |
+| Compatibilidad multimedia | `ffprobe`, FFmpeg y reproducción en Chromium | Videos publicados en H.264/AVC, etiqueta `avc1` y formato `yuv420p` |
 | Presentación móvil | Playwright a 390 × 844 px | Resultado y comparación sin desbordamiento de página |
 | Navegación por teclado | Playwright | Enlace para omitir la cabecera y enfocar el contenido |
 | Diagramas | Validación XML y apertura en diagrams.net | Siete archivos `.drawio` editables |
@@ -30,6 +31,7 @@ evaluadores expertos del estudio.
 | Página pública | `home.spec.ts` |
 | Autenticación y rol investigador | `auth.spec.ts` |
 | Instrumento 1 y carga de video | `case-intake.spec.ts` |
+| Registro, análisis y reproducción real del overlay | `case-analysis.spec.ts` |
 | Overlay, eventos, variables y reglas | `case-results.spec.ts` |
 | Instrumento 3 ciego | `expert-evaluation.spec.ts` |
 | Referencia experta, métricas y exportación | `case-comparison.spec.ts` |
@@ -62,7 +64,33 @@ completa se recorrió el documento antes de generar la imagen y se verificó que
 las seis imágenes del caso tuvieran carga completa y dimensiones naturales
 mayores que cero.
 
-## 6. Diagramas para sustentación
+Las grabaciones reproducibles de los dos recorridos principales se conservan
+en `docs/evidencias/fase6/playwright/`:
+
+- `flujo_registro_analisis_caso.webm`;
+- `flujo_evaluador_experto.webm`.
+
+El fixture de `apps/web/e2e/fixtures/squat-case.ts` completa el Instrumento 1 y
+adjunta un video local de forma determinista. La prueba multimedia carga el
+archivo en Chromium, ejecuta la reproducción, cambia la posición temporal y
+comprueba duración y dimensiones válidas; por tanto, no se limita a verificar
+que el elemento `<video>` exista.
+
+## 6. Compatibilidad de video
+
+El overlay y el video ciego para evaluación experta se construyen primero como
+artefactos intermedios de OpenCV. Antes de publicarlos, FFmpeg los convierte a
+H.264/AVC con etiqueta `avc1`, formato de píxel `yuv420p` y metadatos
+`faststart`. Esta etapa evita depender del códec MPEG-4 Part 2 (`mp4v`), que
+puede producir archivos con extensión `.mp4` que los navegadores no pueden
+reproducir.
+
+Los artefactos históricos se normalizan de forma reproducible mediante
+`scripts/normalize_squat_output_videos.py`. La verificación realizada cubrió
+los 31 archivos `overlay.mp4` y `review.mp4` disponibles, sin encontrar
+artefactos incompatibles después de la conversión.
+
+## 7. Diagramas para sustentación
 
 Los diagramas editables se encuentran en `docs/diagramas/fase6/`:
 
@@ -78,7 +106,7 @@ La fuente Mermaid de los flujos principales se conserva en
 `flujos_sistema_roles_y_evidencias_fase6.md`. Los `.drawio` son la versión
 destinada a edición y presentación.
 
-## 7. Alcance de la evidencia
+## 8. Alcance de la evidencia
 
 La fase demuestra funcionamiento técnico y trazabilidad del prototipo. No
 demuestra todavía desempeño definitivo, porque las métricas disponibles
@@ -86,7 +114,7 @@ provienen de un piloto de integración con pocos pares comparables. La
 evaluación final del OE5 requiere la muestra aprobada, evaluaciones expertas
 independientes y umbrales estabilizados.
 
-## 8. Resultado de la verificación
+## 9. Resultado de la verificación
 
 | Comando o conjunto | Resultado |
 |---|---:|
@@ -94,6 +122,8 @@ independientes y umbrales estabilizados.
 | Vitest | 6 aprobadas |
 | ESLint | Sin errores |
 | Compilación de producción de Next.js | Correcta |
+| Validación de overlays y videos de revisión | 31 archivos compatibles con navegador |
+| Playwright de registro, análisis y reproducción real | Aprobada |
 | Playwright público e investigador | 10 aprobadas |
 | Playwright evaluador experto | 2 aprobadas |
 

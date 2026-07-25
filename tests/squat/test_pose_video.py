@@ -173,10 +173,15 @@ def test_extract_pose_video_writes_summary_and_csv_artifacts(tmp_path: Path, mon
     overlay_writer = _FakeWriter()
     review_writer = _FakeWriter()
     writers = iter([overlay_writer, review_writer])
+    encoded: list[tuple[Path, Path]] = []
     monkeypatch.setattr("src.squat.pose_video.probe_video", lambda _: _metadata(tmp_path))
     monkeypatch.setattr(cv2, "VideoCapture", lambda _: capture)
     monkeypatch.setattr(cv2, "VideoWriter", lambda *_args: next(writers))
     monkeypatch.setattr("src.squat.pose_video._create_pose_model", _FakePoseModel)
+    monkeypatch.setattr(
+        "src.squat.pose_video.encode_h264_mp4",
+        lambda source, destination: encoded.append((Path(source), Path(destination))),
+    )
 
     summary = extract_squat_pose_video(
         tmp_path / "case.mp4",
@@ -201,6 +206,16 @@ def test_extract_pose_video_writes_summary_and_csv_artifacts(tmp_path: Path, mon
     assert capture.released is True
     assert overlay_writer.released is True
     assert review_writer.released is True
+    assert encoded == [
+        (
+            tmp_path / "outputs" / "case_001" / "overlay.intermediate.mp4",
+            tmp_path / "outputs" / "case_001" / "overlay.mp4",
+        ),
+        (
+            tmp_path / "outputs" / "case_001" / "review.intermediate.mp4",
+            tmp_path / "outputs" / "case_001" / "review.mp4",
+        ),
+    ]
 
 
 def test_extract_pose_video_validates_threshold(tmp_path: Path) -> None:
