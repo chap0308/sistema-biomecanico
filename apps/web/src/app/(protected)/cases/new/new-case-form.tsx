@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { useDropzone } from "react-dropzone";
 import {
   FileVideoIcon,
+  FlaskConicalIcon,
   LoaderCircleIcon,
   UploadCloudIcon,
 } from "lucide-react";
@@ -35,9 +36,16 @@ const selectClassName =
 
 export function NewCaseForm() {
   const router = useRouter();
-  const [video, setVideo] = useState<File>();
+  const formRef = useRef<HTMLFormElement>(null);
+  const [videoSelection, setVideoSelection] = useState<{
+    file: File;
+    previewUrl: string;
+  }>();
+  const video = videoSelection?.file;
+  const previewUrl = videoSelection?.previewUrl;
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string>();
+  const development = process.env.NODE_ENV === "development";
   const dropzone = useDropzone({
     accept: {
       "video/mp4": [".mp4"],
@@ -48,14 +56,60 @@ export function NewCaseForm() {
     maxFiles: 1,
     maxSize: 50 * 1024 * 1024,
     onDropAccepted(files) {
-      setVideo(files[0]);
+      setVideoSelection({
+        file: files[0],
+        previewUrl: URL.createObjectURL(files[0]),
+      });
       setError(undefined);
     },
     onDropRejected() {
-      setVideo(undefined);
+      setVideoSelection(undefined);
       setError("Selecciona un solo video compatible de hasta 50 MiB.");
     },
   });
+
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+      }
+    };
+  }, [previewUrl]);
+
+  function fillDevelopmentFixture() {
+    const form = formRef.current;
+    if (!form) {
+      return;
+    }
+    const values: Record<string, string> = {
+      case_id: `dev_case_${Date.now()}`,
+      participant_code: "P-DEV-001",
+      record_date: new Date().toISOString().slice(0, 10),
+      video_source: "fixture_desarrollo",
+      capture_device: "smartphone",
+      lighting: "adecuada",
+      background: "adecuado",
+      body_visibility: "completa",
+      occlusions: "ninguna",
+      surface: "plana",
+      external_heel_support: "no",
+      apparent_heel_contact: "continuo",
+      complete_squat_observable: "true",
+      support_condition_compliant: "true",
+      plantar_support_observation: "Apoyo observable conforme al protocolo.",
+    };
+    for (const [name, value] of Object.entries(values)) {
+      const field = form.elements.namedItem(name);
+      if (
+        field instanceof HTMLInputElement ||
+        field instanceof HTMLSelectElement ||
+        field instanceof HTMLTextAreaElement
+      ) {
+        field.value = value;
+      }
+    }
+    setError(undefined);
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -134,7 +188,27 @@ export function NewCaseForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-8 grid gap-6">
+    <form ref={formRef} onSubmit={handleSubmit} className="mt-8 grid gap-6">
+      {development ? (
+        <div className="flex flex-col gap-3 rounded-2xl border border-dashed border-primary/40 bg-primary/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm font-medium">Herramientas de desarrollo</p>
+            <p className="text-xs text-muted-foreground">
+              Completa el Instrumento 1 con valores reproducibles. El video se
+              adjunta por separado.
+            </p>
+          </div>
+          <Button
+            type="button"
+            variant="outline"
+            onClick={fillDevelopmentFixture}
+          >
+            <FlaskConicalIcon aria-hidden="true" />
+            Completar datos de prueba
+          </Button>
+        </div>
+      ) : null}
+
       <Card>
         <CardHeader>
           <CardTitle>Identificación y captura</CardTitle>
@@ -297,6 +371,20 @@ export function NewCaseForm() {
               </>
             )}
           </div>
+          {previewUrl ? (
+            <div className="mt-5 overflow-hidden rounded-2xl border bg-black">
+              <video
+                key={previewUrl}
+                src={previewUrl}
+                aria-label="Vista previa del video seleccionado"
+                className="max-h-[34rem] w-full object-contain"
+                controls
+                muted
+                playsInline
+                preload="metadata"
+              />
+            </div>
+          ) : null}
         </CardContent>
       </Card>
 

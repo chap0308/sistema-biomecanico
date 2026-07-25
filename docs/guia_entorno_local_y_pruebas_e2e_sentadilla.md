@@ -67,6 +67,13 @@ El archivo `apps/web/e2e/fixtures/squat-case.ts`:
   `data/sentadilla_bilateral/raw/dev_negativo_001.mp4`;
 - permite reemplazar el video con `SQUAT_E2E_UPLOAD_VIDEO`.
 
+En desarrollo, `/cases/new` muestra el botón **Completar datos de prueba**.
+Este botón llena los campos del Instrumento 1 con valores reproducibles y un
+código de caso único. El archivo de video se selecciona de forma independiente
+porque el navegador no permite adjuntar silenciosamente archivos del equipo.
+Después de seleccionarlo, el formulario muestra una vista previa reproducible
+mediante el elemento de video nativo del navegador.
+
 La prueba rápida `case-intake.spec.ts` llena el formulario y adjunta el archivo
 sin ejecutar el análisis completo.
 
