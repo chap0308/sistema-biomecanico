@@ -20,6 +20,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
   Table,
   TableBody,
@@ -36,6 +37,7 @@ import type {
 } from "@/types/squat-case-report";
 
 import { AnalysisPlayer } from "./analysis-player";
+import { groupCompleteDecisions } from "./decision-groups";
 import { formatMetric, MetricEvidence } from "./metric-evidence";
 
 type CaseDetailPageProps = {
@@ -72,14 +74,14 @@ export default async function CaseDetailPage({
     (capture) => capture.event === "maxima_profundidad",
   );
   const decisions = report.findings?.decisions ?? [];
-  const decisionGroups = [...new Set(
-    decisions.map((decision) => decision.repetition_index),
-  )].map((repetitionIndex) => ({
-    repetitionIndex,
-    decisions: decisions.filter(
-      (decision) => decision.repetition_index === repetitionIndex,
-    ),
-  }));
+  const { groups: decisionGroups, isComplete: hasCompleteDecisions } =
+    groupCompleteDecisions(
+      decisions,
+      report.segmentation?.repetitions.map(
+        (repetition) => repetition.repetition_index,
+      ) ?? [],
+      Object.keys(findingLabels),
+    );
 
   return (
     <main className="mx-auto w-full max-w-7xl px-5 py-8 lg:px-10 lg:py-10">
@@ -221,7 +223,7 @@ export default async function CaseDetailPage({
         </Card>
       </section>
 
-      {decisionGroups.length ? (
+      {hasCompleteDecisions ? (
         <section className="mt-7">
           <SectionHeading
             eyebrow="Resultados"
@@ -264,6 +266,16 @@ export default async function CaseDetailPage({
             ))}
           </div>
         </section>
+      ) : decisions.length ? (
+        <Alert className="mt-7">
+          <CircleAlertIcon aria-hidden="true" />
+          <AlertTitle>El informe requiere reprocesamiento</AlertTitle>
+          <AlertDescription>
+            Las decisiones almacenadas no corresponden a todas las
+            repeticiones detectadas. Vuelva a procesar el caso con la versión
+            actual de las reglas antes de interpretar los resultados.
+          </AlertDescription>
+        </Alert>
       ) : null}
 
       {peakCaptures.length ? (
