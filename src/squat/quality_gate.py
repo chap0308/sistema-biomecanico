@@ -25,7 +25,7 @@ class SquatQualityPolicy:
     minimum_processed_frames_percentage: float = 99.0
     minimum_video_valid_frames_percentage: float = 90.0
     warning_video_valid_frames_percentage: float = 95.0
-    expected_repetitions: int = 3
+    minimum_repetitions: int = 1
     minimum_repetition_valid_frames_percentage: float = 80.0
     warning_repetition_valid_frames_percentage: float = 90.0
     require_valid_peak_depth_frame: bool = True
@@ -113,13 +113,19 @@ def evaluate_squat_analysis_quality(
         severity="exclusion",
         passed=(
             segmentation.repetitions_detected
-            == active_policy.expected_repetitions
+            >= active_policy.minimum_repetitions
         ),
         observed=str(segmentation.repetitions_detected),
-        requirement=str(active_policy.expected_repetitions),
+        requirement=f">= {active_policy.minimum_repetitions}",
     )
 
+    eligible_repetition_indexes: list[int] = []
+    excluded_repetition_indexes: list[int] = []
     for repetition in segmentation.repetitions:
+        repetition_is_valid = (
+            repetition.valid_frames_percentage
+            >= active_policy.minimum_repetition_valid_frames_percentage
+        )
         _append_check(
             checks,
             check_id=f"repetition_{repetition.repetition_index}_valid_frames",
@@ -127,10 +133,7 @@ def evaluate_squat_analysis_quality(
                 f"Fotogramas válidos de la repetición {repetition.repetition_index}"
             ),
             severity="exclusion",
-            passed=(
-                repetition.valid_frames_percentage
-                >= active_policy.minimum_repetition_valid_frames_percentage
-            ),
+            passed=repetition_is_valid,
             observed=f"{repetition.valid_frames_percentage:.2f} %",
             requirement=(
                 f">= {active_policy.minimum_repetition_valid_frames_percentage:.2f} %"
@@ -153,6 +156,9 @@ def evaluate_squat_analysis_quality(
             ),
         )
         peak_valid = valid_by_frame.get(repetition.peak_depth_frame, False)
+        repetition_is_valid = repetition_is_valid and (
+            peak_valid if active_policy.require_valid_peak_depth_frame else True
+        )
         _append_check(
             checks,
             check_id=f"repetition_{repetition.repetition_index}_peak_depth",
@@ -173,17 +179,36 @@ def evaluate_squat_analysis_quality(
                 else "no obligatorio"
             ),
         )
+        (
+            eligible_repetition_indexes
+            if repetition_is_valid
+            else excluded_repetition_indexes
+        ).append(repetition.repetition_index)
 
-    exclusion_reasons = [
+    global_exclusion_reasons = [
         check.description
         for check in checks
-        if check.severity == "exclusion" and not check.passed
+        if (
+            check.severity == "exclusion"
+            and not check.passed
+            and not check.check_id.startswith("repetition_")
+        )
     ]
     warnings = [
         check.description
         for check in checks
         if check.severity == "warning" and not check.passed
     ]
+    if excluded_repetition_indexes:
+        warnings.append(
+            "Se excluyeron repeticiones sin evidencia suficiente: "
+            + ", ".join(map(str, excluded_repetition_indexes))
+        )
+    exclusion_reasons = list(global_exclusion_reasons)
+    if not eligible_repetition_indexes:
+        exclusion_reasons.append(
+            "No se detectó ninguna repetición completa con calidad analítica suficiente"
+        )
     if exclusion_reasons:
         status = "no_apto_para_analisis"
     elif warnings:
@@ -198,6 +223,8 @@ def evaluate_squat_analysis_quality(
         case_id=case_id,
         status=status,
         eligible_for_analysis=not exclusion_reasons,
+        eligible_repetition_indexes=eligible_repetition_indexes,
+        excluded_repetition_indexes=excluded_repetition_indexes,
         checks=checks,
         exclusion_reasons=exclusion_reasons,
         warnings=warnings,

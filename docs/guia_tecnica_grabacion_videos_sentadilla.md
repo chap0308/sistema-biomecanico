@@ -86,7 +86,7 @@ No se recomienda una única cruz rígida en la punta de los pies para todos los 
 2. una marca plana para cada talón;
 3. una línea corta desde cada talón hacia la dirección del segundo dedo del pie;
 4. colocación definida después de que el participante adopte una base cómoda;
-5. conservación de esa misma base durante las tres repeticiones y registros comparables.
+5. conservación de esa misma base durante cada repetición y entre registros comparables.
 
 La cinta debe ser plana, antideslizante, de color contrastante y no reflectante. No debe colocarse ningún elemento elevado debajo del talón. La referencia del suelo se registrará como ayuda de estandarización, no como marcador anatómico ni como evidencia de una alteración del pie.
 
@@ -97,13 +97,13 @@ La cinta debe ser plana, antideslizante, de color contrastante y no reflectante.
 3. Mantener las puntas de los pies en una orientación cómoda y constante; no modificar deliberadamente la base entre repeticiones.
 4. Extender los brazos hacia delante a la altura aproximada de los hombros para evitar que las manos cubran caderas o rodillas.
 5. Permanecer quieto entre 2 y 3 segundos antes de iniciar.
-6. Realizar tres repeticiones controladas, siempre que no exista dolor o fatiga.
+6. Realizar una repetición completa y controlada para cada video de la muestra formal. El sistema admite una o varias repeticiones por video durante el desarrollo.
 7. Usar una velocidad aproximada de 2 segundos de descenso y 2 segundos de ascenso, sin rebotes.
 8. Descender solo hasta una profundidad cómoda y reproducible.
 9. Mantener ambos talones apoyados y no usar discos, cuñas ni soportes para aumentar artificialmente la profundidad.
 10. Permanecer quieto entre 2 y 3 segundos al finalizar.
 
-Para pruebas técnicas se recomienda grabar las tres repeticiones en un solo video. La unidad registrada continúa siendo un video por caso.
+Para la muestra formal se recomienda grabar una repetición completa por video. Durante el desarrollo, un video puede contener varias repeticiones: el sistema segmentará cada ejecución y producirá una clasificación independiente para cada una. Un video con varias repeticiones no genera un resultado por consenso; se representa mediante identificadores como `caso-01-repeticion-1`, `caso-01-repeticion-2` y `caso-01-repeticion-3`.
 
 ## 8. Casos controlados para el desarrollo
 
@@ -261,6 +261,6 @@ El reporte se abre desde `htmlcov/index.html`.
 - Ropa ajustada que permita distinguir caderas, rodillas y tobillos.
 - Sentadilla sin carga externa y sin dolor.
 - Dos o tres segundos quieto antes y después.
-- Tres repeticiones controladas.
+- Una repetición completa y controlada por video de la muestra formal.
 - Archivo MP4 colocado en `data/sentadilla_bilateral/raw/`.
 - Nombre de desarrollo coherente con el patrón representado.

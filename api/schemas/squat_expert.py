@@ -58,6 +58,7 @@ class SquatAssignmentCreatedResponse(BaseModel):
 class SquatExpertEvaluationItem(BaseModel):
     """One independent observational classification."""
 
+    repetition_index: int = Field(default=1, ge=1)
     pattern_key: SquatPatternKey
     classification: ExpertClassification
     observed_side: ObservedSide | None = None
@@ -88,13 +89,31 @@ class SquatExpertEvaluationRequest(BaseModel):
     @model_validator(mode="after")
     def validate_items(self) -> "SquatExpertEvaluationRequest":
         """Require unique patterns and a complete final submission."""
-        patterns = [item.pattern_key for item in self.items]
-        if len(patterns) != len(set(patterns)):
-            raise ValueError("Each pattern can be evaluated only once.")
-        if self.status == "submitted" and set(patterns) != REQUIRED_PATTERNS:
+        keys = [
+            (item.repetition_index, item.pattern_key) for item in self.items
+        ]
+        if len(keys) != len(set(keys)):
             raise ValueError(
-                "A submitted evaluation must classify all four patterns."
+                "Each pattern can be evaluated only once per repetition."
             )
+        if self.status == "submitted":
+            repetition_indexes = {
+                item.repetition_index for item in self.items
+            }
+            if not repetition_indexes:
+                raise ValueError(
+                    "A submitted evaluation requires at least one repetition."
+                )
+            for repetition_index in repetition_indexes:
+                patterns = {
+                    item.pattern_key
+                    for item in self.items
+                    if item.repetition_index == repetition_index
+                }
+                if patterns != REQUIRED_PATTERNS:
+                    raise ValueError(
+                        "Every submitted repetition must classify all four patterns."
+                    )
         if self.status == "submitted" and any(
             item.confidence is None for item in self.items
         ):
@@ -116,6 +135,15 @@ class SquatExpertEvaluationResponse(BaseModel):
     items: list[SquatExpertEvaluationItem] = Field(default_factory=list)
 
 
+class SquatExpertRepetitionResponse(BaseModel):
+    """Temporal interval shown to the expert without system classifications."""
+
+    repetition_index: int = Field(ge=1)
+    start_seconds: float = Field(ge=0.0)
+    peak_depth_seconds: float = Field(ge=0.0)
+    end_seconds: float = Field(ge=0.0)
+
+
 class SquatExpertAssignmentResponse(BaseModel):
     """Blinded assignment visible to its evaluator."""
 
@@ -124,6 +152,7 @@ class SquatExpertAssignmentResponse(BaseModel):
     status: Literal["pending", "in_progress", "submitted"]
     created_at: datetime
     updated_at: datetime
+    repetitions: list[SquatExpertRepetitionResponse] = Field(default_factory=list)
     evaluation: SquatExpertEvaluationResponse | None = None
 
 

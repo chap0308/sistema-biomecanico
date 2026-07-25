@@ -142,7 +142,7 @@ def test_quality_gate_requests_review_for_noncritical_warnings(
     assert len(result.warnings) == 2
 
 
-def test_quality_gate_rejects_invalid_peak_and_low_quality_repetition(
+def test_quality_gate_excludes_only_the_invalid_repetition(
     tmp_path: Path,
 ) -> None:
     pose, segmentation, quality = _write_quality_inputs(
@@ -160,9 +160,12 @@ def test_quality_gate_rejects_invalid_peak_and_low_quality_repetition(
         output_dir=tmp_path / "outputs",
     )
 
-    assert result.status == "no_apto_para_analisis"
-    assert result.eligible_for_analysis is False
-    assert any("repetición 3" in reason for reason in result.exclusion_reasons)
+    assert result.status == "revision_requerida"
+    assert result.eligible_for_analysis is True
+    assert result.eligible_repetition_indexes == [1, 2]
+    assert result.excluded_repetition_indexes == [3]
+    assert result.exclusion_reasons == []
+    assert any("3" in warning for warning in result.warnings)
 
 
 def test_quality_gate_rejects_processing_and_repetition_count(
@@ -184,7 +187,47 @@ def test_quality_gate_rejects_processing_and_repetition_count(
     )
 
     assert result.status == "no_apto_para_analisis"
-    assert len(result.exclusion_reasons) == 3
+    assert len(result.exclusion_reasons) == 2
+
+
+def test_quality_gate_accepts_one_complete_repetition(tmp_path: Path) -> None:
+    pose, segmentation, quality = _write_quality_inputs(
+        tmp_path,
+        repetition_percentages=(100.0,),
+    )
+
+    result = evaluate_squat_analysis_quality(
+        pose,
+        segmentation,
+        quality,
+        case_id="caso_001",
+        output_dir=tmp_path / "outputs",
+    )
+
+    assert result.status == "apto_para_analisis"
+    assert result.eligible_for_analysis is True
+    assert result.eligible_repetition_indexes == [1]
+
+
+def test_quality_gate_rejects_video_without_complete_repetitions(
+    tmp_path: Path,
+) -> None:
+    pose, segmentation, quality = _write_quality_inputs(
+        tmp_path,
+        repetition_percentages=(),
+    )
+
+    result = evaluate_squat_analysis_quality(
+        pose,
+        segmentation,
+        quality,
+        case_id="caso_001",
+        output_dir=tmp_path / "outputs",
+    )
+
+    assert result.status == "no_apto_para_analisis"
+    assert result.eligible_for_analysis is False
+    assert result.eligible_repetition_indexes == []
 
 
 def test_quality_gate_can_disable_peak_requirement(tmp_path: Path) -> None:

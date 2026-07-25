@@ -162,7 +162,7 @@ export default async function CaseDetailPage({
         />
         <SummaryCard
           icon={CheckCircle2Icon}
-          label="Patrones presentes"
+          label="Hallazgos por repetición"
           value={String(report.findings?.detected_findings.length ?? 0)}
         />
         <SummaryCard
@@ -231,7 +231,10 @@ export default async function CaseDetailPage({
           <CardContent className="space-y-3">
             {report.findings?.decisions.length ? (
               report.findings.decisions.map((decision) => (
-                <FindingSummary key={decision.finding} decision={decision} />
+                <FindingSummary
+                  key={`${decision.repetition_index}-${decision.finding}`}
+                  decision={decision}
+                />
               ))
             ) : (
               <EmptyEvidence text="No se emitieron decisiones biomecánicas para este registro." />
@@ -244,16 +247,19 @@ export default async function CaseDetailPage({
         <section className="mt-7">
           <SectionHeading
             eyebrow="Trazabilidad"
-            title="Valores, umbrales y concordancia entre repeticiones"
-            description="La etiqueta final se conserva junto al valor calculado y al criterio provisional aplicado."
+            title="Valores y umbrales por repetición"
+            description="Cada ejecución conserva su propia etiqueta, valor calculado y criterio provisional aplicado."
           />
           <div className="mt-4 grid gap-4 lg:grid-cols-2">
             {report.findings.decisions.map((decision) => (
-              <Card key={decision.finding}>
+              <Card
+                key={`${decision.repetition_index}-${decision.finding}`}
+              >
                 <CardHeader>
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <CardTitle className="text-base">
+                        Repetición {decision.repetition_index} ·{" "}
                         {findingLabels[decision.finding] ?? decision.finding}
                       </CardTitle>
                       <CardDescription className="mt-1 font-mono text-xs">
@@ -491,6 +497,7 @@ function FindingSummary({ decision }: { decision: SquatRuleDecision }) {
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-sm font-semibold">
+            Repetición {decision.repetition_index} ·{" "}
             {findingLabels[decision.finding] ?? decision.finding}
           </p>
           <p className="mt-1 text-xs text-muted-foreground">
@@ -512,7 +519,7 @@ function FindingSummary({ decision }: { decision: SquatRuleDecision }) {
               )
         }
       >
-        <ProgressLabel>Valor agregado</ProgressLabel>
+        <ProgressLabel>Valor de la ejecución</ProgressLabel>
         <span className="ml-auto font-mono text-sm text-muted-foreground">
           {formatMetric(decision.aggregate_value ?? null, decision.unit)}
         </span>

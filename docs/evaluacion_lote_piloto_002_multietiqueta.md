@@ -87,12 +87,13 @@ El sistema produjo:
 | 3 | 9,55 | Presente a la izquierda | 27,29 | Presente |
 
 El desplazamiento pélvico se observa con mayor claridad en la tercera
-repetición. La regla exige que al menos dos de tres repeticiones coincidan en
-estado y dirección. Por ello, el resultado final de pelvis es
-`no_concluyente`, aunque una repetición sí supere el umbral.
+repetición. Esta evaluación documentó el comportamiento de la versión 0.1.0,
+que exigía coincidencia entre repeticiones. Desde la versión 0.2.0, cada
+ejecución conserva su propio resultado: repetición 1 `no_concluyente`,
+repetición 2 `ausente` y repetición 3 `presente` hacia la izquierda.
 
-Esta salida es preferible a declarar presencia a partir del promedio o de una
-sola repetición, porque conserva la variabilidad real del caso.
+La nueva salida conserva la variabilidad real sin convertir ejecuciones
+diferentes en un único resultado del video.
 
 ### 5.2 Presencia simultánea de patrones
 
@@ -100,7 +101,7 @@ El caso demuestra que un video puede producir varias salidas:
 
 - un patrón específico positivo: valgo izquierdo;
 - una consecuencia transversal positiva: asimetría bilateral;
-- una señal adicional insuficientemente repetible: pelvis no concluyente.
+- una señal pélvica variable entre repeticiones, registrada por ejecución.
 
 El sistema no obliga a seleccionar una única clase. Cada patrón se evalúa
 mediante una regla independiente y se conserva su propio estado.

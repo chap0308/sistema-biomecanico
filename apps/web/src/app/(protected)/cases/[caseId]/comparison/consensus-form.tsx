@@ -22,9 +22,11 @@ const textareaClassName =
 export function ConsensusForm({
   caseId,
   patternKey,
+  repetitionIndex,
 }: {
   caseId: string;
   patternKey: ExpertPatternKey;
+  repetitionIndex: number;
 }) {
   const router = useRouter();
   const [pending, setPending] = useState(false);
@@ -46,7 +48,7 @@ export function ConsensusForm({
     setSaved(false);
     try {
       await apiClientFetch(
-        `/squat/cases/${encodeURIComponent(caseId)}/comparison/references/${patternKey}`,
+        `/squat/cases/${encodeURIComponent(caseId)}/comparison/references/${repetitionIndex}/${patternKey}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

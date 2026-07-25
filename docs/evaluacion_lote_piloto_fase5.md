@@ -18,7 +18,7 @@ participante.
 Los siete videos nuevos se procesaron con las etapas disponibles:
 
 1. extracción de pose 2D;
-2. segmentación de las tres repeticiones;
+2. segmentación de una o más repeticiones;
 3. control de calidad analítica;
 4. cálculo de variables biomecánicas por fotograma y repetición;
 5. revisión visual del overlay en máxima profundidad.
@@ -29,8 +29,10 @@ factibilidad técnica, pero no confirma por sí solo la etiqueta biomecánica.
 
 ## 3. Respuesta de las variables
 
-Los valores siguientes corresponden a la mediana de las tres repeticiones en
-máxima profundidad. El signo positivo del tronco y la pelvis representa el
+Los valores siguientes correspondían a la mediana exploratoria de las variables
+en máxima profundidad del lote inicial. La implementación vigente conserva el
+valor y la clasificación de cada repetición de forma independiente, por lo que
+no utiliza esa mediana como salida del sistema. El signo positivo del tronco y la pelvis representa el
 lado anatómico izquierdo; en las rodillas, el signo positivo representa
 desviación medial.
 

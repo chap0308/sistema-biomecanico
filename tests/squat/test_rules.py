@@ -106,7 +106,7 @@ def test_ruleset_contract_and_cli_default_are_versioned() -> None:
         ]
     )
 
-    assert ruleset.ruleset_version == "0.1.0-provisional"
+    assert ruleset.ruleset_version == "0.2.0-provisional"
     assert ruleset.status == "provisional"
     assert args.ruleset == DEFAULT_RULESET
 
@@ -122,18 +122,17 @@ def test_classification_exports_multilabel_traceable_findings(tmp_path: Path) ->
         output_dir=tmp_path / "outputs",
     )
 
-    assert result.detected_findings == [
-        "inclinacion_lateral_tronco",
-        "desplazamiento_lateral_pelvis",
-        "valgo_dinamico_visible",
-        "asimetria_bilateral_observable",
-    ]
-    decisions = {decision.finding: decision for decision in result.decisions}
-    assert decisions["inclinacion_lateral_tronco"].direction == "izquierda"
-    assert decisions["desplazamiento_lateral_pelvis"].direction == "derecha"
-    assert decisions["valgo_dinamico_visible"].direction == "izquierda"
+    assert len(result.decisions) == 12
+    assert len(result.detected_findings) == 12
+    decisions = {
+        (decision.repetition_index, decision.finding): decision
+        for decision in result.decisions
+    }
+    assert decisions[(1, "inclinacion_lateral_tronco")].direction == "izquierda"
+    assert decisions[(1, "desplazamiento_lateral_pelvis")].direction == "derecha"
+    assert decisions[(1, "valgo_dinamico_visible")].direction == "izquierda"
     assert (
-        decisions["asimetria_bilateral_observable"].direction
+        decisions[(1, "asimetria_bilateral_observable")].direction
         == "predominio_izquierdo"
     )
     assert Path(result.artifacts.rule_evidence_csv).exists()
@@ -158,14 +157,19 @@ def test_rules_preserve_inconclusive_band_and_missing_values(tmp_path: Path) -> 
         output_dir=tmp_path / "outputs",
     )
 
-    decisions = {decision.finding: decision for decision in result.decisions}
-    assert decisions["inclinacion_lateral_tronco"].status == "no_concluyente"
-    assert decisions["desplazamiento_lateral_pelvis"].status == "ausente"
-    assert decisions["valgo_dinamico_visible"].status == "no_concluyente"
-    assert decisions["asimetria_bilateral_observable"].status == "no_concluyente"
+    decisions = {
+        (decision.repetition_index, decision.finding): decision
+        for decision in result.decisions
+    }
+    assert decisions[(1, "inclinacion_lateral_tronco")].status == "no_concluyente"
+    assert decisions[(1, "desplazamiento_lateral_pelvis")].status == "ausente"
+    assert decisions[(1, "valgo_dinamico_visible")].status == "no_concluyente"
+    assert decisions[(1, "asimetria_bilateral_observable")].status == "no_concluyente"
 
 
-def test_signed_rules_require_directional_consensus(tmp_path: Path) -> None:
+def test_signed_rules_classify_each_repetition_independently(
+    tmp_path: Path,
+) -> None:
     biomechanics, quality = _write_rule_inputs(
         tmp_path,
         trunk=(15.0, -15.0, 0.0),
@@ -180,10 +184,16 @@ def test_signed_rules_require_directional_consensus(tmp_path: Path) -> None:
         output_dir=tmp_path / "outputs",
     )
 
-    decisions = {decision.finding: decision for decision in result.decisions}
-    assert decisions["inclinacion_lateral_tronco"].status == "no_concluyente"
-    assert decisions["inclinacion_lateral_tronco"].direction is None
-    assert decisions["desplazamiento_lateral_pelvis"].status == "no_concluyente"
+    decisions = {
+        (decision.repetition_index, decision.finding): decision
+        for decision in result.decisions
+    }
+    assert decisions[(1, "inclinacion_lateral_tronco")].direction == "izquierda"
+    assert decisions[(2, "inclinacion_lateral_tronco")].direction == "derecha"
+    assert decisions[(3, "inclinacion_lateral_tronco")].status == "ausente"
+    assert decisions[(1, "desplazamiento_lateral_pelvis")].direction == "izquierda"
+    assert decisions[(2, "desplazamiento_lateral_pelvis")].direction == "derecha"
+    assert decisions[(3, "desplazamiento_lateral_pelvis")].status == "ausente"
 
 
 def test_valgus_rule_can_report_bilateral_presence(tmp_path: Path) -> None:

@@ -298,6 +298,8 @@ class SquatQualityGateSummary(BaseModel):
     stage: Literal["control_calidad_analitica"] = "control_calidad_analitica"
     status: QualityGateStatus
     eligible_for_analysis: bool
+    eligible_repetition_indexes: list[int] = Field(default_factory=list)
+    excluded_repetition_indexes: list[int] = Field(default_factory=list)
     checks: list[SquatQualityCheck]
     exclusion_reasons: list[str]
     warnings: list[str]
@@ -327,13 +329,13 @@ class SquatRuleSet(BaseModel):
     ruleset_version: str
     status: Literal["provisional", "frozen"]
     calibration_basis: list[str]
-    minimum_repetitions_for_consensus: int = Field(default=2, ge=1)
     rules: dict[str, SquatRuleThreshold]
 
 
 class SquatRuleDecision(BaseModel):
     """Traceable classification produced by one biomechanical rule."""
 
+    repetition_index: int = Field(default=1, ge=1)
     finding: str
     status: RuleDecisionStatus
     direction: str | None = None

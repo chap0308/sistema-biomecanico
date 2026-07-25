@@ -61,58 +61,59 @@ def classify_squat_findings(
         raise ValueError("quality gate rejected the case for biomechanical analysis")
 
     ruleset = load_squat_ruleset(ruleset_path)
-    decisions = [
-        _signed_rule_decision(
-            finding="inclinacion_lateral_tronco",
-            values=[
-                repetition.trunk_inclination_at_peak_deg
-                for repetition in biomechanics.repetitions
-            ],
-            threshold=ruleset.rules["inclinacion_lateral_tronco"],
-            positive_direction="izquierda",
-            negative_direction="derecha",
-            minimum_consensus=ruleset.minimum_repetitions_for_consensus,
-        ),
-        _signed_rule_decision(
-            finding="desplazamiento_lateral_pelvis",
-            values=[
-                repetition.pelvis_shift_at_peak_pct
-                for repetition in biomechanics.repetitions
-            ],
-            threshold=ruleset.rules["desplazamiento_lateral_pelvis"],
-            positive_direction="izquierda",
-            negative_direction="derecha",
-            minimum_consensus=ruleset.minimum_repetitions_for_consensus,
-        ),
-        _valgus_decision(
-            left_values=[
-                repetition.left_knee_medial_deviation_at_peak_pct
-                for repetition in biomechanics.repetitions
-            ],
-            right_values=[
-                repetition.right_knee_medial_deviation_at_peak_pct
-                for repetition in biomechanics.repetitions
-            ],
-            threshold=ruleset.rules["valgo_dinamico_visible"],
-            minimum_consensus=ruleset.minimum_repetitions_for_consensus,
-        ),
-        _asymmetry_decision(
-            difference_values=[
-                repetition.bilateral_alignment_difference_at_peak_pct
-                for repetition in biomechanics.repetitions
-            ],
-            left_values=[
-                repetition.left_knee_medial_deviation_at_peak_pct
-                for repetition in biomechanics.repetitions
-            ],
-            right_values=[
-                repetition.right_knee_medial_deviation_at_peak_pct
-                for repetition in biomechanics.repetitions
-            ],
-            threshold=ruleset.rules["asimetria_bilateral_observable"],
-            minimum_consensus=ruleset.minimum_repetitions_for_consensus,
-        ),
-    ]
+    eligible_indexes = set(
+        quality.eligible_repetition_indexes
+        or [repetition.repetition_index for repetition in biomechanics.repetitions]
+    )
+    decisions: list[SquatRuleDecision] = []
+    for repetition in biomechanics.repetitions:
+        if repetition.repetition_index not in eligible_indexes:
+            continue
+        decisions.extend(
+            [
+                _signed_rule_decision(
+                    repetition_index=repetition.repetition_index,
+                    finding="inclinacion_lateral_tronco",
+                    values=[repetition.trunk_inclination_at_peak_deg],
+                    threshold=ruleset.rules["inclinacion_lateral_tronco"],
+                    positive_direction="izquierda",
+                    negative_direction="derecha",
+                ),
+                _signed_rule_decision(
+                    repetition_index=repetition.repetition_index,
+                    finding="desplazamiento_lateral_pelvis",
+                    values=[repetition.pelvis_shift_at_peak_pct],
+                    threshold=ruleset.rules["desplazamiento_lateral_pelvis"],
+                    positive_direction="izquierda",
+                    negative_direction="derecha",
+                ),
+                _valgus_decision(
+                    repetition_index=repetition.repetition_index,
+                    left_values=[
+                        repetition.left_knee_medial_deviation_at_peak_pct
+                    ],
+                    right_values=[
+                        repetition.right_knee_medial_deviation_at_peak_pct
+                    ],
+                    threshold=ruleset.rules["valgo_dinamico_visible"],
+                ),
+                _asymmetry_decision(
+                    repetition_index=repetition.repetition_index,
+                    difference_values=[
+                        repetition.bilateral_alignment_difference_at_peak_pct
+                    ],
+                    left_values=[
+                        repetition.left_knee_medial_deviation_at_peak_pct
+                    ],
+                    right_values=[
+                        repetition.right_knee_medial_deviation_at_peak_pct
+                    ],
+                    threshold=ruleset.rules[
+                        "asimetria_bilateral_observable"
+                    ],
+                ),
+            ]
+        )
 
     case_output_dir = Path(output_dir) / case_id
     case_output_dir.mkdir(parents=True, exist_ok=True)
@@ -135,12 +136,12 @@ def classify_squat_findings(
         quality_gate_status=quality.status,
         decisions=decisions,
         detected_findings=[
-            decision.finding
+            f"repeticion_{decision.repetition_index}:{decision.finding}"
             for decision in decisions
             if decision.status == "presente"
         ],
         inconclusive_findings=[
-            decision.finding
+            f"repeticion_{decision.repetition_index}:{decision.finding}"
             for decision in decisions
             if decision.status == "no_concluyente"
         ],
@@ -159,12 +160,12 @@ def classify_squat_findings(
 
 def _signed_rule_decision(
     *,
+    repetition_index: int,
     finding: str,
     values: list[float | None],
     threshold: SquatRuleThreshold,
     positive_direction: str,
     negative_direction: str,
-    minimum_consensus: int,
 ) -> SquatRuleDecision:
     states = [_classify_magnitude(value, threshold) for value in values]
     positive_present = sum(
@@ -175,13 +176,13 @@ def _signed_rule_decision(
         state == "presente" and value is not None and value < 0.0
         for state, value in zip(states, values, strict=False)
     )
-    if positive_present >= minimum_consensus:
+    if positive_present:
         status: RuleDecisionStatus = "presente"
         direction = positive_direction
-    elif negative_present >= minimum_consensus:
+    elif negative_present:
         status = "presente"
         direction = negative_direction
-    elif states.count("ausente") >= minimum_consensus:
+    elif "ausente" in states:
         status = "ausente"
         direction = None
     else:
@@ -189,6 +190,7 @@ def _signed_rule_decision(
         direction = None
     aggregate = _finite_median(values)
     return SquatRuleDecision(
+        repetition_index=repetition_index,
         finding=finding,
         status=status,
         direction=direction,
@@ -200,24 +202,24 @@ def _signed_rule_decision(
         absent_max=threshold.absent_max,
         present_min=threshold.present_min,
         rationale=(
-            f"Se usa la magnitud de {threshold.metric}; al menos "
-            f"{minimum_consensus} repeticiones deben coincidir en estado y dirección. "
-            f"El signo determina la dirección anatómica."
+            f"Se clasifica exclusivamente la repetición {repetition_index} "
+            f"mediante la magnitud de {threshold.metric}. El signo determina "
+            "la dirección anatómica."
         ),
     )
 
 
 def _valgus_decision(
     *,
+    repetition_index: int,
     left_values: list[float | None],
     right_values: list[float | None],
     threshold: SquatRuleThreshold,
-    minimum_consensus: int,
 ) -> SquatRuleDecision:
     left_states = [_classify_positive(value, threshold) for value in left_values]
     right_states = [_classify_positive(value, threshold) for value in right_values]
-    left_status = _consensus_state(left_states, minimum_consensus)
-    right_status = _consensus_state(right_states, minimum_consensus)
+    left_status = _single_repetition_state(left_states)
+    right_status = _single_repetition_state(right_states)
     if left_status == "presente" and right_status == "presente":
         status: RuleDecisionStatus = "presente"
         direction = "bilateral"
@@ -249,6 +251,7 @@ def _valgus_decision(
         for left, right in zip(left_states, right_states, strict=False)
     ]
     return SquatRuleDecision(
+        repetition_index=repetition_index,
         finding="valgo_dinamico_visible",
         status=status,
         direction=direction,
@@ -269,14 +272,14 @@ def _valgus_decision(
 
 def _asymmetry_decision(
     *,
+    repetition_index: int,
     difference_values: list[float | None],
     left_values: list[float | None],
     right_values: list[float | None],
     threshold: SquatRuleThreshold,
-    minimum_consensus: int,
 ) -> SquatRuleDecision:
     states = [_classify_magnitude(value, threshold) for value in difference_values]
-    status = _consensus_state(states, minimum_consensus)
+    status = _single_repetition_state(states)
     aggregate = _finite_median(difference_values)
     left_median = _finite_median(left_values)
     right_median = _finite_median(right_values)
@@ -288,6 +291,7 @@ def _asymmetry_decision(
             else "predominio_derecho"
         )
     return SquatRuleDecision(
+        repetition_index=repetition_index,
         finding="asimetria_bilateral_observable",
         status=status,
         direction=direction,
@@ -300,7 +304,7 @@ def _asymmetry_decision(
         present_min=threshold.present_min,
         rationale=(
             "Se evalúa la diferencia absoluta entre las alineaciones de ambas "
-            f"rodillas y se exige coincidencia en {minimum_consensus} repeticiones."
+            f"rodillas en la repetición {repetition_index}."
         ),
     )
 
@@ -332,14 +336,11 @@ def _classify_positive(
     return "no_concluyente"
 
 
-def _consensus_state(
+def _single_repetition_state(
     states: list[RuleDecisionStatus],
-    minimum_consensus: int,
 ) -> RuleDecisionStatus:
-    if states.count("presente") >= minimum_consensus:
-        return "presente"
-    if states.count("ausente") >= minimum_consensus:
-        return "ausente"
+    if len(states) == 1:
+        return states[0]
     return "no_concluyente"
 
 
@@ -376,6 +377,7 @@ def _write_rule_evidence(
     decisions: list[SquatRuleDecision],
 ) -> None:
     fieldnames = (
+        "repetition_index",
         "finding",
         "status",
         "direction",
@@ -394,6 +396,7 @@ def _write_rule_evidence(
         for decision in decisions:
             writer.writerow(
                 {
+                    "repetition_index": decision.repetition_index,
                     "finding": decision.finding,
                     "status": decision.status,
                     "direction": decision.direction or "",

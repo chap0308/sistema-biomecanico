@@ -25,10 +25,12 @@ export function MetricEvidence({
       {decision.repetition_values.map((value, index) => {
         const state = decision.repetition_states[index] ?? "no_concluyente";
         return (
-          <div key={`${decision.finding}-${index}`}>
+          <div
+            key={`${decision.repetition_index}-${decision.finding}-${index}`}
+          >
             <div className="mb-1 flex items-center justify-between gap-3 text-xs">
               <span className="text-muted-foreground">
-                Repetición {index + 1}
+                Repetición {decision.repetition_index}
               </span>
               <span className="font-mono font-medium tabular-nums">
                 {formatMetric(value, decision.unit)}

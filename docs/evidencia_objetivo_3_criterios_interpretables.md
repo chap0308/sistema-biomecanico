@@ -11,7 +11,7 @@ implementa un motor determinista que:
 
 - consume exclusivamente métricas calculadas en la Fase 4;
 - aplica reglas y umbrales almacenados fuera del código;
-- evalúa las tres repeticiones;
+- evalúa cada repetición válida de forma independiente;
 - conserva los estados `presente`, `ausente` y `no_concluyente`;
 - permite múltiples hallazgos por video;
 - registra el valor, la dirección, la banda de decisión y la justificación;
@@ -34,13 +34,13 @@ implementa un motor determinista que:
 ```mermaid
 flowchart LR
     A["Video frontal"] --> B["Pose 2D"]
-    B --> C["Segmentación de 3 repeticiones"]
+    B --> C["Segmentación de una o más repeticiones"]
     C --> D["Control de calidad"]
     D -->|"No apto"| E["Bloqueo del análisis"]
     D -->|"Apto o revisión"| F["Variables biomecánicas"]
     F --> G["Ruleset versionado"]
     G --> H["Decisión por repetición"]
-    H --> I["Consenso mínimo 2 de 3"]
+    H --> I["Clasificación independiente por repetición"]
     I --> J["Presente"]
     I --> K["Ausente"]
     I --> L["No concluyente"]
@@ -65,7 +65,7 @@ Versión implementada: `0.1.0-provisional`.
 
 Los porcentajes se normalizan por el ancho inicial de hombros. Los valores son
 bandas de ingeniería provisionales, no puntos de corte clínicos. Se exige
-coincidencia de al menos dos de las tres repeticiones.
+aplicación independiente de la regla en cada repetición válida, sin consenso entre ejecuciones.
 
 ### 4.1 Convenciones direccionales
 

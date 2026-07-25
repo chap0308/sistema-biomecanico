@@ -126,7 +126,7 @@ La extracción base de pose 2D ya fue implementada con:
 
 Las Fases 3 y 4 quedaron implementadas y validadas sobre los cuatro videos iniciales. La Fase 3 segmenta repeticiones y fases; la Fase 4 calcula variables biomecánicas por fotograma y repetición sin usar etiquetas ni umbrales. La siguiente fase activa es la definición de reglas interpretables para traducir las variables en compensaciones observables.
 
-Antes de la Fase 5 se incorporó un control transversal de calidad analítica. Este control acepta, deriva a revisión o excluye cada video según procesamiento, disponibilidad de puntos, tres repeticiones y validez de la máxima profundidad. No utiliza umbrales biomecánicos y no clasifica compensaciones.
+Antes de la Fase 5 se incorporó un control transversal de calidad analítica. Este control acepta, deriva a revisión o excluye cada video según procesamiento, disponibilidad de puntos, presencia de al menos una repetición completa y validez de la máxima profundidad. Cada repetición se verifica por separado. No utiliza umbrales biomecánicos y no clasifica compensaciones.
 
 El primer lote controlado de siete videos superó el control técnico y fue
 evaluado en `docs/evaluacion_lote_piloto_fase5.md`. La Fase 5 puede comenzar
@@ -135,7 +135,7 @@ multietiqueta. La calibración final permanece bloqueada hasta repetir el caso
 de valgo derecho, incorporar valgo bilateral y ampliar negativos y réplicas.
 
 La estructura de la Fase 5 ya está implementada: configuración versionada,
-bandas de decisión, consenso entre repeticiones, salida multietiqueta,
+bandas de decisión, clasificación independiente por repetición, salida multietiqueta,
 trazabilidad y artefactos `findings.json` y `rule_evidence.csv`. El siguiente
 incremento consiste en ampliar videos piloto, revisar falsos positivos de
 asimetría y preparar la visualización integrada del prototipo antes de congelar

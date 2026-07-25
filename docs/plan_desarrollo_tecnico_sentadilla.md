@@ -491,7 +491,7 @@ La calidad no debe resolverse mediante un único `try/catch` general. Las condic
 |---|---|---|---|
 | Registro y protocolo | Vista, iluminación, fondo, encuadre, ejecución o apoyo fuera del protocolo | Rechazar antes de pose y registrar motivo en el Instrumento 1 | OE1 y metodología |
 | Extracción de pose | Pérdida de puntos críticos, bajo porcentaje válido o procesamiento incompleto | `apto`, `revisión requerida` o `no apto` mediante puerta de calidad | OE1 y OE4 |
-| Segmentación | Cantidad distinta de tres repeticiones, ciclo incompleto o máxima profundidad no válida | No continuar al análisis formal; permitir depuración local | OE2 y OE4 |
+| Segmentación | Ausencia de repeticiones completas o máxima profundidad no válida en una ejecución | No analizar la repetición afectada; detener el caso solo si ninguna ejecución resulta válida | OE2 y OE4 |
 | Cálculo biomecánico | Referencia de normalización inválida, valores no finitos o variable ausente en fase crítica | Marcar variable o repetición como no calculable; no imputar silenciosamente | OE2 |
 | Reglas interpretables | Valor próximo al umbral, señal contradictoria o evidencia insuficiente | Salida `no concluyente` para el patrón afectado | OE3 |
 | Salida multietiqueta | Más de una regla positiva en el mismo video | Conservar todas las etiquetas compatibles y su evidencia independiente | OE3 y OE4 |

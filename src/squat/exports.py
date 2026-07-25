@@ -86,7 +86,7 @@ def build_case_pdf(
         )
         table_rows = [
             [
-                _PATTERN_NAMES[row.pattern_key],
+                f"R{row.repetition_index} · {_PATTERN_NAMES[row.pattern_key]}",
                 _label(row.reference.label if row.reference else None),
                 _label(row.system_label),
                 _match_label(row.exact_match),
@@ -192,6 +192,7 @@ def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
     sheet.append(
         [
             "Patrón",
+            "Repetición",
             "Estado del sistema",
             "Dirección",
             "Valor agregado",
@@ -204,6 +205,7 @@ def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
         sheet.append(
             [
                 decision.get("finding"),
+                decision.get("repetition_index"),
                 decision.get("status"),
                 decision.get("direction"),
                 decision.get("aggregate_value"),
@@ -222,6 +224,7 @@ def _instrument_3_sheet(
     sheet.append(
         [
             "Código del video",
+            "Ejecución",
             "Patrón",
             "Evaluador 1",
             "Evaluador 2",
@@ -244,6 +247,7 @@ def _instrument_3_sheet(
         sheet.append(
             [
                 comparison.case_id,
+                f"{comparison.case_id}-repeticion-{row.repetition_index}",
                 _PATTERN_NAMES[row.pattern_key],
                 *expert_labels[:3],
                 _label(row.system_label),
@@ -264,6 +268,7 @@ def _analysis_sheet(
     sheet = workbook.create_sheet("Matriz de análisis")
     sheet.append(
         [
+            "Ejecución",
             "Patrón",
             "Referencia final",
             "Salida del sistema",
@@ -275,6 +280,7 @@ def _analysis_sheet(
     for row in rows:
         sheet.append(
             [
+                f"repeticion-{row.repetition_index}",
                 _PATTERN_NAMES[row.pattern_key],
                 _label(row.reference.label if row.reference else None),
                 _label(row.system_label),

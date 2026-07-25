@@ -40,23 +40,27 @@ const choiceSchema = z.enum([
   "no_concluyente",
 ]);
 
+const patternResponseSchema = z.object({
+  choice: choiceSchema,
+  confidence: z.enum(["baja", "media", "alta"]),
+  observation: z.string().max(500),
+});
+
+const repetitionEvaluationSchema = z.object({
+  repetitionIndex: z.number().int().positive(),
+  trunk: patternResponseSchema,
+  pelvis: patternResponseSchema,
+  valgus: patternResponseSchema,
+  asymmetry: patternResponseSchema,
+});
+
 const evaluationSchema = z.object({
-  trunk: choiceSchema,
-  trunkConfidence: z.enum(["baja", "media", "alta"]),
-  trunkObservation: z.string().max(500),
-  pelvis: choiceSchema,
-  pelvisConfidence: z.enum(["baja", "media", "alta"]),
-  pelvisObservation: z.string().max(500),
-  valgus: choiceSchema,
-  valgusConfidence: z.enum(["baja", "media", "alta"]),
-  valgusObservation: z.string().max(500),
-  asymmetry: choiceSchema,
-  asymmetryConfidence: z.enum(["baja", "media", "alta"]),
-  asymmetryObservation: z.string().max(500),
+  repetitions: z.array(repetitionEvaluationSchema).min(1),
   generalObservation: z.string().max(1000),
 });
 
 type EvaluationValues = z.infer<typeof evaluationSchema>;
+type EvaluationChoice = z.infer<typeof choiceSchema>;
 type EvaluationStatus = "draft" | "submitted";
 
 const selectClassName =
@@ -70,25 +74,13 @@ const textareaClassName =
 
 const patternDefinitions: Array<{
   field: "trunk" | "pelvis" | "valgus" | "asymmetry";
-  confidenceField:
-    | "trunkConfidence"
-    | "pelvisConfidence"
-    | "valgusConfidence"
-    | "asymmetryConfidence";
-  observationField:
-    | "trunkObservation"
-    | "pelvisObservation"
-    | "valgusObservation"
-    | "asymmetryObservation";
   key: ExpertPatternKey;
   title: string;
   description: string;
-  options: Array<[EvaluationValues["trunk"], string]>;
+  options: Array<[EvaluationChoice, string]>;
 }> = [
   {
     field: "trunk",
-    confidenceField: "trunkConfidence",
-    observationField: "trunkObservation",
     key: "trunk_lateral_inclination",
     title: "Inclinación lateral del tronco",
     description: "Desviación lateral observable durante la ejecución.",
@@ -96,8 +88,6 @@ const patternDefinitions: Array<{
   },
   {
     field: "pelvis",
-    confidenceField: "pelvisConfidence",
-    observationField: "pelvisObservation",
     key: "pelvis_lateral_shift",
     title: "Desplazamiento lateral de pelvis",
     description: "Traslación visible de la pelvis hacia un lado.",
@@ -105,8 +95,6 @@ const patternDefinitions: Array<{
   },
   {
     field: "valgus",
-    confidenceField: "valgusConfidence",
-    observationField: "valgusObservation",
     key: "visible_dynamic_valgus",
     title: "Valgo dinámico visible",
     description: "Desplazamiento medial observable de una o ambas rodillas.",
@@ -121,8 +109,6 @@ const patternDefinitions: Array<{
   },
   {
     field: "asymmetry",
-    confidenceField: "asymmetryConfidence",
-    observationField: "asymmetryObservation",
     key: "bilateral_asymmetry",
     title: "Asimetría bilateral observable",
     description: "Diferencia visible entre los lados durante el movimiento.",
@@ -161,9 +147,13 @@ export function EvaluationForm({
   function save(status: EvaluationStatus) {
     return handleSubmit(async (values) => {
       const items = buildEvaluationItems(values);
-      if (status === "submitted" && items.length !== 4) {
+      if (
+        status === "submitted" &&
+        items.length !== values.repetitions.length * 4
+      ) {
         setError("root", {
-          message: "Clasifica los cuatro patrones antes de enviar.",
+          message:
+            "Clasifica los cuatro patrones de cada repetición antes de enviar.",
         });
         return;
       }
@@ -203,57 +193,86 @@ export function EvaluationForm({
 
   return (
     <form className="space-y-4">
-      {patternDefinitions.map((pattern) => (
-        <Card key={pattern.key}>
-          <CardHeader>
-            <CardTitle className="text-base">{pattern.title}</CardTitle>
-            <CardDescription>{pattern.description}</CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-4 md:grid-cols-[1fr_0.55fr]">
-            <Field>
-              <FieldLabel htmlFor={pattern.field}>Clasificación</FieldLabel>
-              <select
-                id={pattern.field}
-                className={selectClassName}
-                disabled={locked}
-                {...register(pattern.field)}
-              >
-                {pattern.options.map(([value, label]) => (
-                  <option key={value} value={value}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </Field>
-            <Field>
-              <FieldLabel htmlFor={pattern.confidenceField}>
-                Confianza
-              </FieldLabel>
-              <select
-                id={pattern.confidenceField}
-                className={selectClassName}
-                disabled={locked}
-                {...register(pattern.confidenceField)}
-              >
-                <option value="alta">Alta</option>
-                <option value="media">Media</option>
-                <option value="baja">Baja</option>
-              </select>
-            </Field>
-            <Field className="md:col-span-2">
-              <FieldLabel htmlFor={pattern.observationField}>
-                Observación opcional
-              </FieldLabel>
-              <textarea
-                id={pattern.observationField}
-                className={textareaClassName}
-                disabled={locked}
-                {...register(pattern.observationField)}
-              />
-            </Field>
-          </CardContent>
-        </Card>
-      ))}
+      {defaultRepetitionIndexes(assignment).map(
+        (repetitionIndex, repetitionPosition) => (
+          <section
+            key={repetitionIndex}
+            className="space-y-4 rounded-2xl border border-primary/20 bg-primary/[0.025] p-4"
+          >
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
+                {assignment.case_id}-repeticion-{repetitionIndex}
+              </p>
+              <h3 className="mt-1 text-lg font-semibold">
+                Repetición {repetitionIndex}
+              </h3>
+            </div>
+            {patternDefinitions.map((pattern) => {
+              const fieldBase =
+                `repetitions.${repetitionPosition}.${pattern.field}` as const;
+              return (
+                <Card key={`${repetitionIndex}-${pattern.key}`}>
+                  <CardHeader>
+                    <CardTitle className="text-base">{pattern.title}</CardTitle>
+                    <CardDescription>{pattern.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="grid gap-4 md:grid-cols-[1fr_0.55fr]">
+                    <Field>
+                      <FieldLabel
+                        htmlFor={`${fieldBase}.choice`}
+                      >
+                        Clasificación
+                      </FieldLabel>
+                      <select
+                        id={`${fieldBase}.choice`}
+                        className={selectClassName}
+                        disabled={locked}
+                        {...register(`${fieldBase}.choice`)}
+                      >
+                        {pattern.options.map(([value, label]) => (
+                          <option key={value} value={value}>
+                            {label}
+                          </option>
+                        ))}
+                      </select>
+                    </Field>
+                    <Field>
+                      <FieldLabel
+                        htmlFor={`${fieldBase}.confidence`}
+                      >
+                        Confianza
+                      </FieldLabel>
+                      <select
+                        id={`${fieldBase}.confidence`}
+                        className={selectClassName}
+                        disabled={locked}
+                        {...register(`${fieldBase}.confidence`)}
+                      >
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                      </select>
+                    </Field>
+                    <Field className="md:col-span-2">
+                      <FieldLabel
+                        htmlFor={`${fieldBase}.observation`}
+                      >
+                        Observación opcional
+                      </FieldLabel>
+                      <textarea
+                        id={`${fieldBase}.observation`}
+                        className={textareaClassName}
+                        disabled={locked}
+                        {...register(`${fieldBase}.observation`)}
+                      />
+                    </Field>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </section>
+        ),
+      )}
 
       <Card>
         <CardHeader>
@@ -323,7 +342,7 @@ export function EvaluationForm({
   );
 }
 
-function directionalOptions(): Array<[EvaluationValues["trunk"], string]> {
+function directionalOptions(): Array<[EvaluationChoice, string]> {
   return [
     ["", "Seleccionar"],
     ["ausente", "Ausente"],
@@ -338,61 +357,78 @@ function defaultsFromAssignment(
 ): EvaluationValues {
   const items = new Map(
     (assignment.evaluation?.items ?? []).map((item) => [
-      item.pattern_key,
+      `${item.repetition_index}:${item.pattern_key}`,
       item,
     ]),
   );
   return {
-    trunk: choiceFromItem(items.get("trunk_lateral_inclination")),
-    trunkConfidence:
-      items.get("trunk_lateral_inclination")?.confidence ?? "media",
-    trunkObservation:
-      items.get("trunk_lateral_inclination")?.observation ?? "",
-    pelvis: choiceFromItem(items.get("pelvis_lateral_shift")),
-    pelvisConfidence: items.get("pelvis_lateral_shift")?.confidence ?? "media",
-    pelvisObservation:
-      items.get("pelvis_lateral_shift")?.observation ?? "",
-    valgus: choiceFromItem(items.get("visible_dynamic_valgus")),
-    valgusConfidence:
-      items.get("visible_dynamic_valgus")?.confidence ?? "media",
-    valgusObservation:
-      items.get("visible_dynamic_valgus")?.observation ?? "",
-    asymmetry: choiceFromItem(items.get("bilateral_asymmetry")),
-    asymmetryConfidence:
-      items.get("bilateral_asymmetry")?.confidence ?? "media",
-    asymmetryObservation:
-      items.get("bilateral_asymmetry")?.observation ?? "",
+    repetitions: defaultRepetitionIndexes(assignment).map(
+      (repetitionIndex) => ({
+        repetitionIndex,
+        trunk: responseDefaults(
+          items.get(`${repetitionIndex}:trunk_lateral_inclination`),
+        ),
+        pelvis: responseDefaults(
+          items.get(`${repetitionIndex}:pelvis_lateral_shift`),
+        ),
+        valgus: responseDefaults(
+          items.get(`${repetitionIndex}:visible_dynamic_valgus`),
+        ),
+        asymmetry: responseDefaults(
+          items.get(`${repetitionIndex}:bilateral_asymmetry`),
+        ),
+      }),
+    ),
     generalObservation: assignment.evaluation?.general_observation ?? "",
+  };
+}
+
+function defaultRepetitionIndexes(assignment: ExpertAssignment): number[] {
+  const indexes = assignment.repetitions.map(
+    (repetition) => repetition.repetition_index,
+  );
+  return indexes.length ? indexes : [1];
+}
+
+function responseDefaults(item?: ExpertEvaluationItem) {
+  return {
+    choice: choiceFromItem(item),
+    confidence: item?.confidence ?? ("media" as const),
+    observation: item?.observation ?? "",
   };
 }
 
 function choiceFromItem(
   item?: ExpertEvaluationItem,
-): EvaluationValues["trunk"] {
+): EvaluationChoice {
   if (!item) return "";
   if (item.classification !== "presente") return item.classification;
-  return `presente_${item.observed_side ?? "sin_direccion"}` as EvaluationValues["trunk"];
+  return `presente_${item.observed_side ?? "sin_direccion"}` as EvaluationChoice;
 }
 
 export function buildEvaluationItems(
   values: EvaluationValues,
 ): ExpertEvaluationItem[] {
-  return patternDefinitions.flatMap((pattern) => {
-    const choice = values[pattern.field];
-    if (!choice) return [];
-    const isPresent = choice.startsWith("presente_");
-    return [
-      {
-        pattern_key: pattern.key,
-        classification: isPresent
-          ? "presente"
-          : (choice as ExpertEvaluationItem["classification"]),
-        observed_side: isPresent
-          ? (choice.slice("presente_".length) as ExpertObservedSide)
-          : null,
-        confidence: values[pattern.confidenceField],
-        observation: values[pattern.observationField] || null,
-      },
-    ];
-  });
+  return values.repetitions.flatMap((repetition) =>
+    patternDefinitions.flatMap((pattern) => {
+      const response = repetition[pattern.field];
+      const choice = response.choice;
+      if (!choice) return [];
+      const isPresent = choice.startsWith("presente_");
+      return [
+        {
+          repetition_index: repetition.repetitionIndex,
+          pattern_key: pattern.key,
+          classification: isPresent
+            ? "presente"
+            : (choice as ExpertEvaluationItem["classification"]),
+          observed_side: isPresent
+            ? (choice.slice("presente_".length) as ExpertObservedSide)
+            : null,
+          confidence: response.confidence,
+          observation: response.observation || null,
+        },
+      ];
+    }),
+  );
 }

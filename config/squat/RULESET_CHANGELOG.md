@@ -1,5 +1,19 @@
 # Historial de conjuntos de reglas
 
+## 0.2.0-provisional - 2026-07-25
+
+Estado: desarrollo.
+
+Cambios:
+
+- conserva los umbrales provisionales de la versión 0.1.0;
+- elimina el consenso entre repeticiones;
+- aplica las cuatro reglas de forma independiente a cada repetición válida;
+- acepta videos con al menos una repetición completa;
+- mantiene cada salida identificada por repetición para evaluación experta y cálculo de métricas.
+
+Esta modificación cambia la unidad de clasificación, no el significado geométrico de las variables ni sus umbrales provisionales.
+
 ## 0.1.0-provisional - 2026-07-23
 
 Estado: desarrollo.

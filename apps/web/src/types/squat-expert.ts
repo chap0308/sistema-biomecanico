@@ -17,11 +17,19 @@ export type ExpertObservedSide =
   | "sin_direccion";
 
 export type ExpertEvaluationItem = {
+  repetition_index: number;
   pattern_key: ExpertPatternKey;
   classification: "presente" | "ausente" | "no_concluyente";
   observed_side: ExpertObservedSide | null;
   confidence: "baja" | "media" | "alta" | null;
   observation: string | null;
+};
+
+export type ExpertRepetition = {
+  repetition_index: number;
+  start_seconds: number;
+  peak_depth_seconds: number;
+  end_seconds: number;
 };
 
 export type ExpertEvaluation = {
@@ -40,5 +48,6 @@ export type ExpertAssignment = {
   status: "pending" | "in_progress" | "submitted";
   created_at: string;
   updated_at: string;
+  repetitions: ExpertRepetition[];
   evaluation: ExpertEvaluation | null;
 };

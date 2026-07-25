@@ -38,6 +38,7 @@ def _comparison_payload(*, complete: bool = True) -> dict[str, object]:
         judgments.extend(
             {
                 "evaluator_id": evaluator,
+                "repetition_index": 1,
                 "pattern_key": pattern,
                 "classification": "ausente",
                 "observed_side": None,
@@ -55,6 +56,7 @@ def _comparison_payload(*, complete: bool = True) -> dict[str, object]:
             "findings": {
                 "decisions": [
                     {
+                        "repetition_index": 1,
                         "finding": finding,
                         "status": "ausente",
                         "direction": None,
@@ -145,7 +147,7 @@ def test_manual_consensus_requires_an_observation(monkeypatch) -> None:
     try:
         response = TestClient(app).put(
             "/api/v1/squat/cases/caso_comparison_001/comparison/"
-            "references/trunk_lateral_inclination",
+            "references/1/trunk_lateral_inclination",
             json={
                 "classification": "ausente",
                 "observation": "",
@@ -172,7 +174,7 @@ def test_manual_consensus_cannot_override_direct_agreement(
     try:
         response = TestClient(app).put(
             "/api/v1/squat/cases/caso_comparison_001/comparison/"
-            "references/trunk_lateral_inclination",
+            "references/1/trunk_lateral_inclination",
             json={
                 "classification": "presente",
                 "observed_side": "izquierda",

@@ -16,6 +16,7 @@ import { requireRole } from "@/lib/auth/session";
 import type { ExpertAssignment } from "@/types/squat-expert";
 
 import { EvaluationForm } from "./evaluation-form";
+import { ExpertReviewPlayer } from "./expert-review-player";
 
 type ExpertAssignmentPageProps = {
   params: Promise<{ assignmentId: string }>;
@@ -95,16 +96,10 @@ export default async function ExpertAssignmentPage({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="overflow-hidden rounded-xl border bg-slate-950">
-            <video
-              className="aspect-video w-full object-contain"
-              controls
-              preload="metadata"
-              src={`/api/squat/expert/assignments/${assignment.assignment_id}/video`}
-            >
-              Tu navegador no admite la reproducción de video.
-            </video>
-          </div>
+          <ExpertReviewPlayer
+            assignmentId={assignment.assignment_id}
+            repetitions={assignment.repetitions}
+          />
         </CardContent>
       </Card>
 

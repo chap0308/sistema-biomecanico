@@ -78,7 +78,7 @@ Actualmente se generan capturas de máxima profundidad. A partir de `repetitions
 | Archivo | Contenido | Utilidad técnica | Representación en interfaz |
 |---|---|---|---|
 | `biomechanical_frame_metrics.csv` | Valores por fotograma de tronco, pelvis, desviación medial de cada rodilla y diferencia bilateral | Permite revisar la evolución completa y detectar en qué fase aumenta cada señal | Gráficas temporales sincronizadas con el video |
-| `biomechanical_repetition_metrics.csv` | Valores en máxima profundidad y máximos observados por repetición | Permite comparar consistencia y variabilidad entre las tres repeticiones | Tabla comparativa y barras por repetición |
+| `biomechanical_repetition_metrics.csv` | Valores en máxima profundidad y máximos observados por repetición | Permite revisar diferencias entre ejecuciones sin fusionar sus clasificaciones | Tabla comparativa y barras por repetición |
 | `biomechanical_summary.json` | Convenciones, normalización, resúmenes por repetición y rutas de artefactos | Contrato estructurado para consumir resultados desde una API | Fuente de tarjetas y tablas resumidas |
 | `biomechanical_metrics.png` | Evolución temporal de las cuatro variables biomecánicas | Evidencia visual conjunta del comportamiento durante el ejercicio | Panel de gráficas avanzadas |
 
@@ -298,7 +298,7 @@ Sin embargo, el overlay no demuestra por sí solo:
 - qué valor numérico alcanzó cada variable;
 - qué umbral se aplicó;
 - por qué una salida fue presente, ausente o no concluyente;
-- si dos de las tres repeticiones coincidieron;
+- qué clasificación independiente obtuvo cada repetición;
 - si el video superó todos los controles de calidad.
 
 Por ello, su función es complementaria. El overlay permite revisar la detección visual; los CSV permiten reproducir los cálculos; los JSON explican las decisiones; y las gráficas y capturas facilitan su comunicación.
@@ -364,13 +364,13 @@ Las tres capturas de máxima profundidad deben mostrarse en paralelo o mediante 
 - diferencia bilateral;
 - estado de cada patrón en esa repetición.
 
-Esta comparación permite explicar por qué el motor exige concordancia entre repeticiones. También permite evidenciar casos en los que una señal aparece solo una vez y el resultado final permanece no concluyente.
+Esta comparación permite explicar que el motor conserva la variabilidad entre ejecuciones. Una señal presente en una repetición y ausente en otra produce dos resultados independientes, no un consenso del video.
 
 ### 6.5. Gráficas recomendadas
 
 #### Vista principal
 
-1. **Barras por repetición y patrón:** compara el valor de las tres repeticiones con las bandas de ausencia, ambigüedad y presencia.
+1. **Barras por repetición y patrón:** compara el valor de cada repetición con las bandas de ausencia, ambigüedad y presencia.
 2. **Línea temporal de fases:** muestra reposo, descenso, máxima profundidad y ascenso.
 3. **Indicador de calidad:** presenta porcentaje de fotogramas válidos y disponibilidad de puntos anatómicos.
 

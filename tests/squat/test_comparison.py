@@ -13,9 +13,11 @@ def _judgment(
     pattern_key: str,
     classification: str,
     side: str | None = None,
+    repetition_index: int = 1,
 ) -> ExpertJudgment:
     return ExpertJudgment(
         evaluator_id=evaluator_id,
+        repetition_index=repetition_index,
         pattern_key=pattern_key,
         classification=classification,
         observed_side=side,
@@ -175,3 +177,43 @@ def test_metrics_exclude_inconclusive_pairs() -> None:
     assert metrics.included_pairs == 0
     assert metrics.excluded_inconclusive_pairs == 1
     assert metrics.f1_score is None
+
+
+def test_metrics_count_each_repetition_pattern_pair() -> None:
+    rows = build_case_comparisons(
+        judgments=[
+            _judgment(
+                evaluator,
+                "visible_dynamic_valgus",
+                classification,
+                "izquierda" if classification == "presente" else None,
+                repetition_index,
+            )
+            for repetition_index, classification in ((1, "presente"), (2, "ausente"))
+            for evaluator in ("e1", "e2")
+        ],
+        system_decisions=[
+            {
+                "repetition_index": 1,
+                "finding": "valgo_dinamico_visible",
+                "status": "presente",
+                "direction": "izquierda",
+            },
+            {
+                "repetition_index": 2,
+                "finding": "valgo_dinamico_visible",
+                "status": "ausente",
+            },
+        ],
+    )
+    valgus_rows = [
+        row for row in rows if row.pattern_key == "visible_dynamic_valgus"
+    ]
+
+    metrics = calculate_metrics(valgus_rows, scope="valgo")
+
+    assert metrics.included_pairs == 2
+    assert metrics.true_positive == 1
+    assert metrics.true_negative == 1
+    assert metrics.f1_score == 1.0
+    assert metrics.cohen_kappa == 1.0

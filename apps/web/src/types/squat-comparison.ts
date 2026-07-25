@@ -20,6 +20,7 @@ export type FinalReference = {
 };
 
 export type PatternComparison = {
+  repetition_index: number;
   pattern_key: ExpertPatternKey;
   expert_judgments: ExpertJudgment[];
   reference: FinalReference | null;

@@ -133,12 +133,13 @@ async def get_squat_case_comparison(
 
 
 @router.put(
-    "/squat/cases/{case_id}/comparison/references/{pattern_key}",
+    "/squat/cases/{case_id}/comparison/references/{repetition_index}/{pattern_key}",
     response_model=CaseComparison,
     summary="Record guided expert consensus for one unresolved pattern",
 )
 async def save_squat_manual_reference(
     case_id: str,
+    repetition_index: int,
     pattern_key: PatternKey,
     payload: SquatManualReferenceRequest,
     current_user: SquatUserDependency,
@@ -167,7 +168,10 @@ async def save_squat_manual_reference(
         current_pattern = next(
             row
             for row in current_comparison.patterns
-            if row.pattern_key == pattern_key
+            if (
+                row.repetition_index == repetition_index
+                and row.pattern_key == pattern_key
+            )
         )
         if current_pattern.reference_status != "consenso_requerido":
             raise HTTPException(
@@ -180,6 +184,7 @@ async def save_squat_manual_reference(
         await run_in_threadpool(
             store.save_manual_reference,
             external_case_id=safe_case_id,
+            repetition_index=repetition_index,
             pattern_key=pattern_key,
             classification=payload.classification,
             observed_side=payload.observed_side,

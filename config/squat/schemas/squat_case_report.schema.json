@@ -644,6 +644,20 @@
           "title": "Eligible For Analysis",
           "type": "boolean"
         },
+        "eligible_repetition_indexes": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Eligible Repetition Indexes",
+          "type": "array"
+        },
+        "excluded_repetition_indexes": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Excluded Repetition Indexes",
+          "type": "array"
+        },
         "checks": {
           "items": {
             "$ref": "#/$defs/SquatQualityCheck"
@@ -941,6 +955,12 @@
     "SquatRuleDecision": {
       "description": "Traceable classification produced by one biomechanical rule.",
       "properties": {
+        "repetition_index": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Repetition Index",
+          "type": "integer"
+        },
         "finding": {
           "title": "Finding",
           "type": "string"

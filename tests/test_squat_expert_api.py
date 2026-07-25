@@ -25,6 +25,14 @@ def _assignment() -> dict[str, object]:
         "status": "pending",
         "created_at": "2026-07-24T10:00:00Z",
         "updated_at": "2026-07-24T10:00:00Z",
+        "repetitions": [
+            {
+                "repetition_index": 1,
+                "start_seconds": 0.5,
+                "peak_depth_seconds": 1.5,
+                "end_seconds": 2.5,
+            }
+        ],
         "evaluation": None,
     }
 
@@ -121,6 +129,7 @@ def test_expert_can_submit_complete_instrument_3(monkeypatch) -> None:
     app.dependency_overrides[get_squat_api_user] = _expert_user
     items = [
         {
+            "repetition_index": 1,
             "pattern_key": pattern,
             "classification": "ausente",
             "confidence": "alta",

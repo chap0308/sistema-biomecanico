@@ -37,6 +37,7 @@ class ExpertJudgment(BaseModel):
     """One submitted expert classification."""
 
     evaluator_id: str
+    repetition_index: int = Field(default=1, ge=1)
     pattern_key: PatternKey
     classification: Literal["presente", "ausente", "no_concluyente"]
     observed_side: str | None = None
@@ -68,6 +69,7 @@ class PatternComparison(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
+    repetition_index: int = Field(default=1, ge=1)
     pattern_key: PatternKey
     expert_judgments: list[ExpertJudgment]
     reference: FinalReference | None
@@ -125,63 +127,82 @@ def build_case_comparisons(
     *,
     judgments: Iterable[ExpertJudgment],
     system_decisions: Iterable[dict[str, Any]],
-    manual_references: dict[PatternKey, FinalReference] | None = None,
+    manual_references: (
+        dict[tuple[int, PatternKey] | PatternKey, FinalReference] | None
+    ) = None,
 ) -> list[PatternComparison]:
-    """Build four independent pattern comparisons for one case."""
-    grouped: dict[PatternKey, list[ExpertJudgment]] = {
-        key: [] for key in PATTERN_KEYS
-    }
+    """Build independent pattern comparisons for every detected repetition."""
+    grouped: dict[tuple[int, PatternKey], list[ExpertJudgment]] = {}
     for judgment in judgments:
-        grouped[judgment.pattern_key].append(judgment)
+        grouped.setdefault(
+            (judgment.repetition_index, judgment.pattern_key),
+            [],
+        ).append(judgment)
     system = _system_outputs(system_decisions)
-    manual_references = manual_references or {}
+    normalized_manual_references = {
+        (
+            key if isinstance(key, tuple) else (1, key)
+        ): reference
+        for key, reference in (manual_references or {}).items()
+    }
+    repetition_indexes = sorted(
+        {
+            repetition_index
+            for repetition_index, _ in (
+                set(grouped) | set(system) | set(normalized_manual_references)
+            )
+        }
+    ) or [1]
 
     rows: list[PatternComparison] = []
-    for pattern_key in PATTERN_KEYS:
-        pattern_judgments = grouped[pattern_key]
-        reference, reference_status = consolidate_reference(
-            pattern_key=pattern_key,
-            judgments=pattern_judgments,
-            manual_reference=manual_references.get(pattern_key),
-        )
-        system_classification, system_side = system.get(
-            pattern_key,
-            ("no_concluyente", None),
-        )
-        system_label = canonical_label(
-            system_classification,
-            system_side,
-            pattern_key=pattern_key,
-        )
-        exact_match: bool | None = None
-        outcome: Literal["TP", "TN", "FP", "FN"] | None = None
-        if reference and (
-            reference.classification != "no_concluyente"
-            and system_classification != "no_concluyente"
-        ):
-            reference_label = canonical_label(
-                reference.classification,
-                reference.observed_side,
+    for repetition_index in repetition_indexes:
+        for pattern_key in PATTERN_KEYS:
+            key = (repetition_index, pattern_key)
+            pattern_judgments = grouped.get(key, [])
+            reference, reference_status = consolidate_reference(
                 pattern_key=pattern_key,
+                judgments=pattern_judgments,
+                manual_reference=normalized_manual_references.get(key),
             )
-            exact_match = reference_label == system_label
-            outcome = _binary_outcome(
-                reference.classification,
+            system_classification, system_side = system.get(
+                key,
+                ("no_concluyente", None),
+            )
+            system_label = canonical_label(
                 system_classification,
-            )
-        rows.append(
-            PatternComparison(
+                system_side,
                 pattern_key=pattern_key,
-                expert_judgments=pattern_judgments,
-                reference=reference,
-                reference_status=reference_status,
-                system_classification=system_classification,
-                system_side=system_side,
-                system_label=system_label,
-                exact_match=exact_match,
-                binary_outcome=outcome,
             )
-        )
+            exact_match: bool | None = None
+            outcome: Literal["TP", "TN", "FP", "FN"] | None = None
+            if reference and (
+                reference.classification != "no_concluyente"
+                and system_classification != "no_concluyente"
+            ):
+                reference_label = canonical_label(
+                    reference.classification,
+                    reference.observed_side,
+                    pattern_key=pattern_key,
+                )
+                exact_match = reference_label == system_label
+                outcome = _binary_outcome(
+                    reference.classification,
+                    system_classification,
+                )
+            rows.append(
+                PatternComparison(
+                    repetition_index=repetition_index,
+                    pattern_key=pattern_key,
+                    expert_judgments=pattern_judgments,
+                    reference=reference,
+                    reference_status=reference_status,
+                    system_classification=system_classification,
+                    system_side=system_side,
+                    system_label=system_label,
+                    exact_match=exact_match,
+                    binary_outcome=outcome,
+                )
+            )
     return rows
 
 
@@ -192,7 +213,7 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
         for item in payload.get("judgments", [])
     ]
     manual_references = {
-        row["pattern_key"]: FinalReference(
+        (row.get("repetition_index", 1), row["pattern_key"]): FinalReference(
             classification=row["classification"],
             observed_side=row.get("observed_side"),
             method="consenso_guiado",
@@ -384,12 +405,12 @@ def canonical_label(
 
 def _system_outputs(
     decisions: Iterable[dict[str, Any]],
-) -> dict[PatternKey, tuple[str, str | None]]:
-    outputs: dict[PatternKey, tuple[str, str | None]] = {}
+) -> dict[tuple[int, PatternKey], tuple[str, str | None]]:
+    outputs: dict[tuple[int, PatternKey], tuple[str, str | None]] = {}
     for decision in decisions:
         pattern = FINDING_TO_PATTERN.get(str(decision.get("finding")))
         if pattern:
-            outputs[pattern] = (
+            outputs[(int(decision.get("repetition_index", 1)), pattern)] = (
                 str(decision.get("status", "no_concluyente")),
                 decision.get("direction"),
             )

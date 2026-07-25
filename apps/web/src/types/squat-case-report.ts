@@ -62,6 +62,8 @@ export type CaseId3 = string;
 export type Stage2 = "control_calidad_analitica";
 export type Status1 = "apto_para_analisis" | "revision_requerida" | "no_apto_para_analisis";
 export type EligibleForAnalysis = boolean;
+export type EligibleRepetitionIndexes = number[];
+export type ExcludedRepetitionIndexes = number[];
 export type CheckId = string;
 export type Description = string;
 export type Severity = "exclusion" | "warning";
@@ -108,6 +110,7 @@ export type Stage4 = "criterios_biomecanicos_interpretables";
 export type RulesetVersion = string;
 export type RulesetStatus = "provisional" | "frozen";
 export type QualityGateStatus = "apto_para_analisis" | "revision_requerida" | "no_apto_para_analisis";
+export type RepetitionIndex2 = number;
 export type Finding = string;
 export type Status2 = "presente" | "ausente" | "no_concluyente";
 export type Direction = string | null;
@@ -137,7 +140,7 @@ export type BiomechanicalFrameMetricsCsv = string | null;
 export type BiomechanicalRepetitionMetricsCsv = string | null;
 export type BiomechanicalMetricsPlot = string | null;
 export type RuleEvidenceCsv1 = string | null;
-export type RepetitionIndex2 = number;
+export type RepetitionIndex3 = number;
 export type Event = "inicio_descenso" | "maxima_profundidad" | "final_ascenso";
 export type FrameIndex = number;
 export type TimestampSeconds = number;
@@ -251,6 +254,8 @@ export interface SquatQualityGateSummary {
   stage?: Stage2;
   status: Status1;
   eligible_for_analysis: EligibleForAnalysis;
+  eligible_repetition_indexes?: EligibleRepetitionIndexes;
+  excluded_repetition_indexes?: ExcludedRepetitionIndexes;
   checks: Checks;
   exclusion_reasons: ExclusionReasons;
   warnings: Warnings;
@@ -346,6 +351,7 @@ export interface SquatFindingsSummary {
  * Traceable classification produced by one biomechanical rule.
  */
 export interface SquatRuleDecision {
+  repetition_index?: RepetitionIndex2;
   finding: Finding;
   status: Status2;
   direction?: Direction;
@@ -389,7 +395,7 @@ export interface SquatArtifactManifest {
  * One anonymized visual checkpoint for a detected repetition.
  */
 export interface SquatEventCapture {
-  repetition_index: RepetitionIndex2;
+  repetition_index: RepetitionIndex3;
   event: Event;
   frame_index: FrameIndex;
   timestamp_seconds: TimestampSeconds;

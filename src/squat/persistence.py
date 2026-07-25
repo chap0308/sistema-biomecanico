@@ -400,6 +400,27 @@ class SupabaseSquatStore:
             raise SquatPersistenceError(
                 "Submitted expert evaluations cannot be modified."
             )
+        expected_repetitions = {
+            repetition["repetition_index"]
+            for repetition in assignment.get("repetitions", [])
+        }
+        submitted_repetitions = {
+            int(item["repetition_index"]) for item in items
+        }
+        if expected_repetitions and not submitted_repetitions.issubset(
+            expected_repetitions
+        ):
+            raise SquatPersistenceError(
+                "The evaluation contains repetitions outside the assignment."
+            )
+        if (
+            status == "submitted"
+            and expected_repetitions
+            and submitted_repetitions != expected_repetitions
+        ):
+            raise SquatPersistenceError(
+                "Every detected repetition must be evaluated before submission."
+            )
         existing = self._select(
             "squat_expert_evaluations",
             params={
@@ -570,13 +591,13 @@ class SupabaseSquatStore:
                 "squat_expert_evaluation_items",
                 params={
                     "select": (
-                        "pattern_key,classification,observed_side,"
+                        "repetition_index,pattern_key,classification,observed_side,"
                         "confidence"
                     ),
                     "evaluation_id": (
                         f"eq.{evaluation_rows[0]['evaluation_id']}"
                     ),
-                    "order": "pattern_key.asc",
+                    "order": "repetition_index.asc,pattern_key.asc",
                 },
             )
             judgments.extend(
@@ -590,11 +611,11 @@ class SupabaseSquatStore:
             "squat_expert_references",
             params={
                 "select": (
-                    "pattern_key,classification,observed_side,"
+                    "repetition_index,pattern_key,classification,observed_side,"
                     "method,observation"
                 ),
                 "case_id": f"eq.{case_id}",
-                "order": "pattern_key.asc",
+                "order": "repetition_index.asc,pattern_key.asc",
             },
         )
         return {
@@ -632,6 +653,7 @@ class SupabaseSquatStore:
         self,
         *,
         external_case_id: str,
+        repetition_index: int,
         pattern_key: str,
         classification: str,
         observed_side: str | None,
@@ -654,6 +676,7 @@ class SupabaseSquatStore:
             [
                 {
                     "case_id": case_rows[0]["case_id"],
+                    "repetition_index": repetition_index,
                     "pattern_key": pattern_key,
                     "classification": classification,
                     "observed_side": observed_side,
@@ -662,7 +685,7 @@ class SupabaseSquatStore:
                     "resolved_by": resolved_by,
                 }
             ],
-            on_conflict="case_id,pattern_key",
+            on_conflict="case_id,repetition_index,pattern_key",
             ignore_duplicates=False,
         )
         if not rows:
@@ -701,13 +724,45 @@ class SupabaseSquatStore:
                 "squat_expert_evaluation_items",
                 params={
                     "select": (
-                        "pattern_key,classification,observed_side,"
+                        "repetition_index,pattern_key,classification,observed_side,"
                         "confidence,observation"
                     ),
                     "evaluation_id": f"eq.{evaluation['evaluation_id']}",
-                    "order": "pattern_key.asc",
+                    "order": "repetition_index.asc,pattern_key.asc",
                 },
             )
+        repetitions: list[dict[str, Any]] = []
+        if case_rows:
+            run_rows = self._select(
+                "squat_analysis_runs",
+                params={
+                    "select": "report",
+                    "case_id": f"eq.{assignment['case_id']}",
+                    "status": "eq.completed",
+                    "order": "created_at.desc",
+                    "limit": "1",
+                },
+            )
+            if run_rows:
+                report = run_rows[0].get("report") or {}
+                segmentation = report.get("segmentation") or {}
+                quality = report.get("quality") or {}
+                eligible_indexes = set(
+                    quality.get("eligible_repetition_indexes") or []
+                )
+                repetitions = [
+                    {
+                        "repetition_index": repetition["repetition_index"],
+                        "start_seconds": repetition["start_seconds"],
+                        "peak_depth_seconds": repetition["peak_depth_seconds"],
+                        "end_seconds": repetition["end_seconds"],
+                    }
+                    for repetition in segmentation.get("repetitions", [])
+                    if (
+                        not eligible_indexes
+                        or repetition["repetition_index"] in eligible_indexes
+                    )
+                ]
         return {
             "assignment_id": assignment["assignment_id"],
             "case_id": (
@@ -716,6 +771,7 @@ class SupabaseSquatStore:
             "status": assignment["status"],
             "created_at": assignment["created_at"],
             "updated_at": assignment["updated_at"],
+            "repetitions": repetitions,
             "evaluation": evaluation,
         }
 

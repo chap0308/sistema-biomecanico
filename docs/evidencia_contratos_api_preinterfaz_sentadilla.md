@@ -28,8 +28,8 @@ También incorpora la API mínima para que el frontend no dependa de rutas local
 flowchart TD
     A["Video + Instrumento 1"] --> B["case_record.json"]
     B --> C["Pose y overlay anonimizado"]
-    C --> D["Segmentación de 3 repeticiones"]
-    D --> E["9 capturas de eventos"]
+    C --> D["Segmentación de una o más repeticiones"]
+    D --> E["3 capturas de eventos por repetición"]
     D --> F["Control de calidad"]
     F -->|"Apto"| G["Métricas y reglas"]
     F -->|"No apto"| H["Reporte sin clasificación"]
@@ -49,8 +49,8 @@ Resultados:
 - 662 fotogramas procesados;
 - 100 % de fotogramas válidos;
 - promedio de 13 puntos detectados por fotograma;
-- tres repeticiones;
-- nueve capturas anonimizadas;
+- tres repeticiones detectadas en este caso;
+- nueve capturas anonimizadas, tres por repetición;
 - estado `analisis_completo`;
 - valgo dinámico visible izquierdo presente;
 - asimetría bilateral observable presente;

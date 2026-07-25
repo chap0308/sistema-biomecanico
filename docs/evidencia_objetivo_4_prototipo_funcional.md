@@ -43,7 +43,7 @@ la etiqueta intentada como parte del análisis.
 El prototipo procesó 12 videos nuevos:
 
 - 11 llegaron desde el video original hasta compensaciones detectadas;
-- 1 fue bloqueado correctamente por no cumplir tres repeticiones;
+- 1 fue bloqueado en la versión inicial por no cumplir tres repeticiones; con la política vigente, un video es analizable si conserva al menos una repetición válida;
 - se conservaron salidas múltiples y estados no concluyentes;
 - el sistema distinguió entre etiqueta intentada y evidencia geométrica;
 - se identificaron casos exactos, parciales y no evaluables.

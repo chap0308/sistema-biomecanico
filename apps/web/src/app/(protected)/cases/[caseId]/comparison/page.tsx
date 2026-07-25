@@ -155,17 +155,17 @@ export default async function ComparisonPage({
           <UsersRoundIcon className="size-5 text-primary" aria-hidden="true" />
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              Consolidación por patrón
+              Consolidación por repetición y patrón
             </h2>
             <p className="text-sm text-muted-foreground">
-              Cada patrón se compara de manera independiente.
+              Cada ejecución y cada patrón constituyen una comparación independiente.
             </p>
           </div>
         </div>
         <div className="mt-5 grid gap-4 xl:grid-cols-2">
           {comparison.patterns.map((pattern) => (
             <PatternCard
-              key={pattern.pattern_key}
+              key={`${pattern.repetition_index}-${pattern.pattern_key}`}
               caseId={caseId}
               pattern={pattern}
             />
@@ -232,6 +232,7 @@ function PatternCard({
         <div className="flex items-start justify-between gap-3">
           <div>
             <CardTitle className="text-base">
+              Repetición {pattern.repetition_index} ·{" "}
               {patternNames[pattern.pattern_key]}
             </CardTitle>
             <CardDescription>
@@ -273,7 +274,11 @@ function PatternCard({
           </div>
         </div>
         {pattern.reference_status === "consenso_requerido" ? (
-          <ConsensusForm caseId={caseId} patternKey={pattern.pattern_key} />
+          <ConsensusForm
+            caseId={caseId}
+            repetitionIndex={pattern.repetition_index}
+            patternKey={pattern.pattern_key}
+          />
         ) : null}
       </CardContent>
     </Card>

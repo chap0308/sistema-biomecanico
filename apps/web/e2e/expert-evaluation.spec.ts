@@ -20,10 +20,18 @@ test("expert completes a blinded Instrument 3 evaluation", async ({
   await expect(page.getByText("Resultado del sistema")).toHaveCount(0);
   await expect(page.getByText("Compensaciones detectadas")).toHaveCount(0);
 
-  await page.locator("#trunk").selectOption("presente_izquierda");
-  await page.locator("#pelvis").selectOption("ausente");
-  await page.locator("#valgus").selectOption("presente_izquierda");
-  await page.locator("#asymmetry").selectOption("presente_izquierda");
+  const choices = {
+    trunk: "presente_izquierda",
+    pelvis: "ausente",
+    valgus: "presente_izquierda",
+    asymmetry: "presente_izquierda",
+  } as const;
+  for (const [pattern, choice] of Object.entries(choices)) {
+    const fields = page.locator(`select[id$=".${pattern}.choice"]`);
+    for (let index = 0; index < (await fields.count()); index += 1) {
+      await fields.nth(index).selectOption(choice);
+    }
+  }
   await page
     .getByRole("button", { name: "Guardar borrador" })
     .click();

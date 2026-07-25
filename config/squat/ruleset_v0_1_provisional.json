@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "ruleset_version": "0.1.0-provisional",
+  "ruleset_version": "0.2.0-provisional",
   "status": "provisional",
   "calibration_basis": [
     "Definiciones geométricas de las variables implementadas en la Fase 4.",
@@ -8,7 +8,6 @@
     "Bandas conservadoras con estado no concluyente para evitar decisiones limítrofes.",
     "Los valores no representan puntos de corte clínicos ni validación experta."
   ],
-  "minimum_repetitions_for_consensus": 2,
   "rules": {
     "inclinacion_lateral_tronco": {
       "metric": "trunk_inclination_at_peak_deg",

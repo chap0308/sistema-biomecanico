@@ -22,7 +22,7 @@ Un video puede superar la revisión visual inicial y aun así presentar pérdida
 flowchart LR
     A["Video aceptado por protocolo"] --> B["Extracción de pose 2D"]
     B --> C["Calidad por fotograma"]
-    C --> D["Segmentación de tres repeticiones"]
+    C --> D["Segmentación de una o más repeticiones"]
     D --> E["Puerta de calidad analítica"]
     E -->|Apto| F["Cálculo formal de variables"]
     E -->|Revisión| G["Revisión técnica documentada"]
@@ -40,11 +40,11 @@ La política implementada es configurable y está separada de los futuros umbral
 |---|---:|---:|
 | Fotogramas procesados correctamente | Menos de 99 % | No aplica |
 | Fotogramas válidos del video | Menos de 90 % | Entre 90 % y menos de 95 % |
-| Repeticiones completas | Distinto de 3 | No aplica |
+| Repeticiones completas | Ninguna repetición válida | No aplica |
 | Fotogramas válidos por repetición | Menos de 80 % | Entre 80 % y menos de 90 % |
 | Máxima profundidad | Fotograma crítico no válido | No aplica |
 
-Los porcentajes son valores operativos iniciales para desarrollo y deberán confirmarse metodológicamente antes de congelar el protocolo final. La exigencia de tres repeticiones y de máxima profundidad válida deriva directamente del protocolo de captura y de la necesidad de calcular variables en la fase crítica.
+Los porcentajes son valores operativos iniciales para desarrollo y deberán confirmarse metodológicamente antes de congelar el protocolo final. El video es aceptable cuando contiene al menos una repetición completa con máxima profundidad válida. Si se detectan varias ejecuciones, cada repetición supera su propio control de calidad y se analiza de forma independiente; una repetición excluida no invalida las demás cuando los controles globales del video son satisfactorios.
 
 ## Estados
 
@@ -61,7 +61,7 @@ El comando devuelve código de salida `2` cuando el video no es apto, lo que per
 | `squat-normal-1` | Apto para análisis | Cumple todos los criterios |
 | `squat-normal-2` | Apto para análisis | Cumple todos los criterios |
 | `squat-controlado-1` | Apto para análisis | Cumple todos los criterios |
-| `squat-controlado-2` | No apto para análisis formal | Repetición 3 con 78.30 % de fotogramas válidos y máxima profundidad no válida |
+| `squat-controlado-2` | Revisión requerida | La repetición 3 se excluye por baja validez y máxima profundidad no válida; las repeticiones válidas restantes pueden analizarse |
 
 Esta decisión no clasifica compensaciones. Solo determina si la evidencia visual permite calcularlas de forma completa.
 
