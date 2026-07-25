@@ -98,7 +98,7 @@ export default async function ExpertAssignmentPage({
         <CardContent>
           <ExpertReviewPlayer
             assignmentId={assignment.assignment_id}
-            repetitions={assignment.repetitions}
+            repetitions={assignment.repetitions ?? []}
           />
         </CardContent>
       </Card>

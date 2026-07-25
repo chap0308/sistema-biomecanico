@@ -7,12 +7,12 @@ import type { ExpertRepetition } from "@/types/squat-expert";
 
 type ExpertReviewPlayerProps = {
   assignmentId: string;
-  repetitions: ExpertRepetition[];
+  repetitions?: ExpertRepetition[];
 };
 
 export function ExpertReviewPlayer({
   assignmentId,
-  repetitions,
+  repetitions = [],
 }: ExpertReviewPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 

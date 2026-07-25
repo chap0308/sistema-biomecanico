@@ -48,6 +48,6 @@ export type ExpertAssignment = {
   status: "pending" | "in_progress" | "submitted";
   created_at: string;
   updated_at: string;
-  repetitions: ExpertRepetition[];
+  repetitions?: ExpertRepetition[];
   evaluation: ExpertEvaluation | null;
 };

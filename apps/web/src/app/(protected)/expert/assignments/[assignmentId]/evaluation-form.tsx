@@ -384,7 +384,7 @@ function defaultsFromAssignment(
 }
 
 function defaultRepetitionIndexes(assignment: ExpertAssignment): number[] {
-  const indexes = assignment.repetitions.map(
+  const indexes = (assignment.repetitions ?? []).map(
     (repetition) => repetition.repetition_index,
   );
   return indexes.length ? indexes : [1];

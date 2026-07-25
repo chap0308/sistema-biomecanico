@@ -24,7 +24,7 @@ describe("MetricEvidence", () => {
   it("shows repetition values and interpretable thresholds", () => {
     render(<MetricEvidence decision={decision} />);
 
-    expect(screen.getByText("Repetición 1")).toBeInTheDocument();
+    expect(screen.getByText("Valor calculado")).toBeInTheDocument();
     expect(screen.getByText(/12[.,]5 %/)).toBeInTheDocument();
     expect(screen.getByText("Ausente ≤ 2")).toBeInTheDocument();
     expect(screen.getByText("Presente ≥ 5")).toBeInTheDocument();

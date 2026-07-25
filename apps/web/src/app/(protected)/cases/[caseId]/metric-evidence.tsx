@@ -11,42 +11,32 @@ export function MetricEvidence({
 }: {
   decision: SquatRuleDecision;
 }) {
-  const values = decision.repetition_values.filter(
-    (value): value is number => value !== null,
-  );
+  const value = decision.aggregate_value ?? null;
+  const state = decision.status;
   const scale = Math.max(
     decision.present_min * 1.25,
-    ...values.map((value) => Math.abs(value)),
+    value === null ? 0 : Math.abs(value),
     1,
   );
 
   return (
     <div className="space-y-3">
-      {decision.repetition_values.map((value, index) => {
-        const state = decision.repetition_states[index] ?? "no_concluyente";
-        return (
+      <div>
+        <div className="mb-1 flex items-center justify-between gap-3 text-xs">
+          <span className="text-muted-foreground">Valor calculado</span>
+          <span className="font-mono font-medium tabular-nums">
+            {formatMetric(value, decision.unit)}
+          </span>
+        </div>
+        <div className="h-2 overflow-hidden rounded-full bg-muted">
           <div
-            key={`${decision.repetition_index}-${decision.finding}-${index}`}
-          >
-            <div className="mb-1 flex items-center justify-between gap-3 text-xs">
-              <span className="text-muted-foreground">
-                Repetición {decision.repetition_index}
-              </span>
-              <span className="font-mono font-medium tabular-nums">
-                {formatMetric(value, decision.unit)}
-              </span>
-            </div>
-            <div className="h-2 overflow-hidden rounded-full bg-muted">
-              <div
-                className={`h-full rounded-full ${stateStyles[state]}`}
-                style={{
-                  width: `${value === null ? 0 : Math.min(100, (Math.abs(value) / scale) * 100)}%`,
-                }}
-              />
-            </div>
-          </div>
-        );
-      })}
+            className={`h-full rounded-full ${stateStyles[state]}`}
+            style={{
+              width: `${value === null ? 0 : Math.min(100, (Math.abs(value) / scale) * 100)}%`,
+            }}
+          />
+        </div>
+      </div>
       <div className="flex justify-between border-t pt-2 text-[11px] text-muted-foreground">
         <span>Ausente ≤ {formatNumber(decision.absent_max)}</span>
         <span>Presente ≥ {formatNumber(decision.present_min)}</span>

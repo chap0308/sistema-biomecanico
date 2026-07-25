@@ -20,7 +20,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Progress, ProgressLabel } from "@/components/ui/progress";
 import {
   Table,
   TableBody,
@@ -50,14 +49,6 @@ const findingLabels: Record<string, string> = {
   asimetria_bilateral_observable: "Asimetría bilateral observable",
 };
 
-const directionLabels: Record<string, string> = {
-  izquierda: "hacia la izquierda",
-  derecha: "hacia la derecha",
-  bilateral: "bilateral",
-  predominio_izquierdo: "predominio izquierdo",
-  predominio_derecho: "predominio derecho",
-};
-
 export default async function CaseDetailPage({
   params,
 }: CaseDetailPageProps) {
@@ -80,6 +71,15 @@ export default async function CaseDetailPage({
   const peakCaptures = captures.filter(
     (capture) => capture.event === "maxima_profundidad",
   );
+  const decisions = report.findings?.decisions ?? [];
+  const decisionGroups = [...new Set(
+    decisions.map((decision) => decision.repetition_index),
+  )].map((repetitionIndex) => ({
+    repetitionIndex,
+    decisions: decisions.filter(
+      (decision) => decision.repetition_index === repetitionIndex,
+    ),
+  }));
 
   return (
     <main className="mx-auto w-full max-w-7xl px-5 py-8 lg:px-10 lg:py-10">
@@ -192,7 +192,7 @@ export default async function CaseDetailPage({
         </Card>
       )}
 
-      <section className="mt-7 grid gap-6 xl:grid-cols-[1.35fr_0.85fr]">
+      <section className="mt-7">
         <Card className="overflow-hidden">
           <CardHeader>
             <CardTitle>Movimiento analizado</CardTitle>
@@ -219,63 +219,48 @@ export default async function CaseDetailPage({
             )}
           </CardContent>
         </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Resultado por patrón</CardTitle>
-            <CardDescription>
-              Cada criterio se evalúa de forma independiente; un caso puede
-              presentar múltiples compensaciones.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {report.findings?.decisions.length ? (
-              report.findings.decisions.map((decision) => (
-                <FindingSummary
-                  key={`${decision.repetition_index}-${decision.finding}`}
-                  decision={decision}
-                />
-              ))
-            ) : (
-              <EmptyEvidence text="No se emitieron decisiones biomecánicas para este registro." />
-            )}
-          </CardContent>
-        </Card>
       </section>
 
-      {report.findings?.decisions.length ? (
+      {decisionGroups.length ? (
         <section className="mt-7">
           <SectionHeading
-            eyebrow="Trazabilidad"
-            title="Valores y umbrales por repetición"
-            description="Cada ejecución conserva su propia etiqueta, valor calculado y criterio provisional aplicado."
+            eyebrow="Resultados"
+            title="Compensaciones y variables por repetición"
+            description="Cada ejecución conserva sus cuatro clasificaciones, valores calculados y criterios provisionales."
           />
-          <div className="mt-4 grid gap-4 lg:grid-cols-2">
-            {report.findings.decisions.map((decision) => (
-              <Card
-                key={`${decision.repetition_index}-${decision.finding}`}
-              >
-                <CardHeader>
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <CardTitle className="text-base">
-                        Repetición {decision.repetition_index} ·{" "}
-                        {findingLabels[decision.finding] ?? decision.finding}
-                      </CardTitle>
-                      <CardDescription className="mt-1 font-mono text-xs">
-                        {decision.metric}
-                      </CardDescription>
-                    </div>
-                    <DecisionBadge status={decision.status} />
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <MetricEvidence decision={decision} />
-                  <p className="mt-4 border-t pt-4 text-xs leading-5 text-muted-foreground">
-                    {decision.rationale}
-                  </p>
-                </CardContent>
-              </Card>
+          <div className="mt-5 space-y-8">
+            {decisionGroups.map((group) => (
+              <section key={group.repetitionIndex}>
+                <h3 className="text-xl font-semibold tracking-tight">
+                  Repetición {group.repetitionIndex}
+                </h3>
+                <div className="mt-3 grid gap-4 lg:grid-cols-2">
+                  {group.decisions.map((decision) => (
+                    <Card key={decision.finding}>
+                      <CardHeader>
+                        <div className="flex items-start justify-between gap-3">
+                          <div>
+                            <CardTitle className="text-base">
+                              {findingLabels[decision.finding] ??
+                                decision.finding}
+                            </CardTitle>
+                            <CardDescription className="mt-1 font-mono text-xs">
+                              {decision.metric}
+                            </CardDescription>
+                          </div>
+                          <DecisionBadge status={decision.status} />
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <MetricEvidence decision={decision} />
+                        <p className="mt-4 border-t pt-4 text-xs leading-5 text-muted-foreground">
+                          {decision.rationale}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </section>
             ))}
           </div>
         </section>
@@ -485,46 +470,6 @@ function SummaryCard({
         </div>
       </CardContent>
     </Card>
-  );
-}
-
-function FindingSummary({ decision }: { decision: SquatRuleDecision }) {
-  const direction = decision.direction
-    ? directionLabels[decision.direction] ?? decision.direction
-    : null;
-  return (
-    <div className="rounded-xl border bg-muted/25 p-4">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-sm font-semibold">
-            Repetición {decision.repetition_index} ·{" "}
-            {findingLabels[decision.finding] ?? decision.finding}
-          </p>
-          <p className="mt-1 text-xs text-muted-foreground">
-            {direction ?? "Sin predominio lateral"}
-          </p>
-        </div>
-        <DecisionBadge status={decision.status} />
-      </div>
-      <Progress
-        className="mt-4"
-        value={
-          decision.aggregate_value == null
-            ? 0
-            : Math.min(
-                100,
-                (Math.abs(decision.aggregate_value) /
-                  Math.max(decision.present_min, 1)) *
-                  65,
-              )
-        }
-      >
-        <ProgressLabel>Valor de la ejecución</ProgressLabel>
-        <span className="ml-auto font-mono text-sm text-muted-foreground">
-          {formatMetric(decision.aggregate_value ?? null, decision.unit)}
-        </span>
-      </Progress>
-    </div>
   );
 }
 
