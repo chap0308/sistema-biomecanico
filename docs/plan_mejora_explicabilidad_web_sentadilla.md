@@ -515,4 +515,3 @@ La siguiente mejora no debería comenzar generando un video complejo. El orden m
 5. generar el video técnico continuo.
 
 Así se obtiene valor demostrativo desde el primer incremento y se evita duplicar cálculos en el frontend.
-
