@@ -25,6 +25,27 @@ No conviene mostrar todos los datos al mismo tiempo. La vista debe tener dos niv
 
 El usuario debe poder entender el resultado sin abrir CSV, pero también debe poder llegar hasta la evidencia técnica original.
 
+### 2.1. Doble representación de la evidencia
+
+La visualización interactiva no reemplazará los artefactos generados por Python. Se mantendrán dos representaciones del mismo análisis:
+
+| Representación | Propósito | Tratamiento |
+|---|---|---|
+| PNG, CSV, JSON, Excel y videos | Evidencia reproducible, trazabilidad y descarga | Se generan en `outputs`, se almacenan en los buckets y permanecen disponibles para descarga |
+| Gráficas y tablas web | Lectura, exploración y explicación del resultado | Se renderizan con datos JSON acotados derivados de los mismos artefactos |
+
+Por tanto, `pose_quality.png`, `segmentation.png` y `biomechanical_metrics.png` deben seguir generándose, almacenándose y descargándose. Sin embargo, no serán la única ni necesariamente la principal forma de consultar esos datos en la interfaz. La web mostrará por defecto su equivalente interactivo y ofrecerá una acción secundaria como “Descargar gráfico original (PNG)”.
+
+Las imágenes y videos que contienen evidencia visual del participante, como overlays, capturas de fotogramas clave y videos anonimizados, sí deben conservarse como medios visuales. No corresponde sustituirlos por una gráfica.
+
+### 2.2. Criterio de componentes y complejidad
+
+Se utilizarán componentes shadcn existentes para `Card`, `Tabs`, `Table`, `Badge`, `Progress`, `Skeleton`, `Button` y paginación. Para las gráficas se incorporará el componente `Chart` de shadcn y su dependencia mínima de visualización, previsiblemente Recharts, cuando comience ese incremento.
+
+No se incorporarán inicialmente Zustand, TanStack Query ni una capa adicional de estado global. La página del caso cargará los datos iniciales desde un Server Component de Next.js y limitará el código cliente a la isla interactiva que sincroniza video, pestaña, repetición, cursor y gráfica. Esta decisión evita duplicar caché, estado y solicitudes sin una necesidad demostrada.
+
+El criterio visual será de divulgación técnica y no de tablero saturado: una evidencia principal, una variable seleccionada y detalle progresivo. Los componentes de shadcn se usarán donde aporten estructura o accesibilidad, no como obligación para cada elemento.
+
 ## 3. Estructura propuesta dentro de `/cases/[id]`
 
 ### 3.1. Resultado principal
@@ -83,6 +104,16 @@ Mostrar `overlay.mp4` con:
 | Umbral de visibilidad | 0.50 |
 | Mínimo observado | 0.9217 |
 
+Debajo de estas tarjetas, sustituir la imagen estática como vista principal por una gráfica interactiva de calidad:
+
+- porcentaje de puntos críticos detectados por fotograma;
+- visibilidad mínima observada;
+- línea horizontal del umbral de visibilidad;
+- bandas o marcas para fotogramas válidos y no válidos;
+- cursor sincronizado con el reproductor.
+
+`pose_quality.png` permanecerá disponible en “Artefactos técnicos” y como descarga. La gráfica web se construirá con una serie acotada procedente de `frame_quality.csv`, sin recalcular la validez en TypeScript.
+
 ### 4.3. Mejora del overlay de calidad
 
 El overlay actual cambia el color del esqueleto completo:
@@ -130,6 +161,17 @@ Representar `hip_midpoint_y_smoothed` mediante una gráfica de línea:
 - marcadores R1, R2, R3;
 - etiquetas de inicio, profundidad y final.
 
+La gráfica debe implementarse con el componente `Chart` de shadcn, una línea principal suavizada y, solo cuando el usuario solicite detalle técnico, una línea secundaria tenue con `hip_midpoint_y` sin suavizar. Esto permite explicar la reducción de ruido sin mostrar ambas señales permanentemente.
+
+`hip_midpoint_y` no constituye una compensación ni una variable biomecánica final. Es una señal intermedia de segmentación temporal que permite:
+
+- localizar descenso, máxima profundidad y ascenso;
+- separar repeticiones;
+- justificar los fotogramas elegidos para calcular las variables;
+- sincronizar el video con el proceso interno.
+
+Para una audiencia no técnica, el eje puede denominarse “posición vertical del centro de caderas” y debe indicarse que en coordenadas de imagen el valor aumenta hacia abajo.
+
 ### 5.3. Explicación visual
 
 Mostrar:
@@ -164,6 +206,17 @@ Cada pestaña modifica:
 - fórmula;
 - gráfica;
 - valores de la repetición.
+
+La pestaña seleccionada será el único foco geométrico visible sobre el video o la captura. Junto al medio se mostrará un overlay compacto con el valor instantáneo, la unidad y el estado de calidad. Esta combinación evita dibujar simultáneamente tronco, pelvis y ambas geometrías de rodilla.
+
+La gráfica asociada a la pestaña mostrará únicamente las series necesarias:
+
+| Pestaña | Series |
+|---|---|
+| Tronco | inclinación lateral del tronco |
+| Pelvis | desplazamiento lateral normalizado |
+| Rodillas | desviación medial izquierda y derecha |
+| Diferencia bilateral | diferencia absoluta entre ambas alineaciones |
 
 ### 6.2. Overlay geométrico para tronco
 
@@ -350,6 +403,8 @@ Ruta mínima recomendada:
 2. capturas geométricas detalladas en máxima profundidad;
 3. gráficas sincronizadas en la web.
 
+La implementación web priorizará la tercera opción antes de generar un video técnico más complejo. La selección de una pestaña controlará tanto la geometría destacada como la gráfica y la tabla resumida. El video mantendrá solamente un overlay compacto y legible.
+
 ## 9. Contrato de datos recomendado
 
 La interfaz no debe recalcular las fórmulas biomecánicas. Python debe seguir siendo la fuente de verdad.
@@ -386,7 +441,14 @@ Contenido:
       "metrics": {},
       "decisions": []
     }
-  ]
+  ],
+  "chart_series": {
+    "quality": [],
+    "segmentation": [],
+    "biomechanics": []
+  },
+  "artifact_downloads": [],
+  "table_previews": []
 }
 ```
 
@@ -399,6 +461,15 @@ El contrato debe incluir:
 - rutas de artefactos;
 - versión del pipeline.
 
+También debe diferenciar:
+
+- `chart_series`: puntos temporales necesarios para renderizar gráficas;
+- `table_previews`: filas seleccionadas, paginadas o resumidas para lectura web;
+- `artifact_downloads`: archivos completos disponibles para descarga;
+- `key_frame_geometry`: coordenadas explicativas del fotograma seleccionado.
+
+Las series deben incluir `frame_index` y `time_seconds` como claves comunes. Cuando el volumen sea alto, la API podrá reducir puntos exclusivamente para visualización, conservando siempre eventos, máximos, mínimos y cambios de fase. Los CSV originales no se alterarán.
+
 No debe incluir:
 
 - video original sin anonimizar;
@@ -407,20 +478,45 @@ No debe incluir:
 
 ## 10. Fuentes por componente web
 
-| Componente | Fuente |
-|---|---|
-| Reproductor de pose | `overlay.mp4` |
-| Reproductor experto | `review.mp4` |
-| Calidad en tiempo real | `frame_quality.csv` |
-| Puntos y coordenadas | `landmarks.csv` |
-| Línea temporal | `frame_phases.csv` |
-| Eventos | `segmentation_summary.json` |
-| Valores instantáneos | `biomechanical_frame_metrics.csv` |
-| Resumen por repetición | `biomechanical_summary.json` |
-| Umbrales y estados | `findings.json` y `rule_evidence.csv` |
-| Vista agregada | `case_report.json` |
+| Componente | Fuente canónica | Representación web |
+|---|---|---|
+| Reproductor de pose | `overlay.mp4` | Video |
+| Reproductor experto | `review.mp4` | Video |
+| Calidad en tiempo real | `frame_quality.csv` | Gráfica sincronizada y resumen |
+| Puntos y coordenadas | `landmarks.csv` | Overlay y tabla técnica acotada |
+| Línea temporal | `frame_phases.csv` | Línea temporal y gráfica |
+| Eventos | `segmentation_summary.json` | Marcadores de inicio, profundidad y final |
+| Valores instantáneos | `biomechanical_frame_metrics.csv` | Gráfica por variable |
+| Resumen por repetición | `biomechanical_summary.json` | Tarjetas y tabla |
+| Umbrales y estados | `findings.json` y `rule_evidence.csv` | Bandas de decisión y trazabilidad |
+| Vista agregada | `case_report.json` | Resumen del caso |
+| Gráficos archivables | PNG generados por el pipeline | Descarga y vista secundaria |
 
 En producción, la API debe convertir estas fuentes a JSON acotado y tipado. El navegador no debería descargar y combinar todos los CSV directamente.
+
+### 10.1. Tablas y descargas
+
+Los CSV continuarán siendo artefactos técnicos completos, pero la web no debe presentarlos como texto crudo ni cargar todas sus filas. Se ofrecerán:
+
+1. una tabla resumida por repetición con variables, lados, unidades y estados;
+2. una vista técnica paginada con una selección de columnas relevantes;
+3. filtros por repetición, fase o variable cuando correspondan;
+4. descarga del CSV original;
+5. descarga en Excel cuando el flujo de exportación del instrumento lo requiera.
+
+La tabla de landmarks no debe listar por defecto todos los puntos de todos los fotogramas. La vista inicial mostrará el fotograma seleccionado, los puntos críticos usados y su visibilidad. El archivo completo seguirá disponible como descarga.
+
+Para `biomechanical_frame_metrics.csv`, la tabla técnica puede mostrar:
+
+| Campo | Utilidad visible |
+|---|---|
+| Tiempo y fotograma | Relacionar fila, gráfica y video |
+| Repetición y fase | Ubicar el momento analizado |
+| Tronco y pelvis | Mostrar valor instantáneo y dirección |
+| Rodilla izquierda y derecha | Evitar ocultar la bilateralidad |
+| Diferencia bilateral | Explicar la cuarta variable |
+
+El formateo incorrecto de un CSV en una hoja de cálculo no debe resolverse modificando su contenido científico. La exportación debe conservar UTF-8, separador consistente y tipos numéricos; la interfaz y el archivo Excel serán las representaciones orientadas a lectura.
 
 ## 11. Fases de implementación
 
@@ -440,8 +536,13 @@ En producción, la API debe convertir estas fuentes a JSON acotado y tipado. El 
 - validar consistencia contra CSV y JSON existentes;
 - proteger permisos por rol.
 
-### Incremento 3. Gráficas sincronizadas
+### Incremento 3. Gráficas y tablas interactivas
 
+- incorporar `Chart` de shadcn con una sola dependencia de gráficos;
+- reemplazar como vista principal `pose_quality.png`, `segmentation.png` y `biomechanical_metrics.png`;
+- mantener PNG, CSV y JSON en almacenamiento y descarga;
+- mostrar tablas resumidas y vistas técnicas paginadas;
+- cargar cada bloque explicativo bajo `Suspense` con `Skeleton`, manteniendo la obtención inicial de datos en el servidor;
 - cursor ligado al tiempo del video;
 - segmentación por colores;
 - selector de repetición;
@@ -470,12 +571,19 @@ En producción, la API debe convertir estas fuentes a JSON acotado y tipado. El 
 - cada repetición contiene cuatro decisiones;
 - valgo conserva ambos lados;
 - series y eventos usan el mismo índice de fotograma;
+- los puntos de las gráficas reproducen las series canónicas dentro de la precisión de presentación;
+- la reducción de puntos no elimina eventos ni extremos relevantes;
+- los enlaces de descarga corresponden a los artefactos almacenados;
 - no se exponen resultados a expertos.
 
 ### Frontend
 
 - seleccionar una repetición actualiza captura, fórmula y valores;
 - el cursor de la gráfica sigue el video;
+- cambiar de pestaña actualiza gráfica, geometría y tabla sin alterar el video;
+- las tablas técnicas no cargan el CSV completo en el navegador;
+- los PNG originales y archivos tabulares permanecen descargables;
+- estados vacíos, carga y error usan componentes accesibles;
 - las unidades se muestran correctamente;
 - un porcentaje nunca se etiqueta como confianza;
 - un caso no apto no muestra compensaciones;
@@ -490,8 +598,9 @@ En producción, la API debe convertir estas fuentes a JSON acotado y tipado. El 
 4. observa valores izquierdo y derecho;
 5. reproduce desde máxima profundidad;
 6. abre la fórmula sustituida;
-7. descarga la evidencia técnica;
-8. experto verifica que no puede acceder a estos resultados.
+7. consulta una tabla técnica acotada;
+8. descarga el PNG y el archivo tabular originales;
+9. experto verifica que no puede acceder a estos resultados.
 
 ## 13. Relación con los objetivos específicos
 
@@ -509,9 +618,10 @@ En producción, la API debe convertir estas fuentes a JSON acotado y tipado. El 
 La siguiente mejora no debería comenzar generando un video complejo. El orden más seguro es:
 
 1. exponer bilateralidad, unidades, fórmulas y reglas en la vista actual;
-2. crear el contrato de explicación;
-3. añadir gráficas sincronizadas;
-4. añadir geometría sobre capturas;
-5. generar el video técnico continuo.
+2. crear el contrato de explicación con series, tablas acotadas y descargas;
+3. sustituir las imágenes de gráficos como vista principal por gráficas y tablas interactivas;
+4. sincronizar video, repetición, pestaña y cursor;
+5. añadir geometría sobre capturas o video según la pestaña seleccionada;
+6. generar el video técnico continuo solo si las evidencias anteriores no resultan suficientes.
 
-Así se obtiene valor demostrativo desde el primer incremento y se evita duplicar cálculos en el frontend.
+Así se obtiene valor demostrativo desde el primer incremento, se conservan los artefactos reproducibles y se evita duplicar cálculos en el frontend. El video técnico queda como mejora posterior porque la combinación de reproductor, gráfica, tabla y geometría seleccionada puede cubrir la explicación con menor complejidad.
