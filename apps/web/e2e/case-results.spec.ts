@@ -11,9 +11,22 @@ test("shows traceable squat results for a completed case", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: caseId!, exact: true }),
   ).toBeVisible();
-  await expect(page.getByText("Resultado por patrón", { exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("heading", {
+      name: "Compensaciones y variables por repetición",
+    }),
+  ).toBeVisible();
   await expect(page.getByText("Umbrales provisionales")).toBeVisible();
   await expectPlayableVideo(page.locator("video"));
+  await expect(
+    page.getByRole("heading", { name: "Cómo se obtuvo este resultado" }),
+  ).toBeVisible();
+  await expect(page.getByRole("tab", { name: "1. Pose 2D" })).toBeVisible();
+  await expect(
+    page.getByRole("tab", { name: "2. Segmentación" }),
+  ).toBeVisible();
+  await expect(page.getByRole("tab", { name: "3. Variables" })).toBeVisible();
+  await expect(page.getByRole("tab", { name: "4. Reglas" })).toBeVisible();
   await expect(
     page.getByRole("heading", {
       name: "Máxima profundidad por repetición",
