@@ -16,6 +16,18 @@
           "default": null,
           "title": "Overlay Video"
         },
+        "analysis_overlay_video": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Analysis Overlay Video"
+        },
         "review_video": {
           "anyOf": [
             {

@@ -14,7 +14,10 @@ from src.squat.contracts import (
     build_case_report,
     write_case_record_contract,
 )
-from src.squat.evidence import generate_repetition_event_captures
+from src.squat.evidence import (
+    generate_analysis_overlay_video,
+    generate_repetition_event_captures,
+)
 from src.squat.models import (
     ProtocolReviewStatus,
     SquatBiomechanicsSummary,
@@ -113,6 +116,14 @@ def run_squat_case_analysis(
         case_id=case.case_id,
         output_dir=output_root,
     )
+    analysis_overlay = generate_analysis_overlay_video(
+        pose.artifacts.overlay_video,
+        segmentation.artifacts.frame_phases_csv,
+        biomechanics.artifacts.frame_metrics_csv,
+        pose.artifacts.frame_quality_csv,
+        findings,
+        output_dir=case_dir,
+    )
     return build_case_report(
         case_record_path,
         output_path=report_path,
@@ -122,6 +133,7 @@ def run_squat_case_analysis(
         biomechanics=biomechanics,
         findings=findings,
         event_captures=event_captures,
+        analysis_overlay_video=analysis_overlay,
         pipeline_version=pipeline_version,
     )
 
@@ -197,6 +209,16 @@ def assemble_existing_squat_case(
         if segmentation is not None
         else []
     )
+    analysis_overlay = None
+    if segmentation and biomechanics and findings:
+        analysis_overlay = generate_analysis_overlay_video(
+            pose.artifacts.overlay_video,
+            segmentation.artifacts.frame_phases_csv,
+            biomechanics.artifacts.frame_metrics_csv,
+            pose.artifacts.frame_quality_csv,
+            findings,
+            output_dir=case_dir,
+        )
     return build_case_report(
         case_record_path,
         output_path=case_dir / "case_report.json",
@@ -206,6 +228,7 @@ def assemble_existing_squat_case(
         biomechanics=biomechanics,
         findings=findings,
         event_captures=captures,
+        analysis_overlay_video=analysis_overlay,
         pipeline_version=pipeline_version,
     )
 

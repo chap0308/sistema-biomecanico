@@ -625,3 +625,17 @@ La siguiente mejora no debería comenzar generando un video complejo. El orden m
 6. generar el video técnico continuo solo si las evidencias anteriores no resultan suficientes.
 
 Así se obtiene valor demostrativo desde el primer incremento, se conservan los artefactos reproducibles y se evita duplicar cálculos en el frontend. El video técnico queda como mejora posterior porque la combinación de reproductor, gráfica, tabla y geometría seleccionada puede cubrir la explicación con menor complejidad.
+
+## 15. Estado de implementación
+
+Los cinco incrementos quedaron implementados en la rama de desarrollo:
+
+1. **Corrección informativa:** las tarjetas muestran bilateralidad de rodillas, unidad metodológica, fórmula, convención de signo y versión de reglas.
+2. **Contrato de explicación:** `GET /squat/cases/{case_id}/explanation` entrega series acotadas, repeticiones, decisiones, geometría de fotogramas clave y artefactos descargables sin recalcular métricas.
+3. **Gráficas y tablas:** la vista del caso representa calidad, segmentación, variables y reglas mediante componentes shadcn y Recharts. Los datos se filtran por repetición y el cursor sigue el tiempo del video.
+4. **Evidencia geométrica:** la pestaña seleccionada muestra un esquema normalizado de tronco, pelvis, rodillas o diferencia bilateral a máxima profundidad. Los centros y proyecciones se calculan en Python.
+5. **Video técnico:** el pipeline genera `analysis_overlay.mp4` con repetición, fase, calidad, valores instantáneos y cantidad de reglas presentes. El archivo se codifica en H.264, se declara en el reporte y se almacena como artefacto privado.
+
+Las imágenes `pose_quality.png`, `segmentation.png` y `biomechanical_metrics.png`, los CSV, los JSON y los videos anteriores permanecen en `outputs` y en almacenamiento. La web usa representaciones interactivas como vista principal y conserva los archivos originales para auditoría y descarga.
+
+La validación real se ejecutó sobre `dev_case_1784949788300`. El video técnico resultante conservó la resolución `478 × 850`, una frecuencia aproximada de `29.86 FPS` y codec H.264.

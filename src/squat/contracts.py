@@ -128,6 +128,7 @@ class SquatArtifactManifest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     overlay_video: str | None = None
+    analysis_overlay_video: str | None = None
     review_video: str | None = None
     landmarks_csv: str | None = None
     frame_quality_csv: str | None = None
@@ -188,6 +189,7 @@ def build_case_report(
     biomechanics: SquatBiomechanicsSummary | None = None,
     findings: SquatFindingsSummary | None = None,
     event_captures: list[SquatEventCapture] | None = None,
+    analysis_overlay_video: str | Path | None = None,
     pipeline_version: str = "0.1.0",
 ) -> SquatCaseReport:
     """Assemble validated stage summaries without recomputing their values."""
@@ -224,6 +226,7 @@ def build_case_report(
         biomechanics=biomechanics,
         findings=findings,
         event_captures=event_captures or [],
+        analysis_overlay_video=analysis_overlay_video,
     )
     report = SquatCaseReport(
         case_id=case_id,
@@ -304,9 +307,15 @@ def _artifact_manifest(
     biomechanics: SquatBiomechanicsSummary | None,
     findings: SquatFindingsSummary | None,
     event_captures: list[SquatEventCapture],
+    analysis_overlay_video: str | Path | None,
 ) -> SquatArtifactManifest:
     return SquatArtifactManifest(
         overlay_video=_name(pose.artifacts.overlay_video) if pose else None,
+        analysis_overlay_video=(
+            _name(str(analysis_overlay_video))
+            if analysis_overlay_video
+            else None
+        ),
         review_video=(
             _name(pose.artifacts.review_video)
             if pose and pose.artifacts.review_video

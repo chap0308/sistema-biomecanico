@@ -18,6 +18,7 @@ type AnalysisPlayerProps = {
   posterUrl?: string;
   repetitions: SquatRepetition[];
   explanation?: SquatCaseExplanation | null;
+  technicalAssetUrl?: string;
 };
 
 const eventLabels = {
@@ -32,12 +33,14 @@ export function AnalysisPlayer({
   posterUrl,
   repetitions,
   explanation,
+  technicalAssetUrl,
 }: AnalysisPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activeRepetition, setActiveRepetition] = useState(
     repetitions[0]?.repetition_index ?? 1,
   );
   const [currentTime, setCurrentTime] = useState(0);
+  const [videoMode, setVideoMode] = useState<"pose" | "technical">("pose");
   const selectedEvents = captures.filter(
     (capture) => capture.repetition_index === activeRepetition,
   );
@@ -50,6 +53,24 @@ export function AnalysisPlayer({
 
   return (
     <div>
+      {technicalAssetUrl ? (
+        <div className="mb-3 flex flex-wrap gap-2">
+          <Button
+            size="sm"
+            variant={videoMode === "pose" ? "default" : "outline"}
+            onClick={() => setVideoMode("pose")}
+          >
+            Overlay de pose
+          </Button>
+          <Button
+            size="sm"
+            variant={videoMode === "technical" ? "default" : "outline"}
+            onClick={() => setVideoMode("technical")}
+          >
+            Overlay técnico
+          </Button>
+        </div>
+      ) : null}
       <div className="overflow-hidden rounded-xl border bg-slate-950 shadow-sm">
         <video
           ref={videoRef}
@@ -57,7 +78,14 @@ export function AnalysisPlayer({
           controls
           poster={posterUrl}
           preload="metadata"
-          src={assetUrl}
+          src={
+            videoMode === "technical" && technicalAssetUrl
+              ? technicalAssetUrl
+              : assetUrl
+          }
+          onLoadedMetadata={(event) => {
+            event.currentTarget.currentTime = currentTime;
+          }}
           onTimeUpdate={(event) =>
             setCurrentTime(event.currentTarget.currentTime)
           }

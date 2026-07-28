@@ -223,6 +223,11 @@ export default async function CaseDetailPage({
                 }
                 repetitions={report.segmentation.repetitions}
                 explanation={explanation}
+                technicalAssetUrl={
+                  report.artifacts?.analysis_overlay_video
+                    ? assetUrl(report.artifacts.analysis_overlay_video)
+                    : undefined
+                }
               />
             ) : (
               <EmptyEvidence text="El overlay o la segmentación no están disponibles para este caso." />
@@ -631,6 +636,10 @@ function technicalDownloads(report: SquatCaseReport) {
     {
       filename: report.artifacts?.landmarks_csv,
       label: "Puntos anatómicos clave",
+    },
+    {
+      filename: report.artifacts?.analysis_overlay_video,
+      label: "Video técnico explicativo",
     },
   ];
   return files.filter(

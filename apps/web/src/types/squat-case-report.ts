@@ -129,6 +129,7 @@ export type Notes = string[];
 export type RuleEvidenceCsv = string;
 export type FindingsJson = string;
 export type OverlayVideo1 = string | null;
+export type AnalysisOverlayVideo = string | null;
 export type ReviewVideo1 = string | null;
 export type LandmarksCsv3 = string | null;
 export type FrameQualityCsv2 = string | null;
@@ -378,6 +379,7 @@ export interface SquatFindingsArtifacts {
  */
 export interface SquatArtifactManifest {
   overlay_video?: OverlayVideo1;
+  analysis_overlay_video?: AnalysisOverlayVideo;
   review_video?: ReviewVideo1;
   landmarks_csv?: LandmarksCsv3;
   frame_quality_csv?: FrameQualityCsv2;
