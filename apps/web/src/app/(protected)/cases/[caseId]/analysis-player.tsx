@@ -8,12 +8,16 @@ import type {
   SquatEventCapture,
   SquatRepetition,
 } from "@/types/squat-case-report";
+import type { SquatCaseExplanation } from "@/types/squat-explanation";
+
+import { ExplanationWorkspace } from "./explanation-workspace";
 
 type AnalysisPlayerProps = {
   assetUrl: string;
   captures: SquatEventCapture[];
   posterUrl?: string;
   repetitions: SquatRepetition[];
+  explanation?: SquatCaseExplanation | null;
 };
 
 const eventLabels = {
@@ -27,9 +31,13 @@ export function AnalysisPlayer({
   captures,
   posterUrl,
   repetitions,
+  explanation,
 }: AnalysisPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [activeRepetition, setActiveRepetition] = useState(1);
+  const [activeRepetition, setActiveRepetition] = useState(
+    repetitions[0]?.repetition_index ?? 1,
+  );
+  const [currentTime, setCurrentTime] = useState(0);
   const selectedEvents = captures.filter(
     (capture) => capture.repetition_index === activeRepetition,
   );
@@ -50,6 +58,9 @@ export function AnalysisPlayer({
           poster={posterUrl}
           preload="metadata"
           src={assetUrl}
+          onTimeUpdate={(event) =>
+            setCurrentTime(event.currentTarget.currentTime)
+          }
         >
           Tu navegador no admite la reproducción de video.
         </video>
@@ -108,6 +119,14 @@ export function AnalysisPlayer({
           </button>
         ))}
       </div>
+
+      {explanation ? (
+        <ExplanationWorkspace
+          activeRepetition={activeRepetition}
+          currentTime={currentTime}
+          explanation={explanation}
+        />
+      ) : null}
     </div>
   );
 }

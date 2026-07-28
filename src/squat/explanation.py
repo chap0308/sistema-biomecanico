@@ -11,7 +11,6 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from src.squat.contracts import SquatCaseReport
 from src.squat.models import (
-    CRITICAL_LANDMARKS,
     SquatRepetition,
     SquatRepetitionMetrics,
     SquatRuleDecision,
@@ -62,6 +61,18 @@ class SquatExplanationLandmark(BaseModel):
     visibility: float = Field(ge=0.0, le=1.0)
 
 
+class SquatExplanationGeometry(BaseModel):
+    """Derived points already used by the biomechanical formulas."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    shoulder_midpoint: SquatExplanationLandmark | None = None
+    pelvis_midpoint: SquatExplanationLandmark | None = None
+    ankle_midpoint: SquatExplanationLandmark | None = None
+    left_knee_projection: SquatExplanationLandmark | None = None
+    right_knee_projection: SquatExplanationLandmark | None = None
+
+
 class SquatExplanationKeyFrame(BaseModel):
     """Landmarks retained at one relevant repetition event."""
 
@@ -72,6 +83,7 @@ class SquatExplanationKeyFrame(BaseModel):
     frame_index: int = Field(ge=0)
     timestamp_seconds: float = Field(ge=0.0)
     landmarks: dict[str, SquatExplanationLandmark]
+    geometry: SquatExplanationGeometry
 
 
 class SquatExplanationRepetition(BaseModel):
@@ -284,11 +296,16 @@ def _quality_summary(
         )
         is not None
     ]
+    detected_counts = [
+        count
+        for row in rows
+        if (count := _integer(row.get("detected_keypoints"))) is not None
+    ]
     return SquatExplanationQuality(
         visibility_threshold=report.pose.min_visibility_threshold,
         processed_percentage=report.pose.processed_frames_percentage,
         valid_percentage=report.pose.valid_frames_percentage,
-        selected_keypoints=len(CRITICAL_LANDMARKS),
+        selected_keypoints=max(detected_counts, default=0),
         mean_detected_keypoints=report.pose.mean_detected_keypoints,
         minimum_observed_visibility=min(observed) if observed else None,
     )
@@ -365,9 +382,65 @@ def _key_frame_geometry(
             frame_index=frame_index,
             timestamp_seconds=events[frame_index][2],
             landmarks=landmarks,
+            geometry=_derived_geometry(landmarks),
         )
         for frame_index, landmarks in sorted(points.items())
     ]
+
+
+def _derived_geometry(
+    landmarks: Mapping[str, SquatExplanationLandmark],
+) -> SquatExplanationGeometry:
+    return SquatExplanationGeometry(
+        shoulder_midpoint=_midpoint(
+            landmarks.get("left_shoulder"),
+            landmarks.get("right_shoulder"),
+        ),
+        pelvis_midpoint=_midpoint(
+            landmarks.get("left_hip"),
+            landmarks.get("right_hip"),
+        ),
+        ankle_midpoint=_midpoint(
+            landmarks.get("left_ankle"),
+            landmarks.get("right_ankle"),
+        ),
+        left_knee_projection=_knee_projection(landmarks, side="left"),
+        right_knee_projection=_knee_projection(landmarks, side="right"),
+    )
+
+
+def _midpoint(
+    first: SquatExplanationLandmark | None,
+    second: SquatExplanationLandmark | None,
+) -> SquatExplanationLandmark | None:
+    if first is None or second is None:
+        return None
+    return SquatExplanationLandmark(
+        x=(first.x + second.x) / 2.0,
+        y=(first.y + second.y) / 2.0,
+        visibility=min(first.visibility, second.visibility),
+    )
+
+
+def _knee_projection(
+    landmarks: Mapping[str, SquatExplanationLandmark],
+    *,
+    side: str,
+) -> SquatExplanationLandmark | None:
+    hip = landmarks.get(f"{side}_hip")
+    knee = landmarks.get(f"{side}_knee")
+    ankle = landmarks.get(f"{side}_ankle")
+    if hip is None or knee is None or ankle is None:
+        return None
+    vertical_span = ankle.y - hip.y
+    if abs(vertical_span) <= 1e-9:
+        return None
+    interpolation = (knee.y - hip.y) / vertical_span
+    return SquatExplanationLandmark(
+        x=hip.x + interpolation * (ankle.x - hip.x),
+        y=knee.y,
+        visibility=min(hip.visibility, knee.visibility, ankle.visibility),
+    )
 
 
 def _artifact_downloads(

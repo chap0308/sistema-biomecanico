@@ -35,6 +35,7 @@ import type {
   SquatCaseReport,
   SquatRuleDecision,
 } from "@/types/squat-case-report";
+import type { SquatCaseExplanation } from "@/types/squat-explanation";
 
 import { AnalysisPlayer } from "./analysis-player";
 import { groupCompleteDecisions } from "./decision-groups";
@@ -56,12 +57,18 @@ export default async function CaseDetailPage({
 }: CaseDetailPageProps) {
   await requireRole("investigator");
   const { caseId } = await params;
-  let report: SquatCaseReport | null = null;
-  try {
-    report = await apiServerFetch<SquatCaseReport>(`/squat/cases/${caseId}`);
-  } catch {
-    // An explicit recovery state is clearer than a generic server error.
-  }
+  const [reportResult, explanationResult] = await Promise.allSettled([
+    apiServerFetch<SquatCaseReport>(`/squat/cases/${caseId}`),
+    apiServerFetch<SquatCaseExplanation>(
+      `/squat/cases/${caseId}/explanation`,
+    ),
+  ]);
+  const report =
+    reportResult.status === "fulfilled" ? reportResult.value : null;
+  const explanation =
+    explanationResult.status === "fulfilled"
+      ? explanationResult.value
+      : null;
 
   if (!report) {
     return <UnavailableCase />;
@@ -215,6 +222,7 @@ export default async function CaseDetailPage({
                     : undefined
                 }
                 repetitions={report.segmentation.repetitions}
+                explanation={explanation}
               />
             ) : (
               <EmptyEvidence text="El overlay o la segmentación no están disponibles para este caso." />
@@ -358,30 +366,35 @@ export default async function CaseDetailPage({
 
       <section className="mt-9">
         <SectionHeading
-          eyebrow="Evidencia gráfica"
-          title="Calidad, segmentación y variables"
-          description="Estas salidas conectan la estimación de pose con las fases del movimiento y las métricas calculadas."
+          eyebrow="Artefactos reproducibles"
+          title="Gráficos originales del pipeline"
+          description="La vista interactiva anterior utiliza los mismos datos. Estas imágenes permanecen disponibles para auditoría y descarga."
         />
-        <div className="mt-4 grid gap-4 lg:grid-cols-3">
-          <EvidencePlot
-            alt="Calidad de la estimación de pose por fotograma"
-            filename={report.artifacts?.pose_quality_plot}
-            title="Calidad de pose 2D"
-            assetUrl={assetUrl}
-          />
-          <EvidencePlot
-            alt="Segmentación temporal de las repeticiones"
-            filename={report.artifacts?.segmentation_plot}
-            title="Fases y repeticiones"
-            assetUrl={assetUrl}
-          />
-          <EvidencePlot
-            alt="Variables biomecánicas calculadas"
-            filename={report.artifacts?.biomechanical_metrics_plot}
-            title="Variables biomecánicas"
-            assetUrl={assetUrl}
-          />
-        </div>
+        <details className="mt-4 rounded-xl border bg-card p-4">
+          <summary className="cursor-pointer text-sm font-medium">
+            Ver imágenes estáticas
+          </summary>
+          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+            <EvidencePlot
+              alt="Calidad de la estimación de pose por fotograma"
+              filename={report.artifacts?.pose_quality_plot}
+              title="Calidad de pose 2D"
+              assetUrl={assetUrl}
+            />
+            <EvidencePlot
+              alt="Segmentación temporal de las repeticiones"
+              filename={report.artifacts?.segmentation_plot}
+              title="Fases y repeticiones"
+              assetUrl={assetUrl}
+            />
+            <EvidencePlot
+              alt="Variables biomecánicas calculadas"
+              filename={report.artifacts?.biomechanical_metrics_plot}
+              title="Variables biomecánicas"
+              assetUrl={assetUrl}
+            />
+          </div>
+        </details>
       </section>
 
       {report.quality ? (
@@ -549,16 +562,32 @@ function EvidencePlot({
         <CardTitle className="text-sm">{title}</CardTitle>
       </CardHeader>
       {filename ? (
-        <div className="relative aspect-[4/3] border-t bg-white">
-          <Image
-            src={assetUrl(filename)}
-            alt={alt}
-            fill
-            unoptimized
-            className="object-contain p-2"
-            sizes="(max-width: 1024px) 100vw, 33vw"
-          />
-        </div>
+        <>
+          <div className="relative aspect-[4/3] border-y bg-white">
+            <Image
+              src={assetUrl(filename)}
+              alt={alt}
+              fill
+              unoptimized
+              className="object-contain p-2"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
+          </div>
+          <CardContent className="pt-3">
+            <a
+              href={assetUrl(filename)}
+              download
+              className={buttonVariants({
+                size: "sm",
+                variant: "outline",
+                className: "w-full",
+              })}
+            >
+              <DownloadIcon aria-hidden="true" />
+              Descargar PNG
+            </a>
+          </CardContent>
+        </>
       ) : (
         <CardContent>
           <EmptyEvidence text="Gráfico no disponible." />

@@ -1,0 +1,839 @@
+"use client";
+
+import { useState } from "react";
+import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  ReferenceLine,
+  XAxis,
+  YAxis,
+} from "recharts";
+
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+  type ChartConfig,
+} from "@/components/ui/chart";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
+import type {
+  SquatCaseExplanation,
+  SquatExplanationFrame,
+} from "@/types/squat-explanation";
+
+type ExplanationWorkspaceProps = {
+  activeRepetition: number;
+  currentTime: number;
+  explanation: SquatCaseExplanation;
+};
+
+const chartConfig = {
+  keypoints: { label: "Puntos detectados", color: "var(--chart-2)" },
+  visibility: { label: "Visibilidad mínima", color: "var(--chart-5)" },
+  rawHip: { label: "Centro de caderas", color: "var(--muted-foreground)" },
+  smoothHip: { label: "Señal suavizada", color: "var(--chart-2)" },
+  trunk: { label: "Inclinación del tronco", color: "var(--chart-1)" },
+  pelvis: { label: "Desplazamiento de pelvis", color: "var(--chart-3)" },
+  leftKnee: { label: "Rodilla izquierda", color: "var(--chart-1)" },
+  rightKnee: { label: "Rodilla derecha", color: "var(--chart-4)" },
+  bilateral: { label: "Diferencia bilateral", color: "var(--chart-5)" },
+} satisfies ChartConfig;
+
+const variables = {
+  trunk: {
+    label: "Tronco",
+    description: "Ángulo del eje hombros-pelvis respecto de la vertical.",
+    unit: "°",
+  },
+  pelvis: {
+    label: "Pelvis",
+    description:
+      "Desplazamiento lateral corregido por el reposo inicial y normalizado.",
+    unit: "%",
+  },
+  knees: {
+    label: "Rodillas",
+    description:
+      "Desviación medial de cada rodilla respecto del eje cadera-tobillo.",
+    unit: "%",
+  },
+  bilateral: {
+    label: "Diferencia bilateral",
+    description: "Diferencia absoluta entre las alineaciones de ambas rodillas.",
+    unit: "%",
+  },
+} as const;
+
+type VariableKey = keyof typeof variables;
+
+export function ExplanationWorkspace({
+  activeRepetition,
+  currentTime,
+  explanation,
+}: ExplanationWorkspaceProps) {
+  const [variable, setVariable] = useState<VariableKey>("trunk");
+  const repetition = explanation.repetitions.find(
+    (item) =>
+      item.segmentation.repetition_index === activeRepetition,
+  );
+  if (!repetition) return null;
+
+  const frames = explanation.frames.filter(
+    (frame) =>
+      frame.timestamp_seconds >= repetition.segmentation.start_seconds &&
+      frame.timestamp_seconds <= repetition.segmentation.end_seconds,
+  );
+  const eventRows = eventFrames(frames, repetition.segmentation);
+  const peakGeometry = explanation.key_frames.find(
+    (frame) =>
+      frame.repetition_index === activeRepetition &&
+      frame.event === "maxima_profundidad",
+  );
+
+  return (
+    <section className="mt-7 border-t pt-6" aria-labelledby="explanation-title">
+      <div className="max-w-3xl">
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-primary">
+          Trazabilidad
+        </p>
+        <h2 id="explanation-title" className="mt-2 text-2xl font-semibold">
+          Cómo se obtuvo este resultado
+        </h2>
+        <p className="mt-2 text-sm leading-6 text-muted-foreground">
+          Recorre la detección, la segmentación, los cálculos y las reglas de la
+          repetición {activeRepetition}. El cursor vertical sigue el video.
+        </p>
+      </div>
+
+      <Tabs defaultValue="quality" className="mt-5">
+        <TabsList className="h-auto max-w-full flex-wrap justify-start">
+          <TabsTrigger value="quality">1. Pose 2D</TabsTrigger>
+          <TabsTrigger value="segmentation">2. Segmentación</TabsTrigger>
+          <TabsTrigger value="variables">3. Variables</TabsTrigger>
+          <TabsTrigger value="rules">4. Reglas</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="quality" className="mt-4">
+          <QualityPanel
+            currentTime={currentTime}
+            explanation={explanation}
+            frames={frames}
+          />
+        </TabsContent>
+        <TabsContent value="segmentation" className="mt-4">
+          <SegmentationPanel currentTime={currentTime} frames={frames} />
+        </TabsContent>
+        <TabsContent value="variables" className="mt-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Geometría calculada</CardTitle>
+              <CardDescription>
+                Selecciona una variable para evitar superponer señales y
+                referencias diferentes.
+              </CardDescription>
+              <Tabs
+                value={variable}
+                onValueChange={(value) => setVariable(value as VariableKey)}
+                className="pt-2"
+              >
+                <TabsList variant="line" className="max-w-full flex-wrap">
+                  {Object.entries(variables).map(([key, item]) => (
+                    <TabsTrigger key={key} value={key}>
+                      {item.label}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </Tabs>
+            </CardHeader>
+            <CardContent>
+              <p className="mb-3 text-xs text-muted-foreground">
+                {variables[variable].description}
+              </p>
+              <GeometryDiagram
+                keyFrame={peakGeometry}
+                variable={variable}
+              />
+              <VariableChart
+                currentTime={currentTime}
+                frames={frames}
+                variable={variable}
+              />
+              <EventTable frames={eventRows} variable={variable} />
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="rules" className="mt-4">
+          <RulesTable decisions={repetition.decisions} />
+        </TabsContent>
+      </Tabs>
+    </section>
+  );
+}
+
+function GeometryDiagram({
+  keyFrame,
+  variable,
+}: {
+  keyFrame: SquatCaseExplanation["key_frames"][number] | undefined;
+  variable: VariableKey;
+}) {
+  if (!keyFrame) {
+    return (
+      <p className="mb-4 rounded-lg border p-4 text-sm text-muted-foreground">
+        No hay geometría disponible para el fotograma de máxima profundidad.
+      </p>
+    );
+  }
+  const { geometry, landmarks } = keyFrame;
+  const skeleton = [
+    ["left_shoulder", "right_shoulder"],
+    ["left_shoulder", "left_hip"],
+    ["right_shoulder", "right_hip"],
+    ["left_hip", "right_hip"],
+    ["left_hip", "left_knee"],
+    ["right_hip", "right_knee"],
+    ["left_knee", "left_ankle"],
+    ["right_knee", "right_ankle"],
+  ] as const;
+
+  return (
+    <div className="mb-5 grid gap-4 rounded-xl border bg-slate-950 p-4 lg:grid-cols-[minmax(0,0.8fr)_minmax(16rem,1.2fr)]">
+      <div className="mx-auto w-full max-w-sm">
+        <svg
+          viewBox="0 0 1 1"
+          className="aspect-[3/4] w-full rounded-lg bg-[radial-gradient(circle_at_center,_#172033,_#070b12)]"
+          role="img"
+          aria-label={`Esquema geométrico de ${variables[variable].label.toLowerCase()}`}
+        >
+          {skeleton.map(([from, to]) => (
+            <SvgLine
+              key={`${from}-${to}`}
+              from={landmarks[from]}
+              to={landmarks[to]}
+              className="stroke-slate-500"
+            />
+          ))}
+          {Object.entries(landmarks).map(([name, point]) => (
+            <circle
+              key={name}
+              cx={point.x}
+              cy={point.y}
+              r="0.009"
+              className="fill-slate-300"
+            />
+          ))}
+          {variable === "trunk" &&
+          geometry.shoulder_midpoint &&
+          geometry.pelvis_midpoint ? (
+            <>
+              <SvgLine
+                from={geometry.pelvis_midpoint}
+                to={geometry.shoulder_midpoint}
+                className="stroke-cyan-300"
+                strong
+              />
+              <SvgLine
+                from={geometry.pelvis_midpoint}
+                to={{
+                  ...geometry.shoulder_midpoint,
+                  x: geometry.pelvis_midpoint.x,
+                }}
+                className="stroke-amber-300"
+                dashed
+              />
+            </>
+          ) : null}
+          {variable === "pelvis" &&
+          geometry.pelvis_midpoint &&
+          geometry.ankle_midpoint ? (
+            <>
+              <SvgLine
+                from={geometry.ankle_midpoint}
+                to={geometry.pelvis_midpoint}
+                className="stroke-cyan-300"
+                strong
+              />
+              <SvgLine
+                from={geometry.ankle_midpoint}
+                to={{
+                  ...geometry.pelvis_midpoint,
+                  x: geometry.ankle_midpoint.x,
+                }}
+                className="stroke-amber-300"
+                dashed
+              />
+            </>
+          ) : null}
+          {variable === "knees" || variable === "bilateral" ? (
+            <>
+              <KneeGeometry
+                actual={landmarks.left_knee}
+                ankle={landmarks.left_ankle}
+                hip={landmarks.left_hip}
+                projection={geometry.left_knee_projection}
+              />
+              <KneeGeometry
+                actual={landmarks.right_knee}
+                ankle={landmarks.right_ankle}
+                hip={landmarks.right_hip}
+                projection={geometry.right_knee_projection}
+              />
+            </>
+          ) : null}
+        </svg>
+      </div>
+      <div className="self-center text-slate-100">
+        <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-cyan-300">
+          Fotograma {keyFrame.frame_index} ·{" "}
+          {keyFrame.timestamp_seconds.toFixed(2)} s
+        </p>
+        <h4 className="mt-2 text-lg font-semibold">
+          Referencias de {variables[variable].label.toLowerCase()}
+        </h4>
+        <p className="mt-2 text-sm leading-6 text-slate-300">
+          {geometryExplanation(variable)}
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3 text-xs">
+          <span className="flex items-center gap-2">
+            <span className="h-0.5 w-6 bg-cyan-300" />
+            Geometría observada
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="w-6 border-t border-dashed border-amber-300" />
+            Referencia
+          </span>
+          {variable === "knees" || variable === "bilateral" ? (
+            <span className="flex items-center gap-2">
+              <span className="h-0.5 w-6 bg-rose-400" />
+              Desviación
+            </span>
+          ) : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function KneeGeometry({
+  actual,
+  ankle,
+  hip,
+  projection,
+}: {
+  actual?: { x: number; y: number };
+  ankle?: { x: number; y: number };
+  hip?: { x: number; y: number };
+  projection?: { x: number; y: number } | null;
+}) {
+  if (!actual || !ankle || !hip || !projection) return null;
+  return (
+    <>
+      <SvgLine
+        from={hip}
+        to={ankle}
+        className="stroke-amber-300"
+        dashed
+      />
+      <SvgLine
+        from={projection}
+        to={actual}
+        className="stroke-rose-400"
+        strong
+      />
+      <circle
+        cx={projection.x}
+        cy={projection.y}
+        r="0.011"
+        className="fill-amber-300"
+      />
+    </>
+  );
+}
+
+function SvgLine({
+  className,
+  dashed = false,
+  from,
+  strong = false,
+  to,
+}: {
+  className: string;
+  dashed?: boolean;
+  from?: { x: number; y: number } | null;
+  strong?: boolean;
+  to?: { x: number; y: number } | null;
+}) {
+  if (!from || !to) return null;
+  return (
+    <line
+      x1={from.x}
+      y1={from.y}
+      x2={to.x}
+      y2={to.y}
+      className={className}
+      strokeWidth={strong ? 0.009 : 0.005}
+      strokeDasharray={dashed ? "0.02 0.014" : undefined}
+      strokeLinecap="round"
+    />
+  );
+}
+
+function geometryExplanation(variable: VariableKey) {
+  if (variable === "trunk") {
+    return "La línea cian une el centro de pelvis con el centro de hombros. La línea discontinua representa la vertical usada para calcular la inclinación.";
+  }
+  if (variable === "pelvis") {
+    return "Se compara el centro de pelvis con el centro de apoyo definido por ambos tobillos y con la referencia establecida durante el reposo.";
+  }
+  if (variable === "knees") {
+    return "La línea discontinua une cadera y tobillo. El punto amarillo indica la posición esperada de la rodilla a su misma altura y la línea roja muestra la desviación observada.";
+  }
+  return "Se representan simultáneamente las desviaciones izquierda y derecha; la variable final corresponde a la diferencia absoluta entre ambas.";
+}
+
+function QualityPanel({
+  currentTime,
+  explanation,
+  frames,
+}: {
+  currentTime: number;
+  explanation: SquatCaseExplanation;
+  frames: SquatExplanationFrame[];
+}) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Disponibilidad de pose por fotograma</CardTitle>
+        <CardDescription>
+          Los puntos críticos y la visibilidad determinan si un fotograma puede
+          participar en los cálculos.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ChartContainer config={chartConfig} className="h-72 w-full">
+          <LineChart data={frames}>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="timestamp_seconds"
+              tickFormatter={formatSeconds}
+              type="number"
+              domain={["dataMin", "dataMax"]}
+            />
+            <YAxis yAxisId="points" domain={[0, 13]} width={30} />
+            <YAxis
+              yAxisId="visibility"
+              orientation="right"
+              domain={[0, 1]}
+              width={34}
+            />
+            <ChartTooltip
+              content={<ChartTooltipContent />}
+              labelFormatter={(value) => `${Number(value).toFixed(2)} s`}
+            />
+            <ReferenceLine
+              yAxisId="visibility"
+              y={explanation.quality?.visibility_threshold ?? 0.5}
+              stroke="var(--destructive)"
+              strokeDasharray="4 4"
+            />
+            <TimeCursor currentTime={currentTime} yAxisId="points" />
+            <Line
+              yAxisId="points"
+              dataKey="detected_keypoints"
+              name="keypoints"
+              stroke="var(--color-keypoints)"
+              dot={false}
+              isAnimationActive={false}
+            />
+            <Line
+              yAxisId="visibility"
+              dataKey="minimum_critical_visibility"
+              name="visibility"
+              stroke="var(--color-visibility)"
+              dot={false}
+              isAnimationActive={false}
+            />
+          </LineChart>
+        </ChartContainer>
+        <div className="mt-4 grid gap-2 sm:grid-cols-3">
+          <SmallMetric
+            label="Fotogramas válidos"
+            value={`${explanation.quality?.valid_percentage.toFixed(1) ?? "—"} %`}
+          />
+          <SmallMetric
+            label="Promedio de puntos"
+            value={
+              explanation.quality?.mean_detected_keypoints.toFixed(1) ?? "—"
+            }
+          />
+          <SmallMetric
+            label="Umbral de visibilidad"
+            value={
+              explanation.quality?.visibility_threshold.toFixed(2) ?? "—"
+            }
+          />
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function SegmentationPanel({
+  currentTime,
+  frames,
+}: {
+  currentTime: number;
+  frames: SquatExplanationFrame[];
+}) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Trayectoria del centro de caderas</CardTitle>
+        <CardDescription>
+          La señal suavizada permite localizar descenso, máxima profundidad y
+          ascenso. En la imagen, el eje vertical aumenta hacia abajo.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ChartContainer config={chartConfig} className="h-72 w-full">
+          <LineChart data={frames}>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="timestamp_seconds"
+              tickFormatter={formatSeconds}
+              type="number"
+              domain={["dataMin", "dataMax"]}
+            />
+            <YAxis reversed domain={["auto", "auto"]} width={44} />
+            <ChartTooltip
+              content={<ChartTooltipContent />}
+              labelFormatter={(value) => `${Number(value).toFixed(2)} s`}
+            />
+            <TimeCursor currentTime={currentTime} />
+            <Line
+              dataKey="hip_midpoint_y"
+              name="rawHip"
+              stroke="var(--color-rawHip)"
+              strokeOpacity={0.35}
+              dot={false}
+              isAnimationActive={false}
+            />
+            <Line
+              dataKey="hip_midpoint_y_smoothed"
+              name="smoothHip"
+              stroke="var(--color-smoothHip)"
+              strokeWidth={2}
+              dot={false}
+              isAnimationActive={false}
+            />
+          </LineChart>
+        </ChartContainer>
+        <PhaseLegend frames={frames} />
+      </CardContent>
+    </Card>
+  );
+}
+
+function VariableChart({
+  currentTime,
+  frames,
+  variable,
+}: {
+  currentTime: number;
+  frames: SquatExplanationFrame[];
+  variable: VariableKey;
+}) {
+  return (
+    <ChartContainer config={chartConfig} className="h-72 w-full">
+      <LineChart data={frames}>
+        <CartesianGrid vertical={false} />
+        <XAxis
+          dataKey="timestamp_seconds"
+          tickFormatter={formatSeconds}
+          type="number"
+          domain={["dataMin", "dataMax"]}
+        />
+        <YAxis width={44} />
+        <ChartTooltip
+          content={<ChartTooltipContent />}
+          labelFormatter={(value) => `${Number(value).toFixed(2)} s`}
+        />
+        <ReferenceLine y={0} stroke="var(--border)" />
+        <TimeCursor currentTime={currentTime} />
+        {variable === "trunk" ? (
+          <MetricLine dataKey="trunk_inclination_deg" name="trunk" />
+        ) : null}
+        {variable === "pelvis" ? (
+          <MetricLine dataKey="pelvis_lateral_shift_pct" name="pelvis" />
+        ) : null}
+        {variable === "knees" ? (
+          <>
+            <MetricLine
+              dataKey="left_knee_medial_deviation_pct"
+              name="leftKnee"
+            />
+            <MetricLine
+              dataKey="right_knee_medial_deviation_pct"
+              name="rightKnee"
+            />
+          </>
+        ) : null}
+        {variable === "bilateral" ? (
+          <MetricLine
+            dataKey="bilateral_alignment_difference_pct"
+            name="bilateral"
+          />
+        ) : null}
+      </LineChart>
+    </ChartContainer>
+  );
+}
+
+function MetricLine({
+  dataKey,
+  name,
+}: {
+  dataKey: keyof SquatExplanationFrame;
+  name: keyof typeof chartConfig;
+}) {
+  return (
+    <Line
+      dataKey={dataKey}
+      name={name}
+      stroke={`var(--color-${name})`}
+      strokeWidth={2}
+      dot={false}
+      isAnimationActive={false}
+    />
+  );
+}
+
+function TimeCursor({
+  currentTime,
+  yAxisId,
+}: {
+  currentTime: number;
+  yAxisId?: string;
+}) {
+  return (
+    <ReferenceLine
+      x={currentTime}
+      yAxisId={yAxisId}
+      stroke="var(--foreground)"
+      strokeDasharray="3 3"
+      ifOverflow="extendDomain"
+    />
+  );
+}
+
+function EventTable({
+  frames,
+  variable,
+}: {
+  frames: { event: string; frame: SquatExplanationFrame }[];
+  variable: VariableKey;
+}) {
+  return (
+    <div className="mt-5 overflow-x-auto rounded-lg border">
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Evento</TableHead>
+            <TableHead>Tiempo</TableHead>
+            {variable === "knees" ? (
+              <>
+                <TableHead>Izquierda</TableHead>
+                <TableHead>Derecha</TableHead>
+              </>
+            ) : (
+              <TableHead>Valor</TableHead>
+            )}
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {frames.map(({ event, frame }) => (
+            <TableRow key={event}>
+              <TableCell>{event}</TableCell>
+              <TableCell className="font-mono">
+                {frame.timestamp_seconds.toFixed(2)} s
+              </TableCell>
+              {variable === "knees" ? (
+                <>
+                  <TableCell className="font-mono">
+                    {formatValue(
+                      frame.left_knee_medial_deviation_pct,
+                      variables[variable].unit,
+                    )}
+                  </TableCell>
+                  <TableCell className="font-mono">
+                    {formatValue(
+                      frame.right_knee_medial_deviation_pct,
+                      variables[variable].unit,
+                    )}
+                  </TableCell>
+                </>
+              ) : (
+                <TableCell className="font-mono">
+                  {formatValue(
+                    variableValue(frame, variable),
+                    variables[variable].unit,
+                  )}
+                </TableCell>
+              )}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
+  );
+}
+
+function RulesTable({
+  decisions,
+}: {
+  decisions: SquatCaseExplanation["repetitions"][number]["decisions"];
+}) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Aplicación de criterios interpretables</CardTitle>
+        <CardDescription>
+          Cada patrón se clasifica de forma independiente; una repetición puede
+          contener varias compensaciones observables.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="overflow-x-auto">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Patrón</TableHead>
+              <TableHead>Valor</TableHead>
+              <TableHead>Ausente</TableHead>
+              <TableHead>Presente</TableHead>
+              <TableHead>Estado</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {decisions.map((decision) => (
+              <TableRow key={decision.finding}>
+                <TableCell>{findingLabel(decision.finding)}</TableCell>
+                <TableCell className="font-mono">
+                  {formatValue(
+                    decision.aggregate_value ?? null,
+                    decision.unit === "deg" ? "°" : "%",
+                  )}
+                </TableCell>
+                <TableCell>≤ {decision.absent_max}</TableCell>
+                <TableCell>≥ {decision.present_min}</TableCell>
+                <TableCell>
+                  <Badge
+                    variant={
+                      decision.status === "presente"
+                        ? "default"
+                        : decision.status === "ausente"
+                          ? "secondary"
+                          : "outline"
+                    }
+                  >
+                    {decision.status.replace("_", " ")}
+                  </Badge>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </CardContent>
+    </Card>
+  );
+}
+
+function PhaseLegend({ frames }: { frames: SquatExplanationFrame[] }) {
+  const phases = [...new Set(frames.map((frame) => frame.phase))];
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {phases.map((phase) => (
+        <Badge key={phase} variant="outline">
+          {phase.replaceAll("_", " ")}
+        </Badge>
+      ))}
+    </div>
+  );
+}
+
+function SmallMetric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-lg border bg-muted/25 p-3">
+      <p className="text-[11px] text-muted-foreground">{label}</p>
+      <p className="mt-1 font-mono font-semibold">{value}</p>
+    </div>
+  );
+}
+
+function eventFrames(
+  frames: SquatExplanationFrame[],
+  repetition: SquatCaseExplanation["repetitions"][number]["segmentation"],
+) {
+  return [
+    ["Inicio", repetition.start_seconds],
+    ["Máxima profundidad", repetition.peak_depth_seconds],
+    ["Final", repetition.end_seconds],
+  ].map(([event, timestamp]) => ({
+    event: String(event),
+    frame: nearestFrame(frames, Number(timestamp)),
+  }));
+}
+
+function nearestFrame(frames: SquatExplanationFrame[], timestamp: number) {
+  return frames.reduce((nearest, frame) =>
+    Math.abs(frame.timestamp_seconds - timestamp) <
+    Math.abs(nearest.timestamp_seconds - timestamp)
+      ? frame
+      : nearest,
+  );
+}
+
+function variableValue(frame: SquatExplanationFrame, variable: VariableKey) {
+  if (variable === "trunk") return frame.trunk_inclination_deg;
+  if (variable === "pelvis") return frame.pelvis_lateral_shift_pct;
+  return frame.bilateral_alignment_difference_pct;
+}
+
+function formatValue(value: number | null | undefined, unit: string) {
+  return value == null ? "Sin dato" : `${value.toFixed(2)} ${unit}`;
+}
+
+function formatSeconds(value: number) {
+  return `${Number(value).toFixed(1)} s`;
+}
+
+function findingLabel(finding: string) {
+  const labels: Record<string, string> = {
+    inclinacion_lateral_tronco: "Inclinación lateral del tronco",
+    desplazamiento_lateral_pelvis: "Desplazamiento lateral de pelvis",
+    valgo_dinamico_visible: "Valgo dinámico visible",
+    asimetria_bilateral_observable: "Asimetría bilateral observable",
+  };
+  return labels[finding] ?? finding;
+}
