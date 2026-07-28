@@ -231,7 +231,11 @@ export default async function CaseDetailPage({
             description="Cada ejecución conserva sus cuatro clasificaciones, valores calculados y criterios provisionales."
           />
           <div className="mt-5 space-y-8">
-            {decisionGroups.map((group) => (
+            {decisionGroups.map((group) => {
+              const repetitionMetrics = report.biomechanics?.repetitions.find(
+                (item) => item.repetition_index === group.repetitionIndex,
+              );
+              return (
               <section key={group.repetitionIndex}>
                 <h3 className="text-xl font-semibold tracking-tight">
                   Repetición {group.repetitionIndex}
@@ -254,7 +258,10 @@ export default async function CaseDetailPage({
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <MetricEvidence decision={decision} />
+                        <MetricEvidence
+                          decision={decision}
+                          repetitionMetrics={repetitionMetrics}
+                        />
                         <p className="mt-4 border-t pt-4 text-xs leading-5 text-muted-foreground">
                           {decision.rationale}
                         </p>
@@ -263,7 +270,8 @@ export default async function CaseDetailPage({
                   ))}
                 </div>
               </section>
-            ))}
+              );
+            })}
           </div>
         </section>
       ) : decisions.length ? (

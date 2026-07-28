@@ -1,4 +1,7 @@
-import type { SquatRuleDecision } from "@/types/squat-case-report";
+import type {
+  SquatRepetitionMetrics,
+  SquatRuleDecision,
+} from "@/types/squat-case-report";
 
 const stateStyles = {
   presente: "bg-amber-500",
@@ -8,8 +11,10 @@ const stateStyles = {
 
 export function MetricEvidence({
   decision,
+  repetitionMetrics,
 }: {
   decision: SquatRuleDecision;
+  repetitionMetrics?: SquatRepetitionMetrics;
 }) {
   const value = decision.aggregate_value ?? null;
   const state = decision.status;
@@ -41,6 +46,42 @@ export function MetricEvidence({
         <span>Ausente ≤ {formatNumber(decision.absent_max)}</span>
         <span>Presente ≥ {formatNumber(decision.present_min)}</span>
       </div>
+      {isKneeDecision(decision) && repetitionMetrics ? (
+        <div className="grid grid-cols-2 gap-2 rounded-lg border bg-muted/30 p-3">
+          <SideValue
+            label="Rodilla izquierda"
+            value={repetitionMetrics.left_knee_medial_deviation_at_peak_pct}
+          />
+          <SideValue
+            label="Rodilla derecha"
+            value={repetitionMetrics.right_knee_medial_deviation_at_peak_pct}
+          />
+          {decision.finding === "asimetria_bilateral_observable" ? (
+            <div className="col-span-2 border-t pt-2">
+              <SideValue
+                label="Diferencia absoluta"
+                value={
+                  repetitionMetrics.bilateral_alignment_difference_at_peak_pct
+                }
+              />
+            </div>
+          ) : null}
+        </div>
+      ) : null}
+      <p className="text-[11px] text-muted-foreground">
+        {unitDescription(decision.unit)}
+      </p>
+      <details className="rounded-lg border px-3 py-2 text-xs">
+        <summary className="cursor-pointer font-medium">
+          Ver fórmula y convención
+        </summary>
+        <p className="mt-2 font-mono leading-5 text-muted-foreground">
+          {formulaFor(decision.finding)}
+        </p>
+        <p className="mt-2 leading-5 text-muted-foreground">
+          {conventionFor(decision.finding)}
+        </p>
+      </details>
     </div>
   );
 }
@@ -56,4 +97,60 @@ function formatNumber(value: number) {
     maximumFractionDigits: 2,
     minimumFractionDigits: 0,
   }).format(value);
+}
+
+function SideValue({
+  label,
+  value,
+}: {
+  label: string;
+  value?: number | null;
+}) {
+  return (
+    <div>
+      <p className="text-[11px] text-muted-foreground">{label}</p>
+      <p className="mt-0.5 font-mono font-medium tabular-nums">
+        {formatMetric(value ?? null, "pct_ancho_hombros")}
+      </p>
+    </div>
+  );
+}
+
+function isKneeDecision(decision: SquatRuleDecision) {
+  return (
+    decision.finding === "valgo_dinamico_visible" ||
+    decision.finding === "asimetria_bilateral_observable"
+  );
+}
+
+function unitDescription(unit: string) {
+  return unit === "deg"
+    ? "Unidad: grados respecto de la vertical de referencia."
+    : "Unidad: porcentaje del ancho inicial de hombros; no representa confianza.";
+}
+
+function formulaFor(finding: string) {
+  const formulas: Record<string, string> = {
+    inclinacion_lateral_tronco: "θ = atan2(Sx − Px, Py − Sy)",
+    desplazamiento_lateral_pelvis:
+      "100 × (desplazamiento actual − referencia inicial) / ancho inicial de hombros",
+    valgo_dinamico_visible:
+      "100 × distancia medial(rodilla, eje cadera-tobillo) / ancho inicial de hombros",
+    asimetria_bilateral_observable:
+      "|alineación izquierda − alineación derecha|",
+  };
+  return formulas[finding] ?? "Fórmula no disponible.";
+}
+
+function conventionFor(finding: string) {
+  if (finding === "inclinacion_lateral_tronco") {
+    return "El signo positivo representa inclinación hacia la izquierda anatómica y el negativo hacia la derecha.";
+  }
+  if (finding === "desplazamiento_lateral_pelvis") {
+    return "El desplazamiento se corrige con el reposo inicial y se mide respecto del centro de los tobillos.";
+  }
+  if (finding === "valgo_dinamico_visible") {
+    return "Cada rodilla se evalúa por separado. Solo una desviación medial positiva puede activar la regla.";
+  }
+  return "La diferencia bilateral compara las alineaciones de ambas rodillas; no implica valgo bilateral.";
 }
