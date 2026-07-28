@@ -50,6 +50,10 @@ from src.squat.contracts import (
 )
 from src.squat.models import SquatCaseRecord
 from src.squat.exports import build_case_excel, build_case_pdf
+from src.squat.explanation import (
+    SquatCaseExplanation,
+    build_case_explanation,
+)
 from src.squat.service import run_squat_case_analysis
 from src.squat.persistence import (
     SquatPersistenceError,
@@ -695,6 +699,65 @@ async def get_squat_case_report(
 
 
 @router.get(
+    "/squat/cases/{case_id}/explanation",
+    response_model=SquatCaseExplanation,
+    summary="Get bounded evidence for the explanatory case interface",
+)
+async def get_squat_case_explanation(
+    case_id: str,
+    current_user: SquatUserDependency,
+) -> SquatCaseExplanation:
+    """Return chart, table and key-frame data without recomputing metrics."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    case_dir = (_OUTPUT_ROOT / safe_case_id).resolve()
+    report_path = case_dir / "case_report.json"
+    if report_path.is_file():
+        report = SquatCaseReport.model_validate_json(
+            report_path.read_text(encoding="utf-8")
+        )
+        artifacts = {
+            filename: (case_dir / filename).read_bytes()
+            for filename in _explanation_artifact_names(report)
+            if (case_dir / filename).is_file()
+        }
+        return build_case_explanation(report, artifacts)
+
+    if not get_settings().squat_persistence_required:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Squat case explanation was not found.",
+        )
+    store = SupabaseSquatStore()
+    try:
+        stored_report = await run_in_threadpool(
+            store.get_case_report,
+            safe_case_id,
+        )
+        if stored_report is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Squat case explanation was not found.",
+            )
+        report = SquatCaseReport.model_validate(stored_report)
+        artifacts: dict[str, bytes] = {}
+        for filename in _explanation_artifact_names(report):
+            stored = await run_in_threadpool(
+                store.get_case_artifact,
+                safe_case_id,
+                filename,
+            )
+            if stored is not None:
+                artifacts[filename] = stored.content
+        return build_case_explanation(report, artifacts)
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+
+
+@router.get(
     "/squat/cases/{case_id}/record",
     response_model=SquatCaseRecordContract,
     summary="Get the Instrument 1 record for one case",
@@ -880,6 +943,17 @@ def _validated_case_id(case_id: str) -> str:
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="Invalid squat case identifier.",
         ) from exc
+
+
+def _explanation_artifact_names(report: SquatCaseReport) -> list[str]:
+    """Return only canonical tables consumed by the explanation builder."""
+    names = (
+        report.artifacts.frame_quality_csv,
+        report.artifacts.frame_phases_csv,
+        report.artifacts.biomechanical_frame_metrics_csv,
+        report.artifacts.landmarks_csv,
+    )
+    return [name for name in names if name]
 
 
 def _allowed_asset_names(report: SquatCaseReport) -> set[str]:

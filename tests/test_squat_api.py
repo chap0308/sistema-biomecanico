@@ -103,6 +103,9 @@ def test_squat_report_and_asset_endpoints(
     asset_response = client.get(
         "/api/v1/squat/cases/caso_api_002/assets/overlay.mp4"
     )
+    explanation_response = client.get(
+        "/api/v1/squat/cases/caso_api_002/explanation"
+    )
     private_file_response = client.get(
         "/api/v1/squat/cases/caso_api_002/assets/case_record.json"
     )
@@ -113,6 +116,11 @@ def test_squat_report_and_asset_endpoints(
     assert record_response.json()["contract"] == "squat_case_record"
     assert asset_response.status_code == 200
     assert asset_response.content == b"overlay"
+    assert explanation_response.status_code == 200
+    assert (
+        explanation_response.json()["contract"]
+        == "squat_case_explanation"
+    )
     assert private_file_response.status_code == 404
 
 
