@@ -55,6 +55,25 @@ class SquatAssignmentCreatedResponse(BaseModel):
     assigned: int = Field(ge=0)
 
 
+class SquatCaseAssignmentResponse(BaseModel):
+    """One evaluator currently assigned to an investigator-owned case."""
+
+    assignment_id: str
+    evaluator_id: str
+    email: str | None = None
+    display_name: str | None = None
+    status: Literal["pending", "in_progress", "submitted"]
+    has_response: bool = False
+
+
+class SquatCaseAssignmentsResponse(BaseModel):
+    """Assignment roster and its lifecycle lock."""
+
+    case_id: str
+    reference_status: Literal["open", "in_progress", "closed"]
+    assignments: list[SquatCaseAssignmentResponse]
+
+
 class SquatExpertEvaluationItem(BaseModel):
     """One independent observational classification."""
 
@@ -152,6 +171,7 @@ class SquatExpertAssignmentResponse(BaseModel):
     status: Literal["pending", "in_progress", "submitted"]
     created_at: datetime
     updated_at: datetime
+    reference_status: Literal["open", "in_progress", "closed"] = "open"
     repetitions: list[SquatExpertRepetitionResponse] = Field(default_factory=list)
     evaluation: SquatExpertEvaluationResponse | None = None
 
@@ -166,6 +186,7 @@ class SquatEvaluationSavedResponse(BaseModel):
 __all__ = [
     "SquatAssignmentCreateRequest",
     "SquatAssignmentCreatedResponse",
+    "SquatCaseAssignmentsResponse",
     "SquatEvaluationSavedResponse",
     "SquatExpertAssignmentResponse",
     "SquatExpertEvaluationRequest",

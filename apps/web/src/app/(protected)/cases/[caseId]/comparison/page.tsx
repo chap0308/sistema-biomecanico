@@ -35,6 +35,7 @@ import type {
 } from "@/types/squat-comparison";
 
 import { ConsensusForm } from "./consensus-form";
+import { ReferenceLifecycleControls } from "./reference-lifecycle-controls";
 
 const patternNames = {
   trunk_lateral_inclination: "Inclinación lateral del tronco",
@@ -108,6 +109,11 @@ export default async function ComparisonPage({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          <ReferenceLifecycleControls
+            caseId={caseId}
+            status={comparison.reference_status}
+            readyForMetrics={comparison.ready_for_metrics}
+          />
           <a
             href={`/api/squat/cases/${caseId}/exports/instruments.xlsx`}
             className={buttonVariants({ size: "sm", variant: "outline" })}
@@ -168,6 +174,7 @@ export default async function ComparisonPage({
               key={`${pattern.repetition_index}-${pattern.pattern_key}`}
               caseId={caseId}
               pattern={pattern}
+              referenceStatus={comparison.reference_status}
             />
           ))}
         </div>
@@ -222,9 +229,11 @@ export default async function ComparisonPage({
 function PatternCard({
   caseId,
   pattern,
+  referenceStatus,
 }: {
   caseId: string;
   pattern: PatternComparison;
+  referenceStatus: CaseComparison["reference_status"];
 }) {
   return (
     <Card>
@@ -273,11 +282,13 @@ function PatternCard({
             </p>
           </div>
         </div>
-        {pattern.reference_status === "consenso_requerido" ? (
+        {referenceStatus === "in_progress" &&
+        pattern.expert_judgments.length > 0 ? (
           <ConsensusForm
             caseId={caseId}
             repetitionIndex={pattern.repetition_index}
             patternKey={pattern.pattern_key}
+            currentReference={pattern.reference}
           />
         ) : null}
       </CardContent>

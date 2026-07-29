@@ -29,6 +29,7 @@ from api.auth import SquatUserDependency
 from api.schemas.squat_expert import (
     SquatAssignmentCreateRequest,
     SquatAssignmentCreatedResponse,
+    SquatCaseAssignmentsResponse,
     SquatEvaluationSavedResponse,
     SquatExpertAssignmentResponse,
     SquatExpertEvaluationRequest,
@@ -177,12 +178,12 @@ async def save_squat_manual_reference(
                 and row.pattern_key == pattern_key
             )
         )
-        if current_pattern.reference_status != "consenso_requerido":
+        if not current_pattern.expert_judgments:
             raise HTTPException(
                 status_code=status.HTTP_409_CONFLICT,
                 detail=(
-                    "Guided consensus can only resolve a submitted expert "
-                    "disagreement."
+                    "A final reference requires at least one submitted expert "
+                    "judgment."
                 ),
             )
         await run_in_threadpool(
@@ -364,6 +365,149 @@ async def assign_squat_case(
 
 
 @router.get(
+    "/squat/cases/{case_id}/assignments",
+    response_model=SquatCaseAssignmentsResponse,
+    summary="List the expert roster assigned to a case",
+)
+async def list_squat_case_assignments(
+    case_id: str,
+    current_user: SquatUserDependency,
+) -> SquatCaseAssignmentsResponse:
+    """Return assignment identities and statuses without response contents."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    try:
+        roster = await run_in_threadpool(
+            SupabaseSquatStore().list_case_assignments,
+            safe_case_id,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    if roster is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
+    return SquatCaseAssignmentsResponse.model_validate(roster)
+
+
+@router.delete(
+    "/squat/cases/{case_id}/assignments/{assignment_id}",
+    status_code=status.HTTP_204_NO_CONTENT,
+    summary="Remove an expert and any response from an open case",
+)
+async def remove_squat_case_assignment(
+    case_id: str,
+    assignment_id: str,
+    current_user: SquatUserDependency,
+) -> Response:
+    """Cascade-delete one assignment before final-reference review starts."""
+    _require_squat_role(current_user.role, "investigator")
+    try:
+        await run_in_threadpool(
+            SupabaseSquatStore().remove_case_assignment,
+            external_case_id=_validated_case_id(case_id),
+            assignment_id=assignment_id,
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=str(exc),
+        ) from exc
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@router.post(
+    "/squat/cases/{case_id}/reference/start",
+    response_model=CaseComparison,
+    summary="Lock the expert roster and start final-reference review",
+)
+async def start_squat_final_reference(
+    case_id: str,
+    current_user: SquatUserDependency,
+) -> CaseComparison:
+    """Start reference review after every assigned expert has submitted."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    store = SupabaseSquatStore()
+    try:
+        current_payload = await run_in_threadpool(
+            store.get_case_comparison_data, safe_case_id
+        )
+        if current_payload is None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
+        if (
+            current_payload["assigned_evaluators"] < 1
+            or current_payload["submitted_evaluations"]
+            != current_payload["assigned_evaluators"]
+        ):
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail=(
+                    "Every assigned evaluator must submit an evaluation before "
+                    "final-reference review starts."
+                ),
+            )
+        await run_in_threadpool(
+            store.set_reference_status,
+            external_case_id=safe_case_id,
+            expected_status="open",
+            next_status="in_progress",
+            actor_id=current_user.user_id,
+        )
+        refreshed = await run_in_threadpool(
+            store.get_case_comparison_data, safe_case_id
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT, detail=str(exc)
+        ) from exc
+    return build_stored_case_comparison(refreshed or current_payload)
+
+
+@router.post(
+    "/squat/cases/{case_id}/reference/close",
+    response_model=CaseComparison,
+    summary="Close a fully consolidated case",
+)
+async def close_squat_final_reference(
+    case_id: str,
+    current_user: SquatUserDependency,
+) -> CaseComparison:
+    """Freeze final references and expose system output to assigned experts."""
+    _require_squat_role(current_user.role, "investigator")
+    safe_case_id = _validated_case_id(case_id)
+    store = SupabaseSquatStore()
+    try:
+        current_payload = await run_in_threadpool(
+            store.get_case_comparison_data, safe_case_id
+        )
+        if current_payload is None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
+        comparison = build_stored_case_comparison(current_payload)
+        if not comparison.ready_for_metrics:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="Every repetition and pattern needs a final reference.",
+            )
+        await run_in_threadpool(
+            store.set_reference_status,
+            external_case_id=safe_case_id,
+            expected_status="in_progress",
+            next_status="closed",
+            actor_id=current_user.user_id,
+        )
+        refreshed = await run_in_threadpool(
+            store.get_case_comparison_data, safe_case_id
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT, detail=str(exc)
+        ) from exc
+    return build_stored_case_comparison(refreshed or current_payload)
+
+
+@router.get(
     "/squat/expert/assignments",
     response_model=list[SquatExpertAssignmentResponse],
     summary="List blinded assignments for the current expert",
@@ -416,6 +560,44 @@ async def get_current_expert_assignment(
             detail="Expert assignment was not found.",
         )
     return SquatExpertAssignmentResponse.model_validate(row)
+
+
+@router.get(
+    "/squat/expert/assignments/{assignment_id}/system-results",
+    response_model=SquatCaseReport,
+    summary="Get system results after the investigator closes the case",
+)
+async def get_current_expert_system_results(
+    assignment_id: str,
+    current_user: SquatUserDependency,
+) -> SquatCaseReport:
+    """Reveal system output only to an assigned expert after final closure."""
+    _require_squat_role(current_user.role, "expert")
+    store = SupabaseSquatStore()
+    try:
+        assignment = await run_in_threadpool(
+            store.get_expert_assignment,
+            assignment_id,
+            evaluator_id=current_user.user_id,
+        )
+        if assignment is None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
+        if assignment["reference_status"] != "closed":
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="System results remain blinded until the case is closed.",
+            )
+        report = await run_in_threadpool(
+            store.get_case_report, assignment["case_id"]
+        )
+    except SquatPersistenceError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+    if report is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
+    return SquatCaseReport.model_validate(report)
 
 
 @router.put(

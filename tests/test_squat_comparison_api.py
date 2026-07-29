@@ -137,10 +137,15 @@ def test_comparative_export_requires_all_references(monkeypatch) -> None:
     assert response.status_code == 409
 
 
-def test_manual_consensus_requires_an_observation(monkeypatch) -> None:
+def test_manual_reference_allows_optional_observation(monkeypatch) -> None:
+    saved: dict[str, object] = {}
+
     class FakeStore:
+        def get_case_comparison_data(self, _case_id):
+            return _comparison_payload()
+
         def save_manual_reference(self, **kwargs):
-            raise AssertionError("Invalid request must not be persisted.")
+            saved.update(kwargs)
 
     monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
     app.dependency_overrides[get_squat_api_user] = _investigator_user
@@ -156,18 +161,21 @@ def test_manual_consensus_requires_an_observation(monkeypatch) -> None:
     finally:
         app.dependency_overrides.clear()
 
-    assert response.status_code == 422
+    assert response.status_code == 200
+    assert saved["observation"] == ""
 
 
-def test_manual_consensus_cannot_override_direct_agreement(
+def test_manual_reference_can_override_direct_agreement_during_review(
     monkeypatch,
 ) -> None:
+    saved: dict[str, object] = {}
+
     class FakeStore:
         def get_case_comparison_data(self, _case_id):
             return _comparison_payload()
 
         def save_manual_reference(self, **kwargs):
-            raise AssertionError("Direct agreement must not be overwritten.")
+            saved.update(kwargs)
 
     monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
     app.dependency_overrides[get_squat_api_user] = _investigator_user
@@ -184,4 +192,51 @@ def test_manual_consensus_cannot_override_direct_agreement(
     finally:
         app.dependency_overrides.clear()
 
+    assert response.status_code == 200
+    assert saved["classification"] == "presente"
+
+
+def test_start_reference_requires_every_assigned_evaluation(monkeypatch) -> None:
+    class FakeStore:
+        def get_case_comparison_data(self, _case_id):
+            payload = _comparison_payload(complete=False)
+            payload["assigned_evaluators"] = 2
+            return payload
+
+        def set_reference_status(self, **kwargs):
+            raise AssertionError("An incomplete roster must remain open.")
+
+    monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
+    app.dependency_overrides[get_squat_api_user] = _investigator_user
+    try:
+        response = TestClient(app).post(
+            "/api/v1/squat/cases/caso_comparison_001/reference/start"
+        )
+    finally:
+        app.dependency_overrides.clear()
+
     assert response.status_code == 409
+
+
+def test_start_reference_locks_complete_roster(monkeypatch) -> None:
+    transitions: list[dict[str, object]] = []
+
+    class FakeStore:
+        def get_case_comparison_data(self, _case_id):
+            return _comparison_payload()
+
+        def set_reference_status(self, **kwargs):
+            transitions.append(kwargs)
+
+    monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
+    app.dependency_overrides[get_squat_api_user] = _investigator_user
+    try:
+        response = TestClient(app).post(
+            "/api/v1/squat/cases/caso_comparison_001/reference/start"
+        )
+    finally:
+        app.dependency_overrides.clear()
+
+    assert response.status_code == 200
+    assert transitions[0]["expected_status"] == "open"
+    assert transitions[0]["next_status"] == "in_progress"

@@ -187,7 +187,7 @@ class SupabaseSquatStore:
         case_rows = self._select(
             "squat_cases",
             params={
-                "select": "case_id",
+                "select": "case_id,reference_status",
                 "external_case_id": f"eq.{external_case_id}",
                 "limit": "1",
             },
@@ -308,7 +308,7 @@ class SupabaseSquatStore:
         case_rows = self._select(
             "squat_cases",
             params={
-                "select": "case_id,status",
+                "select": "case_id,status,reference_status",
                 "external_case_id": f"eq.{external_case_id}",
                 "limit": "1",
             },
@@ -318,6 +318,23 @@ class SupabaseSquatStore:
         if case_rows[0]["status"] != "completed":
             raise SquatPersistenceError(
                 "Only completed squat cases can be assigned."
+            )
+        if case_rows[0].get("reference_status", "open") != "open":
+            raise SquatPersistenceError(
+                "Evaluator assignments are locked after final-reference review starts."
+            )
+        current_assignments = self._select(
+            "squat_expert_assignments",
+            params={
+                "select": "evaluator_id",
+                "case_id": f"eq.{case_rows[0]['case_id']}",
+            },
+        )
+        current_ids = {row["evaluator_id"] for row in current_assignments}
+        requested_new_ids = set(evaluator_ids) - current_ids
+        if len(current_ids | requested_new_ids) > 3:
+            raise SquatPersistenceError(
+                "A case can have at most three expert evaluators."
             )
         for evaluator_id in evaluator_ids:
             expert_rows = self._select(
@@ -346,6 +363,135 @@ class SupabaseSquatStore:
             ],
             on_conflict="case_id,evaluator_id",
             ignore_duplicates=True,
+        )
+
+    def list_case_assignments(
+        self,
+        external_case_id: str,
+    ) -> dict[str, Any] | None:
+        """Return the investigator roster without expert response contents."""
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "case_id,reference_status",
+                "external_case_id": f"eq.{external_case_id}",
+                "limit": "1",
+            },
+        )
+        if not case_rows:
+            return None
+        case = case_rows[0]
+        assignments = self._select(
+            "squat_expert_assignments",
+            params={
+                "select": "assignment_id,evaluator_id,status",
+                "case_id": f"eq.{case['case_id']}",
+                "order": "created_at.asc",
+            },
+        )
+        profiles = {
+            row["user_id"]: row
+            for row in self._select(
+                "profiles",
+                params={
+                    "select": "user_id,email,display_name",
+                    "squat_role": "eq.expert",
+                },
+            )
+        }
+        return {
+            "case_id": external_case_id,
+            "reference_status": case.get("reference_status", "open"),
+            "assignments": [
+                {
+                    **assignment,
+                    "email": profiles.get(
+                        assignment["evaluator_id"], {}
+                    ).get("email"),
+                    "display_name": profiles.get(
+                        assignment["evaluator_id"], {}
+                    ).get("display_name"),
+                    "has_response": assignment["status"] != "pending",
+                }
+                for assignment in assignments
+            ],
+        }
+
+    def remove_case_assignment(
+        self,
+        *,
+        external_case_id: str,
+        assignment_id: str,
+    ) -> None:
+        """Remove one evaluator while the case roster remains open."""
+        roster = self.list_case_assignments(external_case_id)
+        if roster is None:
+            raise SquatPersistenceError("Squat case was not found.")
+        if roster["reference_status"] != "open":
+            raise SquatPersistenceError(
+                "Evaluator assignments are locked after final-reference review starts."
+            )
+        assignment = next(
+            (
+                row
+                for row in roster["assignments"]
+                if row["assignment_id"] == assignment_id
+            ),
+            None,
+        )
+        if assignment is None:
+            raise SquatPersistenceError("Expert assignment was not found.")
+        self._delete(
+            "squat_expert_assignments",
+            filters={"assignment_id": f"eq.{assignment_id}"},
+        )
+
+    def set_reference_status(
+        self,
+        *,
+        external_case_id: str,
+        expected_status: str,
+        next_status: str,
+        actor_id: str,
+    ) -> dict[str, Any]:
+        """Advance the irreversible final-reference lifecycle."""
+        case_rows = self._select(
+            "squat_cases",
+            params={
+                "select": "case_id,reference_status",
+                "external_case_id": f"eq.{external_case_id}",
+                "limit": "1",
+            },
+        )
+        if not case_rows:
+            raise SquatPersistenceError("Squat case was not found.")
+        current = case_rows[0].get("reference_status", "open")
+        if current != expected_status:
+            raise SquatPersistenceError(
+                f"Case reference status is {current}, expected {expected_status}."
+            )
+        payload: dict[str, Any] = {"reference_status": next_status}
+        if next_status == "in_progress":
+            payload.update(
+                {
+                    "reference_started_at": datetime.now(timezone.utc).isoformat(),
+                    "reference_started_by": actor_id,
+                }
+            )
+        elif next_status == "closed":
+            payload.update(
+                {
+                    "closed_at": datetime.now(timezone.utc).isoformat(),
+                    "closed_by": actor_id,
+                }
+            )
+        return self._update(
+            "squat_cases",
+            filters={
+                "case_id": f"eq.{case_rows[0]['case_id']}",
+                "reference_status": f"eq.{expected_status}",
+            },
+            payload=payload,
         )
 
     def list_expert_assignments(
@@ -551,7 +697,7 @@ class SupabaseSquatStore:
         case_rows = self._select(
             "squat_cases",
             params={
-                "select": "case_id,external_case_id",
+                "select": "case_id,external_case_id,reference_status",
                 "external_case_id": f"eq.{external_case_id}",
                 "limit": "1",
             },
@@ -632,6 +778,7 @@ class SupabaseSquatStore:
             "report": run_rows[0]["report"] if run_rows else None,
             "assigned_evaluators": len(assignments),
             "submitted_evaluations": submitted,
+            "reference_status": case_rows[0].get("reference_status", "open"),
             "judgments": judgments,
             "manual_references": manual_references,
         }
@@ -641,7 +788,7 @@ class SupabaseSquatStore:
         cases = self._select(
             "squat_cases",
             params={
-                "select": "external_case_id",
+                "select": "external_case_id,reference_status",
                 "status": "eq.completed",
                 "order": "created_at.asc",
             },
@@ -665,20 +812,24 @@ class SupabaseSquatStore:
         pattern_key: str,
         classification: str,
         observed_side: str | None,
-        observation: str,
+        observation: str | None,
         resolved_by: str,
     ) -> dict[str, Any]:
         """Upsert a guided consensus recorded by the investigator."""
         case_rows = self._select(
             "squat_cases",
             params={
-                "select": "case_id",
+                "select": "case_id,reference_status",
                 "external_case_id": f"eq.{external_case_id}",
                 "limit": "1",
             },
         )
         if not case_rows:
             raise SquatPersistenceError("Squat case was not found.")
+        if case_rows[0].get("reference_status", "open") != "in_progress":
+            raise SquatPersistenceError(
+                "Final references can only be edited while review is in progress."
+            )
         rows = self._upsert_many(
             "squat_expert_references",
             [
@@ -709,7 +860,7 @@ class SupabaseSquatStore:
         case_rows = self._select(
             "squat_cases",
             params={
-                "select": "external_case_id",
+                "select": "external_case_id,reference_status",
                 "case_id": f"eq.{assignment['case_id']}",
                 "limit": "1",
             },
@@ -781,6 +932,11 @@ class SupabaseSquatStore:
                 case_rows[0]["external_case_id"] if case_rows else "unknown"
             ),
             "status": assignment["status"],
+            "reference_status": (
+                case_rows[0].get("reference_status", "open")
+                if case_rows
+                else "open"
+            ),
             "created_at": assignment["created_at"],
             "updated_at": assignment["updated_at"],
             "repetitions": repetitions,

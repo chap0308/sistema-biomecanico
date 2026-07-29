@@ -12,7 +12,10 @@ import {
 } from "@/components/ui/card";
 import { apiServerFetch } from "@/lib/api/server";
 import { requireRole } from "@/lib/auth/session";
-import type { ExpertProfile } from "@/types/squat-expert";
+import type {
+  CaseAssignmentRoster,
+  ExpertProfile,
+} from "@/types/squat-expert";
 
 import { AssignmentForm } from "./assignment-form";
 
@@ -26,9 +29,15 @@ export default async function AssignmentPage({
   await requireRole("investigator");
   const { caseId } = await params;
   let experts: ExpertProfile[] = [];
+  let roster: CaseAssignmentRoster | null = null;
   let unavailable = false;
   try {
-    experts = await apiServerFetch<ExpertProfile[]>("/squat/experts");
+    [experts, roster] = await Promise.all([
+      apiServerFetch<ExpertProfile[]>("/squat/experts"),
+      apiServerFetch<CaseAssignmentRoster>(
+        `/squat/cases/${encodeURIComponent(caseId)}/assignments`,
+      ),
+    ]);
   } catch {
     unavailable = true;
   }
@@ -69,7 +78,11 @@ export default async function AssignmentPage({
               No se pudo consultar la lista de evaluadores.
             </p>
           ) : experts.length ? (
-            <AssignmentForm caseId={caseId} experts={experts} />
+            <AssignmentForm
+              caseId={caseId}
+              experts={experts}
+              roster={roster}
+            />
           ) : (
             <p className="text-sm text-muted-foreground">
               No existen cuentas expertas configuradas.

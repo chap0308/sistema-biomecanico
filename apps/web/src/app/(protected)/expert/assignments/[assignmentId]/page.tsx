@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { ArrowLeftIcon, EyeOffIcon, ShieldCheckIcon } from "lucide-react";
+import {
+  ArrowLeftIcon,
+  EyeIcon,
+  EyeOffIcon,
+  ShieldCheckIcon,
+} from "lucide-react";
 
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +18,7 @@ import {
 } from "@/components/ui/card";
 import { apiServerFetch } from "@/lib/api/server";
 import { requireRole } from "@/lib/auth/session";
+import type { SquatCaseReport } from "@/types/squat-case-report";
 import type { ExpertAssignment } from "@/types/squat-expert";
 
 import { EvaluationForm } from "./evaluation-form";
@@ -28,10 +34,16 @@ export default async function ExpertAssignmentPage({
   await requireRole("expert");
   const { assignmentId } = await params;
   let assignment: ExpertAssignment | null = null;
+  let systemReport: SquatCaseReport | null = null;
   try {
     assignment = await apiServerFetch<ExpertAssignment>(
       `/squat/expert/assignments/${assignmentId}`,
     );
+    if (assignment.reference_status === "closed") {
+      systemReport = await apiServerFetch<SquatCaseReport>(
+        `/squat/expert/assignments/${assignmentId}/system-results`,
+      );
+    }
   } catch {
     // The explicit unavailable state below avoids exposing backend details.
   }
@@ -80,13 +92,23 @@ export default async function ExpertAssignmentPage({
         únicamente lo observable, sin inferir diagnósticos o causas anatómicas.
       </p>
 
-      <Alert className="mt-6">
-        <ShieldCheckIcon aria-hidden="true" />
-        <AlertDescription>
-          Las métricas, umbrales y clasificaciones del sistema no están
-          disponibles en esta pantalla.
-        </AlertDescription>
-      </Alert>
+      {assignment.reference_status === "closed" ? (
+        <Alert className="mt-6">
+          <EyeIcon aria-hidden="true" />
+          <AlertDescription>
+            El caso fue cerrado. El análisis del sistema ya está disponible
+            debajo de tu evaluación.
+          </AlertDescription>
+        </Alert>
+      ) : (
+        <Alert className="mt-6">
+          <ShieldCheckIcon aria-hidden="true" />
+          <AlertDescription>
+            Las métricas, umbrales y clasificaciones del sistema permanecen
+            ocultas hasta el cierre definitivo del caso.
+          </AlertDescription>
+        </Alert>
+      )}
 
       <Card className="mt-6">
         <CardHeader>
@@ -114,7 +136,48 @@ export default async function ExpertAssignmentPage({
         </div>
         <EvaluationForm assignment={assignment} />
       </section>
+
+      {systemReport ? <SystemResults report={systemReport} /> : null}
     </main>
+  );
+}
+
+function SystemResults({ report }: { report: SquatCaseReport }) {
+  return (
+    <section className="mt-10 border-t pt-8">
+      <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-primary">
+        Resultado revelado
+      </p>
+      <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+        Clasificaciones del sistema
+      </h2>
+      <p className="mt-2 text-sm text-muted-foreground">
+        Estas salidas aparecen después del cierre para preservar la
+        independencia de la evaluación experta.
+      </p>
+      <div className="mt-5 grid gap-3 md:grid-cols-2">
+        {(report.findings?.decisions ?? []).map((decision, index) => (
+          <Card key={`${decision.repetition_index}-${decision.finding}-${index}`}>
+            <CardHeader className="pb-2">
+              <CardDescription>
+                Repetición {decision.repetition_index ?? 1}
+              </CardDescription>
+              <CardTitle className="text-base capitalize">
+                {String(decision.finding).replaceAll("_", " ")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex items-center justify-between gap-3 text-sm">
+              <Badge className="capitalize">
+                {String(decision.status).replaceAll("_", " ")}
+              </Badge>
+              <span className="font-mono text-muted-foreground">
+                {decision.aggregate_value ?? "N/D"} {decision.unit}
+              </span>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
   );
 }
 

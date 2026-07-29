@@ -39,6 +39,7 @@ export type CaseComparison = {
   case_id: string;
   assigned_evaluators: number;
   submitted_evaluations: number;
+  reference_status: "open" | "in_progress" | "closed";
   patterns: PatternComparison[];
   ready_for_metrics: boolean;
 };

@@ -110,6 +110,7 @@ class CaseComparison(BaseModel):
     case_id: str
     assigned_evaluators: int = Field(ge=0)
     submitted_evaluations: int = Field(ge=0)
+    reference_status: Literal["open", "in_progress", "closed"] = "open"
     patterns: list[PatternComparison]
     ready_for_metrics: bool
 
@@ -232,6 +233,7 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
         case_id=payload["case_id"],
         assigned_evaluators=payload.get("assigned_evaluators", 0),
         submitted_evaluations=payload.get("submitted_evaluations", 0),
+        reference_status=payload.get("reference_status", "open"),
         patterns=patterns,
         ready_for_metrics=all(
             pattern.reference is not None for pattern in patterns

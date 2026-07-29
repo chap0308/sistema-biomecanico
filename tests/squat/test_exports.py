@@ -76,3 +76,4 @@ def test_pdf_export_has_a_valid_header() -> None:
 
     assert content.startswith(b"%PDF")
     assert len(content) > 1_000
+    assert content.count(b"/Type /Page") >= 3

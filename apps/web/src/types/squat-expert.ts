@@ -48,6 +48,22 @@ export type ExpertAssignment = {
   status: "pending" | "in_progress" | "submitted";
   created_at: string;
   updated_at: string;
+  reference_status: "open" | "in_progress" | "closed";
   repetitions?: ExpertRepetition[];
   evaluation: ExpertEvaluation | null;
+};
+
+export type CaseExpertAssignment = {
+  assignment_id: string;
+  evaluator_id: string;
+  email: string | null;
+  display_name: string | null;
+  status: "pending" | "in_progress" | "submitted";
+  has_response: boolean;
+};
+
+export type CaseAssignmentRoster = {
+  case_id: string;
+  reference_status: "open" | "in_progress" | "closed";
+  assignments: CaseExpertAssignment[];
 };

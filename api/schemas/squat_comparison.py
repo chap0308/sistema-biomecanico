@@ -17,7 +17,7 @@ class SquatManualReferenceRequest(BaseModel):
         "bilateral",
         "sin_direccion",
     ] | None = None
-    observation: str = Field(min_length=3, max_length=1000)
+    observation: str | None = Field(default=None, max_length=1000)
 
     @model_validator(mode="after")
     def validate_side(self) -> "SquatManualReferenceRequest":

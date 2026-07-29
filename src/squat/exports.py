@@ -57,33 +57,6 @@ def build_case_pdf(
     """Create a concise investigator report without clinical diagnoses."""
     output = BytesIO()
     with PdfPages(output) as pdf:
-        figure = plt.figure(figsize=(8.27, 11.69))
-        figure.patch.set_facecolor("#f8f5ec")
-        figure.text(
-            0.08,
-            0.93,
-            "Evaluación de sentadilla bilateral",
-            fontsize=20,
-            fontweight="bold",
-            color="#123b42",
-        )
-        figure.text(
-            0.08,
-            0.89,
-            f"Caso: {comparison.case_id}",
-            fontsize=11,
-            color="#334155",
-        )
-        figure.text(
-            0.08,
-            0.86,
-            (
-                f"Pipeline: {case_report.get('pipeline_version', 'N/D')} | "
-                f"Evaluaciones enviadas: {comparison.submitted_evaluations}"
-            ),
-            fontsize=9,
-            color="#64748b",
-        )
         table_rows = [
             [
                 f"R{row.repetition_index} · {_PATTERN_NAMES[row.pattern_key]}",
@@ -93,24 +66,42 @@ def build_case_pdf(
             ]
             for row in comparison.patterns
         ]
-        axis = figure.add_axes((0.07, 0.47, 0.86, 0.32))
-        axis.axis("off")
-        table = axis.table(
-            cellText=table_rows,
-            colLabels=[
-                "Patrón",
-                "Referencia experta",
-                "Sistema",
-                "Coincidencia",
-            ],
-            cellLoc="left",
-            colLoc="left",
-            loc="upper left",
-            colWidths=[0.36, 0.24, 0.24, 0.16],
+        chunks = [
+            table_rows[index : index + 8]
+            for index in range(0, len(table_rows), 8)
+        ] or [[]]
+        for page_index, rows in enumerate(chunks, start=1):
+            figure = _pdf_figure_header(
+                case_report=case_report,
+                comparison=comparison,
+                subtitle=f"Comparación por patrón · página {page_index}",
+            )
+            axis = figure.add_axes((0.07, 0.16, 0.86, 0.65))
+            axis.axis("off")
+            table = axis.table(
+                cellText=rows,
+                colLabels=[
+                    "Patrón",
+                    "Referencia experta",
+                    "Sistema",
+                    "Coincidencia",
+                ],
+                cellLoc="left",
+                colLoc="left",
+                loc="upper left",
+                colWidths=[0.36, 0.24, 0.24, 0.16],
+            )
+            table.auto_set_font_size(False)
+            table.set_fontsize(8)
+            table.scale(1, 1.8)
+            pdf.savefig(figure, bbox_inches="tight")
+            plt.close(figure)
+
+        figure = _pdf_figure_header(
+            case_report=case_report,
+            comparison=comparison,
+            subtitle="Desempeño técnico acumulado",
         )
-        table.auto_set_font_size(False)
-        table.set_fontsize(8)
-        table.scale(1, 1.8)
         metrics = performance.overall
         metric_text = (
             "Desempeño acumulado del conjunto\n"
@@ -126,7 +117,7 @@ def build_case_pdf(
         )
         figure.text(
             0.08,
-            0.37,
+            0.72,
             metric_text,
             fontsize=10,
             linespacing=1.45,
@@ -134,7 +125,7 @@ def build_case_pdf(
         )
         figure.text(
             0.08,
-            0.12,
+            0.28,
             (
                 "Este reporte describe compensaciones observables durante la "
                 "sentadilla y no constituye un diagnóstico clínico. "
@@ -147,6 +138,43 @@ def build_case_pdf(
         pdf.savefig(figure, bbox_inches="tight")
         plt.close(figure)
     return output.getvalue()
+
+
+def _pdf_figure_header(
+    *,
+    case_report: dict[str, Any],
+    comparison: CaseComparison,
+    subtitle: str,
+) -> plt.Figure:
+    figure = plt.figure(figsize=(8.27, 11.69))
+    figure.patch.set_facecolor("#f8f5ec")
+    figure.text(
+        0.08,
+        0.93,
+        "Evaluación de sentadilla bilateral",
+        fontsize=20,
+        fontweight="bold",
+        color="#123b42",
+    )
+    figure.text(
+        0.08,
+        0.89,
+        f"Caso: {comparison.case_id}",
+        fontsize=11,
+        color="#334155",
+    )
+    figure.text(
+        0.08,
+        0.855,
+        (
+            f"{subtitle} | Pipeline: "
+            f"{case_report.get('pipeline_version', 'N/D')} | "
+            f"Evaluaciones enviadas: {comparison.submitted_evaluations}"
+        ),
+        fontsize=9,
+        color="#64748b",
+    )
+    return figure
 
 
 def _instrument_1_sheet(workbook: Workbook, record: dict[str, Any]) -> None:

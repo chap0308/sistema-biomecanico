@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { apiClientFetch } from "@/lib/api/client";
 import type { ExpertPatternKey } from "@/types/squat-expert";
+import type { FinalReference } from "@/types/squat-comparison";
 
 const selectClassName =
   "h-9 w-full rounded-lg border border-input bg-background px-2.5 text-sm " +
@@ -23,10 +24,12 @@ export function ConsensusForm({
   caseId,
   patternKey,
   repetitionIndex,
+  currentReference,
 }: {
   caseId: string;
   patternKey: ExpertPatternKey;
   repetitionIndex: number;
+  currentReference?: FinalReference | null;
 }) {
   const router = useRouter();
   const [pending, setPending] = useState(false);
@@ -38,8 +41,8 @@ export function ConsensusForm({
     const data = new FormData(event.currentTarget);
     const choice = String(data.get("reference") ?? "");
     const observation = String(data.get("observation") ?? "").trim();
-    if (!choice || observation.length < 3) {
-      setError("Selecciona una referencia y documenta el consenso.");
+    if (!choice) {
+      setError("Selecciona una referencia final.");
       return;
     }
     const present = choice.startsWith("presente_");
@@ -57,7 +60,7 @@ export function ConsensusForm({
             observed_side: present
               ? choice.slice("presente_".length)
               : null,
-            observation,
+            observation: observation || null,
           }),
         },
       );
@@ -67,7 +70,7 @@ export function ConsensusForm({
       setError(
         submissionError instanceof Error
           ? submissionError.message
-          : "No se pudo registrar el consenso.",
+          : "No se pudo guardar la referencia final.",
       );
     } finally {
       setPending(false);
@@ -77,36 +80,37 @@ export function ConsensusForm({
   return (
     <form className="mt-4 grid gap-3" onSubmit={submit}>
       <Field>
-        <FieldLabel htmlFor={`reference-${patternKey}`}>
-          Referencia acordada
+        <FieldLabel htmlFor={`reference-${repetitionIndex}-${patternKey}`}>
+          Referencia final
         </FieldLabel>
         <select
-          id={`reference-${patternKey}`}
+          id={`reference-${repetitionIndex}-${patternKey}`}
           name="reference"
           className={selectClassName}
-          defaultValue=""
+          defaultValue={referenceValue(currentReference)}
         >
           <option value="" disabled>
             Seleccionar
           </option>
           <option value="ausente">Ausente</option>
-          {referenceOptions(patternKey).map(([value, label]) => (
+          {referenceOptions(patternKey).map(([value, optionLabel]) => (
             <option key={value} value={value}>
-              {label}
+              {optionLabel}
             </option>
           ))}
           <option value="no_concluyente">No concluyente</option>
         </select>
       </Field>
       <Field>
-        <FieldLabel htmlFor={`observation-${patternKey}`}>
-          Sustento del consenso
+        <FieldLabel htmlFor={`observation-${repetitionIndex}-${patternKey}`}>
+          Documentación de la referencia (opcional)
         </FieldLabel>
         <textarea
-          id={`observation-${patternKey}`}
+          id={`observation-${repetitionIndex}-${patternKey}`}
           name="observation"
           className={textareaClassName}
-          placeholder="Describe brevemente la revisión conjunta y el criterio acordado."
+          defaultValue={currentReference?.observation ?? ""}
+          placeholder="Añade una nota solo si ayuda a explicar la decisión."
         />
       </Field>
       {error ? (
@@ -117,17 +121,24 @@ export function ConsensusForm({
       {saved ? (
         <Alert>
           <CheckCircle2Icon aria-hidden="true" />
-          <AlertDescription>Consenso registrado.</AlertDescription>
+          <AlertDescription>Referencia guardada.</AlertDescription>
         </Alert>
       ) : null}
       <Button type="submit" size="sm" disabled={pending}>
         {pending ? (
           <LoaderCircleIcon className="animate-spin" aria-hidden="true" />
         ) : null}
-        Registrar consenso
+        {currentReference ? "Guardar cambios" : "Registrar referencia"}
       </Button>
     </form>
   );
+}
+
+function referenceValue(reference?: FinalReference | null) {
+  if (!reference) return "";
+  return reference.classification === "presente" && reference.observed_side
+    ? `presente_${reference.observed_side}`
+    : reference.classification;
 }
 
 function referenceOptions(
