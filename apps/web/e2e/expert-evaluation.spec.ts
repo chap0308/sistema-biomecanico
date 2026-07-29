@@ -6,6 +6,11 @@ const assignmentId = process.env.SQUAT_E2E_EXPERT_ASSIGNMENT_ID!;
 test("expert completes a blinded Instrument 3 evaluation", async ({
   page,
 }) => {
+  await page.goto("/expert/assignments");
+  await expect(
+    page.locator(`a[href="/expert/assignments/${assignmentId}"]`),
+  ).toBeVisible();
+
   await page.goto(`/expert/assignments/${assignmentId}`);
 
   await expect(

@@ -45,10 +45,14 @@ export function AnalysisPlayer({
     (capture) => capture.repetition_index === activeRepetition,
   );
 
-  function seek(timestamp: number) {
+  function seek(timestamp: number, autoplay = true) {
     if (!videoRef.current) return;
     videoRef.current.currentTime = timestamp;
-    void videoRef.current.play();
+    if (autoplay) {
+      void videoRef.current.play();
+      return;
+    }
+    videoRef.current.pause();
   }
 
   return (
@@ -123,7 +127,12 @@ export function AnalysisPlayer({
             key={`${capture.repetition_index}-${capture.event}`}
             className="group flex items-center gap-3 rounded-lg border bg-card px-3 py-2 text-left transition-colors hover:border-primary/45 hover:bg-accent/45"
             type="button"
-            onClick={() => seek(capture.timestamp_seconds)}
+            onClick={() =>
+              seek(
+                capture.timestamp_seconds,
+                capture.event !== "maxima_profundidad",
+              )
+            }
           >
             {capture.event === "maxima_profundidad" ? (
               <LocateFixedIcon

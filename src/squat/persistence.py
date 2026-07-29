@@ -19,6 +19,14 @@ class SquatPersistenceError(RuntimeError):
     """Raised when Supabase rejects a case persistence operation."""
 
 
+def _normalize_expert_observed_side(value: str | None) -> str | None:
+    """Map legacy predominance labels to the current expert contract."""
+    return {
+        "predominio_izquierdo": "izquierda",
+        "predominio_derecho": "derecha",
+    }.get(value or "", value)
+
+
 @dataclass(slots=True, frozen=True)
 class SquatCasePageData:
     """One page returned by PostgREST plus its exact total."""
@@ -731,6 +739,10 @@ class SupabaseSquatStore:
                     "order": "repetition_index.asc,pattern_key.asc",
                 },
             )
+            for item in evaluation["items"]:
+                item["observed_side"] = _normalize_expert_observed_side(
+                    item.get("observed_side")
+                )
         repetitions: list[dict[str, Any]] = []
         if case_rows:
             run_rows = self._select(

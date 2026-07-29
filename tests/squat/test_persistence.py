@@ -17,7 +17,10 @@ from src.squat.models import (
     SquatRegistrationResult,
     VideoTechnicalMetadata,
 )
-from src.squat.persistence import SupabaseSquatStore
+from src.squat.persistence import (
+    SupabaseSquatStore,
+    _normalize_expert_observed_side,
+)
 
 
 class RecordingStore(SupabaseSquatStore):
@@ -48,6 +51,13 @@ class RecordingStore(SupabaseSquatStore):
         if table == "squat_analysis_runs":
             return {"run_id": "analysis-run-id"}
         return {"artifact_id": f"artifact-{len(self.inserts)}"}
+
+
+def test_normalize_expert_observed_side_supports_legacy_labels() -> None:
+    assert _normalize_expert_observed_side("predominio_izquierdo") == "izquierda"
+    assert _normalize_expert_observed_side("predominio_derecho") == "derecha"
+    assert _normalize_expert_observed_side("bilateral") == "bilateral"
+    assert _normalize_expert_observed_side(None) is None
 
 
 def test_persist_completed_case_uploads_only_manifest_artifacts(

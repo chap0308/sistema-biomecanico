@@ -635,7 +635,10 @@ Los cinco incrementos quedaron implementados en la rama de desarrollo:
 3. **Gráficas y tablas:** la vista del caso representa calidad, segmentación, variables y reglas mediante componentes shadcn y Recharts. Los datos se filtran por repetición y el cursor sigue el tiempo del video.
 4. **Evidencia geométrica:** la pestaña seleccionada muestra un esquema normalizado de tronco, pelvis, rodillas o diferencia bilateral a máxima profundidad. Los centros y proyecciones se calculan en Python.
 5. **Video técnico:** el pipeline genera `analysis_overlay.mp4` con repetición, fase, calidad, valores instantáneos y cantidad de reglas presentes. El archivo se codifica en H.264, se declara en el reporte y se almacena como artefacto privado.
+6. **Inspección en máxima profundidad:** al seleccionar el evento de máxima profundidad, el reproductor posiciona el video en el instante correspondiente y lo mantiene en pausa para facilitar la revisión de la geometría y su contraste con las gráficas.
 
 Las imágenes `pose_quality.png`, `segmentation.png` y `biomechanical_metrics.png`, los CSV, los JSON y los videos anteriores permanecen en `outputs` y en almacenamiento. La web usa representaciones interactivas como vista principal y conserva los archivos originales para auditoría y descarga.
 
 La validación real se ejecutó sobre `dev_case_1784949788300`. El video técnico resultante conservó la resolución `478 × 850`, una frecuencia aproximada de `29.86 FPS` y codec H.264.
+
+La verificación E2E local cubre autenticación, registro asistido de un caso, consulta de resultados y evaluación ciega por un experto. Playwright se ejecuta con grabación habilitada para conservar evidencia audiovisual de cada recorrido.
