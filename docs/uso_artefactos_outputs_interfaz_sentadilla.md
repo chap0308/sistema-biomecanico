@@ -559,3 +559,29 @@ El incremento previo a la interfaz quedó implementado mediante:
 La arquitectura y los endpoints se detallan en `arquitectura_api_preinterfaz_sentadilla.md`. La validación del incremento se documenta en `evidencia_contratos_api_preinterfaz_sentadilla.md`.
 
 El stack, la persistencia, los roles, las rutas, las pruebas y las fases de construcción de la interfaz se definen en `plan_frontend_web_sentadilla.md`.
+
+## 14. Disponibilidad anatómica implementada
+
+La vista de trazabilidad incorpora un selector de segmento anatómico. Para la
+repetición activa muestra las curvas de visibilidad izquierda y derecha del
+segmento seleccionado, o la referencia central cuando se elige la nariz. La
+línea del umbral `0.5` permite explicar en qué fotogramas cada punto fue
+utilizable.
+
+El mismo cálculo se exporta en la hoja **Instrumento 1** del archivo Excel:
+
+- repetición;
+- grupo anatómico;
+- visibilidad media por lado;
+- cobertura de fotogramas utilizables por lado;
+- clasificación visible y estable, intermitente o no disponible;
+- código de disponibilidad `B`, `I`, `D`, `O`, `N` o `C`.
+
+La hoja también utiliza denominaciones legibles para los campos de registro,
+normaliza fechas, estados y unidades, e incluye edad, sexo y resolución del
+video. Las claves internas del contrato, como `registration.case.plane`, no se
+exponen al usuario.
+
+La validez global del video permanece en el Instrumento 1. El resumen por
+punto y repetición es evidencia explicativa y no duplica los porcentajes de
+fotogramas válidos o procesados correctamente del Instrumento 2.

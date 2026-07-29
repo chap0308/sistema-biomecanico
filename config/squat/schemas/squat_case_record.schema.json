@@ -23,6 +23,37 @@
           "default": null,
           "title": "Participant Code"
         },
+        "participant_age": {
+          "anyOf": [
+            {
+              "maximum": 120,
+              "minimum": 18,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Participant Age"
+        },
+        "participant_sex": {
+          "anyOf": [
+            {
+              "enum": [
+                "masculino",
+                "femenino",
+                "ninguno_de_los_anteriores"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Participant Sex"
+        },
         "profile": {
           "default": "no_etiquetado",
           "enum": [

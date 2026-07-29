@@ -36,6 +36,10 @@ export const test = base.extend<{ squatCase: SquatCaseFixture }>({
         await page
           .getByLabel("Código del participante")
           .fill(input.participantCode);
+        await page.getByLabel("Edad del participante").fill("28");
+        await page
+          .getByLabel("Sexo del participante")
+          .selectOption("ninguno_de_los_anteriores");
         await page.getByLabel("Fecha de registro").fill("2026-07-24");
         await page.getByLabel("Fuente del video").fill("fixture_playwright");
         await page.getByLabel("Dispositivo de captura").fill("smartphone");

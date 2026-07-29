@@ -282,12 +282,32 @@ async def export_squat_case(
         ]
     )
     if filename == "instruments.xlsx":
+        report_model = SquatCaseReport.model_validate(case_report)
+        artifacts: dict[str, bytes] = {}
+        case_dir = (_OUTPUT_ROOT / safe_case_id).resolve()
+        for artifact_name in _explanation_artifact_names(report_model):
+            local_path = (case_dir / artifact_name).resolve()
+            if local_path.parent == case_dir and local_path.is_file():
+                artifacts[artifact_name] = local_path.read_bytes()
+                continue
+            stored = await run_in_threadpool(
+                store.get_case_artifact,
+                safe_case_id,
+                artifact_name,
+            )
+            if stored is not None:
+                artifacts[artifact_name] = stored.content
+        explanation = build_case_explanation(report_model, artifacts)
         content = await run_in_threadpool(
             build_case_excel,
             case_record=case_record,
             case_report=case_report,
             comparison=comparison,
             performance=performance,
+            landmark_visibility=[
+                item.model_dump(mode="json")
+                for item in explanation.landmark_visibility_summaries
+            ],
         )
         media_type = (
             "application/vnd.openxmlformats-officedocument."
@@ -745,6 +765,8 @@ async def analyze_squat_case(
     video: UploadFile = File(...),
     case_id: str = Form(...),
     participant_code: str | None = Form(default=None),
+    participant_age: int | None = Form(default=None),
+    participant_sex: str | None = Form(default=None),
     profile: str = Form(default="no_etiquetado"),
     protocol_review_status: str = Form(default="aceptado"),
     exclusion_reason: str | None = Form(default=None),
@@ -767,6 +789,8 @@ async def analyze_squat_case(
             case_id=case_id,
             video_path="pending-upload",
             participant_code=participant_code,
+            participant_age=participant_age,
+            participant_sex=participant_sex,
             profile=profile,
             intended_findings=intended_findings,
             protocol_review_status=protocol_review_status,

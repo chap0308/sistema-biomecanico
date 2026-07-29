@@ -19,6 +19,17 @@ export type SquatExplanationFrame = {
   left_knee_medial_deviation_pct: number | null;
   right_knee_medial_deviation_pct: number | null;
   bilateral_alignment_difference_pct: number | null;
+  landmark_visibility: Record<string, number>;
+};
+
+export type SquatLandmarkVisibilitySummary = {
+  repetition_index: number;
+  landmark: string;
+  anatomical_group: string;
+  side: "izquierda" | "derecha" | "central";
+  mean_visibility: number;
+  usable_frames_percentage: number;
+  availability: "visible_estable" | "intermitente" | "no_disponible";
 };
 
 export type SquatExplanationKeyFrame = {
@@ -66,5 +77,6 @@ export type SquatCaseExplanation = {
     decisions: SquatRuleDecision[];
   }[];
   key_frames: SquatExplanationKeyFrame[];
+  landmark_visibility_summaries: SquatLandmarkVisibilitySummary[];
   artifact_downloads: { kind: string; filename: string }[];
 };

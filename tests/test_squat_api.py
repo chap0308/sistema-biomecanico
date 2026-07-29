@@ -55,6 +55,8 @@ def test_squat_endpoint_receives_video_and_manual_review(
         "/api/v1/squat/cases",
         data={
             "case_id": "caso_api_001",
+            "participant_age": "28",
+            "participant_sex": "femenino",
             "manual_review_json": json.dumps(
                 {"lighting": "adecuada", "support_condition_compliant": True}
             ),
@@ -65,6 +67,8 @@ def test_squat_endpoint_receives_video_and_manual_review(
     assert response.status_code == 200
     assert response.json()["case_id"] == "caso_api_001"
     assert captured["manual_review"].lighting == "adecuada"
+    assert captured["case"].participant_age == 28
+    assert captured["case"].participant_sex == "femenino"
     assert Path(captured["case"].video_path).read_bytes() == b"video-bytes"
 
 

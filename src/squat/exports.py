@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime
 from io import BytesIO
 from typing import Any, Iterable
 
@@ -24,6 +25,74 @@ _PATTERN_NAMES = {
     "bilateral_asymmetry": "Asimetría bilateral observable",
 }
 
+_VALUE_LABELS = {
+    "anterior": "Vista anterior",
+    "frontal": "Plano frontal",
+    "sin_carga_externa": "Sin carga externa",
+    "no_etiquetado": "No etiquetado",
+    "ninguno_de_los_anteriores": "Ninguno de los anteriores",
+    "masculino": "Masculino",
+    "femenino": "Femenino",
+    "adecuada": "Adecuada",
+    "regular": "Regular",
+    "deficiente": "Deficiente",
+    "adecuado": "Adecuado",
+    "no_verificada": "No verificada",
+    "no_verificado": "No verificado",
+    "completa": "Completa",
+    "parcial_utilizable": "Parcial utilizable",
+    "insuficiente": "Insuficiente",
+    "ninguna": "Ninguna",
+    "leve": "Leve",
+    "moderada": "Moderada",
+    "severa": "Severa",
+    "plana": "Plana",
+    "no_verificable": "No verificable",
+    "continuo": "Continuo",
+    "si": "Sí",
+    "no": "No",
+    "analisis_completo": "Análisis completo",
+    "apto_para_analisis": "Apto para análisis",
+    "revision_requerida": "Revisión requerida",
+    "no_apto_para_analisis": "No apto para análisis",
+    "presente": "Presente",
+    "ausente": "Ausente",
+    "no_concluyente": "No concluyente",
+    "izquierda": "Izquierda",
+    "derecha": "Derecha",
+    "bilateral": "Bilateral",
+    "sin_direccion": "Sin dirección",
+    "pct_ancho_hombros": "% del ancho inicial de hombros",
+    "deg": "Grados",
+    "consenso_guiado": "Consenso guiado",
+    "coincidencia_directa": "Coincidencia directa",
+    "mayoria_absoluta": "Mayoría absoluta",
+    "visible_estable": "Visible y estable",
+    "intermitente": "Intermitente",
+    "no_disponible": "No disponible",
+    "inclinacion_lateral_tronco": "Inclinación lateral del tronco",
+    "desplazamiento_lateral_pelvis": "Desplazamiento lateral de pelvis",
+    "valgo_dinamico_visible": "Valgo dinámico visible",
+    "asimetria_bilateral_observable": "Asimetría bilateral observable",
+    "trunk_lateral_inclination": "Inclinación lateral del tronco",
+    "pelvis_lateral_shift": "Desplazamiento lateral de pelvis",
+    "visible_dynamic_valgus": "Valgo dinámico visible",
+    "bilateral_asymmetry": "Asimetría bilateral observable",
+    "consolidada": "Consolidada",
+    "consenso_requerido": "Consenso requerido",
+    "evaluaciones_pendientes": "Evaluaciones pendientes",
+}
+
+_LANDMARK_LABELS = {
+    "shoulder": "Hombro",
+    "hip": "Cadera",
+    "knee": "Rodilla",
+    "ankle": "Tobillo",
+    "heel": "Talón",
+    "foot_index": "Punta del pie",
+    "nose": "Nariz",
+}
+
 
 def build_case_excel(
     *,
@@ -31,12 +100,18 @@ def build_case_excel(
     case_report: dict[str, Any],
     comparison: CaseComparison,
     performance: DatasetPerformance,
+    landmark_visibility: list[dict[str, Any]] | None = None,
 ) -> bytes:
     """Create one workbook containing Instruments 1-3 and derived analysis."""
     workbook = Workbook()
     default = workbook.active
     workbook.remove(default)
-    _instrument_1_sheet(workbook, case_record)
+    _instrument_1_sheet(
+        workbook,
+        case_record,
+        case_report,
+        landmark_visibility or [],
+    )
     _instrument_2_sheet(workbook, case_report)
     _instrument_3_sheet(workbook, comparison)
     _analysis_sheet(workbook, comparison.patterns)
@@ -177,11 +252,109 @@ def _pdf_figure_header(
     return figure
 
 
-def _instrument_1_sheet(workbook: Workbook, record: dict[str, Any]) -> None:
+def _instrument_1_sheet(
+    workbook: Workbook,
+    record: dict[str, Any],
+    report: dict[str, Any],
+    landmark_visibility: list[dict[str, Any]],
+) -> None:
     sheet = workbook.create_sheet("Instrumento 1")
     sheet.append(["Campo", "Valor registrado"])
-    for key, value in _flatten(record):
-        sheet.append([key, _cell(value)])
+    registration = record.get("registration") or {}
+    case = registration.get("case") or {}
+    video = registration.get("video") or {}
+    review = record.get("manual_protocol_review") or {}
+    resolution = (
+        f"{video.get('width_px')} × {video.get('height_px')} px"
+        if video.get("width_px") and video.get("height_px")
+        else None
+    )
+    fields = [
+        ("Código del video", case.get("case_id")),
+        ("Código del participante", case.get("participant_code")),
+        ("Edad del participante", case.get("participant_age")),
+        ("Sexo del participante", case.get("participant_sex")),
+        ("Fecha y hora de creación", record.get("created_at")),
+        ("Fecha del registro", review.get("record_date")),
+        ("Fuente del video", review.get("video_source")),
+        ("Ruta del video", video.get("path")),
+        ("Vista de captura", case.get("view")),
+        ("Plano de captura", case.get("plane")),
+        ("Condición de carga", case.get("load_condition")),
+        ("Dispositivo de captura", review.get("capture_device")),
+        ("Resolución", resolution),
+        ("Frecuencia de video", _with_unit(video.get("fps"), "fps")),
+        (
+            "Duración",
+            _with_unit(video.get("duration_seconds"), "s"),
+        ),
+        ("Iluminación", review.get("lighting")),
+        ("Fondo visual", review.get("background")),
+        ("Visibilidad corporal", review.get("body_visibility")),
+        ("Oclusiones", review.get("occlusions")),
+        (
+            "Sentadilla completa observable",
+            review.get("complete_squat_observable"),
+        ),
+        ("Superficie", review.get("surface")),
+        (
+            "Soporte externo debajo de los talones",
+            review.get("external_heel_support"),
+        ),
+        (
+            "Contacto aparente de los talones",
+            review.get("apparent_heel_contact"),
+        ),
+        (
+            "Condición de apoyo conforme al protocolo",
+            review.get("support_condition_compliant"),
+        ),
+        (
+            "Observación del apoyo plantar",
+            review.get("plantar_support_observation"),
+        ),
+        (
+            "Video válido para procesamiento",
+            registration.get("ready_for_pose"),
+        ),
+        ("Estado del análisis", report.get("status")),
+    ]
+    for label, value in fields:
+        sheet.append([label, _display_value(value)])
+
+    if landmark_visibility:
+        sheet.append([])
+        section_row = sheet.max_row + 1
+        sheet.append(
+            [
+                "Disponibilidad computacional por repetición",
+                "Promedio y cobertura derivados del análisis",
+            ]
+        )
+        table_header_row = sheet.max_row + 1
+        sheet.append(
+            [
+                "Repetición",
+                "Grupo anatómico",
+                "Promedio izquierdo o central",
+                "Cobertura izquierda o central",
+                "Estado izquierdo o central",
+                "Promedio derecho",
+                "Cobertura derecha",
+                "Estado derecho",
+                "Código de disponibilidad",
+            ]
+        )
+        for row in _paired_landmark_rows(landmark_visibility):
+            sheet.append(row)
+        section_fill = PatternFill("solid", fgColor="DCE9E7")
+        header_fill = PatternFill("solid", fgColor="315D63")
+        for cell in sheet[section_row]:
+            cell.font = Font(bold=True, color="123B42")
+            cell.fill = section_fill
+        for cell in sheet[table_header_row]:
+            cell.font = Font(bold=True, color="FFFFFF")
+            cell.fill = header_fill
 
 
 def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
@@ -196,7 +369,7 @@ def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
         "Fotogramas válidos",
         "% fotogramas válidos",
         "% procesados correctamente",
-        "Promedio de puntos clave por fotograma",
+        "Promedio de puntos anatómicos clave detectados por fotograma",
         "Reglas implementadas",
         "Compensaciones detectadas",
         "Versión de reglas",
@@ -205,14 +378,17 @@ def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
     sheet.append(
         [
             report.get("case_id"),
-            report.get("status"),
+            _display_value(report.get("status")),
             pose.get("total_frames"),
             pose.get("valid_frames"),
             pose.get("valid_frames_percentage"),
             pose.get("processed_frames_percentage"),
             pose.get("mean_detected_keypoints"),
             len(decisions),
-            ", ".join(findings.get("detected_findings") or []),
+            ", ".join(
+                _display_value(item)
+                for item in findings.get("detected_findings") or []
+            ),
             findings.get("ruleset_version"),
         ]
     )
@@ -232,12 +408,12 @@ def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
     for decision in decisions:
         sheet.append(
             [
-                decision.get("finding"),
+                _display_value(decision.get("finding")),
                 decision.get("repetition_index"),
-                decision.get("status"),
-                decision.get("direction"),
+                _display_value(decision.get("status")),
+                _display_value(decision.get("direction")),
                 decision.get("aggregate_value"),
-                decision.get("unit"),
+                _display_value(decision.get("unit")),
                 decision.get("absent_max"),
                 decision.get("present_min"),
             ]
@@ -281,9 +457,9 @@ def _instrument_3_sheet(
                 _label(row.system_label),
                 _label(row.reference.label if row.reference else None),
                 (
-                    row.reference.method
+                    _display_value(row.reference.method)
                     if row.reference
-                    else row.reference_status
+                    else _display_value(row.reference_status)
                 ),
             ]
         )
@@ -353,7 +529,7 @@ def _metrics_sheet(
     for metric in [performance.overall, *performance.by_pattern]:
         sheet.append(
             [
-                metric.scope,
+                _display_value(metric.scope),
                 metric.included_pairs,
                 metric.excluded_inconclusive_pairs,
                 metric.true_positive,
@@ -393,21 +569,125 @@ def _format_sheet(sheet: Any) -> None:
             cell.alignment = Alignment(wrap_text=True, vertical="top")
 
 
-def _flatten(
-    payload: dict[str, Any],
-    prefix: str = "",
-) -> Iterable[tuple[str, Any]]:
-    for key, value in payload.items():
-        path = f"{prefix}.{key}" if prefix else key
-        if isinstance(value, dict):
-            yield from _flatten(value, path)
-        else:
-            yield path, value
+def _paired_landmark_rows(
+    summaries: list[dict[str, Any]],
+) -> list[list[Any]]:
+    grouped: dict[tuple[int, str], dict[str, dict[str, Any]]] = {}
+    for summary in summaries:
+        key = (
+            int(summary["repetition_index"]),
+            str(summary["anatomical_group"]),
+        )
+        grouped.setdefault(key, {})[str(summary["side"])] = summary
+    rows: list[list[Any]] = []
+    group_order = {
+        group: index
+        for index, group in enumerate(_LANDMARK_LABELS)
+    }
+    ordered = sorted(
+        grouped.items(),
+        key=lambda item: (
+            item[0][0],
+            group_order.get(item[0][1], len(group_order)),
+        ),
+    )
+    for (repetition, group), sides in ordered:
+        left = sides.get("izquierda") or sides.get("central")
+        right = sides.get("derecha")
+        rows.append(
+            [
+                repetition,
+                _LANDMARK_LABELS.get(group, _display_value(group)),
+                _summary_value(left, "mean_visibility"),
+                _summary_percentage(left),
+                _summary_state(left),
+                _summary_value(right, "mean_visibility"),
+                _summary_percentage(right),
+                _summary_state(right),
+                _availability_code(left, right, central="central" in sides),
+            ]
+        )
+    return rows
 
 
-def _cell(value: Any) -> Any:
+def _summary_value(
+    summary: dict[str, Any] | None,
+    key: str,
+) -> float | None:
+    return round(float(summary[key]), 4) if summary else None
+
+
+def _summary_percentage(summary: dict[str, Any] | None) -> str | None:
+    if not summary:
+        return None
+    return f"{float(summary['usable_frames_percentage']):.2f} %"
+
+
+def _summary_state(summary: dict[str, Any] | None) -> str | None:
+    return (
+        str(_display_value(summary.get("availability")))
+        if summary
+        else None
+    )
+
+
+def _availability_code(
+    left: dict[str, Any] | None,
+    right: dict[str, Any] | None,
+    *,
+    central: bool,
+) -> str:
+    if central:
+        state = left.get("availability") if left else "no_disponible"
+        return "C" if state == "visible_estable" else (
+            "O" if state == "intermitente" else "N"
+        )
+    left_state = left.get("availability") if left else "no_disponible"
+    right_state = right.get("availability") if right else "no_disponible"
+    if left_state == right_state == "visible_estable":
+        return "B"
+    if left_state == "visible_estable" and right_state == "no_disponible":
+        return "I"
+    if right_state == "visible_estable" and left_state == "no_disponible":
+        return "D"
+    if "intermitente" in {left_state, right_state}:
+        return "O"
+    return "N"
+
+
+def _with_unit(value: Any, unit: str) -> str | None:
+    if value is None:
+        return None
+    if isinstance(value, float):
+        normalized = f"{value:.2f}".rstrip("0").rstrip(".")
+        return f"{normalized} {unit}"
+    return f"{value} {unit}"
+
+
+def _display_value(value: Any) -> Any:
+    if value is None or value == "":
+        return "No especificado"
+    if isinstance(value, bool):
+        return "Sí" if value else "No"
     if isinstance(value, list):
-        return ", ".join(str(item) for item in value)
+        return ", ".join(str(_display_value(item)) for item in value)
+    if not isinstance(value, str):
+        return value
+    if value in _VALUE_LABELS:
+        return _VALUE_LABELS[value]
+    if value in _PATTERN_NAMES:
+        return _PATTERN_NAMES[value]
+    try:
+        parsed_date = datetime.strptime(value, "%Y-%m-%d")
+        return parsed_date.strftime("%d/%m/%Y")
+    except ValueError:
+        pass
+    if "T" in value:
+        try:
+            parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+            return parsed.strftime("%d/%m/%Y %H:%M:%S")
+        except ValueError:
+            pass
     return value
 
 
@@ -426,7 +706,7 @@ def _judgment_label(
 def _label(value: str | None) -> str:
     if value is None:
         return "Pendiente"
-    return value.replace("_", " ").capitalize()
+    return str(_display_value(value))
 
 
 def _match_label(value: bool | None) -> str:

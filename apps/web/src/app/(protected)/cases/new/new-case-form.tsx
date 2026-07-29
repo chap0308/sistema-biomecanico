@@ -84,6 +84,8 @@ export function NewCaseForm() {
     const values: Record<string, string> = {
       case_id: `dev_case_${Date.now()}`,
       participant_code: "P-DEV-001",
+      participant_age: "28",
+      participant_sex: "ninguno_de_los_anteriores",
       record_date: new Date().toISOString().slice(0, 10),
       video_source: "fixture_desarrollo",
       capture_device: "smartphone",
@@ -149,6 +151,10 @@ export function NewCaseForm() {
       "participant_code",
       optionalString(raw, "participant_code") ?? "",
     );
+    const participantAge = optionalString(raw, "participant_age");
+    const participantSex = optionalString(raw, "participant_sex");
+    if (participantAge) payload.set("participant_age", participantAge);
+    if (participantSex) payload.set("participant_sex", participantSex);
     payload.set("profile", "no_etiquetado");
     payload.set("protocol_review_status", "aceptado");
     payload.set("manual_review_json", JSON.stringify(manualReview));
@@ -228,6 +234,26 @@ export function NewCaseForm() {
             <TextField
               name="participant_code"
               label="Código del participante"
+            />
+            <TextField
+              name="participant_age"
+              label="Edad del participante"
+              type="number"
+              min={18}
+              max={120}
+            />
+            <SelectField
+              name="participant_sex"
+              label="Sexo del participante"
+              options={[
+                ["", "No especificado"],
+                ["masculino", "Masculino"],
+                ["femenino", "Femenino"],
+                [
+                  "ninguno_de_los_anteriores",
+                  "Ninguno de los anteriores",
+                ],
+              ]}
             />
             <TextField name="record_date" label="Fecha de registro" type="date" />
             <TextField name="video_source" label="Fuente del video" />

@@ -52,6 +52,26 @@ const explanation: SquatCaseExplanation = {
     },
   ],
   key_frames: [],
+  landmark_visibility_summaries: [
+    {
+      repetition_index: 1,
+      landmark: "left_hip",
+      anatomical_group: "hip",
+      side: "izquierda",
+      mean_visibility: 0.92,
+      usable_frames_percentage: 100,
+      availability: "visible_estable",
+    },
+    {
+      repetition_index: 1,
+      landmark: "right_hip",
+      anatomical_group: "hip",
+      side: "derecha",
+      mean_visibility: 0.88,
+      usable_frames_percentage: 100,
+      availability: "visible_estable",
+    },
+  ],
   artifact_downloads: [],
 };
 
@@ -77,6 +97,10 @@ describe("ExplanationWorkspace", () => {
     expect(
       screen.getByText("Disponibilidad de pose por fotograma"),
     ).toBeInTheDocument();
+    expect(
+      screen.getByText("Visibilidad por punto anatómico"),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Promedio 0.92/)).toBeInTheDocument();
   });
 
   it("navigates repetitions from the traceability workspace", () => {
@@ -140,5 +164,9 @@ function frame(
     left_knee_medial_deviation_pct: frameIndex,
     right_knee_medial_deviation_pct: -frameIndex,
     bilateral_alignment_difference_pct: frameIndex * 2,
+    landmark_visibility: {
+      left_hip: 0.92,
+      right_hip: 0.88,
+    },
   };
 }

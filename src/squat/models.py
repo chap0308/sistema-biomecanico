@@ -50,6 +50,12 @@ class SquatCaseRecord(BaseModel):
     case_id: str
     video_path: str
     participant_code: str | None = None
+    participant_age: int | None = Field(default=None, ge=18, le=120)
+    participant_sex: Literal[
+        "masculino",
+        "femenino",
+        "ninguno_de_los_anteriores",
+    ] | None = None
     profile: SquatCaseProfile = "no_etiquetado"
     intended_findings: list[str] = Field(default_factory=list)
     protocol_review_status: ProtocolReviewStatus = "pendiente"

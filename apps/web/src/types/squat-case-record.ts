@@ -17,6 +17,8 @@ export type ReadyForPose = boolean;
 export type CaseId = string;
 export type VideoPath = string;
 export type ParticipantCode = string | null;
+export type ParticipantAge = number | null;
+export type ParticipantSex = ("masculino" | "femenino" | "ninguno_de_los_anteriores") | null;
 export type Profile = "positivo_controlado" | "negativo" | "no_etiquetado";
 export type IntendedFindings = string[];
 export type ProtocolReviewStatus = "pendiente" | "aceptado" | "rechazado";
@@ -85,6 +87,8 @@ export interface SquatCaseRecord {
   case_id: CaseId;
   video_path: VideoPath;
   participant_code?: ParticipantCode;
+  participant_age?: ParticipantAge;
+  participant_sex?: ParticipantSex;
   profile?: Profile;
   intended_findings?: IntendedFindings;
   protocol_review_status?: ProtocolReviewStatus;

@@ -673,6 +673,40 @@ En síntesis, `landmarks.csv` responde qué punto fue estimado, dónde se ubicó
 con qué visibilidad; `frame_quality.csv` responde si el conjunto disponible en
 ese fotograma fue suficiente para participar en el análisis.
 
+### 8.3. Resumen de visibilidad por punto y repetición
+
+Para completar el Instrumento 1 sin trasladar miles de filas, el sistema deriva
+de `landmarks.csv` dos indicadores por punto anatómico dentro del intervalo
+`start_frame` a `end_frame` de cada repetición:
+
+```text
+visibilidad media = suma de confianzas del punto / fotogramas de la repetición
+
+cobertura utilizable (%) =
+100 × fotogramas con visibilidad >= 0.5 / fotogramas de la repetición
+```
+
+Si el punto no aparece en una fila esperada, su visibilidad se considera cero.
+Así se evita inflar el promedio calculándolo únicamente sobre detecciones
+exitosas. La disponibilidad se resume con las siguientes reglas operativas:
+
+| Estado | Regla |
+|---|---|
+| Visible y estable | Cobertura >= 90 % y visibilidad media >= 0.8 |
+| No disponible | Cobertura < 50 % o visibilidad media < 0.5 |
+| Intermitente | Cualquier condición intermedia |
+
+La interfaz permite seleccionar hombro, cadera, rodilla, tobillo, talón, punta
+del pie o nariz y muestra únicamente la curva izquierda y derecha del segmento
+elegido, o la curva central para la nariz. No se presentan simultáneamente las
+13 curvas porque dificultarían su interpretación.
+
+Este resumen describe la disponibilidad computacional de cada referencia. No
+reemplaza el campo global **Video válido para procesamiento** del Instrumento 1
+ni crea una segunda regla de aceptación. La validez global conserva el control
+del protocolo y las condiciones generales de captura; la tabla por repetición
+explica qué puntos sustentaron los cálculos realizados.
+
 ```mermaid
 flowchart TD
     A["OpenCV + MediaPipe"] --> B["landmarks.csv<br/>13 filas por fotograma"]

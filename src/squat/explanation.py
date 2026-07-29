@@ -15,6 +15,7 @@ from src.squat.models import (
     SquatRepetitionMetrics,
     SquatRuleDecision,
 )
+from src.squat.pose_video import SQUAT_LANDMARK_INDEXES
 
 
 class SquatExplanationQuality(BaseModel):
@@ -49,6 +50,25 @@ class SquatExplanationFrame(BaseModel):
     left_knee_medial_deviation_pct: float | None = None
     right_knee_medial_deviation_pct: float | None = None
     bilateral_alignment_difference_pct: float | None = None
+    landmark_visibility: dict[str, float] = Field(default_factory=dict)
+
+
+class SquatLandmarkVisibilitySummary(BaseModel):
+    """Per-repetition availability derived from the complete frame range."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    repetition_index: int = Field(ge=1)
+    landmark: str
+    anatomical_group: str
+    side: Literal["izquierda", "derecha", "central"]
+    mean_visibility: float = Field(ge=0.0, le=1.0)
+    usable_frames_percentage: float = Field(ge=0.0, le=100.0)
+    availability: Literal[
+        "visible_estable",
+        "intermitente",
+        "no_disponible",
+    ]
 
 
 class SquatExplanationLandmark(BaseModel):
@@ -123,6 +143,9 @@ class SquatCaseExplanation(BaseModel):
     frames: list[SquatExplanationFrame] = Field(default_factory=list)
     repetitions: list[SquatExplanationRepetition] = Field(default_factory=list)
     key_frames: list[SquatExplanationKeyFrame] = Field(default_factory=list)
+    landmark_visibility_summaries: list[
+        SquatLandmarkVisibilitySummary
+    ] = Field(default_factory=list)
     artifact_downloads: list[SquatExplanationArtifact] = Field(default_factory=list)
 
 
@@ -142,6 +165,8 @@ def build_case_explanation(
         artifacts,
         report.artifacts.biomechanical_frame_metrics_csv,
     )
+    landmark_rows = _read_csv(artifacts, report.artifacts.landmarks_csv)
+    visibility_by_frame = _landmark_visibility_by_frame(landmark_rows)
     frame_indexes = sorted(
         {
             frame_index
@@ -165,6 +190,7 @@ def build_case_explanation(
             quality=rows_by_source[0].get(frame_index, {}),
             phase=rows_by_source[1].get(frame_index, {}),
             metrics=rows_by_source[2].get(frame_index, {}),
+            landmark_visibility=visibility_by_frame.get(frame_index, {}),
         )
         for frame_index in retained_indexes
     ]
@@ -191,6 +217,10 @@ def build_case_explanation(
         frames=frames,
         repetitions=repetitions,
         key_frames=_key_frame_geometry(report, artifacts),
+        landmark_visibility_summaries=_landmark_visibility_summaries(
+            report,
+            visibility_by_frame,
+        ),
         artifact_downloads=_artifact_downloads(report),
     )
 
@@ -239,6 +269,7 @@ def _explanation_frame(
     quality: Mapping[str, str],
     phase: Mapping[str, str],
     metrics: Mapping[str, str],
+    landmark_visibility: Mapping[str, float],
 ) -> SquatExplanationFrame:
     timestamp = (
         _number(phase.get("timestamp_seconds"))
@@ -279,7 +310,88 @@ def _explanation_frame(
         bilateral_alignment_difference_pct=_number(
             metrics.get("bilateral_alignment_difference_pct")
         ),
+        landmark_visibility=dict(landmark_visibility),
     )
+
+
+def _landmark_visibility_by_frame(
+    rows: list[dict[str, str]],
+) -> dict[int, dict[str, float]]:
+    by_frame: dict[int, dict[str, float]] = {}
+    for row in rows:
+        frame_index = _integer(row.get("frame_index"))
+        landmark = row.get("landmark")
+        visibility = _number(row.get("visibility"))
+        if frame_index is None or not landmark or visibility is None:
+            continue
+        by_frame.setdefault(frame_index, {})[landmark] = visibility
+    return by_frame
+
+
+def _landmark_visibility_summaries(
+    report: SquatCaseReport,
+    visibility_by_frame: Mapping[int, Mapping[str, float]],
+) -> list[SquatLandmarkVisibilitySummary]:
+    if not report.segmentation or not report.pose:
+        return []
+    threshold = report.pose.min_visibility_threshold
+    summaries: list[SquatLandmarkVisibilitySummary] = []
+    for repetition in report.segmentation.repetitions:
+        frames = range(repetition.start_frame, repetition.end_frame + 1)
+        frame_count = repetition.end_frame - repetition.start_frame + 1
+        for landmark in SQUAT_LANDMARK_INDEXES:
+            values = [
+                visibility_by_frame.get(frame, {}).get(landmark, 0.0)
+                for frame in frames
+            ]
+            mean_visibility = sum(values) / frame_count
+            usable_percentage = (
+                sum(value >= threshold for value in values)
+                / frame_count
+                * 100.0
+            )
+            summaries.append(
+                SquatLandmarkVisibilitySummary(
+                    repetition_index=repetition.repetition_index,
+                    landmark=landmark,
+                    anatomical_group=_anatomical_group(landmark),
+                    side=_landmark_side(landmark),
+                    mean_visibility=round(mean_visibility, 4),
+                    usable_frames_percentage=round(usable_percentage, 2),
+                    availability=_availability_class(
+                        mean_visibility,
+                        usable_percentage,
+                    ),
+                )
+            )
+    return summaries
+
+
+def _availability_class(
+    mean_visibility: float,
+    usable_percentage: float,
+) -> Literal["visible_estable", "intermitente", "no_disponible"]:
+    if usable_percentage >= 90.0 and mean_visibility >= 0.8:
+        return "visible_estable"
+    if usable_percentage < 50.0 or mean_visibility < 0.5:
+        return "no_disponible"
+    return "intermitente"
+
+
+def _anatomical_group(landmark: str) -> str:
+    return (
+        landmark.removeprefix("left_").removeprefix("right_")
+    )
+
+
+def _landmark_side(
+    landmark: str,
+) -> Literal["izquierda", "derecha", "central"]:
+    if landmark.startswith("left_"):
+        return "izquierda"
+    if landmark.startswith("right_"):
+        return "derecha"
+    return "central"
 
 
 def _quality_summary(
@@ -474,5 +586,6 @@ def _boolean(value: str | None) -> bool:
 __all__ = [
     "SquatCaseExplanation",
     "SquatExplanationFrame",
+    "SquatLandmarkVisibilitySummary",
     "build_case_explanation",
 ]

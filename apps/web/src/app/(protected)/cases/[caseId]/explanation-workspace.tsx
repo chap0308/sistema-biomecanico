@@ -55,6 +55,9 @@ type ExplanationWorkspaceProps = {
 const chartConfig = {
   keypoints: { label: "Puntos detectados", color: "var(--chart-2)" },
   visibility: { label: "Visibilidad mínima", color: "var(--chart-5)" },
+  leftVisibility: { label: "Lado izquierdo", color: "var(--chart-2)" },
+  rightVisibility: { label: "Lado derecho", color: "var(--chart-4)" },
+  centralVisibility: { label: "Referencia central", color: "var(--chart-2)" },
   rawHip: { label: "Centro de caderas", color: "var(--muted-foreground)" },
   smoothHip: { label: "Señal suavizada", color: "var(--chart-2)" },
   trunk: { label: "Inclinación del tronco", color: "var(--chart-1)" },
@@ -90,6 +93,18 @@ const variables = {
 } as const;
 
 type VariableKey = keyof typeof variables;
+
+const landmarkGroups = {
+  shoulder: "Hombro",
+  hip: "Cadera",
+  knee: "Rodilla",
+  ankle: "Tobillo",
+  heel: "Talón",
+  foot_index: "Punta del pie",
+  nose: "Nariz",
+} as const;
+
+type LandmarkGroup = keyof typeof landmarkGroups;
 
 export function ExplanationWorkspace({
   activeRepetition,
@@ -511,6 +526,8 @@ function QualityPanel({
   frames: SquatExplanationFrame[];
   repetition: SquatCaseExplanation["repetitions"][number]["segmentation"];
 }) {
+  const [landmarkGroup, setLandmarkGroup] =
+    useState<LandmarkGroup>("hip");
   const detectedKeypoints = frames.flatMap((frame) =>
     frame.detected_keypoints == null ? [] : [frame.detected_keypoints],
   );
@@ -518,84 +535,233 @@ function QualityPanel({
     ? detectedKeypoints.reduce((total, value) => total + value, 0) /
       detectedKeypoints.length
     : null;
+  const selectedSummaries = (
+    explanation.landmark_visibility_summaries ?? []
+  ).filter(
+    (summary) =>
+      summary.repetition_index === repetition.repetition_index &&
+      summary.anatomical_group === landmarkGroup,
+  );
+  const visibilityFrames = frames.map((frame) => ({
+    timestamp_seconds: frame.timestamp_seconds,
+    leftVisibility:
+      frame.landmark_visibility?.[`left_${landmarkGroup}`] ?? null,
+    rightVisibility:
+      frame.landmark_visibility?.[`right_${landmarkGroup}`] ?? null,
+    centralVisibility:
+      frame.landmark_visibility?.[landmarkGroup] ?? null,
+  }));
+  const isCentral = landmarkGroup === "nose";
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Disponibilidad de pose por fotograma</CardTitle>
-        <CardDescription>
-          Los puntos críticos y la visibilidad determinan si un fotograma puede
-          participar en los cálculos.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig} className="h-72 w-full">
-          <LineChart data={frames}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="timestamp_seconds"
-              tickFormatter={formatSeconds}
-              type="number"
-              domain={["dataMin", "dataMax"]}
+    <div className="grid gap-4">
+      <Card>
+        <CardHeader>
+          <CardTitle>Disponibilidad de pose por fotograma</CardTitle>
+          <CardDescription>
+            Los puntos críticos y la visibilidad determinan si un fotograma puede
+            participar en los cálculos.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ChartContainer config={chartConfig} className="h-72 w-full">
+            <LineChart data={frames}>
+              <CartesianGrid vertical={false} />
+              <XAxis
+                dataKey="timestamp_seconds"
+                tickFormatter={formatSeconds}
+                type="number"
+                domain={["dataMin", "dataMax"]}
+              />
+              <YAxis yAxisId="points" domain={[0, 13]} width={30} />
+              <YAxis
+                yAxisId="visibility"
+                orientation="right"
+                domain={[0, 1]}
+                width={34}
+              />
+              <ChartTooltip
+                content={<ChartTooltipContent />}
+                labelFormatter={(_, payload) =>
+                  formatTooltipSeconds(payload[0]?.payload?.timestamp_seconds)
+                }
+              />
+              <RepetitionMarkers repetition={repetition} yAxisId="points" />
+              <ReferenceLine
+                yAxisId="visibility"
+                y={explanation.quality?.visibility_threshold ?? 0.5}
+                stroke="var(--destructive)"
+                strokeDasharray="4 4"
+              />
+              <TimeCursor currentTime={currentTime} yAxisId="points" />
+              <Line
+                yAxisId="points"
+                dataKey="detected_keypoints"
+                name="keypoints"
+                stroke="var(--color-keypoints)"
+                dot={false}
+                isAnimationActive={false}
+              />
+              <Line
+                yAxisId="visibility"
+                dataKey="minimum_critical_visibility"
+                name="visibility"
+                stroke="var(--color-visibility)"
+                dot={false}
+                isAnimationActive={false}
+              />
+            </LineChart>
+          </ChartContainer>
+          <div className="mt-4 grid gap-2 sm:grid-cols-3">
+            <SmallMetric
+              label="Fotogramas válidos"
+              value={`${repetition.valid_frames_percentage.toFixed(1)} %`}
             />
-            <YAxis yAxisId="points" domain={[0, 13]} width={30} />
-            <YAxis
-              yAxisId="visibility"
-              orientation="right"
-              domain={[0, 1]}
-              width={34}
+            <SmallMetric
+              label="Promedio de puntos"
+              value={meanDetectedKeypoints?.toFixed(1) ?? "—"}
             />
-            <ChartTooltip
-              content={<ChartTooltipContent />}
-              labelFormatter={(_, payload) =>
-                formatTooltipSeconds(payload[0]?.payload?.timestamp_seconds)
+            <SmallMetric
+              label="Umbral de visibilidad"
+              value={
+                explanation.quality?.visibility_threshold.toFixed(2) ?? "—"
               }
             />
-            <RepetitionMarkers repetition={repetition} yAxisId="points" />
-            <ReferenceLine
-              yAxisId="visibility"
-              y={explanation.quality?.visibility_threshold ?? 0.5}
-              stroke="var(--destructive)"
-              strokeDasharray="4 4"
-            />
-            <TimeCursor currentTime={currentTime} yAxisId="points" />
-            <Line
-              yAxisId="points"
-              dataKey="detected_keypoints"
-              name="keypoints"
-              stroke="var(--color-keypoints)"
-              dot={false}
-              isAnimationActive={false}
-            />
-            <Line
-              yAxisId="visibility"
-              dataKey="minimum_critical_visibility"
-              name="visibility"
-              stroke="var(--color-visibility)"
-              dot={false}
-              isAnimationActive={false}
-            />
-          </LineChart>
-        </ChartContainer>
-        <div className="mt-4 grid gap-2 sm:grid-cols-3">
-          <SmallMetric
-            label="Fotogramas válidos"
-            value={`${repetition.valid_frames_percentage.toFixed(1)} %`}
-          />
-          <SmallMetric
-            label="Promedio de puntos"
-            value={meanDetectedKeypoints?.toFixed(1) ?? "—"}
-          />
-          <SmallMetric
-            label="Umbral de visibilidad"
-            value={
-              explanation.quality?.visibility_threshold.toFixed(2) ?? "—"
-            }
-          />
-        </div>
-      </CardContent>
-    </Card>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader className="gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <CardTitle>Visibilidad por punto anatómico</CardTitle>
+            <CardDescription className="mt-1">
+              Selecciona un segmento para comparar sus lados sin superponer las
+              13 curvas.
+            </CardDescription>
+          </div>
+          <label className="grid gap-1 text-sm font-medium">
+            Segmento
+            <select
+              aria-label="Segmento anatómico"
+              className="h-9 min-w-44 rounded-md border bg-background px-3"
+              value={landmarkGroup}
+              onChange={(event) =>
+                setLandmarkGroup(event.target.value as LandmarkGroup)
+              }
+            >
+              {Object.entries(landmarkGroups).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </CardHeader>
+        <CardContent>
+          <ChartContainer config={chartConfig} className="h-64 w-full">
+            <LineChart data={visibilityFrames}>
+              <CartesianGrid vertical={false} />
+              <XAxis
+                dataKey="timestamp_seconds"
+                tickFormatter={formatSeconds}
+                type="number"
+                domain={["dataMin", "dataMax"]}
+              />
+              <YAxis domain={[0, 1]} width={34} />
+              <ChartTooltip
+                content={<ChartTooltipContent />}
+                labelFormatter={(_, payload) =>
+                  formatTooltipSeconds(payload[0]?.payload?.timestamp_seconds)
+                }
+              />
+              <ReferenceLine
+                y={explanation.quality?.visibility_threshold ?? 0.5}
+                stroke="var(--destructive)"
+                strokeDasharray="4 4"
+              />
+              <TimeCursor currentTime={currentTime} />
+              {isCentral ? (
+                <Line
+                  dataKey="centralVisibility"
+                  name="centralVisibility"
+                  stroke="var(--color-centralVisibility)"
+                  dot={false}
+                  isAnimationActive={false}
+                  connectNulls={false}
+                />
+              ) : (
+                <>
+                  <Line
+                    dataKey="leftVisibility"
+                    name="leftVisibility"
+                    stroke="var(--color-leftVisibility)"
+                    dot={false}
+                    isAnimationActive={false}
+                    connectNulls={false}
+                  />
+                  <Line
+                    dataKey="rightVisibility"
+                    name="rightVisibility"
+                    stroke="var(--color-rightVisibility)"
+                    dot={false}
+                    isAnimationActive={false}
+                    connectNulls={false}
+                  />
+                </>
+              )}
+            </LineChart>
+          </ChartContainer>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            {selectedSummaries.map((summary) => (
+              <div
+                key={summary.landmark}
+                className="rounded-lg border bg-muted/20 p-3"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <p className="text-sm font-medium">
+                    {sideLabel(summary.side)}
+                  </p>
+                  <Badge variant="outline">
+                    {availabilityLabel(summary.availability)}
+                  </Badge>
+                </div>
+                <p className="mt-2 font-mono text-sm">
+                  Promedio {summary.mean_visibility.toFixed(2)} · cobertura{" "}
+                  {summary.usable_frames_percentage.toFixed(1)} %
+                </p>
+              </div>
+            ))}
+            {selectedSummaries.length === 0 ? (
+              <p className="text-sm text-muted-foreground sm:col-span-2">
+                Este caso todavía no contiene el resumen individual por punto
+                anatómico. Vuelve a cargarlo cuando la API haya actualizado el
+                contrato de explicación.
+              </p>
+            ) : null}
+          </div>
+          <p className="mt-3 text-xs leading-5 text-muted-foreground">
+            Cobertura: porcentaje de fotogramas de la repetición con visibilidad
+            igual o superior al umbral. Esta clasificación describe la
+            disponibilidad del punto; no reemplaza la validez global del video.
+          </p>
+        </CardContent>
+      </Card>
+    </div>
   );
+}
+
+function sideLabel(side: "izquierda" | "derecha" | "central") {
+  if (side === "central") return "Referencia central";
+  return `Lado ${side}`;
+}
+
+function availabilityLabel(
+  availability: "visible_estable" | "intermitente" | "no_disponible",
+) {
+  if (availability === "visible_estable") return "Visible y estable";
+  if (availability === "intermitente") return "Intermitente";
+  return "No disponible";
 }
 
 function SegmentationPanel({

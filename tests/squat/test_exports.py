@@ -47,10 +47,50 @@ def _performance() -> DatasetPerformance:
 
 def test_excel_contains_instruments_and_analysis_sheets() -> None:
     content = build_case_excel(
-        case_record={"registration": {"case": {"case_id": "caso_export_001"}}},
+        case_record={
+            "created_at": "2026-07-29T08:45:46.624700Z",
+            "registration": {
+                "case": {
+                    "case_id": "caso_export_001",
+                    "participant_code": "P-001",
+                    "participant_age": 28,
+                    "participant_sex": "femenino",
+                    "view": "anterior",
+                    "plane": "frontal",
+                    "load_condition": "sin_carga_externa",
+                },
+                "video": {
+                    "path": "video.mp4",
+                    "width_px": 1080,
+                    "height_px": 1920,
+                    "fps": 30,
+                },
+                "ready_for_pose": True,
+            },
+        },
         case_report={"case_id": "caso_export_001", "status": "analisis_completo"},
         comparison=_comparison(),
         performance=_performance(),
+        landmark_visibility=[
+            {
+                "repetition_index": 1,
+                "landmark": "left_hip",
+                "anatomical_group": "hip",
+                "side": "izquierda",
+                "mean_visibility": 0.92,
+                "usable_frames_percentage": 100,
+                "availability": "visible_estable",
+            },
+            {
+                "repetition_index": 1,
+                "landmark": "right_hip",
+                "anatomical_group": "hip",
+                "side": "derecha",
+                "mean_visibility": 0.88,
+                "usable_frames_percentage": 95,
+                "availability": "visible_estable",
+            },
+        ],
     )
 
     workbook = load_workbook(BytesIO(content))
@@ -61,6 +101,24 @@ def test_excel_contains_instruments_and_analysis_sheets() -> None:
         "Matriz de análisis",
         "Métricas",
     ]
+    instrument_1 = workbook["Instrumento 1"]
+    assert instrument_1["A2"].value == "Código del video"
+    assert instrument_1["B2"].value == "caso_export_001"
+    assert instrument_1["B4"].value == 28
+    assert instrument_1["B5"].value == "Femenino"
+    assert instrument_1["B14"].value == "1080 × 1920 px"
+    assert instrument_1["B15"].value == "30 fps"
+    assert not any(
+        str(cell.value).startswith("registration.")
+        for row in instrument_1.iter_rows()
+        for cell in row
+        if cell.value
+    )
+    assert any(
+        cell.value == "Cadera"
+        for row in instrument_1.iter_rows()
+        for cell in row
+    )
     assert workbook["Instrumento 3"]["A2"].value == "caso_export_001"
 
 
