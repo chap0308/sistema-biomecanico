@@ -1,9 +1,12 @@
-import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 
 import type { SquatCaseExplanation } from "@/types/squat-explanation";
 
-import { ExplanationWorkspace } from "./explanation-workspace";
+import {
+  ExplanationWorkspace,
+  formatTooltipSeconds,
+} from "./explanation-workspace";
 
 const explanation: SquatCaseExplanation = {
   schema_version: "1.0",
@@ -74,6 +77,46 @@ describe("ExplanationWorkspace", () => {
     expect(
       screen.getByText("Disponibilidad de pose por fotograma"),
     ).toBeInTheDocument();
+  });
+
+  it("navigates repetitions from the traceability workspace", () => {
+    const onRepetitionChange = vi.fn();
+    const multiRepetitionExplanation = {
+      ...explanation,
+      repetitions: [
+        explanation.repetitions[0],
+        {
+          ...explanation.repetitions[0],
+          segmentation: {
+            ...explanation.repetitions[0].segmentation,
+            repetition_index: 2,
+            start_seconds: 3,
+            peak_depth_seconds: 4,
+            end_seconds: 5,
+          },
+        },
+      ],
+    } satisfies SquatCaseExplanation;
+
+    render(
+      <ExplanationWorkspace
+        activeRepetition={1}
+        currentTime={1}
+        explanation={multiRepetitionExplanation}
+        onRepetitionChange={onRepetitionChange}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "Siguiente" }));
+
+    expect(onRepetitionChange).toHaveBeenCalledWith(2);
+  });
+
+  it("formats tooltip time from the frame timestamp", () => {
+    expect(formatTooltipSeconds(6.699116)).toBe("6.70 s");
+    expect(formatTooltipSeconds("Centro de caderas")).toBe(
+      "Tiempo no disponible",
+    );
   });
 });
 

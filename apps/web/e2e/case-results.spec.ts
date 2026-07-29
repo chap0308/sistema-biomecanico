@@ -32,4 +32,35 @@ test("shows traceable squat results for a completed case", async ({ page }) => {
       name: "Máxima profundidad por repetición",
     }),
   ).toBeVisible();
+
+  await expect(page.getByText("Repetición 1 de 3")).toBeVisible();
+  await page.getByRole("button", { name: "Siguiente" }).click();
+  await expect(page.getByText("Repetición 2 de 3")).toBeVisible();
+  await expect
+    .poll(() =>
+      page
+        .locator("video")
+        .evaluate((video) => (video as HTMLVideoElement).currentTime),
+    )
+    .toBeGreaterThan(10);
+  const qualityChart = page.locator('[data-slot="chart"]').first();
+  const chartBox = await qualityChart.boundingBox();
+  expect(chartBox).not.toBeNull();
+  await page.mouse.move(
+    chartBox!.x + chartBox!.width * 0.55,
+    chartBox!.y + chartBox!.height * 0.5,
+  );
+  await expect(
+    qualityChart.getByText(/^\d+\.\d{2} s$/),
+  ).toBeVisible();
+  await expect(qualityChart.getByText("NaN s")).toHaveCount(0);
+
+  await page.getByRole("button", { name: "Overlay técnico" }).click();
+  await expect
+    .poll(() =>
+      page
+        .locator("video")
+        .evaluate((video) => (video as HTMLVideoElement).currentTime),
+    )
+    .toBeGreaterThan(10);
 });

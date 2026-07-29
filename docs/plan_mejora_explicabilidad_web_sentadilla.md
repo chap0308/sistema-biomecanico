@@ -636,6 +636,7 @@ Los cinco incrementos quedaron implementados en la rama de desarrollo:
 4. **Evidencia geométrica:** la pestaña seleccionada muestra un esquema normalizado de tronco, pelvis, rodillas o diferencia bilateral a máxima profundidad. Los centros y proyecciones se calculan en Python.
 5. **Video técnico:** el pipeline genera `analysis_overlay.mp4` con repetición, fase, calidad, valores instantáneos y cantidad de reglas presentes. El archivo se codifica en H.264, se declara en el reporte y se almacena como artefacto privado.
 6. **Inspección en máxima profundidad:** al seleccionar el evento de máxima profundidad, el reproductor posiciona el video en el instante correspondiente y lo mantiene en pausa para facilitar la revisión de la geometría y su contraste con las gráficas.
+7. **Sincronización por repetición:** el tiempo del video determina automáticamente la repetición activa. La navegación persistente dentro de Trazabilidad permite avanzar, retroceder o seleccionar una ejecución y actualiza de forma conjunta gráficas, tablas, geometría y reglas. Cada gráfica marca el inicio, la máxima profundidad y el final de la repetición.
 
 Las imágenes `pose_quality.png`, `segmentation.png` y `biomechanical_metrics.png`, los CSV, los JSON y los videos anteriores permanecen en `outputs` y en almacenamiento. La web usa representaciones interactivas como vista principal y conserva los archivos originales para auditoría y descarga.
 

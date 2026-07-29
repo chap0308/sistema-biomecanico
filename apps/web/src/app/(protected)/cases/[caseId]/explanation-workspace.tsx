@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import {
   CartesianGrid,
   Line,
@@ -11,6 +12,7 @@ import {
 } from "recharts";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -47,6 +49,7 @@ type ExplanationWorkspaceProps = {
   activeRepetition: number;
   currentTime: number;
   explanation: SquatCaseExplanation;
+  onRepetitionChange?: (repetitionIndex: number) => void;
 };
 
 const chartConfig = {
@@ -92,6 +95,7 @@ export function ExplanationWorkspace({
   activeRepetition,
   currentTime,
   explanation,
+  onRepetitionChange,
 }: ExplanationWorkspaceProps) {
   const [variable, setVariable] = useState<VariableKey>("trunk");
   const repetition = explanation.repetitions.find(
@@ -111,6 +115,9 @@ export function ExplanationWorkspace({
       frame.repetition_index === activeRepetition &&
       frame.event === "maxima_profundidad",
   );
+  const repetitionIndexes = explanation.repetitions.map(
+    (item) => item.segmentation.repetition_index,
+  );
 
   return (
     <section className="mt-7 border-t pt-6" aria-labelledby="explanation-title">
@@ -127,6 +134,14 @@ export function ExplanationWorkspace({
         </p>
       </div>
 
+      {repetitionIndexes.length > 1 ? (
+        <RepetitionNavigator
+          activeRepetition={activeRepetition}
+          repetitionIndexes={repetitionIndexes}
+          onChange={onRepetitionChange}
+        />
+      ) : null}
+
       <Tabs defaultValue="quality" className="mt-5">
         <TabsList className="h-auto max-w-full flex-wrap justify-start">
           <TabsTrigger value="quality">1. Pose 2D</TabsTrigger>
@@ -140,10 +155,15 @@ export function ExplanationWorkspace({
             currentTime={currentTime}
             explanation={explanation}
             frames={frames}
+            repetition={repetition.segmentation}
           />
         </TabsContent>
         <TabsContent value="segmentation" className="mt-4">
-          <SegmentationPanel currentTime={currentTime} frames={frames} />
+          <SegmentationPanel
+            currentTime={currentTime}
+            frames={frames}
+            repetition={repetition.segmentation}
+          />
         </TabsContent>
         <TabsContent value="variables" className="mt-4">
           <Card>
@@ -178,6 +198,7 @@ export function ExplanationWorkspace({
               <VariableChart
                 currentTime={currentTime}
                 frames={frames}
+                repetition={repetition.segmentation}
                 variable={variable}
               />
               <EventTable frames={eventRows} variable={variable} />
@@ -189,6 +210,72 @@ export function ExplanationWorkspace({
         </TabsContent>
       </Tabs>
     </section>
+  );
+}
+
+function RepetitionNavigator({
+  activeRepetition,
+  repetitionIndexes,
+  onChange,
+}: {
+  activeRepetition: number;
+  repetitionIndexes: number[];
+  onChange?: (repetitionIndex: number) => void;
+}) {
+  const position = repetitionIndexes.indexOf(activeRepetition);
+  const previous = repetitionIndexes[position - 1];
+  const next = repetitionIndexes[position + 1];
+
+  return (
+    <div className="sticky top-3 z-20 mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-background/95 px-3 py-2 shadow-sm backdrop-blur">
+      <div>
+        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+          Evidencia sincronizada
+        </p>
+        <p className="text-sm font-medium" aria-live="polite">
+          Repetición {activeRepetition} de {repetitionIndexes.length}
+        </p>
+      </div>
+      <div className="flex items-center gap-1.5">
+        <Button
+          type="button"
+          size="sm"
+          variant="outline"
+          disabled={previous === undefined}
+          onClick={() => previous !== undefined && onChange?.(previous)}
+        >
+          <ChevronLeftIcon aria-hidden="true" />
+          Anterior
+        </Button>
+        <div className="hidden items-center gap-1 sm:flex">
+          {repetitionIndexes.map((repetitionIndex) => (
+            <Button
+              key={repetitionIndex}
+              type="button"
+              size="icon-sm"
+              variant={
+                repetitionIndex === activeRepetition ? "default" : "ghost"
+              }
+              aria-label={`Ver repetición ${repetitionIndex}`}
+              aria-pressed={repetitionIndex === activeRepetition}
+              onClick={() => onChange?.(repetitionIndex)}
+            >
+              {repetitionIndex}
+            </Button>
+          ))}
+        </div>
+        <Button
+          type="button"
+          size="sm"
+          variant="outline"
+          disabled={next === undefined}
+          onClick={() => next !== undefined && onChange?.(next)}
+        >
+          Siguiente
+          <ChevronRightIcon aria-hidden="true" />
+        </Button>
+      </div>
+    </div>
   );
 }
 
@@ -417,11 +504,21 @@ function QualityPanel({
   currentTime,
   explanation,
   frames,
+  repetition,
 }: {
   currentTime: number;
   explanation: SquatCaseExplanation;
   frames: SquatExplanationFrame[];
+  repetition: SquatCaseExplanation["repetitions"][number]["segmentation"];
 }) {
+  const detectedKeypoints = frames.flatMap((frame) =>
+    frame.detected_keypoints == null ? [] : [frame.detected_keypoints],
+  );
+  const meanDetectedKeypoints = detectedKeypoints.length
+    ? detectedKeypoints.reduce((total, value) => total + value, 0) /
+      detectedKeypoints.length
+    : null;
+
   return (
     <Card>
       <CardHeader>
@@ -450,8 +547,11 @@ function QualityPanel({
             />
             <ChartTooltip
               content={<ChartTooltipContent />}
-              labelFormatter={(value) => `${Number(value).toFixed(2)} s`}
+              labelFormatter={(_, payload) =>
+                formatTooltipSeconds(payload[0]?.payload?.timestamp_seconds)
+              }
             />
+            <RepetitionMarkers repetition={repetition} yAxisId="points" />
             <ReferenceLine
               yAxisId="visibility"
               y={explanation.quality?.visibility_threshold ?? 0.5}
@@ -480,13 +580,11 @@ function QualityPanel({
         <div className="mt-4 grid gap-2 sm:grid-cols-3">
           <SmallMetric
             label="Fotogramas válidos"
-            value={`${explanation.quality?.valid_percentage.toFixed(1) ?? "—"} %`}
+            value={`${repetition.valid_frames_percentage.toFixed(1)} %`}
           />
           <SmallMetric
             label="Promedio de puntos"
-            value={
-              explanation.quality?.mean_detected_keypoints.toFixed(1) ?? "—"
-            }
+            value={meanDetectedKeypoints?.toFixed(1) ?? "—"}
           />
           <SmallMetric
             label="Umbral de visibilidad"
@@ -503,9 +601,11 @@ function QualityPanel({
 function SegmentationPanel({
   currentTime,
   frames,
+  repetition,
 }: {
   currentTime: number;
   frames: SquatExplanationFrame[];
+  repetition: SquatCaseExplanation["repetitions"][number]["segmentation"];
 }) {
   return (
     <Card>
@@ -529,8 +629,11 @@ function SegmentationPanel({
             <YAxis reversed domain={["auto", "auto"]} width={44} />
             <ChartTooltip
               content={<ChartTooltipContent />}
-              labelFormatter={(value) => `${Number(value).toFixed(2)} s`}
+              labelFormatter={(_, payload) =>
+                formatTooltipSeconds(payload[0]?.payload?.timestamp_seconds)
+              }
             />
+            <RepetitionMarkers repetition={repetition} />
             <TimeCursor currentTime={currentTime} />
             <Line
               dataKey="hip_midpoint_y"
@@ -559,10 +662,12 @@ function SegmentationPanel({
 function VariableChart({
   currentTime,
   frames,
+  repetition,
   variable,
 }: {
   currentTime: number;
   frames: SquatExplanationFrame[];
+  repetition: SquatCaseExplanation["repetitions"][number]["segmentation"];
   variable: VariableKey;
 }) {
   return (
@@ -578,8 +683,11 @@ function VariableChart({
         <YAxis width={44} />
         <ChartTooltip
           content={<ChartTooltipContent />}
-          labelFormatter={(value) => `${Number(value).toFixed(2)} s`}
+          labelFormatter={(_, payload) =>
+            formatTooltipSeconds(payload[0]?.payload?.timestamp_seconds)
+          }
         />
+        <RepetitionMarkers repetition={repetition} />
         <ReferenceLine y={0} stroke="var(--border)" />
         <TimeCursor currentTime={currentTime} />
         {variable === "trunk" ? (
@@ -643,9 +751,50 @@ function TimeCursor({
       yAxisId={yAxisId}
       stroke="var(--foreground)"
       strokeDasharray="3 3"
-      ifOverflow="extendDomain"
     />
   );
+}
+
+function RepetitionMarkers({
+  repetition,
+  yAxisId,
+}: {
+  repetition: SquatCaseExplanation["repetitions"][number]["segmentation"];
+  yAxisId?: string;
+}) {
+  const markers = [
+    {
+      label: `Inicio R${repetition.repetition_index}`,
+      timestamp: repetition.start_seconds,
+      position: "insideTopLeft" as const,
+    },
+    {
+      label: "Profundidad",
+      timestamp: repetition.peak_depth_seconds,
+      position: "insideTop" as const,
+    },
+    {
+      label: `Final R${repetition.repetition_index}`,
+      timestamp: repetition.end_seconds,
+      position: "insideTopRight" as const,
+    },
+  ];
+
+  return markers.map((marker) => (
+    <ReferenceLine
+      key={marker.label}
+      x={marker.timestamp}
+      yAxisId={yAxisId}
+      stroke="var(--border)"
+      strokeDasharray="2 4"
+      label={{
+        value: marker.label,
+        position: marker.position,
+        fill: "var(--muted-foreground)",
+        fontSize: 10,
+      }}
+    />
+  ));
 }
 
 function EventTable({
@@ -826,6 +975,13 @@ function formatValue(value: number | null | undefined, unit: string) {
 
 function formatSeconds(value: number) {
   return `${Number(value).toFixed(1)} s`;
+}
+
+export function formatTooltipSeconds(value: unknown) {
+  const timestamp = Number(value);
+  return Number.isFinite(timestamp)
+    ? `${timestamp.toFixed(2)} s`
+    : "Tiempo no disponible";
 }
 
 function findingLabel(finding: string) {

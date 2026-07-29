@@ -36,6 +36,8 @@ export function AnalysisPlayer({
   technicalAssetUrl,
 }: AnalysisPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const preservedTimeRef = useRef(0);
+  const restoringSourceRef = useRef(false);
   const [activeRepetition, setActiveRepetition] = useState(
     repetitions[0]?.repetition_index ?? 1,
   );
@@ -48,11 +50,41 @@ export function AnalysisPlayer({
   function seek(timestamp: number, autoplay = true) {
     if (!videoRef.current) return;
     videoRef.current.currentTime = timestamp;
+    preservedTimeRef.current = timestamp;
+    setCurrentTime(timestamp);
     if (autoplay) {
       void videoRef.current.play();
       return;
     }
     videoRef.current.pause();
+  }
+
+  function selectRepetition(repetitionIndex: number, autoplay: boolean) {
+    const repetition = repetitions.find(
+      (item) => item.repetition_index === repetitionIndex,
+    );
+    if (!repetition) return;
+    setActiveRepetition(repetitionIndex);
+    seek(repetition.start_seconds, autoplay);
+  }
+
+  function synchronizeRepetition(timestamp: number) {
+    if (repetitions[0] && timestamp < repetitions[0].start_seconds) {
+      setActiveRepetition(repetitions[0].repetition_index);
+      return;
+    }
+    for (let index = repetitions.length - 1; index >= 0; index -= 1) {
+      if (timestamp >= repetitions[index].start_seconds) {
+        setActiveRepetition(repetitions[index].repetition_index);
+        return;
+      }
+    }
+  }
+
+  function changeVideoMode(mode: "pose" | "technical") {
+    preservedTimeRef.current = videoRef.current?.currentTime ?? currentTime;
+    restoringSourceRef.current = true;
+    setVideoMode(mode);
   }
 
   return (
@@ -62,14 +94,14 @@ export function AnalysisPlayer({
           <Button
             size="sm"
             variant={videoMode === "pose" ? "default" : "outline"}
-            onClick={() => setVideoMode("pose")}
+            onClick={() => changeVideoMode("pose")}
           >
             Overlay de pose
           </Button>
           <Button
             size="sm"
             variant={videoMode === "technical" ? "default" : "outline"}
-            onClick={() => setVideoMode("technical")}
+            onClick={() => changeVideoMode("technical")}
           >
             Overlay técnico
           </Button>
@@ -88,11 +120,17 @@ export function AnalysisPlayer({
               : assetUrl
           }
           onLoadedMetadata={(event) => {
-            event.currentTarget.currentTime = currentTime;
+            event.currentTarget.currentTime = preservedTimeRef.current;
+            setCurrentTime(preservedTimeRef.current);
+            restoringSourceRef.current = false;
           }}
-          onTimeUpdate={(event) =>
-            setCurrentTime(event.currentTarget.currentTime)
-          }
+          onTimeUpdate={(event) => {
+            if (restoringSourceRef.current) return;
+            const timestamp = event.currentTarget.currentTime;
+            preservedTimeRef.current = timestamp;
+            setCurrentTime(timestamp);
+            synchronizeRepetition(timestamp);
+          }}
         >
           Tu navegador no admite la reproducción de video.
         </video>
@@ -111,9 +149,11 @@ export function AnalysisPlayer({
                 ? "default"
                 : "outline"
             }
+            aria-pressed={
+              activeRepetition === repetition.repetition_index
+            }
             onClick={() => {
-              setActiveRepetition(repetition.repetition_index);
-              seek(repetition.start_seconds);
+              selectRepetition(repetition.repetition_index, true);
             }}
           >
             {repetition.repetition_index}
@@ -162,6 +202,9 @@ export function AnalysisPlayer({
           activeRepetition={activeRepetition}
           currentTime={currentTime}
           explanation={explanation}
+          onRepetitionChange={(repetitionIndex) =>
+            selectRepetition(repetitionIndex, false)
+          }
         />
       ) : null}
     </div>

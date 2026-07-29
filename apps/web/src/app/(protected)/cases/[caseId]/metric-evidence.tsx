@@ -135,7 +135,7 @@ function formulaFor(finding: string) {
     desplazamiento_lateral_pelvis:
       "100 × (desplazamiento actual − referencia inicial) / ancho inicial de hombros",
     valgo_dinamico_visible:
-      "100 × distancia medial(rodilla, eje cadera-tobillo) / ancho inicial de hombros",
+      "Rodilla izquierda: −100 × (x_rodilla − x_proyección) / ancho inicial de hombros. Rodilla derecha: +100 × (x_rodilla − x_proyección) / ancho inicial de hombros.",
     asimetria_bilateral_observable:
       "|alineación izquierda − alineación derecha|",
   };
@@ -147,10 +147,10 @@ function conventionFor(finding: string) {
     return "El signo positivo representa inclinación hacia la izquierda anatómica y el negativo hacia la derecha.";
   }
   if (finding === "desplazamiento_lateral_pelvis") {
-    return "El desplazamiento se corrige con el reposo inicial y se mide respecto del centro de los tobillos.";
+    return "Vista anterior: un valor positivo indica desplazamiento hacia la izquierda anatómica y un valor negativo hacia la derecha anatómica. El desplazamiento se corrige con el reposo inicial y se mide respecto del centro de los tobillos.";
   }
   if (finding === "valgo_dinamico_visible") {
-    return "Cada rodilla se evalúa por separado. Solo una desviación medial positiva puede activar la regla.";
+    return "En ambos lados, un valor positivo representa desplazamiento medial y uno negativo desplazamiento lateral. Solo una desviación medial positiva puede activar la regla.";
   }
   return "La diferencia bilateral compara las alineaciones de ambas rodillas; no implica valgo bilateral.";
 }

@@ -48,5 +48,27 @@ describe("MetricEvidence", () => {
     expect(
       screen.getByText("Ver fórmula y convención"),
     ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Rodilla izquierda:.*Rodilla derecha:/),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/valor positivo representa desplazamiento medial/i),
+    ).toBeInTheDocument();
+  });
+
+  it("explains the anatomical direction of pelvis signs", () => {
+    render(
+      <MetricEvidence
+        decision={{
+          ...decision,
+          finding: "desplazamiento_lateral_pelvis",
+          metric: "pelvis_shift_at_peak_pct",
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByText(/valor positivo indica desplazamiento hacia la izquierda anatómica/i),
+    ).toHaveTextContent(/valor negativo hacia la derecha anatómica/i);
   });
 });
