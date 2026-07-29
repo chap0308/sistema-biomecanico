@@ -588,6 +588,91 @@ El nombre físico del archivo de configuración conserva `v0_1`, pero su conteni
 
 ## 8. Origen y relación de CSV y JSON
 
+### 8.1. Diferencia entre `landmarks.csv` y `frame_quality.csv`
+
+Los dos archivos se generan simultáneamente a partir del mismo resultado de
+MediaPipe Pose para cada fotograma, pero representan niveles diferentes de
+información.
+
+`landmarks.csv` constituye la evidencia anatómica primaria. Contiene una fila
+por punto anatómico y fotograma, con las coordenadas normalizadas `x`, `y`, `z`,
+la visibilidad y la presencia estimada. En este proyecto se conservan 13 puntos:
+nariz, hombros, caderas, rodillas, tobillos, talones y puntas de los pies. Este
+archivo permite reconstruir la geometría, calcular variables biomecánicas y
+dibujar los overlays. Si MediaPipe no devuelve una pose para un fotograma, no se
+generan las 13 filas correspondientes.
+
+`frame_quality.csv` es una evaluación derivada de una fila por fotograma. No se
+calcula posteriormente leyendo `landmarks.csv`; ambos se escriben dentro del
+mismo ciclo de procesamiento a partir del objeto de evaluación en memoria. Sus
+campos principales son:
+
+| Campo | Significado |
+|---|---|
+| `pose_detected` | MediaPipe devolvió una pose con los puntos requeridos |
+| `detected_keypoints` | Cantidad de los 13 puntos cuya visibilidad alcanza el umbral configurado |
+| `minimum_critical_visibility` | Menor visibilidad entre hombros, caderas, rodillas y tobillos |
+| `valid_for_analysis` | El fotograma cumple la disponibilidad estructural requerida |
+| `invalid_reason` | Punto crítico o referencia distal que impidió considerar válido el fotograma |
+
+El conteo se obtiene mediante:
+
+```text
+detected_keypoints(f) =
+    suma[visibilidad del punto k en el fotograma f >= 0.50]
+```
+
+La visibilidad crítica se obtiene mediante:
+
+```text
+minimum_critical_visibility(f) =
+    mínimo(visibilidad de hombros, caderas, rodillas y tobillos)
+```
+
+Para que un fotograma sea válido se requiere que los ocho puntos críticos
+superen el umbral y que cada pie conserve al menos una referencia distal
+utilizable: talón o punta del pie. La nariz no interviene en esta regla. Por
+ello, un fotograma puede ser válido con menos de 13 puntos detectados si la
+ausencia corresponde a una referencia redundante del pie.
+
+En el fotograma 0 de `dev_valgo_izq_002`, los 13 puntos superan el umbral y
+`minimum_critical_visibility` es `0.99717963`, correspondiente al tobillo
+derecho, que es el punto crítico con menor visibilidad. El talón izquierdo tiene
+un valor inferior, pero no forma parte del mínimo crítico porque se evalúa como
+referencia distal.
+
+La expresión “punto detectado” debe interpretarse como punto disponible según
+la confianza de MediaPipe, no como prueba de exactitud anatómica absoluta. La
+validez frente a posiciones reales requeriría comparación con un sistema de
+referencia externo.
+
+### 8.2. Uso en la interfaz
+
+La gráfica **Disponibilidad de pose por fotograma** utiliza
+`frame_quality.csv`, concretamente `detected_keypoints`,
+`minimum_critical_visibility` y `valid_for_analysis`. Esta elección evita
+reagrupar las numerosas filas de `landmarks.csv` cada vez que se abre el caso y
+mantiene en una sola fuente la regla de aceptación aplicada durante el
+procesamiento.
+
+La relación funcional es:
+
+```mermaid
+flowchart LR
+    A["Fotograma"] --> B["MediaPipe Pose"]
+    B --> C["13 puntos seleccionados"]
+    C --> D["landmarks.csv<br/>coordenadas y visibilidad por punto"]
+    C --> E["Evaluación de calidad"]
+    E --> F["frame_quality.csv<br/>una fila por fotograma"]
+    D --> G["Variables biomecánicas"]
+    F --> G
+    F --> H["Control de calidad y gráfica web"]
+```
+
+En síntesis, `landmarks.csv` responde qué punto fue estimado, dónde se ubicó y
+con qué visibilidad; `frame_quality.csv` responde si el conjunto disponible en
+ese fotograma fue suficiente para participar en el análisis.
+
 ```mermaid
 flowchart TD
     A["OpenCV + MediaPipe"] --> B["landmarks.csv<br/>13 filas por fotograma"]
