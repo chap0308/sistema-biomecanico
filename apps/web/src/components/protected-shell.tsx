@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { LogOutIcon, ScanLineIcon } from "lucide-react";
+import { ScanLineIcon } from "lucide-react";
 
-import { logout } from "@/app/login/actions";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { LogoutButton } from "@/components/logout-button";
 import { homeForRole } from "@/lib/auth/roles";
 import { requireResearchProfile } from "@/lib/auth/session";
 
@@ -42,12 +41,7 @@ export async function ProtectedShell({
           </Link>
           <div className="flex items-center gap-2">
             <Badge variant="outline">{roleLabel}</Badge>
-            <form action={logout}>
-              <Button type="submit" variant="ghost" size="icon-sm">
-                <LogOutIcon aria-hidden="true" />
-                <span className="sr-only">Cerrar sesión</span>
-              </Button>
-            </form>
+            <LogoutButton />
           </div>
         </div>
       </header>

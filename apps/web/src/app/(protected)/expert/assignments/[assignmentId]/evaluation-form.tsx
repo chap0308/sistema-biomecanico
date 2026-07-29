@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -172,11 +173,13 @@ export function EvaluationForm({
             }),
           },
         );
-        setMessage(
-          status === "submitted"
-            ? "Evaluación enviada y bloqueada correctamente."
-            : "Borrador guardado.",
-        );
+        if (status === "submitted") {
+          toast.success("Respuestas enviadas correctamente.");
+          router.replace("/expert/assignments");
+          router.refresh();
+          return;
+        }
+        setMessage("Borrador guardado.");
         router.refresh();
       } catch (submissionError) {
         setError("root", {

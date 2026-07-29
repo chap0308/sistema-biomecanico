@@ -42,6 +42,8 @@ export type CaseComparison = {
   reference_status: "open" | "in_progress" | "closed";
   patterns: PatternComparison[];
   ready_for_metrics: boolean;
+  expert_fleiss_kappa: number | null;
+  fleiss_items: number;
 };
 
 export type PerformanceMetrics = {

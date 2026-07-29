@@ -79,6 +79,12 @@ export default async function AssignmentPage({
             </p>
           ) : experts.length ? (
             <AssignmentForm
+              key={[
+                roster?.reference_status,
+                ...(roster?.assignments.map(
+                  (assignment) => assignment.assignment_id,
+                ) ?? []),
+              ].join(":")}
               caseId={caseId}
               experts={experts}
               roster={roster}

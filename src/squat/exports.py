@@ -115,7 +115,7 @@ def build_case_excel(
     _instrument_2_sheet(workbook, case_report)
     _instrument_3_sheet(workbook, comparison)
     _analysis_sheet(workbook, comparison.patterns)
-    _metrics_sheet(workbook, performance)
+    _metrics_sheet(workbook, performance, comparison)
     for sheet in workbook.worksheets:
         _format_sheet(sheet)
     output = BytesIO()
@@ -187,6 +187,9 @@ def build_case_pdf(
             f"Especificidad: {_percent(metrics.specificity)}\n"
             f"F1-score: {_decimal(metrics.f1_score)}\n"
             f"Kappa de Cohen: {_decimal(metrics.cohen_kappa)}\n"
+            f"Kappa de Fleiss (tres expertos): "
+            f"{_decimal(comparison.expert_fleiss_kappa)}\n"
+            f"Ítems incluidos en Fleiss: {comparison.fleiss_items}\n"
             f"Pares no concluyentes excluidos: "
             f"{metrics.excluded_inconclusive_pairs}"
         )
@@ -506,6 +509,7 @@ def _analysis_sheet(
 def _metrics_sheet(
     workbook: Workbook,
     performance: DatasetPerformance,
+    comparison: CaseComparison,
 ) -> None:
     sheet = workbook.create_sheet("Métricas")
     sheet.append(
@@ -523,10 +527,13 @@ def _metrics_sheet(
             "Especificidad",
             "F1-score",
             "Acuerdo exacto",
-            "Kappa",
+            "Kappa de Cohen",
+            "Kappa de Fleiss (3 expertos)",
+            "Ítems incluidos en Fleiss",
         ]
     )
     for metric in [performance.overall, *performance.by_pattern]:
+        is_overall = metric.scope == "general"
         sheet.append(
             [
                 _display_value(metric.scope),
@@ -543,6 +550,8 @@ def _metrics_sheet(
                 metric.f1_score,
                 metric.exact_agreement,
                 metric.cohen_kappa,
+                comparison.expert_fleiss_kappa if is_overall else None,
+                comparison.fleiss_items if is_overall else None,
             ]
         )
 

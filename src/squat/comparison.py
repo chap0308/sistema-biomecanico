@@ -113,6 +113,8 @@ class CaseComparison(BaseModel):
     reference_status: Literal["open", "in_progress", "closed"] = "open"
     patterns: list[PatternComparison]
     ready_for_metrics: bool
+    expert_fleiss_kappa: float | None = None
+    fleiss_items: int = Field(default=0, ge=0)
 
 
 class DatasetPerformance(BaseModel):
@@ -229,6 +231,7 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
         system_decisions=findings.get("decisions", []),
         manual_references=manual_references,
     )
+    fleiss_kappa, fleiss_items = calculate_fleiss_kappa(patterns)
     return CaseComparison(
         case_id=payload["case_id"],
         assigned_evaluators=payload.get("assigned_evaluators", 0),
@@ -238,6 +241,8 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
         ready_for_metrics=all(
             pattern.reference is not None for pattern in patterns
         ),
+        expert_fleiss_kappa=fleiss_kappa,
+        fleiss_items=fleiss_items,
     )
 
 
@@ -387,6 +392,47 @@ def calculate_metrics(
     )
 
 
+def calculate_fleiss_kappa(
+    rows: Iterable[PatternComparison],
+) -> tuple[float | None, int]:
+    """Measure nominal agreement across exactly three expert ratings."""
+    item_counts: list[Counter[str]] = []
+    for row in rows:
+        if len(row.expert_judgments) != 3:
+            continue
+        item_counts.append(
+            Counter(
+                canonical_label(
+                    judgment.classification,
+                    judgment.observed_side,
+                    pattern_key=row.pattern_key,
+                )
+                for judgment in row.expert_judgments
+            )
+        )
+    item_total = len(item_counts)
+    if not item_total:
+        return None, 0
+
+    raters = 3
+    observed = sum(
+        (sum(count * count for count in counts.values()) - raters)
+        / (raters * (raters - 1))
+        for counts in item_counts
+    ) / item_total
+    category_totals = Counter[str]()
+    for counts in item_counts:
+        category_totals.update(counts)
+    ratings_total = item_total * raters
+    expected = sum(
+        (count / ratings_total) ** 2
+        for count in category_totals.values()
+    )
+    if expected == 1.0:
+        return None, item_total
+    return round((observed - expected) / (1.0 - expected), 4), item_total
+
+
 def canonical_label(
     classification: str,
     observed_side: str | None,
@@ -492,6 +538,7 @@ __all__ = [
     "build_case_comparisons",
     "build_stored_case_comparison",
     "calculate_dataset_performance",
+    "calculate_fleiss_kappa",
     "calculate_metrics",
     "canonical_label",
     "consolidate_reference",

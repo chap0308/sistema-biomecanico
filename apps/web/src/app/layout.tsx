@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 const archivo = Archivo({
@@ -33,7 +34,10 @@ export default function RootLayout({
       lang="es"
       className={cn("font-sans", archivo.variable, ibmPlexMono.variable)}
     >
-      <body className="min-h-dvh antialiased">{children}</body>
+      <body className="min-h-dvh antialiased">
+        {children}
+        <Toaster position="top-right" richColors />
+      </body>
     </html>
   );
 }

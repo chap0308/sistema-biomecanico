@@ -131,7 +131,7 @@ export default async function ComparisonPage({
         </div>
       </header>
 
-      <section className="mt-7 grid gap-4 md:grid-cols-3">
+      <section className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         <SummaryCard
           label="Evaluaciones enviadas"
           value={`${comparison.submitted_evaluations} / ${comparison.assigned_evaluators}`}
@@ -143,6 +143,15 @@ export default async function ComparisonPage({
         <SummaryCard
           label="F1-score acumulado"
           value={decimal(performance.overall.f1_score)}
+        />
+        <SummaryCard
+          label="Kappa de Fleiss del caso"
+          value={decimal(comparison.expert_fleiss_kappa ?? null)}
+          detail={
+            (comparison.fleiss_items ?? 0)
+              ? `${comparison.fleiss_items} ítems con tres expertos`
+              : "Requiere tres expertos por ítem"
+          }
         />
       </section>
 
@@ -171,7 +180,7 @@ export default async function ComparisonPage({
         <div className="mt-5 grid gap-4 xl:grid-cols-2">
           {comparison.patterns.map((pattern) => (
             <PatternCard
-              key={`${pattern.repetition_index}-${pattern.pattern_key}`}
+              key={`${caseId}-${pattern.repetition_index}-${pattern.pattern_key}`}
               caseId={caseId}
               pattern={pattern}
               referenceStatus={comparison.reference_status}
@@ -198,7 +207,7 @@ export default async function ComparisonPage({
                   <TableHead>Precisión</TableHead>
                   <TableHead>Sensibilidad</TableHead>
                   <TableHead>F1</TableHead>
-                  <TableHead>Kappa</TableHead>
+                  <TableHead>Kappa de Cohen</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -235,6 +244,8 @@ function PatternCard({
   pattern: PatternComparison;
   referenceStatus: CaseComparison["reference_status"];
 }) {
+  const visibleReference =
+    referenceStatus === "open" ? null : pattern.reference;
   return (
     <Card>
       <CardHeader>
@@ -248,7 +259,10 @@ function PatternCard({
               {pattern.expert_judgments.length} evaluaciones disponibles
             </CardDescription>
           </div>
-          <ReferenceBadge pattern={pattern} />
+          <ReferenceBadge
+            pattern={pattern}
+            referenceStatus={referenceStatus}
+          />
         </div>
       </CardHeader>
       <CardContent>
@@ -256,7 +270,7 @@ function PatternCard({
           {pattern.expert_judgments.map((judgment, index) => (
             <div
               key={judgment.evaluator_id}
-              className="rounded-lg border bg-muted/35 p-3"
+              className={`rounded-lg border p-3 ${expertResultClass(index)}`}
             >
               <p className="text-xs text-muted-foreground">
                 Evaluador {index + 1}
@@ -269,16 +283,20 @@ function PatternCard({
               </p>
             </div>
           ))}
-          <div className="rounded-lg border bg-primary/5 p-3">
-            <p className="text-xs text-muted-foreground">Sistema</p>
+          <div className="rounded-lg border border-cyan-300/70 bg-cyan-50/70 p-3 dark:border-cyan-800 dark:bg-cyan-950/30">
+            <p className="text-xs font-medium text-cyan-800 dark:text-cyan-300">
+              Sistema
+            </p>
             <p className="mt-1 font-medium">
               {label(pattern.system_label)}
             </p>
           </div>
-          <div className="rounded-lg border bg-card p-3">
-            <p className="text-xs text-muted-foreground">Referencia final</p>
+          <div className="rounded-lg border border-emerald-300/70 bg-emerald-50/70 p-3 dark:border-emerald-800 dark:bg-emerald-950/30">
+            <p className="text-xs font-medium text-emerald-800 dark:text-emerald-300">
+              Referencia final
+            </p>
             <p className="mt-1 font-medium">
-              {pattern.reference ? label(pattern.reference.label) : "Pendiente"}
+              {visibleReference ? label(visibleReference.label) : "Pendiente"}
             </p>
           </div>
         </div>
@@ -288,7 +306,7 @@ function PatternCard({
             caseId={caseId}
             repetitionIndex={pattern.repetition_index}
             patternKey={pattern.pattern_key}
-            currentReference={pattern.reference}
+            currentReference={visibleReference}
           />
         ) : null}
       </CardContent>
@@ -296,7 +314,16 @@ function PatternCard({
   );
 }
 
-function ReferenceBadge({ pattern }: { pattern: PatternComparison }) {
+function ReferenceBadge({
+  pattern,
+  referenceStatus,
+}: {
+  pattern: PatternComparison;
+  referenceStatus: CaseComparison["reference_status"];
+}) {
+  if (referenceStatus === "open") {
+    return <Badge variant="outline">Pendiente</Badge>;
+  }
   if (pattern.reference_status !== "consolidada") {
     return <Badge variant="outline">Pendiente</Badge>;
   }
@@ -314,15 +341,35 @@ function ReferenceBadge({ pattern }: { pattern: PatternComparison }) {
   return <Badge variant="outline">No calculable</Badge>;
 }
 
-function SummaryCard({ label, value }: { label: string; value: string }) {
+function SummaryCard({
+  label,
+  value,
+  detail,
+}: {
+  label: string;
+  value: string;
+  detail?: string;
+}) {
   return (
     <Card>
       <CardHeader className="pb-2">
         <CardDescription>{label}</CardDescription>
         <CardTitle className="font-mono text-2xl">{value}</CardTitle>
+        {detail ? (
+          <p className="text-xs text-muted-foreground">{detail}</p>
+        ) : null}
       </CardHeader>
     </Card>
   );
+}
+
+function expertResultClass(index: number) {
+  const classes = [
+    "border-blue-300/70 bg-blue-50/70 dark:border-blue-800 dark:bg-blue-950/30",
+    "border-amber-300/70 bg-amber-50/70 dark:border-amber-800 dark:bg-amber-950/30",
+    "border-rose-300/70 bg-rose-50/70 dark:border-rose-800 dark:bg-rose-950/30",
+  ];
+  return classes[index % classes.length];
 }
 
 function classificationLabel(classification: string, side: string | null) {

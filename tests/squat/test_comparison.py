@@ -4,6 +4,7 @@ from src.squat.comparison import (
     ExpertJudgment,
     FinalReference,
     build_case_comparisons,
+    calculate_fleiss_kappa,
     calculate_metrics,
 )
 
@@ -217,3 +218,28 @@ def test_metrics_count_each_repetition_pattern_pair() -> None:
     assert metrics.true_negative == 1
     assert metrics.f1_score == 1.0
     assert metrics.cohen_kappa == 1.0
+
+
+def test_fleiss_kappa_uses_only_items_with_three_experts() -> None:
+    rows = build_case_comparisons(
+        judgments=[
+            _judgment(
+                evaluator,
+                "visible_dynamic_valgus",
+                classification,
+                "izquierda" if classification == "presente" else None,
+                repetition_index,
+            )
+            for repetition_index, classification in (
+                (1, "presente"),
+                (2, "ausente"),
+            )
+            for evaluator in ("e1", "e2", "e3")
+        ],
+        system_decisions=[],
+    )
+
+    kappa, items = calculate_fleiss_kappa(rows)
+
+    assert items == 2
+    assert kappa == 1.0

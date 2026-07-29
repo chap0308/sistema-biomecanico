@@ -23,6 +23,7 @@ export function LoginForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setPending(true);
     setError(undefined);
 
@@ -41,11 +42,14 @@ export function LoginForm() {
     }
     if (!isSquatRole(role)) {
       await supabase.auth.signOut();
+      form.reset();
       setError("La cuenta no tiene un rol habilitado para este estudio.");
       setPending(false);
       return;
     }
 
+    form.reset();
+    setPending(false);
     router.replace(homeForRole(role));
     router.refresh();
   }

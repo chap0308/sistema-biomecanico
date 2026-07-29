@@ -45,9 +45,12 @@ export function AssignmentForm({
   const [error, setError] = useState<string>();
   const [assigned, setAssigned] = useState<number>();
   const [selected, setSelected] = useState<string[]>([]);
+  const [assignments, setAssignments] = useState(
+    roster?.assignments ?? [],
+  );
   const locked = roster?.reference_status !== "open";
   const assignedIds = new Set(
-    roster?.assignments.map((assignment) => assignment.evaluator_id) ?? [],
+    assignments.map((assignment) => assignment.evaluator_id),
   );
   const availableSlots = 3 - assignedIds.size;
 
@@ -92,6 +95,11 @@ export function AssignmentForm({
         `/squat/cases/${encodeURIComponent(caseId)}/assignments/${assignmentId}`,
         { method: "DELETE" },
       );
+      setAssignments((current) =>
+        current.filter(
+          (assignment) => assignment.assignment_id !== assignmentId,
+        ),
+      );
       router.refresh();
     } catch (removalError) {
       setError(
@@ -106,12 +114,12 @@ export function AssignmentForm({
 
   return (
     <form className="mt-7 space-y-5" onSubmit={handleSubmit}>
-      {roster?.assignments.length ? (
+      {assignments.length ? (
         <div className="grid gap-3">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-            Evaluadores asignados ({roster.assignments.length}/3)
+            Evaluadores asignados ({assignments.length}/3)
           </p>
-          {roster.assignments.map((assignment) => (
+          {assignments.map((assignment) => (
             <AssignedExpert
               key={assignment.assignment_id}
               assignment={assignment}
