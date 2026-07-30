@@ -57,6 +57,10 @@ _VALUE_LABELS = {
     "revision_requerida": "Revisión requerida",
     "no_apto_para_analisis": "No apto para análisis",
     "presente": "Presente",
+    "presente_izquierda": "Presente, izquierda",
+    "presente_derecha": "Presente, derecha",
+    "presente_bilateral": "Presente, bilateral",
+    "presente_sin_direccion": "Presente, sin dirección",
     "ausente": "Ausente",
     "no_concluyente": "No concluyente",
     "izquierda": "Izquierda",
@@ -87,6 +91,7 @@ _VALUE_LABELS = {
     "consolidada": "Consolidada",
     "consenso_requerido": "Consenso requerido",
     "evaluaciones_pendientes": "Evaluaciones pendientes",
+    "general": "General",
 }
 
 _LANDMARK_LABELS = {
@@ -459,6 +464,7 @@ def _instrument_1_sheet(
         for cell in sheet[table_header_row]:
             cell.font = Font(bold=True, color="FFFFFF")
             cell.fill = header_fill
+    _append_landmark_code_legend(sheet)
 
 
 def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
@@ -470,6 +476,7 @@ def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
         "Código del video",
         "Estado",
         "Fotogramas totales",
+        "Fotogramas procesados correctamente",
         "Fotogramas válidos",
         "% fotogramas válidos",
         "% procesados correctamente",
@@ -484,15 +491,13 @@ def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
             report.get("case_id"),
             _display_value(report.get("status")),
             pose.get("total_frames"),
+            pose.get("processed_frames"),
             pose.get("valid_frames"),
             pose.get("valid_frames_percentage"),
             pose.get("processed_frames_percentage"),
             pose.get("mean_detected_keypoints"),
             len(decisions),
-            ", ".join(
-                _display_value(item)
-                for item in findings.get("detected_findings") or []
-            ),
+            _detected_findings_label(findings.get("detected_findings")),
             findings.get("ruleset_version"),
         ]
     )
@@ -555,7 +560,7 @@ def _instrument_3_sheet(
         sheet.append(
             [
                 comparison.case_id,
-                f"{comparison.case_id}-repeticion-{row.repetition_index}",
+                f"{comparison.case_id} - Repetición {row.repetition_index}",
                 _PATTERN_NAMES[row.pattern_key],
                 *expert_labels[:3],
                 _label(row.system_label),
@@ -588,7 +593,7 @@ def _analysis_sheet(
     for row in rows:
         sheet.append(
             [
-                f"repeticion-{row.repetition_index}",
+                f"Repetición {row.repetition_index}",
                 _PATTERN_NAMES[row.pattern_key],
                 _label(row.reference.label if row.reference else None),
                 _label(row.system_label),
@@ -601,7 +606,7 @@ def _analysis_sheet(
                         row.reference.classification == "no_concluyente"
                         or row.system_classification == "no_concluyente"
                     )
-                    else row.reference_status
+                    else _display_value(row.reference_status)
                 ),
             ]
         )
@@ -677,6 +682,41 @@ def _format_sheet(sheet: Any) -> None:
     for row in sheet.iter_rows():
         for cell in row:
             cell.alignment = Alignment(wrap_text=True, vertical="top")
+
+
+def _append_landmark_code_legend(sheet: Any) -> None:
+    sheet.append([])
+    sheet.append([])
+    title_row = sheet.max_row + 1
+    sheet.append(["Codificación de puntos anatómicos clave (landmarks)"])
+    sheet.merge_cells(
+        start_row=title_row,
+        start_column=1,
+        end_row=title_row,
+        end_column=3,
+    )
+    header_row = sheet.max_row + 1
+    sheet.append(["Código", "Aplica a", "Significado"])
+    for row in (
+        ("B", "Landmarks pares", "Bilateral visible"),
+        ("I", "Landmarks pares", "Solo izquierdo visible"),
+        ("D", "Landmarks pares", "Solo derecho visible"),
+        ("O", "Todos", "Ocluido o intermitente"),
+        ("N", "Todos", "No visible"),
+        ("C", "Nariz/centro facial", "Visible"),
+    ):
+        sheet.append(row)
+
+    title_fill = PatternFill("solid", fgColor="D9EAF7")
+    header_fill = PatternFill("solid", fgColor="E9EEF5")
+    title_cell = sheet.cell(row=title_row, column=1)
+    title_cell.font = Font(bold=True, color="123B42")
+    title_cell.fill = title_fill
+    title_cell.alignment = Alignment(horizontal="center", vertical="center")
+    for cell in sheet[header_row][:3]:
+        cell.font = Font(bold=True)
+        cell.fill = header_fill
+        cell.alignment = Alignment(horizontal="center", vertical="center")
 
 
 def _paired_landmark_rows(
@@ -823,6 +863,21 @@ def _display_value(value: Any) -> Any:
         except ValueError:
             pass
     return value
+
+
+def _detected_findings_label(value: Any) -> str:
+    if not value:
+        return "Ninguna"
+    findings = value if isinstance(value, list) else [value]
+    return ", ".join(_detected_finding_label(str(item)) for item in findings)
+
+
+def _detected_finding_label(value: str) -> str:
+    repetition, separator, finding = value.partition(":")
+    if not separator:
+        return str(_display_value(value))
+    repetition_number = repetition.removeprefix("repeticion_")
+    return f"Repetición {repetition_number}: {_display_value(finding)}"
 
 
 def _judgment_label(

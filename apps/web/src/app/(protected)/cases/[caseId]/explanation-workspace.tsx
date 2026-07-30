@@ -745,6 +745,69 @@ function QualityPanel({
             igual o superior al umbral. Esta clasificación describe la
             disponibilidad del punto; no reemplaza la validez global del video.
           </p>
+          <details className="mt-4 rounded-lg border bg-muted/15 p-4 text-sm">
+            <summary className="cursor-pointer font-medium">
+              Cómo se calculan el promedio, la cobertura y el estado
+            </summary>
+            <div className="mt-4 space-y-4 text-muted-foreground">
+              <p>
+                El promedio es la media de la visibilidad estimada para el punto
+                durante la repetición. La cobertura indica en qué porcentaje de
+                sus fotogramas esa visibilidad alcanzó el umbral de{" "}
+                {explanation.quality?.visibility_threshold.toFixed(2) ?? "0.50"}.
+              </p>
+              <div className="grid gap-2 rounded-md bg-background p-3 font-mono text-xs">
+                <span>
+                  Promedio = suma de visibilidades / fotogramas de la repetición
+                </span>
+                <span>
+                  Cobertura (%) = 100 × fotogramas con visibilidad ≥ umbral /
+                  fotogramas de la repetición
+                </span>
+              </div>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Estado</TableHead>
+                    <TableHead>Regla operativa</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium text-foreground">
+                      Visible y estable
+                    </TableCell>
+                    <TableCell>
+                      Cobertura ≥ 90 % y promedio ≥ 0.80
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium text-foreground">
+                      Intermitente
+                    </TableCell>
+                    <TableCell>Cualquier condición intermedia</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium text-foreground">
+                      No disponible
+                    </TableCell>
+                    <TableCell>
+                      Cobertura &lt; 50 % o promedio &lt; 0.50
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+              <p>
+                El sistema resume 13 puntos seleccionados, pero la validez
+                estructural exige ocho puntos centrales: ambos hombros, caderas,
+                rodillas y tobillos. Estos ocho forman las líneas necesarias
+                para las variables biomecánicas; adicionalmente se requiere al
+                menos una referencia distal utilizable por pie, talón o punta.
+                La nariz y la segunda referencia distal aportan trazabilidad,
+                pero no invalidan por sí solas un fotograma.
+              </p>
+            </div>
+          </details>
         </CardContent>
       </Card>
     </div>

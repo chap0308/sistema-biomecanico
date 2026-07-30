@@ -568,6 +568,28 @@ segmento seleccionado, o la referencia central cuando se elige la nariz. La
 línea del umbral `0.5` permite explicar en qué fotogramas cada punto fue
 utilizable.
 
+La interfaz presenta dos resúmenes por punto dentro de la repetición:
+
+```text
+visibilidad media = suma de visibilidades / fotogramas de la repetición
+
+cobertura utilizable (%) =
+100 × fotogramas con visibilidad >= 0.5 / fotogramas de la repetición
+```
+
+El estado **visible y estable** exige cobertura mayor o igual a 90 % y
+visibilidad media mayor o igual a 0,8; **no disponible** corresponde a cobertura
+menor a 50 % o media menor a 0,5; los casos intermedios se presentan como
+**intermitentes**. Estas reglas se muestran en un bloque desplegable para
+conservar la explicación sin sobrecargar la vista principal.
+
+Los 13 puntos seleccionados se resumen para describir la cobertura general. La
+validez estructural utiliza ocho puntos centrales —ambos hombros, caderas,
+rodillas y tobillos— porque forman las referencias geométricas indispensables,
+y exige además al menos una referencia distal utilizable por pie, talón o punta.
+La nariz y la segunda referencia distal aportan evidencia, pero no invalidan por
+sí solas un fotograma.
+
 El mismo cálculo se exporta en la hoja **Instrumento 1** del archivo Excel:
 
 - repetición;
@@ -579,7 +601,8 @@ El mismo cálculo se exporta en la hoja **Instrumento 1** del archivo Excel:
 
 La hoja también utiliza denominaciones legibles para los campos de registro,
 normaliza fechas, estados y unidades, e incluye edad, sexo y resolución del
-video. Las claves internas del contrato, como `registration.case.plane`, no se
+video. También incorpora la leyenda de los códigos `B`, `I`, `D`, `O`, `N` y
+`C`. Las claves internas del contrato, como `registration.case.plane`, no se
 exponen al usuario.
 
 La validez global del video permanece en el Instrumento 1. El resumen por

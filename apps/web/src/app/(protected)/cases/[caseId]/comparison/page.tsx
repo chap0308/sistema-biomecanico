@@ -131,7 +131,7 @@ export default async function ComparisonPage({
                 })}
               >
                 <DownloadIcon aria-hidden="true" />
-                Excel
+                Instrumentos Excel
               </a>
               <a
                 href={`/api/squat/cases/${caseId}/exports/report.pdf`}
@@ -151,7 +151,7 @@ export default async function ComparisonPage({
                 title="Cierra el caso para habilitar la descarga."
               >
                 <DownloadIcon aria-hidden="true" />
-                Excel
+                Instrumentos Excel
               </Button>
               <Button
                 type="button"

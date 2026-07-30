@@ -101,6 +101,13 @@ describe("ExplanationWorkspace", () => {
       screen.getByText("Visibilidad por punto anatómico"),
     ).toBeInTheDocument();
     expect(screen.getByText(/Promedio 0.92/)).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "Cómo se calculan el promedio, la cobertura y el estado",
+      ),
+    ).toBeInTheDocument();
+    expect(screen.getAllByText("Visible y estable")).not.toHaveLength(0);
+    expect(screen.getByText(/ocho puntos centrales/)).toBeInTheDocument();
   });
 
   it("navigates repetitions from the traceability workspace", () => {
