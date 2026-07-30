@@ -125,6 +125,20 @@ SQUAT_PERSISTENCE_REQUIRED=true
 
 Las claves se obtienen mediante `npx supabase status -o env` y no deben incorporarse al repositorio.
 
+Para evitar iniciar FastAPI accidentalmente con el usuario ficticio
+`local-researcher`, el entorno completo puede levantarse con:
+
+```powershell
+supabase start
+.\scripts\start_squat_research_local.ps1
+```
+
+El script obtiene las claves del Supabase local sin guardarlas, activa
+`SQUAT_AUTH_REQUIRED` y `SQUAT_PERSISTENCE_REQUIRED`, y levanta FastAPI y
+Next.js. Si la autenticación se deja desactivada, todas las solicitudes de la
+API se ejecutan como un investigador ficticio; ese modo no admite asignación
+real de expertos ni evaluación por roles.
+
 ## 10. Relación con los objetivos
 
 Esta fase aporta evidencia directa a la implementación del prototipo: demuestra que un registro metodológico puede convertirse en una ejecución reproducible, persistente y consultable. También mantiene trazabilidad entre entrada, Instrumento 1, reporte computacional y estado del caso, necesaria para las visualizaciones del Instrumento 2 y la comparación experta posterior.
