@@ -176,7 +176,6 @@ export function EvaluationForm({
         if (status === "submitted") {
           toast.success("Respuestas enviadas correctamente.");
           router.replace("/expert/assignments");
-          router.refresh();
           return;
         }
         setMessage("Borrador guardado.");

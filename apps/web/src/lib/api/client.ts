@@ -29,5 +29,9 @@ export async function apiClientFetch<T>(
       | null;
     throw new Error(payload?.detail ?? `Error ${response.status}`);
   }
-  return (await response.json()) as T;
+  if (response.status === 204) {
+    return undefined as T;
+  }
+  const body = await response.text();
+  return (body ? JSON.parse(body) : undefined) as T;
 }

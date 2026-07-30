@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ScanLineIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -23,7 +22,7 @@ export async function ProtectedShell({
       </a>
       <header className="border-b bg-background/90 backdrop-blur">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
-          <Link
+          <a
             href={homeForRole(profile.role)}
             className="flex min-w-0 items-center gap-3"
           >
@@ -38,7 +37,7 @@ export async function ProtectedShell({
                 {profile.displayName}
               </p>
             </div>
-          </Link>
+          </a>
           <div className="flex items-center gap-2">
             <Badge variant="outline">{roleLabel}</Badge>
             <LogoutButton />

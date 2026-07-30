@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   CheckCircle2Icon,
   ChevronRightIcon,
@@ -53,7 +52,7 @@ export default async function ExpertAssignmentsPage() {
       ) : assignments.length ? (
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {assignments.map((assignment) => (
-            <Link
+            <a
               key={assignment.assignment_id}
               href={`/expert/assignments/${assignment.assignment_id}`}
               className="group"
@@ -81,7 +80,7 @@ export default async function ExpertAssignmentsPage() {
                   />
                 </CardContent>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
       ) : (

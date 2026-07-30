@@ -45,7 +45,9 @@ export function NewCaseForm() {
   const previewUrl = videoSelection?.previewUrl;
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string>();
-  const development = process.env.NODE_ENV === "development";
+  const development =
+    process.env.NODE_ENV === "development" ||
+    process.env.NEXT_PUBLIC_ENABLE_DEV_FIXTURES === "1";
   const dropzone = useDropzone({
     accept: {
       "video/mp4": [".mp4"],

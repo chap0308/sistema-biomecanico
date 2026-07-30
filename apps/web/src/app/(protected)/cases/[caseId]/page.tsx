@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages -- Full navigation avoids a stale authenticated RSC transition. */
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -92,7 +93,7 @@ export default async function CaseDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-7xl px-5 py-8 lg:px-10 lg:py-10">
-      <Link
+      <a
         href="/cases"
         className={buttonVariants({
           size: "sm",
@@ -102,7 +103,7 @@ export default async function CaseDetailPage({
       >
         <ArrowLeftIcon aria-hidden="true" />
         Volver al historial
-      </Link>
+      </a>
 
       <header className="mt-5 border-b pb-7">
         <div className="flex flex-wrap items-center gap-2">

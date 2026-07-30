@@ -75,6 +75,10 @@ export function AssignmentForm({
       );
       setAssigned(result.assigned);
       setSelected([]);
+      const updatedRoster = await apiClientFetch<CaseAssignmentRoster>(
+        `/squat/cases/${encodeURIComponent(caseId)}/assignments`,
+      );
+      setAssignments(updatedRoster.assignments);
       router.refresh();
     } catch (submissionError) {
       setError(

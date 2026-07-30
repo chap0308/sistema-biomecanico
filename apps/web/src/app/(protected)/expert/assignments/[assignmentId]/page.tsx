@@ -1,4 +1,4 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full navigation avoids a stale authenticated RSC transition. */
 import {
   ArrowLeftIcon,
   EyeIcon,
@@ -65,7 +65,7 @@ export default async function ExpertAssignmentPage({
 
   return (
     <main className="mx-auto w-full max-w-5xl px-6 py-10 lg:px-10">
-      <Link
+      <a
         href="/expert/assignments"
         className={buttonVariants({
           size: "sm",
@@ -75,7 +75,7 @@ export default async function ExpertAssignmentPage({
       >
         <ArrowLeftIcon aria-hidden="true" />
         Volver a asignaciones
-      </Link>
+      </a>
 
       <div className="mt-6 flex flex-wrap items-center gap-2">
         <Badge variant="secondary">

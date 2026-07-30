@@ -3,6 +3,25 @@ import { expectPlayableVideo } from "./fixtures/media";
 
 const assignmentId = process.env.SQUAT_E2E_EXPERT_ASSIGNMENT_ID!;
 
+test("expert can revisit an assignment after returning to the list", async ({
+  page,
+}) => {
+  await page.goto("/expert/assignments");
+
+  for (let visit = 0; visit < 2; visit += 1) {
+    await page
+      .locator(`a[href="/expert/assignments/${assignmentId}"]`)
+      .click();
+    await expect(
+      page.getByRole("heading", { name: "Instrumento 3" }),
+    ).toBeVisible();
+    await page.getByRole("link", { name: "Volver a asignaciones" }).click();
+    await expect(
+      page.getByRole("heading", { name: "Casos asignados" }),
+    ).toBeVisible();
+  }
+});
+
 test("expert completes a blinded Instrument 3 evaluation", async ({
   page,
 }) => {
@@ -44,9 +63,7 @@ test("expert completes a blinded Instrument 3 evaluation", async ({
 
   await page.getByRole("button", { name: "Enviar evaluación" }).click();
   await expect(
-    page.getByText("Esta evaluación fue enviada y ya no puede modificarse."),
+    page.getByRole("heading", { name: "Casos asignados" }),
   ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: "Enviar evaluación" }),
-  ).toHaveCount(0);
+  await expect(page.getByText("Respuestas enviadas correctamente.")).toBeVisible();
 });
