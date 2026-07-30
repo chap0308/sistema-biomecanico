@@ -9,6 +9,7 @@ const hasExpertTests = Boolean(
     process.env.SQUAT_E2E_EXPERT_ASSIGNMENT_ID,
 );
 const recordVideo = process.env.SQUAT_E2E_RECORD_VIDEO === "1";
+const demoMode = process.env.SQUAT_E2E_DEMO === "1";
 
 export default defineConfig({
   testDir: "./e2e",
@@ -20,7 +21,8 @@ export default defineConfig({
   use: {
     baseURL: "http://127.0.0.1:3000",
     trace: "on-first-retry",
-    video: recordVideo ? "on" : "retain-on-failure",
+    video: recordVideo || demoMode ? "on" : "retain-on-failure",
+    launchOptions: demoMode ? { slowMo: 350 } : undefined,
   },
   webServer: {
     command: "npm run dev",
@@ -48,6 +50,7 @@ export default defineConfig({
               /case-analysis\.spec\.ts/,
               /case-results\.spec\.ts/,
               /case-comparison\.spec\.ts/,
+              /case-assignments\.spec\.ts/,
               /responsive-accessibility\.spec\.ts/,
             ],
             use: {

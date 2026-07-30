@@ -110,6 +110,7 @@ durables de los flujos principales se copiaron a:
 ```text
 docs/evidencias/fase6/playwright/flujo_registro_analisis_caso.webm
 docs/evidencias/fase6/playwright/flujo_evaluador_experto.webm
+docs/evidencias/fase6/playwright/flujo_comparacion_descargas.webm
 ```
 
 ## 5. Compatibilidad de los videos analizados
@@ -130,4 +131,53 @@ Los artefactos antiguos pueden normalizarse con:
 
 ```powershell
 D:\anaconda4\envs\analisis-bio\python.exe scripts\normalize_squat_output_videos.py
+```
+
+## 6. Modo de demostración
+
+Para producir una grabación más legible, con interacciones pausadas y video
+siempre conservado, se usa:
+
+```powershell
+$env:SQUAT_E2E_DEMO="1"
+npx playwright test --reporter=html
+```
+
+Este modo aplica una demora de 350 ms a las acciones del navegador. La suite
+normal y la integración continua no incorporan esa demora artificial.
+
+## 7. Fixtures para flujos que modifican datos
+
+Los flujos de asignación y referencia final no deben ejecutarse contra casos de
+la muestra ni contra evidencias cerradas. Requieren casos locales desechables:
+
+```powershell
+$env:SQUAT_E2E_ASSIGNMENT_CASE_ID="<caso-abierto-desechable>"
+$env:SQUAT_E2E_ASSIGNMENT_EXPERT_EMAIL="expert3@sentadilla.local"
+$env:SQUAT_E2E_REFERENCE_CASE_ID="<caso-abierto-con-evaluaciones-enviadas>"
+```
+
+El caso de referencia final debe estar abierto, tener todas las evaluaciones
+asignadas enviadas y no contener referencias manuales previas. La prueba
+comprueba que los formularios aparecen sin recargar, que parten como
+**Pendiente**, que muestran **Registrar referencia** y que **Cerrar caso**
+permanece deshabilitado hasta completar la consolidación.
+
+## 8. Responsabilidad de cada herramienta
+
+| Herramienta | Uso en este proyecto |
+|---|---|
+| Vitest | Estado y validación de componentes: campos faltantes, asignación dinámica, referencia pendiente, guardado inmediato y habilitación de controles |
+| Playwright | Flujos integrados: login y logout, navegación, registro de casos, evaluación experta, referencia final, multimedia y descargas |
+| Pytest | Reglas de dominio, API, persistencia, métricas y exportaciones |
+
+Vitest no reemplaza los recorridos de navegador y Playwright no debe duplicar
+cada combinación interna de un componente. Los tres niveles se complementan.
+
+El cierre de sesión se ejecuta de forma aislada porque Supabase invalida las
+sesiones activas de la cuenta usada por los demás workers:
+
+```powershell
+$env:SQUAT_E2E_RUN_LOGOUT="1"
+npx playwright test e2e/auth.spec.ts --grep "logs out" --workers=1
 ```

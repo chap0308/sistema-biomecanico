@@ -81,7 +81,7 @@ def _comparison_payload(*, complete: bool = True) -> dict[str, object]:
     }
 
 
-def test_investigator_gets_consolidated_case_comparison(monkeypatch) -> None:
+def test_investigator_gets_pending_manual_references(monkeypatch) -> None:
     class FakeStore:
         def get_case_comparison_data(self, case_id):
             assert case_id == "caso_comparison_001"
@@ -98,16 +98,17 @@ def test_investigator_gets_consolidated_case_comparison(monkeypatch) -> None:
 
     assert response.status_code == 200
     payload = response.json()
-    assert payload["ready_for_metrics"] is True
+    assert payload["ready_for_metrics"] is False
     assert len(payload["patterns"]) == 4
-    assert payload["patterns"][0]["reference"]["label"] == "ausente"
+    assert payload["patterns"][0]["reference"] is None
+    assert payload["patterns"][0]["reference_status"] == "consenso_requerido"
     assert payload["patterns"][0]["expert_judgments"][0]["confidence"] == "alta"
     assert (
         payload["patterns"][0]["expert_judgments"][0]["observation"]
         == "Ejecución visible."
     )
     assert payload["evaluator_observations"][0]["general_observation"]
-    assert all(row["exact_match"] for row in payload["patterns"])
+    assert all(row["exact_match"] is None for row in payload["patterns"])
 
 
 def test_expert_cannot_read_dataset_metrics(monkeypatch) -> None:

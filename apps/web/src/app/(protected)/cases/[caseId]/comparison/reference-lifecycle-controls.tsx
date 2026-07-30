@@ -19,36 +19,28 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { apiClientFetch } from "@/lib/api/client";
 import type { CaseComparison } from "@/types/squat-comparison";
 
+import { useReferenceReview } from "./reference-review-context";
+
 export function ReferenceLifecycleControls({
   caseId,
-  status,
-  readyForMetrics,
-  assignedEvaluators,
-  submittedEvaluations,
 }: {
   caseId: string;
-  status: CaseComparison["reference_status"];
-  readyForMetrics: boolean;
-  assignedEvaluators: number;
-  submittedEvaluations: number;
 }) {
   const router = useRouter();
-  const [localStatus, setLocalStatus] = useState<
-    CaseComparison["reference_status"] | null
-  >(null);
+  const { comparison, updateComparison } = useReferenceReview();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string>();
-  const currentStatus = localStatus ?? status;
+  const currentStatus = comparison.reference_status;
 
   async function advance(action: "start" | "close") {
     setPending(true);
     setError(undefined);
     try {
-      await apiClientFetch(
+      const updatedComparison = await apiClientFetch<CaseComparison>(
         `/squat/cases/${encodeURIComponent(caseId)}/reference/${action}`,
         { method: "POST" },
       );
-      setLocalStatus(action === "start" ? "in_progress" : "closed");
+      updateComparison(updatedComparison);
       router.refresh();
     } catch (requestError) {
       setError(
@@ -63,8 +55,8 @@ export function ReferenceLifecycleControls({
 
   const starting = currentStatus === "open";
   const everyEvaluatorSubmitted = canStartReferenceReview(
-    assignedEvaluators,
-    submittedEvaluations,
+    comparison.assigned_evaluators,
+    comparison.submitted_evaluations,
   );
 
   if (currentStatus === "closed") {
@@ -92,7 +84,7 @@ export function ReferenceLifecycleControls({
                 disabled={
                   pending ||
                   (starting && !everyEvaluatorSubmitted) ||
-                  (!starting && !readyForMetrics)
+                  (!starting && !comparison.ready_for_metrics)
                 }
               />
             }
@@ -126,7 +118,8 @@ export function ReferenceLifecycleControls({
         {starting && !everyEvaluatorSubmitted ? (
           <p className="max-w-sm text-right text-xs text-muted-foreground">
             La revisión comenzará cuando todos los evaluadores asignados hayan
-            enviado sus respuestas ({submittedEvaluations}/{assignedEvaluators}).
+            enviado sus respuestas ({comparison.submitted_evaluations}/
+            {comparison.assigned_evaluators}).
           </p>
         ) : null}
         {error ? (

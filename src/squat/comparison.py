@@ -144,6 +144,7 @@ def build_case_comparisons(
     manual_references: (
         dict[tuple[int, PatternKey] | PatternKey, FinalReference] | None
     ) = None,
+    require_manual_references: bool = False,
 ) -> list[PatternComparison]:
     """Build independent pattern comparisons for every detected repetition."""
     grouped: dict[tuple[int, PatternKey], list[ExpertJudgment]] = {}
@@ -173,11 +174,20 @@ def build_case_comparisons(
         for pattern_key in PATTERN_KEYS:
             key = (repetition_index, pattern_key)
             pattern_judgments = grouped.get(key, [])
-            reference, reference_status = consolidate_reference(
-                pattern_key=pattern_key,
-                judgments=pattern_judgments,
-                manual_reference=normalized_manual_references.get(key),
-            )
+            manual_reference = normalized_manual_references.get(key)
+            if require_manual_references and manual_reference is None:
+                reference = None
+                reference_status = (
+                    "consenso_requerido"
+                    if pattern_judgments
+                    else "evaluaciones_pendientes"
+                )
+            else:
+                reference, reference_status = consolidate_reference(
+                    pattern_key=pattern_key,
+                    judgments=pattern_judgments,
+                    manual_reference=manual_reference,
+                )
             system_classification, system_side = system.get(
                 key,
                 ("no_concluyente", None),
@@ -241,6 +251,7 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
         judgments=judgments,
         system_decisions=findings.get("decisions", []),
         manual_references=manual_references,
+        require_manual_references=True,
     )
     fleiss_kappa, fleiss_items = calculate_fleiss_kappa(patterns)
     return CaseComparison(

@@ -37,7 +37,9 @@ test.describe("responsive and keyboard evidence", () => {
     await expect(
       page.getByRole("heading", { name: "Instrumento 3 y desempeño" }),
     ).toBeVisible();
-    await expect(page.getByRole("link", { name: "Excel" })).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "Instrumentos Excel" }),
+    ).toBeVisible();
     await expect(page.getByRole("link", { name: "Reporte PDF" })).toBeVisible();
     await expectNoPageOverflow(page);
   });

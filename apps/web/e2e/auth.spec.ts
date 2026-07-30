@@ -11,3 +11,32 @@ test("authenticates the investigator through Supabase SSR", async ({ page }) => 
       .filter({ hasText: /^Investigador$/ }),
   ).toBeVisible();
 });
+
+test("logs out without retaining credentials or a pending login state", async ({
+  browser,
+}) => {
+  test.skip(
+    process.env.SQUAT_E2E_RUN_LOGOUT !== "1",
+    "Logout invalidates the account sessions and must run in isolation.",
+  );
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.goto("/login");
+  await page
+    .getByLabel("Correo institucional")
+    .fill(process.env.SQUAT_E2E_EMAIL!);
+  await page
+    .getByLabel(/contrase/i)
+    .fill(process.env.SQUAT_E2E_PASSWORD!);
+  await page.getByRole("button", { name: "Ingresar al estudio" }).click();
+  await expect(page).toHaveURL(/\/cases$/);
+
+  await page.getByRole("button", { name: /cerrar sesi/i }).click();
+  await expect(page).toHaveURL(/\/login$/);
+  await expect(page.getByLabel("Correo institucional")).toHaveValue("");
+  await expect(page.getByLabel(/contrase/i)).toHaveValue("");
+  await expect(
+    page.getByRole("button", { name: "Ingresar al estudio" }),
+  ).toBeEnabled();
+  await context.close();
+});

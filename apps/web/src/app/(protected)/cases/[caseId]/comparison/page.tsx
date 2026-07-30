@@ -34,6 +34,7 @@ import type {
 
 import { PatternComparisonCard } from "./pattern-comparison-card";
 import { ReferenceLifecycleControls } from "./reference-lifecycle-controls";
+import { ReferenceReviewProvider } from "./reference-review-context";
 
 const patternNames = {
   trunk_lateral_inclination: "Inclinación lateral del tronco",
@@ -80,7 +81,11 @@ export default async function ComparisonPage({
   }
 
   return (
-    <main className="mx-auto w-full max-w-7xl px-5 py-8 lg:px-10 lg:py-10">
+    <ReferenceReviewProvider
+      key={comparison.case_id}
+      initialComparison={comparison}
+    >
+      <main className="mx-auto w-full max-w-7xl px-5 py-8 lg:px-10 lg:py-10">
       <Link
         href={`/cases/${caseId}`}
         className={buttonVariants({
@@ -116,10 +121,6 @@ export default async function ComparisonPage({
           </a>
           <ReferenceLifecycleControls
             caseId={caseId}
-            status={comparison.reference_status}
-            readyForMetrics={comparison.ready_for_metrics}
-            assignedEvaluators={comparison.assigned_evaluators}
-            submittedEvaluations={comparison.submitted_evaluations}
           />
         </div>
       </header>
@@ -176,7 +177,6 @@ export default async function ComparisonPage({
               key={`${caseId}-${pattern.repetition_index}-${pattern.pattern_key}-${pattern.reference?.label ?? "pending"}`}
               caseId={caseId}
               initialPattern={pattern}
-              referenceStatus={comparison.reference_status}
             />
           ))}
         </div>
@@ -253,7 +253,8 @@ export default async function ComparisonPage({
           </CardContent>
         </Card>
       </section>
-    </main>
+      </main>
+    </ReferenceReviewProvider>
   );
 }
 

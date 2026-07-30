@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { CheckCircle2Icon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +16,7 @@ import type {
 } from "@/types/squat-comparison";
 
 import { ConsensusForm } from "./consensus-form";
+import { useReferenceReview } from "./reference-review-context";
 
 const patternNames = {
   trunk_lateral_inclination: "Inclinación lateral del tronco",
@@ -28,24 +28,20 @@ const patternNames = {
 export function PatternComparisonCard({
   caseId,
   initialPattern,
-  referenceStatus,
 }: {
   caseId: string;
   initialPattern: PatternComparison;
-  referenceStatus: CaseComparison["reference_status"];
 }) {
-  const [pattern, setPattern] = useState(initialPattern);
+  const { comparison, updateComparison } = useReferenceReview();
+  const pattern =
+    comparison.patterns.find(
+      (item) =>
+        item.repetition_index === initialPattern.repetition_index &&
+        item.pattern_key === initialPattern.pattern_key,
+    ) ?? initialPattern;
+  const referenceStatus = comparison.reference_status;
   const visibleReference =
     referenceStatus === "open" ? null : pattern.reference;
-
-  function updateFromComparison(comparison: CaseComparison) {
-    const updated = comparison.patterns.find(
-      (item) =>
-        item.repetition_index === pattern.repetition_index &&
-        item.pattern_key === pattern.pattern_key,
-    );
-    if (updated) setPattern(updated);
-  }
 
   return (
     <Card>
@@ -121,7 +117,7 @@ export function PatternComparisonCard({
             repetitionIndex={pattern.repetition_index}
             patternKey={pattern.pattern_key}
             currentReference={visibleReference}
-            onSaved={updateFromComparison}
+            onSaved={updateComparison}
           />
         ) : null}
       </CardContent>

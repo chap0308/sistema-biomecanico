@@ -68,7 +68,8 @@ Las grabaciones reproducibles de los dos recorridos principales se conservan
 en `docs/evidencias/fase6/playwright/`:
 
 - `flujo_registro_analisis_caso.webm`;
-- `flujo_evaluador_experto.webm`.
+- `flujo_evaluador_experto.webm`;
+- `flujo_comparacion_descargas.webm`.
 
 El fixture de `apps/web/e2e/fixtures/squat-case.ts` completa el Instrumento 1 y
 adjunta un video local de forma determinista. La prueba multimedia carga el
@@ -132,3 +133,21 @@ alcance de sentadilla: una prueba RAG intentó usar una conexión Supabase remot
 no disponible y otra encontró un bloqueo de almacenamiento Qdrant local. Las
 pruebas específicas de esta fase no dependen de esos servicios y finalizaron
 correctamente.
+
+## 10. Cobertura incremental del ciclo de referencia
+
+La verificación incorpora pruebas específicas para:
+
+- validación dinámica de clasificaciones faltantes del evaluador;
+- asignación y retiro de evaluadores sin recargar la página;
+- apertura inmediata de la referencia final en estado **Pendiente**;
+- registro y actualización local de una referencia;
+- bloqueo de **Cerrar caso** hasta completar todas las referencias;
+- habilitación de Excel y PDF después del cierre;
+- login, logout, navegación, reproducción y revisión móvil por repetición.
+
+Los recorridos E2E que modifican el ciclo de vida usan casos desechables
+configurados mediante variables de entorno. La referencia final no se infiere
+automáticamente del acuerdo entre evaluadores: debe registrarla explícitamente
+el investigador. Vitest comprueba esta transición dentro de los componentes y
+Playwright valida el recorrido integrado con Next.js, FastAPI y Supabase.

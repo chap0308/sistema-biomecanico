@@ -11,6 +11,7 @@ import { apiClientFetch } from "@/lib/api/client";
 import type { CaseComparison } from "@/types/squat-comparison";
 
 import { PatternComparisonCard } from "./pattern-comparison-card";
+import { ReferenceReviewProvider } from "./reference-review-context";
 
 vi.mock("next/navigation", () => ({
   useRouter: () => ({ refresh: vi.fn() }),
@@ -77,11 +78,24 @@ describe("PatternComparisonCard", () => {
     vi.mocked(apiClientFetch).mockResolvedValue(comparison);
 
     render(
-      <PatternComparisonCard
-        caseId="case-1"
-        initialPattern={initialPattern}
-        referenceStatus="in_progress"
-      />,
+      <ReferenceReviewProvider
+        initialComparison={{
+          case_id: "case-1",
+          assigned_evaluators: 1,
+          submitted_evaluations: 1,
+          reference_status: "in_progress",
+          patterns: [initialPattern],
+          evaluator_observations: [],
+          ready_for_metrics: false,
+          expert_fleiss_kappa: null,
+          fleiss_items: 0,
+        }}
+      >
+        <PatternComparisonCard
+          caseId="case-1"
+          initialPattern={initialPattern}
+        />
+      </ReferenceReviewProvider>,
     );
 
     fireEvent.change(screen.getByLabelText("Referencia final"), {

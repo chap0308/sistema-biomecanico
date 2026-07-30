@@ -67,3 +67,22 @@ test("expert completes a blinded Instrument 3 evaluation", async ({
   ).toBeVisible();
   await expect(page.getByText("Respuestas enviadas correctamente.")).toBeVisible();
 });
+
+test("keeps the active repetition video next to the form on mobile", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(`/expert/assignments/${assignmentId}`);
+
+  const firstRepetition = page.locator("[data-repetition-index='1']");
+  await firstRepetition.scrollIntoViewIfNeeded();
+  await expect(firstRepetition.getByText(/Repetici.n 1/).first()).toBeVisible();
+  await expect(firstRepetition.locator("video")).toBeVisible();
+
+  const secondRepetition = page.locator("[data-repetition-index='2']");
+  if ((await secondRepetition.count()) > 0) {
+    await secondRepetition.scrollIntoViewIfNeeded();
+    await expect(secondRepetition.getByText(/Repetici.n 2/).first()).toBeVisible();
+    await expect(secondRepetition.locator("video")).toBeVisible();
+  }
+});
