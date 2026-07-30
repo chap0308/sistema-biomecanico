@@ -36,7 +36,12 @@ describe("MetricEvidence", () => {
       />,
     );
 
-    expect(screen.getByText("Valor calculado")).toBeInTheDocument();
+    expect(
+      screen.getByText("Valor evaluado en máxima profundidad"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/La serie temporal completa se conserva como evidencia/),
+    ).toBeInTheDocument();
     expect(screen.getAllByText(/12[.,]5 %/)).toHaveLength(2);
     expect(screen.getByText("Ausente ≤ 2")).toBeInTheDocument();
     expect(screen.getByText("Presente ≥ 5")).toBeInTheDocument();

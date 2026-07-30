@@ -28,7 +28,9 @@ export function MetricEvidence({
     <div className="space-y-3">
       <div>
         <div className="mb-1 flex items-center justify-between gap-3 text-xs">
-          <span className="text-muted-foreground">Valor calculado</span>
+          <span className="text-muted-foreground">
+            Valor evaluado en máxima profundidad
+          </span>
           <span className="font-mono font-medium tabular-nums">
             {formatMetric(value, decision.unit)}
           </span>
@@ -70,6 +72,11 @@ export function MetricEvidence({
       ) : null}
       <p className="text-[11px] text-muted-foreground">
         {unitDescription(decision.unit)}
+      </p>
+      <p className="text-[11px] leading-5 text-muted-foreground">
+        El umbral se aplica al fotograma de máxima profundidad de esta
+        repetición. La serie temporal completa se conserva como evidencia y no
+        se promedia para clasificar el patrón.
       </p>
       <details className="rounded-lg border px-3 py-2 text-xs">
         <summary className="cursor-pointer font-medium">

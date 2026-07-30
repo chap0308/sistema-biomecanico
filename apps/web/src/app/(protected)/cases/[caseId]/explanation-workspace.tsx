@@ -1098,8 +1098,10 @@ function RulesTable({
       <CardHeader>
         <CardTitle>Aplicación de criterios interpretables</CardTitle>
         <CardDescription>
-          Cada patrón se clasifica de forma independiente; una repetición puede
-          contener varias compensaciones observables.
+          Cada patrón se clasifica de forma independiente usando el valor del
+          fotograma de máxima profundidad; la serie temporal no se promedia para
+          aplicar el umbral. Una repetición puede contener varias compensaciones
+          observables.
         </CardDescription>
       </CardHeader>
       <CardContent className="overflow-x-auto">
