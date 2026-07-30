@@ -276,7 +276,7 @@ def build_case_pdf(
             table.auto_set_font_size(False)
             table.set_fontsize(8)
             table.scale(1, 1.8)
-            pdf.savefig(figure, bbox_inches="tight")
+            pdf.savefig(figure)
             plt.close(figure)
 
         figure = _pdf_figure_header(
@@ -300,17 +300,20 @@ def build_case_pdf(
             f"Pares no concluyentes excluidos: "
             f"{metrics.excluded_inconclusive_pairs}"
         )
-        figure.text(
-            0.08,
-            0.72,
+        content_axis = figure.add_axes((0.08, 0.20, 0.84, 0.58))
+        content_axis.axis("off")
+        content_axis.text(
+            0.0,
+            1.0,
             metric_text,
             fontsize=10,
             linespacing=1.45,
             color="#1e293b",
+            verticalalignment="top",
         )
         figure.text(
             0.08,
-            0.28,
+            0.12,
             (
                 "Este reporte describe compensaciones observables durante la "
                 "sentadilla y no constituye un diagnóstico clínico. "
@@ -320,7 +323,7 @@ def build_case_pdf(
             color="#64748b",
             wrap=True,
         )
-        pdf.savefig(figure, bbox_inches="tight")
+        pdf.savefig(figure)
         plt.close(figure)
     return output.getvalue()
 
