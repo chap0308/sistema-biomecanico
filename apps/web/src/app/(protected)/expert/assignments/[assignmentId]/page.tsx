@@ -21,8 +21,7 @@ import { requireRole } from "@/lib/auth/session";
 import type { SquatCaseReport } from "@/types/squat-case-report";
 import type { ExpertAssignment } from "@/types/squat-expert";
 
-import { EvaluationForm } from "./evaluation-form";
-import { ExpertReviewPlayer } from "./expert-review-player";
+import { ExpertEvaluationWorkspace } from "./expert-evaluation-workspace";
 
 type ExpertAssignmentPageProps = {
   params: Promise<{ assignmentId: string }>;
@@ -110,32 +109,7 @@ export default async function ExpertAssignmentPage({
         </Alert>
       )}
 
-      <Card className="mt-6">
-        <CardHeader>
-          <CardTitle>Video de revisión anonimizado</CardTitle>
-          <CardDescription>
-            Puedes pausar, repetir y avanzar libremente antes de emitir el juicio.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ExpertReviewPlayer
-            assignmentId={assignment.assignment_id}
-            repetitions={assignment.repetitions ?? []}
-          />
-        </CardContent>
-      </Card>
-
-      <section className="mt-8">
-        <div className="mb-5">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-primary">
-            Clasificación observacional
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-            Patrones del movimiento
-          </h2>
-        </div>
-        <EvaluationForm assignment={assignment} />
-      </section>
+      <ExpertEvaluationWorkspace assignment={assignment} />
 
       {systemReport ? <SystemResults report={systemReport} /> : null}
     </main>

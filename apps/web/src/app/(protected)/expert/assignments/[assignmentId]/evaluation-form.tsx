@@ -126,8 +126,10 @@ const patternDefinitions: Array<{
 
 export function EvaluationForm({
   assignment,
+  onRepetitionFocus,
 }: {
   assignment: ExpertAssignment;
+  onRepetitionFocus?: (repetitionIndex: number) => void;
 }) {
   const router = useRouter();
   const locked = assignment.status === "submitted";
@@ -200,6 +202,7 @@ export function EvaluationForm({
           <section
             key={repetitionIndex}
             className="space-y-4 rounded-2xl border border-primary/20 bg-primary/[0.025] p-4"
+            onFocusCapture={() => onRepetitionFocus?.(repetitionIndex)}
           >
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
@@ -208,6 +211,15 @@ export function EvaluationForm({
               <h3 className="mt-1 text-lg font-semibold">
                 Repetición {repetitionIndex}
               </h3>
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                className="-ml-3 mt-2"
+                onClick={() => onRepetitionFocus?.(repetitionIndex)}
+              >
+                Ver fragmento de esta repetición
+              </Button>
             </div>
             {patternDefinitions.map((pattern) => {
               const fieldBase =
