@@ -111,6 +111,29 @@ def test_investigator_gets_pending_manual_references(monkeypatch) -> None:
     assert all(row["exact_match"] is None for row in payload["patterns"])
 
 
+def test_comparison_rejects_case_without_valid_repetitions(monkeypatch) -> None:
+    class FakeStore:
+        def get_case_comparison_data(self, case_id):
+            return {
+                "case_id": case_id,
+                "report": {
+                    "quality": {"eligible_repetition_indexes": []},
+                    "findings": {"decisions": []},
+                },
+            }
+
+    monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
+    app.dependency_overrides[get_squat_api_user] = _investigator_user
+    try:
+        response = TestClient(app).get(
+            "/api/v1/squat/cases/caso_sin_repeticiones/comparison"
+        )
+    finally:
+        app.dependency_overrides.clear()
+
+    assert response.status_code == 409
+
+
 def test_expert_cannot_read_dataset_metrics(monkeypatch) -> None:
     class FakeStore:
         pass

@@ -209,6 +209,48 @@ def test_quality_gate_accepts_one_complete_repetition(tmp_path: Path) -> None:
     assert result.eligible_repetition_indexes == [1]
 
 
+def test_quality_gate_keeps_one_valid_repetition_among_multiple(
+    tmp_path: Path,
+) -> None:
+    pose, segmentation, quality = _write_quality_inputs(
+        tmp_path,
+        repetition_percentages=(70.0, 100.0, 75.0),
+    )
+
+    result = evaluate_squat_analysis_quality(
+        pose,
+        segmentation,
+        quality,
+        case_id="caso_001",
+        output_dir=tmp_path / "outputs",
+    )
+
+    assert result.status == "revision_requerida"
+    assert result.eligible_for_analysis is True
+    assert result.eligible_repetition_indexes == [2]
+    assert result.excluded_repetition_indexes == [1, 3]
+
+
+def test_quality_gate_rejects_one_invalid_repetition(tmp_path: Path) -> None:
+    pose, segmentation, quality = _write_quality_inputs(
+        tmp_path,
+        repetition_percentages=(70.0,),
+    )
+
+    result = evaluate_squat_analysis_quality(
+        pose,
+        segmentation,
+        quality,
+        case_id="caso_001",
+        output_dir=tmp_path / "outputs",
+    )
+
+    assert result.status == "no_apto_para_analisis"
+    assert result.eligible_for_analysis is False
+    assert result.eligible_repetition_indexes == []
+    assert result.excluded_repetition_indexes == [1]
+
+
 def test_quality_gate_rejects_video_without_complete_repetitions(
     tmp_path: Path,
 ) -> None:
@@ -228,6 +270,28 @@ def test_quality_gate_rejects_video_without_complete_repetitions(
     assert result.status == "no_apto_para_analisis"
     assert result.eligible_for_analysis is False
     assert result.eligible_repetition_indexes == []
+
+
+def test_quality_gate_rejects_multiple_invalid_repetitions(
+    tmp_path: Path,
+) -> None:
+    pose, segmentation, quality = _write_quality_inputs(
+        tmp_path,
+        repetition_percentages=(70.0, 75.0, 79.0),
+    )
+
+    result = evaluate_squat_analysis_quality(
+        pose,
+        segmentation,
+        quality,
+        case_id="caso_001",
+        output_dir=tmp_path / "outputs",
+    )
+
+    assert result.status == "no_apto_para_analisis"
+    assert result.eligible_for_analysis is False
+    assert result.eligible_repetition_indexes == []
+    assert result.excluded_repetition_indexes == [1, 2, 3]
 
 
 def test_quality_gate_can_disable_peak_requirement(tmp_path: Path) -> None:

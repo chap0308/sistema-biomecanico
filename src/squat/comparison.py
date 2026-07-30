@@ -230,11 +230,44 @@ def build_case_comparisons(
     return rows
 
 
+def _eligible_repetition_indexes(report: dict[str, Any]) -> set[int]:
+    quality = report.get("quality")
+    if quality is None:
+        segmentation_indexes = {
+            repetition["repetition_index"]
+            for repetition in (report.get("segmentation") or {}).get(
+                "repetitions", []
+            )
+        }
+        return segmentation_indexes or {
+            decision.get("repetition_index", 1)
+            for decision in (report.get("findings") or {}).get("decisions", [])
+        }
+    indexes = set(quality.get("eligible_repetition_indexes") or [])
+    if indexes or not quality.get("eligible_for_analysis"):
+        return indexes
+    decision_indexes = {
+        decision.get("repetition_index", 1)
+        for decision in (report.get("findings") or {}).get("decisions", [])
+    }
+    return decision_indexes or {
+        repetition["repetition_index"]
+        for repetition in (report.get("segmentation") or {}).get(
+            "repetitions", []
+        )
+    }
+
+
 def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
     """Build a comparison from the persistence-layer aggregate payload."""
+    report = payload.get("report") or {}
+    eligible_indexes = _eligible_repetition_indexes(report)
     judgments = [
         ExpertJudgment.model_validate(item)
         for item in payload.get("judgments", [])
+        if (
+            item.get("repetition_index", 1) in eligible_indexes
+        )
     ]
     manual_references = {
         (row.get("repetition_index", 1), row["pattern_key"]): FinalReference(
@@ -244,14 +277,27 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
             observation=row.get("observation"),
         )
         for row in payload.get("manual_references", [])
+        if (
+            row.get("repetition_index", 1) in eligible_indexes
+        )
     }
-    report = payload.get("report") or {}
     findings = report.get("findings") or {}
-    patterns = build_case_comparisons(
-        judgments=judgments,
-        system_decisions=findings.get("decisions", []),
-        manual_references=manual_references,
-        require_manual_references=True,
+    system_decisions = [
+        decision
+        for decision in findings.get("decisions", [])
+        if (
+            decision.get("repetition_index", 1) in eligible_indexes
+        )
+    ]
+    patterns = (
+        []
+        if not eligible_indexes
+        else build_case_comparisons(
+            judgments=judgments,
+            system_decisions=system_decisions,
+            manual_references=manual_references,
+            require_manual_references=True,
+        )
     )
     fleiss_kappa, fleiss_items = calculate_fleiss_kappa(patterns)
     return CaseComparison(
@@ -264,9 +310,8 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
             ExpertEvaluationObservation.model_validate(item)
             for item in payload.get("evaluator_observations", [])
         ],
-        ready_for_metrics=all(
-            pattern.reference is not None for pattern in patterns
-        ),
+        ready_for_metrics=bool(patterns)
+        and all(pattern.reference is not None for pattern in patterns),
         expert_fleiss_kappa=fleiss_kappa,
         fleiss_items=fleiss_items,
     )

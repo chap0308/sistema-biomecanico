@@ -1,5 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, it, vi } from "vitest";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import type { SquatCaseExplanation } from "@/types/squat-explanation";
 
@@ -75,6 +75,8 @@ const explanation: SquatCaseExplanation = {
   artifact_downloads: [],
 };
 
+afterEach(cleanup);
+
 describe("ExplanationWorkspace", () => {
   it("presents the four explanatory stages for the active repetition", () => {
     render(
@@ -141,6 +143,35 @@ describe("ExplanationWorkspace", () => {
     fireEvent.click(screen.getByRole("button", { name: "Siguiente" }));
 
     expect(onRepetitionChange).toHaveBeenCalledWith(2);
+  });
+
+  it("explains why an invalid repetition has no rule results", () => {
+    const excludedExplanation = {
+      ...explanation,
+      repetitions: [
+        {
+          ...explanation.repetitions[0],
+          eligible_for_analysis: false,
+          quality_messages: [
+            "Fotogramas válidos: 78.30 %; criterio requerido >= 80.00 %.",
+          ],
+        },
+      ],
+    } satisfies SquatCaseExplanation;
+
+    render(
+      <ExplanationWorkspace
+        activeRepetition={1}
+        currentTime={1}
+        explanation={excludedExplanation}
+      />,
+    );
+    fireEvent.click(screen.getByRole("tab", { name: "4. Reglas" }));
+
+    expect(
+      screen.getByText("Repetición excluida del análisis"),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/78.30 %/)).toBeInTheDocument();
   });
 
   it("formats tooltip time from the frame timestamp", () => {

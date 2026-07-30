@@ -138,6 +138,11 @@ async def get_squat_case_comparison(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Squat case was not found.",
         )
+    if not _report_has_eligible_repetitions(payload.get("report")):
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="The case has no valid repetitions available for comparison.",
+        )
     return build_stored_case_comparison(payload)
 
 
@@ -1147,6 +1152,26 @@ def _require_squat_role(current_role: str, expected_role: str) -> None:
             status_code=status.HTTP_403_FORBIDDEN,
             detail=f"This operation requires the {expected_role} role.",
         )
+
+
+def _report_has_eligible_repetitions(
+    report: dict[str, Any] | None,
+) -> bool:
+    if not report:
+        return False
+    quality = report.get("quality")
+    if quality is not None:
+        indexes = quality.get("eligible_repetition_indexes") or []
+        if indexes:
+            return True
+        if not quality.get("eligible_for_analysis"):
+            return False
+        return bool((report.get("findings") or {}).get("decisions"))
+    segmentation = report.get("segmentation") or {}
+    findings = report.get("findings") or {}
+    return bool(
+        segmentation.get("repetitions") or findings.get("decisions")
+    )
 
 
 def _load_export_payload(

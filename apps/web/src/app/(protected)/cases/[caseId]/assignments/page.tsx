@@ -16,6 +16,7 @@ import type {
   CaseAssignmentRoster,
   ExpertProfile,
 } from "@/types/squat-expert";
+import type { SquatCaseReport } from "@/types/squat-case-report";
 
 import { AssignmentForm } from "./assignment-form";
 
@@ -30,17 +31,25 @@ export default async function AssignmentPage({
   const { caseId } = await params;
   let experts: ExpertProfile[] = [];
   let roster: CaseAssignmentRoster | null = null;
+  let report: SquatCaseReport | null = null;
   let unavailable = false;
   try {
-    [experts, roster] = await Promise.all([
+    [experts, roster, report] = await Promise.all([
       apiServerFetch<ExpertProfile[]>("/squat/experts"),
       apiServerFetch<CaseAssignmentRoster>(
         `/squat/cases/${encodeURIComponent(caseId)}/assignments`,
+      ),
+      apiServerFetch<SquatCaseReport>(
+        `/squat/cases/${encodeURIComponent(caseId)}`,
       ),
     ]);
   } catch {
     unavailable = true;
   }
+  const hasEligibleRepetitions = Boolean(
+    report?.quality?.eligible_repetition_indexes?.length ??
+      report?.segmentation?.repetitions.length,
+  );
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-10 lg:px-10">
@@ -76,6 +85,12 @@ export default async function AssignmentPage({
           {unavailable ? (
             <p className="text-sm text-destructive">
               No se pudo consultar la lista de evaluadores.
+            </p>
+          ) : !hasEligibleRepetitions ? (
+            <p className="text-sm text-muted-foreground">
+              Este caso no contiene repeticiones válidas para evaluación
+              experta. Las descargas técnicas permanecen disponibles desde el
+              detalle del caso.
             </p>
           ) : experts.length ? (
             <AssignmentForm

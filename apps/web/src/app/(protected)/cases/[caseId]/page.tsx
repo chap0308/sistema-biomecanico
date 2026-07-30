@@ -82,12 +82,30 @@ export default async function CaseDetailPage({
     (capture) => capture.event === "maxima_profundidad",
   );
   const decisions = report.findings?.decisions ?? [];
+  const segmentedRepetitionIndexes =
+    report.segmentation?.repetitions.map(
+      (repetition) => repetition.repetition_index,
+    ) ?? [];
+  const reportedEligibleIndexes =
+    report.quality?.eligible_repetition_indexes ?? [];
+  const eligibleRepetitionIndexes =
+    reportedEligibleIndexes.length > 0 ||
+    report.quality?.eligible_for_analysis === false
+      ? reportedEligibleIndexes
+      : Array.from(
+          new Set(
+            decisions.length > 0
+              ? decisions
+                  .map((decision) => decision.repetition_index)
+                  .filter((index): index is number => index !== undefined)
+              : segmentedRepetitionIndexes,
+          ),
+        );
+  const hasEligibleRepetitions = eligibleRepetitionIndexes.length > 0;
   const { groups: decisionGroups, isComplete: hasCompleteDecisions } =
     groupCompleteDecisions(
       decisions,
-      report.segmentation?.repetitions.map(
-        (repetition) => repetition.repetition_index,
-      ) ?? [],
+      eligibleRepetitionIndexes,
       Object.keys(findingLabels),
     );
 
@@ -111,7 +129,8 @@ export default async function CaseDetailPage({
           {report.findings?.ruleset_status === "provisional" && (
             <Badge variant="outline">Umbrales provisionales</Badge>
           )}
-          {report.status === "analisis_completo" ? (
+          {report.status === "analisis_completo" &&
+          hasEligibleRepetitions ? (
             <div className="ml-auto flex flex-wrap gap-2">
               <Link
                 href={`/cases/${report.case_id}/assignments`}
@@ -238,7 +257,7 @@ export default async function CaseDetailPage({
       </section>
 
       {hasCompleteDecisions ? (
-        <section className="mt-7">
+        <section className="mt-7" data-testid="case-results">
           <SectionHeading
             eyebrow="Resultados"
             title="Compensaciones y variables por repetición"
@@ -250,7 +269,10 @@ export default async function CaseDetailPage({
                 (item) => item.repetition_index === group.repetitionIndex,
               );
               return (
-              <section key={group.repetitionIndex}>
+              <section
+                key={group.repetitionIndex}
+                data-result-repetition={group.repetitionIndex}
+              >
                 <h3 className="text-xl font-semibold tracking-tight">
                   Repetición {group.repetitionIndex}
                 </h3>
@@ -288,7 +310,7 @@ export default async function CaseDetailPage({
             })}
           </div>
         </section>
-      ) : decisions.length ? (
+      ) : decisions.length && hasEligibleRepetitions ? (
         <Alert className="mt-7">
           <CircleAlertIcon aria-hidden="true" />
           <AlertTitle>El informe requiere reprocesamiento</AlertTitle>

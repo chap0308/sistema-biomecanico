@@ -172,7 +172,7 @@ class SupabaseSquatStore:
             },
             timeout=30,
         )
-        if response.status_code != 200:
+        if response.status_code not in {200, 206}:
             raise SquatPersistenceError(
                 f"Failed to list squat cases: {response.status_code} "
                 f"{response.text}"
@@ -318,6 +318,12 @@ class SupabaseSquatStore:
         if case_rows[0]["status"] != "completed":
             raise SquatPersistenceError(
                 "Only completed squat cases can be assigned."
+            )
+        report = self.get_case_report(external_case_id) or {}
+        eligible_repetitions = _eligible_repetition_indexes(report)
+        if not eligible_repetitions:
+            raise SquatPersistenceError(
+                "The case has no valid repetitions available for expert evaluation."
             )
         if case_rows[0].get("reference_status", "open") != "open":
             raise SquatPersistenceError(
@@ -919,10 +925,7 @@ class SupabaseSquatStore:
             if run_rows:
                 report = run_rows[0].get("report") or {}
                 segmentation = report.get("segmentation") or {}
-                quality = report.get("quality") or {}
-                eligible_indexes = set(
-                    quality.get("eligible_repetition_indexes") or []
-                )
+                eligible_indexes = _eligible_repetition_indexes(report)
                 repetitions = [
                     {
                         "repetition_index": repetition["repetition_index"],
@@ -931,10 +934,7 @@ class SupabaseSquatStore:
                         "end_seconds": repetition["end_seconds"],
                     }
                     for repetition in segmentation.get("repetitions", [])
-                    if (
-                        not eligible_indexes
-                        or repetition["repetition_index"] in eligible_indexes
-                    )
+                    if repetition["repetition_index"] in eligible_indexes
                 ]
         return {
             "assignment_id": assignment["assignment_id"],
@@ -1174,6 +1174,34 @@ def _database_status(report_status: str) -> str:
         "no_apto_para_analisis": "excluded",
         "analisis_completo": "completed",
     }[report_status]
+
+
+def _eligible_repetition_indexes(report: dict[str, Any]) -> set[int]:
+    quality = report.get("quality")
+    if quality is None:
+        segmentation_indexes = {
+            repetition["repetition_index"]
+            for repetition in (report.get("segmentation") or {}).get(
+                "repetitions", []
+            )
+        }
+        return segmentation_indexes or {
+            decision.get("repetition_index", 1)
+            for decision in (report.get("findings") or {}).get("decisions", [])
+        }
+    indexes = set(quality.get("eligible_repetition_indexes") or [])
+    if indexes or not quality.get("eligible_for_analysis"):
+        return indexes
+    decision_indexes = {
+        decision.get("repetition_index", 1)
+        for decision in (report.get("findings") or {}).get("decisions", [])
+    }
+    return decision_indexes or {
+        repetition["repetition_index"]
+        for repetition in (report.get("segmentation") or {}).get(
+            "repetitions", []
+        )
+    }
 
 
 def _run_status(report_status: str) -> str:

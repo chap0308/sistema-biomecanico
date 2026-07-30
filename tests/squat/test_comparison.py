@@ -4,6 +4,7 @@ from src.squat.comparison import (
     ExpertJudgment,
     FinalReference,
     build_case_comparisons,
+    build_stored_case_comparison,
     calculate_fleiss_kappa,
     calculate_metrics,
 )
@@ -243,3 +244,55 @@ def test_fleiss_kappa_uses_only_items_with_three_experts() -> None:
 
     assert items == 2
     assert kappa == 1.0
+
+
+def test_stored_comparison_keeps_only_quality_eligible_repetitions() -> None:
+    payload = {
+        "case_id": "case-mixed-quality",
+        "report": {
+            "quality": {"eligible_repetition_indexes": [1]},
+            "findings": {
+                "decisions": [
+                    {
+                        "repetition_index": repetition,
+                        "finding": "inclinacion_lateral_tronco",
+                        "status": "ausente",
+                    }
+                    for repetition in (1, 2)
+                ]
+            },
+        },
+        "judgments": [
+            {
+                "evaluator_id": "e1",
+                "repetition_index": repetition,
+                "pattern_key": "trunk_lateral_inclination",
+                "classification": "ausente",
+            }
+            for repetition in (1, 2)
+        ],
+        "manual_references": [],
+    }
+
+    comparison = build_stored_case_comparison(payload)
+
+    assert len(comparison.patterns) == 4
+    assert {
+        pattern.repetition_index for pattern in comparison.patterns
+    } == {1}
+    assert comparison.ready_for_metrics is False
+
+
+def test_stored_comparison_without_valid_repetitions_is_not_ready() -> None:
+    comparison = build_stored_case_comparison(
+        {
+            "case_id": "case-no-valid-repetition",
+            "report": {
+                "quality": {"eligible_repetition_indexes": []},
+                "findings": {"decisions": []},
+            },
+        }
+    )
+
+    assert comparison.patterns == []
+    assert comparison.ready_for_metrics is False

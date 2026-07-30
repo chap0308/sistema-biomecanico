@@ -4,6 +4,9 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any
+from types import SimpleNamespace
+
+import pytest
 
 from src.squat.contracts import (
     SquatArtifactManifest,
@@ -18,6 +21,7 @@ from src.squat.models import (
     VideoTechnicalMetadata,
 )
 from src.squat.persistence import (
+    SquatPersistenceError,
     SupabaseSquatStore,
     _normalize_expert_observed_side,
 )
@@ -58,6 +62,57 @@ def test_normalize_expert_observed_side_supports_legacy_labels() -> None:
     assert _normalize_expert_observed_side("predominio_derecho") == "derecha"
     assert _normalize_expert_observed_side("bilateral") == "bilateral"
     assert _normalize_expert_observed_side(None) is None
+
+
+def test_list_cases_accepts_postgrest_partial_content(monkeypatch) -> None:
+    response = SimpleNamespace(
+        status_code=206,
+        headers={"content-range": "0-9/12"},
+        text="",
+        json=lambda: [{"external_case_id": "case-1"}],
+    )
+    monkeypatch.setattr(
+        "src.squat.persistence.requests.get",
+        lambda *_args, **_kwargs: response,
+    )
+    store = RecordingStore()
+    store.url = "http://supabase.test"
+    store.service_key = "service-key"
+
+    result = store.list_cases(page=1, page_size=10)
+
+    assert result.total == 12
+    assert result.rows == [{"external_case_id": "case-1"}]
+
+
+def test_assign_case_rejects_report_without_valid_repetitions() -> None:
+    class NoEligibleRepetitionStore(RecordingStore):
+        def _select(self, table: str, *, params: dict[str, str]):
+            assert table == "squat_cases"
+            return [
+                {
+                    "case_id": "database-case-id",
+                    "status": "completed",
+                    "reference_status": "open",
+                }
+            ]
+
+        def get_case_report(self, external_case_id: str):
+            return {
+                "quality": {
+                    "eligible_repetition_indexes": [],
+                }
+            }
+
+    with pytest.raises(
+        SquatPersistenceError,
+        match="no valid repetitions",
+    ):
+        NoEligibleRepetitionStore().assign_case(
+            external_case_id="case-no-valid-repetition",
+            evaluator_ids=["expert-1"],
+            assigned_by="investigator-1",
+        )
 
 
 def test_persist_completed_case_uploads_only_manifest_artifacts(

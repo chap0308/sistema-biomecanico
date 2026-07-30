@@ -114,6 +114,8 @@ class SquatExplanationRepetition(BaseModel):
     segmentation: SquatRepetition
     metrics: SquatRepetitionMetrics | None = None
     decisions: list[SquatRuleDecision] = Field(default_factory=list)
+    eligible_for_analysis: bool = True
+    quality_messages: list[str] = Field(default_factory=list)
 
 
 class SquatExplanationArtifact(BaseModel):
@@ -437,13 +439,50 @@ def _explanation_repetitions(
     decisions: dict[int, list[SquatRuleDecision]] = {}
     for decision in report.findings.decisions if report.findings else []:
         decisions.setdefault(decision.repetition_index, []).append(decision)
+    all_indexes = {
+        repetition.repetition_index
+        for repetition in report.segmentation.repetitions
+    }
+    if report.quality is None:
+        eligible_indexes = all_indexes
+    else:
+        eligible_indexes = set(report.quality.eligible_repetition_indexes)
+        if (
+            not eligible_indexes
+            and report.quality.eligible_for_analysis
+        ):
+            eligible_indexes = set(decisions) or all_indexes
     return [
         SquatExplanationRepetition(
             segmentation=repetition,
             metrics=metrics.get(repetition.repetition_index),
             decisions=decisions.get(repetition.repetition_index, []),
+            eligible_for_analysis=(
+                repetition.repetition_index in eligible_indexes
+            ),
+            quality_messages=_repetition_quality_messages(
+                report,
+                repetition.repetition_index,
+            ),
         )
         for repetition in report.segmentation.repetitions
+    ]
+
+
+def _repetition_quality_messages(
+    report: SquatCaseReport,
+    repetition_index: int,
+) -> list[str]:
+    if report.quality is None:
+        return []
+    prefix = f"repetition_{repetition_index}_"
+    return [
+        (
+            f"{check.description}: {check.observed}; "
+            f"criterio requerido {check.requirement}."
+        )
+        for check in report.quality.checks
+        if check.check_id.startswith(prefix) and not check.passed
     ]
 
 

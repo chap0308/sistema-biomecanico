@@ -221,7 +221,11 @@ export function ExplanationWorkspace({
           </Card>
         </TabsContent>
         <TabsContent value="rules" className="mt-4">
-          <RulesTable decisions={repetition.decisions} />
+          <RulesTable
+            decisions={repetition.decisions}
+            eligibleForAnalysis={repetition.eligible_for_analysis !== false}
+            qualityMessages={repetition.quality_messages ?? []}
+          />
         </TabsContent>
       </Tabs>
     </section>
@@ -1090,8 +1094,12 @@ function EventTable({
 
 function RulesTable({
   decisions,
+  eligibleForAnalysis,
+  qualityMessages,
 }: {
   decisions: SquatCaseExplanation["repetitions"][number]["decisions"];
+  eligibleForAnalysis: boolean;
+  qualityMessages: string[];
 }) {
   return (
     <Card>
@@ -1116,7 +1124,28 @@ function RulesTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {decisions.map((decision) => (
+            {!eligibleForAnalysis ? (
+              <TableRow>
+                <TableCell colSpan={5}>
+                  <div className="py-3">
+                    <p className="font-medium">
+                      Repetición excluida del análisis
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      No se aplicaron reglas biomecánicas porque la repetición
+                      no alcanzó la calidad mínima requerida.
+                    </p>
+                    {qualityMessages.length ? (
+                      <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-muted-foreground">
+                        {qualityMessages.map((message) => (
+                          <li key={message}>{message}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ) : decisions.map((decision) => (
               <TableRow key={decision.finding}>
                 <TableCell>{findingLabel(decision.finding)}</TableCell>
                 <TableCell className="font-mono">

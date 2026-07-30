@@ -12,6 +12,16 @@ test("authenticates the investigator through Supabase SSR", async ({ page }) => 
   ).toBeVisible();
 });
 
+test("lists the unfiltered investigator history", async ({ page }) => {
+  await page.goto("/cases");
+
+  await expect(
+    page.getByText("Historial temporalmente no disponible"),
+  ).toHaveCount(0);
+  await expect(page.getByRole("link", { name: "Todos" })).toBeVisible();
+  await expect(page.getByText(/dev_case_/).first()).toBeVisible();
+});
+
 test("logs out without retaining credentials or a pending login state", async ({
   browser,
 }) => {

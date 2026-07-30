@@ -181,3 +181,23 @@ sesiones activas de la cuenta usada por los demás workers:
 $env:SQUAT_E2E_RUN_LOGOUT="1"
 npx playwright test e2e/auth.spec.ts --grep "logs out" --workers=1
 ```
+
+## 9. Casos de calidad por repetición
+
+`case-results.spec.ts` admite casos preparados para verificar que una repetición
+de baja calidad no invalide las ejecuciones aptas del mismo video:
+
+```powershell
+$env:SQUAT_E2E_PARTIAL_CASE_ID="<caso-con-repeticiones-validas-y-excluidas>"
+$env:SQUAT_E2E_ONE_VALID_MULTI_CASE_ID="<caso-con-una-valida-entre-varias>"
+$env:SQUAT_E2E_SINGLE_VALID_CASE_ID="<caso-con-una-repeticion-valida>"
+$env:SQUAT_E2E_SINGLE_INVALID_CASE_ID="<caso-con-una-repeticion-invalida>"
+$env:SQUAT_E2E_NO_VALID_CASE_ID="<caso-con-varias-repeticiones-invalidas>"
+npx playwright test e2e/case-results.spec.ts --project=chromium-authenticated
+```
+
+Las combinaciones numéricas del control de calidad se prueban siempre con
+Pytest. Playwright verifica, cuando se proporcionan esos casos locales, su
+efecto visible: resultados solo para repeticiones elegibles, explicación del
+descarte en **Reglas**, conservación de descargas técnicas y bloqueo de
+asignación y comparación cuando no existe ninguna repetición válida.

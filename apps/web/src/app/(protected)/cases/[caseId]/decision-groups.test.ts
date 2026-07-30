@@ -52,4 +52,20 @@ describe("groupCompleteDecisions", () => {
 
     expect(result.isComplete).toBe(false);
   });
+
+  it("accepts complete results for only the quality-eligible repetitions", () => {
+    const result = groupCompleteDecisions(
+      [
+        decision(1, "tronco"),
+        decision(1, "pelvis"),
+        decision(2, "tronco"),
+        decision(2, "pelvis"),
+      ],
+      [1, 2],
+      findings,
+    );
+
+    expect(result.isComplete).toBe(true);
+    expect(result.groups).toHaveLength(2);
+  });
 });

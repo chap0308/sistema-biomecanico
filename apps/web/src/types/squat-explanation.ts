@@ -75,6 +75,8 @@ export type SquatCaseExplanation = {
     segmentation: SquatRepetition;
     metrics: SquatRepetitionMetrics | null;
     decisions: SquatRuleDecision[];
+    eligible_for_analysis?: boolean;
+    quality_messages?: string[];
   }[];
   key_frames: SquatExplanationKeyFrame[];
   landmark_visibility_summaries: SquatLandmarkVisibilitySummary[];

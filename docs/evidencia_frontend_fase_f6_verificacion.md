@@ -151,3 +151,16 @@ configurados mediante variables de entorno. La referencia final no se infiere
 automáticamente del acuerdo entre evaluadores: debe registrarla explícitamente
 el investigador. Vitest comprueba esta transición dentro de los componentes y
 Playwright valida el recorrido integrado con Next.js, FastAPI y Supabase.
+
+## 11. Calidad parcial por repetición
+
+La página de resultados diferencia la calidad global del video de la
+elegibilidad de cada repetición. Un caso mixto conserva las clasificaciones de
+las ejecuciones aptas y presenta los motivos de exclusión de las restantes en
+la pestaña **Reglas**. Si ninguna repetición resulta elegible, permanecen
+disponibles los artefactos y datos técnicos, pero se bloquean la asignación de
+evaluadores y la comparación experta-sistema.
+
+La verificación automatizada combina Pytest para las cuatro configuraciones de
+calidad y Playwright para el comportamiento integrado del historial, el caso
+mixto y el caso sin repeticiones válidas.
