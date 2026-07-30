@@ -88,11 +88,12 @@ export function ExpertEvaluationWorkspace({
         </div>
         <EvaluationForm
           assignment={assignment}
+          activeRepetition={activeRepetition}
           onRepetitionFocus={setActiveRepetition}
         />
       </section>
 
-      <aside className="order-first min-w-0 max-w-full max-lg:fixed max-lg:inset-x-3 max-lg:top-3 max-lg:z-30 lg:sticky lg:top-3 lg:z-20 lg:order-last">
+      <aside className="order-last hidden min-w-0 max-w-full lg:sticky lg:top-3 lg:z-20 lg:block">
         {followReached && !playerDismissed ? (
           <Card className="min-w-0 max-w-full overflow-hidden shadow-lg">
             <CardHeader className="flex flex-row items-start justify-between gap-3 py-3 lg:py-6">
@@ -127,6 +128,8 @@ export function ExpertEvaluationWorkspace({
                 repetitions={repetitions}
                 activeRepetition={activeRepetition}
                 onRepetitionChange={setActiveRepetition}
+                autoPlaySelected
+                loopSelectedRepetition
                 lockNavigationToActive
                 showFullVideoOption={false}
               />

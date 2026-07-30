@@ -11,7 +11,10 @@ type ExpertReviewPlayerProps = {
   repetitions?: ExpertRepetition[];
   activeRepetition?: number | null;
   onRepetitionChange?: (repetitionIndex: number | null) => void;
+  autoPlaySelected?: boolean;
+  loopSelectedRepetition?: boolean;
   lockNavigationToActive?: boolean;
+  showRepetitionNavigation?: boolean;
   showFullVideoOption?: boolean;
 };
 
@@ -20,7 +23,10 @@ export function ExpertReviewPlayer({
   repetitions = [],
   activeRepetition = null,
   onRepetitionChange,
+  autoPlaySelected = false,
+  loopSelectedRepetition = false,
   lockNavigationToActive = false,
+  showRepetitionNavigation = true,
   showFullVideoOption = true,
 }: ExpertReviewPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -33,7 +39,13 @@ export function ExpertReviewPlayer({
     if (!video) return;
     video.pause();
     video.currentTime = selected?.start_seconds ?? 0;
-  }, [selected]);
+    if (autoPlaySelected && video.offsetParent !== null) {
+      video.muted = true;
+      void video.play().catch(() => {
+        // Autoplay can still be denied by browser or device policy.
+      });
+    }
+  }, [autoPlaySelected, selected]);
 
   function playRepetition(repetition: ExpertRepetition) {
     onRepetitionChange?.(repetition.repetition_index);
@@ -58,9 +70,16 @@ export function ExpertReviewPlayer({
   function stopAtRepetitionEnd() {
     const video = videoRef.current;
     if (!video || !selected) return;
-    if (video.currentTime >= selected.end_seconds) {
+    const boundary = resolveRepetitionBoundary(
+      video.currentTime,
+      selected.start_seconds,
+      selected.end_seconds,
+      loopSelectedRepetition,
+    );
+    if (boundary === null) return;
+    video.currentTime = boundary.time;
+    if (boundary.pause) {
       video.pause();
-      video.currentTime = selected.end_seconds;
     }
   }
 
@@ -82,15 +101,20 @@ export function ExpertReviewPlayer({
       </div>
       {selected ? (
         <div className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
-          <Badge variant="outline">
-            Repetición {selected.repetition_index}
-          </Badge>
-          <span className="font-mono">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="outline">
+              Repetición {selected.repetition_index}
+            </Badge>
+            {loopSelectedRepetition ? (
+              <Badge variant="secondary">Bucle del fragmento</Badge>
+            ) : null}
+          </div>
+          <span className="shrink-0 whitespace-nowrap font-mono">
             {selected.start_seconds.toFixed(2)}–{selected.end_seconds.toFixed(2)} s
           </span>
         </div>
       ) : null}
-      {repetitions.length > 0 ? (
+      {showRepetitionNavigation && repetitions.length > 0 ? (
         <div
           className="flex w-full min-w-0 gap-2 overflow-x-auto pb-1"
           aria-label="Navegar por repeticiones"
@@ -134,4 +158,16 @@ export function ExpertReviewPlayer({
       ) : null}
     </div>
   );
+}
+
+export function resolveRepetitionBoundary(
+  currentTime: number,
+  startTime: number,
+  endTime: number,
+  loop: boolean,
+): { time: number; pause: boolean } | null {
+  if (currentTime < endTime) return null;
+  return loop
+    ? { time: startTime, pause: false }
+    : { time: endTime, pause: true };
 }

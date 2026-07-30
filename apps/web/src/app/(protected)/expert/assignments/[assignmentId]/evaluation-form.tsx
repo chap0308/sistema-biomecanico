@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useForm, type UseFormRegister } from "react-hook-form";
 import { z } from "zod";
 import {
   CheckCircle2Icon,
@@ -41,6 +41,8 @@ import type {
   ExpertObservedSide,
   ExpertPatternKey,
 } from "@/types/squat-expert";
+
+import { ExpertReviewPlayer } from "./expert-review-player";
 
 const choiceSchema = z.enum([
   "",
@@ -87,6 +89,7 @@ const textareaClassName =
 const patternDefinitions: Array<{
   field: "trunk" | "pelvis" | "valgus" | "asymmetry";
   key: ExpertPatternKey;
+  shortTitle: string;
   title: string;
   description: string;
   options: Array<[EvaluationChoice, string]>;
@@ -94,6 +97,7 @@ const patternDefinitions: Array<{
   {
     field: "trunk",
     key: "trunk_lateral_inclination",
+    shortTitle: "Tronco",
     title: "Inclinación lateral del tronco",
     description: "Desviación lateral observable durante la ejecución.",
     options: directionalOptions(),
@@ -101,6 +105,7 @@ const patternDefinitions: Array<{
   {
     field: "pelvis",
     key: "pelvis_lateral_shift",
+    shortTitle: "Pelvis",
     title: "Desplazamiento lateral de pelvis",
     description: "Traslación visible de la pelvis hacia un lado.",
     options: directionalOptions(),
@@ -108,6 +113,7 @@ const patternDefinitions: Array<{
   {
     field: "valgus",
     key: "visible_dynamic_valgus",
+    shortTitle: "Valgo",
     title: "Valgo dinámico visible",
     description: "Desplazamiento medial observable de una o ambas rodillas.",
     options: [
@@ -122,6 +128,7 @@ const patternDefinitions: Array<{
   {
     field: "asymmetry",
     key: "bilateral_asymmetry",
+    shortTitle: "Asimetría",
     title: "Asimetría bilateral observable",
     description: "Diferencia visible entre los lados durante el movimiento.",
     options: [
@@ -137,9 +144,11 @@ const patternDefinitions: Array<{
 
 export function EvaluationForm({
   assignment,
+  activeRepetition,
   onRepetitionFocus,
 }: {
   assignment: ExpertAssignment;
+  activeRepetition?: number | null;
   onRepetitionFocus?: (repetitionIndex: number) => void;
 }) {
   const router = useRouter();
@@ -227,75 +236,33 @@ export function EvaluationForm({
                 type="button"
                 size="sm"
                 variant="ghost"
-                className="-ml-3 mt-2"
+                className="-ml-3 mt-2 hidden lg:inline-flex"
                 onClick={() => onRepetitionFocus?.(repetitionIndex)}
               >
                 Ver fragmento de esta repetición
               </Button>
             </div>
-            {patternDefinitions.map((pattern) => {
-              const fieldBase =
-                `repetitions.${repetitionPosition}.${pattern.field}` as const;
-              return (
-                <Card key={`${repetitionIndex}-${pattern.key}`}>
-                  <CardHeader>
-                    <CardTitle className="text-base">{pattern.title}</CardTitle>
-                    <CardDescription>{pattern.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="grid gap-4 md:grid-cols-[1fr_0.55fr]">
-                    <Field>
-                      <FieldLabel
-                        htmlFor={`${fieldBase}.choice`}
-                      >
-                        Clasificación
-                      </FieldLabel>
-                      <select
-                        id={`${fieldBase}.choice`}
-                        className={selectClassName}
-                        disabled={locked}
-                        {...register(`${fieldBase}.choice`)}
-                      >
-                        {pattern.options.map(([value, label]) => (
-                          <option key={value} value={value}>
-                            {label}
-                          </option>
-                        ))}
-                      </select>
-                    </Field>
-                    <Field>
-                      <FieldLabel
-                        htmlFor={`${fieldBase}.confidence`}
-                      >
-                        Confianza
-                      </FieldLabel>
-                      <select
-                        id={`${fieldBase}.confidence`}
-                        className={selectClassName}
-                        disabled={locked}
-                        {...register(`${fieldBase}.confidence`)}
-                      >
-                        <option value="alta">Alta</option>
-                        <option value="media">Media</option>
-                        <option value="baja">Baja</option>
-                      </select>
-                    </Field>
-                    <Field className="md:col-span-2">
-                      <FieldLabel
-                        htmlFor={`${fieldBase}.observation`}
-                      >
-                        Observación opcional
-                      </FieldLabel>
-                      <textarea
-                        id={`${fieldBase}.observation`}
-                        className={textareaClassName}
-                        disabled={locked}
-                        {...register(`${fieldBase}.observation`)}
-                      />
-                    </Field>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            <div className="lg:hidden">
+              <ExpertReviewPlayer
+                assignmentId={assignment.assignment_id}
+                repetitions={(assignment.repetitions ?? []).filter(
+                  (repetition) =>
+                    repetition.repetition_index === repetitionIndex,
+                )}
+                activeRepetition={repetitionIndex}
+                autoPlaySelected={activeRepetition === repetitionIndex}
+                loopSelectedRepetition
+                lockNavigationToActive
+                showRepetitionNavigation={false}
+                showFullVideoOption={false}
+              />
+            </div>
+            <PatternCarousel
+              locked={locked}
+              register={register}
+              repetitionIndex={repetitionIndex}
+              repetitionPosition={repetitionPosition}
+            />
           </section>
         ),
       )}
@@ -388,6 +355,133 @@ export function EvaluationForm({
         </div>
       )}
     </form>
+  );
+}
+
+function PatternCarousel({
+  locked,
+  register,
+  repetitionIndex,
+  repetitionPosition,
+}: {
+  locked: boolean;
+  register: UseFormRegister<EvaluationValues>;
+  repetitionIndex: number;
+  repetitionPosition: number;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activePattern, setActivePattern] = useState(0);
+
+  function goToPattern(index: number) {
+    const track = trackRef.current;
+    if (!track) return;
+    track.scrollTo({
+      left: index * track.clientWidth,
+      behavior: "smooth",
+    });
+    setActivePattern(index);
+  }
+
+  function updateActivePattern() {
+    const track = trackRef.current;
+    if (!track?.clientWidth) return;
+    setActivePattern(
+      Math.min(
+        patternDefinitions.length - 1,
+        Math.max(0, Math.round(track.scrollLeft / track.clientWidth)),
+      ),
+    );
+  }
+
+  return (
+    <div className="min-w-0 space-y-3">
+      <div
+        className="flex gap-2 overflow-x-auto pb-1 lg:hidden"
+        aria-label={`Variables de la repetición ${repetitionIndex}`}
+      >
+        {patternDefinitions.map((pattern, index) => (
+          <Button
+            key={pattern.key}
+            type="button"
+            size="sm"
+            variant={activePattern === index ? "default" : "outline"}
+            className="shrink-0"
+            aria-pressed={activePattern === index}
+            onClick={() => goToPattern(index)}
+          >
+            {pattern.shortTitle}
+          </Button>
+        ))}
+      </div>
+      <div
+        ref={trackRef}
+        className="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-2 lg:mx-0 lg:grid lg:snap-none lg:overflow-visible lg:px-0 lg:pb-0"
+        onScroll={updateActivePattern}
+      >
+        {patternDefinitions.map((pattern) => {
+          const fieldBase =
+            `repetitions.${repetitionPosition}.${pattern.field}` as const;
+          return (
+            <div
+              key={`${repetitionIndex}-${pattern.key}`}
+              className="w-full shrink-0 snap-start lg:w-auto"
+            >
+              <Card className="h-full">
+                <CardHeader>
+                  <CardTitle className="text-base">{pattern.title}</CardTitle>
+                  <CardDescription>{pattern.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="grid gap-4 md:grid-cols-[1fr_0.55fr]">
+                  <Field>
+                    <FieldLabel htmlFor={`${fieldBase}.choice`}>
+                      Clasificación
+                    </FieldLabel>
+                    <select
+                      id={`${fieldBase}.choice`}
+                      className={selectClassName}
+                      disabled={locked}
+                      {...register(`${fieldBase}.choice`)}
+                    >
+                      {pattern.options.map(([value, label]) => (
+                        <option key={value} value={value}>
+                          {label}
+                        </option>
+                      ))}
+                    </select>
+                  </Field>
+                  <Field>
+                    <FieldLabel htmlFor={`${fieldBase}.confidence`}>
+                      Confianza
+                    </FieldLabel>
+                    <select
+                      id={`${fieldBase}.confidence`}
+                      className={selectClassName}
+                      disabled={locked}
+                      {...register(`${fieldBase}.confidence`)}
+                    >
+                      <option value="alta">Alta</option>
+                      <option value="media">Media</option>
+                      <option value="baja">Baja</option>
+                    </select>
+                  </Field>
+                  <Field className="md:col-span-2">
+                    <FieldLabel htmlFor={`${fieldBase}.observation`}>
+                      Observación opcional
+                    </FieldLabel>
+                    <textarea
+                      id={`${fieldBase}.observation`}
+                      className={textareaClassName}
+                      disabled={locked}
+                      {...register(`${fieldBase}.observation`)}
+                    />
+                  </Field>
+                </CardContent>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

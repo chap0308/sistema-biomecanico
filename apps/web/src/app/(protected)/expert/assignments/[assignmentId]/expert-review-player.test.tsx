@@ -1,14 +1,19 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { ExpertReviewPlayer } from "./expert-review-player";
+import {
+  ExpertReviewPlayer,
+  resolveRepetitionBoundary,
+} from "./expert-review-player";
 
 describe("ExpertReviewPlayer", () => {
   beforeEach(() => {
     vi.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => {});
+    vi.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue();
   });
 
   afterEach(() => {
+    cleanup();
     vi.restoreAllMocks();
   });
 
@@ -54,5 +59,41 @@ describe("ExpertReviewPlayer", () => {
     expect(
       screen.queryByRole("button", { name: "Video completo" }),
     ).not.toBeInTheDocument();
+  });
+
+  it("loops inside the selected repetition without repetition navigation", () => {
+    render(
+      <ExpertReviewPlayer
+        assignmentId="assignment-1"
+        repetitions={[
+          {
+            repetition_index: 1,
+            start_seconds: 1.1,
+            peak_depth_seconds: 2.2,
+            end_seconds: 3.3,
+          },
+        ]}
+        activeRepetition={1}
+        loopSelectedRepetition
+        showRepetitionNavigation={false}
+      />,
+    );
+
+    expect(screen.getByText("Bucle del fragmento")).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Repetición 1" }),
+    ).not.toBeInTheDocument();
+  });
+
+  it("resolves the end boundary according to the loop mode", () => {
+    expect(resolveRepetitionBoundary(3.3, 1.1, 3.3, true)).toEqual({
+      time: 1.1,
+      pause: false,
+    });
+    expect(resolveRepetitionBoundary(3.3, 1.1, 3.3, false)).toEqual({
+      time: 3.3,
+      pause: true,
+    });
+    expect(resolveRepetitionBoundary(2.2, 1.1, 3.3, true)).toBeNull();
   });
 });
