@@ -9,7 +9,7 @@ import {
 
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -121,49 +121,6 @@ export default async function ComparisonPage({
             assignedEvaluators={comparison.assigned_evaluators}
             submittedEvaluations={comparison.submitted_evaluations}
           />
-          {comparison.reference_status === "closed" ? (
-            <>
-              <a
-                href={`/api/squat/cases/${caseId}/exports/instruments.xlsx`}
-                className={buttonVariants({
-                  size: "sm",
-                  variant: "outline",
-                })}
-              >
-                <DownloadIcon aria-hidden="true" />
-                Instrumentos Excel
-              </a>
-              <a
-                href={`/api/squat/cases/${caseId}/exports/report.pdf`}
-                className={buttonVariants({ size: "sm" })}
-              >
-                <DownloadIcon aria-hidden="true" />
-                Reporte PDF
-              </a>
-            </>
-          ) : (
-            <>
-              <Button
-                type="button"
-                size="sm"
-                variant="outline"
-                disabled
-                title="Cierra el caso para habilitar la descarga."
-              >
-                <DownloadIcon aria-hidden="true" />
-                Instrumentos Excel
-              </Button>
-              <Button
-                type="button"
-                size="sm"
-                disabled
-                title="Cierra el caso para habilitar la descarga."
-              >
-                <DownloadIcon aria-hidden="true" />
-                Reporte PDF
-              </Button>
-            </>
-          )}
         </div>
       </header>
 

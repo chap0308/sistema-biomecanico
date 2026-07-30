@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { LockIcon, LockKeyholeIcon } from "lucide-react";
+import { DownloadIcon, LockIcon, LockKeyholeIcon } from "lucide-react";
 
 import {
   AlertDialog,
@@ -15,7 +15,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { apiClientFetch } from "@/lib/api/client";
 import type { CaseComparison } from "@/types/squat-comparison";
 
@@ -33,8 +33,12 @@ export function ReferenceLifecycleControls({
   submittedEvaluations: number;
 }) {
   const router = useRouter();
+  const [localStatus, setLocalStatus] = useState<
+    CaseComparison["reference_status"] | null
+  >(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string>();
+  const currentStatus = localStatus ?? status;
 
   async function advance(action: "start" | "close") {
     setPending(true);
@@ -44,6 +48,7 @@ export function ReferenceLifecycleControls({
         `/squat/cases/${encodeURIComponent(caseId)}/reference/${action}`,
         { method: "POST" },
       );
+      setLocalStatus(action === "start" ? "in_progress" : "closed");
       router.refresh();
     } catch (requestError) {
       setError(
@@ -56,73 +61,132 @@ export function ReferenceLifecycleControls({
     }
   }
 
-  if (status === "closed") {
-    return (
-      <div className="flex items-center gap-2 text-sm font-medium text-primary">
-        <LockIcon className="size-4" aria-hidden="true" />
-        Caso cerrado
-      </div>
-    );
-  }
-
-  const starting = status === "open";
+  const starting = currentStatus === "open";
   const everyEvaluatorSubmitted = canStartReferenceReview(
     assignedEvaluators,
     submittedEvaluations,
   );
+
+  if (currentStatus === "closed") {
+    return (
+      <div className="contents">
+        <div className="flex items-center gap-2 text-sm font-medium text-primary">
+          <LockIcon className="size-4" aria-hidden="true" />
+          Caso cerrado
+        </div>
+        <DownloadLinks caseId={caseId} enabled />
+      </div>
+    );
+  }
+
   return (
-    <div className="grid justify-items-end gap-1.5">
-      <AlertDialog>
-        <AlertDialogTrigger
-          render={
-            <Button
-              type="button"
-              size="sm"
-              variant={starting ? "outline" : "destructive"}
-              disabled={
-                pending ||
-                (starting && !everyEvaluatorSubmitted) ||
-                (!starting && !readyForMetrics)
-              }
-            />
-          }
-        >
-          <LockKeyholeIcon aria-hidden="true" />
-          {starting ? "Comenzar referencia final" : "Cerrar caso"}
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>
-              {starting
-                ? "¿Comenzar la referencia final?"
-                : "¿Cerrar el caso definitivamente?"}
-            </AlertDialogTitle>
-            <AlertDialogDescription>
-              {starting
-                ? "La nómina de evaluadores quedará bloqueada. Ya no podrás agregar ni retirar expertos, pero sí seleccionar y editar referencias finales."
-                : "Las referencias finales ya no podrán editarse. Los expertos asignados podrán consultar el análisis del sistema."}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancelar</AlertDialogCancel>
-            <AlertDialogAction
-              onClick={() => advance(starting ? "start" : "close")}
-            >
-              {starting ? "Comenzar revisión" : "Cerrar definitivamente"}
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-      {starting && !everyEvaluatorSubmitted ? (
-        <p className="max-w-sm text-right text-xs text-muted-foreground">
-          La revisión comenzará cuando todos los evaluadores asignados hayan
-          enviado sus respuestas ({submittedEvaluations}/{assignedEvaluators}).
-        </p>
-      ) : null}
-      {error ? (
-        <p className="max-w-sm text-right text-xs text-destructive">{error}</p>
-      ) : null}
+    <div className="contents">
+      <div className="grid justify-items-end gap-1.5">
+        <AlertDialog>
+          <AlertDialogTrigger
+            render={
+              <Button
+                type="button"
+                size="sm"
+                variant={starting ? "outline" : "destructive"}
+                disabled={
+                  pending ||
+                  (starting && !everyEvaluatorSubmitted) ||
+                  (!starting && !readyForMetrics)
+                }
+              />
+            }
+          >
+            <LockKeyholeIcon aria-hidden="true" />
+            {starting ? "Comenzar referencia final" : "Cerrar caso"}
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>
+                {starting
+                  ? "¿Comenzar la referencia final?"
+                  : "¿Cerrar el caso definitivamente?"}
+              </AlertDialogTitle>
+              <AlertDialogDescription>
+                {starting
+                  ? "La nómina de evaluadores quedará bloqueada. Ya no podrás agregar ni retirar expertos, pero sí seleccionar y editar referencias finales."
+                  : "Las referencias finales ya no podrán editarse. Los expertos asignados podrán consultar el análisis del sistema."}
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancelar</AlertDialogCancel>
+              <AlertDialogAction
+                onClick={() => advance(starting ? "start" : "close")}
+              >
+                {starting ? "Comenzar revisión" : "Cerrar definitivamente"}
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+        {starting && !everyEvaluatorSubmitted ? (
+          <p className="max-w-sm text-right text-xs text-muted-foreground">
+            La revisión comenzará cuando todos los evaluadores asignados hayan
+            enviado sus respuestas ({submittedEvaluations}/{assignedEvaluators}).
+          </p>
+        ) : null}
+        {error ? (
+          <p className="max-w-sm text-right text-xs text-destructive">{error}</p>
+        ) : null}
+      </div>
+      <DownloadLinks caseId={caseId} enabled={false} />
     </div>
+  );
+}
+
+function DownloadLinks({
+  caseId,
+  enabled,
+}: {
+  caseId: string;
+  enabled: boolean;
+}) {
+  if (enabled) {
+    return (
+      <>
+        <a
+          href={`/api/squat/cases/${caseId}/exports/instruments.xlsx`}
+          className={buttonVariants({ size: "sm", variant: "outline" })}
+        >
+          <DownloadIcon aria-hidden="true" />
+          Instrumentos Excel
+        </a>
+        <a
+          href={`/api/squat/cases/${caseId}/exports/report.pdf`}
+          className={buttonVariants({ size: "sm" })}
+        >
+          <DownloadIcon aria-hidden="true" />
+          Reporte PDF
+        </a>
+      </>
+    );
+  }
+  return (
+    <>
+      <Button
+        type="button"
+        size="sm"
+        variant="outline"
+        disabled
+        title="Cierra el caso para habilitar la descarga."
+      >
+        <DownloadIcon aria-hidden="true" />
+        Instrumentos Excel
+      </Button>
+      <Button
+        type="button"
+        size="sm"
+        disabled
+        title="Cierra el caso para habilitar la descarga."
+      >
+        <DownloadIcon aria-hidden="true" />
+        Reporte PDF
+      </Button>
+    </>
   );
 }
 

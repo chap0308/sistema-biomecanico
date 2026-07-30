@@ -10,7 +10,7 @@ from typing import Any, Iterable
 from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
 from openpyxl import Workbook
-from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 from src.squat.comparison import (
@@ -198,6 +198,7 @@ def build_case_excel(
     _metrics_sheet(workbook, performance, comparison)
     for sheet in workbook.worksheets:
         _format_sheet(sheet)
+    _append_landmark_code_legend(workbook["Instrumento 1"])
     output = BytesIO()
     workbook.save(output)
     return output.getvalue()
@@ -464,7 +465,6 @@ def _instrument_1_sheet(
         for cell in sheet[table_header_row]:
             cell.font = Font(bold=True, color="FFFFFF")
             cell.fill = header_fill
-    _append_landmark_code_legend(sheet)
 
 
 def _instrument_2_sheet(workbook: Workbook, report: dict[str, Any]) -> None:
@@ -687,16 +687,10 @@ def _format_sheet(sheet: Any) -> None:
 def _append_landmark_code_legend(sheet: Any) -> None:
     sheet.append([])
     sheet.append([])
-    title_row = sheet.max_row + 1
     sheet.append(["Codificación de puntos anatómicos clave (landmarks)"])
-    sheet.merge_cells(
-        start_row=title_row,
-        start_column=1,
-        end_row=title_row,
-        end_column=3,
-    )
-    header_row = sheet.max_row + 1
+    title_row = sheet.max_row
     sheet.append(["Código", "Aplica a", "Significado"])
+    header_row = sheet.max_row
     for row in (
         ("B", "Landmarks pares", "Bilateral visible"),
         ("I", "Landmarks pares", "Solo izquierdo visible"),
@@ -708,15 +702,35 @@ def _append_landmark_code_legend(sheet: Any) -> None:
         sheet.append(row)
 
     title_fill = PatternFill("solid", fgColor="D9EAF7")
-    header_fill = PatternFill("solid", fgColor="E9EEF5")
-    title_cell = sheet.cell(row=title_row, column=1)
-    title_cell.font = Font(bold=True, color="123B42")
-    title_cell.fill = title_fill
-    title_cell.alignment = Alignment(horizontal="center", vertical="center")
+    header_fill = PatternFill("solid", fgColor="4F6B83")
+    thin_border = Border(
+        left=Side(style="thin", color="7A8793"),
+        right=Side(style="thin", color="7A8793"),
+        top=Side(style="thin", color="7A8793"),
+        bottom=Side(style="thin", color="7A8793"),
+    )
+    for cell in sheet[title_row][:3]:
+        cell.font = Font(bold=True, color="123B42")
+        cell.fill = title_fill
+        cell.alignment = Alignment(horizontal="center", vertical="center")
     for cell in sheet[header_row][:3]:
-        cell.font = Font(bold=True)
+        cell.font = Font(bold=True, color="FFFFFF")
         cell.fill = header_fill
         cell.alignment = Alignment(horizontal="center", vertical="center")
+    for row in sheet.iter_rows(
+        min_row=title_row,
+        max_row=sheet.max_row,
+        min_col=1,
+        max_col=3,
+    ):
+        for cell in row:
+            cell.border = thin_border
+    sheet.merge_cells(
+        start_row=title_row,
+        start_column=1,
+        end_row=title_row,
+        end_column=3,
+    )
 
 
 def _paired_landmark_rows(

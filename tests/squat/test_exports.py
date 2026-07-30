@@ -202,6 +202,15 @@ def test_excel_contains_instruments_and_analysis_sheets() -> None:
         instrument_1.cell(row=legend_title.row + 2, column=3).value
         == "Bilateral visible"
     )
+    assert legend_title.fill.fgColor.rgb == "00D9EAF7"
+    legend_header = instrument_1.cell(row=legend_title.row + 1, column=1)
+    assert legend_header.fill.fgColor.rgb == "004F6B83"
+    assert legend_header.font.color.rgb == "00FFFFFF"
+    assert legend_header.border.bottom.style == "thin"
+    assert (
+        instrument_1.cell(row=legend_title.row + 2, column=3).border.right.style
+        == "thin"
+    )
 
     instrument_2 = workbook["Instrumento 2"]
     headers = [cell.value for cell in instrument_2[1]]
