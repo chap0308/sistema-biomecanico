@@ -11,7 +11,6 @@ from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
-from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.utils import get_column_letter
 
 from src.squat.comparison import (
@@ -101,19 +100,13 @@ _LANDMARK_LABELS = {
 }
 
 _TECHNICAL_SHEETS = {
-    "landmarks.csv": ("Puntos anatómicos", "PuntosAnatomicos"),
-    "frame_quality.csv": ("Calidad fotogramas", "CalidadFotogramas"),
-    "frame_phases.csv": ("Fases", "FasesFotogramas"),
-    "repetitions.csv": ("Repeticiones", "Repeticiones"),
-    "biomechanical_frame_metrics.csv": (
-        "Biomecánica fotogramas",
-        "BiomecanicaFotogramas",
-    ),
-    "biomechanical_repetition_metrics.csv": (
-        "Biomecánica repeticiones",
-        "BiomecanicaRepeticiones",
-    ),
-    "rule_evidence.csv": ("Evidencia reglas", "EvidenciaReglas"),
+    "landmarks.csv": "Puntos anatómicos",
+    "frame_quality.csv": "Calidad fotogramas",
+    "frame_phases.csv": "Fases",
+    "repetitions.csv": "Repeticiones",
+    "biomechanical_frame_metrics.csv": "Biomecánica fotogramas",
+    "biomechanical_repetition_metrics.csv": "Biomecánica repeticiones",
+    "rule_evidence.csv": "Evidencia reglas",
 }
 
 _TECHNICAL_HEADERS = {
@@ -209,7 +202,7 @@ def build_technical_data_excel(*, artifacts: dict[str, bytes]) -> bytes:
     """Create readable tables without modifying canonical pipeline CSV files."""
     workbook = Workbook()
     workbook.remove(workbook.active)
-    for filename, (sheet_name, table_name) in _TECHNICAL_SHEETS.items():
+    for filename, sheet_name in _TECHNICAL_SHEETS.items():
         content = artifacts.get(filename)
         if content is None:
             continue
@@ -220,19 +213,6 @@ def build_technical_data_excel(*, artifacts: dict[str, bytes]) -> bytes:
         sheet.append([_TECHNICAL_HEADERS.get(value, _label(value)) for value in rows[0]])
         for row in rows[1:]:
             sheet.append([_technical_cell(value) for value in row])
-        if sheet.max_row > 1:
-            table = Table(
-                displayName=table_name,
-                ref=f"A1:{get_column_letter(sheet.max_column)}{sheet.max_row}",
-            )
-            table.tableStyleInfo = TableStyleInfo(
-                name="TableStyleMedium2",
-                showFirstColumn=False,
-                showLastColumn=False,
-                showRowStripes=True,
-                showColumnStripes=False,
-            )
-            sheet.add_table(table)
         _format_sheet(sheet)
         sheet.freeze_panes = "A2"
     if not workbook.worksheets:

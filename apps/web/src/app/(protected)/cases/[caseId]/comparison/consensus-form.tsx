@@ -9,7 +9,10 @@ import { Button } from "@/components/ui/button";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { apiClientFetch } from "@/lib/api/client";
 import type { ExpertPatternKey } from "@/types/squat-expert";
-import type { FinalReference } from "@/types/squat-comparison";
+import type {
+  CaseComparison,
+  FinalReference,
+} from "@/types/squat-comparison";
 
 const selectClassName =
   "h-9 w-full rounded-lg border border-input bg-background px-2.5 text-sm " +
@@ -25,11 +28,13 @@ export function ConsensusForm({
   patternKey,
   repetitionIndex,
   currentReference,
+  onSaved,
 }: {
   caseId: string;
   patternKey: ExpertPatternKey;
   repetitionIndex: number;
   currentReference?: FinalReference | null;
+  onSaved?: (comparison: CaseComparison) => void;
 }) {
   const router = useRouter();
   const [pending, setPending] = useState(false);
@@ -50,7 +55,7 @@ export function ConsensusForm({
     setError(undefined);
     setSaved(false);
     try {
-      await apiClientFetch(
+      const comparison = await apiClientFetch<CaseComparison>(
         `/squat/cases/${encodeURIComponent(caseId)}/comparison/references/${repetitionIndex}/${patternKey}`,
         {
           method: "PUT",
@@ -65,6 +70,7 @@ export function ConsensusForm({
         },
       );
       setSaved(true);
+      onSaved?.(comparison);
       router.refresh();
     } catch (submissionError) {
       setError(

@@ -4,16 +4,25 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, type UseFormRegister } from "react-hook-form";
+import {
+  useForm,
+  useWatch,
+  type UseFormRegister,
+} from "react-hook-form";
 import { z } from "zod";
 import {
   CheckCircle2Icon,
+  CircleAlertIcon,
   LoaderCircleIcon,
   SaveIcon,
   SendIcon,
 } from "lucide-react";
 
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -23,7 +32,6 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import {
@@ -73,9 +81,14 @@ const evaluationSchema = z.object({
   generalObservation: z.string().max(1000),
 });
 
-type EvaluationValues = z.infer<typeof evaluationSchema>;
+export type EvaluationValues = z.infer<typeof evaluationSchema>;
 type EvaluationChoice = z.infer<typeof choiceSchema>;
 type EvaluationStatus = "draft" | "submitted";
+export type MissingClassification = {
+  path: string;
+  repetitionIndex: number;
+  label: string;
+};
 
 const selectClassName =
   "h-9 w-full rounded-lg border border-input bg-background px-2.5 text-sm " +
@@ -155,8 +168,12 @@ export function EvaluationForm({
   const locked = assignment.status === "submitted";
   const [pending, setPending] = useState<EvaluationStatus>();
   const [message, setMessage] = useState<string>();
+  const [validationRequested, setValidationRequested] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
   const {
+    control,
     formState: { errors },
+    getValues,
     handleSubmit,
     register,
     setError,
@@ -166,18 +183,49 @@ export function EvaluationForm({
     reValidateMode: "onBlur",
     defaultValues: defaultsFromAssignment(assignment),
   });
+  const watchedRepetitions = useWatch({
+    control,
+    name: "repetitions",
+  });
+  const missingClassifications = validationRequested
+    ? findMissingClassifications(watchedRepetitions ?? [])
+    : [];
+  const missingPaths = new Set(
+    missingClassifications.map((item) => item.path),
+  );
+
+  function revealMissing(item: MissingClassification) {
+    onRepetitionFocus?.(item.repetitionIndex);
+    requestAnimationFrame(() => {
+      const field = document.getElementById(item.path);
+      field?.scrollIntoView?.({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+      field?.focus({ preventScroll: true });
+    });
+  }
+
+  function requestSubmission() {
+    const missing = findMissingClassifications(getValues("repetitions"));
+    setValidationRequested(true);
+    setMessage(undefined);
+    if (missing.length > 0) {
+      revealMissing(missing[0]);
+      return;
+    }
+    setConfirmOpen(true);
+  }
 
   function save(status: EvaluationStatus) {
     return handleSubmit(async (values) => {
       const items = buildEvaluationItems(values);
-      if (
-        status === "submitted" &&
-        items.length !== values.repetitions.length * 4
-      ) {
-        setError("root", {
-          message:
-            "Clasifica los cuatro patrones de cada repetición antes de enviar.",
-        });
+      const missing = findMissingClassifications(values.repetitions);
+      if (status === "submitted" && missing.length > 0) {
+        setValidationRequested(true);
+        setConfirmOpen(false);
+        revealMissing(missing[0]);
         return;
       }
       setPending(status);
@@ -259,6 +307,7 @@ export function EvaluationForm({
             </div>
             <PatternCarousel
               locked={locked}
+              missingPaths={missingPaths}
               register={register}
               repetitionIndex={repetitionIndex}
               repetitionPosition={repetitionPosition}
@@ -286,6 +335,33 @@ export function EvaluationForm({
       {errors.root?.message ? (
         <Alert variant="destructive">
           <AlertDescription>{errors.root.message}</AlertDescription>
+        </Alert>
+      ) : null}
+      {validationRequested && missingClassifications.length > 0 ? (
+        <Alert variant="destructive">
+          <CircleAlertIcon aria-hidden="true" />
+          <AlertTitle>
+            Faltan {missingClassifications.length} clasificaciones
+          </AlertTitle>
+          <AlertDescription>
+            <p>
+              Completa los siguientes patrones antes de enviar la evaluación:
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {missingClassifications.map((item) => (
+                <Button
+                  key={item.path}
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  className="border-destructive/40 bg-background"
+                  onClick={() => revealMissing(item)}
+                >
+                  Repetición {item.repetitionIndex} · {item.label}
+                </Button>
+              ))}
+            </div>
+          </AlertDescription>
         </Alert>
       ) : null}
       {message ? (
@@ -317,22 +393,22 @@ export function EvaluationForm({
             )}
             Guardar borrador
           </Button>
-          <AlertDialog>
-            <AlertDialogTrigger
-              render={
-                <Button type="button" disabled={Boolean(pending)}>
-                  {pending === "submitted" ? (
-                    <LoaderCircleIcon
-                      className="animate-spin"
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <SendIcon aria-hidden="true" />
-                  )}
-                  Enviar evaluación
-                </Button>
-              }
-            />
+          <Button
+            type="button"
+            disabled={Boolean(pending)}
+            onClick={requestSubmission}
+          >
+            {pending === "submitted" ? (
+              <LoaderCircleIcon
+                className="animate-spin"
+                aria-hidden="true"
+              />
+            ) : (
+              <SendIcon aria-hidden="true" />
+            )}
+            Enviar evaluación
+          </Button>
+          <AlertDialog open={confirmOpen} onOpenChange={setConfirmOpen}>
             <AlertDialogContent>
               <AlertDialogHeader>
                 <AlertDialogTitle>
@@ -360,11 +436,13 @@ export function EvaluationForm({
 
 function PatternCarousel({
   locked,
+  missingPaths,
   register,
   repetitionIndex,
   repetitionPosition,
 }: {
   locked: boolean;
+  missingPaths: Set<string>;
   register: UseFormRegister<EvaluationValues>;
   repetitionIndex: number;
   repetitionPosition: number;
@@ -421,15 +499,29 @@ function PatternCarousel({
         {patternDefinitions.map((pattern) => {
           const fieldBase =
             `repetitions.${repetitionPosition}.${pattern.field}` as const;
+          const classificationPath = `${fieldBase}.choice`;
+          const isMissing = missingPaths.has(classificationPath);
           return (
             <div
               key={`${repetitionIndex}-${pattern.key}`}
+              data-classification-path={classificationPath}
               className="w-full shrink-0 snap-start lg:w-auto"
             >
-              <Card className="h-full">
+              <Card
+                className={
+                  isMissing
+                    ? "h-full border-destructive ring-1 ring-destructive/20"
+                    : "h-full"
+                }
+              >
                 <CardHeader>
                   <CardTitle className="text-base">{pattern.title}</CardTitle>
                   <CardDescription>{pattern.description}</CardDescription>
+                  {isMissing ? (
+                    <p className="text-xs font-medium text-destructive">
+                      Clasificación pendiente
+                    </p>
+                  ) : null}
                 </CardHeader>
                 <CardContent className="grid gap-4 md:grid-cols-[1fr_0.55fr]">
                   <Field>
@@ -547,6 +639,25 @@ function choiceFromItem(
   if (!item) return "";
   if (item.classification !== "presente") return item.classification;
   return `presente_${item.observed_side ?? "sin_direccion"}` as EvaluationChoice;
+}
+
+export function findMissingClassifications(
+  repetitions: EvaluationValues["repetitions"],
+): MissingClassification[] {
+  return repetitions.flatMap((repetition, repetitionPosition) =>
+    patternDefinitions.flatMap((pattern) =>
+      repetition[pattern.field].choice
+        ? []
+        : [
+            {
+              path:
+                `repetitions.${repetitionPosition}.${pattern.field}.choice`,
+              repetitionIndex: repetition.repetitionIndex,
+              label: pattern.title,
+            },
+          ],
+    ),
+  );
 }
 
 export function buildEvaluationItems(

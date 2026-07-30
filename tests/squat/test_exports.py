@@ -1,6 +1,7 @@
 """Tests for researcher-facing Excel and PDF exports."""
 
 from io import BytesIO
+from zipfile import ZipFile
 
 from openpyxl import load_workbook
 
@@ -158,5 +159,10 @@ def test_technical_excel_normalizes_csv_without_mutating_source() -> None:
     assert sheet["C1"].value == "Pose detectada"
     assert sheet["C2"].value == "Sí"
     assert sheet["E2"].value == 13
-    assert len(sheet.tables) == 1
+    assert len(sheet.tables) == 0
+    assert sheet.auto_filter.ref == "A1:G2"
+    with ZipFile(BytesIO(content)) as archive:
+        assert not any(
+            name.startswith("xl/tables/") for name in archive.namelist()
+        )
     assert source.startswith(b"frame_index,timestamp_seconds")
