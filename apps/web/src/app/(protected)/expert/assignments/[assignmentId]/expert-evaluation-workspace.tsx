@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -23,13 +23,56 @@ export function ExpertEvaluationWorkspace({
   assignment: ExpertAssignment;
 }) {
   const repetitions = assignment.repetitions ?? [];
+  const workspaceRef = useRef<HTMLDivElement>(null);
   const [activeRepetition, setActiveRepetition] = useState<number | null>(
     repetitions[0]?.repetition_index ?? null,
   );
-  const [playerVisible, setPlayerVisible] = useState(true);
+  const [followReached, setFollowReached] = useState(false);
+  const [playerDismissed, setPlayerDismissed] = useState(false);
+
+  useEffect(() => {
+    let frame = 0;
+
+    function updateFromScroll() {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const sections = Array.from(
+          workspaceRef.current?.querySelectorAll<HTMLElement>(
+            "[data-repetition-index]",
+          ) ?? [],
+        );
+        if (!sections.length) return;
+
+        const firstTop = sections[0].getBoundingClientRect().top;
+        const activationLine = Math.min(180, window.innerHeight * 0.25);
+        setFollowReached(firstTop <= 96);
+
+        const active =
+          sections
+            .filter(
+              (section) =>
+                section.getBoundingClientRect().top <= activationLine,
+            )
+            .at(-1) ?? sections[0];
+        setActiveRepetition(Number(active.dataset.repetitionIndex));
+      });
+    }
+
+    updateFromScroll();
+    window.addEventListener("scroll", updateFromScroll, { passive: true });
+    window.addEventListener("resize", updateFromScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", updateFromScroll);
+      window.removeEventListener("resize", updateFromScroll);
+    };
+  }, []);
 
   return (
-    <div className="mt-8 grid items-start gap-7 lg:grid-cols-[minmax(0,1fr)_22rem]">
+    <div
+      ref={workspaceRef}
+      className="mt-8 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(24rem,0.78fr)] xl:grid-cols-[minmax(0,1fr)_minmax(28rem,0.85fr)]"
+    >
       <section className="min-w-0">
         <div className="mb-5">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-primary">
@@ -49,8 +92,8 @@ export function ExpertEvaluationWorkspace({
         />
       </section>
 
-      <aside className="sticky top-3 z-20 order-first min-w-0 max-w-full lg:order-last">
-        {playerVisible ? (
+      <aside className="order-first min-w-0 max-w-full max-lg:fixed max-lg:inset-x-3 max-lg:top-3 max-lg:z-30 lg:sticky lg:top-3 lg:z-20 lg:order-last">
+        {followReached && !playerDismissed ? (
           <Card className="min-w-0 max-w-full overflow-hidden shadow-lg">
             <CardHeader className="flex flex-row items-start justify-between gap-3 py-3 lg:py-6">
               <div className="min-w-0">
@@ -73,7 +116,7 @@ export function ExpertEvaluationWorkspace({
                 size="icon-sm"
                 variant="ghost"
                 aria-label="Ocultar video de seguimiento"
-                onClick={() => setPlayerVisible(false)}
+                onClick={() => setPlayerDismissed(true)}
               >
                 <EyeOffIcon aria-hidden="true" />
               </Button>
@@ -84,19 +127,21 @@ export function ExpertEvaluationWorkspace({
                 repetitions={repetitions}
                 activeRepetition={activeRepetition}
                 onRepetitionChange={setActiveRepetition}
+                lockNavigationToActive
+                showFullVideoOption={false}
               />
             </CardContent>
           </Card>
-        ) : (
+        ) : followReached && playerDismissed ? (
           <Button
             type="button"
             className="fixed right-4 bottom-4 shadow-lg"
-            onClick={() => setPlayerVisible(true)}
+            onClick={() => setPlayerDismissed(false)}
           >
             <EyeIcon aria-hidden="true" />
             Mostrar video
           </Button>
-        )}
+        ) : null}
       </aside>
     </div>
   );

@@ -201,6 +201,7 @@ export function EvaluationForm({
         (repetitionIndex, repetitionPosition) => (
           <section
             key={repetitionIndex}
+            data-repetition-index={repetitionIndex}
             className="space-y-4 rounded-2xl border border-primary/20 bg-primary/[0.025] p-4"
             onFocusCapture={() => onRepetitionFocus?.(repetitionIndex)}
           >

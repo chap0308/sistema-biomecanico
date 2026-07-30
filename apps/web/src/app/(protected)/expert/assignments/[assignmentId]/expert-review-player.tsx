@@ -11,6 +11,8 @@ type ExpertReviewPlayerProps = {
   repetitions?: ExpertRepetition[];
   activeRepetition?: number | null;
   onRepetitionChange?: (repetitionIndex: number | null) => void;
+  lockNavigationToActive?: boolean;
+  showFullVideoOption?: boolean;
 };
 
 export function ExpertReviewPlayer({
@@ -18,6 +20,8 @@ export function ExpertReviewPlayer({
   repetitions = [],
   activeRepetition = null,
   onRepetitionChange,
+  lockNavigationToActive = false,
+  showFullVideoOption = true,
 }: ExpertReviewPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const selected = repetitions.find(
@@ -102,6 +106,10 @@ export function ExpertReviewPlayer({
               }
               size="sm"
               className="shrink-0"
+              disabled={
+                lockNavigationToActive &&
+                activeRepetition !== repetition.repetition_index
+              }
               aria-pressed={
                 activeRepetition === repetition.repetition_index
               }
@@ -110,16 +118,18 @@ export function ExpertReviewPlayer({
               Repetición {repetition.repetition_index}
             </Button>
           ))}
-          <Button
-            type="button"
-            variant={activeRepetition === null ? "default" : "outline"}
-            size="sm"
-            className="shrink-0"
-            aria-pressed={activeRepetition === null}
-            onClick={() => onRepetitionChange?.(null)}
-          >
-            Video completo
-          </Button>
+          {showFullVideoOption ? (
+            <Button
+              type="button"
+              variant={activeRepetition === null ? "default" : "outline"}
+              size="sm"
+              className="shrink-0"
+              aria-pressed={activeRepetition === null}
+              onClick={() => onRepetitionChange?.(null)}
+            >
+              Video completo
+            </Button>
+          ) : null}
         </div>
       ) : null}
     </div>

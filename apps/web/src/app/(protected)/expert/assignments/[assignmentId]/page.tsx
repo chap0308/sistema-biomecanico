@@ -22,6 +22,7 @@ import type { SquatCaseReport } from "@/types/squat-case-report";
 import type { ExpertAssignment } from "@/types/squat-expert";
 
 import { ExpertEvaluationWorkspace } from "./expert-evaluation-workspace";
+import { ExpertReviewPlayer } from "./expert-review-player";
 
 type ExpertAssignmentPageProps = {
   params: Promise<{ assignmentId: string }>;
@@ -63,7 +64,7 @@ export default async function ExpertAssignmentPage({
   }
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-6 py-10 lg:px-10">
+    <main className="mx-auto w-full max-w-7xl px-6 py-10 lg:px-10">
       <a
         href="/expert/assignments"
         className={buttonVariants({
@@ -108,6 +109,18 @@ export default async function ExpertAssignmentPage({
           </AlertDescription>
         </Alert>
       )}
+
+      <Card className="mt-6">
+        <CardHeader>
+          <CardTitle>Video completo anonimizado</CardTitle>
+          <CardDescription>
+            Revisa la ejecución completa antes de clasificar cada repetición.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ExpertReviewPlayer assignmentId={assignment.assignment_id} />
+        </CardContent>
+      </Card>
 
       <ExpertEvaluationWorkspace assignment={assignment} />
 
