@@ -454,6 +454,13 @@ export default async function CaseDetailPage({
           description="Archivos estructurados para auditoría, reproducción de cálculos y análisis posterior."
         />
         <div className="mt-4 flex flex-wrap gap-2">
+          <a
+            href={`/api/squat/cases/${encodeURIComponent(report.case_id)}/exports/technical-data.xlsx`}
+            className={buttonVariants({ size: "sm" })}
+          >
+            <DownloadIcon aria-hidden="true" />
+            Datos técnicos normalizados
+          </a>
           {technicalDownloads(report).map(({ filename, label }) => (
             <a
               key={filename}

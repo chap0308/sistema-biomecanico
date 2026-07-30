@@ -14,6 +14,17 @@ import {
 } from "lucide-react";
 
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -339,18 +350,41 @@ export function EvaluationForm({
             )}
             Guardar borrador
           </Button>
-          <Button
-            type="button"
-            disabled={Boolean(pending)}
-            onClick={save("submitted")}
-          >
-            {pending === "submitted" ? (
-              <LoaderCircleIcon className="animate-spin" aria-hidden="true" />
-            ) : (
-              <SendIcon aria-hidden="true" />
-            )}
-            Enviar evaluación
-          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger
+              render={
+                <Button type="button" disabled={Boolean(pending)}>
+                  {pending === "submitted" ? (
+                    <LoaderCircleIcon
+                      className="animate-spin"
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <SendIcon aria-hidden="true" />
+                  )}
+                  Enviar evaluación
+                </Button>
+              }
+            />
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  ¿Enviar la evaluación definitivamente?
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  Revisa tus clasificaciones antes de continuar. Una vez
+                  enviada, la evaluación quedará bloqueada y no podrás
+                  modificar sus respuestas.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Volver a revisar</AlertDialogCancel>
+                <AlertDialogAction onClick={save("submitted")}>
+                  Enviar definitivamente
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
     </form>

@@ -23,10 +23,14 @@ export function ReferenceLifecycleControls({
   caseId,
   status,
   readyForMetrics,
+  assignedEvaluators,
+  submittedEvaluations,
 }: {
   caseId: string;
   status: CaseComparison["reference_status"];
   readyForMetrics: boolean;
+  assignedEvaluators: number;
+  submittedEvaluations: number;
 }) {
   const router = useRouter();
   const [pending, setPending] = useState(false);
@@ -62,6 +66,10 @@ export function ReferenceLifecycleControls({
   }
 
   const starting = status === "open";
+  const everyEvaluatorSubmitted = canStartReferenceReview(
+    assignedEvaluators,
+    submittedEvaluations,
+  );
   return (
     <div className="grid justify-items-end gap-1.5">
       <AlertDialog>
@@ -71,7 +79,11 @@ export function ReferenceLifecycleControls({
               type="button"
               size="sm"
               variant={starting ? "outline" : "destructive"}
-              disabled={pending || (!starting && !readyForMetrics)}
+              disabled={
+                pending ||
+                (starting && !everyEvaluatorSubmitted) ||
+                (!starting && !readyForMetrics)
+              }
             />
           }
         >
@@ -101,9 +113,24 @@ export function ReferenceLifecycleControls({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+      {starting && !everyEvaluatorSubmitted ? (
+        <p className="max-w-sm text-right text-xs text-muted-foreground">
+          La revisión comenzará cuando todos los evaluadores asignados hayan
+          enviado sus respuestas ({submittedEvaluations}/{assignedEvaluators}).
+        </p>
+      ) : null}
       {error ? (
         <p className="max-w-sm text-right text-xs text-destructive">{error}</p>
       ) : null}
     </div>
+  );
+}
+
+export function canStartReferenceReview(
+  assignedEvaluators: number,
+  submittedEvaluations: number,
+) {
+  return (
+    assignedEvaluators > 0 && submittedEvaluations === assignedEvaluators
   );
 }

@@ -25,6 +25,11 @@ export type ExpertEvaluationItem = {
   observation: string | null;
 };
 
+export type ExpertEvaluationObservation = {
+  evaluator_id: string;
+  general_observation: string | null;
+};
+
 export type ExpertRepetition = {
   repetition_index: number;
   start_seconds: number;

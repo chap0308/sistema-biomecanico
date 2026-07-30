@@ -1,4 +1,5 @@
 import type {
+  ExpertEvaluationObservation,
   ExpertEvaluationItem,
   ExpertObservedSide,
   ExpertPatternKey,
@@ -41,6 +42,7 @@ export type CaseComparison = {
   submitted_evaluations: number;
   reference_status: "open" | "in_progress" | "closed";
   patterns: PatternComparison[];
+  evaluator_observations: ExpertEvaluationObservation[];
   ready_for_metrics: boolean;
   expert_fleiss_kappa: number | null;
   fleiss_items: number;

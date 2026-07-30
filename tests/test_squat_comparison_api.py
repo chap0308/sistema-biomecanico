@@ -43,6 +43,7 @@ def _comparison_payload(*, complete: bool = True) -> dict[str, object]:
                 "classification": "ausente",
                 "observed_side": None,
                 "confidence": "alta",
+                "observation": "Ejecución visible.",
             }
             for pattern in patterns
         )
@@ -51,6 +52,13 @@ def _comparison_payload(*, complete: bool = True) -> dict[str, object]:
         "assigned_evaluators": 2,
         "submitted_evaluations": len(evaluators),
         "judgments": judgments,
+        "evaluator_observations": [
+            {
+                "evaluator_id": evaluator,
+                "general_observation": "Sin oclusiones relevantes.",
+            }
+            for evaluator in evaluators
+        ],
         "manual_references": [],
         "report": {
             "findings": {
@@ -93,6 +101,12 @@ def test_investigator_gets_consolidated_case_comparison(monkeypatch) -> None:
     assert payload["ready_for_metrics"] is True
     assert len(payload["patterns"]) == 4
     assert payload["patterns"][0]["reference"]["label"] == "ausente"
+    assert payload["patterns"][0]["expert_judgments"][0]["confidence"] == "alta"
+    assert (
+        payload["patterns"][0]["expert_judgments"][0]["observation"]
+        == "Ejecución visible."
+    )
+    assert payload["evaluator_observations"][0]["general_observation"]
     assert all(row["exact_match"] for row in payload["patterns"])
 
 
@@ -135,6 +149,34 @@ def test_comparative_export_requires_all_references(monkeypatch) -> None:
         app.dependency_overrides.clear()
 
     assert response.status_code == 409
+
+
+def test_final_export_requires_closed_case(monkeypatch) -> None:
+    class FakeStore:
+        pass
+
+    monkeypatch.setattr(squat_route, "SupabaseSquatStore", FakeStore)
+    monkeypatch.setattr(
+        squat_route,
+        "_load_export_payload",
+        lambda *_args: (
+            _comparison_payload(),
+            {"registration": {}},
+            {"case_id": "caso_comparison_001"},
+            [_comparison_payload()],
+        ),
+    )
+    app.dependency_overrides[get_squat_api_user] = _investigator_user
+    try:
+        response = TestClient(app).get(
+            "/api/v1/squat/cases/caso_comparison_001/"
+            "exports/instruments.xlsx"
+        )
+    finally:
+        app.dependency_overrides.clear()
+
+    assert response.status_code == 409
+    assert "closed" in response.json()["detail"]
 
 
 def test_manual_reference_allows_optional_observation(monkeypatch) -> None:

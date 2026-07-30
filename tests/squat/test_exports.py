@@ -10,7 +10,11 @@ from src.squat.comparison import (
     PerformanceMetrics,
     build_case_comparisons,
 )
-from src.squat.exports import build_case_excel, build_case_pdf
+from src.squat.exports import (
+    build_case_excel,
+    build_case_pdf,
+    build_technical_data_excel,
+)
 
 
 def _comparison() -> CaseComparison:
@@ -135,3 +139,24 @@ def test_pdf_export_has_a_valid_header() -> None:
     assert content.startswith(b"%PDF")
     assert len(content) > 1_000
     assert content.count(b"/Type /Page") >= 3
+
+
+def test_technical_excel_normalizes_csv_without_mutating_source() -> None:
+    source = (
+        b"frame_index,timestamp_seconds,pose_detected,valid_for_analysis,"
+        b"detected_keypoints,minimum_critical_visibility,invalid_reason\n"
+        b"0,0.0,True,True,13,0.91,\n"
+    )
+
+    content = build_technical_data_excel(
+        artifacts={"frame_quality.csv": source}
+    )
+
+    workbook = load_workbook(BytesIO(content))
+    sheet = workbook["Calidad fotogramas"]
+    assert sheet["A1"].value == "N.° de fotograma"
+    assert sheet["C1"].value == "Pose detectada"
+    assert sheet["C2"].value == "Sí"
+    assert sheet["E2"].value == 13
+    assert len(sheet.tables) == 1
+    assert source.startswith(b"frame_index,timestamp_seconds")

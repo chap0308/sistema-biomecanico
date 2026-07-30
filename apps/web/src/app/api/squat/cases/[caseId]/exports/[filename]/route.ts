@@ -15,7 +15,13 @@ export async function GET(_request: Request, context: ExportRouteContext) {
   }
 
   const { caseId, filename } = await context.params;
-  if (!["instruments.xlsx", "report.pdf"].includes(filename)) {
+  if (
+    ![
+      "instruments.xlsx",
+      "report.pdf",
+      "technical-data.xlsx",
+    ].includes(filename)
+  ) {
     return new Response("Exportación no disponible", { status: 404 });
   }
   const response = await fetch(

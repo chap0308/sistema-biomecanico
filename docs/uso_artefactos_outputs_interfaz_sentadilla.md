@@ -585,3 +585,33 @@ exponen al usuario.
 La validez global del video permanece en el Instrumento 1. El resumen por
 punto y repetición es evidencia explicativa y no duplica los porcentajes de
 fotogramas válidos o procesados correctamente del Instrumento 2.
+
+## 15. Exportación técnica legible
+
+Los archivos CSV generados por Python conservan sus encabezados canónicos en
+inglés porque constituyen entradas reproducibles para la segmentación, el
+cálculo biomecánico, las reglas interpretables, las gráficas y los overlays.
+No deben renombrarse ni traducirse dentro del pipeline.
+
+La interfaz ofrece adicionalmente `technical-data.xlsx`, construido a partir
+de esos CSV sin modificarlos. El libro contiene una tabla filtrable por cada
+artefacto disponible:
+
+- puntos anatómicos clave;
+- calidad por fotograma;
+- fases temporales;
+- repeticiones;
+- variables biomecánicas por fotograma;
+- variables biomecánicas por repetición;
+- evidencia de reglas.
+
+Esta capa traduce encabezados, fases, estados, puntos anatómicos y valores
+booleanos para su lectura por el investigador o el asesor. Los CSV originales
+permanecen disponibles como evidencia técnica y fuente de auditoría.
+
+En la comparación experta-sistema, cada clasificación muestra su nivel de
+confianza. Las observaciones específicas se presentan únicamente cuando
+existen y las observaciones generales se agrupan en una sección independiente.
+La revisión final solo puede comenzar cuando todos los evaluadores asignados
+han enviado sus respuestas; los instrumentos consolidados y el reporte PDF se
+habilitan después del cierre definitivo del caso.

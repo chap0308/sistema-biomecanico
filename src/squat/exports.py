@@ -2,14 +2,16 @@
 
 from __future__ import annotations
 
+import csv
 from datetime import datetime
-from io import BytesIO
+from io import BytesIO, StringIO
 from typing import Any, Iterable
 
 from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.utils import get_column_letter
 
 from src.squat.comparison import (
@@ -78,6 +80,11 @@ _VALUE_LABELS = {
     "pelvis_lateral_shift": "Desplazamiento lateral de pelvis",
     "visible_dynamic_valgus": "Valgo dinámico visible",
     "bilateral_asymmetry": "Asimetría bilateral observable",
+    "reposo": "Reposo",
+    "descenso": "Descenso",
+    "maxima_profundidad": "Máxima profundidad",
+    "ascenso": "Ascenso",
+    "cierre": "Cierre",
     "consolidada": "Consolidada",
     "consenso_requerido": "Consenso requerido",
     "evaluaciones_pendientes": "Evaluaciones pendientes",
@@ -91,6 +98,81 @@ _LANDMARK_LABELS = {
     "heel": "Talón",
     "foot_index": "Punta del pie",
     "nose": "Nariz",
+}
+
+_TECHNICAL_SHEETS = {
+    "landmarks.csv": ("Puntos anatómicos", "PuntosAnatomicos"),
+    "frame_quality.csv": ("Calidad fotogramas", "CalidadFotogramas"),
+    "frame_phases.csv": ("Fases", "FasesFotogramas"),
+    "repetitions.csv": ("Repeticiones", "Repeticiones"),
+    "biomechanical_frame_metrics.csv": (
+        "Biomecánica fotogramas",
+        "BiomecanicaFotogramas",
+    ),
+    "biomechanical_repetition_metrics.csv": (
+        "Biomecánica repeticiones",
+        "BiomecanicaRepeticiones",
+    ),
+    "rule_evidence.csv": ("Evidencia reglas", "EvidenciaReglas"),
+}
+
+_TECHNICAL_HEADERS = {
+    "frame_index": "N.° de fotograma",
+    "timestamp_seconds": "Tiempo (s)",
+    "landmark": "Punto anatómico clave",
+    "x": "Coordenada X normalizada",
+    "y": "Coordenada Y normalizada",
+    "z": "Profundidad relativa Z",
+    "visibility": "Visibilidad",
+    "presence": "Presencia",
+    "pose_detected": "Pose detectada",
+    "valid_for_analysis": "Válido para análisis",
+    "detected_keypoints": "Puntos anatómicos clave detectados",
+    "minimum_critical_visibility": "Visibilidad crítica mínima",
+    "invalid_reason": "Motivo de invalidez",
+    "hip_midpoint_y": "Centro de caderas Y",
+    "hip_midpoint_y_smoothed": "Centro de caderas Y suavizado",
+    "repetition_index": "N.° de repetición",
+    "phase": "Fase",
+    "start_frame": "Fotograma inicial",
+    "peak_depth_frame": "Fotograma de máxima profundidad",
+    "end_frame": "Fotograma final",
+    "start_seconds": "Inicio (s)",
+    "peak_depth_seconds": "Máxima profundidad (s)",
+    "end_seconds": "Final (s)",
+    "descent_duration_seconds": "Duración del descenso (s)",
+    "ascent_duration_seconds": "Duración del ascenso (s)",
+    "total_duration_seconds": "Duración total (s)",
+    "peak_hip_midpoint_y": "Centro de caderas Y en máxima profundidad",
+    "valid_frames_percentage": "Fotogramas válidos (%)",
+    "trunk_inclination_deg": "Inclinación lateral del tronco (°)",
+    "pelvis_lateral_shift_pct": "Desplazamiento lateral de pelvis (%)",
+    "left_knee_medial_deviation_pct": "Desviación medial rodilla izquierda (%)",
+    "right_knee_medial_deviation_pct": "Desviación medial rodilla derecha (%)",
+    "bilateral_alignment_difference_pct": "Diferencia de alineación bilateral (%)",
+    "trunk_inclination_at_peak_deg": "Tronco en máxima profundidad (°)",
+    "trunk_max_abs_deg": "Máxima inclinación absoluta del tronco (°)",
+    "trunk_max_abs_frame": "Fotograma de máxima inclinación del tronco",
+    "pelvis_shift_at_peak_pct": "Pelvis en máxima profundidad (%)",
+    "pelvis_max_abs_shift_pct": "Máximo desplazamiento absoluto de pelvis (%)",
+    "pelvis_max_abs_frame": "Fotograma de máximo desplazamiento de pelvis",
+    "left_knee_medial_deviation_at_peak_pct": "Rodilla izquierda en máxima profundidad (%)",
+    "right_knee_medial_deviation_at_peak_pct": "Rodilla derecha en máxima profundidad (%)",
+    "left_knee_max_medial_deviation_pct": "Máxima desviación rodilla izquierda (%)",
+    "right_knee_max_medial_deviation_pct": "Máxima desviación rodilla derecha (%)",
+    "bilateral_alignment_difference_at_peak_pct": "Asimetría en máxima profundidad (%)",
+    "bilateral_max_alignment_difference_pct": "Máxima asimetría bilateral (%)",
+    "finding": "Compensación observable",
+    "status": "Clasificación",
+    "direction": "Dirección",
+    "metric": "Métrica aplicada",
+    "unit": "Unidad",
+    "aggregate_value": "Valor calculado",
+    "repetition_values": "Valores de la repetición",
+    "repetition_states": "Estados de la repetición",
+    "absent_max": "Umbral máximo de ausencia",
+    "present_min": "Umbral mínimo de presencia",
+    "ruleset_rationale": "Justificación de la regla",
 }
 
 
@@ -118,6 +200,45 @@ def build_case_excel(
     _metrics_sheet(workbook, performance, comparison)
     for sheet in workbook.worksheets:
         _format_sheet(sheet)
+    output = BytesIO()
+    workbook.save(output)
+    return output.getvalue()
+
+
+def build_technical_data_excel(*, artifacts: dict[str, bytes]) -> bytes:
+    """Create readable tables without modifying canonical pipeline CSV files."""
+    workbook = Workbook()
+    workbook.remove(workbook.active)
+    for filename, (sheet_name, table_name) in _TECHNICAL_SHEETS.items():
+        content = artifacts.get(filename)
+        if content is None:
+            continue
+        rows = list(csv.reader(StringIO(content.decode("utf-8-sig"))))
+        if not rows:
+            continue
+        sheet = workbook.create_sheet(sheet_name)
+        sheet.append([_TECHNICAL_HEADERS.get(value, _label(value)) for value in rows[0]])
+        for row in rows[1:]:
+            sheet.append([_technical_cell(value) for value in row])
+        if sheet.max_row > 1:
+            table = Table(
+                displayName=table_name,
+                ref=f"A1:{get_column_letter(sheet.max_column)}{sheet.max_row}",
+            )
+            table.tableStyleInfo = TableStyleInfo(
+                name="TableStyleMedium2",
+                showFirstColumn=False,
+                showLastColumn=False,
+                showRowStripes=True,
+                showColumnStripes=False,
+            )
+            sheet.add_table(table)
+        _format_sheet(sheet)
+        sheet.freeze_panes = "A2"
+    if not workbook.worksheets:
+        sheet = workbook.create_sheet("Datos técnicos")
+        sheet.append(["Estado"])
+        sheet.append(["No se encontraron archivos CSV para este caso."])
     output = BytesIO()
     workbook.save(output)
     return output.getvalue()
@@ -673,6 +794,30 @@ def _with_unit(value: Any, unit: str) -> str | None:
     return f"{value} {unit}"
 
 
+def _technical_cell(value: str) -> Any:
+    if value == "":
+        return None
+    lowered = value.lower()
+    if lowered in {"true", "false"}:
+        return "Sí" if lowered == "true" else "No"
+    side, separator, landmark = lowered.partition("_")
+    if separator and side in {"left", "right"} and landmark in _LANDMARK_LABELS:
+        return (
+            f"{_LANDMARK_LABELS[landmark]} "
+            f"{'izquierdo' if side == 'left' else 'derecho'}"
+        )
+    displayed = _display_value(value)
+    if displayed != value:
+        return displayed
+    try:
+        return int(value)
+    except ValueError:
+        try:
+            return float(value)
+        except ValueError:
+            return value
+
+
 def _display_value(value: Any) -> Any:
     if value is None or value == "":
         return "No especificado"
@@ -732,4 +877,8 @@ def _decimal(value: float | None) -> str:
     return f"{value:.3f}" if value is not None else "N/D"
 
 
-__all__ = ["build_case_excel", "build_case_pdf"]
+__all__ = [
+    "build_case_excel",
+    "build_case_pdf",
+    "build_technical_data_excel",
+]

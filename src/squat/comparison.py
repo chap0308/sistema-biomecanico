@@ -42,6 +42,14 @@ class ExpertJudgment(BaseModel):
     classification: Literal["presente", "ausente", "no_concluyente"]
     observed_side: str | None = None
     confidence: Literal["baja", "media", "alta"] | None = None
+    observation: str | None = None
+
+
+class ExpertEvaluationObservation(BaseModel):
+    """General observation attached to one submitted expert evaluation."""
+
+    evaluator_id: str
+    general_observation: str | None = None
 
 
 class FinalReference(BaseModel):
@@ -112,6 +120,9 @@ class CaseComparison(BaseModel):
     submitted_evaluations: int = Field(ge=0)
     reference_status: Literal["open", "in_progress", "closed"] = "open"
     patterns: list[PatternComparison]
+    evaluator_observations: list[ExpertEvaluationObservation] = Field(
+        default_factory=list
+    )
     ready_for_metrics: bool
     expert_fleiss_kappa: float | None = None
     fleiss_items: int = Field(default=0, ge=0)
@@ -238,6 +249,10 @@ def build_stored_case_comparison(payload: dict[str, Any]) -> CaseComparison:
         submitted_evaluations=payload.get("submitted_evaluations", 0),
         reference_status=payload.get("reference_status", "open"),
         patterns=patterns,
+        evaluator_observations=[
+            ExpertEvaluationObservation.model_validate(item)
+            for item in payload.get("evaluator_observations", [])
+        ],
         ready_for_metrics=all(
             pattern.reference is not None for pattern in patterns
         ),

@@ -10,7 +10,7 @@ import {
 
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -109,25 +109,63 @@ export default async function ComparisonPage({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          <a
+            href={`/api/squat/cases/${caseId}/exports/technical-data.xlsx`}
+            className={buttonVariants({ size: "sm", variant: "outline" })}
+          >
+            <DownloadIcon aria-hidden="true" />
+            Datos técnicos
+          </a>
           <ReferenceLifecycleControls
             caseId={caseId}
             status={comparison.reference_status}
             readyForMetrics={comparison.ready_for_metrics}
+            assignedEvaluators={comparison.assigned_evaluators}
+            submittedEvaluations={comparison.submitted_evaluations}
           />
-          <a
-            href={`/api/squat/cases/${caseId}/exports/instruments.xlsx`}
-            className={buttonVariants({ size: "sm", variant: "outline" })}
-          >
-            <DownloadIcon aria-hidden="true" />
-            Excel
-          </a>
-          <a
-            href={`/api/squat/cases/${caseId}/exports/report.pdf`}
-            className={buttonVariants({ size: "sm" })}
-          >
-            <DownloadIcon aria-hidden="true" />
-            Reporte PDF
-          </a>
+          {comparison.reference_status === "closed" ? (
+            <>
+              <a
+                href={`/api/squat/cases/${caseId}/exports/instruments.xlsx`}
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "outline",
+                })}
+              >
+                <DownloadIcon aria-hidden="true" />
+                Excel
+              </a>
+              <a
+                href={`/api/squat/cases/${caseId}/exports/report.pdf`}
+                className={buttonVariants({ size: "sm" })}
+              >
+                <DownloadIcon aria-hidden="true" />
+                Reporte PDF
+              </a>
+            </>
+          ) : (
+            <>
+              <Button
+                type="button"
+                size="sm"
+                variant="outline"
+                disabled
+                title="Cierra el caso para habilitar la descarga."
+              >
+                <DownloadIcon aria-hidden="true" />
+                Excel
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                disabled
+                title="Cierra el caso para habilitar la descarga."
+              >
+                <DownloadIcon aria-hidden="true" />
+                Reporte PDF
+              </Button>
+            </>
+          )}
         </div>
       </header>
 
@@ -188,6 +226,35 @@ export default async function ComparisonPage({
           ))}
         </div>
       </section>
+
+      {comparison.evaluator_observations.some(
+        (item) => item.general_observation,
+      ) ? (
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold tracking-tight">
+            Observaciones generales de los evaluadores
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Notas contextuales registradas al finalizar cada evaluación.
+          </p>
+          <div className="mt-4 grid gap-3 lg:grid-cols-3">
+            {comparison.evaluator_observations.map((item, index) =>
+              item.general_observation ? (
+                <Card key={item.evaluator_id}>
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm">
+                      Evaluador {index + 1}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm leading-6 text-muted-foreground">
+                    {item.general_observation}
+                  </CardContent>
+                </Card>
+              ) : null,
+            )}
+          </div>
+        </section>
+      ) : null}
 
       <section className="mt-10">
         <h2 className="text-2xl font-semibold tracking-tight">
@@ -281,6 +348,21 @@ function PatternCard({
                   judgment.observed_side,
                 )}
               </p>
+              {judgment.confidence ? (
+                <Badge variant="outline" className="mt-2">
+                  Confianza {label(judgment.confidence).toLowerCase()}
+                </Badge>
+              ) : null}
+              {judgment.observation ? (
+                <details className="mt-3 text-xs">
+                  <summary className="cursor-pointer font-medium">
+                    Ver observación
+                  </summary>
+                  <p className="mt-2 leading-5 text-muted-foreground">
+                    {judgment.observation}
+                  </p>
+                </details>
+              ) : null}
             </div>
           ))}
           <div className="rounded-lg border border-cyan-300/70 bg-cyan-50/70 p-3 dark:border-cyan-800 dark:bg-cyan-950/30">

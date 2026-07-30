@@ -50,7 +50,11 @@ from src.squat.contracts import (
     SquatManualProtocolReview,
 )
 from src.squat.models import SquatCaseRecord
-from src.squat.exports import build_case_excel, build_case_pdf
+from src.squat.exports import (
+    build_case_excel,
+    build_case_pdf,
+    build_technical_data_excel,
+)
 from src.squat.explanation import (
     SquatCaseExplanation,
     build_case_explanation,
@@ -241,7 +245,11 @@ async def get_squat_dataset_metrics(
 )
 async def export_squat_case(
     case_id: str,
-    filename: Literal["instruments.xlsx", "report.pdf"],
+    filename: Literal[
+        "instruments.xlsx",
+        "report.pdf",
+        "technical-data.xlsx",
+    ],
     current_user: SquatUserDependency,
 ) -> Response:
     """Generate investigator-only exports from canonical persisted data."""
@@ -266,7 +274,47 @@ async def export_squat_case(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="The completed squat case was not found.",
         )
+    if filename == "technical-data.xlsx":
+        report_model = SquatCaseReport.model_validate(case_report)
+        artifacts: dict[str, bytes] = {}
+        case_dir = (_OUTPUT_ROOT / safe_case_id).resolve()
+        for artifact_name in _technical_artifact_names(report_model):
+            local_path = (case_dir / artifact_name).resolve()
+            if local_path.parent == case_dir and local_path.is_file():
+                artifacts[artifact_name] = local_path.read_bytes()
+                continue
+            stored = await run_in_threadpool(
+                store.get_case_artifact,
+                safe_case_id,
+                artifact_name,
+            )
+            if stored is not None:
+                artifacts[artifact_name] = stored.content
+        content = await run_in_threadpool(
+            build_technical_data_excel,
+            artifacts=artifacts,
+        )
+        media_type = (
+            "application/vnd.openxmlformats-officedocument."
+            "spreadsheetml.sheet"
+        )
+        return Response(
+            content=content,
+            media_type=media_type,
+            headers={
+                "Content-Disposition": (
+                    f'attachment; filename="{safe_case_id}-{filename}"'
+                ),
+                "Content-Length": str(len(content)),
+            },
+        )
+
     comparison = build_stored_case_comparison(comparison_payload)
+    if comparison.reference_status != "closed":
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="The case must be closed before exporting final results.",
+        )
     if not comparison.ready_for_metrics:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
@@ -1158,6 +1206,20 @@ def _explanation_artifact_names(report: SquatCaseReport) -> list[str]:
         report.artifacts.frame_phases_csv,
         report.artifacts.biomechanical_frame_metrics_csv,
         report.artifacts.landmarks_csv,
+    )
+    return [name for name in names if name]
+
+
+def _technical_artifact_names(report: SquatCaseReport) -> list[str]:
+    """Return canonical CSV files included in the readable technical workbook."""
+    names = (
+        report.artifacts.landmarks_csv,
+        report.artifacts.frame_quality_csv,
+        report.artifacts.frame_phases_csv,
+        report.artifacts.repetitions_csv,
+        report.artifacts.biomechanical_frame_metrics_csv,
+        report.artifacts.biomechanical_repetition_metrics_csv,
+        report.artifacts.rule_evidence_csv,
     )
     return [name for name in names if name]
 

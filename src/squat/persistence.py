@@ -724,6 +724,7 @@ class SupabaseSquatStore:
             },
         )
         judgments: list[dict[str, Any]] = []
+        evaluator_observations: list[dict[str, Any]] = []
         submitted = 0
         for assignment in assignments:
             if assignment["status"] != "submitted":
@@ -731,7 +732,7 @@ class SupabaseSquatStore:
             evaluation_rows = self._select(
                 "squat_expert_evaluations",
                 params={
-                    "select": "evaluation_id",
+                    "select": "evaluation_id,general_observation",
                     "assignment_id": f"eq.{assignment['assignment_id']}",
                     "evaluator_id": f"eq.{assignment['evaluator_id']}",
                     "status": "eq.submitted",
@@ -741,12 +742,20 @@ class SupabaseSquatStore:
             if not evaluation_rows:
                 continue
             submitted += 1
+            evaluator_observations.append(
+                {
+                    "evaluator_id": assignment["evaluator_id"],
+                    "general_observation": evaluation_rows[0].get(
+                        "general_observation"
+                    ),
+                }
+            )
             items = self._select(
                 "squat_expert_evaluation_items",
                 params={
                     "select": (
                         "repetition_index,pattern_key,classification,observed_side,"
-                        "confidence"
+                        "confidence,observation"
                     ),
                     "evaluation_id": (
                         f"eq.{evaluation_rows[0]['evaluation_id']}"
@@ -780,6 +789,7 @@ class SupabaseSquatStore:
             "submitted_evaluations": submitted,
             "reference_status": case_rows[0].get("reference_status", "open"),
             "judgments": judgments,
+            "evaluator_observations": evaluator_observations,
             "manual_references": manual_references,
         }
 
