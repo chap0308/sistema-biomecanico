@@ -92,6 +92,7 @@ export function ConsensusForm({
         <select
           id={`reference-${repetitionIndex}-${patternKey}`}
           name="reference"
+          aria-label="Referencia final"
           className={selectClassName}
           defaultValue={referenceValue(currentReference)}
         >

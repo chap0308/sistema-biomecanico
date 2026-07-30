@@ -94,6 +94,17 @@ const variables = {
 
 type VariableKey = keyof typeof variables;
 
+const geometrySkeleton = [
+  ["left_shoulder", "right_shoulder"],
+  ["left_shoulder", "left_hip"],
+  ["right_shoulder", "right_hip"],
+  ["left_hip", "right_hip"],
+  ["left_hip", "left_knee"],
+  ["right_hip", "right_knee"],
+  ["left_knee", "left_ankle"],
+  ["right_knee", "right_ankle"],
+] as const;
+
 const landmarkGroups = {
   shoulder: "Hombro",
   hip: "Cadera",
@@ -313,17 +324,6 @@ function GeometryDiagram({
     );
   }
   const { geometry, landmarks } = keyFrame;
-  const skeleton = [
-    ["left_shoulder", "right_shoulder"],
-    ["left_shoulder", "left_hip"],
-    ["right_shoulder", "right_hip"],
-    ["left_hip", "right_hip"],
-    ["left_hip", "left_knee"],
-    ["right_hip", "right_knee"],
-    ["left_knee", "left_ankle"],
-    ["right_knee", "right_ankle"],
-  ] as const;
-
   return (
     <div className="mb-5 grid gap-4 rounded-xl border bg-slate-950 p-4 lg:grid-cols-[minmax(0,0.8fr)_minmax(16rem,1.2fr)]">
       <div className="mx-auto w-full max-w-sm">
@@ -333,7 +333,7 @@ function GeometryDiagram({
           role="img"
           aria-label={`Esquema geométrico de ${variables[variable].label.toLowerCase()}`}
         >
-          {skeleton.map(([from, to]) => (
+          {geometrySkeleton.map(([from, to]) => (
             <SvgLine
               key={`${from}-${to}`}
               from={landmarks[from]}

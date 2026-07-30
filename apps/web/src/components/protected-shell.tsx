@@ -2,6 +2,7 @@ import { ScanLineIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { LogoutButton } from "@/components/logout-button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { homeForRole } from "@/lib/auth/roles";
 import { requireResearchProfile } from "@/lib/auth/session";
 
@@ -20,7 +21,7 @@ export async function ProtectedShell({
       >
         Ir al contenido principal
       </a>
-      <header className="border-b bg-background/90 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur-lg">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
           <a
             href={homeForRole(profile.role)}
@@ -39,7 +40,10 @@ export async function ProtectedShell({
             </div>
           </a>
           <div className="flex items-center gap-2">
-            <Badge variant="outline">{roleLabel}</Badge>
+            <Badge className="hidden sm:inline-flex" variant="outline">
+              {roleLabel}
+            </Badge>
+            <ThemeToggle />
             <LogoutButton />
           </div>
         </div>

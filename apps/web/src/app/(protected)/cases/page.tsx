@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FileVideoIcon, PlusIcon } from "lucide-react";
+import type { Metadata } from "next";
 
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -37,6 +38,20 @@ import type { SquatCasePage } from "@/types/squat-case-page";
 type CasesPageProps = {
   searchParams: Promise<{ page?: string; status?: string }>;
 };
+
+export const metadata: Metadata = {
+  title: "Casos",
+};
+
+const caseDateFormatter = new Intl.DateTimeFormat("es-PE", {
+  dateStyle: "medium",
+});
+const caseFilters: Array<{ label: string; value?: CaseStatus }> = [
+  { label: "Todos" },
+  { label: "Completados", value: "completed" },
+  { label: "No incorporados", value: "excluded" },
+  { label: "Con error", value: "failed" },
+];
 
 export default async function CasesPage({ searchParams }: CasesPageProps) {
   await requireRole("investigator");
@@ -93,15 +108,9 @@ export default async function CasesPage({ searchParams }: CasesPageProps) {
 }
 
 function StatusFilters({ activeStatus }: { activeStatus?: CaseStatus }) {
-  const filters: Array<{ label: string; value?: CaseStatus }> = [
-    { label: "Todos" },
-    { label: "Completados", value: "completed" },
-    { label: "No incorporados", value: "excluded" },
-    { label: "Con error", value: "failed" },
-  ];
   return (
     <nav aria-label="Filtros del historial" className="mt-8 flex flex-wrap gap-2">
-      {filters.map((filter) => {
+      {caseFilters.map((filter) => {
         const active = filter.value === activeStatus;
         return (
           <Link
@@ -164,9 +173,7 @@ function CaseHistory({
                   </Badge>
                 </TableCell>
                 <TableCell>
-                  {new Intl.DateTimeFormat("es-PE", {
-                    dateStyle: "medium",
-                  }).format(new Date(item.created_at))}
+                  {caseDateFormatter.format(new Date(item.created_at))}
                 </TableCell>
                 <TableCell className="text-right">
                   <Link

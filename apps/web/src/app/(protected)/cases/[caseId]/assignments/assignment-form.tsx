@@ -52,6 +52,7 @@ export function AssignmentForm({
   const assignedIds = new Set(
     assignments.map((assignment) => assignment.evaluator_id),
   );
+  const selectedIds = new Set(selected);
   const availableSlots = 3 - assignedIds.size;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -143,15 +144,18 @@ export function AssignmentForm({
           <label
             key={expert.user_id}
             className="flex items-center gap-3 rounded-xl border bg-card p-4 transition-colors has-data-[selected=true]:border-primary/50 has-data-[selected=true]:bg-primary/5"
-            data-selected={selected.includes(expert.user_id)}
+            data-selected={selectedIds.has(expert.user_id)}
           >
             <Checkbox
-              checked={assignedIds.has(expert.user_id) || selected.includes(expert.user_id)}
+              checked={
+                assignedIds.has(expert.user_id) ||
+                selectedIds.has(expert.user_id)
+              }
               disabled={
                 locked ||
                 pending ||
                 assignedIds.has(expert.user_id) ||
-                (!selected.includes(expert.user_id) &&
+                (!selectedIds.has(expert.user_id) &&
                   selected.length >= availableSlots)
               }
               onCheckedChange={(checked) =>

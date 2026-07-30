@@ -9,6 +9,11 @@ const stateStyles = {
   no_concluyente: "bg-slate-400",
 } as const;
 
+const metricNumberFormatter = new Intl.NumberFormat("es-PE", {
+  maximumFractionDigits: 2,
+  minimumFractionDigits: 0,
+});
+
 export function MetricEvidence({
   decision,
   repetitionMetrics,
@@ -100,10 +105,7 @@ export function formatMetric(value: number | null, unit: string) {
 }
 
 function formatNumber(value: number) {
-  return new Intl.NumberFormat("es-PE", {
-    maximumFractionDigits: 2,
-    minimumFractionDigits: 0,
-  }).format(value);
+  return metricNumberFormatter.format(value);
 }
 
 function SideValue({

@@ -11,8 +11,11 @@ export function LogoutButton() {
 
   async function logout() {
     setPending(true);
-    await createClient().auth.signOut();
-    window.location.replace("/login");
+    try {
+      await createClient().auth.signOut();
+    } finally {
+      window.location.replace("/login");
+    }
   }
 
   return (

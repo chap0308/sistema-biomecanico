@@ -2,15 +2,25 @@
 
 import { useRef, useState } from "react";
 import { CirclePlayIcon, LocateFixedIcon } from "lucide-react";
+import dynamic from "next/dynamic";
 
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import type {
   SquatEventCapture,
   SquatRepetition,
 } from "@/types/squat-case-report";
 import type { SquatCaseExplanation } from "@/types/squat-explanation";
 
-import { ExplanationWorkspace } from "./explanation-workspace";
+const ExplanationWorkspace = dynamic(
+  () =>
+    import("./explanation-workspace").then(
+      (module) => module.ExplanationWorkspace,
+    ),
+  {
+    loading: () => <Skeleton className="mt-8 h-[32rem] w-full rounded-2xl" />,
+  },
+);
 
 type AnalysisPlayerProps = {
   assetUrl: string;

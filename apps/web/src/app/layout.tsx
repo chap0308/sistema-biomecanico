@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
 const archivo = Archivo({
@@ -16,12 +17,23 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  applicationName: "Laboratorio de movimiento",
   title: {
     default: "Laboratorio de sentadilla bilateral",
     template: "%s | Laboratorio de sentadilla",
   },
   description:
     "Interfaz de investigación para el análisis interpretable de sentadilla bilateral.",
+  keywords: [
+    "visión por computadora",
+    "estimación de pose 2D",
+    "sentadilla bilateral",
+    "biomecánica",
+  ],
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
@@ -32,11 +44,14 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      suppressHydrationWarning
       className={cn("font-sans", archivo.variable, ibmPlexMono.variable)}
     >
       <body className="min-h-dvh antialiased">
-        {children}
-        <Toaster position="top-right" richColors />
+        <ThemeProvider>
+          {children}
+          <Toaster position="top-right" richColors />
+        </ThemeProvider>
       </body>
     </html>
   );

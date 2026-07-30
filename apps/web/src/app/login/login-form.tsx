@@ -31,27 +31,30 @@ export function LoginForm() {
     const email = String(formData.get("email") ?? "").trim();
     const password = String(formData.get("password") ?? "");
     const supabase = createClient();
-    const { data, error: authError } =
-      await supabase.auth.signInWithPassword({ email, password });
-    const role = data.user?.user_metadata.squat_role;
+    try {
+      const { data, error: authError } =
+        await supabase.auth.signInWithPassword({ email, password });
+      const role = data.user?.user_metadata.squat_role;
 
-    if (authError || !data.user) {
-      setError("No se pudo validar la cuenta indicada.");
-      setPending(false);
-      return;
-    }
-    if (!isSquatRole(role)) {
-      await supabase.auth.signOut();
+      if (authError || !data.user) {
+        setError("No se pudo validar la cuenta indicada.");
+        return;
+      }
+      if (!isSquatRole(role)) {
+        await supabase.auth.signOut();
+        form.reset();
+        setError("La cuenta no tiene un rol habilitado para este estudio.");
+        return;
+      }
+
       form.reset();
-      setError("La cuenta no tiene un rol habilitado para este estudio.");
+      router.replace(homeForRole(role));
+      router.refresh();
+    } catch {
+      setError("No se pudo conectar con el servicio de autenticación.");
+    } finally {
       setPending(false);
-      return;
     }
-
-    form.reset();
-    setPending(false);
-    router.replace(homeForRole(role));
-    router.refresh();
   }
 
   return (

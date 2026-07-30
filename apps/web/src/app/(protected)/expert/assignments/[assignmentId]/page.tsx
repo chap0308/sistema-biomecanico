@@ -143,8 +143,8 @@ function SystemResults({ report }: { report: SquatCaseReport }) {
         independencia de la evaluación experta.
       </p>
       <div className="mt-5 grid gap-3 md:grid-cols-2">
-        {(report.findings?.decisions ?? []).map((decision, index) => (
-          <Card key={`${decision.repetition_index}-${decision.finding}-${index}`}>
+        {(report.findings?.decisions ?? []).map((decision) => (
+          <Card key={`${decision.repetition_index}-${decision.finding}`}>
             <CardHeader className="pb-2">
               <CardDescription>
                 Repetición {decision.repetition_index ?? 1}

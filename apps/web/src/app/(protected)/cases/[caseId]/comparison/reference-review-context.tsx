@@ -3,6 +3,7 @@
 import {
   createContext,
   useContext,
+  useMemo,
   useState,
   type ReactNode,
 } from "react";
@@ -25,11 +26,13 @@ export function ReferenceReviewProvider({
   children: ReactNode;
 }) {
   const [comparison, setComparison] = useState(initialComparison);
+  const value = useMemo(
+    () => ({ comparison, updateComparison: setComparison }),
+    [comparison],
+  );
 
   return (
-    <ReferenceReviewContext
-      value={{ comparison, updateComparison: setComparison }}
-    >
+    <ReferenceReviewContext value={value}>
       {children}
     </ReferenceReviewContext>
   );

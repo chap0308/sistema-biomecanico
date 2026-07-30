@@ -4,6 +4,7 @@ import {
   ClipboardCheckIcon,
   Clock3Icon,
 } from "lucide-react";
+import type { Metadata } from "next";
 
 import { Badge } from "@/components/ui/badge";
 import {
@@ -16,6 +17,14 @@ import {
 import { apiServerFetch } from "@/lib/api/server";
 import { requireRole } from "@/lib/auth/session";
 import type { ExpertAssignment } from "@/types/squat-expert";
+
+export const metadata: Metadata = {
+  title: "Casos asignados",
+};
+
+const assignmentDateFormatter = new Intl.DateTimeFormat("es-PE", {
+  dateStyle: "medium",
+});
 
 export default async function ExpertAssignmentsPage() {
   await requireRole("expert");
@@ -70,9 +79,9 @@ export default async function ExpertAssignmentsPage() {
                 <CardContent className="flex items-center justify-between text-sm text-muted-foreground">
                   <span>
                     Asignado el{" "}
-                    {new Intl.DateTimeFormat("es-PE", {
-                      dateStyle: "medium",
-                    }).format(new Date(assignment.created_at))}
+                    {assignmentDateFormatter.format(
+                      new Date(assignment.created_at),
+                    )}
                   </span>
                   <ChevronRightIcon
                     className="size-4 transition-transform group-hover:translate-x-1"

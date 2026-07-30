@@ -52,6 +52,13 @@ const findingLabels: Record<string, string> = {
   valgo_dinamico_visible: "Valgo dinámico visible",
   asimetria_bilateral_observable: "Asimetría bilateral observable",
 };
+const caseStatusLabels: Record<SquatCaseReport["status"], string> = {
+  registro_pendiente: "Registro pendiente",
+  registro_rechazado: "Registro rechazado",
+  analisis_parcial: "Análisis parcial",
+  no_apto_para_analisis: "No apto para análisis",
+  analisis_completo: "Análisis completo",
+};
 
 export default async function CaseDetailPage({
   params,
@@ -548,14 +555,7 @@ function DecisionBadge({ status }: { status: SquatRuleDecision["status"] }) {
 }
 
 function StatusBadge({ status }: { status: SquatCaseReport["status"] }) {
-  const labels: Record<SquatCaseReport["status"], string> = {
-    registro_pendiente: "Registro pendiente",
-    registro_rechazado: "Registro rechazado",
-    analisis_parcial: "Análisis parcial",
-    no_apto_para_analisis: "No apto para análisis",
-    analisis_completo: "Análisis completo",
-  };
-  return <Badge variant="secondary">{labels[status]}</Badge>;
+  return <Badge variant="secondary">{caseStatusLabels[status]}</Badge>;
 }
 
 function SectionHeading({

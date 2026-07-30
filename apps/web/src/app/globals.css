@@ -49,6 +49,7 @@
 }
 
 :root {
+    color-scheme: light;
     --background: oklch(0.975 0.009 87);
     --foreground: oklch(0.205 0.027 215);
     --card: oklch(0.995 0.004 87);
@@ -83,6 +84,41 @@
     --sidebar-ring: oklch(0.55 0.08 205);
 }
 
+.dark {
+    color-scheme: dark;
+    --background: oklch(0.17 0.018 215);
+    --foreground: oklch(0.94 0.012 87);
+    --card: oklch(0.205 0.02 215);
+    --card-foreground: oklch(0.94 0.012 87);
+    --popover: oklch(0.205 0.02 215);
+    --popover-foreground: oklch(0.94 0.012 87);
+    --primary: oklch(0.72 0.105 190);
+    --primary-foreground: oklch(0.16 0.025 215);
+    --secondary: oklch(0.27 0.025 210);
+    --secondary-foreground: oklch(0.92 0.012 87);
+    --muted: oklch(0.245 0.018 215);
+    --muted-foreground: oklch(0.7 0.025 205);
+    --accent: oklch(0.3 0.04 190);
+    --accent-foreground: oklch(0.94 0.012 87);
+    --destructive: oklch(0.68 0.17 28);
+    --border: oklch(0.32 0.022 210);
+    --input: oklch(0.34 0.025 210);
+    --ring: oklch(0.72 0.105 190);
+    --chart-1: oklch(0.72 0.105 190);
+    --chart-2: oklch(0.78 0.12 78);
+    --chart-3: oklch(0.7 0.14 32);
+    --chart-4: oklch(0.7 0.1 145);
+    --chart-5: oklch(0.7 0.09 275);
+    --sidebar: oklch(0.19 0.02 215);
+    --sidebar-foreground: oklch(0.94 0.012 87);
+    --sidebar-primary: oklch(0.72 0.105 190);
+    --sidebar-primary-foreground: oklch(0.16 0.025 215);
+    --sidebar-accent: oklch(0.3 0.04 190);
+    --sidebar-accent-foreground: oklch(0.94 0.012 87);
+    --sidebar-border: oklch(0.32 0.022 210);
+    --sidebar-ring: oklch(0.72 0.105 190);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -95,6 +131,7 @@
     }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
     }
 }
 
@@ -109,5 +146,30 @@
       linear-gradient(to bottom, color-mix(in oklch, var(--foreground) 5%, transparent) 1px, transparent 1px);
     background-size: 42px 42px;
     mask-image: linear-gradient(to bottom, black, transparent 88%);
+  }
+
+  [data-reveal] {
+    animation: reveal-in 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    animation: none;
   }
 }

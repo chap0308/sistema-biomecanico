@@ -17,6 +17,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const pipelineSteps = [
   {
@@ -65,11 +66,16 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Badge variant="outline">Prototipo de investigación</Badge>
+        <div className="flex items-center gap-2">
+          <Badge className="hidden sm:inline-flex" variant="outline">
+            Prototipo de investigación
+          </Badge>
+          <ThemeToggle />
+        </div>
       </header>
 
       <section className="mx-auto grid w-full max-w-7xl gap-12 px-6 pb-20 pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:pb-28 lg:pt-24">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl" data-reveal>
           <Badge className="mb-6" variant="secondary">
             Visión por computadora + criterios interpretables
           </Badge>
@@ -90,7 +96,11 @@ export default function Home() {
           </div>
         </div>
 
-        <Card className="self-end border-0 bg-foreground text-background shadow-[0_28px_80px_-38px_color-mix(in_oklch,var(--foreground),transparent_36%)] ring-0">
+        <Card
+          className="self-end border-0 bg-foreground text-background shadow-[0_28px_80px_-38px_color-mix(in_oklch,var(--foreground),transparent_36%)] ring-0"
+          data-reveal
+          style={{ animationDelay: "120ms" }}
+        >
           <CardHeader className="border-b border-background/15 pb-5">
             <CardTitle className="text-xl">Flujo verificable</CardTitle>
             <CardDescription className="text-background/60">

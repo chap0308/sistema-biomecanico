@@ -161,17 +161,16 @@ export function NewCaseForm() {
     payload.set("protocol_review_status", "aceptado");
     payload.set("manual_review_json", JSON.stringify(manualReview));
 
-    const supabase = createClient();
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
-    if (!session?.access_token) {
-      setError("La sesión expiró. Vuelve a iniciar sesión.");
-      setPending(false);
-      return;
-    }
-
     try {
+      const supabase = createClient();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (!session?.access_token) {
+        setError("La sesión expiró. Vuelve a iniciar sesión.");
+        return;
+      }
+
       const response = await fetch(`${getApiBaseUrl()}/squat/cases`, {
         method: "POST",
         headers: { Authorization: `Bearer ${session.access_token}` },
@@ -191,6 +190,7 @@ export function NewCaseForm() {
           ? submissionError.message
           : "No se pudo registrar el caso.",
       );
+    } finally {
       setPending(false);
     }
   }
@@ -469,7 +469,12 @@ function SelectField({
   return (
     <Field>
       <FieldLabel htmlFor={name}>{label}</FieldLabel>
-      <select id={name} name={name} className={selectClassName}>
+      <select
+        id={name}
+        name={name}
+        aria-label={label}
+        className={selectClassName}
+      >
         {options.map(([value, text]) => (
           <option key={value} value={value}>
             {text}
