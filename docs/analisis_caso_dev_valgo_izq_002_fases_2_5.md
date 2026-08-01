@@ -339,6 +339,29 @@ W0 = 0.258264 del ancho de la imagen
 
 Esta normalización evita que una distancia horizontal dependa directamente de la resolución, del tamaño aparente de la persona o de su distancia a la cámara.
 
+Aunque MediaPipe entrega `x` e `y` normalizados entre 0 y 1 respecto de la
+imagen, esas coordenadas todavía dependen del encuadre. Un desplazamiento de
+`0.05` ocupa el 5 % del ancho de la imagen, pero no representa la misma
+proporción corporal si una persona aparece muy cerca y otra muy lejos. Dividir
+entre `W0` cambia la pregunta de «¿qué fracción de la imagen se desplazó?» a
+«¿qué fracción del ancho aparente inicial de hombros se desplazó?».
+
+Por ejemplo, un desplazamiento horizontal de `0.02` equivale a:
+
+```text
+persona A: 100 x 0.02 / 0.20 = 10 % de W0
+persona B: 100 x 0.02 / 0.40 =  5 % de W0
+```
+
+El factor `100` solo convierte una razón adimensional en porcentaje. No
+representa probabilidad, confianza ni porcentaje de lesión. Se eligió el ancho
+inicial de hombros porque en vista frontal es una referencia bilateral visible,
+relativamente estable y disponible en el mismo modelo de pose. La mediana de
+varios fotogramas iniciales reduce la influencia de un fotograma atípico. Esta
+normalización no corrige rotación fuera del plano, perspectiva intensa ni
+diferencias antropométricas completas; únicamente reduce el efecto de escala
+aparente y resolución.
+
 ### 6.4. Inclinación lateral del tronco
 
 Se calculan los puntos medios de hombros `S` y pelvis `P`:
@@ -355,6 +378,46 @@ theta_tronco = atan2(Sx - Px, Py - Sy)
 ```
 
 Se expresa en grados porque describe la orientación de un eje corporal. El ángulo ya es independiente de la escala de la imagen.
+
+La fórmula se puede desarrollar a partir del vector que va desde la pelvis
+hacia los hombros:
+
+```text
+v_tronco = S - P
+componente horizontal = Sx - Px
+componente vertical hacia arriba = Py - Sy
+```
+
+En coordenadas de imagen, `y` aumenta hacia abajo; por eso la componente hacia
+arriba se escribe `Py - Sy`. Si se utilizara una pendiente convencional:
+
+```text
+pendiente respecto de la vertical = (Sx - Px) / (Py - Sy)
+theta = arctan(pendiente)
+```
+
+El sistema usa `atan2(componente_horizontal, componente_vertical)` porque
+conserva el signo, distingue correctamente los cuadrantes y evita una división
+explícita cuando la componente vertical se aproxima a cero. El resultado no
+necesita dividirse entre `W0`: al formar una razón entre dos longitudes del
+mismo vector, la escala ya se cancela. Si ambas componentes se duplicaran por
+acercar la cámara, el ángulo permanecería igual.
+
+El nombre de la variable determina qué propiedad geométrica se pretende medir:
+
+- **inclinación lateral del tronco**: orientación del eje pelvis-hombros; se
+  expresa como ángulo;
+- **desplazamiento lateral del tronco**: traslación del centro de hombros o de
+  otro referente respecto de la base de apoyo; sería una distancia normalizada;
+- **inclinación lateral de la pelvis**: oblicuidad de la línea que une ambas
+  caderas respecto de la horizontal; sería otro ángulo;
+- **desplazamiento lateral de pelvis**: traslación del centro pélvico respecto
+  de la base de apoyo; es la variable implementada.
+
+Por tanto, pelvis y tronco sí podrían medirse con la otra estrategia, pero no
+serían la misma variable ni responderían la misma pregunta. Una pelvis puede
+trasladarse lateralmente sin que la línea entre sus caderas se incline, y puede
+inclinarse sin que su centro se desplace de manera importante.
 
 ### 6.5. Desplazamiento lateral de pelvis
 
@@ -380,6 +443,29 @@ offset_inicial = 0.006611
 
 El resultado se expresa como porcentaje del ancho inicial de hombros porque es una distancia, no un ángulo.
 
+La resta del `offset_inicial` también es esencial. `Px - Ax` puede ser distinto
+de cero desde el reposo por postura inicial, pequeñas diferencias de encuadre o
+ruido de pose. Sin corregir esa línea base, el sistema atribuiría a la sentadilla
+un desplazamiento que ya existía antes de comenzar:
+
+```text
+delta_pelvis = offset_actual - offset_inicial
+pelvis_pct = 100 x delta_pelvis / W0
+```
+
+Se usa el centro de los tobillos porque aproxima el centro horizontal de una
+base de apoyo distal y relativamente estable durante la sentadilla. Las
+rodillas no son una referencia adecuada para esta variable: se desplazan
+durante el ejercicio y, además, su comportamiento es precisamente una de las
+salidas que se quiere evaluar. Usarlas como origen introduciría una referencia
+móvil y circular: un valgo o una desviación de rodilla podría aparentar un
+desplazamiento pélvico aunque la pelvis no hubiera cambiado respecto de los
+tobillos.
+
+Esto no significa que los tobillos describan toda la mecánica del pie. Son el
+referente distal disponible y reproducible en MediaPipe para esta aproximación
+2D. El sistema no estima presiones plantares ni el centro real de presión.
+
 ### 6.6. Alineación cadera-rodilla-tobillo
 
 El valgo requiere dos cálculos, uno por rodilla.
@@ -390,6 +476,46 @@ Para cada lado se construye primero una línea de referencia entre cadera `H` y 
 t = (Ky - Hy) / (Ay - Hy)
 Kx_esperado = Hx + t x (Ax - Hx)
 ```
+
+La ecuación proviene de representar todos los puntos de la recta cadera-tobillo
+mediante interpolación lineal:
+
+```text
+L(t) = H + t(A - H)
+
+Lx(t) = Hx + t(Ax - Hx)
+Ly(t) = Hy + t(Ay - Hy)
+```
+
+Se busca el punto de esa recta que tenga la misma altura de imagen que la
+rodilla real. Por ello se impone `Ly(t) = Ky`:
+
+```text
+Ky = Hy + t(Ay - Hy)
+Ky - Hy = t(Ay - Hy)
+t = (Ky - Hy) / (Ay - Hy)
+```
+
+Una vez obtenido `t`, se sustituye en la ecuación horizontal para calcular
+`Kx_esperado`. `t` no es tiempo, confianza ni umbral: es la posición relativa
+de la altura de la rodilla a lo largo del tramo cadera-tobillo. Idealmente,
+`t = 0` corresponde a la altura de la cadera y `t = 1` a la del tobillo. Un
+valor entre 0 y 1 indica que la rodilla se encuentra verticalmente entre ambos.
+Si `Ay - Hy` fuese cero o demasiado pequeño, la geometría sería degenerada y el
+cálculo no sería confiable; la implementación lo convierte en un valor ausente.
+
+Después se mide la separación **horizontal** entre la rodilla observada y ese
+punto esperado:
+
+```text
+delta_x = Kx_real - Kx_esperado
+```
+
+No se está calculando la distancia perpendicular mínima a la recta. Se eligió
+la diferencia horizontal a igual altura porque el análisis es frontal y busca
+medialización o lateralización visible. Esta decisión mantiene una
+interpretación directa en el eje horizontal, aunque constituye una aproximación
+2D y no un ángulo articular tridimensional.
 
 Después se compara la rodilla real con la esperada:
 
@@ -402,6 +528,19 @@ rodilla_derecha =
 ```
 
 El cambio de signo hace que un valor positivo signifique medialización en ambos lados anatómicos.
+
+La división entre `W0` cumple el mismo propósito que en la pelvis: `delta_x` es
+una distancia y debe expresarse en una escala corporal relativa. Sin esta
+normalización, la misma alineación produciría valores diferentes al cambiar la
+resolución o la distancia a la cámara:
+
+```text
+desviacion_pct = 100 x signo_medial x delta_x / W0
+```
+
+Los signos son distintos porque, en una vista anterior, la dirección medial de
+la rodilla izquierda apunta hacia un lado de la imagen y la de la derecha hacia
+el lado contrario. La transformación hace homogénea la lectura:
 
 Consecuencia:
 
@@ -417,6 +556,29 @@ diferencia_bilateral =
 ```
 
 La diferencia puede ser alta porque una rodilla se medializa y la otra se lateraliza. No significa que ambas tengan valgo.
+
+La fórmula es más simple porque las dos entradas ya pasaron por el trabajo
+geométrico previo: están normalizadas con el mismo `W0`, utilizan la misma unidad
+y comparten la convención «positivo = medial, negativo = lateral». Solo falta
+cuantificar qué tan separadas están ambas respuestas. Matemáticamente, para dos
+valores escalares comparables, la distancia absoluta es suficiente:
+
+```text
+D_bilateral = |L - R|
+```
+
+Es suficiente para la variable específica **diferencia bilateral de alineación
+de rodillas**, pero no para afirmar una asimetría corporal general. Además, por
+sí sola pierde la dirección y debe interpretarse junto con `L` y `R`:
+
+| Izquierda | Derecha | Diferencia | Interpretación |
+|---:|---:|---:|---|
+| 20 % | 20 % | 0 % | Comportamiento simétrico, aunque puede existir valgo bilateral |
+| 20 % | -20 % | 40 % | Gran diferencia: una medializa y la otra lateraliza |
+| 5 % | 0 % | 5 % | Diferencia pequeña entre ambos lados |
+
+Por esta razón, la regla de valgo evalúa cada rodilla por separado y la regla de
+asimetría usa la diferencia. Una no reemplaza a la otra.
 
 ### 6.8. Resultados en máxima profundidad
 
@@ -464,8 +626,14 @@ El signo positivo indica desplazamiento anatómico izquierdo.
 #### Rodilla izquierda
 
 ```text
-Kx_real = 0.544360
+Hy = 0.750241; Ky = 0.812981; Ay = 0.869815
+t = (0.812981 - 0.750241) / (0.869815 - 0.750241)
+t = 0.524693
+
+Kx_esperado = 0.607777 + 0.524693 x (0.621215 - 0.607777)
 Kx_esperado = 0.614828
+
+Kx_real = 0.544360
 
 desviación_izquierda =
     -100 x (0.544360 - 0.614828) / 0.258264
@@ -477,8 +645,14 @@ La desviación es medial y positiva.
 #### Rodilla derecha
 
 ```text
-Kx_real = 0.343448
+Hy = 0.732343; Ky = 0.781049; Ay = 0.845846
+t = (0.781049 - 0.732343) / (0.845846 - 0.732343)
+t = 0.429120
+
+Kx_esperado = 0.472601 + 0.429120 x (0.396632 - 0.472601)
 Kx_esperado = 0.440001
+
+Kx_real = 0.343448
 
 desviación_derecha =
     100 x (0.343448 - 0.440001) / 0.258264
@@ -504,7 +678,32 @@ El valor es lateral y no activa valgo derecho.
 
 No debe mostrarse un porcentaje como si fuera probabilidad o confianza. Es una distancia normalizada.
 
-### 6.11. Archivos de esta fase
+En términos de análisis dimensional:
+
+```text
+angulo = atan2(longitud, longitud) -> razon sin dimensión -> grados
+porcentaje = 100 x longitud / longitud de referencia -> razon sin dimensión -> %
+```
+
+Ambos resultados son independientes de una unidad física concreta, pero no son
+intercambiables. El ángulo conserva orientación; el porcentaje conserva cuánto
+se trasladó un punto respecto de una escala corporal aparente.
+
+### 6.11. Qué valor entra finalmente a las reglas
+
+Las series se calculan en todos los fotogramas válidos, pero las cuatro reglas
+usan el valor del fotograma etiquetado como `maxima_profundidad` de cada
+repetición. No utilizan el promedio de toda la repetición. La máxima profundidad
+es un evento temporal reproducible en el que se comparan simultáneamente las
+cuatro geometrías; promediar descenso, profundidad y ascenso podría diluir una
+compensación que aparece principalmente en la fase más exigente.
+
+El resumen también conserva máximos dentro de la repetición, como
+`trunk_max_abs_deg` o `pelvis_max_abs_shift_pct`, para trazabilidad y exploración.
+En la versión actual esos máximos no sustituyen al valor en profundidad dentro
+de las reglas provisionales.
+
+### 6.12. Archivos de esta fase
 
 | Archivo | Contenido |
 |---|---|
