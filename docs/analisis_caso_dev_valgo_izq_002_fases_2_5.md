@@ -194,6 +194,25 @@ Si se quisiera demostrar precisión geométrica de los puntos, se necesitaría u
 | `review.mp4` | Video anonimizado sin resultados | Revisión experta sin sesgo |
 | `pose_quality.png` | Serie de calidad | Evidencia gráfica |
 
+### 4.8. Fundamento, decisiones operativas y validación pendiente
+
+La estimación de pose sí cuenta con respaldo técnico directo. Bazarevsky et al. describen BlazePose como una arquitectura que estima 33 puntos corporales y está orientada a seguimiento en tiempo real de una persona, incluyendo aplicaciones de actividad física. El artículo también explica que el modelo produce coordenadas y una estimación de visibilidad por punto. Esta fuente respalda la selección de MediaPipe Pose como extractor de datos, pero no convierte automáticamente cada coordenada estimada en una referencia anatómica exacta ([BlazePose, 2020](https://arxiv.org/abs/2006.10204)).
+
+También existen estudios que han evaluado sistemas sin marcadores durante sentadillas bilaterales y tareas relacionadas. Ota et al. compararon sistemas de análisis basados en seguimiento de pose durante sentadilla bilateral, mientras que Pereira et al. propusieron una canalización bidimensional para cuantificar cinemática de miembros inferiores durante sentadillas. Estos antecedentes respaldan la viabilidad del enfoque general, no la exactitud particular de cada fotograma de este sistema ([Ota et al., 2020](https://doi.org/10.1016/j.gaitpost.2020.05.027); [Pereira et al., 2026](https://doi.org/10.3390/biomechanics6010001)).
+
+Debe distinguirse lo siguiente:
+
+| Elemento | Naturaleza | Alcance de la justificación |
+|---|---|---|
+| Uso de MediaPipe Pose y 33 puntos | Modelo preentrenado respaldado por su publicación técnica | Permite obtener estimaciones de pose desde video monocular |
+| Selección de 13 puntos | Decisión de diseño de esta tesis | Conserva las referencias necesarias para tronco, pelvis, rodillas, tobillos y pies |
+| Ocho puntos críticos: hombros, caderas, rodillas y tobillos bilaterales | Regla estructural propia | Exige continuidad de los segmentos principales usados en las fórmulas |
+| Talón o punta del pie por cada lado | Regla distal complementaria propia | Evita declarar válido un fotograma sin una referencia observable del pie |
+| Umbral de visibilidad `0.50` | Parámetro operativo provisional | Filtra estimaciones de baja confianza, pero no es un límite clínico ni prueba error posicional |
+| 90 %, 95 %, 80 % y 90 % de fotogramas válidos | Política de calidad del prototipo | Determina aptitud, advertencia o exclusión; requiere corroboración con el conjunto final |
+
+Por tanto, la fase 2 no necesita un artículo para justificar cada operación de OpenCV. Sí necesita citar el modelo de estimación de pose, antecedentes de validación sin marcadores y declarar que los umbrales de calidad son decisiones operativas configurables. La comprobación final debe incluir auditoría visual de los overlays y registro de fallos; una validación geométrica independiente exigiría anotaciones manuales o un sistema de referencia, lo cual constituye otro experimento.
+
 ---
 
 ## 5. Fase 3: segmentación temporal
@@ -207,6 +226,16 @@ hip_midpoint_y = (y_cadera_izquierda + y_cadera_derecha) / 2
 ```
 
 En coordenadas de imagen, `y` aumenta hacia abajo. Por ello, cuando la persona desciende, `hip_midpoint_y` aumenta. La máxima profundidad aparece como un máximo local de la señal.
+
+El punto medio se utiliza por tres razones:
+
+1. resume ambos lados de la pelvis en una sola señal temporal;
+2. reduce la dependencia de pequeñas oscilaciones aisladas de una sola cadera;
+3. representa de forma directa el descenso y ascenso global observables desde la vista frontal.
+
+No debe confundirse con el centro de masa corporal. Es un **proxy cinemático bidimensional de la posición vertical de la pelvis**. Si la cámara se mueve, la persona rota de forma importante o una cadera se estima incorrectamente, la señal también puede alterarse.
+
+El uso del punto medio de caderas y de su desplazamiento vertical tiene precedentes en sistemas de detección de sentadillas basados en pose. Por ejemplo, Cheng et al. definen la coordenada vertical de la cadera como el promedio de ambas caderas y utilizan su desplazamiento para identificar una postura de sentadilla. Otros trabajos de conteo de ejercicio muestran que las series temporales derivadas del esqueleto pueden usarse para localizar repeticiones ([Cheng et al., 2026](https://doi.org/10.3390/s26020729); [Hsu et al., 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10692053/)). Estos antecedentes respaldan el principio, pero no determinan los parámetros exactos usados aquí.
 
 ### 5.2. Limpieza de la señal
 
@@ -225,6 +254,22 @@ La ventana es aproximadamente:
 
 Esta combinación reduce pequeñas vibraciones de los landmarks sin eliminar el ciclo principal de la sentadilla.
 
+La interpolación solo cubre pérdidas aisladas para mantener una serie continua. No convierte un intervalo prolongado sin detección en evidencia válida: la puerta de calidad sigue utilizando `valid_for_analysis` para decidir si una repetición es elegible.
+
+La mediana móvil y el promedio móvil cumplen funciones diferentes:
+
+- la mediana reduce picos breves producidos por estimaciones atípicas;
+- el promedio suaviza pequeñas variaciones restantes y facilita localizar máximos estables;
+- la ventana centrada evita introducir deliberadamente un retraso hacia el pasado o el futuro.
+
+La ventana de `0.20 s` es una decisión operativa. A `24.037884 fps` se convierte en cinco fotogramas:
+
+```text
+ventana_suavizado = redondear(24.037884 x 0.20) = 5 fotogramas
+```
+
+No es una duración biomecánica universal. Se eligió para reducir vibración sin deformar visualmente los ciclos del lote piloto y debe conservarse versionada.
+
 ### 5.3. Detección de máximos de profundidad
 
 Los máximos candidatos deben cumplir una prominencia mínima:
@@ -233,12 +278,53 @@ Los máximos candidatos deben cumplir una prominencia mínima:
 prominencia_mínima = max(0.03, rango_señal x 0.18)
 ```
 
+El rango empleado es robusto frente a valores extremos:
+
+```text
+rango_señal = percentil_95(señal_suavizada) - percentil_05(señal_suavizada)
+```
+
+Un punto `p` es candidato cuando es un máximo local respecto de sus vecinos. Su prominencia local se calcula como:
+
+```text
+prominencia(p) = señal(p) - max(mínimo_izquierdo, mínimo_derecho)
+```
+
+Los mínimos izquierdo y derecho se buscan dentro de una ventana de tres segundos alrededor del candidato. El uso del mayor de ambos mínimos exige que el máximo se eleve suficientemente respecto del reposo en los dos lados del ciclo; así se reduce la posibilidad de contar una oscilación o pausa breve como una repetición completa.
+
+La prominencia no es una fórmula biomecánica. Es una propiedad de una señal que permite diferenciar máximos relevantes de pequeñas variaciones. La documentación oficial de SciPy describe precisamente el uso de máximos locales, distancia y prominencia para seleccionar picos en señales unidimensionales y recomienda suavizar señales ruidosas antes de buscarlos ([SciPy `find_peaks`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html)). La implementación de esta tesis es propia y equivalente en concepto; no llama directamente a `scipy.signal.find_peaks`.
+
 Además:
 
 - se revisa una ventana de aproximadamente 3 segundos;
 - dos máximos deben estar separados al menos 2 segundos;
 - una repetición no puede extenderse más de 10 segundos;
 - si el rango vertical global es menor de 0.04, no se reconoce una sentadilla suficiente.
+
+La función de cada parámetro es la siguiente:
+
+| Parámetro | Valor actual | Función | Naturaleza |
+|---|---:|---|---|
+| Ventana de prominencia | 3 s | Comparar el pico con reposos cercanos | Heurística temporal del prototipo |
+| Distancia mínima entre picos | 2 s | Evitar doble conteo dentro de un mismo ciclo | Heurística temporal del prototipo |
+| Duración máxima de repetición | 10 s | Limitar la búsqueda de reposos alrededor del pico | Heurística temporal del prototipo |
+| Rango mínimo | 0.04 | Rechazar señales con desplazamiento vertical insuficiente | Heurística geométrica normalizada |
+| Prominencia mínima absoluta | 0.03 | Evitar que una señal casi plana produzca repeticiones | Heurística geométrica normalizada |
+| Prominencia relativa | 18 % del rango robusto | Adaptar el filtro a la amplitud del video | Heurística adaptativa |
+
+Existen antecedentes que utilizan detección de picos y prominencia sobre señales verticales para aislar repeticiones de sentadilla. Un estudio piloto de función física empleó la señal vertical del centro de masa y fijó prominencia y distancia mínima después de una fase empírica de ajuste. Esto respalda la estrategia general y, al mismo tiempo, confirma que los parámetros deben calibrarse para cada señal y protocolo, no copiarse como valores universales ([Sobrino-Santos et al., 2025](https://doi.org/10.3390/technologies13060225)).
+
+En `dev_valgo_izq_002` se obtuvieron:
+
+```text
+P05 = 0.56297968
+P95 = 0.73769672
+rango robusto = 0.17471703
+18 % del rango = 0.03144907
+prominencia mínima = max(0.03, 0.03144907) = 0.03144907
+```
+
+Las prominencias seleccionadas fueron `0.06266419`, `0.06623311` y `0.08786859`; las tres superaron el límite adaptativo. Después se aplica supresión de máximos cercanos: si dos candidatos están separados por menos de 48 fotogramas, se conserva primero el de mayor profundidad.
 
 ### 5.4. Inicio y final de cada repetición
 
@@ -249,6 +335,27 @@ nivel_inicio = valle_inicial + 0.15 x (pico - valle_inicial)
 nivel_final  = valle_final   + 0.15 x (pico - valle_final)
 ```
 
+El 15 % funciona como una banda de histéresis temporal: evita fijar el inicio o cierre por una fluctuación mínima alrededor del reposo. No equivale al inicio fisiológico exacto del movimiento ni a un umbral clínico. Es la definición operacional del evento para este sistema.
+
+El procedimiento concreto es:
+
+1. encontrar el valle anterior al pico, que representa la posición alta previa;
+2. encontrar el valle posterior, que representa el retorno a una posición alta;
+3. calcular el nivel del 15 % a cada lado;
+4. definir el inicio como el último fotograma previo al pico que aún está por debajo o en el nivel izquierdo;
+5. definir el final como el primer fotograma posterior al pico que vuelve a estar por debajo o en el nivel derecho.
+
+Las etiquetas se asignan por posición temporal, no mediante un clasificador entrenado:
+
+```text
+antes del inicio                         -> reposo
+inicio <= fotograma < máxima profundidad -> descenso
+fotograma de máxima profundidad          -> maxima_profundidad
+máxima profundidad < fotograma < final   -> ascenso
+fotograma final                          -> cierre
+después del final                        -> reposo
+```
+
 Las fases quedan etiquetadas como:
 
 - `reposo`;
@@ -256,6 +363,20 @@ Las fases quedan etiquetadas como:
 - `maxima_profundidad`;
 - `ascenso`;
 - `cierre`.
+
+Ejemplo de la repetición 3:
+
+| Evento | Fotograma | Tiempo | `hip_midpoint_y` suavizado |
+|---|---:|---:|---:|
+| Valle anterior | 437 | 18.179 s | 0.56246482 |
+| Nivel izquierdo del 15 % | - | - | 0.58925487 |
+| Inicio detectado | 474 | 19.719 s | 0.58869786 |
+| Máxima profundidad | 592 | 24.628 s | 0.74106515 |
+| Nivel derecho del 15 % | - | - | 0.58159474 |
+| Final detectado | 621 | 25.834 s | 0.58144502 |
+| Valle posterior | 655 | 27.248 s | 0.55345291 |
+
+Este ejemplo permite reconstruir la decisión desde el CSV y comprobar que el etiquetado no proviene del nombre del video ni de una evaluación humana previa.
 
 ### 5.5. Resultado temporal
 
@@ -291,6 +412,28 @@ Una repetición inválida puede excluirse sin descartar necesariamente las demá
 | `rep_XX_inicio_descenso.png` | Evento | Evidencia visual |
 | `rep_XX_maxima_profundidad.png` | Evento | Fotograma usado en reglas |
 | `rep_XX_final_ascenso.png` | Evento | Evidencia del cierre |
+
+### 5.8. Qué está respaldado y qué debe validarse
+
+| Componente | Respaldo disponible | Validación requerida en la tesis |
+|---|---|---|
+| Serie temporal derivada de pose | Literatura sobre conteo de ejercicios y desplazamiento vertical de cadera | Verificar que la curva corresponda visualmente al movimiento |
+| Punto medio de caderas | Precedentes técnicos para representar descenso de pelvis | Confirmar robustez bajo el protocolo frontal definido |
+| Suavizado antes de detectar picos | Fundamento estándar de procesamiento de señales | Revisar que no desplace materialmente los eventos |
+| Máximos locales y prominencia | Fundamento algorítmico documentado | Evaluar conteo correcto de repeticiones |
+| Ventanas de 0.20 s, 3 s, 2 s y 10 s | Decisiones de ingeniería del prototipo | Ajustar con lote de desarrollo y congelar antes de evaluación final |
+| 18 %, 0.03, 0.04 y cruce del 15 % | Heurísticas propias normalizadas | Comparar con anotaciones manuales de eventos |
+| Etiquetas de fase | Definición operacional determinista | Medir error de inicio, profundidad y final en fotogramas o segundos |
+
+La validación experta de las compensaciones de la fase 5 no valida automáticamente esta segmentación. Para demostrar específicamente la fase 3 conviene construir una submuestra anotada manualmente y reportar:
+
+- exactitud del número de repeticiones por video;
+- error absoluto del fotograma de máxima profundidad;
+- error absoluto de inicio y final en fotogramas o segundos;
+- frecuencia de sobresegmentación y subsegmentación;
+- porcentaje de repeticiones excluidas por calidad.
+
+La calibración de parámetros debe realizarse con videos de desarrollo. Después, los parámetros deben quedar congelados antes de evaluar el desempeño final, para evitar ajustar el algoritmo sobre los mismos casos usados para reportar resultados.
 
 ---
 
@@ -712,6 +855,23 @@ de las reglas provisionales.
 | `biomechanical_summary.json` | Referencia de escala, convenciones y resumen |
 | `biomechanical_metrics.png` | Series temporales de las variables |
 
+### 6.13. Respaldo externo y alcance de las fórmulas
+
+Las fórmulas de esta fase combinan geometría analítica con constructos biomecánicos observables. La pendiente, el ángulo mediante `atan2`, el punto medio, la proyección de un punto sobre una recta y la normalización entre longitudes no requieren que un artículo “invente” cada operación matemática. Lo que sí debe respaldarse es que las relaciones segmentarias medidas son pertinentes y que el análisis 2D tiene un alcance razonable para representarlas.
+
+| Variable del sistema | Respaldo que aporta la literatura | Decisión específica de esta tesis |
+|---|---|---|
+| Inclinación lateral del tronco | El video 2D frontal puede representar movimiento del tronco, aunque no sustituye una medición 3D precisa | Eje entre centros de hombros y caderas respecto de la vertical |
+| Desplazamiento lateral de pelvis | El control y movimiento frontal de pelvis puede analizarse en 2D con cautela | Traslación del centro de caderas respecto del centro de tobillos y normalización por ancho inicial de hombros |
+| Alineación cadera-rodilla-tobillo | La cinemática frontal y la proyección de rodilla son constructos usados para estudiar valgo dinámico | Distancia horizontal firmada entre la rodilla observada y la línea cadera-tobillo |
+| Diferencia bilateral | La comparación entre lados es útil, pero el resultado depende de la métrica y la tarea | Diferencia absoluta entre las dos desviaciones de rodilla ya normalizadas |
+
+Straub y Powers encontraron asociaciones de moderadas a muy fuertes entre medidas 2D y 3D de tronco y pelvis en tareas dinámicas, pero también límites de acuerdo amplios; por eso recomiendan cautela cuando se exige alta precisión ([Straub y Powers, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC8805121/)). Para la rodilla, Haberkamp et al. compararon cinemática frontal obtenida por estimación de pose, análisis 2D tradicional y captura 3D durante la sentadilla a una pierna, lo que respalda el uso de métricas frontales como proxies observables, no como reconstrucciones tridimensionales ([Haberkamp et al., 2022](https://doi.org/10.1016/j.jbiomech.2022.111333)).
+
+La normalización por el ancho inicial de hombros es una decisión de escala interna del sistema: transforma distancias normalizadas de imagen en porcentajes comparables dentro del protocolo y evita expresarlas en píxeles. Esta elección debe evaluarse empíricamente; no implica que el ancho de hombros sea una medida antropométrica exacta ni que elimine todos los efectos de perspectiva.
+
+Finalmente, Parkinson et al. muestran que los índices y umbrales de asimetría varían entre estudios y que límites universales de 10 % a 15 % suelen carecer de respaldo suficiente. Esta evidencia refuerza la decisión de llamar a la métrica “asimetría bilateral observable” y mantener su punto de corte como provisional ([Parkinson et al., 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8488821/)).
+
 ---
 
 ## 7. Fase 5: reglas biomecánicas interpretables
@@ -782,6 +942,40 @@ El valor resumido de la decisión es el mayor valor medial positivo disponible. 
 | `case_report.json` | Contrato agregado consumido por la API y la web |
 
 El nombre físico del archivo de configuración conserva `v0_1`, pero su contenido actual declara la versión lógica `0.2.0-provisional`. Conviene renombrarlo en una migración posterior para evitar confusión, sin cambiar silenciosamente la versión de reglas.
+
+### 7.7. Origen real de los umbrales
+
+Los valores `8°/12°`, `5 %/8 %`, `2 %/5 %` y `8 %/12 %` no fueron extraídos literalmente de un único artículo. Se establecieron como **umbrales provisionales de ingeniería** a partir de:
+
+1. las definiciones geométricas de la fase 4;
+2. la inspección exploratoria del lote piloto controlado;
+3. la necesidad de separar casos claramente pequeños, limítrofes y claramente grandes;
+4. una banda intermedia que permite abstenerse de forzar una clasificación.
+
+La literatura respalda que inclinación de tronco, desplazamiento pélvico, alineación frontal de rodilla y diferencias bilaterales son constructos observables pertinentes. No existe, sin embargo, una equivalencia universal entre un valor bidimensional obtenido por este sistema y un diagnóstico o punto de corte clínico. Incluso la literatura sobre índices de asimetría advierte que los límites porcentuales elegidos de forma arbitraria pueden cambiar la interpretación.
+
+Por esta razón, el argumento correcto no es “el artículo establece que 12° siempre significa compensación”. El argumento defendible es: “la literatura respalda el constructo y la medición geométrica; el prototipo propone límites provisionales, explícitos y versionados, cuyo desempeño se evaluará frente a una referencia experta”.
+
+### 7.8. Cómo deben calibrarse y evaluarse
+
+La evaluación final debe separar dos conjuntos:
+
+- **conjunto de desarrollo o calibración:** permite revisar errores, ajustar umbrales provisionales y corregir reglas;
+- **conjunto de evaluación final:** se utiliza una sola vez con reglas congeladas para estimar desempeño frente a expertos.
+
+Usar los mismos videos para ajustar y reportar F1-score o Kappa produciría fuga de información y una estimación optimista. El flujo metodológico recomendado es:
+
+```text
+videos de desarrollo + referencia experta
+    -> revisión de discrepancias
+    -> ajuste documentado de umbrales
+    -> versión definitiva del ruleset
+    -> congelamiento de reglas
+    -> videos finales no usados en el ajuste
+    -> exactitud, sensibilidad, especificidad, F1-score y Kappa
+```
+
+Cada modificación debe registrar versión, valor anterior, valor nuevo, evidencia utilizada y motivo. Así, los umbrales dejan de ser números opacos y pasan a ser parámetros reproducibles cuya utilidad se demuestra empíricamente.
 
 ---
 
