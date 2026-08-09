@@ -239,6 +239,8 @@ El uso del punto medio de caderas y de su desplazamiento vertical tiene preceden
 
 ### 5.2. Limpieza de la señal
 
+Una explicación ampliada, con gráficos obtenidos de los casos reales, ejemplos numéricos y la relación con el error de doble pico, se encuentra en [Explicación visual de la limpieza, prominencia y separación de repeticiones](explicacion_visual_limpieza_prominencia_segmentacion.md).
+
 El sistema:
 
 1. interpola pérdidas aisladas;
@@ -300,6 +302,15 @@ Además:
 - dos máximos deben estar separados al menos 2 segundos;
 - una repetición no puede extenderse más de 10 segundos;
 - si el rango vertical global es menor de 0.04, no se reconoce una sentadilla suficiente.
+
+Después de la supresión por distancia, la versión vigente aplica una validación adicional entre máximos consecutivos. Calcula cuánto descendió la señal desde el menor de ambos picos hasta el valle intermedio:
+
+```text
+recuperación = min(señal[pico_1], señal[pico_2])
+               - min(señal entre ambos picos)
+```
+
+Si esa recuperación es menor que la prominencia mínima, no se considera que la persona haya retornado suficientemente hacia la posición alta y ambos candidatos se fusionan, conservando el más profundo. Esta regla resolvió el caso `dev_case_1784949757322`, en el que una pausa en profundidad separada por `2.002 s` produjo dos candidatos, pero la recuperación intermedia fue únicamente `0.000204`, muy inferior al mínimo de `0.03`.
 
 La función de cada parámetro es la siguiente:
 
