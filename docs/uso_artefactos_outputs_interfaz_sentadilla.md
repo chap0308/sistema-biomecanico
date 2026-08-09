@@ -638,3 +638,176 @@ existen y las observaciones generales se agrupan en una sección independiente.
 La revisión final solo puede comenzar cuando todos los evaluadores asignados
 han enviado sus respuestas; los instrumentos consolidados y el reporte PDF se
 habilitan después del cierre definitivo del caso.
+
+## 16. Explicabilidad matemática y del procesamiento de señales
+
+La interfaz debe explicar no solo qué compensación fue clasificada, sino cómo
+se transformó el video en ese resultado. Esta explicación debe organizarse por
+niveles para no saturar al asesor, jurado o usuario general.
+
+### 16.1. Tres niveles de profundidad
+
+| Nivel | Pregunta | Contenido visible |
+|---|---|---|
+| 1. Resultado | ¿Qué encontró el sistema? | Estado del patrón, dirección, repetición y valor principal |
+| 2. Evidencia | ¿Dónde y cómo se observó? | Video sincronizado, geometría superpuesta, curva y evento utilizado |
+| 3. Fundamento | ¿Cómo se calculó? | Fórmula, variables, convención de signos, normalización, regla y referencia técnica |
+
+El primer nivel debe permanecer siempre visible. Los fundamentos matemáticos
+deben presentarse mediante bloques desplegables como **Ver cálculo** o
+**¿Cómo se obtuvo?**, no como texto permanente dentro de todas las tarjetas.
+
+### 16.2. Recorrido explicativo recomendado
+
+La sección **Cómo se obtuvo este resultado** debe presentar las cuatro fases en
+el mismo orden del pipeline:
+
+#### Pose 2D
+
+Mostrar:
+
+- el sistema de coordenadas de imagen, cuyo origen está en la esquina superior
+  izquierda;
+- que `x` aumenta hacia la derecha y `y` aumenta hacia abajo;
+- los 13 puntos anatómicos seleccionados de los 33 producidos por MediaPipe
+  Pose;
+- visibilidad, cobertura y criterios de validez del fotograma;
+- un fotograma correcto y otro con una referencia insuficiente.
+
+La convención del eje vertical debe aparecer junto a las gráficas de cadera,
+porque explica por qué una cadera más baja produce un valor `y` mayor y por qué
+la máxima profundidad se detecta como un máximo de la señal.
+
+#### Segmentación temporal
+
+Mostrar una secuencia visual de cuatro estados:
+
+```text
+señal cruda
+    -> interpolación de pérdidas aisladas
+    -> mediana móvil
+    -> promedio móvil
+    -> señal utilizada para detectar repeticiones
+```
+
+El usuario debe poder alternar las curvas cruda, interpolada, mediana y final.
+No es necesario mostrarlas todas activas simultáneamente.
+
+El bloque de segmentación debe explicar:
+
+- `hip_midpoint_y` como promedio vertical de ambas caderas;
+- interpolación lineal temporal de una pérdida aislada;
+- función de la mediana frente a un valor atípico;
+- función del promedio móvil frente a vibraciones pequeñas;
+- prominencia del máximo y sus bases laterales;
+- umbral adaptativo de prominencia;
+- distancia temporal mínima entre máximos;
+- recuperación vertical necesaria para considerar dos ciclos independientes;
+- inicio, máxima profundidad y final de la repetición.
+
+Las fórmulas mínimas recomendadas son:
+
+```text
+hip_midpoint_y[f] =
+(y_cadera_izquierda[f] + y_cadera_derecha[f]) / 2
+
+x_k = x_a + ((k - a) / (b - a)) x (x_b - x_a)
+
+prominencia(p) = señal(p) - max(base_izquierda, base_derecha)
+
+prominencia_mínima = max(0.03, 0.18 x rango_robusto)
+
+recuperación(p1, p2) = min(señal[p1], señal[p2])
+                       - min(señal entre p1 y p2)
+```
+
+La visualización debe señalar que la interpolación conserva continuidad
+numérica, pero no modifica retroactivamente el estado original de calidad del
+fotograma.
+
+#### Variables biomecánicas
+
+Cada variable debe disponer de una pestaña propia para destacar únicamente su
+geometría:
+
+| Variable | Evidencia visual mínima | Concepto que debe explicarse |
+|---|---|---|
+| Inclinación lateral del tronco | Eje hombros-caderas y línea vertical | Pendiente, `atan2`, grados y signo |
+| Desplazamiento lateral de pelvis | Centro inicial, centro actual y flecha horizontal | Traslación en `x` y normalización mediante `W0` |
+| Alineación cadera-rodilla-tobillo | Eje cadera-tobillo, punto esperado `K` y rodilla observada | Interpolación espacial y distancia medial firmada |
+| Diferencia bilateral | Valores izquierdo y derecho enfrentados | Diferencia absoluta entre alineaciones |
+
+La referencia `W0`, ancho inicial de hombros, debe dibujarse sobre el video o
+fotograma y acompañarse de una nota breve: convierte una distancia normalizada
+de imagen en porcentaje de una referencia corporal relativamente estable,
+facilitando la comparación entre resoluciones y distancias de cámara.
+
+### 16.3. Dos usos diferentes de la interpolación lineal
+
+El término **interpolación lineal** aparece en dos fases y no debe presentarse
+como si fuera una sola operación:
+
+| Uso | Dominio | Entrada | Resultado | Finalidad |
+|---|---|---|---|---|
+| Interpolación temporal | Fase 3 | Dos muestras conocidas en tiempos distintos | Estimación de una muestra ausente entre ambas | Mantener continua la señal para el filtrado y segmentación |
+| Interpolación espacial | Fase 4 | Cadera y tobillo del mismo lado en un fotograma | Punto esperado `K` sobre el segmento cadera-tobillo a la altura de la rodilla | Medir cuánto se desvía medialmente la rodilla respecto al eje esperado |
+
+Ambas utilizan proporcionalidad lineal, pero la primera avanza entre
+fotogramas y la segunda avanza sobre un segmento corporal dentro del mismo
+fotograma. La interfaz debe usar las etiquetas **interpolación temporal** e
+**interpolación espacial** para evitar ambigüedad.
+
+### 16.4. Prominencia y recuperación entre máximos
+
+La prominencia no debe describirse como altura absoluta ni como confianza. Es
+la diferencia vertical entre un máximo y la base más alta de sus dos lados.
+Una animación o figura debe dibujar:
+
+1. el máximo candidato;
+2. el mínimo izquierdo;
+3. el mínimo derecho;
+4. la base más alta;
+5. la distancia vertical denominada prominencia.
+
+La recuperación entre máximos debe mostrarse como una comprobación posterior.
+Dos candidatos separados en el tiempo no representan dos sentadillas si la
+persona no regresó suficientemente hacia la posición alta. Esta distinción
+explica el error corregido en `dev_case_1784949757322` sin atribuirlo a una
+falla de MediaPipe: la pose era utilizable, pero la regla inicial de
+segmentación era insuficiente para una pausa prolongada en profundidad.
+
+### 16.5. Gráficos y recursos disponibles
+
+Los siguientes recursos ya pueden reutilizarse en la interfaz, en una
+presentación o en un video explicativo:
+
+- `docs/assets/segmentacion_sentadilla/01_limpieza_interpolacion_suavizado.png`;
+- `docs/assets/segmentacion_sentadilla/02_prominencia_picos_reales.png`;
+- `docs/assets/segmentacion_sentadilla/03_error_doble_pico_recuperacion.png`;
+- curvas interactivas derivadas de `frame_phases.csv`;
+- métricas y geometrías derivadas de `biomechanical_frame_metrics.csv`;
+- capturas de inicio, máxima profundidad y final;
+- overlays técnico y de pose sincronizados.
+
+Las imágenes estáticas deben mantenerse como artefactos descargables. En la
+web se recomienda reconstruir las curvas con componentes interactivos para que
+el cursor muestre fotograma, tiempo, repetición, fase y valor.
+
+### 16.6. Modo de demostración para asesor o jurado
+
+Además de la vista técnica completa, resulta conveniente un recorrido guiado
+por un caso representativo:
+
+1. video original y protocolo de captura;
+2. detección de pose y control de calidad;
+3. construcción y limpieza de la señal de cadera;
+4. detección de repeticiones mediante prominencia;
+5. cálculo geométrico de una variable seleccionada;
+6. aplicación del umbral provisional;
+7. comparación con la referencia experta;
+8. alcance: clasificación observable, no diagnóstico clínico ni inferencia de
+   causas anatómicas.
+
+Este modo puede implementarse como una ruta de presentación o como una
+secuencia de pasos dentro del caso. Debe reutilizar los datos reales del caso y
+no mantener copias independientes de valores o fórmulas.
