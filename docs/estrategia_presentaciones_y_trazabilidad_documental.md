@@ -5,10 +5,12 @@
 Se utilizarán herramientas distintas para responsabilidades distintas:
 
 1. **AnyDoc** convertirá documentos institucionales a Markdown para revisar contenido y diferencias mediante Git.
-2. **Presenton** será la primera opción para generar una nueva presentación visual y editable a partir del guion y de una plantilla gráfica propia.
-3. **PowerPoint MCP** servirá para realizar ajustes precisos sobre el archivo `.pptx` abierto en Microsoft PowerPoint.
-4. **La aplicación web** conservará las demostraciones interactivas, sincronizadas con el video y los datos del caso.
-5. **Gamma** podrá emplearse para explorar rápidamente una dirección visual, pero no será la fuente principal del contenido ni del control de versiones.
+2. **La aplicación web** conservará las demostraciones interactivas calculadas con los datos reales de cada caso: señal original y suavizada, prominencia, recuperación, coordenadas, W0, variables y reglas.
+3. **Canva o Figma Slides** se utilizarán para componer la presentación visual a partir del guion versionado. Ambas cuentas se encuentran autenticadas; Canva permite reutilizar diseños existentes y Figma aporta diagramas y una edición estructurada.
+4. **HyperFrames** generará únicamente clips breves y controlados para explicar fenómenos temporales que no dependen de un caso específico, como ruido, pérdida de coordenadas, doble pico y recuperación insuficiente.
+5. **Draw.io** se utilizará para arquitectura y flujos técnicos exportables. Su MCP local quedó registrado y estará disponible después de reiniciar Codex.
+6. **PowerPoint o Google Slides** quedarán como salida editable y como etapa de revisión final, no como fuente única del contenido.
+7. **Gamma y Presenton** permanecerán como alternativas de exploración, no como dependencias del flujo principal.
 
 Esta separación evita pedirle a una sola herramienta que resuelva contenido académico, diseño visual, edición fina e interactividad.
 
@@ -18,11 +20,15 @@ Esta separación evita pedirle a una sola herramienta que resuelva contenido aca
 |---|---|---|---|---|
 | [AnyDoc](https://github.com/firecrawl/anydoc) | Convertir DOCX, PPTX, XLSX y PDF de texto a Markdown | Produce una representación semántica versionable y funciona localmente | No conserva la maquetación exacta de Word ni extrae OCR de documentos escaneados | Adoptar para instantáneas y revisión |
 | [pdf-inspector](https://github.com/firecrawl/pdf-inspector) | Inspeccionar, clasificar y extraer texto de PDF | Ayuda a distinguir PDF textual de PDF escaneado | No es necesario para convertir el DOCX; AnyDoc ya lo utiliza internamente para PDF | Usar solo para PDFs problemáticos |
-| [Presenton](https://github.com/presenton/presenton) | Generar, editar y exportar presentaciones mediante interfaz, API o MCP | Admite plantillas reutilizables, archivos de entrada, despliegue local y salida editable en PPTX | Requiere configurar Docker y un proveedor de modelo para obtener resultados de calidad | Primera opción para rehacer la presentación |
+| [Presenton](https://github.com/presenton/presenton) | Generar, editar y exportar presentaciones mediante interfaz, API o MCP | Admite plantillas reutilizables, archivos de entrada, despliegue local y salida editable en PPTX | Requiere configurar Docker y un proveedor de modelo para obtener resultados de calidad | Alternativa si Canva o Figma no ofrecen control suficiente |
 | [Gamma API](https://developers.gamma.app/) | Generar presentaciones rápidamente desde texto | Buena composición visual inicial y baja fricción | Menor control determinista sobre la composición y dependencia de servicio externo | Usar para explorar alternativas visuales |
 | [PowerPoint MCP](https://github.com/ykuwai/ppt-mcp) | Controlar PowerPoint en tiempo real mediante COM | Permite corregir tipografía, formas, tablas, gráficos, animaciones y exportación sin regenerar todo el archivo | Requiere Windows y Microsoft PowerPoint; no sustituye la dirección visual inicial | Segunda pasada de ajuste fino |
 | [Slidev](https://github.com/slidevjs/slidev) | Crear presentaciones técnicas desde Markdown | Soporta LaTeX, Mermaid, animaciones, grabación y componentes interactivos | Su exportación a PPTX no siempre conserva toda la interactividad o apariencia web | Alternativa para una exposición técnica reproducible |
 | [Marp CLI](https://github.com/marp-team/marp-cli) | Convertir Markdown a HTML, PDF o PPTX | Flujo simple, reproducible y fácil de versionar | Menor libertad visual que Presenton, PowerPoint o Slidev | Útil para borradores sobrios |
+| [Canva](https://www.canva.com/) | Componer una presentación editable y reutilizar diseños existentes | Cuenta autenticada, buena edición visual y exportación a PPTX/PDF | La composición final no es determinista ni adecuada como fuente de verdad textual | Adoptar para la primera versión visual |
+| [Figma Slides](https://www.figma.com/slides/) | Diseñar diapositivas y diagramas con componentes reutilizables | Cuenta autenticada y buena integración entre presentación, arquitectura y figuras | La cuenta disponible tiene plan Starter y asiento View; algunas operaciones pueden depender de permisos del archivo | Adoptar como alternativa de composición y diagramación |
+| [HyperFrames](https://github.com/heygen-com/hyperframes) | Generar animaciones explicativas mediante código | Instalado localmente; permite representar ruido, prominencia, recuperación e interpolación con control temporal | No debe sustituir la evidencia del caso ni convertir cada diapositiva en video | Adoptar para dos o tres clips breves |
+| [Draw.io MCP](https://github.com/jgraph/drawio-mcp) | Crear arquitecturas y flujos editables con iconos técnicos | Formato `.drawio`, exportación y biblioteca amplia de formas | Requiere reiniciar Codex después de registrar el MCP | Adoptar para arquitectura y flujos |
 
 ## Flujo documental adoptado
 
@@ -91,8 +97,10 @@ La presentación debe contener conceptos y decisiones; la web debe contener expl
 
 ## Próximo incremento recomendado
 
-1. Instalar Presenton localmente con Docker.
-2. Crear una plantilla visual propia a partir de la identidad actual de la aplicación web.
-3. Importar el guion Markdown y generar dos variantes de composición.
-4. Seleccionar una variante y corregirla con PowerPoint MCP.
-5. Incorporar únicamente dos o tres clips breves: limpieza de señal, prominencia y cálculo geométrico en máxima profundidad.
+1. Reiniciar Codex para habilitar Draw.io MCP y las skills de HyperFrames recién instaladas.
+2. Preparar en Markdown el guion definitivo por diapositiva, incluyendo mensaje, evidencia, transición a la web y notas del expositor.
+3. Crear con Draw.io dos recursos reutilizables: arquitectura general y flujo de las fases 2 a 5.
+4. Generar en Canva una primera versión visual y, en paralelo, validar si Figma Slides permite una edición más precisa con el plan actual.
+5. Producir con HyperFrames solo dos clips: limpieza/prominencia/recuperación y geometría de alineación cadera-rodilla-tobillo.
+6. Integrar capturas o enlaces de la web para la demostración con datos reales; los videos controlados deberán presentarse como explicación conceptual, no como resultado experimental.
+7. Exportar a PPTX, realizar la pasada final y comprobar que el guion Markdown y las notas del expositor coincidan con la versión entregable.
