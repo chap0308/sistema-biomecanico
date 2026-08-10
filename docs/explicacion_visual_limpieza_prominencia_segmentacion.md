@@ -169,6 +169,22 @@ if signal[index] >= signal[index - 1] and signal[index] > signal[index + 1]:
 
 Las bases se buscan en una ventana aproximada de tres segundos. En consecuencia, se calcula una **prominencia local**, no necesariamente la prominencia global de toda la grabación.
 
+En la implementación, `P`, `BI` y `BD` son valores de la coordenada vertical normalizada del centro de caderas sobre la señal suavizada:
+
+```text
+P  = señal suavizada en el máximo local candidato
+BI = mínimo de la señal en los tres segundos anteriores a P
+BD = mínimo de la señal en los tres segundos posteriores a P
+base de contorno local = max(BI, BD)
+prominencia local = P - max(BI, BD)
+```
+
+El eje `y` de la imagen aumenta hacia abajo. Por eso, una sentadilla profunda produce un valor `P` mayor, mientras que el retorno hacia la posición alta produce valores menores. `BI` y `BD` no son intersecciones obligatorias con una misma línea horizontal ni equivalen necesariamente al reposo anatómico completo: son los mínimos encontrados de manera independiente a cada lado dentro de la ventana temporal. La línea horizontal dibujada por la interfaz corresponde únicamente a `max(BI, BD)`, es decir, a la base conservadora que limita la prominencia.
+
+Por esta razón, en un caso como `dev_case_1784949757322`, `BD` puede coincidir con el valle `V` situado entre el pico actual y el siguiente. Esto ocurre cuando el menor valor de los tres segundos posteriores al pico es también el menor valor de todo el intervalo entre ambos picos. No representa un error ni exige que `BD` toque otra línea de referencia.
+
+Los tres segundos pertenecen al parámetro versionado `peak_window_seconds=3.0` y limitan solamente la búsqueda local de `BI` y `BD`. Ampliar esa ventana puede permitir encontrar un retorno más lejano, pero también cambia qué oscilaciones se consideran parte del entorno del pico. Por tanto, modificarla altera el algoritmo y requiere repetir las pruebas de segmentación; no es únicamente un cambio gráfico.
+
 La diferencia frente a SciPy es relevante para explicarlo correctamente:
 
 - ambos enfoques comparten el concepto de máximo local, bases laterales y diferencia vertical;
@@ -184,6 +200,8 @@ rango_robusto = percentil_95(señal) - percentil_05(señal)
 ```
 
 Se usan percentiles y no `máximo - mínimo` para que uno o dos valores extremos no definan por sí solos el movimiento global.
+
+`P05` y `P95` son los percentiles 5 y 95 de **todos los valores de la señal suavizada del video**. El valor de un pico de máxima profundidad participa en la distribución como cualquier otra muestra, pero `P95` no significa necesariamente "el pico P": es el valor por debajo del cual se encuentra aproximadamente el 95 % de las muestras. Todas estas magnitudes permanecen en coordenadas verticales normalizadas, no son porcentajes ni probabilidades.
 
 Después:
 
@@ -233,6 +251,28 @@ La corrección añade esta prueba:
 recuperación(p1, p2) = min(señal[p1], señal[p2])
                        - min(señal entre p1 y p2)
 ```
+
+Aquí `p1` y `p2` son **dos picos candidatos consecutivos en el tiempo**:
+
+- entre las repeticiones 1 y 2, `p1` es el pico de la repetición 1 y `p2` el de la repetición 2;
+- entre las repeticiones 2 y 3 se realiza otra comprobación independiente con esos dos picos;
+- para la última repetición, la interfaz puede mostrar la comparación con el pico anterior;
+- si el video solo contiene un pico candidato, no existen `p2` ni valle intermedio y la validación de recuperación no aplica.
+
+El término `min(señal[p1], señal[p2])` selecciona el menor valor vertical de los dos picos, es decir, el pico menos profundo en el sistema de coordenadas de imagen. **No es el valle**. El valle se obtiene con `min(señal entre p1 y p2)`, buscando todas las muestras comprendidas entre ambos picos. Tampoco tiene que coincidir exactamente con el inicio formal de la segunda repetición, porque ese inicio se calcula después mediante el cruce del 15 % de amplitud.
+
+Ejemplo conceptual:
+
+```text
+señal[p1] = 0.6750
+señal[p2] = 0.6900
+valle entre ambos = 0.5119
+
+recuperación = min(0.6750, 0.6900) - 0.5119
+             = 0.1631
+```
+
+Si la recuperación supera la prominencia mínima, hubo un retorno vertical suficiente entre ambos máximos y se conservan como ciclos separados. Si no la supera, el sistema interpreta que se trata de una pausa u oscilación en el fondo y conserva únicamente el pico más profundo.
 
 Regla:
 
