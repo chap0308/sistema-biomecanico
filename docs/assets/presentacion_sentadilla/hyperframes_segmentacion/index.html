@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920,height=1080" />
+  <title>Segmentación temporal de sentadilla</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #f7f1e8; color: #123b45; font-family: "Roboto", sans-serif; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+    .clip { position: absolute; inset: 0; }
+    .stage { position: absolute; inset: 0; padding: 76px 96px; }
+    .kicker { font-size: 24px; letter-spacing: 4px; text-transform: uppercase; color: #0b6b69; font-weight: 700; }
+    h1 { margin: 18px 0 12px; width: 1500px; font-size: 72px; line-height: 1.02; letter-spacing: -2px; }
+    .subtitle { margin: 0; width: 1340px; font-size: 30px; line-height: 1.35; color: #45565b; }
+    .plot { position: absolute; left: 100px; top: 300px; width: 1720px; height: 600px; border-left: 3px solid #123b45; border-bottom: 3px solid #123b45; }
+    .grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(18,59,69,.10) 1px, transparent 1px), linear-gradient(to bottom, rgba(18,59,69,.10) 1px, transparent 1px); background-size: 172px 120px; }
+    svg { position: absolute; inset: 0; overflow: visible; }
+    .raw { fill: none; stroke: #9aa9ad; stroke-width: 5; }
+    .clean { fill: none; stroke: #0b6b69; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #e76f51; stroke-width: 8; fill: none; }
+    .base { stroke: #d88b16; stroke-width: 5; stroke-dasharray: 18 12; }
+    .dot { fill: #e76f51; stroke: #f7f1e8; stroke-width: 5; }
+    .label { position: absolute; padding: 12px 18px; border-radius: 999px; background: #fff0c7; border: 2px solid #d88b16; font-size: 24px; font-weight: 700; }
+    .formula { position: absolute; left: 1110px; top: 385px; width: 600px; padding: 30px 34px; border-radius: 24px; background: #123b45; color: #f7f1e8; font-size: 30px; line-height: 1.45; box-shadow: 0 18px 50px rgba(18,59,69,.18); }
+    .verdict { position: absolute; left: 1070px; top: 690px; width: 660px; padding: 28px 34px; border-radius: 24px; background: #ffe2d8; border: 3px solid #e76f51; font-size: 30px; font-weight: 700; }
+    .legend { position: absolute; left: 110px; top: 920px; display: flex; gap: 36px; font-size: 24px; color: #45565b; }
+    .legend span::before { content: ""; display: inline-block; width: 36px; height: 6px; margin-right: 12px; vertical-align: middle; background: #9aa9ad; }
+    .legend .l-clean::before { background: #0b6b69; }
+    .scene2, .scene3 { opacity: 0; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="segmentacion" data-start="0" data-width="1920" data-height="1080" data-duration="18">
+    <section id="segmentacion-main" class="clip" data-start="0" data-duration="18" data-track-index="1">
+      <div class="stage scene1">
+        <div class="kicker">Fase 3 · limpieza</div>
+        <h1>La forma del movimiento se conserva; el ruido se reduce</h1>
+        <p class="subtitle">Interpolación temporal, mediana móvil y promedio móvil actúan sobre la señal. La bandera de calidad original permanece intacta.</p>
+        <div class="plot"><div class="grid"></div><svg viewBox="0 0 1720 600"><path class="raw" d="M0 470 L120 452 L220 420 L310 435 L420 360 L520 330 L610 340 L700 260 L790 270 L870 190 L950 210 L1030 145 L1120 165 L1200 95 L1300 115 L1390 58 L1480 82 L1570 40 L1720 52"/><path id="clean-path" class="clean" d="M0 468 C160 452 290 420 420 365 C570 305 690 278 820 238 C960 190 1080 155 1210 112 C1360 68 1500 55 1720 50"/></svg></div>
+        <div class="legend"><span>Señal cruda</span><span class="l-clean">Señal suavizada</span></div>
+      </div>
+      <div class="stage scene2">
+        <div class="kicker">Fase 3 · prominencia</div>
+        <h1>Un máximo local debe sobresalir respecto de sus dos lados</h1>
+        <p class="subtitle">La prominencia evita confundir pequeñas oscilaciones con una máxima profundidad real.</p>
+        <div class="plot"><div class="grid"></div><svg viewBox="0 0 1720 600"><path class="clean" d="M0 500 C250 465 390 360 590 300 C760 240 850 90 980 70 C1110 92 1200 265 1370 320 C1500 365 1600 420 1720 455"/><line class="base" x1="540" y1="320" x2="1370" y2="320"/><line id="prom-line" class="accent" x1="980" y1="70" x2="980" y2="320"/><circle class="dot" cx="980" cy="70" r="16"/></svg></div>
+        <div class="label" style="left: 890px; top: 335px;">pico</div>
+        <div class="formula">prominencia(p)<br>= señal(p) − max(BI, BD)<br><br>mínimo = max(0.03,<br>0.18 × rango robusto)</div>
+      </div>
+      <div class="stage scene3">
+        <div class="kicker">Fase 3 · recuperación</div>
+        <h1>Dos picos cercanos no siempre son dos repeticiones</h1>
+        <p class="subtitle">También debe existir una subida suficiente entre ambos candidatos.</p>
+        <div class="plot"><div class="grid"></div><svg viewBox="0 0 1720 600"><path class="clean" d="M0 500 C260 450 440 310 650 120 C760 72 850 160 960 132 C1090 94 1190 68 1310 76 C1440 95 1560 340 1720 480"/><circle class="dot" cx="650" cy="120" r="16"/><circle class="dot" cx="1310" cy="76" r="16"/><circle id="valley" class="dot" cx="960" cy="132" r="14" style="fill:#d88b16"/><line id="recovery-line" class="accent" x1="960" y1="132" x2="960" y2="120"/></svg></div>
+        <div class="formula">recuperación observada<br><strong>0.000204</strong><br><br>mínimo exigido<br><strong>0.03</strong></div>
+        <div class="verdict">0.000204 &lt; 0.03<br>Se fusionan los candidatos y se conserva el pico más profundo.</div>
+      </div>
+    </section>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo(".scene1 h1", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power3.out" }, .2)
+      .fromTo(".scene1 .subtitle", { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: .6 }, .5)
+      .fromTo("#clean-path", { strokeDasharray: 2600, strokeDashoffset: 2600 }, { strokeDashoffset: 0, duration: 2.8, ease: "power2.inOut" }, 1.0)
+      .to(".scene1", { opacity: 0, duration: .6 }, 4.4)
+      .to(".scene2", { opacity: 1, duration: .01 }, 5.0)
+      .fromTo(".scene2 h1", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: .7 }, 5.1)
+      .fromTo("#prom-line", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 1.5, ease: "power2.out" }, 6.2)
+      .fromTo(".scene2 .formula", { x: 48, opacity: 0 }, { x: 0, opacity: 1, duration: .7 }, 7.4)
+      .to(".scene2", { opacity: 0, duration: .6 }, 10.4)
+      .to(".scene3", { opacity: 1, duration: .01 }, 11.0)
+      .fromTo(".scene3 h1", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: .7 }, 11.1)
+      .fromTo("#recovery-line", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 1.2 }, 12.2)
+      .fromTo(".scene3 .formula", { x: 48, opacity: 0 }, { x: 0, opacity: 1, duration: .7 }, 13.1)
+      .fromTo(".scene3 .verdict", { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "back.out(1.2)" }, 14.4);
+    window.__timelines["segmentacion"] = tl;
+  </script>
+</body>
+</html>

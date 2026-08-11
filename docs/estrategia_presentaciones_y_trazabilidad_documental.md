@@ -104,3 +104,21 @@ La presentación debe contener conceptos y decisiones; la web debe contener expl
 5. Producir con HyperFrames solo dos clips: limpieza/prominencia/recuperación y geometría de alineación cadera-rodilla-tobillo.
 6. Integrar capturas o enlaces de la web para la demostración con datos reales; los videos controlados deberán presentarse como explicación conceptual, no como resultado experimental.
 7. Exportar a PPTX, realizar la pasada final y comprobar que el guion Markdown y las notas del expositor coincidan con la versión entregable.
+
+## Resultado del incremento de presentación técnica
+
+La estrategia se materializó en una presentación editable de 16 diapositivas y una versión PDF. El contenido sigue una secuencia única desde la captura del video hasta la validación frente a expertos, y diferencia explícitamente tres responsabilidades: la presentación explica las decisiones, la aplicación web conserva la evidencia interactiva y los artefactos descargables permiten auditar el procesamiento.
+
+Los entregables sincronizados son:
+
+- `presentacion_proceso_interno_sentadilla_v2.pptx`: presentación editable con notas del expositor;
+- `presentacion_proceso_interno_sentadilla_v2.pdf`: versión estable para revisión y envío;
+- `guion_presentacion_proceso_interno_sentadilla.md`: fuente textual de la narrativa, fórmulas, transiciones y demostraciones;
+- `diagramas/presentacion/fases_2_5_sentadilla.mmd`: fuente Mermaid versionada del flujo técnico;
+- `diagramas/presentacion/fases_2_5_sentadilla.drawio`: diagrama editable en diagrams.net;
+- `assets/presentacion_sentadilla/hyperframes_segmentacion/segmentacion_prominencia_recuperacion.mp4`: clip explicativo de limpieza, prominencia y validación de recuperación;
+- `assets/presentacion_sentadilla/web_resumen_caso.png` y `web_trazabilidad_caso.png`: evidencias actuales de la aplicación web.
+
+La animación controlada no se presenta como resultado experimental. Su función es explicar fenómenos temporales difíciles de comunicar en una imagen estática. Los valores experimentales, las curvas completas, las coordenadas, los umbrales y los archivos técnicos continúan mostrándose en la aplicación web y en los resultados descargables del caso.
+
+La revisión final comprobó la apertura de las 16 diapositivas en PowerPoint, la exportación completa a PDF y el cumplimiento de las validaciones de HyperFrames sin errores de ejecución, composición ni contraste. Para conservar compatibilidad del archivo PPTX, el clip se vincula desde una diapositiva mediante su portada en lugar de incrustarse dentro del paquete de PowerPoint.

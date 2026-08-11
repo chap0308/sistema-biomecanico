@@ -1,0 +1,12 @@
+flowchart LR
+    A["Video frontal\nMP4"] --> B["OpenCV\nDecodifica fotogramas"]
+    B --> C["MediaPipe Pose\n33 puntos + visibilidad"]
+    C --> D{"Regla de calidad\n13 seleccionados\n8 críticos"}
+    D -->|"fotograma válido"| E["Señal hip_midpoint_y"]
+    D -->|"fotograma deficiente"| X["Se conserva la incidencia\nNo aporta evidencia geométrica"]
+    E --> F["Limpieza temporal\nInterpolación + mediana + promedio"]
+    F --> G["Segmentación\nProminencia + recuperación"]
+    G --> H["Fotograma clave\nMáxima profundidad"]
+    H --> I["Geometría\nW0 + tronco + pelvis + rodillas"]
+    I --> J["Reglas provisionales\nClasificación por patrón"]
+    J --> K["Informe web y artefactos\nCSV + JSON + imágenes + video"]
