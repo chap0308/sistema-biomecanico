@@ -8,7 +8,7 @@ Se utilizarán herramientas distintas para responsabilidades distintas:
 2. **La aplicación web** conservará las demostraciones interactivas calculadas con los datos reales de cada caso: señal original y suavizada, prominencia, recuperación, coordenadas, W0, variables y reglas.
 3. **Canva o Figma Slides** se utilizarán para componer la presentación visual a partir del guion versionado. Ambas cuentas se encuentran autenticadas; Canva permite reutilizar diseños existentes y Figma aporta diagramas y una edición estructurada.
 4. **HyperFrames** generará únicamente clips breves y controlados para explicar fenómenos temporales que no dependen de un caso específico, como ruido, pérdida de coordenadas, doble pico y recuperación insuficiente.
-5. **Draw.io** se utilizará para arquitectura y flujos técnicos exportables. Su MCP local quedó registrado y estará disponible después de reiniciar Codex.
+5. **Draw.io** se utilizará para arquitectura y flujos técnicos exportables. El servidor local quedó registrado, pero el host actual lo reporta como no compatible. Esto no obliga a dibujar manualmente: se generará una fuente Mermaid versionada y un archivo `.drawio` editable mediante XML de mxGraph; diagrams.net podrá abrirlo directamente.
 6. **PowerPoint o Google Slides** quedarán como salida editable y como etapa de revisión final, no como fuente única del contenido.
 7. **Gamma y Presenton** permanecerán como alternativas de exploración, no como dependencias del flujo principal.
 
@@ -28,7 +28,7 @@ Esta separación evita pedirle a una sola herramienta que resuelva contenido aca
 | [Canva](https://www.canva.com/) | Componer una presentación editable y reutilizar diseños existentes | Cuenta autenticada, buena edición visual y exportación a PPTX/PDF | La composición final no es determinista ni adecuada como fuente de verdad textual | Adoptar para la primera versión visual |
 | [Figma Slides](https://www.figma.com/slides/) | Diseñar diapositivas y diagramas con componentes reutilizables | Cuenta autenticada y buena integración entre presentación, arquitectura y figuras | La cuenta disponible tiene plan Starter y asiento View; algunas operaciones pueden depender de permisos del archivo | Adoptar como alternativa de composición y diagramación |
 | [HyperFrames](https://github.com/heygen-com/hyperframes) | Generar animaciones explicativas mediante código | Instalado localmente; permite representar ruido, prominencia, recuperación e interpolación con control temporal | No debe sustituir la evidencia del caso ni convertir cada diapositiva en video | Adoptar para dos o tres clips breves |
-| [Draw.io MCP](https://github.com/jgraph/drawio-mcp) | Crear arquitecturas y flujos editables con iconos técnicos | Formato `.drawio`, exportación y biblioteca amplia de formas | Requiere reiniciar Codex después de registrar el MCP | Adoptar para arquitectura y flujos |
+| [Draw.io](https://github.com/jgraph/drawio-mcp) | Crear arquitecturas y flujos editables con iconos técnicos | Formato `.drawio`, exportación y biblioteca amplia de formas | El MCP stdio figura como no compatible en el host actual | Adoptar mediante generación programática de `.drawio`; usar el MCP solo cuando el host lo admita |
 
 ## Flujo documental adoptado
 
@@ -97,9 +97,9 @@ La presentación debe contener conceptos y decisiones; la web debe contener expl
 
 ## Próximo incremento recomendado
 
-1. Reiniciar Codex para habilitar Draw.io MCP y las skills de HyperFrames recién instaladas.
+1. Mantener Mermaid como fuente textual versionada y generar `.drawio` como artefacto editable; no depender del MCP local para comenzar.
 2. Preparar en Markdown el guion definitivo por diapositiva, incluyendo mensaje, evidencia, transición a la web y notas del expositor.
-3. Crear con Draw.io dos recursos reutilizables: arquitectura general y flujo de las fases 2 a 5.
+3. Crear dos recursos reutilizables en formato Mermaid y `.drawio`: arquitectura general y flujo de las fases 2 a 5. Figma podrá emplearse para el acabado visual dentro de la presentación.
 4. Generar en Canva una primera versión visual y, en paralelo, validar si Figma Slides permite una edición más precisa con el plan actual.
 5. Producir con HyperFrames solo dos clips: limpieza/prominencia/recuperación y geometría de alineación cadera-rodilla-tobillo.
 6. Integrar capturas o enlaces de la web para la demostración con datos reales; los videos controlados deberán presentarse como explicación conceptual, no como resultado experimental.

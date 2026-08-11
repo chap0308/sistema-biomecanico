@@ -37,7 +37,7 @@ MediaPipe Pose genera 33 puntos corporales. Sin embargo, el pipeline de sentadil
 12. punta del pie izquierda;
 13. punta del pie derecha.
 
-En cada fotograma, un punto se considera detectado cuando su valor de visibilidad es igual o superior a 0,5. En consecuencia, cada fotograma recibe una cantidad comprendida entre 0 y 13.
+En cada fotograma, un punto se considera detectado cuando sus coordenadas bidimensionales `x` e `y` son finitas y su valor de visibilidad es igual o superior a 0,5. En consecuencia, cada fotograma recibe una cantidad comprendida entre 0 y 13.
 
 La cantidad por fotograma se registra en `frame_quality.csv` mediante el campo `detected_keypoints`. Posteriormente, `pose_summary.json` calcula la media aritmética de todos los fotogramas procesados y la almacena en `mean_detected_keypoints`.
 
@@ -49,7 +49,7 @@ El indicador se denominará:
 
 Su definición operacional será:
 
-> Media aritmética de la cantidad de los 13 puntos anatómicos seleccionados cuya visibilidad es igual o superior a 0,5 en todos los fotogramas procesados.
+> Media aritmética de la cantidad de los 13 puntos anatómicos seleccionados que poseen coordenadas bidimensionales finitas y visibilidad igual o superior a 0,5 en todos los fotogramas procesados.
 
 Su unidad de medida será:
 
@@ -86,7 +86,7 @@ El resultado se expresaría como:
 
 El promedio de puntos detectados describe la cobertura general de la estimación de pose, pero no determina por sí solo la validez de un fotograma.
 
-La regla vigente para que un fotograma sea utilizable exige:
+La regla vigente para que un fotograma sea utilizable exige coordenadas `x` e `y` finitas y visibilidad igual o superior a 0,5 en:
 
 - hombro izquierdo y derecho;
 - cadera izquierda y derecha;
@@ -102,6 +102,18 @@ Por ello, deben diferenciarse dos indicadores:
 - **Porcentaje de fotogramas válidos:** proporción de fotogramas que cumplen la combinación concreta de referencias requerida para el análisis.
 
 Un video puede presentar un promedio elevado de puntos detectados y, aun así, contener fotogramas inválidos si pierde temporalmente una cadera, rodilla, tobillo u otra referencia esencial.
+
+También deben distinguirse las responsabilidades técnicas:
+
+- OpenCV determina cuántos fotogramas declara el archivo y cuántos logra decodificar;
+- MediaPipe estima coordenadas y visibilidad;
+- la regla del sistema determina cuáles de esos fotogramas son válidos para análisis.
+
+Por ello:
+
+`Fotogramas procesados (%) = 100 × fotogramas decodificados / fotogramas declarados`
+
+`Fotogramas válidos (%) = 100 × fotogramas que cumplen la regla de pose / fotogramas decodificados`
 
 ## 7. Cambios documentales necesarios
 

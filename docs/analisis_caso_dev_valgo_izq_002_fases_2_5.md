@@ -75,13 +75,13 @@ flowchart LR
 
 ### 4.1. Lectura del video
 
-OpenCV abre el archivo y decodifica secuencialmente cada fotograma. Para este caso se procesaron los 662 fotogramas declarados por el video.
+OpenCV abre el archivo, consulta sus metadatos técnicos y decodifica secuencialmente cada fotograma. `CAP_PROP_FRAME_COUNT` entrega la cantidad declarada por el contenedor o el backend de video; no se calcula multiplicando duración por frecuencia. Durante el procesamiento, `VideoCapture.read()` intenta recuperar cada imagen y el contador `processed_frames` aumenta únicamente cuando la decodificación devuelve un fotograma. Para este caso, OpenCV declaró 662 fotogramas y los 662 pudieron decodificarse.
 
 Antes de enviar la imagen a MediaPipe:
 
-1. OpenCV entrega el fotograma en formato BGR.
-2. El sistema lo convierte a RGB.
-3. MediaPipe Pose procesa la imagen en modo de video.
+1. OpenCV entrega una matriz de píxeles en orden de canales BGR, que es su convención habitual.
+2. El sistema aplica `cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)` porque MediaPipe interpreta la imagen en orden RGB. Esta conversión no mejora ni evalúa la imagen: evita intercambiar los canales rojo y azul antes de la inferencia.
+3. MediaPipe Pose procesa la secuencia con seguimiento temporal (`static_image_mode=False`). Después de detectar la pose inicialmente, el modelo intenta seguirla entre fotogramas y vuelve a ejecutar la detección cuando pierde el seguimiento.
 4. Se conservan las coordenadas estimadas y su visibilidad.
 
 La configuración actual utiliza:
@@ -91,6 +91,10 @@ La configuración actual utiliza:
 - suavizado temporal de puntos activado;
 - confianza mínima de detección de 0.50;
 - confianza mínima de seguimiento de 0.50.
+
+Por tanto, OpenCV realiza la inspección y decodificación técnica, pero no calcula la visibilidad ni decide la validez anatómica. Esa decisión se construye después de MediaPipe mediante reglas explícitas del sistema.
+
+La documentación oficial de OpenCV define `CAP_PROP_FRAME_COUNT` como la cantidad de fotogramas del archivo y `VideoCapture.read()` como la operación que captura, decodifica y devuelve el siguiente fotograma. Google define `visibility` como la estimación de si un punto es visible o está ocluido, y diferencia este atributo de `presence`. Estas fuentes respaldan la interpretación técnica de los campos, no los umbrales operativos propios del prototipo ([OpenCV Video I/O](https://docs.opencv.org/4.12.0/d4/d15/group__videoio__flags__base.html); [OpenCV VideoCapture](https://docs.opencv.org/3.3.0/d8/dfe/classcv_1_1VideoCapture.html); [MediaPipe Landmark](https://ai.google.dev/edge/api/mediapipe/python/mp/tasks/components/containers/Landmark)).
 
 ### 4.2. De 33 puntos a 13 puntos relevantes
 
@@ -135,15 +139,58 @@ y_px = y_normalizado x alto_video
 
 ### 4.4. ¿Cuándo se considera válido un fotograma?
 
-El umbral operativo de visibilidad es `0.50`.
+El umbral operativo de visibilidad es `0.50`. La **visibilidad crítica mínima** de un fotograma es el menor valor de visibilidad efectiva entre ocho puntos centrales:
+
+```text
+v_crítica(f) = mín(v_HI, v_HD, v_CI, v_CD, v_RI, v_RD, v_TI, v_TD)
+```
+
+No es un promedio. Representa el eslabón más débil de la estructura central: aunque siete puntos tengan visibilidad alta, un solo hombro, cadera, rodilla o tobillo por debajo de `0.50` impide considerar válido el fotograma.
 
 Un fotograma es válido cuando:
 
-- ambos hombros, caderas, rodillas y tobillos alcanzan visibilidad de al menos 0.50;
+- ambos hombros, caderas, rodillas y tobillos poseen coordenadas `x` e `y` finitas y alcanzan visibilidad de al menos 0.50;
 - existe al menos una referencia distal utilizable por cada lado: talón o punta del pie;
 - MediaPipe devuelve la estructura completa de pose.
 
-El campo `detected_keypoints` cuenta cuántos de los 13 puntos seleccionados superan 0.50. No cuenta los 33 puntos completos de MediaPipe.
+El campo `detected_keypoints` cuenta cuántos de los 13 puntos seleccionados poseen coordenadas 2D finitas y visibilidad igual o superior a 0.50. No cuenta los 33 puntos completos de MediaPipe. La nariz forma parte de este conteo descriptivo, pero no es obligatoria para validar el fotograma.
+
+La evaluación se organiza en tres capas:
+
+| Capa | Responsable | Pregunta que responde |
+|---|---|---|
+| Lectura técnica | OpenCV | ¿El archivo declara metadatos coherentes y el fotograma puede decodificarse? |
+| Estimación de pose | MediaPipe | ¿Qué coordenadas, visibilidad y presencia estima para los puntos corporales? |
+| Regla analítica | Sistema propuesto | ¿La combinación de puntos estimados permite usar el fotograma y la repetición en los cálculos? |
+
+#### Fórmulas de los indicadores
+
+Sea `F_meta` la cantidad de fotogramas declarada por OpenCV, `F_dec` la cantidad realmente decodificada y `F_val` la cantidad que cumple la regla de pose:
+
+```text
+Fotogramas procesados correctamente (%) = 100 × F_dec / F_meta
+Porcentaje global de fotogramas válidos = 100 × F_val / F_dec
+Calidad global recomendada = porcentaje global de fotogramas válidos ≥ 95 %
+```
+
+La tercera expresión no es otro promedio: es la comparación del mismo porcentaje global con un umbral más exigente de recomendación. El mínimo de aceptación global es `90 %`; entre `90 %` y `95 %` el caso puede seguir siendo analizable, pero queda marcado para revisión.
+
+Para una repetición delimitada entre los fotogramas `a` y `b`:
+
+```text
+Fotogramas válidos de la repetición (%) =
+100 × Σ valid_for_analysis(f) / (b - a + 1)
+```
+
+donde `valid_for_analysis(f)` vale `1` si el fotograma es válido y `0` en caso contrario. La repetición requiere al menos `80 %` de fotogramas válidos y, adicionalmente, el fotograma de máxima profundidad debe ser válido. El `90 %` por repetición es una recomendación que genera advertencia, no una exclusión.
+
+El promedio de puntos detectados cumple una función diferente:
+
+```text
+Promedio de puntos detectados = Σ detected_keypoints(f) / F_dec
+```
+
+Este promedio describe cobertura general de los 13 puntos, pero no sustituye la regla estructural. Un fotograma con 12 puntos puede ser válido si falta la nariz, o inválido si falta una rodilla.
 
 ### 4.5. Resultado de calidad del caso
 
@@ -256,7 +303,18 @@ La ventana es aproximadamente:
 
 Esta combinación reduce pequeñas vibraciones de los landmarks sin eliminar el ciclo principal de la sentadilla.
 
-La interpolación solo cubre pérdidas aisladas para mantener una serie continua. No convierte un intervalo prolongado sin detección en evidencia válida: la puerta de calidad sigue utilizando `valid_for_analysis` para decidir si una repetición es elegible.
+La interpolación se aplica únicamente a la señal temporal `hip_midpoint_y`, no a las coordenadas utilizadas para calcular tronco, pelvis o rodillas. El sistema conserva todos los índices decodificados; si en un fotograma falta una o ambas caderas, el punto medio queda como `NaN` y la serie interpola el hueco para mantener continuidad temporal. Ese fotograma sigue teniendo `valid_for_analysis=False`.
+
+Por ello, la interpolación puede ayudar a localizar un ciclo pese a una pérdida aislada, pero no fabrica evidencia biomecánica. No convierte un intervalo prolongado sin detección en evidencia válida: la puerta de calidad sigue utilizando `valid_for_analysis` para decidir si una repetición es elegible.
+
+En MediaPipe no debe asumirse que una coordenada `NaN` vendrá acompañada necesariamente de visibilidad `0`. Son salidas diferentes. El sistema comprueba ambas condiciones: una coordenada `x` o `y` no finita vuelve inutilizable el punto aunque su visibilidad declarada fuera alta.
+
+El caso crítico de máxima profundidad está protegido por dos reglas complementarias:
+
+1. la segmentación puede localizar el máximo sobre la señal interpolada y suavizada;
+2. la repetición solo se admite para análisis si el fotograma original de máxima profundidad cumple la regla de validez.
+
+Si dicho fotograma es inválido, las variables de ese instante se enmascaran como `NaN` y la repetición queda excluida. Los porcentajes globales altos no compensan esta pérdida puntual.
 
 La mediana móvil y el promedio móvil cumplen funciones diferentes:
 
