@@ -98,10 +98,12 @@ La cinta debe ser plana, antideslizante, de color contrastante y no reflectante.
 4. Extender los brazos hacia delante a la altura aproximada de los hombros para evitar que las manos cubran caderas o rodillas.
 5. Permanecer quieto entre 2 y 3 segundos antes de iniciar.
 6. Realizar una repetición completa y controlada para cada video de la muestra formal. El sistema admite una o varias repeticiones por video durante el desarrollo.
-7. Usar una velocidad aproximada de 2 segundos de descenso y 2 segundos de ascenso, sin rebotes.
+7. Usar como referencia una velocidad aproximada de 2 segundos de descenso y 2 segundos de ascenso, sin rebotes ni pausas deliberadamente prolongadas en profundidad. La igualdad exacta entre ambas fases no es un criterio automático de exclusión.
 8. Descender solo hasta una profundidad cómoda y reproducible.
 9. Mantener ambos talones apoyados y no usar discos, cuñas ni soportes para aumentar artificialmente la profundidad.
 10. Permanecer quieto entre 2 y 3 segundos al finalizar.
+
+Si el participante se detiene durante varios segundos en una posición intermedia o en máxima profundidad, no completa el retorno o realiza acomodaciones repetidas, se recomienda repetir el intento. Esta decisión estandariza la muestra y no responde a que el algoritmo exija una velocidad simétrica: las pruebas controladas confirmaron que puede segmentar descensos y ascensos de distinta duración.
 
 Para la muestra formal se recomienda grabar una repetición completa por video. Durante el desarrollo, un video puede contener varias repeticiones: el sistema segmentará cada ejecución y producirá una clasificación independiente para cada una. Un video con varias repeticiones no genera un resultado por consenso; se representa mediante identificadores como `caso-01-repeticion-1`, `caso-01-repeticion-2` y `caso-01-repeticion-3`.
 

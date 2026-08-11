@@ -49,6 +49,7 @@ La sesión se desarrollará siguiendo estas etapas:
 - No se emplearán barras, mancuernas ni implementos adicionales.
 - La ejecución se realizará sobre una superficie plana, sin discos, cuñas ni soportes colocados debajo de los talones.
 - Se solicitará mantener ambos talones en contacto con el suelo y descender únicamente hasta una profundidad cómoda que permita conservar el apoyo.
+- La repetición se realizará de forma continua y controlada, sin rebotes ni pausas deliberadamente prolongadas en máxima profundidad, y deberá terminar con el retorno completo a la posición inicial. No se exigirá que descenso y ascenso tengan duraciones exactamente iguales.
 - Si aparece una elevación espontánea breve del talón, el investigador la registrará como observación técnica. Si la elevación es evidente o sostenida, o compromete la visibilidad del tobillo, talón o pie, el intento podrá repetirse o excluirse según los criterios del Instrumento 1.
 - La elección sin carga externa responde a criterios de estandarización metodológica, reducción del riesgo y control de variabilidad entre participantes.
 

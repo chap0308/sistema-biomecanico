@@ -167,23 +167,23 @@ if signal[index] >= signal[index - 1] and signal[index] > signal[index + 1]:
     prominence = signal[index] - max(left.min(), right.min())
 ```
 
-Las bases se buscan en una ventana aproximada de tres segundos. En consecuencia, se calcula una **prominencia local**, no necesariamente la prominencia global de toda la grabación.
+Las bases se buscan en una ventana de hasta diez segundos a cada lado del candidato. En consecuencia, se calcula una **prominencia temporal acotada**, no necesariamente la prominencia global de toda la grabación.
 
 En la implementación, `P`, `BI` y `BD` son valores de la coordenada vertical normalizada del centro de caderas sobre la señal suavizada:
 
 ```text
 P  = señal suavizada en el máximo local candidato
-BI = mínimo de la señal en los tres segundos anteriores a P
-BD = mínimo de la señal en los tres segundos posteriores a P
+BI = mínimo de la señal en los diez segundos anteriores a P
+BD = mínimo de la señal en los diez segundos posteriores a P
 base de contorno local = max(BI, BD)
 prominencia local = P - max(BI, BD)
 ```
 
 El eje `y` de la imagen aumenta hacia abajo. Por eso, una sentadilla profunda produce un valor `P` mayor, mientras que el retorno hacia la posición alta produce valores menores. `BI` y `BD` no son intersecciones obligatorias con una misma línea horizontal ni equivalen necesariamente al reposo anatómico completo: son los mínimos encontrados de manera independiente a cada lado dentro de la ventana temporal. La línea horizontal dibujada por la interfaz corresponde únicamente a `max(BI, BD)`, es decir, a la base conservadora que limita la prominencia.
 
-Por esta razón, en un caso como `dev_case_1784949757322`, `BD` puede coincidir con el valle `V` situado entre el pico actual y el siguiente. Esto ocurre cuando el menor valor de los tres segundos posteriores al pico es también el menor valor de todo el intervalo entre ambos picos. No representa un error ni exige que `BD` toque otra línea de referencia.
+Por esta razón, en un caso como `dev_case_1784949757322`, `BD` puede coincidir con el valle `V` situado entre el pico actual y el siguiente. Esto ocurre cuando el menor valor de la ventana posterior al pico es también el menor valor de todo el intervalo entre ambos picos. No representa un error ni exige que `BD` toque otra línea de referencia.
 
-Los tres segundos pertenecen al parámetro versionado `peak_window_seconds=3.0` y limitan solamente la búsqueda local de `BI` y `BD`. Ampliar esa ventana puede permitir encontrar un retorno más lejano, pero también cambia qué oscilaciones se consideran parte del entorno del pico. Por tanto, modificarla altera el algoritmo y requiere repetir las pruebas de segmentación; no es únicamente un cambio gráfico.
+Los diez segundos pertenecen al parámetro versionado `peak_window_seconds=10.0` y limitan solamente la búsqueda de `BI` y `BD`. La versión anterior utilizaba tres segundos. Los casos controlados con permanencia prolongada en profundidad demostraron que esa ventana podía quedar contenida dentro de la meseta: una repetición real no producía prominencia suficiente o se elegía un máximo adelantado. La ventana se amplió después de comparar 40 señales procesadas: 38 conservaron exactamente los mismos picos, una corrigió el fotograma de máxima profundidad y otra pasó de cero a una repetición detectada. La distancia mínima y la recuperación entre picos permanecen activas para evitar que ampliar la ventana fusione o multiplique ciclos sin justificación.
 
 La diferencia frente a SciPy es relevante para explicarlo correctamente:
 
@@ -236,6 +236,23 @@ Una vez obtenidos los candidatos, el sistema exige una separación temporal mín
 - **prominencia:** evita aceptar oscilaciones verticales pequeñas;
 - **distancia:** evita contar dos máximos demasiado próximos;
 - **recuperación entre máximos:** evita dividir una pausa prolongada en profundidad aunque haya transcurrido suficiente tiempo.
+
+### 4.6. Qué ocurre con velocidades y pausas diferentes
+
+La ventana de prominencia no exige que descenso y ascenso tengan la misma duración. Los seis videos controlados añadidos para esta validación mostraron lo siguiente:
+
+| Caso | Resultado con ventana corregida | Interpretación |
+|---|---|---|
+| Descenso y ascenso similares | 3 repeticiones | La simetría temporal no es un requisito especial |
+| Dos repeticiones rápidas | 2 repeticiones | Las repeticiones breves conservaron picos independientes |
+| Segunda repetición con pausa y ascenso prolongado | 2 repeticiones | Se corrigió el fotograma de máxima profundidad sin alterar el conteo |
+| Descenso rápido y ascenso lento | 3 repeticiones | Se aceptó incluso un descenso de `0.60 s` y un ascenso de `4.17 s` |
+| Tres repeticiones rápidas | 3 repeticiones | Los ciclos de aproximadamente `1.13 s` siguieron siendo distinguibles |
+| Una repetición con pausa profunda prolongada | 1 repetición | La versión de tres segundos producía un falso negativo |
+
+Una permanencia profunda puede producir varios máximos locales. Primero se aplica la distancia mínima de dos segundos; después, la recuperación decide si hubo un retorno vertical real. Si entre dos máximos la señal permanece cerca de la profundidad, la recuperación es menor que la prominencia mínima y ambos candidatos se fusionan. Si la persona asciende suficientemente y vuelve a descender, la recuperación supera el umbral y se conservan como repeticiones distintas.
+
+La ampliación de la ventana mejora la localización técnica, pero no convierte una pausa deliberadamente prolongada en la ejecución estándar del estudio. El protocolo mantiene una sentadilla continua y controlada para reducir variabilidad entre participantes.
 
 ## 5. Relación con el error de cuatro repeticiones
 
@@ -290,6 +307,18 @@ recuperación = 0.000204
 prominencia mínima = 0.03
 0.000204 < 0.03
 ```
+
+El valor `0.03` no provino de un pico particular. Se calculó una sola vez para todo el video a partir de la señal suavizada:
+
+```text
+P05 = 0.512280
+P95 = 0.673052
+rango robusto = 0.673052 - 0.512280 = 0.160772
+18 % del rango = 0.028939
+prominencia mínima = max(0.03, 0.028939) = 0.03
+```
+
+Por tanto, el piso fijo fue mayor que el componente adaptativo. Después, ese mismo mínimo se aplicó a cada máximo local candidato y a la validación de recuperación entre candidatos consecutivos.
 
 Por tanto, los candidatos pertenecen al mismo ciclo y se conserva únicamente el más profundo.
 
