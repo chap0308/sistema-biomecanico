@@ -36,11 +36,21 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Mensaje visible:** Video → pose 2D → señal temporal → geometría → regla interpretable.
 
-**Guion:** OpenCV decodifica el video; MediaPipe estima puntos y visibilidad; el sistema decide qué fotogramas son utilizables; SciPy y pandas ayudan a limpiar y segmentar la señal; NumPy calcula la geometría; FastAPI publica el informe y Next.js permite recorrer la evidencia.
+**Guion:** OpenCV decodifica el video; MediaPipe estima puntos y visibilidad; pandas organiza e interpola la señal; NumPy y funciones propias calculan la segmentación y la geometría; OpenCV y Matplotlib producen evidencia visual; openpyxl genera los libros normalizados; FastAPI publica el informe y Next.js permite recorrerlo. SciPy sirve como referencia teórica para prominencia, pero el pipeline actual no lo invoca directamente.
 
 **Conexión web:** vista general del caso y pestañas Pose 2D, Segmentación, Variables y Reglas.
 
-## Diapositiva 4. Tres niveles que no deben confundirse
+## Diapositiva 4. Los resultados no aparecen por arte de magia
+
+**Mensaje visible:** Los datos canónicos alimentan productos distintos sin alterar la evidencia original.
+
+**Guion:** MediaPipe no genera directamente un video, una gráfica o un Excel. El pipeline guarda primero coordenadas, visibilidad, calidad, fases y métricas en CSV y JSON. Después, OpenCV dibuja puntos, líneas, textos y pixelado sobre cada fotograma; Matplotlib convierte series y métricas en gráficos PNG; openpyxl compone tablas, encabezados, formatos y leyendas en Excel; FFmpeg transforma el video intermedio en H.264 compatible con navegadores.
+
+**Flujo visible:** `MediaPipe → CSV/JSON canónicos → OpenCV/Matplotlib/openpyxl → MP4/PNG/XLSX`.
+
+**Aclaración:** Las tablas normalizadas son derivados de presentación. Los CSV y JSON canónicos permanecen disponibles para reproducir los cálculos.
+
+## Diapositiva 5. Tres niveles que no deben confundirse
 
 **Mensaje visible:** Fotograma decodificado ≠ pose válida ≠ repetición válida.
 
@@ -52,7 +62,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 - `válidos (%) = 100 × fotogramas con pose válida / fotogramas decodificados`.
 - `calidad global recomendada = válidos (%) ≥ 95 %`.
 
-## Diapositiva 5. De 33 puntos a 13 referencias útiles
+## Diapositiva 6. De 33 puntos a 13 referencias útiles
 
 **Mensaje visible:** El modelo estima 33 puntos; el análisis conserva 13 y exige 8 referencias críticas.
 
@@ -60,25 +70,37 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Aclaración:** La visibilidad crítica mínima es el menor valor efectivo entre los ocho puntos centrales; no es un promedio.
 
-## Diapositiva 6. La cadera convierte el movimiento en una señal
+## Diapositiva 7. La cadera convierte el movimiento en una señal
 
 **Mensaje visible:** `hip_midpoint_y = (y_cadera_izquierda + y_cadera_derecha) / 2`.
 
 **Guion:** En las coordenadas de imagen, el origen está arriba a la izquierda y `y` aumenta hacia abajo. Por eso, cuando la persona desciende, la señal vertical del centro de caderas aumenta. Esta señal no representa fuerza ni ángulo articular: representa posición vertical normalizada en el tiempo.
 
-**Evidencia:** fotograma de reposo, fotograma de máxima profundidad y su posición sobre la curva.
+**Evidencia:** fotograma de reposo, fotograma de máxima profundidad, su posición sobre la curva y el clip `senal_caderas_animada.mp4` construido con `frame_phases.csv`.
 
-## Diapositiva 7. Limpiar la señal sin inventar evidencia
+## Diapositiva 8. Una fórmula, dos interpolaciones distintas
+
+**Mensaje visible:** Interpolar significa estimar un punto intermedio entre dos referencias conocidas.
+
+**Fórmula general:** `q = q₁ + ((u - u₁)/(u₂ - u₁)) × (q₂ - q₁)`.
+
+**Guion:** En la interpolación temporal, `u` es el tiempo o índice de fotograma y `q` es `hip_midpoint_y`; se usa para cubrir huecos breves de la señal. En la interpolación espacial, `u` es la coordenada vertical `y` y `q` es la coordenada horizontal `x`; se usa dentro del fotograma de máxima profundidad para estimar dónde el eje cadera–tobillo cruza la altura de la rodilla. La misma relación lineal responde a dos problemas diferentes.
+
+**Aclaración:** La interpolación temporal no reemplaza las coordenadas anatómicas que se usan para calcular las variables biomecánicas.
+
+## Diapositiva 9. Limpiar la señal sin inventar evidencia
 
 **Mensaje visible:** Interpolar continuidad no convierte un fotograma deficiente en válido.
 
-**Guion:** Un hueco aislado de `hip_midpoint_y` puede interpolarse temporalmente entre muestras conocidas. Una mediana móvil de cinco fotogramas reduce saltos puntuales y un promedio móvil de cinco fotogramas suaviza vibraciones pequeñas. La bandera original `valid_for_analysis` no cambia y las variables biomecánicas no usan coordenadas anatómicas interpoladas.
+**Guion:** Un hueco aislado de `hip_midpoint_y` puede interpolarse temporalmente entre muestras conocidas. A `24.04 fps`, la ventana configurada de `0.20 s` equivale a cinco fotogramas. La mediana centrada reduce estimaciones atípicas, es decir, saltos aislados incompatibles con las muestras vecinas. Después, el promedio centrado reduce pequeñas variaciones restantes y facilita localizar máximos estables. Cada resultado se asigna al fotograma central de su ventana; por eso se obtiene una curva completa y no un único promedio global.
+
+**Ejemplo real, fotograma 388:** valores `0.750289`, `0.750377`, `0.751089`, `0.751154` y `0.750506`; mediana `0.750506`; promedio de las medianas vecinas `0.750437`. El valor suavizado queda asociado al fotograma 388.
 
 **Fórmula:** `y(t) = y_a + ((t - t_a)/(t_b - t_a)) × (y_b - y_a)`.
 
 **Evidencia:** `01_limpieza_interpolacion_suavizado.png`.
 
-## Diapositiva 8. Prominencia: un pico debe sobresalir
+## Diapositiva 10. Prominencia: un pico debe sobresalir
 
 **Mensaje visible:** Un máximo local no basta para afirmar que existe una profundidad de sentadilla.
 
@@ -88,7 +110,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Evidencia:** `02_prominencia_picos_reales.png` y clip HyperFrames de segmentación.
 
-## Diapositiva 9. La recuperación evita duplicar una ejecución
+## Diapositiva 11. La recuperación evita duplicar una ejecución
 
 **Mensaje visible:** Separación temporal no implica una nueva sentadilla; debe existir recuperación vertical.
 
@@ -98,7 +120,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Evidencia:** `03_error_doble_pico_recuperacion.png`.
 
-## Diapositiva 10. Del pico a las fases de la ejecución
+## Diapositiva 12. Del pico a las fases de la ejecución
 
 **Mensaje visible:** Reposo → descenso → máxima profundidad → ascenso → cierre.
 
@@ -106,13 +128,13 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Conexión web:** seleccionar repetición 3 y recorrer los tres eventos sincronizados con el video.
 
-## Diapositiva 11. `W0` normaliza las distancias
+## Diapositiva 13. `W0` normaliza las distancias
 
 **Mensaje visible:** `W0 = mediana del ancho de hombros en los fotogramas iniciales válidos`.
 
 **Guion:** Una distancia horizontal depende del tamaño aparente de la persona en la imagen. Dividirla entre una referencia corporal inicial permite expresarla como porcentaje. En el caso conductor, `W0 = 0.258264` del ancho normalizado de la imagen. No es el ancho instantáneo de hombros en máxima profundidad.
 
-## Diapositiva 12. Orientación y traslación responden preguntas distintas
+## Diapositiva 14. Orientación y traslación responden preguntas distintas
 
 **Mensaje visible:** Tronco en grados; pelvis en porcentaje de `W0`.
 
@@ -120,7 +142,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Resultados de ejemplo:** tronco `12.38°`; pelvis `9.55 % de W0`.
 
-## Diapositiva 13. Alineación cadera–rodilla–tobillo
+## Diapositiva 15. Alineación cadera–rodilla–tobillo
 
 **Mensaje visible:** La interpolación espacial estima dónde debería cruzar la rodilla el eje cadera–tobillo a la misma altura vertical.
 
@@ -128,13 +150,15 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Ejemplo de la rodilla izquierda:** `t = 0.524693`, `Kx_esperado = 0.614828`, desviación medial `27.29 % de W0`.
 
-## Diapositiva 14. Medir todavía no es clasificar
+**Evidencia:** clip `construccion_geometrica_variables.mp4`, que construye secuencialmente `W0`, tronco, pelvis, ambas alineaciones de rodilla y la diferencia bilateral con datos reales de la repetición 3.
+
+## Diapositiva 16. Medir todavía no es clasificar
 
 **Mensaje visible:** Valor + dirección + unidad + regla = estado interpretable.
 
 **Guion:** Cada patrón se evalúa de manera independiente y una repetición puede presentar más de uno. Los umbrales son provisionales para construir y verificar el prototipo; no son puntos de corte clínicos. La salida conserva los estados ausente, no concluyente o presente con dirección cuando corresponde.
 
-## Diapositiva 15. La web demuestra la trazabilidad
+## Diapositiva 17. La web demuestra la trazabilidad
 
 **Mensaje visible:** Video, tiempo, fotograma, coordenadas, fórmula y clasificación cuentan la misma historia.
 
@@ -147,7 +171,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 5. Comprobar la banda de decisión en Reglas.
 6. Descargar los artefactos técnicos.
 
-## Diapositiva 16. Qué demuestra y qué no demuestra
+## Diapositiva 18. Qué demuestra y qué no demuestra
 
 **Mensaje visible:** El sistema hace medible y auditable una observación; no reemplaza una evaluación clínica.
 
@@ -158,16 +182,18 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 | Tema | Diapositiva | Web | Artefacto |
 |---|---:|---|---|
 | Arquitectura | 3 | Resumen del caso | diagrama Fases 2–5 |
-| Calidad de pose | 4–5 | Pose 2D | `frame_quality.csv`, `landmarks.csv`, `pose_quality.png` |
-| Señal de cadera | 6 | Segmentación | `frame_phases.csv` |
-| Limpieza | 7 | Segmentación | `01_limpieza_interpolacion_suavizado.png` |
-| Prominencia | 8 | Segmentación | `02_prominencia_picos_reales.png`, clip HyperFrames |
-| Recuperación | 9 | Segmentación | `03_error_doble_pico_recuperacion.png` |
-| Fases | 10 | Segmentación | `repetitions.csv`, capturas de eventos |
-| `W0` | 11 | Variables | `biomechanical_summary.json` |
-| Tronco y pelvis | 12 | Variables | `biomechanical_frame_metrics.csv` |
-| Rodillas | 13 | Variables | `peak_rep_3.png`, métricas por fotograma |
-| Reglas | 14 | Reglas | `rule_evidence.csv`, `findings.json` |
+| Producción de artefactos | 4 | Descargas | CSV/JSON canónicos, MP4, PNG y XLSX |
+| Calidad de pose | 5–6 | Pose 2D | `frame_quality.csv`, `landmarks.csv`, `pose_quality.png` |
+| Señal de cadera | 7 | Segmentación | `frame_phases.csv`, `senal_caderas_animada.mp4` |
+| Interpolación | 8 | Segmentación y Variables | fórmula lineal temporal y espacial |
+| Limpieza | 9 | Segmentación | `01_limpieza_interpolacion_suavizado.png` |
+| Prominencia | 10 | Segmentación | `02_prominencia_picos_reales.png`, clip HyperFrames |
+| Recuperación | 11 | Segmentación | `03_error_doble_pico_recuperacion.png` |
+| Fases | 12 | Segmentación | `repetitions.csv`, capturas de eventos |
+| `W0` | 13 | Variables | `biomechanical_summary.json` |
+| Tronco y pelvis | 14 | Variables | `biomechanical_frame_metrics.csv` |
+| Rodillas | 15 | Variables | `peak_rep_3.png`, métricas por fotograma, `construccion_geometrica_variables.mp4` |
+| Reglas | 16 | Reglas | `rule_evidence.csv`, `findings.json` |
 
 ## Preguntas previsibles
 
@@ -200,5 +226,5 @@ No. Son criterios provisionales del prototipo sujetos a calibración y validaci�
 - MediaPipe Pose Landmarker: coordenadas y visibilidad de pose.
 - OpenCV `VideoCapture`: apertura, decodificación y metadatos del video.
 - pandas `Series.interpolate`: interpolación temporal de huecos.
-- SciPy `find_peaks` y `peak_prominences`: máximos locales, distancia y prominencia.
+- SciPy `find_peaks` y `peak_prominences`: referencia conceptual para máximos locales, distancia y prominencia; no es una llamada directa del pipeline actual.
 - Documentación y artefactos reproducibles del caso `dev_valgo_izq_002`.

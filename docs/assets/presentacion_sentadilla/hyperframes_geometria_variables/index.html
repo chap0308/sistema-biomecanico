@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920,height=1080" />
+  <title>Construcción geométrica de variables</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #f7f1e8; color: #123b45; font-family: Inter, sans-serif; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+    .clip { position: absolute; inset: 0; }
+    .stage { position: absolute; inset: 0; padding: 64px 82px; }
+    .kicker { font-size: 22px; letter-spacing: 4px; text-transform: uppercase; color: #0b6b69; font-weight: 700; }
+    h1 { margin: 15px 0 8px; width: 1740px; font-size: 56px; line-height: 1.03; letter-spacing: -2px; }
+    .subtitle { margin: 0; position: relative; z-index: 3; font-size: 24px; color: #53676c; }
+    .plane { position: absolute; left: 82px; top: 285px; width: 970px; height: 690px; border-radius: 28px; background: #0d1b2a; overflow: hidden; }
+    .grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(147,181,218,.16) 1px, transparent 1px), linear-gradient(to bottom, rgba(147,181,218,.16) 1px, transparent 1px); background-size: 121px 91px; }
+    .panel { position: absolute; left: 1100px; top: 285px; width: 735px; height: 690px; border-radius: 28px; background: #fffdf8; border: 2px solid #d9d2c6; padding: 46px 50px; overflow: hidden; }
+    .step { position: absolute; inset: 46px 50px; opacity: 0; }
+    .step h2 { margin: 0 0 16px; font-size: 38px; line-height: 1.05; }
+    .step p { margin: 0 0 24px; font-size: 24px; line-height: 1.38; color: #53676c; }
+    .formula { padding: 24px 28px; border-radius: 20px; background: #123b45; color: #fff; font-size: 26px; line-height: 1.45; font-weight: 700; }
+    .result { margin-top: 28px; padding: 22px 26px; border-radius: 18px; background: #d9f0ec; border: 2px solid #0b6b69; font-size: 28px; font-weight: 700; color: #0b6b69; }
+    .note { margin-top: 22px; font-size: 20px; line-height: 1.35; color: #53676c; }
+    svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .skeleton { stroke: #91a5b6; stroke-width: 12; stroke-linecap: round; fill: none; }
+    .joint { fill: #d9e1e8; stroke: #0d1b2a; stroke-width: 4; }
+    .label { fill: #fff; font-size: 22px; font-weight: 700; paint-order: stroke; stroke: #0d1b2a; stroke-width: 5px; }
+    .w0, .trunk, .pelvis, .knee-left, .knee-right, .bilateral { opacity: 0; }
+    .w0-line { stroke: #c4b5fd; stroke-width: 10; stroke-linecap: round; }
+    .trunk-line { stroke: #46d9f2; stroke-width: 12; stroke-linecap: round; }
+    .vertical { stroke: #fbbf24; stroke-width: 6; stroke-dasharray: 18 14; }
+    .pelvis-arrow { stroke: #fb7185; stroke-width: 10; marker-end: url(#arrow); }
+    .axis { stroke: #fbbf24; stroke-width: 7; stroke-dasharray: 18 12; }
+    .delta { stroke: #fb7185; stroke-width: 12; stroke-linecap: round; }
+    .expected { fill: #fbbf24; stroke: #fff; stroke-width: 5; }
+    .actual { fill: #fb7185; stroke: #fff; stroke-width: 5; }
+    .status { position: absolute; right: 34px; top: 30px; padding: 13px 18px; border-radius: 14px; background: rgba(18,59,69,.92); color: #fff; font-size: 20px; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="geometria-variables" data-start="0" data-width="1920" data-height="1080" data-duration="26">
+    <section id="geometry-main" class="clip" data-start="0" data-duration="26" data-track-index="1">
+      <div class="stage">
+        <div class="kicker">Fase 4 · construcción geométrica</div>
+        <h1>Las variables nacen de las mismas coordenadas, pero responden preguntas distintas</h1>
+        <p class="subtitle" data-layout-allow-occlusion>Repetición 3 · fotograma 592 · máxima profundidad 24.63 s</p>
+        <div class="plane"><div class="grid"></div>
+          <svg viewBox="0 0 970 730">
+            <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fb7185"/></marker></defs>
+            <g id="body">
+              <line class="skeleton" x1="296" y1="185" x2="660" y2="175"/>
+              <line class="skeleton" x1="296" y1="185" x2="350" y2="405"/>
+              <line class="skeleton" x1="660" y1="175" x2="545" y2="420"/>
+              <line class="skeleton" x1="350" y1="405" x2="545" y2="420"/>
+              <line class="skeleton" x1="350" y1="405" x2="190" y2="535"/>
+              <line class="skeleton" x1="545" y1="420" x2="690" y2="500"/>
+              <line class="skeleton" x1="190" y1="535" x2="270" y2="655"/>
+              <line class="skeleton" x1="690" y1="500" x2="565" y2="625"/>
+              <circle class="joint" cx="296" cy="185" r="13"/><circle class="joint" cx="660" cy="175" r="13"/>
+              <circle class="joint" cx="350" cy="405" r="13"/><circle class="joint" cx="545" cy="420" r="13"/>
+              <circle class="joint" cx="190" cy="535" r="13"/><circle class="joint" cx="690" cy="500" r="13"/>
+              <circle class="joint" cx="270" cy="655" r="13"/><circle class="joint" cx="565" cy="625" r="13"/>
+              <text class="label" x="264" y="160">HD</text><text class="label" x="673" y="166">HI</text>
+              <text class="label" x="312" y="395">CD</text><text class="label" x="558" y="418">CI</text>
+              <text class="label" x="145" y="530">RD</text><text class="label" x="705" y="500">RI</text>
+              <text class="label" x="226" y="692">TD</text><text class="label" x="575" y="662">TI</text>
+            </g>
+            <g class="w0"><line class="w0-line" x1="296" y1="185" x2="660" y2="175"/><text class="label" x="452" y="145">W0</text></g>
+            <g class="trunk"><line class="vertical" x1="463" y1="176" x2="448" y2="413"/><line class="trunk-line" x1="463" y1="180" x2="448" y2="413"/><text class="label" x="478" y="290">θ</text></g>
+            <g class="pelvis"><line class="vertical" x1="500" y1="420" x2="500" y2="640"/><line class="pelvis-arrow" x1="478" y1="415" x2="448" y2="415"/><text class="label" x="388" y="377">Δx pelvis</text></g>
+            <g class="knee-left"><line class="axis" x1="545" y1="420" x2="565" y2="625"/><circle class="expected" cx="553" cy="500" r="16"/><circle class="actual" cx="690" cy="500" r="16"/><line class="delta" x1="553" y1="500" x2="690" y2="500"/><text class="label" x="575" y="470">Δx izquierda</text></g>
+            <g class="knee-right"><line class="axis" x1="350" y1="405" x2="270" y2="655"/><circle class="expected" cx="308" cy="535" r="16"/><circle class="actual" cx="190" cy="535" r="16"/><line class="delta" x1="190" y1="535" x2="308" y2="535"/><text class="label" x="176" y="495">Δx derecha</text></g>
+            <g class="bilateral"><path d="M190 585 C310 700 570 705 690 552" fill="none" stroke="#c4b5fd" stroke-width="8" stroke-dasharray="18 12"/><text class="label" x="365" y="690">|izquierda − derecha|</text></g>
+          </svg>
+          <div id="status" class="status">1 · referencia de escala</div>
+        </div>
+        <div class="panel">
+          <div class="step step-w0"><h2>1. Ancho inicial de hombros</h2><p>La mediana del reposo inicial crea una escala corporal aparente para normalizar distancias.</p><div class="formula">W0 = mediana(|xHD − xHI|)</div><div class="result">W0 = 0.258264</div><div class="note">No se usa para el ángulo del tronco.</div></div>
+          <div class="step step-trunk"><h2>2. Inclinación del tronco</h2><p>El eje entre los centros de hombros y pelvis se compara con la vertical.</p><div class="formula">θ = atan2(Sx − Px, Py − Sy)</div><div class="result">12.38° hacia la izquierda</div><div class="note">El ángulo ya es independiente de la escala.</div></div>
+          <div class="step step-pelvis"><h2>3. Desplazamiento de pelvis</h2><p>Se mide la traslación del centro de caderas respecto de la base de tobillos y del reposo inicial.</p><div class="formula">100 × (offset − offset₀) / W0</div><div class="result">9.55 % de W0</div><div class="note">El signo conserva la dirección anatómica.</div></div>
+          <div class="step step-knee"><h2>4. Alineación cadera–rodilla–tobillo</h2><p>La interpolación espacial obtiene la posición esperada de la rodilla sobre el eje cadera–tobillo.</p><div class="formula">t = (Ky − Hy)/(Ay − Hy)<br>Kx* = Hx + t(Ax − Hx)</div><div class="result">Izq. 27.29 % · Der. −37.39 %</div><div class="note">Positivo significa desplazamiento medial; negativo, lateral.</div></div>
+          <div class="step step-bilateral"><h2>5. Diferencia bilateral observable</h2><p>Se comparan las dos desviaciones ya calculadas; no se construye una nueva referencia anatómica.</p><div class="formula">|desviación izquierda − desviación derecha|</div><div class="result">64.67 % de W0</div><div class="note">No equivale a una asimetría corporal general ni a un diagnóstico.</div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    const status = document.getElementById("status");
+    function beat(start, group, step, label) {
+      tl.to(group, { opacity: 1, duration: .35 }, start)
+        .fromTo(step, { x: 70, opacity: 0 }, { x: 0, opacity: 1, duration: .65, ease: "power3.out" }, start)
+        .call(() => { status.textContent = label; }, [], start);
+    }
+    function leave(start, group, step) {
+      tl.to(group, { opacity: 0, duration: .28 }, start)
+        .to(step, { x: -70, opacity: 0, duration: .45, ease: "power3.in" }, start);
+    }
+    tl.fromTo("h1", { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power3.out" }, .2)
+      .fromTo(".plane", { x: -70 }, { x: 0, duration: .8 }, .7)
+      .fromTo(".panel", { x: 70 }, { x: 0, duration: .8 }, .7);
+    beat(1.6, ".w0", ".step-w0", "1 · referencia de escala"); leave(5.0, ".w0", ".step-w0");
+    beat(5.5, ".trunk", ".step-trunk", "2 · orientación del tronco"); leave(9.0, ".trunk", ".step-trunk");
+    beat(9.5, ".pelvis", ".step-pelvis", "3 · traslación de pelvis"); leave(13.0, ".pelvis", ".step-pelvis");
+    beat(13.5, ".knee-left, .knee-right", ".step-knee", "4 · interpolación espacial de rodillas"); leave(18.8, ".knee-left, .knee-right", ".step-knee");
+    beat(19.3, ".knee-left, .knee-right, .bilateral", ".step-bilateral", "5 · comparación bilateral");
+    window.__timelines["geometria-variables"] = tl;
+  </script>
+</body>
+</html>

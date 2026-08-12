@@ -107,18 +107,21 @@ La presentación debe contener conceptos y decisiones; la web debe contener expl
 
 ## Resultado del incremento de presentación técnica
 
-La estrategia se materializó en una presentación editable de 16 diapositivas y una versión PDF. El contenido sigue una secuencia única desde la captura del video hasta la validación frente a expertos, y diferencia explícitamente tres responsabilidades: la presentación explica las decisiones, la aplicación web conserva la evidencia interactiva y los artefactos descargables permiten auditar el procesamiento.
+La estrategia se materializó inicialmente en una presentación editable de 16 diapositivas. La versión 3 amplía el recorrido a 18 diapositivas para explicar también la producción de artefactos, la diferencia entre interpolación temporal y espacial y el ejemplo numérico de la ventana móvil. El contenido sigue una secuencia única desde la captura del video hasta la validación frente a expertos, y diferencia explícitamente tres responsabilidades: la presentación explica las decisiones, la aplicación web conserva la evidencia interactiva y los artefactos descargables permiten auditar el procesamiento.
 
 Los entregables sincronizados son:
 
-- `presentacion_proceso_interno_sentadilla_v2.pptx`: presentación editable con notas del expositor;
-- `presentacion_proceso_interno_sentadilla_v2.pdf`: versión estable para revisión y envío;
+- `presentacion_proceso_interno_sentadilla_v3.pptx`: presentación editable con notas del expositor;
+- `presentacion_proceso_interno_sentadilla_v3.pdf`: versión estable para revisión y envío;
 - `guion_presentacion_proceso_interno_sentadilla.md`: fuente textual de la narrativa, fórmulas, transiciones y demostraciones;
+- `trazabilidad_presentacion_proceso_interno_sentadilla.md`: registro de versiones y correspondencia de cambios;
 - `diagramas/presentacion/fases_2_5_sentadilla.mmd`: fuente Mermaid versionada del flujo técnico;
 - `diagramas/presentacion/fases_2_5_sentadilla.drawio`: diagrama editable en diagrams.net;
 - `assets/presentacion_sentadilla/hyperframes_segmentacion/segmentacion_prominencia_recuperacion.mp4`: clip explicativo de limpieza, prominencia y validación de recuperación;
+- `assets/presentacion_sentadilla/hyperframes_senal_caderas/senal_caderas_animada.mp4`: señal real animada del centro de caderas;
+- `assets/presentacion_sentadilla/hyperframes_geometria_variables/construccion_geometrica_variables.mp4`: construcción secuencial de `W0` y las variables;
 - `assets/presentacion_sentadilla/web_resumen_caso.png` y `web_trazabilidad_caso.png`: evidencias actuales de la aplicación web.
 
 La animación controlada no se presenta como resultado experimental. Su función es explicar fenómenos temporales difíciles de comunicar en una imagen estática. Los valores experimentales, las curvas completas, las coordenadas, los umbrales y los archivos técnicos continúan mostrándose en la aplicación web y en los resultados descargables del caso.
 
-La revisión final comprobó la apertura de las 16 diapositivas en PowerPoint, la exportación completa a PDF y el cumplimiento de las validaciones de HyperFrames sin errores de ejecución, composición ni contraste. Para conservar compatibilidad del archivo PPTX, el clip se vincula desde una diapositiva mediante su portada en lugar de incrustarse dentro del paquete de PowerPoint.
+La revisión final comprobó la apertura de las 18 diapositivas en PowerPoint, la exportación completa a PDF, la generación de la instantánea semántica de AnyDoc y el cumplimiento de las validaciones de HyperFrames sin errores de ejecución, composición ni contraste. Para conservar compatibilidad del archivo PPTX, los clips se vinculan desde sus portadas en lugar de incrustarse dentro del paquete de PowerPoint.

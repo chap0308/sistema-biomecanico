@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920,height=1080" />
+  <title>Señal del punto medio de caderas</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #f7f1e8; color: #123b45; font-family: Inter, sans-serif; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+    .clip { position: absolute; inset: 0; }
+    .stage { position: absolute; inset: 0; padding: 66px 82px; }
+    .kicker { font-size: 22px; letter-spacing: 4px; text-transform: uppercase; color: #0b6b69; font-weight: 700; }
+    h1 { margin: 16px 0 8px; font-size: 66px; line-height: 1.05; letter-spacing: -2px; }
+    .subtitle { margin: 0; font-size: 28px; color: #53676c; }
+    .body-card { position: absolute; left: 82px; top: 270px; width: 470px; height: 690px; border-radius: 28px; background: #123b45; overflow: hidden; }
+    .chart { position: absolute; left: 620px; top: 270px; width: 1215px; height: 690px; border-radius: 28px; background: #fffdf8; border: 2px solid #d9d2c6; overflow: hidden; }
+    .chart-title { position: absolute; left: 50px; top: 34px; font-size: 25px; font-weight: 700; }
+    .axis-note { position: absolute; right: 52px; top: 38px; font-size: 21px; color: #53676c; }
+    .grid { position: absolute; left: 72px; right: 42px; top: 100px; bottom: 74px; border-left: 3px solid #123b45; border-bottom: 3px solid #123b45; background-image: linear-gradient(to right, rgba(18,59,69,.10) 1px, transparent 1px), linear-gradient(to bottom, rgba(18,59,69,.10) 1px, transparent 1px); background-size: 155px 104px; }
+    .formula { position: absolute; left: 110px; bottom: 48px; width: 250px; padding: 18px 20px; border-radius: 18px; background: #fff0c7; color: #123b45; font-size: 22px; font-weight: 700; text-align: center; }
+    .direction { position: absolute; left: 74px; top: 36px; right: 74px; padding: 14px 18px; border-radius: 16px; color: #d9f0ec; border: 1px solid #4ea9a3; text-align: center; font-size: 20px; }
+    .depth { position: absolute; left: 120px; top: 118px; width: 230px; text-align: center; font-size: 24px; font-weight: 700; color: #fff; }
+    svg { position: absolute; inset: 0; overflow: visible; }
+    .skeleton { stroke: #91a5b6; stroke-width: 13; stroke-linecap: round; fill: none; }
+    .joint { fill: #d9e1e8; }
+    .hip-line { stroke: #d88b16; stroke-width: 8; }
+    .hip-dot { fill: #e76f51; stroke: #f7f1e8; stroke-width: 5; }
+    .signal { fill: none; stroke: #0b6b69; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    .cursor { fill: #e76f51; stroke: #fff; stroke-width: 5; }
+    .peak { fill: #d88b16; stroke: #fff; stroke-width: 4; opacity: 0; }
+    .peak-label { font-size: 20px; font-weight: 700; fill: #123b45; opacity: 0; }
+    .time-label { position: absolute; left: 680px; bottom: 33px; font-size: 20px; color: #53676c; }
+    .value { position: absolute; right: 56px; bottom: 30px; padding: 12px 18px; border-radius: 14px; background: #d9f0ec; color: #0b6b69; font-size: 21px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="senal-caderas" data-start="0" data-width="1920" data-height="1080" data-duration="14">
+    <section id="signal-main" class="clip" data-start="0" data-duration="14" data-track-index="1">
+      <div class="stage">
+        <div class="kicker">Fase 3 · señal temporal</div>
+        <h1>El movimiento vertical de la pelvis se convierte en una curva</h1>
+        <p class="subtitle" data-layout-allow-occlusion>Datos reales del caso dev_valgo_izq_002 · coordenadas normalizadas de imagen</p>
+        <div class="body-card">
+          <div class="direction">y aumenta hacia abajo</div>
+          <div id="depth-label" class="depth">posición alta</div>
+          <svg viewBox="0 0 470 690">
+            <g id="body">
+              <line class="skeleton" x1="160" y1="190" x2="310" y2="190" />
+              <line class="skeleton" x1="160" y1="190" x2="175" y2="355" />
+              <line class="skeleton" x1="310" y1="190" x2="295" y2="355" />
+              <line id="hip-segment" class="hip-line" x1="175" y1="355" x2="295" y2="355" />
+              <line id="left-thigh" class="skeleton" x1="175" y1="355" x2="150" y2="500" />
+              <line id="right-thigh" class="skeleton" x1="295" y1="355" x2="320" y2="500" />
+              <line class="skeleton" x1="150" y1="500" x2="135" y2="620" />
+              <line class="skeleton" x1="320" y1="500" x2="335" y2="620" />
+              <circle class="joint" cx="235" cy="120" r="34" />
+              <circle id="hip-marker" class="hip-dot" cx="235" cy="355" r="16" />
+            </g>
+          </svg>
+          <div class="formula">hip_midpoint_y<br>= (yᵢ + yᵈ) / 2</div>
+        </div>
+        <div class="chart">
+          <div class="chart-title">Posición vertical del centro de caderas</div>
+          <div class="axis-note">mayor valor = mayor descenso</div>
+          <div class="grid">
+            <svg id="plot" viewBox="0 0 1100 520">
+              <path id="signal-path" class="signal" />
+              <circle id="signal-cursor" class="cursor" r="13" />
+              <circle id="peak-1" class="peak" r="14" />
+              <circle id="peak-2" class="peak" r="14" />
+              <circle id="peak-3" class="peak" r="14" />
+              <text id="peak-label-1" class="peak-label">R1</text>
+              <text id="peak-label-2" class="peak-label">R2</text>
+              <text id="peak-label-3" class="peak-label">R3</text>
+            </svg>
+          </div>
+          <div id="time-label" class="time-label">0.00 s</div>
+          <div id="value-label" class="value">hip_midpoint_y = 0.577</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    const samples = [[0,0.577367],[0.374,0.587522],[0.79,0.594121],[1.165,0.599802],[1.539,0.623372],[1.955,0.611043],[2.33,0.604426],[2.704,0.612094],[3.078,0.618208],[3.494,0.62798],[3.869,0.635482],[4.243,0.642413],[4.659,0.652646],[5.034,0.66113],[5.408,0.674156],[5.824,0.68481],[6.199,0.690632],[6.573,0.700499],[6.989,0.709561],[7.363,0.714967],[7.738,0.723471],[8.154,0.731167],[8.528,0.713551],[8.903,0.644838],[9.277,0.588647],[9.693,0.56821],[10.067,0.568141],[10.442,0.569075],[10.858,0.574662],[11.232,0.590258],[11.607,0.610721],[12.023,0.63576],[12.397,0.657078],[12.771,0.673088],[13.187,0.685808],[13.562,0.698764],[13.936,0.713441],[14.311,0.72189],[14.727,0.726347],[15.101,0.731765],[15.475,0.741186],[15.891,0.747294],[16.266,0.742719],[16.64,0.66311],[17.056,0.594888],[17.431,0.567325],[17.805,0.564459],[18.221,0.562548],[18.596,0.566505],[18.97,0.570596],[19.344,0.582266],[19.76,0.589539],[20.135,0.597161],[20.509,0.610375],[20.925,0.628376],[21.3,0.640779],[21.674,0.654981],[22.09,0.673355],[22.464,0.691794],[22.839,0.708298],[23.255,0.719703],[23.629,0.727157],[24.004,0.731884],[24.42,0.738514],[24.794,0.732933],[25.168,0.654391],[25.543,0.595167],[25.959,0.574356],[26.333,0.564442],[26.708,0.559729],[27.124,0.554867],[27.498,0.560621]];
+    const maxT = 27.498, minY = 0.54, maxY = 0.76;
+    const sx = t => (t / maxT) * 1100;
+    const sy = y => ((y - minY) / (maxY - minY)) * 520;
+    const points = samples.map(([t,y]) => `${sx(t).toFixed(1)},${sy(y).toFixed(1)}`).join(" ");
+    const path = document.getElementById("signal-path");
+    path.setAttribute("d", "M" + points.replaceAll(" ", " L"));
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+    const cursor = document.getElementById("signal-cursor");
+    const hip = document.getElementById("hip-marker");
+    const hipSegment = document.getElementById("hip-segment");
+    const leftThigh = document.getElementById("left-thigh");
+    const rightThigh = document.getElementById("right-thigh");
+    const timeLabel = document.getElementById("time-label");
+    const valueLabel = document.getElementById("value-label");
+    const depthLabel = document.getElementById("depth-label");
+    const state = { progress: 0 };
+    function update() {
+      const p = path.getPointAtLength(length * state.progress);
+      cursor.setAttribute("cx", p.x); cursor.setAttribute("cy", p.y);
+      const i = Math.min(samples.length - 1, Math.round(state.progress * (samples.length - 1)));
+      const [t, y] = samples[i];
+      const bodyY = 330 + ((y - minY) / (maxY - minY)) * 150;
+      hip.setAttribute("cy", bodyY); hipSegment.setAttribute("y1", bodyY); hipSegment.setAttribute("y2", bodyY);
+      leftThigh.setAttribute("y1", bodyY); rightThigh.setAttribute("y1", bodyY);
+      timeLabel.textContent = `${t.toFixed(2)} s`;
+      valueLabel.textContent = `hip_midpoint_y = ${y.toFixed(3)}`;
+      depthLabel.textContent = y > 0.72 ? "máxima profundidad" : y > 0.64 ? "descenso / ascenso" : "posición alta";
+    }
+    const peaks = [[8.154,0.731167],[15.891,0.747294],[24.42,0.738514]];
+    peaks.forEach(([t,y], i) => {
+      const dot = document.getElementById(`peak-${i+1}`), label = document.getElementById(`peak-label-${i+1}`);
+      dot.setAttribute("cx", sx(t)); dot.setAttribute("cy", sy(y));
+      label.setAttribute("x", sx(t)+18); label.setAttribute("y", sy(y)-18);
+    });
+    update();
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("h1", { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power3.out" }, .2)
+      .fromTo(".body-card", { x: -70 }, { x: 0, duration: .8, ease: "power3.out" }, .7)
+      .fromTo(".chart", { x: 70 }, { x: 0, duration: .8, ease: "power3.out" }, .7)
+      .to(path, { strokeDashoffset: 0, duration: 10.8, ease: "none" }, 2.0)
+      .to(state, { progress: 1, duration: 10.8, ease: "none", onUpdate: update }, 2.0)
+      .to(["#peak-1","#peak-label-1"], { opacity: 1, duration: .2 }, 5.2)
+      .to(["#peak-2","#peak-label-2"], { opacity: 1, duration: .2 }, 8.1)
+      .to(["#peak-3","#peak-label-3"], { opacity: 1, duration: .2 }, 11.2);
+    window.__timelines["senal-caderas"] = tl;
+  </script>
+</body>
+</html>

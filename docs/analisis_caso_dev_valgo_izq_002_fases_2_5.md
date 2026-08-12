@@ -260,6 +260,31 @@ Debe distinguirse lo siguiente:
 
 Por tanto, la fase 2 no necesita un artículo para justificar cada operación de OpenCV. Sí necesita citar el modelo de estimación de pose, antecedentes de validación sin marcadores y declarar que los umbrales de calidad son decisiones operativas configurables. La comprobación final debe incluir auditoría visual de los overlays y registro de fallos; una validación geométrica independiente exigiría anotaciones manuales o un sistema de referencia, lo cual constituye otro experimento.
 
+### 4.9. Cómo se generan los overlays, imágenes y archivos tabulares
+
+MediaPipe no produce directamente los videos, las gráficas ni los libros Excel. Su salida principal es una colección de puntos por fotograma con coordenadas normalizadas, visibilidad y presencia. El pipeline transforma esa salida mediante responsabilidades separadas:
+
+| Producto | Herramienta principal | Procedimiento real |
+|---|---|---|
+| `landmarks.csv` | biblioteca estándar `csv` | Por cada fotograma se escriben las coordenadas y atributos de los 13 puntos seleccionados mediante `csv.DictWriter`. |
+| `frame_quality.csv` | Python y reglas del sistema | Se resume si hubo pose, cuántos puntos resultaron utilizables, la visibilidad crítica mínima y si el fotograma es válido. |
+| `overlay.mp4` | OpenCV + FFmpeg | OpenCV dibuja líneas, círculos, etiquetas y el panel de calidad sobre una copia del fotograma; `VideoWriter` crea un MP4 intermedio y FFmpeg lo recodifica a H.264 para compatibilidad web. |
+| `review.mp4` | OpenCV + FFmpeg | Se genera una copia anonimizada sin la geometría técnica; la región facial se reduce y amplía con interpolación de vecino más próximo para producir el pixelado. |
+| capturas de inicio, profundidad y cierre | OpenCV | `VideoCapture` posiciona el video en el índice seleccionado y `cv2.imwrite()` guarda el fotograma del overlay como PNG. |
+| `pose_quality.png` | Matplotlib | Convierte las columnas de `frame_quality.csv` en curvas de visibilidad mínima y cantidad de puntos detectados. |
+| resúmenes JSON | Pydantic + `json` | Los modelos tipados se serializan con `model_dump()` y `json.dumps()` para conservar parámetros, resultados y rutas de artefactos. |
+
+El overlay no modifica las coordenadas ni interviene en las fórmulas. Es una **representación visual de auditoría** construida sobre los mismos valores que se conservan en CSV:
+
+```text
+MediaPipe -> puntos y confianza -> CSV canónico
+                              -> OpenCV dibuja -> MP4/PNG
+                              -> Matplotlib grafica -> PNG
+                              -> modelos tipados -> JSON
+```
+
+Cuando una línea o un punto aparece en el overlay, su posición en píxeles se obtiene multiplicando la coordenada normalizada por el ancho o alto del fotograma. OpenCV convierte esa geometría numérica en elementos visibles; no vuelve a estimar la pose.
+
 ---
 
 ## 5. Fase 3: segmentación temporal
@@ -322,6 +347,8 @@ La mediana móvil y el promedio móvil cumplen funciones diferentes:
 - el promedio suaviza pequeñas variaciones restantes y facilita localizar máximos estables;
 - la ventana centrada evita introducir deliberadamente un retraso hacia el pasado o el futuro.
 
+Una **estimación atípica** es un valor aislado que se separa de las muestras vecinas sin representar un cambio corporal sostenido. Puede aparecer por desenfoque, oclusión parcial o una corrección momentánea del modelo. Una **pequeña variación restante** es el movimiento irregular de baja amplitud que permanece después de retirar esos saltos; se observa como vibración de la curva alrededor de una trayectoria continua.
+
 La ventana de `0.20 s` es una decisión operativa. A `24.037884 fps` se convierte en cinco fotogramas:
 
 ```text
@@ -329,6 +356,41 @@ ventana_suavizado = redondear(24.037884 x 0.20) = 5 fotogramas
 ```
 
 No es una duración biomecánica universal. Se eligió para reducir vibración sin deformar visualmente los ciclos del lote piloto y debe conservarse versionada.
+
+#### Ejemplo real de la ventana centrada
+
+En este caso no existen valores ausentes de `hip_midpoint_y`, por lo que la interpolación conserva exactamente la señal original. Sí puede observarse el funcionamiento de las dos ventanas en el fotograma 388, alrededor de `16.14 s`.
+
+La primera ventana centrada contiene los fotogramas 386 a 390:
+
+| Fotograma | `hip_midpoint_y` |
+|---:|---:|
+| 386 | 0.750289 |
+| 387 | 0.750377 |
+| 388 | 0.751089 |
+| 389 | 0.751154 |
+| 390 | 0.750506 |
+
+Al ordenar esos cinco valores, el valor central es `0.750506`. Esa es la **mediana móvil asignada al fotograma 388**. No se guarda en el fotograma 390 ni se desplaza en el tiempo porque `center=True` hace que la ventana quede centrada sobre el índice calculado.
+
+Después se construye otra ventana centrada de cinco elementos, ahora sobre la serie de medianas. El promedio correspondiente al fotograma 388 es `0.750437`:
+
+```text
+señal cruda F388        = 0.751089
+interpolación F388      = 0.751089  (no había hueco)
+mediana centrada F388   = 0.750506
+promedio centrado F388  = 0.750437  -> señal suavizada final
+```
+
+Cada fotograma recibe un resultado aplicando el mismo procedimiento a su propia ventana. La sucesión de esos resultados forma la curva suavizada; no se genera un único promedio para todo el video. En los extremos, `min_periods=1` permite calcular con las muestras disponibles aunque todavía no existan dos vecinos a cada lado.
+
+La duración aproximada de `0.20 s` surge de convertir el parámetro temporal a muestras:
+
+```text
+5 fotogramas / 24.037884 fotogramas por segundo = 0.208 s
+```
+
+Es una ventana corta frente a una repetición completa: reduce fluctuaciones de pocos fotogramas sin promediar conjuntamente el descenso y el ascenso completos. Su valor sigue siendo una heurística del prototipo y no un estándar biomecánico universal.
 
 ### 5.3. Detección de máximos de profundidad
 
@@ -941,6 +1003,28 @@ La normalización por el ancho inicial de hombros es una decisión de escala int
 
 Finalmente, Parkinson et al. muestran que los índices y umbrales de asimetría varían entre estudios y que límites universales de 10 % a 15 % suelen carecer de respaldo suficiente. Esta evidencia refuerza la decisión de llamar a la métrica “asimetría bilateral observable” y mantener su punto de corte como provisional ([Parkinson et al., 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8488821/)).
 
+### 6.14. Herramientas que realizan los cálculos
+
+Los cálculos no se ejecutan dentro de MediaPipe. MediaPipe entrega los puntos; posteriormente el módulo biomecánico utiliza:
+
+- **pandas** para leer los CSV, reorganizar las filas por fotograma y punto mediante `pivot_table`, alinear índices, filtrar fotogramas válidos y construir las tablas de resultados;
+- **NumPy** para operaciones vectorizadas como puntos medios, diferencias, valor absoluto, conversión de radianes a grados y `arctan2`;
+- **Python** para aplicar las convenciones de lado, construir los modelos de salida y controlar errores;
+- **Matplotlib** para representar las series calculadas en `biomechanical_metrics.png`.
+
+El procedimiento es:
+
+```text
+landmarks.csv + frame_phases.csv
+        -> pandas organiza coordenadas por fotograma
+        -> NumPy calcula W0, tronco, pelvis y rodillas
+        -> pandas enmascara fotogramas no válidos y resume cada repetición
+        -> CSV/JSON conservan los valores
+        -> Matplotlib genera la evidencia gráfica
+```
+
+`W0`, tronco, pelvis y alineación de rodilla se calculan de forma vectorizada para todos los fotogramas válidos. Después, el resumen por repetición extrae el valor del fotograma etiquetado como `maxima_profundidad`. Esto conserva tanto la curva completa como el valor puntual que entra a la regla.
+
 ---
 
 ## 7. Fase 5: reglas biomecánicas interpretables
@@ -1049,6 +1133,19 @@ Cada modificación debe registrar versión, valor anterior, valor nuevo, evidenc
 ---
 
 ## 8. Origen y relación de CSV y JSON
+
+Antes de revisar cada archivo conviene distinguir los datos canónicos de sus formatos de presentación. Los CSV y JSON son la evidencia numérica del pipeline. Las imágenes, videos y libros Excel son representaciones derivadas de esos datos.
+
+La descarga de **datos técnicos normalizados** no renombra ni modifica los CSV utilizados por el cálculo. El backend lee cada CSV, reemplaza las cabeceras técnicas por etiquetas en español y crea un libro nuevo con `openpyxl`. Esta biblioteca también aplica anchos de columna, bordes, colores, alineación y formatos de celda. Los Instrumentos 1, 2 y 3 se generan mediante el mismo motor de Excel, pero a partir del registro del caso, el informe computacional y la comparación experta.
+
+```text
+CSV/JSON canónicos -> cálculo y trazabilidad
+CSV + etiquetas    -> openpyxl -> Excel normalizado
+resultados         -> Matplotlib -> gráficas PNG/PDF
+fotogramas         -> OpenCV -> overlays y capturas
+```
+
+Esta separación evita que una traducción de cabecera o un cambio visual en Excel altere las variables utilizadas por el sistema.
 
 ### 8.1. Diferencia entre `landmarks.csv` y `frame_quality.csv`
 
