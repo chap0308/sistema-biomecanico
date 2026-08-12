@@ -70,7 +70,41 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Aclaración:** La visibilidad crítica mínima es el menor valor efectivo entre los ocho puntos centrales; no es un promedio.
 
-## Diapositiva 7. La cadera convierte el movimiento en una señal
+## Diapositiva 7. MediaPipe entrega una fila por punto y fotograma
+
+**Mensaje visible:** `landmarks.csv` conserva la evidencia primaria antes de cualquier resumen.
+
+**Guion:** Cada fila contiene el índice y tiempo del fotograma, el nombre del punto, sus coordenadas `x`, `y`, `z` y la visibilidad estimada. `x` aumenta de izquierda a derecha y `y` de arriba hacia abajo, ambas normalizadas entre `0` y `1`. La profundidad relativa `z` no participa en las fórmulas 2D de esta tesis. En el caso conductor, MediaPipe devolvió pose en 662 fotogramas; por ello, `662 × 13 = 8 606` filas. Si un fotograma no contiene pose, no se generan sus trece filas.
+
+**Evidencia:** muestra real de los fotogramas 0, 228 y 592 de `landmarks.csv`.
+
+## Diapositiva 8. `frame_quality.csv` resume si la pose puede analizarse
+
+**Mensaje visible:** Una fila de calidad condensa las trece observaciones de un fotograma.
+
+**Guion:** `valid_for_analysis(f)` vale `1` cuando las ocho referencias centrales de hombros, caderas, rodillas y tobillos superan la visibilidad mínima de `0.50`, y además existe al menos una referencia distal utilizable por cada pie. Vale `0` en caso contrario. El archivo almacena `True/False`, pero la agregación matemática lo interpreta como indicador binario. `minimum_critical_visibility` es el mínimo entre los ocho puntos centrales, no su promedio.
+
+**Evidencia:** filas reales 0, 228, 592 y 661 de `frame_quality.csv`.
+
+## Diapositiva 9. Los porcentajes agregan decisiones de distinto nivel
+
+**Fórmulas:**
+
+- `fotogramas procesados (%) = 100 × fotogramas decodificados por OpenCV / fotogramas declarados`.
+- `fotogramas válidos (%) = 100 × Σ valid_for_analysis(f) / fotogramas decodificados`.
+- `promedio de puntos detectados = Σ detected_keypoints(f) / fotogramas decodificados`.
+
+**Guion:** OpenCV participa en el primer indicador porque `VideoCapture.read()` determina cuántos fotogramas pudieron decodificarse. Los otros dos indicadores resumen las salidas de MediaPipe y las reglas del sistema. El promedio de puntos detectados describe disponibilidad y estabilidad de los trece puntos, pero no reemplaza la regla binaria: un promedio alto puede ocultar que falta una referencia obligatoria concreta.
+
+## Diapositiva 10. Dos CSV responden preguntas diferentes
+
+**Mensaje visible:** La interfaz representa los datos canónicos; no recalcula la calidad.
+
+**Guion:** `frame_quality.csv` alimenta la disponibilidad de pose por fotograma. `landmarks.csv` permite calcular visibilidad media y cobertura por punto dentro de la repetición seleccionada. En la repetición 3 del caso conductor, los trece puntos tuvieron cobertura de `100 %`; la visibilidad media fue menor en talones y referencias distales, aunque permaneció sobre el umbral.
+
+**Conexión web:** sección “Disponibilidad de pose por fotograma” y sección “Visibilidad por punto anatómico”.
+
+## Diapositiva 11. La cadera convierte el movimiento en una señal
 
 **Mensaje visible:** `hip_midpoint_y = (y_cadera_izquierda + y_cadera_derecha) / 2`.
 
@@ -78,7 +112,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Evidencia:** fotograma de reposo, fotograma de máxima profundidad, su posición sobre la curva y el clip `senal_caderas_animada.mp4` construido con `frame_phases.csv`.
 
-## Diapositiva 8. Una fórmula, dos interpolaciones distintas
+## Diapositiva 12. Una fórmula, dos interpolaciones distintas
 
 **Mensaje visible:** Interpolar significa estimar un punto intermedio entre dos referencias conocidas.
 
@@ -88,7 +122,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Aclaración:** La interpolación temporal no reemplaza las coordenadas anatómicas que se usan para calcular las variables biomecánicas.
 
-## Diapositiva 9. Limpiar la señal sin inventar evidencia
+## Diapositiva 13. Limpiar la señal sin inventar evidencia
 
 **Mensaje visible:** Interpolar continuidad no convierte un fotograma deficiente en válido.
 
@@ -100,7 +134,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Evidencia:** `01_limpieza_interpolacion_suavizado.png`.
 
-## Diapositiva 10. Prominencia: un pico debe sobresalir
+## Diapositiva 14. Prominencia: un pico debe sobresalir
 
 **Mensaje visible:** Un máximo local no basta para afirmar que existe una profundidad de sentadilla.
 
@@ -110,7 +144,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Evidencia:** `02_prominencia_picos_reales.png` y clip HyperFrames de segmentación.
 
-## Diapositiva 11. La recuperación evita duplicar una ejecución
+## Diapositiva 15. La recuperación evita duplicar una ejecución
 
 **Mensaje visible:** Separación temporal no implica una nueva sentadilla; debe existir recuperación vertical.
 
@@ -120,7 +154,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Evidencia:** `03_error_doble_pico_recuperacion.png`.
 
-## Diapositiva 12. Del pico a las fases de la ejecución
+## Diapositiva 16. Del pico a las fases de la ejecución
 
 **Mensaje visible:** Reposo → descenso → máxima profundidad → ascenso → cierre.
 
@@ -128,13 +162,13 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Conexión web:** seleccionar repetición 3 y recorrer los tres eventos sincronizados con el video.
 
-## Diapositiva 13. `W0` normaliza las distancias
+## Diapositiva 17. `W0` normaliza las distancias
 
 **Mensaje visible:** `W0 = mediana del ancho de hombros en los fotogramas iniciales válidos`.
 
 **Guion:** Una distancia horizontal depende del tamaño aparente de la persona en la imagen. Dividirla entre una referencia corporal inicial permite expresarla como porcentaje. En el caso conductor, `W0 = 0.258264` del ancho normalizado de la imagen. No es el ancho instantáneo de hombros en máxima profundidad.
 
-## Diapositiva 14. Orientación y traslación responden preguntas distintas
+## Diapositiva 18. Orientación y traslación responden preguntas distintas
 
 **Mensaje visible:** Tronco en grados; pelvis en porcentaje de `W0`.
 
@@ -142,7 +176,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Resultados de ejemplo:** tronco `12.38°`; pelvis `9.55 % de W0`.
 
-## Diapositiva 15. Alineación cadera–rodilla–tobillo
+## Diapositiva 19. Alineación cadera–rodilla–tobillo
 
 **Mensaje visible:** La interpolación espacial estima dónde debería cruzar la rodilla el eje cadera–tobillo a la misma altura vertical.
 
@@ -152,13 +186,13 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 
 **Evidencia:** clip `construccion_geometrica_variables.mp4`, que construye secuencialmente `W0`, tronco, pelvis, ambas alineaciones de rodilla y la diferencia bilateral con datos reales de la repetición 3.
 
-## Diapositiva 16. Medir todavía no es clasificar
+## Diapositiva 20. Medir todavía no es clasificar
 
 **Mensaje visible:** Valor + dirección + unidad + regla = estado interpretable.
 
 **Guion:** Cada patrón se evalúa de manera independiente y una repetición puede presentar más de uno. Los umbrales son provisionales para construir y verificar el prototipo; no son puntos de corte clínicos. La salida conserva los estados ausente, no concluyente o presente con dirección cuando corresponde.
 
-## Diapositiva 17. La web demuestra la trazabilidad
+## Diapositiva 21. La web demuestra la trazabilidad
 
 **Mensaje visible:** Video, tiempo, fotograma, coordenadas, fórmula y clasificación cuentan la misma historia.
 
@@ -171,7 +205,7 @@ Explicar a un público no especializado cómo el sistema transforma un video fro
 5. Comprobar la banda de decisión en Reglas.
 6. Descargar los artefactos técnicos.
 
-## Diapositiva 18. Qué demuestra y qué no demuestra
+## Diapositiva 22. Qué demuestra y qué no demuestra
 
 **Mensaje visible:** El sistema hace medible y auditable una observación; no reemplaza una evaluación clínica.
 

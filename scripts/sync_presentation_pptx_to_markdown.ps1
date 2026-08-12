@@ -1,6 +1,6 @@
 param(
-    [string]$InputPath = "docs/presentacion_proceso_interno_sentadilla_v3.pptx",
-    [string]$OutputPath = "docs/markdown-snapshots/presentacion_proceso_interno_sentadilla_v3.md"
+    [string]$InputPath = "docs/presentacion_proceso_interno_sentadilla_v4.pptx",
+    [string]$OutputPath = "docs/markdown-snapshots/presentacion_proceso_interno_sentadilla_v4.md"
 )
 
 $ErrorActionPreference = "Stop"
