@@ -66,7 +66,7 @@ Solo se buscará o instalará una skill nueva cuando exista una carencia concret
 
 ### 4.1. Incluido en el prototipo web
 
-1. Inicio de sesión con correo y contraseña para investigador y evaluador experto, y con Google OAuth para usuarios finales.
+1. Inicio de sesión con correo y contraseña para todos los roles, registro público por contraseña y Google OAuth para usuarios finales.
 2. Registro de un caso y carga del video.
 3. Captura de los datos manuales del Instrumento 1.
 4. Ejecución del análisis mediante FastAPI.
@@ -88,7 +88,7 @@ Solo se buscará o instalará una skill nueva cuando exista una carencia concret
 ### 4.2. Fuera del alcance inicial
 
 1. Diagnóstico clínico o recomendación terapéutica.
-2. Registro abierto mediante correo y contraseña, enlaces mágicos u OTP por correo.
+2. Confirmación de correo, recuperación de contraseña, enlaces mágicos u OTP por correo.
 3. Aplicación móvil.
 4. Procesamiento en tiempo real desde la cámara.
 5. Análisis de vistas diferentes de la vista anterior en el plano frontal.
@@ -368,10 +368,14 @@ Para el prototipo local puede utilizarse `BackgroundTasks` de FastAPI con manejo
 ### 12.1. Acceso
 
 - `/login`
+- `/sign-up`
 - `/auth/callback`
 
-`/login` conservará correo y contraseña para las cuentas internas y añadirá
-**Continuar con Google** para usuarios finales. El callback intercambiará el
+`/login` conservará correo y contraseña para todos los roles y añadirá
+**Continuar con Google** para usuarios finales. `/sign-up` permitirá crear
+cuentas `user` con correo, contraseña y confirmación local de contraseña. No se
+implementarán confirmación por correo, recuperación de contraseña ni otras
+notificaciones durante este incremento. El callback intercambiará el
 código PKCE por una sesión en cookies, consultará el rol en `profiles` y
 redirigirá a la página inicial correspondiente. La autorización no dependerá
 del rol almacenado en `user_metadata`.
@@ -742,12 +746,26 @@ test(web): verify squat research workflows
 
 - implementar el botón **Continuar con Google** mediante
   `signInWithOAuth({ provider: "google" })`;
+- implementar `/sign-up` con correo, contraseña y repetición de contraseña;
+- validar el formulario con React Hook Form y Zod, incluyendo coincidencia y
+  longitud mínima de contraseñas;
+- crear la cuenta mediante `signUp` con rol efectivo `user`, sin aceptar roles
+  enviados por el navegador;
+- desactivar la confirmación de correo en Supabase Auth para que el registro
+  establezca la sesión inmediatamente;
+- enlazar `/sign-up` desde `/login` y ofrecer retorno a `/login` para cuentas
+  existentes;
 - utilizar `redirectTo` con `/auth/callback` y validar `next` como ruta relativa;
 - crear el perfil `user` al primer acceso;
 - actualizar el proxy de sesión, layouts protegidos y redirección por rol;
 - aplicar RLS y validaciones FastAPI para propiedad y propósito del análisis;
 - conservar sin cambios funcionales el login por contraseña de investigador y
   expertos.
+
+No se mostrarán enlaces de recuperación de contraseña porque el proyecto no
+configura SMTP ni notificaciones de correo. Esta limitación se indicará junto al
+registro y deberá reevaluarse antes de tratar el autoservicio como servicio
+público permanente.
 
 #### F7.2. Espacio personal
 
@@ -784,11 +802,11 @@ test(web): verify squat research workflows
 #### F7.5. Pruebas
 
 - Vitest: selección de destino por rol, generación de callback seguro,
-  traducción de estados y reglas de orientaciones;
+  validación de registro, traducción de estados y reglas de orientaciones;
 - pruebas de integración: perfil OAuth, RLS de propiedad y rechazo de
   asignaciones sobre análisis personales;
-- Playwright: login Google simulado o sesión preautenticada, carga, progreso,
-  resultado, historial y eliminación;
+- Playwright: registro por contraseña, login Google simulado o sesión
+  preautenticada, carga, progreso, resultado, historial y eliminación;
 - Playwright negativo: un usuario no puede abrir el análisis de otro ni rutas de
   investigador o experto;
 - prueba responsive del shell tipo espacio de análisis en escritorio y móvil.
@@ -797,6 +815,7 @@ Commits sugeridos:
 
 ```text
 feat(auth): add google login and self-service user role
+feat(auth): add password signup for self-service users
 feat(web): add personal squat analysis workspace
 feat(api): authorize user-owned squat analyses
 test(web): verify self-service analysis workflows
