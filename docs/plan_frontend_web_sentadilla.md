@@ -66,7 +66,7 @@ Solo se buscará o instalará una skill nueva cuando exista una carencia concret
 
 ### 4.1. Incluido en el prototipo web
 
-1. Inicio de sesión con cuentas de investigador y evaluador experto.
+1. Inicio de sesión con correo y contraseña para investigador y evaluador experto, y con Google OAuth para usuarios finales.
 2. Registro de un caso y carga del video.
 3. Captura de los datos manuales del Instrumento 1.
 4. Ejecución del análisis mediante FastAPI.
@@ -82,18 +82,21 @@ Solo se buscará o instalará una skill nueva cuando exista una carencia concret
 14. Comparación posterior entre referencia experta y sistema.
 15. Exportación de instrumentos y evidencia en Excel; PDF como segundo incremento.
 16. Manejo visible de videos no incorporados, errores y resultados no concluyentes.
+17. Espacio personal para que un usuario final cargue videos, consulte su historial y reciba resultados automáticos con orientaciones generales no diagnósticas.
+18. Eliminación de análisis propios y sus archivos asociados por parte del usuario final.
 
 ### 4.2. Fuera del alcance inicial
 
 1. Diagnóstico clínico o recomendación terapéutica.
-2. Registro de participantes como usuarios del sistema.
+2. Registro abierto mediante correo y contraseña, enlaces mágicos u OTP por correo.
 3. Aplicación móvil.
 4. Procesamiento en tiempo real desde la cámara.
 5. Análisis de vistas diferentes de la vista anterior en el plano frontal.
 6. Ajuste automático de umbrales mediante aprendizaje automático.
 7. Colas distribuidas con Redis, Celery u otra infraestructura adicional.
 8. Despliegue multiinstitucional o administración compleja de organizaciones.
-9. Notificaciones por correo, mensajería o tiempo real.
+9. Notificaciones por correo, SMS, WhatsApp o tiempo real.
+10. Inicio de sesión por teléfono durante este incremento.
 
 ## 5. Roles y reglas de acceso
 
@@ -137,11 +140,37 @@ Esta restricción no debe depender únicamente de ocultar componentes en la inte
 
 Se crearán inicialmente cuatro cuentas: una para el investigador y tres para evaluadores. El diseño no codificará el número cuatro como límite permanente.
 
+### 5.4. Usuario final
+
+El usuario final se autenticará mediante Google y podrá:
+
+- consultar la guía de grabación antes de cargar un video;
+- registrar uno o varios análisis propios;
+- adjuntar videos con una o varias repeticiones;
+- seguir el estado del procesamiento;
+- consultar únicamente sus propios videos, resultados y archivos;
+- visualizar calidad, repeticiones válidas, variables, patrones y evidencia explicativa;
+- recibir orientaciones generales vinculadas con el resultado y sus limitaciones;
+- eliminar un análisis propio junto con los objetos almacenados que le pertenezcan.
+
+El usuario final no podrá:
+
+- acceder a casos de investigación ni a videos de otras personas;
+- asignar evaluadores o consultar evaluaciones expertas;
+- consolidar referencias finales o ver métricas del estudio;
+- modificar umbrales, reglas o resultados del pipeline;
+- recibir diagnósticos, causas anatómicas, prescripciones terapéuticas o afirmaciones clínicas.
+
+La interfaz utilizará la denominación **Mis análisis**, no **Casos**, porque
+para este rol el contenido representa una consulta personal y no una unidad del
+estudio. Internamente se podrá reutilizar `squat_cases`, siempre que el esquema
+diferencie de forma obligatoria el propósito y el propietario del registro.
+
 ## 6. Arquitectura propuesta
 
 ```mermaid
 flowchart LR
-    U["Investigador o evaluador"] --> W["Next.js en apps/web"]
+    U["Investigador, evaluador o usuario final"] --> W["Next.js en apps/web"]
     W --> A["Supabase Auth"]
     W -->|"JWT y solicitudes HTTP"| F["FastAPI"]
     F --> P["Pipeline de sentadilla"]
@@ -205,6 +234,19 @@ Se priorizarán tablas pequeñas y contratos JSON ya existentes. No es necesario
 
 La referencia final experta podrá derivarse y almacenarse dentro del proceso de análisis comparativo. No se presentará como un cuarto instrumento.
 
+Para incorporar el tercer rol se añadirá `user` al dominio de roles y se
+agregarán, como mínimo, los siguientes campos a `squat_cases`:
+
+- `owner_id`: propietario autenticado del registro;
+- `case_purpose`: `research` o `self_service`;
+- `consent_version`: versión del consentimiento o aviso aceptado;
+- `deleted_at`: borrado lógico mientras se completa la eliminación de objetos;
+- `recommendation_version`: versión del conjunto de orientaciones mostrado.
+
+No se creará una tabla de participantes para el autoservicio. La identidad será
+la cuenta de Supabase Auth y el análisis conservará únicamente los datos
+necesarios para operar, auditar y eliminar el resultado.
+
 ### 8.2. Campos que conviene normalizar
 
 Los siguientes campos deben ser columnas consultables porque se utilizarán en historial, filtros o control de acceso:
@@ -246,6 +288,16 @@ Todas las tablas expuestas deberán tener Row Level Security. Las políticas mí
 - una evaluación enviada no puede editarse desde la interfaz;
 - los resultados computacionales permanecen ocultos al experto hasta cumplir la condición de desbloqueo;
 - ningún video o artefacto será público.
+- el usuario final solo puede crear, leer y eliminar registros `self_service`
+  cuyo `owner_id` corresponda a `auth.uid()`;
+- los registros `self_service` no pueden asignarse a expertos ni incorporarse
+  automáticamente a la muestra de investigación;
+- las cuentas creadas mediante Google recibirán el rol `user` por una función
+  controlada en base de datos;
+- ningún flujo público podrá establecer `investigator` o `expert` mediante
+  `raw_user_meta_data`; esos roles se aprovisionarán únicamente por un proceso
+  administrativo confiable;
+- el usuario no podrá actualizar directamente su columna de rol.
 
 ## 9. Estados del caso
 
@@ -316,8 +368,40 @@ Para el prototipo local puede utilizarse `BackgroundTasks` de FastAPI con manejo
 ### 12.1. Acceso
 
 - `/login`
+- `/auth/callback`
 
-Contendrá correo, contraseña, manejo de error y redirección según rol.
+`/login` conservará correo y contraseña para las cuentas internas y añadirá
+**Continuar con Google** para usuarios finales. El callback intercambiará el
+código PKCE por una sesión en cookies, consultará el rol en `profiles` y
+redirigirá a la página inicial correspondiente. La autorización no dependerá
+del rol almacenado en `user_metadata`.
+
+#### Configuración OAuth por entorno
+
+Para el proyecto alojado de Supabase se utilizará esta configuración:
+
+| Sistema | Campo | Valor recomendado |
+|---|---|---|
+| Supabase Auth | Site URL | `https://sentadilla-biomecanica-web.vercel.app` |
+| Supabase Auth | Redirect URL de producción | `https://sentadilla-biomecanica-web.vercel.app/auth/callback` |
+| Supabase Auth | Redirect URL local canónica | `http://localhost:3000/auth/callback` |
+| Supabase Auth | Redirect URL local alternativa | `http://127.0.0.1:3000/auth/callback`, solo si se prueba deliberadamente con ese origen |
+| Google Cloud | Origen JavaScript de producción | `https://sentadilla-biomecanica-web.vercel.app` |
+| Google Cloud | Origen JavaScript local | `http://localhost:3000` |
+| Google Cloud | URI autorizada de redirección | `https://nibyzrkwnyaunynyrfcr.supabase.co/auth/v1/callback` |
+
+Google redirige hacia el callback de Supabase y Supabase devuelve el navegador
+a `/auth/callback` en la aplicación. Por ello, la URI de Vercel no reemplaza al
+callback de Supabase dentro de Google Cloud. Los comodines `/**` admitidos por
+Supabase pueden conservarse durante pruebas, pero antes de abrir el acceso
+público se preferirán rutas exactas para reducir destinos innecesarios.
+
+Se adoptará `localhost` como origen local canónico. Alternar una misma sesión
+entre `localhost` y `127.0.0.1` puede separar cookies y el verificador PKCE por
+tratarse de orígenes distintos. El callback local de Supabase
+`http://127.0.0.1:54321/auth/v1/callback` solo será necesario si en el futuro se
+ejecuta Supabase Auth local; no corresponde al desarrollo actual contra
+Supabase Cloud.
 
 ### 12.2. Investigador
 
@@ -332,7 +416,42 @@ Contendrá correo, contraseña, manejo de error y redirección según rol.
 - `/expert/assignments`: casos pendientes y enviados.
 - `/expert/assignments/[assignmentId]`: video y formulario ciego del Instrumento 3.
 
-### 12.4. Detalle del caso
+### 12.4. Usuario final
+
+Rutas recomendadas:
+
+- `/my-analyses`: espacio personal con historial paginado y acción para iniciar
+  un análisis;
+- `/my-analyses/new`: guía, consentimiento, carga y validación inicial;
+- `/my-analyses/[analysisId]`: procesamiento y resultados del análisis propio.
+
+En la interfaz se mostrarán como **Mis análisis**, **Nuevo análisis** y
+**Resultado del análisis**. No se recomienda usar `/cases` para este rol porque
+esa denominación está asociada al estudio y a la evaluación experta.
+
+Se evaluaron tres alternativas de navegación:
+
+| Alternativa | Ventaja | Limitación | Decisión |
+|---|---|---|---|
+| Lista tradicional y páginas separadas | Convención simple para historiales | Se siente administrativa y separa demasiado carga, espera y resultado | No elegida como experiencia principal |
+| Una sola página con todo el historial y el formulario | Reduce cambios de ruta | Crece rápidamente, dificulta enlaces directos, recuperación de estado y carga incremental | Descartada |
+| Espacio de análisis inspirado en chat | Mantiene contexto, historial cercano y continuidad entre carga y resultado | Requiere un shell responsive bien delimitado | **Recomendada** |
+
+La experiencia tomará la estructura útil de una aplicación conversacional sin
+convertirse en un chat real:
+
+1. en escritorio, una barra lateral mostrará el historial y el panel principal
+   contendrá la guía, carga, progreso o resultado seleccionado;
+2. en móvil, el historial se abrirá mediante un panel lateral y el contenido
+   conservará una sola columna;
+3. el estado vacío permitirá cargar el primer video;
+4. después del procesamiento, el mismo panel se transformará en una narración
+   secuencial: calidad de captura, repeticiones, resultados, explicación y
+   orientaciones generales;
+5. no se implementarán mensajes, canales ni Realtime Chat, porque el caso de
+   uso es un análisis persistente y no una conversación entre personas.
+
+### 12.5. Detalle del caso
 
 La vista principal tendrá:
 
@@ -483,6 +602,17 @@ feat(web): scaffold squat analysis frontend
 - verificar JWT en FastAPI;
 - proteger rutas.
 
+La ampliación OAuth de esta fase deberá:
+
+- extender `SquatRole` a `investigator | expert | user` en PostgreSQL,
+  FastAPI y TypeScript;
+- dejar de decidir la navegación a partir de `user_metadata` y consultar el rol
+  efectivo de `profiles`;
+- crear `/auth/callback` para intercambiar el código PKCE por una sesión SSR;
+- asignar `user` de forma segura a las altas de Google;
+- mantener las cuentas internas existentes con correo y contraseña;
+- impedir que una alta pública solicite los roles privilegiados.
+
 Commit sugerido:
 
 ```text
@@ -606,6 +736,76 @@ Commit sugerido:
 test(web): verify squat research workflows
 ```
 
+### Fase F7. Portal de autoservicio para usuarios
+
+#### F7.1. Autenticación y autorización
+
+- implementar el botón **Continuar con Google** mediante
+  `signInWithOAuth({ provider: "google" })`;
+- utilizar `redirectTo` con `/auth/callback` y validar `next` como ruta relativa;
+- crear el perfil `user` al primer acceso;
+- actualizar el proxy de sesión, layouts protegidos y redirección por rol;
+- aplicar RLS y validaciones FastAPI para propiedad y propósito del análisis;
+- conservar sin cambios funcionales el login por contraseña de investigador y
+  expertos.
+
+#### F7.2. Espacio personal
+
+- construir el shell responsive de `/my-analyses`;
+- mostrar historial paginado propio en barra lateral o panel móvil;
+- implementar `/my-analyses/new` con guía, aceptación informada y carga;
+- autogenerar los códigos técnicos sin solicitar identidad adicional;
+- admitir una o varias repeticiones, conservando resultados independientes por
+  repetición;
+- impedir que un análisis de autoservicio sea asignado a expertos.
+
+#### F7.3. Resultado y orientaciones
+
+- reutilizar los componentes de calidad, segmentación, resultados y
+  explicabilidad sin mostrar controles de investigación;
+- presentar primero un resumen comprensible y dejar el detalle técnico en
+  secciones expandibles;
+- generar orientaciones generales mediante una tabla de reglas versionada,
+  basada en los patrones concluyentes;
+- mostrar advertencias ante resultados no concluyentes o videos no aptos;
+- incluir el alcance no clínico y recomendar evaluación profesional cuando el
+  resultado o la calidad lo justifiquen;
+- no atribuir causas anatómicas ni recomendar ejercicios correctivos
+  individualizados durante este incremento.
+
+#### F7.4. Privacidad y ciclo de vida
+
+- almacenar videos y artefactos en rutas privadas por propietario;
+- servir archivos mediante autorización o URL firmada de corta duración;
+- registrar la versión del aviso aceptado;
+- permitir eliminación del análisis y limpieza de archivos derivados;
+- definir una política de retención antes de abrir el acceso público.
+
+#### F7.5. Pruebas
+
+- Vitest: selección de destino por rol, generación de callback seguro,
+  traducción de estados y reglas de orientaciones;
+- pruebas de integración: perfil OAuth, RLS de propiedad y rechazo de
+  asignaciones sobre análisis personales;
+- Playwright: login Google simulado o sesión preautenticada, carga, progreso,
+  resultado, historial y eliminación;
+- Playwright negativo: un usuario no puede abrir el análisis de otro ni rutas de
+  investigador o experto;
+- prueba responsive del shell tipo espacio de análisis en escritorio y móvil.
+
+Commits sugeridos:
+
+```text
+feat(auth): add google login and self-service user role
+feat(web): add personal squat analysis workspace
+feat(api): authorize user-owned squat analyses
+test(web): verify self-service analysis workflows
+```
+
+Esta fase reutilizará el pipeline, el contrato de resultados y los componentes
+visuales actuales. No se duplicará una segunda aplicación ni se añadirá una
+infraestructura de chat.
+
 Cada fase se confirmará y enviará en la rama `codex/sentadilla-bilateral-dev`, incluyendo únicamente archivos relacionados con la implementación.
 
 ## 18. Evidencias para los objetivos específicos
@@ -630,22 +830,34 @@ Cada fase se confirmará y enviará en la rama `codex/sentadilla-bilateral-dev`,
 | Divergencia de instrumentos | Exportar desde los mismos contratos y plantillas validadas |
 | Pruebas lentas | Separar pruebas UI de las pruebas con pipeline real |
 | Sobredimensionamiento | Mantener un solo frontend, una API y el mínimo de tablas |
+| Escalada de privilegios en altas OAuth | Asignar `user` en base de datos y reservar roles internos para aprovisionamiento administrativo |
+| Exposición de videos personales | RLS por propietario, buckets privados, URLs firmadas y eliminación verificable |
+| Orientaciones interpretadas como diagnóstico | Lenguaje educativo, reglas versionadas, incertidumbre visible y alcance no clínico |
+| Abuso de carga o procesamiento | Límites de tamaño, frecuencia, cantidad de análisis y controles antiabuso antes de apertura pública |
 
 ## 20. Orden inmediato recomendado
 
-1. Confirmar los campos obligatorios del Instrumento 1 y el estado de desbloqueo de la comparación.
-2. Crear las migraciones y políticas para casos, roles, asignaciones y evaluaciones.
-3. Inicializar `apps/web/` con Next.js y npm.
-4. Implementar autenticación y un historial vacío protegido.
-5. Integrar la carga y el endpoint existente antes de construir las gráficas.
+1. Ampliar el dominio de roles y endurecer la creación de perfiles para que toda alta pública reciba `user` sin poder solicitar privilegios.
+2. Crear `/auth/callback`, integrar **Continuar con Google** y verificar la redirección SSR por rol.
+3. Incorporar propiedad y propósito a los análisis, junto con RLS, autorización FastAPI y rutas privadas de Storage.
+4. Construir `/my-analyses`, `/my-analyses/new` y `/my-analyses/[analysisId]` reutilizando el flujo de carga y los componentes de resultados existentes.
+5. Implementar orientaciones generales versionadas, alcance no clínico, eliminación y política de retención.
+6. Ejecutar pruebas unitarias, de integración, RLS, Playwright y responsive antes de habilitar el acceso público en producción.
 
-La primera demostración útil debe permitir que el investigador inicie sesión, cargue un video, espere su análisis, consulte el resultado en una ruta persistente y vuelva a encontrarlo en el historial. Las cuentas expertas y la comparación se incorporarán después de estabilizar ese recorrido.
+La demostración de este incremento deberá permitir que un usuario acceda con
+Google, cargue un video propio, siga el procesamiento, consulte resultados y
+orientaciones generales, vuelva a encontrarlos en **Mis análisis** y elimine el
+registro. En paralelo se comprobará que no pueda acceder a rutas del estudio,
+datos ajenos, asignaciones expertas ni métricas de validación.
 
 ## 21. Referencias técnicas oficiales
 
 - [Next.js App Router](https://nextjs.org/docs/app)
 - [Supabase Local Development](https://supabase.com/docs/guides/local-development)
 - [Supabase Auth](https://supabase.com/docs/guides/auth)
+- [Supabase: Login with Google](https://supabase.com/docs/guides/auth/social-login/auth-google)
+- [Supabase: Redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls)
+- [Supabase: Phone Login](https://supabase.com/docs/guides/auth/phone-login)
 - [Supabase Row Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security)
 - [Supabase Storage](https://supabase.com/docs/guides/storage)
 - [shadcn/ui](https://ui.shadcn.com/docs)
