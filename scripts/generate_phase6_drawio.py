@@ -360,10 +360,11 @@ def _traceability() -> Diagram:
     edges: list[Edge] = []
     objectives = (
         ("o1", "OE1\nIdentificar puntos\nanatómicos clave", "Overlay · calidad de pose\npromedio de puntos clave"),
-        ("o2", "OE2\nDefinir variables\nbiomecánicas", "Series temporales · fases\nvalores por repetición"),
-        ("o3", "OE3\nDiseñar criterios\ninterpretables", "Regla · valor · umbral\nversión · decisión"),
-        ("o4", "OE4\nImplementar\nel prototipo", "Carga · API · resultados\nhistorial · exportaciones"),
-        ("o5", "OE5\nEvaluar desempeño\ntécnico", "Referencia experta\nF1-score · Kappa"),
+        ("o2", "OE2\nEstablecer segmentación\ntemporal", "Repeticiones · fases\nmáxima profundidad"),
+        ("o3", "OE3\nDefinir y calcular\nvariables biomecánicas", "Fórmulas · series\nvalores por repetición"),
+        ("o4", "OE4\nDiseñar criterios\ninterpretables", "Regla · valor · umbral\nversión · decisión"),
+        ("o5", "OE5\nImplementar\nel prototipo", "Carga · API · resultados\nhistorial · exportaciones"),
+        ("o6", "OE6\nEvaluar desempeño\ntécnico", "Referencia experta\nF1-score · Kappa"),
     )
     for index, (objective_id, objective, evidence) in enumerate(objectives):
         y = 150 + index * 135
@@ -376,12 +377,14 @@ def _traceability() -> Diagram:
                 (
                     "pytest + overlay"
                     if index == 0
-                    else "pytest + gráficos"
+                    else "pytest + señal temporal"
                     if index == 1
-                    else "pytest + evidencia de reglas"
+                    else "pytest + gráficos"
                     if index == 2
-                    else "Vitest + Playwright"
+                    else "pytest + evidencia de reglas"
                     if index == 3
+                    else "Vitest + Playwright"
+                    if index == 4
                     else "Playwright + exportaciones"
                 ),
                 770,
@@ -418,7 +421,7 @@ def _traceability() -> Diagram:
         tuple(nodes),
         tuple(edges),
         1450,
-        900,
+        1035,
     )
 
 

@@ -476,7 +476,7 @@ Este documento complementa las evidencias ya generadas:
 - `evidencia_fase_3_segmentacion_temporal.md` explica el origen de los eventos temporales y de las capturas de máxima profundidad;
 - `evaluacion_lote_piloto_fase5.md` documenta la respuesta exploratoria de las variables y la utilidad de los primeros casos controlados;
 - `evaluacion_lote_piloto_002_multietiqueta.md` demuestra que un mismo video puede contener varias compensaciones y que cada patrón conserva su propio estado;
-- `evidencia_objetivo_4_prototipo_funcional.md` relaciona la integración de todos los artefactos con el prototipo funcional.
+- `evidencia_objetivo_5_prototipo_funcional.md` relaciona la integración de todos los artefactos con el prototipo funcional.
 
 Las evaluaciones piloto sustentan el contenido que deberá mostrarse, mientras que este documento define cómo convertirlo en una experiencia comprensible para el asesor, los evaluadores expertos y, posteriormente, un usuario de la aplicación.
 

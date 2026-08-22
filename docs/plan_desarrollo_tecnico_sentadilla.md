@@ -698,7 +698,7 @@ El descarte de videos no aptos ya está materializado mediante una puerta poster
 
 La evidencia de la segmentación quedó documentada en [evidencia_fase_3_segmentacion_temporal.md](/D:/sistema-biomecanico/docs/evidencia_fase_3_segmentacion_temporal.md). Este incremento prepara los fotogramas y ventanas temporales sobre los que se calcularán las variables biomecánicas de la Fase 4.
 
-La Fase 4 y la trazabilidad completa del Objetivo Específico 2 quedaron documentadas en [evidencia_objetivo_2_variables_biomecanicas.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_2_variables_biomecanicas.md). El siguiente incremento corresponde a la Fase 5: reglas y umbrales interpretables separados del cálculo geométrico.
+La Fase 3 constituye ahora evidencia directa del Objetivo Específico 2 y se resume en [evidencia_objetivo_2_segmentacion_temporal.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_2_segmentacion_temporal.md). La Fase 4 y la trazabilidad de las variables corresponden al Objetivo Específico 3 y se documentan en [evidencia_objetivo_3_variables_biomecanicas.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_3_variables_biomecanicas.md).
 
 La evaluación previa del primer lote controlado quedó registrada en
 [evaluacion_lote_piloto_fase5.md](/D:/sistema-biomecanico/docs/evaluacion_lote_piloto_fase5.md).
@@ -710,9 +710,9 @@ valgo bilateral y aumentar casos negativos y réplicas antes de congelar
 umbrales.
 
 La primera versión del motor de reglas quedó implementada mediante el
-`ruleset_v0.1` provisional. La evidencia del Objetivo Específico 3, sus bandas
+`ruleset_v0.1` provisional. La evidencia del Objetivo Específico 4, sus bandas
 de decisión, resultados piloto y ciclo de trazabilidad se documentan en
-[evidencia_objetivo_3_criterios_interpretables.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_3_criterios_interpretables.md).
+[evidencia_objetivo_4_criterios_interpretables.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_4_criterios_interpretables.md).
 Los umbrales todavía no están congelados y deberán evolucionar mediante
 versiones explícitas antes de la evaluación final.
 
@@ -720,7 +720,7 @@ El segundo lote piloto demostró el comportamiento multietiqueta y la
 integración de video, pose, segmentación, calidad, variables y reglas. La
 evaluación se documenta en
 [evaluacion_lote_piloto_002_multietiqueta.md](/D:/sistema-biomecanico/docs/evaluacion_lote_piloto_002_multietiqueta.md)
-y la evidencia inicial del Objetivo Específico 4 en
-[evidencia_objetivo_4_prototipo_funcional.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_4_prototipo_funcional.md).
+y la evidencia del Objetivo Específico 5 en
+[evidencia_objetivo_5_prototipo_funcional.md](/D:/sistema-biomecanico/docs/evidencia_objetivo_5_prototipo_funcional.md).
 El núcleo analítico del prototipo ya es ejecutable; resta empaquetar el flujo y
 generar una presentación más legible por caso y por lote.

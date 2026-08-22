@@ -42,10 +42,11 @@ evaluadores expertos del estudio.
 | Objetivo específico | Resultado demostrable | Evidencia principal |
 |---|---|---|
 | OE1. Identificar puntos anatómicos clave en 2D | Overlay, disponibilidad, calidad y promedio de puntos clave por fotograma | `evidencia_objetivo_1_estimacion_pose_2d.md` |
-| OE2. Definir variables biomecánicas observables | Fases, series temporales, fórmulas y métricas por repetición | `evidencia_objetivo_2_variables_biomecanicas.md` |
-| OE3. Diseñar criterios biomecánicos interpretables | Valor, umbral, margen, versión y decisión independiente por patrón | `evidencia_objetivo_3_criterios_interpretables.md` |
-| OE4. Implementar un prototipo funcional | Registro, procesamiento, historial, resultados y exportaciones persistentes | `evidencia_objetivo_4_prototipo_funcional.md` |
-| OE5. Evaluar el desempeño técnico | Referencia experta consolidada, matriz de clasificación, F1-score y Kappa | `evidencia_objetivo_5_desempeno_tecnico.md` |
+| OE2. Establecer la segmentación temporal | Repeticiones, fases, máxima profundidad y control de recuperación | `evidencia_objetivo_2_segmentacion_temporal.md` |
+| OE3. Definir y calcular variables biomecánicas | Series temporales, fórmulas y valores en máxima profundidad | `evidencia_objetivo_3_variables_biomecanicas.md` |
+| OE4. Diseñar criterios biomecánicos interpretables | Valor, umbral, margen, versión y decisión independiente por patrón | `evidencia_objetivo_4_criterios_interpretables.md` |
+| OE5. Implementar un prototipo funcional | Registro, procesamiento, historial, resultados y exportaciones persistentes | `evidencia_objetivo_5_prototipo_funcional.md` |
+| OE6. Evaluar el desempeño técnico | Referencia experta consolidada, matriz de clasificación, F1-score y Kappa | `evidencia_objetivo_6_desempeno_tecnico.md` |
 
 El archivo `trazabilidad_objetivos_evidencias.drawio` presenta esta relación
 como objetivo, resultado observable, mecanismo de verificación y documento.

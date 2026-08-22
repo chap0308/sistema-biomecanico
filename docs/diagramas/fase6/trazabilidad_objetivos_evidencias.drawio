@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mxfile host="app.diagrams.net" agent="sistema-biomecanico-phase6" version="26.0.16" type="device">
   <diagram id="phase6" name="Página 1">
-    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="1035" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,53 +23,65 @@
         <mxCell id="d1" value="Documento de evidencia OE1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="1110" y="150" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="o2" value="OE2&lt;br&gt;Definir variables&lt;br&gt;biomecánicas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="o2" value="OE2&lt;br&gt;Establecer segmentación&lt;br&gt;temporal" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="80" y="285" width="240" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="e2" value="Series temporales · fases&lt;br&gt;valores por repetición" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="e2" value="Repeticiones · fases&lt;br&gt;máxima profundidad" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="410" y="285" width="270" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v2" value="pytest + gráficos" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="v2" value="pytest + señal temporal" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="770" y="285" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d2" value="Documento de evidencia OE2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="1110" y="285" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="o3" value="OE3&lt;br&gt;Diseñar criterios&lt;br&gt;interpretables" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="o3" value="OE3&lt;br&gt;Definir y calcular&lt;br&gt;variables biomecánicas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="80" y="420" width="240" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="Regla · valor · umbral&lt;br&gt;versión · decisión" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="e3" value="Fórmulas · series&lt;br&gt;valores por repetición" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="410" y="420" width="270" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v3" value="pytest + evidencia de reglas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="v3" value="pytest + gráficos" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="770" y="420" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d3" value="Documento de evidencia OE3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="1110" y="420" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="o4" value="OE4&lt;br&gt;Implementar&lt;br&gt;el prototipo" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="o4" value="OE4&lt;br&gt;Diseñar criterios&lt;br&gt;interpretables" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="80" y="555" width="240" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="Carga · API · resultados&lt;br&gt;historial · exportaciones" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="e4" value="Regla · valor · umbral&lt;br&gt;versión · decisión" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="410" y="555" width="270" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v4" value="Vitest + Playwright" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="v4" value="pytest + evidencia de reglas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="770" y="555" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d4" value="Documento de evidencia OE4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="1110" y="555" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="o5" value="OE5&lt;br&gt;Evaluar desempeño&lt;br&gt;técnico" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="o5" value="OE5&lt;br&gt;Implementar&lt;br&gt;el prototipo" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="80" y="690" width="240" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="e5" value="Referencia experta&lt;br&gt;F1-score · Kappa" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="e5" value="Carga · API · resultados&lt;br&gt;historial · exportaciones" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="410" y="690" width="270" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v5" value="Playwright + exportaciones" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+        <mxCell id="v5" value="Vitest + Playwright" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="770" y="690" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d5" value="Documento de evidencia OE5" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
           <mxGeometry x="1110" y="690" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o6" value="OE6&lt;br&gt;Evaluar desempeño&lt;br&gt;técnico" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dbeafe;strokeColor=#1d4ed8;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="80" y="825" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="Referencia experta&lt;br&gt;F1-score · Kappa" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#dcfce7;strokeColor=#15803d;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="410" y="825" width="270" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v6" value="Playwright + exportaciones" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#fef3c7;strokeColor=#b45309;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="770" y="825" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d6" value="Documento de evidencia OE6" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fontSize=13;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#ede9fe;strokeColor=#6d28d9;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="825" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="edge-1" value="se demuestra con" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="o1" target="e1">
           <mxGeometry relative="1" as="geometry" />
@@ -114,6 +126,15 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="edge-15" value="se documenta en" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="v5" target="d5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-16" value="se demuestra con" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="o6" target="e6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-17" value="se verifica mediante" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="e6" target="v6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-18" value="se documenta en" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="v6" target="d6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
