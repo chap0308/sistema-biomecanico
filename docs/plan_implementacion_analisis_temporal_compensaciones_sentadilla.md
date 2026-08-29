@@ -60,7 +60,11 @@ Configuración provisional inicial:
 min_episode_duration_seconds: 0.16
 max_merge_gap_seconds: 0.08
 min_phase_valid_coverage_pct: 80
-min_episode_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
+absolute_min_episode_samples: 4
+min_episode_valid_samples: max(
+  absolute_min_episode_samples,
+  ceil(min_episode_duration_seconds * effective_fps)
+)
 max_unobserved_gap_seconds_for_absence: min_episode_duration_seconds - frame_period_seconds
 ```
 
@@ -73,14 +77,82 @@ Estos valores son hipótesis de ingeniería, no umbrales clínicos de Conor Harr
 | `effective_fps` | Frecuencia efectiva estimada con los timestamps válidos del video. | Convertir entre muestras y segundos sin asumir que todos los videos son exactamente de 25 fps. |
 | `frame_period_seconds` | `1 / effective_fps`. | Aproximar cuánto tiempo representa cada muestra. |
 | `min_episode_duration_seconds` | Duración activa continua mínima sobre el criterio temporal para crear un episodio. | Evitar que uno o pocos fotogramas aislados activen `presente`. |
-| `min_episode_valid_samples` | `ceil(min_episode_duration_seconds × effective_fps)`. | Exigir además una cantidad mínima de observaciones y evitar que timestamps anómalos conviertan muy pocas muestras en episodio. |
+| `absolute_min_episode_samples` | Piso absoluto provisional de cuatro observaciones válidas. | Impedir que un video de FPS bajo convierta una o dos muestras de gran duración aparente en evidencia sostenida. |
+| `min_episode_valid_samples` | `max(absolute_min_episode_samples, ceil(min_episode_duration_seconds × effective_fps))`. | Exigir a la vez duración y densidad mínima de observaciones; no reemplaza la condición de `0.16 s`. |
 | `max_merge_gap_seconds` | Interrupción máxima de **muestras válidas en la banda de histéresis** que puede mantener unido un episodio. | Evitar fragmentación por oscilación breve alrededor del umbral. No interpola pose ni convierte el hueco en duración activa. |
 | `min_phase_valid_coverage_pct` | Porcentaje mínimo de muestras de la fase con métricas técnicamente válidas. | Impedir decisiones sobre fases dominadas por pérdida de pose. No indica cuánto tiempo estuvo presente la compensación. |
 | `max_unobserved_gap_seconds_for_absence` | Mayor hueco consecutivo de muestras inválidas permitido para sostener `ausente`; debe ser menor que la duración mínima de episodio. | Evitar declarar ausencia cuando un intervalo sin datos podría ocultar por sí solo un episodio completo. |
 
 `25 fps` no es un parámetro de clasificación. Es una referencia aproximada derivada de los videos actuales: un fotograma representa cerca de `1/25 = 0.04 s`. Por ello, cuatro fotogramas ocupan aproximadamente `4/25 = 0.16 s`. El sistema debe usar el FPS efectivo de cada repetición: a `24.04 fps`, cuatro muestras representan aproximadamente `0.166 s`; a `30 fps`, `ceil(0.16 × 30) = 5` muestras.
 
-#### 2.3.2. Fundamento disponible y límites
+#### 2.3.2. FPS constante, variable o no verificable
+
+La regla temporal tiene dos condiciones simultáneas:
+
+```text
+active_duration_seconds >= min_episode_duration_seconds
+valid_sample_count >= max(
+  absolute_min_episode_samples,
+  ceil(min_episode_duration_seconds * effective_fps)
+)
+```
+
+Por tanto, `0.16 s` permanece fijo como hipótesis temporal provisional, mientras el número exigido de muestras cambia con la frecuencia efectiva del video. Ejemplos:
+
+| FPS efectivo | `ceil(0.16 × FPS)` | Mínimo final con piso de cuatro muestras |
+| ---: | ---: | ---: |
+| 10 | 2 | 4 |
+| 15 | 3 | 4 |
+| 20 | 4 | 4 |
+| 24 | 4 | 4 |
+| 25 | 4 | 4 |
+| 30 | 5 | 5 |
+| 50 | 8 | 8 |
+| 60 | 10 | 10 |
+| 120 | 20 | 20 |
+
+El piso de cuatro muestras vuelve deliberadamente más exigente el criterio cuando el FPS es bajo: a 10 fps se necesitarían aproximadamente `0.40 s` de observaciones válidas, no solo dos frames que ocupen `0.20 s`. Sigue siendo una decisión de ingeniería que debe validarse; no se presentará como umbral clínico ni como estándar publicado.
+
+La fuente temporal primaria serán los timestamps de presentación decodificados, no el FPS nominal del contenedor. Por repetición se calculará:
+
+```text
+frame_period_seconds = median(timestamp[i] - timestamp[i - 1])
+effective_fps = 1 / frame_period_seconds
+episode_duration_seconds = timestamp_last - timestamp_first + local_frame_period_seconds
+```
+
+`local_frame_period_seconds` será la mediana de los intervalos válidos adyacentes al episodio. La suma del periodo representado por la última muestra evita el error de afirmar que cuatro muestras regulares a 25 fps duran solo `0.12 s` por usar exclusivamente `timestamp_last - timestamp_first`. La implementación deberá almacenar también el inicio, fin, cantidad de muestras y duración activa para auditar esta convención.
+
+En videos de frecuencia variable (VFR), la duración se decidirá mediante timestamps reales. No se transformará `0.16 s` en un número fijo de frames para todo el archivo. El contador de muestras seguirá actuando como salvaguarda, usando el FPS efectivo de la repetición, y se registrarán la variabilidad de los intervalos y cualquier discrepancia con el FPS nominal. Si la variabilidad temporal resulta material en la validación, se evaluará usar un FPS efectivo local por episodio; no se cambiará esta definición después de observar los resultados finales.
+
+Si los timestamps faltan o no son monótonos, se intentará recuperar los timestamps de presentación del decodificador. El FPS del contenedor solo podrá usarse como fallback explícito (`fps_source = metadata_fallback`) y deberá generar una advertencia de calidad. Si tampoco existe una base temporal fiable, la persistencia será `not_evaluable`; el sistema no inferirá `ausente` ni asumirá 25 fps.
+
+Se almacenarán como mínimo:
+
+```text
+fps_nominal
+effective_fps
+fps_source: timestamps | metadata_fallback | unavailable
+frame_interval_median_seconds
+frame_interval_iqr_seconds
+timestamps_monotonic
+variable_frame_rate_warning
+```
+
+El protocolo de grabación deberá registrar la frecuencia real y procurar una captura estable. No se fija todavía un FPS mínimo universal: ese requisito se determinará con los videos de calibración, la tasa de errores y el acuerdo experto.
+
+Los parámetros se distinguen así:
+
+| Tipo | Elementos |
+| --- | --- |
+| Fijos provisionales del ruleset | `0.16 s`, `0.08 s`, `80 %` y piso de cuatro muestras. |
+| Dependientes del video o repetición | timestamps, `effective_fps`, periodo de frame y número mínimo calculado de muestras. |
+| Derivados por fase o episodio | cobertura, duración activa, duración total, cantidad válida de muestras y mayor hueco no observado. |
+| Pendientes de validación | todos los valores fijos provisionales y el FPS mínimo admitido por el protocolo. |
+
+`max_merge_gap_seconds` permanece expresado en segundos y se compara directamente con timestamps. Sus equivalentes en frames cambian con el video; no se redondeará primero a un número universal de fotogramas. `min_phase_valid_coverage_pct` permanece como proporción y no cambia con el FPS. En VFR se conservarán tanto cobertura por muestras como cobertura temporal; si difieren materialmente, se mostrará una advertencia y la ausencia no se confirmará hasta validar cuál medida debe gobernar la clasificación.
+
+#### 2.3.3. Fundamento disponible y límites
 
 | Decisión | Respaldo disponible | Qué no demuestra |
 | --- | --- | --- |
@@ -374,17 +446,24 @@ Parámetros iniciales de ingeniería, pendientes de calibración:
 min_episode_duration_seconds: 0.16
 max_merge_gap_seconds: 0.08
 min_phase_valid_coverage_pct: 80
-min_episode_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
+absolute_min_episode_samples: 4
+min_episode_valid_samples: max(
+  absolute_min_episode_samples,
+  ceil(min_episode_duration_seconds * effective_fps)
+)
 max_unobserved_gap_seconds_for_absence: min_episode_duration_seconds - frame_period_seconds
 ```
 
-Se expresarán en segundos para no depender de una frecuencia fija. `effective_fps` se estimará con la mediana de los intervalos de timestamp válidos de la repetición. Un episodio debe cumplir tanto `0.16 s` como `ceil(0.16 * effective_fps)` muestras válidas consecutivas; a aproximadamente 25 fps esto equivale a cuatro fotogramas. La implementación calculará la duración considerando el periodo representado por las muestras, no solo `timestamp_final - timestamp_inicial`.
+Se expresarán en segundos para no depender de una frecuencia fija. `effective_fps` se estimará con la mediana de los intervalos de timestamp válidos de la repetición. Un episodio debe cumplir tanto `0.16 s` como `max(4, ceil(0.16 * effective_fps))` muestras válidas consecutivas; a aproximadamente 25 fps esto equivale a cuatro fotogramas y a 30 fps, a cinco. La implementación calculará la duración considerando el periodo representado por las muestras, no solo `timestamp_final - timestamp_inicial`, y aplicará la política de FPS constante, variable o no verificable definida en 2.3.2.
 
 `min_phase_valid_coverage_pct` significa que al menos el 80 % de las muestras esperadas de la fase tienen métricas válidas. No significa que la compensación deba ocupar el 80 % de la fase. Deben almacenarse por separado:
 
 ```text
 valid_coverage_pct:
   proporción de la fase con datos técnicamente evaluables;
+
+valid_time_coverage_pct:
+  proporción temporal evaluable calculada con timestamps, especialmente para VFR;
 
 active_duration_seconds:
   tiempo realmente por encima del criterio de presencia;
@@ -398,7 +477,7 @@ active_ratio_pct:
 
 Un hueco de hasta `0.08 s` solo puede unirse si contiene muestras técnicamente válidas dentro de la banda de histéresis, los segmentos de ambos lados pertenecen a la misma variable y dirección y el hueco no se debe a un cambio sostenido hacia ausencia. Puede atravesar un límite de fase si la señal es continua. El hueco no suma duración activa. Esto evita que la unión artificial transforme varios picos mínimos en un episodio sostenido.
 
-Los huecos de pose inválida no se unen mediante `max_merge_gap_seconds` y rompen la evidencia de continuidad. Para clasificar una fase como `ausente`, además del 80 % de cobertura, su mayor hueco consecutivo no observado debe ser menor que `min_episode_duration_seconds`; de lo contrario, la fase será `no_evaluable` porque el hueco podría contener un episodio completo. Las métricas interpoladas pueden emplearse para segmentación si el pipeline lo documenta, pero no para inventar presencia o ausencia de una compensación.
+Los huecos de pose inválida no se unen mediante `max_merge_gap_seconds` y rompen la evidencia de continuidad. Para clasificar una fase como `ausente`, además del 80 % de cobertura, su mayor hueco consecutivo no observado debe ser menor que `min_episode_duration_seconds`; de lo contrario, la fase será `no_evaluable` porque el hueco podría contener un episodio completo. En videos VFR se conservarán cobertura por muestras y por tiempo; una discrepancia material se tratará como advertencia hasta que la calibración determine la regla definitiva. Las métricas interpoladas pueden emplearse para segmentación si el pipeline lo documenta, pero no para inventar presencia o ausencia de una compensación.
 
 Los valores definitivos deben validarse y congelarse antes de la evaluación formal. Como análisis de sensibilidad se compararán, como mínimo, reglas de `0.12 s`, `0.16 s` y `0.20 s`, documentando cuánto cambia la concordancia frente a expertos.
 
@@ -912,7 +991,18 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - hueco unido que no se contabiliza como tiempo activo;
 - hueco limítrofe válido que puede unirse frente a hueco de pose inválida que rompe el episodio;
 - fase con cobertura global ≥80 % pero hueco inválido continuo capaz de ocultar 0.16 s, que queda `no_evaluable`;
-- conversión de 0.16 s a cuatro muestras a ~25 fps y cinco muestras a 30 fps;
+- conversión de `0.16 s` a cuatro muestras a 20, 24 y ~25 fps, cinco a 30 fps, ocho a 50 fps y diez a 60 fps;
+- aplicación del piso absoluto de cuatro muestras a 10 y 15 fps, aunque `ceil(0.16 × FPS)` produzca dos o tres;
+- intervalo que cumple `0.16 s` pero no cuatro observaciones válidas, que no crea episodio;
+- cuatro muestras regulares a 25 fps cuya duración representada es `0.16 s`, no `0.12 s`;
+- video CFR donde FPS nominal y efectivo coinciden;
+- video VFR con timestamps monótonos donde la duración se obtiene de timestamps y no de un conteo fijo de frames;
+- discrepancia entre FPS nominal y efectivo que conserva ambos valores y genera advertencia;
+- timestamps ausentes con fallback explícito a metadata;
+- timestamps no monótonos y sin fallback fiable que producen persistencia `not_evaluable`;
+- mismo `max_merge_gap_seconds` aplicado por tiempo a videos de FPS diferentes;
+- cobertura por muestras y cobertura temporal coincidentes en CFR;
+- divergencia material entre cobertura por muestras y por tiempo en VFR que impide confirmar ausencia sin advertencia;
 - hueco técnico largo que produce no evaluable;
 - cambio de dirección que crea dos episodios;
 - ambas rodillas mediales y simétricas;
@@ -960,6 +1050,12 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - No se muestra una recomendación de valgo cuando ambas rodillas son laterales y el valgo es ausente.
 - Toda recomendación incluye prueba confirmatoria, retest, fuente y límite de interpretación.
 - Los umbrales y parámetros temporales están versionados.
+- `25 fps` no está hardcodeado como frecuencia universal ni como criterio de clasificación.
+- La fuente del FPS y la frecuencia nominal y efectiva quedan almacenadas y auditables.
+- La duración se calcula con timestamps y el periodo representado por la muestra final, no solo con diferencia entre el primer y último timestamp.
+- Un episodio debe cumplir simultáneamente duración mínima y `max(4, ceil(0.16 × effective_fps))` observaciones válidas.
+- Los videos VFR se evalúan con timestamps reales; los equivalentes en frames son solo descriptivos.
+- Si no existe una base temporal fiable, la persistencia queda `not_evaluable` y nunca se asume 25 fps.
 - Una detección menor de `0.16 s` se conserva, pero no crea un episodio sostenido.
 - El 80 % de cobertura representa datos válidos, no tiempo con compensación.
 - Una fase no puede clasificarse como ausente si contiene un hueco no observado capaz de ocultar un episodio completo, aunque alcance 80 % de cobertura total.
@@ -981,6 +1077,19 @@ Después de implementar y validar:
 - anexos e instrumentos derivados.
 
 El cambio principal a declarar es que la serie completa deja de ser solamente evidencia gráfica y participa en la clasificación mediante episodios sostenidos, mientras máxima profundidad se conserva como ancla puntual descriptiva. Debe actualizarse expresamente la definición operacional: **un valor presente en un único fotograma de máxima profundidad ya no basta para clasificar la repetición como presente**; la señal debe satisfacer `present_min`, `0.16 s` y el mínimo de muestras correspondiente al FPS efectivo.
+
+La tesis también deberá explicar explícitamente:
+
+- que `25 fps` fue el contexto del caso que motivó la regla, no una constante del sistema;
+- por qué los parámetros temporales se expresan en segundos y cómo se convierten a muestras por video;
+- la doble condición de duración y piso de observaciones, incluida su mayor exigencia en FPS bajos;
+- la convención para calcular la duración ocupada por una serie de muestras;
+- la prioridad de timestamps sobre el FPS nominal, el manejo de VFR y los fallbacks permitidos;
+- la diferencia entre cobertura por muestras, cobertura temporal y tiempo activo de compensación;
+- por qué `0.16 s`, `0.08 s`, `80 %` y cuatro muestras continúan siendo provisionales;
+- cómo se realizará el análisis de sensibilidad y en qué momento se congelarán los valores;
+- qué ocurre cuando una fase es demasiado corta, contiene huecos capaces de ocultar un episodio o carece de una base temporal fiable;
+- que Conor Harris y Squat University respaldan la interpretación biomecánica y las rutas educativas, pero no estos parámetros de procesamiento temporal.
 
 ## 17. Límite clínico
 
