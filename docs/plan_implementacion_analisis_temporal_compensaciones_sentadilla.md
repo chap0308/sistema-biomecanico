@@ -49,7 +49,8 @@ No se crearán umbrales distintos por fase hasta que la validación experta demu
 
 - duración mínima para considerar una aparición sostenida;
 - separación máxima que puede unirse dentro del mismo episodio;
-- cobertura mínima de datos válidos por fase.
+- cobertura mínima de datos válidos por fase;
+- duración máxima de un hueco no observado compatible con clasificar ausencia.
 
 Todos deben residir en el ruleset y nunca quedar ocultos en componentes web.
 
@@ -59,10 +60,52 @@ Configuración provisional inicial:
 min_episode_duration_seconds: 0.16
 max_merge_gap_seconds: 0.08
 min_phase_valid_coverage_pct: 80
-min_phase_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
+min_episode_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
+max_unobserved_gap_seconds_for_absence: min_episode_duration_seconds - frame_period_seconds
 ```
 
 Estos valores son hipótesis de ingeniería, no umbrales clínicos de Conor Harris ni Squat University. Deben someterse a análisis de sensibilidad y validación experta antes de congelarse.
+
+#### 2.3.1. Qué significa cada parámetro
+
+| Parámetro | Definición operacional | Función |
+| --- | --- | --- |
+| `effective_fps` | Frecuencia efectiva estimada con los timestamps válidos del video. | Convertir entre muestras y segundos sin asumir que todos los videos son exactamente de 25 fps. |
+| `frame_period_seconds` | `1 / effective_fps`. | Aproximar cuánto tiempo representa cada muestra. |
+| `min_episode_duration_seconds` | Duración activa continua mínima sobre el criterio temporal para crear un episodio. | Evitar que uno o pocos fotogramas aislados activen `presente`. |
+| `min_episode_valid_samples` | `ceil(min_episode_duration_seconds × effective_fps)`. | Exigir además una cantidad mínima de observaciones y evitar que timestamps anómalos conviertan muy pocas muestras en episodio. |
+| `max_merge_gap_seconds` | Interrupción máxima de **muestras válidas en la banda de histéresis** que puede mantener unido un episodio. | Evitar fragmentación por oscilación breve alrededor del umbral. No interpola pose ni convierte el hueco en duración activa. |
+| `min_phase_valid_coverage_pct` | Porcentaje mínimo de muestras de la fase con métricas técnicamente válidas. | Impedir decisiones sobre fases dominadas por pérdida de pose. No indica cuánto tiempo estuvo presente la compensación. |
+| `max_unobserved_gap_seconds_for_absence` | Mayor hueco consecutivo de muestras inválidas permitido para sostener `ausente`; debe ser menor que la duración mínima de episodio. | Evitar declarar ausencia cuando un intervalo sin datos podría ocultar por sí solo un episodio completo. |
+
+`25 fps` no es un parámetro de clasificación. Es una referencia aproximada derivada de los videos actuales: un fotograma representa cerca de `1/25 = 0.04 s`. Por ello, cuatro fotogramas ocupan aproximadamente `4/25 = 0.16 s`. El sistema debe usar el FPS efectivo de cada repetición: a `24.04 fps`, cuatro muestras representan aproximadamente `0.166 s`; a `30 fps`, `ceil(0.16 × 30) = 5` muestras.
+
+#### 2.3.2. Fundamento disponible y límites
+
+| Decisión | Respaldo disponible | Qué no demuestra |
+| --- | --- | --- |
+| Analizar episodios en la curva completa | Yoma et al. compararon análisis de curva completa y puntos discretos en sentadilla monopodal con captura markerless; ambos aportan información y presentan error de medición específico por tarea y articulación ([Yoma et al., 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12317789/)). | No prescribe 0.16 s ni cuatro frames. |
+| No depender de un solo pico | La literatura markerless en sentadilla muestra error de medición y fiabilidad dependientes de tarea, articulación y sistema; por ejemplo, OpenCap presentó RMSE medio de 7° en sus ángulos de squat, con rango de 2.9° a 13.6° ([Lima et al., 2024](https://pubmed.ncbi.nlm.nih.gov/39444219/)). | No permite trasladar ese error directamente a MediaPipe ni definir un umbral temporal. |
+| Expresar persistencia en segundos y muestras | La frecuencia de cámara modifica el error temporal y la capacidad de capturar picos. Un estudio de movimientos rápidos encontró diferencias entre 30 y 120 fps en FPPA e inclinación lateral del tronco, y señaló que no existen guías estandarizadas de FPS para todo análisis 2D ([Alenzi et al., 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11901006/)). Un estudio a 25 Hz encontró utilidad para desplazamientos macroscópicos, pero menor rendimiento en variables derivadas rápidas ([Li et al., 2026](https://pubmed.ncbi.nlm.nih.gov/41829650/)). | No prueba que 25 fps sea óptimo para sentadilla ni que cuatro muestras sean clínicamente suficientes. |
+| Limitar y documentar huecos | Métodos de postprocesamiento de pose recomiendan fijar un máximo de hueco, reportarlo en frames y segundos y validarlo para la tarea; `refineDLC` ejemplifica este enfoque, aunque en otro dominio ([Klecel et al., 2025](https://academic.oup.com/biomethods/article/10/1/bpaf084/8368337)). | No respalda específicamente `0.08 s` para sentadilla ni autoriza interpolar una compensación. |
+| Cobertura válida de 80 % | Continúa la política de calidad provisional ya usada por repetición en [`analisis_caso_dev_valgo_izq_002_fases_2_5.md`](./analisis_caso_dev_valgo_izq_002_fases_2_5.md). | No existe un estándar publicado localizado que valide 80 % como límite universal o específico de sentadilla. |
+
+Conclusión metodológica:
+
+- `0.16 s` se elige provisionalmente como la primera opción que exige cuatro muestras a ~25 fps y excluye el caso observado de tres fotogramas (~0.12 s); no es un límite clínico publicado;
+- `0.08 s` equivale aproximadamente a dos periodos de frame a 25 fps y se usa solo para tolerar oscilaciones válidas en la banda intermedia; no es un estándar publicado;
+- `80 %` limita la cantidad total de datos inválidos a 20 %, pero no basta por sí solo: debe combinarse con el control del mayor hueco consecutivo;
+- los valores finales se seleccionarán mediante análisis de sensibilidad y concordancia con expertos, no por atribución a Conor Harris o Squat University.
+
+Matriz mínima de sensibilidad propuesta:
+
+```text
+min_episode_duration_seconds: 0.12 | 0.16 | 0.20
+max_merge_gap_seconds: 0.04 | 0.08 | 0.12
+min_phase_valid_coverage_pct: 80 | 90 | 95
+```
+
+La selección debe realizarse con casos de calibración y congelarse antes de la evaluación final, para no escoger retrospectivamente la combinación que mejor coincida con los mismos expertos usados como resultado definitivo. Además de concordancia, se reportará cuántos resultados cambian entre `ausente`, `no_concluyente` y `presente` con cada configuración.
 
 ### 2.4. Resultado global del sistema
 
@@ -321,7 +364,7 @@ La extracción no debe abrir y cerrar episodios por cada cruce de un frame:
 1. entrar en estado presente al alcanzar `present_min` durante la persistencia configurada;
 2. mantener el episodio dentro de la banda intermedia;
 3. cerrarlo al caer hasta `absent_max` durante la persistencia configurada;
-4. unir interrupciones técnicas o limítrofes menores que `max_gap_seconds`;
+4. unir únicamente interrupciones limítrofes con muestras válidas menores que `max_merge_gap_seconds`;
 5. cerrar el episodio si cambia de dirección de manera sostenida;
 6. marcar los huecos de mala calidad como `no_evaluable`, no como ausencia.
 
@@ -331,7 +374,8 @@ Parámetros iniciales de ingeniería, pendientes de calibración:
 min_episode_duration_seconds: 0.16
 max_merge_gap_seconds: 0.08
 min_phase_valid_coverage_pct: 80
-min_phase_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
+min_episode_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
+max_unobserved_gap_seconds_for_absence: min_episode_duration_seconds - frame_period_seconds
 ```
 
 Se expresarán en segundos para no depender de una frecuencia fija. `effective_fps` se estimará con la mediana de los intervalos de timestamp válidos de la repetición. Un episodio debe cumplir tanto `0.16 s` como `ceil(0.16 * effective_fps)` muestras válidas consecutivas; a aproximadamente 25 fps esto equivale a cuatro fotogramas. La implementación calculará la duración considerando el periodo representado por las muestras, no solo `timestamp_final - timestamp_inicial`.
@@ -352,7 +396,9 @@ active_ratio_pct:
   active_duration_seconds / episode_span_seconds.
 ```
 
-Un hueco de hasta `0.08 s` solo puede unirse si los segmentos de ambos lados pertenecen a la misma variable, fase y dirección y el hueco no se debe a un cambio sostenido hacia ausencia. El hueco no suma duración activa. Esto evita que la unión artificial transforme varios picos mínimos en un episodio sostenido.
+Un hueco de hasta `0.08 s` solo puede unirse si contiene muestras técnicamente válidas dentro de la banda de histéresis, los segmentos de ambos lados pertenecen a la misma variable y dirección y el hueco no se debe a un cambio sostenido hacia ausencia. Puede atravesar un límite de fase si la señal es continua. El hueco no suma duración activa. Esto evita que la unión artificial transforme varios picos mínimos en un episodio sostenido.
+
+Los huecos de pose inválida no se unen mediante `max_merge_gap_seconds` y rompen la evidencia de continuidad. Para clasificar una fase como `ausente`, además del 80 % de cobertura, su mayor hueco consecutivo no observado debe ser menor que `min_episode_duration_seconds`; de lo contrario, la fase será `no_evaluable` porque el hueco podría contener un episodio completo. Las métricas interpoladas pueden emplearse para segmentación si el pipeline lo documenta, pero no para inventar presencia o ausencia de una compensación.
 
 Los valores definitivos deben validarse y congelarse antes de la evaluación formal. Como análisis de sensibilidad se compararán, como mínimo, reglas de `0.12 s`, `0.16 s` y `0.20 s`, documentando cuánto cambia la concordancia frente a expertos.
 
@@ -422,7 +468,7 @@ La interfaz debe diferenciar “cruzó el umbral en máxima profundidad” de �
 | Detección breve en descenso y otra breve en ascenso | conservar por fase; no sumarlas | `no_concluyente` |
 | Señal continua desde el final del descenso, a través del fondo y hacia el ascenso | un episodio trans-fase; puede sumar duración continua | `presente` si alcanza `0.16 s` |
 | Descenso o ascenso total menor de 1 segundo | aplicar los mismos segundos y reportar también proporción de fase | depende de duración y cobertura |
-| Fase con menos muestras totales que `min_phase_valid_samples` | `temporally_insufficient` | `no_concluyente` salvo episodio válido en otra parte de la repetición |
+| Fase con menos muestras totales que `min_episode_valid_samples` | `temporally_insufficient` | `no_concluyente` salvo episodio válido en otra parte de la repetición |
 | Fase con menos de 80 % de datos válidos | fase `no_evaluable` | `no_concluyente` salvo episodio válido en otra parte de la repetición |
 | Peak presente sin episodio adyacente | `peak_only_without_temporal_support` | `no_concluyente` |
 
@@ -524,6 +570,7 @@ Usos no permitidos:
 - `peak_frame_invalid`;
 - `phase_missing`;
 - `temporally_insufficient`;
+- `long_unobserved_gap`;
 - `brief_detection_only`;
 - `peak_only_without_temporal_support`;
 - `repetitions_not_comparable_depth`;
@@ -863,6 +910,9 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - episodio continuo que cruza descenso, peak y ascenso;
 - hueco breve que se une;
 - hueco unido que no se contabiliza como tiempo activo;
+- hueco limítrofe válido que puede unirse frente a hueco de pose inválida que rompe el episodio;
+- fase con cobertura global ≥80 % pero hueco inválido continuo capaz de ocultar 0.16 s, que queda `no_evaluable`;
+- conversión de 0.16 s a cuatro muestras a ~25 fps y cinco muestras a 30 fps;
 - hueco técnico largo que produce no evaluable;
 - cambio de dirección que crea dos episodios;
 - ambas rodillas mediales y simétricas;
@@ -912,6 +962,8 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - Los umbrales y parámetros temporales están versionados.
 - Una detección menor de `0.16 s` se conserva, pero no crea un episodio sostenido.
 - El 80 % de cobertura representa datos válidos, no tiempo con compensación.
+- Una fase no puede clasificarse como ausente si contiene un hueco no observado capaz de ocultar un episodio completo, aunque alcance 80 % de cobertura total.
+- `max_merge_gap_seconds` solo une muestras válidas dentro de la banda de histéresis; nunca rellena pose inválida.
 - Dos apariciones breves separadas no se suman para alcanzar persistencia.
 - La síntesis entre repeticiones nunca reemplaza la clasificación por repetición.
 - La síntesis entre repeticiones no genera una recomendación combinada.
