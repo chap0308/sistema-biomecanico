@@ -66,16 +66,17 @@ Estos elementos deben preguntarse o medirse con tests adicionales.
 
 ### Consistencia entre repeticiones
 
-Cuando un video contenga varias repeticiones, la consistencia puede modificar la prioridad y confianza de una recomendación, pero nunca las clasificaciones independientes:
+Cuando un video contenga varias repeticiones, la comparación es descriptiva y nunca modifica las clasificaciones ni recomendaciones independientes:
 
-- misma combinación, misma dirección y exposición comparable: conservar la ruta de tests y aumentar solo la confianza descriptiva;
-- presente en algunas repeticiones: mostrar `n de N` y describir comportamiento variable;
-- direcciones opuestas: bloquear recomendaciones lateralizadas;
-- compensaciones diferentes: no fusionar varias rutas correctivas; priorizar repetición estandarizada y tests diferenciales;
-- profundidades diferentes: tratar la profundidad como exposición, no como causa ni como resultado de compensación;
+- mostrar `n de N`, resultado, dirección, fase y duración;
+- destacar diferencias de profundidad como contexto que puede influir, sin afirmar que las explica;
+- si aparecen variables o direcciones distintas, mostrarlas sin construir una hipótesis conjunta;
+- conservar la recomendación y los tests propios de cada repetición;
+- no generar, fusionar ni priorizar una recomendación general del video;
+- si las diferencias impiden una lectura clara, sugerir repetir con técnica y profundidad semejantes;
 - una sola repetición: aplicar la matriz normalmente, sin inferir consistencia.
 
-Una síntesis comparativa nunca diagnostica una limitación de movilidad. Su función es evitar que una recomendación general oculte variabilidad de técnica, profundidad, velocidad, aprendizaje, fatiga o calidad de medición.
+Una síntesis comparativa nunca diagnostica una limitación de movilidad. Su función es mostrar variabilidad de técnica, profundidad, velocidad, aprendizaje, fatiga o calidad de medición, no resolverla mediante reglas cada vez más precisas.
 
 ## 4. Niveles de recomendación
 

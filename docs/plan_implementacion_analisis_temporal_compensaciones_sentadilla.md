@@ -70,8 +70,10 @@ Por variable y repetición:
 
 ```text
 presente
-  si existe al menos un episodio sostenido presente en descenso o ascenso,
-  o si el resultado puntual de máxima profundidad es presente;
+  si existe al menos un episodio continuo que cumple magnitud,
+  duración mínima y cantidad mínima de muestras,
+  independientemente de si ocurre en descenso, alrededor de máxima profundidad,
+  en ascenso o atravesando sus límites;
 
 ausente
   si descenso, máxima profundidad y ascenso son evaluables,
@@ -81,7 +83,8 @@ ausente
 no_concluyente
   si no existe evidencia presente,
   pero hay una banda limítrofe, una detección demasiado breve,
-  cobertura insuficiente o datos no finitos.
+  un cruce aislado en máxima profundidad, cobertura insuficiente
+  o datos no finitos.
 ```
 
 Un intervalo técnicamente no evaluable nunca se convierte en `ausente`.
@@ -100,6 +103,8 @@ clasificación:
 ```
 
 Así, una detección de tres fotogramas puede conservarse como `detectada_muy_breve` y producir `no_concluyente` sin convertirse en un episodio presente.
+
+La máxima profundidad no constituye una excepción al requisito temporal. Es un endpoint destacado para descripción, auditoría y comparación con el sistema anterior, pero un solo fotograma no valida presencia global.
 
 ### 2.5. Reglas de recomendación deshabilitadas
 
@@ -364,7 +369,7 @@ intermittent:
   existen dos o más detecciones o episodios separados por huecos mayores de 0.08 s;
 
 peak_only:
-  solo el endpoint de máxima profundidad cumple presencia;
+  solo el endpoint de máxima profundidad cruza present_min;
 
 not_evaluable:
   la calidad o cantidad de muestras no permite valorar persistencia.
@@ -395,15 +400,17 @@ Si el episodio rodea el fondo pero el frame puntual queda limítrofe:
 
 > La diferencia rodeó la máxima profundidad, pero el instante exacto fue no concluyente.
 
-El resultado puntual de máxima profundidad se conserva por compatibilidad con el diseño actual de la tesis. Si solo ese fotograma es presente y no existe soporte temporal adyacente, la clasificación global vigente puede seguir siendo `presente`, pero debe incluir:
+El resultado puntual de máxima profundidad se conserva por compatibilidad y trazabilidad con el diseño anterior de la tesis, pero deja de activar presencia global por sí solo. Si únicamente ese fotograma cruza `present_min`:
 
 ```text
+peak.instant_status: present
+global_status: no_concluyente
 reason_code: peak_only_without_temporal_support
-temporal_persistence: no_sostenida
+temporal_persistence: very_brief
 recommendation_confidence: baja
 ```
 
-No debe ocultarse que la presencia depende exclusivamente del endpoint predefinido.
+La interfaz debe diferenciar “cruzó el umbral en máxima profundidad” de “compensación presente de forma sostenida”.
 
 ### 5.4. Casos límite de persistencia
 
@@ -414,14 +421,27 @@ No debe ocultarse que la presencia depende exclusivamente del endpoint predefini
 | Dos segmentos separados, cada uno menor de `0.16 s` | conservar dos detecciones breves; no sumar duraciones | `no_concluyente` |
 | Detección breve en descenso y otra breve en ascenso | conservar por fase; no sumarlas | `no_concluyente` |
 | Señal continua desde el final del descenso, a través del fondo y hacia el ascenso | un episodio trans-fase; puede sumar duración continua | `presente` si alcanza `0.16 s` |
-| Descenso o ascenso total menor de 1 segundo | aplicar los mismos segundos y reportar también proporción de fase | depende de duración, cobertura y peak |
-| Fase con menos muestras totales que `min_phase_valid_samples` | `temporally_insufficient` | `no_concluyente` salvo presencia válida en otra fase o peak |
-| Fase con menos de 80 % de datos válidos | fase `no_evaluable` | `no_concluyente` salvo presencia válida en otra fase o peak |
-| Peak presente sin episodio adyacente | `peak_only_without_temporal_support` | `presente` por el contrato vigente, con confianza temporal baja |
+| Descenso o ascenso total menor de 1 segundo | aplicar los mismos segundos y reportar también proporción de fase | depende de duración y cobertura |
+| Fase con menos muestras totales que `min_phase_valid_samples` | `temporally_insufficient` | `no_concluyente` salvo episodio válido en otra parte de la repetición |
+| Fase con menos de 80 % de datos válidos | fase `no_evaluable` | `no_concluyente` salvo episodio válido en otra parte de la repetición |
+| Peak presente sin episodio adyacente | `peak_only_without_temporal_support` | `no_concluyente` |
 
 Que una fase dure menos de un segundo no cambia automáticamente los umbrales de magnitud ni la clasificación. Sí vuelve especialmente importante mostrar duración absoluta y porcentaje de la fase. Por ejemplo, `0.16 s` representa 16 % de una fase de `1.00 s`, pero 32 % de una fase de `0.50 s`.
 
 No se agregan apariciones de fases diferentes para superar artificialmente `0.16 s`. La persistencia pertenece a un intervalo continuo, no a la suma total de tiempo detectado en toda la repetición.
+
+Los límites entre descenso, máxima profundidad y ascenso son etiquetas biomecánicas, no cortes obligatorios del episodio. Si la señal es continua, puede contabilizarse a través de esos límites. A aproximadamente 25 fps:
+
+| Distribución de muestras consecutivas sobre `present_min` | Total | Resultado global si no hay otra evidencia |
+| --- | ---: | --- |
+| solo máxima profundidad | 1 frame | `no_concluyente` |
+| descenso + máxima profundidad | 3 frames / ~0.12 s | `no_concluyente` |
+| máxima profundidad + ascenso | 3 frames / ~0.12 s | `no_concluyente` |
+| descenso + máxima profundidad + ascenso | 3 frames / ~0.12 s | `no_concluyente` |
+| cualquier distribución continua que atraviesa el fondo | 4 frames / ~0.16 s | `presente` |
+| cuatro frames repartidos en segmentos no continuos | 4 frames acumulados | no se suman; `no_concluyente` si ninguno forma episodio |
+
+La misma regla se aplica a más fotogramas: se evalúa cada intervalo continuo, no la fase donde cayó cada muestra ni la suma total dispersa.
 
 ### 5.5. Profundidad como contexto, no como compensación
 
@@ -508,7 +528,7 @@ Usos no permitidos:
 - `peak_only_without_temporal_support`;
 - `repetitions_not_comparable_depth`;
 - `repetitions_conflicting_direction`;
-- `repetitions_mixed_occurrence`.
+- `repetitions_different_results`.
 
 La interfaz no mostrará todos estos términos al usuario, pero el investigador y los exports sí.
 
@@ -523,43 +543,42 @@ La síntesis de video es una capa derivada y no una nueva verdad de terreno:
   "present_count": 1,
   "absent_count": 0,
   "inconclusive_count": 1,
-  "cross_repetition_status": "mixed_occurrence",
-  "direction_consistency": "same_side",
-  "depth_comparability": "repetition_2_shallower",
-  "tempo_comparability": "comparable",
-  "recommendation_confidence": "low",
+  "result_comparison": "different",
+  "direction_comparison": "same_side",
+  "depth_comparison": "different",
+  "depth_detail": "repetition_2_shallower",
+  "tempo_comparison": "similar",
   "repetitions": [1, 2],
   "reason_codes": ["repetitions_not_comparable_depth"]
 }
 ```
 
-Estados propuestos:
+Campos comparativos simples:
 
 ```text
-consistent_present
-consistent_absent
-mixed_occurrence
-variable_direction
-different_findings_by_repetition
-not_comparable_exposure
-insufficient_repetitions
+result_comparison: same | different
+direction_comparison: same | different | not_applicable
+depth_comparison: similar | different | unavailable
+tempo_comparison: similar | different | unavailable
 ```
+
+No se construye un estado compuesto que intente resolver todas las combinaciones.
 
 Reglas de decisión:
 
 1. Nunca sobrescribir los resultados independientes.
-2. No usar mayoría simple para ocultar una repetición diferente; mostrar `n de N`.
-3. Si la misma variable aparece con dirección opuesta, no emitir una recomendación lateralizada general.
-4. Si aparecen compensaciones distintas entre repeticiones, mostrar cada una y recomendar repetir el protocolo de forma estandarizada antes de priorizar una ruta.
-5. Si una señal aparece solo en la repetición más profunda, describirla como compatible con una demanda dependiente del rango únicamente cuando la profundidad de inicio del episodio exceda la máxima exposición de la repetición superficial.
-6. Si aparece en la repetición superficial y desaparece en otra más profunda, no atribuirlo a profundidad; marcar estrategia variable, posible aprendizaje, velocidad, fatiga o ruido.
-7. Si cambian stance, toe-out, talones, carga, velocidad o instrucciones, declarar las repeticiones no comparables cuando esos cambios estén registrados; no inferir la intención únicamente desde la pose.
-8. Una recomendación general solo puede priorizarse cuando la combinación es consistente y las exposiciones son razonablemente comparables. En los demás casos se ofrecen descripción, tests diferenciales o solicitud de una repetición estandarizada.
+2. No usar mayoría simple ni construir una etiqueta global de compensación; mostrar `n de N` y las diferencias.
+3. Comparar de forma descriptiva resultado, dirección, fase, duración y profundidad alcanzada.
+4. Si aparecen variables o direcciones diferentes, no intentar combinarlas en una hipótesis o recomendación única.
+5. Mantener las recomendaciones individuales de cada repetición junto a su propio resultado.
+6. Si las profundidades difieren, indicarlo como una condición que puede contribuir a la diferencia, sin afirmar causalidad ni calcular qué habría ocurrido con igual profundidad.
+7. Si cambian stance, toe-out, talones, carga, velocidad o instrucciones, mostrar esas diferencias cuando estén registradas; no inferir la intención únicamente desde la pose.
+8. El resumen comparativo puede sugerir repetir el protocolo con profundidad y técnica semejantes, pero no prioriza ni fusiona correctivos.
 
 Para videos de una sola repetición:
 
 ```text
-cross_repetition_status = insufficient_repetitions
+cross_repetition_comparison = null
 ```
 
 Este estado no reduce la validez del resultado de la repetición ni debe mostrarse como error al usuario.
@@ -570,9 +589,11 @@ Este estado no reduce la validez del resultado de la repetición ni debe mostrar
 
 El experto observará la repetición completa en bucle y responderá una vez por variable. La instrucción debe decir:
 
-> Clasifique la variable como presente si la observa en cualquier momento de la repetición, incluida la máxima profundidad. No es necesario indicar la fase ni el instante exacto.
+> Clasifique la variable como presente si observa una desviación mantenida durante un intervalo de la repetición. No la marque como presente basándose únicamente en un fotograma pausado de máxima profundidad. No es necesario contar fotogramas ni indicar la fase: el sistema aplica el criterio temporal cuantitativo.
 
 Esto alinea el alcance del experto con el nuevo resultado global del sistema.
+
+El experto no necesita estimar `0.16 s`; ese es el criterio operacional del sistema. Sí debe observar la repetición completa, con reproducción y avance cuadro a cuadro disponibles cuando necesite resolver una aparición limítrofe.
 
 ### 7.2. Las opciones actuales ya combinan dos niveles
 
@@ -709,6 +730,8 @@ Una aparición menor de `0.16 s` se narrará así:
 
 > Se detectó una desviación muy breve durante {fase}, entre {inicio} y {fin} s. No duró lo suficiente para considerarla un episodio sostenido, por lo que el resultado es no concluyente.
 
+Las recomendaciones se muestran dentro del detalle de cada repetición. La tarjeta comparativa no genera, fusiona ni ordena recomendaciones de varias repeticiones.
+
 ### 9.2. Investigador
 
 Además de la vista anterior:
@@ -828,7 +851,11 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - episodio presente solo en descenso;
 - episodio presente solo en ascenso;
 - episodio que atraviesa máxima profundidad;
-- peak presente sin episodio sostenido;
+- peak por encima del umbral sin episodio sostenido que produce `no_concluyente`;
+- peak presente como único frame que produce `no_concluyente`;
+- tres frames continuos distribuidos entre descenso, peak y ascenso que producen `no_concluyente`;
+- cuatro frames continuos que atraviesan peak y producen `presente`;
+- cuatro frames no continuos que no se suman;
 - señal de un frame que no activa episodio;
 - señal de tres frames y menos de 0.16 s que queda como detección muy breve;
 - episodio de 0.16 s en una fase menor de un segundo;
@@ -844,7 +871,7 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - izquierda medial y derecha lateral;
 - diferencia bilateral presente con valgo ausente;
 - valgo bilateral presente con diferencia bilateral ausente;
-- coincidencia de ocurrencia con discrepancia de localización.
+- coincidencia de ocurrencia con discrepancia de localización;
 - una sola repetición sin síntesis comparativa visible;
 - varias repeticiones consistentes;
 - presente en una repetición y ausente/no concluyente en otra;
@@ -872,6 +899,7 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 ## 15. Criterios de aceptación
 
 - La máxima profundidad permanece visible y auditable.
+- La máxima profundidad no activa `presente` sin cumplir persistencia temporal.
 - Cada variable puede reportar cero, uno o varios episodios.
 - Los tiempos del usuario son relativos a la repetición y se muestran con una decimal.
 - Los timestamps absolutos y frames permanecen disponibles al investigador.
@@ -886,6 +914,7 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - El 80 % de cobertura representa datos válidos, no tiempo con compensación.
 - Dos apariciones breves separadas no se suman para alcanzar persistencia.
 - La síntesis entre repeticiones nunca reemplaza la clasificación por repetición.
+- La síntesis entre repeticiones no genera una recomendación combinada.
 - Las métricas frontales de profundidad no se expresan como grados de flexión de cadera.
 
 ## 16. Documentación metodológica que deberá actualizarse
@@ -899,7 +928,7 @@ Después de implementar y validar:
 - `docs/protocolo_aplicacion_instrumento3_expertos.md`;
 - anexos e instrumentos derivados.
 
-El cambio principal a declarar es que la serie completa deja de ser solamente evidencia gráfica y participa en la clasificación mediante episodios sostenidos, mientras máxima profundidad se conserva como ancla puntual.
+El cambio principal a declarar es que la serie completa deja de ser solamente evidencia gráfica y participa en la clasificación mediante episodios sostenidos, mientras máxima profundidad se conserva como ancla puntual descriptiva. Debe actualizarse expresamente la definición operacional: **un valor presente en un único fotograma de máxima profundidad ya no basta para clasificar la repetición como presente**; la señal debe satisfacer `present_min`, `0.16 s` y el mínimo de muestras correspondiente al FPS efectivo.
 
 ## 17. Límite clínico
 
