@@ -47,6 +47,8 @@ observable 2D
 - rodilla izquierda, derecha y diferencia;
 - duración/persistencia;
 - calidad de pose.
+- profundidad vertical normalizada y progreso relativo dentro del descenso, solo como contexto;
+- consistencia entre repeticiones del mismo video, cuando existan dos o más.
 
 ### Datos que el sistema no debe asumir
 
@@ -57,9 +59,23 @@ observable 2D
 - rotación interna o externa real de cadera;
 - anatomía de acetábulo/fémur;
 - movilidad de tobillo;
-- fuerza o control neuromuscular.
+- fuerza o control neuromuscular;
+- flexión anatómica de cadera en grados desde una vista frontal.
 
 Estos elementos deben preguntarse o medirse con tests adicionales.
+
+### Consistencia entre repeticiones
+
+Cuando un video contenga varias repeticiones, la consistencia puede modificar la prioridad y confianza de una recomendación, pero nunca las clasificaciones independientes:
+
+- misma combinación, misma dirección y exposición comparable: conservar la ruta de tests y aumentar solo la confianza descriptiva;
+- presente en algunas repeticiones: mostrar `n de N` y describir comportamiento variable;
+- direcciones opuestas: bloquear recomendaciones lateralizadas;
+- compensaciones diferentes: no fusionar varias rutas correctivas; priorizar repetición estandarizada y tests diferenciales;
+- profundidades diferentes: tratar la profundidad como exposición, no como causa ni como resultado de compensación;
+- una sola repetición: aplicar la matriz normalmente, sin inferir consistencia.
+
+Una síntesis comparativa nunca diagnostica una limitación de movilidad. Su función es evitar que una recomendación general oculte variabilidad de técnica, profundidad, velocidad, aprendizaje, fatiga o calidad de medición.
 
 ## 4. Niveles de recomendación
 
@@ -388,7 +404,11 @@ Puede ser una estrategia de contrapeso para conservar el centro de masa sobre la
 
 Mostrar ambas señales juntas y sugerir evaluación de hip shift. No emitir dos recomendaciones independientes que puedan contradecirse.
 
-### R11. Compensación aparece cerca de paralelo/sticking point
+### R11. Compensación aparece cerca de paralelo/sticking point — deshabilitada
+
+**Estado: `disabled_requires_sagittal_measurement`.**
+
+Esta regla no participa en recomendaciones de la versión frontal actual. El rango de 60–100° corresponde a flexión de cadera en el plano sagital; no puede calcularse de forma válida desde la proyección frontal de MediaPipe. La profundidad vertical y el porcentaje del descenso pueden describir cuándo apareció una señal, pero no sustituyen esos grados ni activan R11.
 
 **Disparador**
 
@@ -414,9 +434,17 @@ Recomienda diferenciar anatomía/stance, cadera, tobillo, pie y estabilidad medi
 - stance/toe-out;
 - talón elevado como retest, no como diagnóstico.
 
-### R12. Talón elevado mejora el patrón
+**Condición futura de habilitación**
 
-Este dato requiere que el protocolo registre la variante o que el usuario compare dos videos.
+- vista sagital estandarizada o sistema 3D validado;
+- definición validada del ángulo de flexión de cadera;
+- calibración de la relación entre ese ángulo, fase y resultado experto.
+
+### R12. Talón elevado mejora el patrón — deshabilitada
+
+**Estado: `disabled_requires_cross_video_protocol`.**
+
+Esta regla no participa en comparaciones entre repeticiones de un mismo video. Requiere dos videos o condiciones registrados explícitamente —por ejemplo, sin elevación y con elevación— bajo un protocolo comparable. Se reserva para una extensión futura de comparación entre análisis.
 
 **Lectura**
 
@@ -447,7 +475,7 @@ El sistema no debe mostrar diez pruebas a la vez. Elegirá una o dos según la c
 | shift con rodillas simétricas | hip flexion/FABER/IR | ankle wall test |
 | tronco + pelvis mismo lado | grabación/centro de masa | cadera/tobillo |
 | tronco aislado | cámara/brazos | anatomía y equilibrio |
-| patrón mejora con talón elevado | knee-to-wall | hip IR/stance |
+| patrón mejora con talón elevado | **R12 deshabilitada:** requiere comparación futura entre dos condiciones/videos | — |
 
 ## 7. Modelo de recomendación estructurada
 

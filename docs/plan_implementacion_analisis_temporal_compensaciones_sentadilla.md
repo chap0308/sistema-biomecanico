@@ -10,7 +10,8 @@ Este documento especifica la siguiente evolución del sistema de sentadilla bila
 4. mantener una clasificación global simple y comparable con la evaluación experta;
 5. mostrar diferente nivel de detalle al usuario, investigador y experto;
 6. precisar la diferencia bilateral de rodillas sin confundir apertura lateral con valgo;
-7. habilitar recomendaciones condicionadas por combinaciones observables, sin convertir la salida 2D en un diagnóstico.
+7. habilitar recomendaciones condicionadas por combinaciones observables, sin convertir la salida 2D en un diagnóstico;
+8. generar, cuando el video contenga varias repeticiones, una síntesis comparativa opcional que preserve el resultado independiente de cada repetición.
 
 La implementación debe mantener el alcance de la tesis: detectar **compensaciones y asimetrías cinemáticas observables en vista frontal 2D**. No debe afirmar rotaciones tridimensionales, patologías o causas anatómicas.
 
@@ -20,10 +21,12 @@ La implementación debe mantener el alcance de la tesis: detectar **compensacion
 
 - La unidad continúa siendo `repetición × variable`.
 - Cada repetición se clasifica de manera independiente.
-- No se combinan varias repeticiones para producir una sola etiqueta del video.
+- No se combinan varias repeticiones para producir una sola etiqueta validable del video.
 - El experto emite una clasificación global por variable y repetición.
 - El experto no debe anotar fases ni tiempos exactos.
 - El sistema sí conserva fases, intervalos y máxima profundidad como evidencia descriptiva.
+- Si el video tiene dos o más repeticiones, puede añadirse una **síntesis comparativa para el usuario y el investigador**. Esta capa no reemplaza, modifica ni participa en las etiquetas usadas para validar la tesis.
+- Si el video tiene una sola repetición, la síntesis comparativa simplemente no se genera; el análisis temporal de esa repetición sigue siendo válido.
 
 ### 2.2. Alcance temporal
 
@@ -50,6 +53,17 @@ No se crearán umbrales distintos por fase hasta que la validación experta demu
 
 Todos deben residir en el ruleset y nunca quedar ocultos en componentes web.
 
+Configuración provisional inicial:
+
+```text
+min_episode_duration_seconds: 0.16
+max_merge_gap_seconds: 0.08
+min_phase_valid_coverage_pct: 80
+min_phase_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
+```
+
+Estos valores son hipótesis de ingeniería, no umbrales clínicos de Conor Harris ni Squat University. Deben someterse a análisis de sensibilidad y validación experta antes de congelarse.
+
 ### 2.4. Resultado global del sistema
 
 Por variable y repetición:
@@ -66,10 +80,31 @@ ausente
 
 no_concluyente
   si no existe evidencia presente,
-  pero hay una banda limítrofe, cobertura insuficiente o datos no finitos.
+  pero hay una banda limítrofe, una detección demasiado breve,
+  cobertura insuficiente o datos no finitos.
 ```
 
 Un intervalo técnicamente no evaluable nunca se convierte en `ausente`.
+
+La salida debe separar:
+
+```text
+detección:
+  hubo o no muestras consecutivas que cruzaron present_min;
+
+episodio:
+  la detección cumplió persistencia y calidad;
+
+clasificación:
+  resultado final de la repetición × variable.
+```
+
+Así, una detección de tres fotogramas puede conservarse como `detectada_muy_breve` y producir `no_concluyente` sin convertirse en un episodio presente.
+
+### 2.5. Reglas de recomendación deshabilitadas
+
+- **R11** queda deshabilitada en la vista frontal: requiere medición sagital validada de flexión de cadera y no puede activarse con profundidad vertical como proxy.
+- **R12** queda deshabilitada en esta etapa: requiere comparación protocolizada entre dos videos o condiciones diferentes. Comparar repeticiones dentro del mismo video no activa R12.
 
 ## 3. Estado actual que debe preservarse
 
@@ -288,11 +323,54 @@ La extracción no debe abrir y cerrar episodios por cada cruce de un frame:
 Parámetros iniciales de ingeniería, pendientes de calibración:
 
 ```text
-min_episode_duration_seconds: 0.12–0.16
+min_episode_duration_seconds: 0.16
 max_merge_gap_seconds: 0.08
+min_phase_valid_coverage_pct: 80
+min_phase_valid_samples: ceil(min_episode_duration_seconds * effective_fps)
 ```
 
-Se expresarán en segundos para no depender de una frecuencia fija. Los valores definitivos deben validarse y congelarse antes de la evaluación formal.
+Se expresarán en segundos para no depender de una frecuencia fija. `effective_fps` se estimará con la mediana de los intervalos de timestamp válidos de la repetición. Un episodio debe cumplir tanto `0.16 s` como `ceil(0.16 * effective_fps)` muestras válidas consecutivas; a aproximadamente 25 fps esto equivale a cuatro fotogramas. La implementación calculará la duración considerando el periodo representado por las muestras, no solo `timestamp_final - timestamp_inicial`.
+
+`min_phase_valid_coverage_pct` significa que al menos el 80 % de las muestras esperadas de la fase tienen métricas válidas. No significa que la compensación deba ocupar el 80 % de la fase. Deben almacenarse por separado:
+
+```text
+valid_coverage_pct:
+  proporción de la fase con datos técnicamente evaluables;
+
+active_duration_seconds:
+  tiempo realmente por encima del criterio de presencia;
+
+episode_span_seconds:
+  tiempo entre inicio y fin después de unir huecos permitidos;
+
+active_ratio_pct:
+  active_duration_seconds / episode_span_seconds.
+```
+
+Un hueco de hasta `0.08 s` solo puede unirse si los segmentos de ambos lados pertenecen a la misma variable, fase y dirección y el hueco no se debe a un cambio sostenido hacia ausencia. El hueco no suma duración activa. Esto evita que la unión artificial transforme varios picos mínimos en un episodio sostenido.
+
+Los valores definitivos deben validarse y congelarse antes de la evaluación formal. Como análisis de sensibilidad se compararán, como mínimo, reglas de `0.12 s`, `0.16 s` y `0.20 s`, documentando cuánto cambia la concordancia frente a expertos.
+
+Clasificación técnica de persistencia:
+
+```text
+very_brief:
+  existe una detección continua, pero dura menos de 0.16 s;
+
+sustained:
+  existe al menos un episodio continuo que cumple 0.16 s y el mínimo de muestras;
+
+intermittent:
+  existen dos o más detecciones o episodios separados por huecos mayores de 0.08 s;
+
+peak_only:
+  solo el endpoint de máxima profundidad cumple presencia;
+
+not_evaluable:
+  la calidad o cantidad de muestras no permite valorar persistencia.
+```
+
+Estas categorías son descriptivas y técnicas. No equivalen por sí solas a gravedad clínica.
 
 ### 5.3. Máxima profundidad
 
@@ -316,6 +394,61 @@ Un episodio puede atravesar ese instante sin partirse. La interfaz lo narrará p
 Si el episodio rodea el fondo pero el frame puntual queda limítrofe:
 
 > La diferencia rodeó la máxima profundidad, pero el instante exacto fue no concluyente.
+
+El resultado puntual de máxima profundidad se conserva por compatibilidad con el diseño actual de la tesis. Si solo ese fotograma es presente y no existe soporte temporal adyacente, la clasificación global vigente puede seguir siendo `presente`, pero debe incluir:
+
+```text
+reason_code: peak_only_without_temporal_support
+temporal_persistence: no_sostenida
+recommendation_confidence: baja
+```
+
+No debe ocultarse que la presencia depende exclusivamente del endpoint predefinido.
+
+### 5.4. Casos límite de persistencia
+
+| Caso | Resultado temporal | Clasificación de repetición si no hay otra evidencia |
+| --- | --- | --- |
+| Cruce de 1–3 fotogramas y menos de `0.16 s` | `detectada_muy_breve`; no crea episodio | `no_concluyente` |
+| Segmento continuo de al menos `0.16 s` | episodio sostenido | `presente` |
+| Dos segmentos separados, cada uno menor de `0.16 s` | conservar dos detecciones breves; no sumar duraciones | `no_concluyente` |
+| Detección breve en descenso y otra breve en ascenso | conservar por fase; no sumarlas | `no_concluyente` |
+| Señal continua desde el final del descenso, a través del fondo y hacia el ascenso | un episodio trans-fase; puede sumar duración continua | `presente` si alcanza `0.16 s` |
+| Descenso o ascenso total menor de 1 segundo | aplicar los mismos segundos y reportar también proporción de fase | depende de duración, cobertura y peak |
+| Fase con menos muestras totales que `min_phase_valid_samples` | `temporally_insufficient` | `no_concluyente` salvo presencia válida en otra fase o peak |
+| Fase con menos de 80 % de datos válidos | fase `no_evaluable` | `no_concluyente` salvo presencia válida en otra fase o peak |
+| Peak presente sin episodio adyacente | `peak_only_without_temporal_support` | `presente` por el contrato vigente, con confianza temporal baja |
+
+Que una fase dure menos de un segundo no cambia automáticamente los umbrales de magnitud ni la clasificación. Sí vuelve especialmente importante mostrar duración absoluta y porcentaje de la fase. Por ejemplo, `0.16 s` representa 16 % de una fase de `1.00 s`, pero 32 % de una fase de `0.50 s`.
+
+No se agregan apariciones de fases diferentes para superar artificialmente `0.16 s`. La persistencia pertenece a un intervalo continuo, no a la suma total de tiempo detectado en toda la repetición.
+
+### 5.5. Profundidad como contexto, no como compensación
+
+La vista frontal actual puede calcular, sin llamarlos grados de flexión de cadera:
+
+```text
+peak_hip_vertical_drop_normalized
+hip_to_knee_vertical_relation_at_peak
+descent_depth_progress_pct
+onset_depth_progress_pct por episodio
+descent_duration_seconds
+ascent_duration_seconds
+```
+
+Usos permitidos:
+
+- describir si una señal apareció temprano, a mitad o al final del descenso de una repetición;
+- comparar exposición entre repeticiones del mismo video;
+- advertir que una ausencia ocurrió en una repetición menos profunda;
+- contextualizar consistencia y confianza de una recomendación.
+
+Usos no permitidos:
+
+- presentar estas métricas como grados anatómicos de flexión de cadera;
+- inferir automáticamente IR/ER, dorsiflexión o una causa estructural;
+- convertir una repetición menos profunda en `presente` o `ausente` por contrafactual;
+- activar la regla R11 mientras no exista una medición sagital validada.
 
 ## 6. Contratos de datos propuestos
 
@@ -369,9 +502,67 @@ Si el episodio rodea el fondo pero el frame puntual queda limítrofe:
 - `unstable_direction`;
 - `episode_too_short`;
 - `peak_frame_invalid`;
-- `phase_missing`.
+- `phase_missing`;
+- `temporally_insufficient`;
+- `brief_detection_only`;
+- `peak_only_without_temporal_support`;
+- `repetitions_not_comparable_depth`;
+- `repetitions_conflicting_direction`;
+- `repetitions_mixed_occurrence`.
 
 La interfaz no mostrará todos estos términos al usuario, pero el investigador y los exports sí.
+
+### 6.4. Síntesis opcional para videos con varias repeticiones
+
+La síntesis de video es una capa derivada y no una nueva verdad de terreno:
+
+```json
+{
+  "finding": "lateral_trunk_inclination",
+  "repetition_count": 2,
+  "present_count": 1,
+  "absent_count": 0,
+  "inconclusive_count": 1,
+  "cross_repetition_status": "mixed_occurrence",
+  "direction_consistency": "same_side",
+  "depth_comparability": "repetition_2_shallower",
+  "tempo_comparability": "comparable",
+  "recommendation_confidence": "low",
+  "repetitions": [1, 2],
+  "reason_codes": ["repetitions_not_comparable_depth"]
+}
+```
+
+Estados propuestos:
+
+```text
+consistent_present
+consistent_absent
+mixed_occurrence
+variable_direction
+different_findings_by_repetition
+not_comparable_exposure
+insufficient_repetitions
+```
+
+Reglas de decisión:
+
+1. Nunca sobrescribir los resultados independientes.
+2. No usar mayoría simple para ocultar una repetición diferente; mostrar `n de N`.
+3. Si la misma variable aparece con dirección opuesta, no emitir una recomendación lateralizada general.
+4. Si aparecen compensaciones distintas entre repeticiones, mostrar cada una y recomendar repetir el protocolo de forma estandarizada antes de priorizar una ruta.
+5. Si una señal aparece solo en la repetición más profunda, describirla como compatible con una demanda dependiente del rango únicamente cuando la profundidad de inicio del episodio exceda la máxima exposición de la repetición superficial.
+6. Si aparece en la repetición superficial y desaparece en otra más profunda, no atribuirlo a profundidad; marcar estrategia variable, posible aprendizaje, velocidad, fatiga o ruido.
+7. Si cambian stance, toe-out, talones, carga, velocidad o instrucciones, declarar las repeticiones no comparables cuando esos cambios estén registrados; no inferir la intención únicamente desde la pose.
+8. Una recomendación general solo puede priorizarse cuando la combinación es consistente y las exposiciones son razonablemente comparables. En los demás casos se ofrecen descripción, tests diferenciales o solicitud de una repetición estandarizada.
+
+Para videos de una sola repetición:
+
+```text
+cross_repetition_status = insufficient_repetitions
+```
+
+Este estado no reduce la validez del resultado de la repetición ni debe mostrarse como error al usuario.
 
 ## 7. Evaluación experta
 
@@ -490,6 +681,34 @@ Elementos:
 
 La ruta `my-analyses/[analysisId]` reutiliza `CaseDetailView` con audiencia `self-service`; la mejora debe implementarse en el componente compartido o en un subcomponente por audiencia, no duplicarse en la ruta.
 
+Si hay varias repeticiones, mostrar primero las tarjetas independientes y luego un resumen comparativo:
+
+```text
+Inclinación lateral del tronco
+
+Repetición 1: presente de forma sostenida durante el descenso.
+Repetición 2: aparición demasiado breve; resultado no concluyente.
+
+Comparación: el comportamiento no fue consistente entre repeticiones. La segunda
+repetición alcanzó menor profundidad, por lo que no ofrece la misma exposición.
+No se puede atribuir la diferencia únicamente a la profundidad.
+```
+
+Casos de lenguaje:
+
+| Síntesis | Texto para usuario |
+| --- | --- |
+| consistente | “Se observó de forma consistente en {n} de {N} repeticiones.” |
+| aparición parcial | “Se observó en {n} de {N} repeticiones; el comportamiento fue variable.” |
+| dirección variable | “La dirección cambió entre repeticiones, por lo que no se puede señalar un predominio estable.” |
+| hallazgos diferentes | “Las repeticiones mostraron compensaciones diferentes; conviene repetir el test con la misma técnica y profundidad objetivo.” |
+| profundidad no comparable | “Las repeticiones alcanzaron profundidades diferentes; la ausencia en la más superficial solo describe el rango realizado.” |
+| una repetición | No mostrar tarjeta comparativa. |
+
+Una aparición menor de `0.16 s` se narrará así:
+
+> Se detectó una desviación muy breve durante {fase}, entre {inicio} y {fin} s. No duró lo suficiente para considerarla un episodio sostenido, por lo que el resultado es no concluyente.
+
 ### 9.2. Investigador
 
 Además de la vista anterior:
@@ -503,6 +722,9 @@ Además de la vista anterior:
 - códigos de razón;
 - frames y timestamps absolutos;
 - `L`, `R`, `D_abs`, `D_signed` y `D_delta` para rodillas.
+- profundidad vertical normalizada, progreso de profundidad al inicio de cada episodio y duración de fases;
+- matriz repetición × variable y síntesis de consistencia entre repeticiones;
+- comparabilidad de profundidad y tempo, sin etiquetarlos como flexión anatómica de cadera.
 
 ### 9.3. Experto
 
@@ -539,6 +761,9 @@ No usar `Progress`: comunica avance continuo, no episodios separados. No usar co
 | limítrofe | “Se observó una desviación leve, pero no alcanzó el criterio definido para considerarla presente.” |
 | no evaluable | “No fue posible evaluar este intervalo con suficiente calidad.” |
 | intermitente | “Se observó un comportamiento intermitente durante esta fase.” |
+| demasiado breve | “Se detectó una desviación muy breve, pero no duró lo suficiente para considerarla sostenida.” |
+| repeticiones variables | “El resultado cambió entre repeticiones; revise el detalle de cada una.” |
+| exposición diferente | “Las repeticiones alcanzaron profundidades diferentes y no ofrecen la misma exposición al movimiento.” |
 
 ### 11.2. Precisión terminológica
 
@@ -593,7 +818,8 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 7. Implementar resumen narrativo del usuario.
 8. Ajustar únicamente el lenguaje bilateral del formulario experto.
 9. Incorporar recomendaciones mediante la matriz complementaria.
-10. Actualizar documentos metodológicos de la tesis.
+10. Agregar la síntesis opcional entre repeticiones sin alterar la validación por repetición.
+11. Actualizar documentos metodológicos de la tesis.
 
 ## 14. Pruebas mínimas
 
@@ -604,7 +830,12 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - episodio que atraviesa máxima profundidad;
 - peak presente sin episodio sostenido;
 - señal de un frame que no activa episodio;
+- señal de tres frames y menos de 0.16 s que queda como detección muy breve;
+- episodio de 0.16 s en una fase menor de un segundo;
+- dos detecciones breves separadas que no suman un episodio;
+- episodio continuo que cruza descenso, peak y ascenso;
 - hueco breve que se une;
+- hueco unido que no se contabiliza como tiempo activo;
 - hueco técnico largo que produce no evaluable;
 - cambio de dirección que crea dos episodios;
 - ambas rodillas mediales y simétricas;
@@ -614,6 +845,13 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - diferencia bilateral presente con valgo ausente;
 - valgo bilateral presente con diferencia bilateral ausente;
 - coincidencia de ocurrencia con discrepancia de localización.
+- una sola repetición sin síntesis comparativa visible;
+- varias repeticiones consistentes;
+- presente en una repetición y ausente/no concluyente en otra;
+- direcciones opuestas entre repeticiones;
+- compensaciones diferentes por repetición;
+- repetición superficial cuyo rango no alcanza la profundidad de inicio del episodio de otra;
+- repetición más profunda donde no reaparece una señal de la superficial.
 
 ### Frontend
 
@@ -626,6 +864,10 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - investigador con detalle completo;
 - experto sin evidencia del sistema antes del cierre;
 - etiqueta “más abierta” para el caso `seg_dos_rapidas`.
+- narración de detección muy breve sin llamarla episodio;
+- resumen `n de N` sin reemplazar tarjetas por repetición;
+- advertencia de profundidades no comparables;
+- ausencia de síntesis comparativa en videos de una repetición.
 
 ## 15. Criterios de aceptación
 
@@ -640,6 +882,11 @@ La ruta `my-analyses/[analysisId]` no necesita duplicar lógica porque delega en
 - No se muestra una recomendación de valgo cuando ambas rodillas son laterales y el valgo es ausente.
 - Toda recomendación incluye prueba confirmatoria, retest, fuente y límite de interpretación.
 - Los umbrales y parámetros temporales están versionados.
+- Una detección menor de `0.16 s` se conserva, pero no crea un episodio sostenido.
+- El 80 % de cobertura representa datos válidos, no tiempo con compensación.
+- Dos apariciones breves separadas no se suman para alcanzar persistencia.
+- La síntesis entre repeticiones nunca reemplaza la clasificación por repetición.
+- Las métricas frontales de profundidad no se expresan como grados de flexión de cadera.
 
 ## 16. Documentación metodológica que deberá actualizarse
 
